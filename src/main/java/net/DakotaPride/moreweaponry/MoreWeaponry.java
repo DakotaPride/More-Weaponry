@@ -36,51 +36,11 @@ public class MoreWeaponry implements ModInitializer {
 	public static final String MOD_ID = "moreweaponry";
 	public static final Logger LOGGER = LogManager.getLogger(MOD_ID);
 
-	private static final ConfiguredFeature<?, ?> OVERWORLD_MARE_DIAMOND_ORE_CONFIGURED_FEATURE = Feature.ORE
-			.configure(new OreFeatureConfig(
-					OreConfiguredFeatures.STONE_ORE_REPLACEABLES,
-					Blocks.DIAMOND_BLOCK.getDefaultState(),
-					14)); // vein size
-	public static PlacedFeature OVERWORLD_MARE_DIAMOND_ORE_PLACED_FEATURE = OVERWORLD_MARE_DIAMOND_ORE_CONFIGURED_FEATURE.withPlacement(
-			CountPlacementModifier.of(30), // number of veins per chunk
-			SquarePlacementModifier.of(), // spreading horizontally
-			HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.fixed(20))); // height
-
-
-	private static final ConfiguredFeature<?, ?> OVERWORLD_LIMESTONE_CONFIGURED_FEATURE = Feature.ORE
-			.configure(new OreFeatureConfig(
-					OreConfiguredFeatures.STONE_ORE_REPLACEABLES,
-					Blocks.IRON_BLOCK.getDefaultState(),
-					34)); // vein size
-	public static PlacedFeature OVERWORLD_LIMESTONE_PLACED_FEATURE = OVERWORLD_LIMESTONE_CONFIGURED_FEATURE.withPlacement(
-			CountPlacementModifier.of(30), // number of veins per chunk
-			SquarePlacementModifier.of(), // spreading horizontally
-			HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.fixed(20))); // height
-
 
 	@Override
 	public void onInitialize() {
 
 		ModConfiguredFeatures.registerConfiguredFeatures();
-
-		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,
-				new Identifier("moreweaponry", "overworld_mare_diamond_ore"), OVERWORLD_MARE_DIAMOND_ORE_CONFIGURED_FEATURE);
-		Registry.register(BuiltinRegistries.PLACED_FEATURE, new Identifier("moreweaponry", "overworld_mare_diamond_ore"),
-				OVERWORLD_MARE_DIAMOND_ORE_PLACED_FEATURE);
-		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES,
-				RegistryKey.of(Registry.PLACED_FEATURE_KEY,
-						new Identifier("moreweaponry", "overworld_mare_diamond_ore")));
-
-
-		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,
-				new Identifier("moreweaponry", "overworld_limestone"), OVERWORLD_LIMESTONE_CONFIGURED_FEATURE);
-		Registry.register(BuiltinRegistries.PLACED_FEATURE, new Identifier("moreweaponry", "overworld_limestone"),
-				OVERWORLD_LIMESTONE_PLACED_FEATURE);
-		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES,
-				RegistryKey.of(Registry.PLACED_FEATURE_KEY,
-						new Identifier("moreweaponry", "overworld_limestone")));
-
-
 
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
