@@ -9,6 +9,9 @@
   "item.moreweaponry.mare_diamond": "Mare Diamond",
   "item.moreweaponry.netherite_nugget": "Netherite Nugget",
   "item.moreweaponry.amethyst_handle": "Amethyst Handle",
+  "item.moreweaponry.guardian_scale": "Guardian Scale",
+  "item.moreweaponry.elder_guardian_scale": "Elder Guardian Scale",
+  "itme.moreweaponry.elder_guardians_eye": "Elder Guardian Eye",
 
 
   "item.moreweaponry.glimmering_sword": "Glimmered Amethyst Sword",
@@ -132,6 +135,8 @@
   "item.moreweaponry.moon_stone_shield": "Refined Moon Shield",
   "item.moreweaponry.elder_scale_shield": "Elder Scale Shield",
   "item.moreweaponry.guardian_scale_shield": "Guardian Scale Shield",
+
+  "item.moreweaponry.elder_scale_trident": "Elder Scale Trident (WIP)",
 
 
   "block.moreweaponry.limestone_wall": "Limestone Wall",
