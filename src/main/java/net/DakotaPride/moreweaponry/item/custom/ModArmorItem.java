@@ -21,7 +21,7 @@ public class ModArmorItem extends ArmorItem {
 
     private static final Map<ArmorMaterial, StatusEffect> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, StatusEffect>())
-                    .put(ModArmorMaterial.ELDER_GUARDIAN_SCALE, StatusEffects.MINING_FATIGUE).build();
+                    .put(ModArmorMaterial.ELDER_GUARDIAN_SCALE, StatusEffects.WATER_BREATHING).build();
 
     public ModArmorItem(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
         super(material, slot, settings);

@@ -1,28 +1,18 @@
 package net.DakotaPride.moreweaponry.item;
 
-import com.github.crimsondawn45.fabricshieldlib.lib.object.FabricShield;
 import com.github.crimsondawn45.fabricshieldlib.lib.object.FabricShieldItem;
-import jdk.jshell.Snippet;
 import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.DakotaPride.moreweaponry.block.ModBlocks;
 import net.DakotaPride.moreweaponry.item.custom.*;
-import net.fabricmc.fabric.api.item.v1.FabricItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
-import net.minecraft.stat.Stat;
-import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 import net.DakotaPride.moreweaponry.item.custom.ModAxeItem;
-import org.lwjgl.system.CallbackI;
-
-import javax.swing.*;
-import javax.tools.Tool;
 
 public class ModItems {
 
@@ -265,7 +255,7 @@ public class ModItems {
             new FabricShieldItem(new FabricItemSettings().maxDamage(3276).rarity(Rarity.EPIC).group(ModItemGroup.MORE_WEAPONRY), 7, 18, ModItems.ELDER_GUARDIAN_SCALE));
 
     public static final Item ELDER_SCALE_TRIDENT = registerItem("elder_scale_trident",
-            new TridentItem(new FabricItemSettings().rarity(Rarity.EPIC).group(ModItemGroup.MORE_WEAPONRY)));
+            new ElderScaleTridentItem(new FabricItemSettings().rarity(Rarity.EPIC).group(ModItemGroup.MORE_WEAPONRY)));
 
 
     private static Item registerItem (String name, Item item) {
