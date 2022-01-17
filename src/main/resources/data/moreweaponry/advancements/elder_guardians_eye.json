@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "moreweaponry:guardian_scale"
+    },
+    "title": "It Won't Be Needing This Anymore",
+    "description": "Obtain The Elder Guardian's Eye",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "moreweaponry:elder_guardian_scale",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "moreweaponry:elder_guardians_eye"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

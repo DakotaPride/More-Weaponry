@@ -59,11 +59,8 @@ public class ModArmorItem extends ArmorItem {
         boolean hasPlayerEffect = player.hasStatusEffect(mapStatusEffect);
 
         if(hasCorrectArmorOn(mapArmorMaterial, player) && !hasPlayerEffect) {
-            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect, 20));
+            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect, 0));
 
-            if(new Random().nextFloat() > 0.9f) {
-                player.getInventory().damageArmor(DamageSource.MAGIC, 1f, new int[]{0, 1, 2, 3});
-            }
         }
     }
 
