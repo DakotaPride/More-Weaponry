@@ -108,6 +108,9 @@ public class ModItems {
     public static final Item ELDER_GUARDIAN_SCALE = registerItem("elder_guardian_scale",
             new Item(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
+    public static final Item ELDER_GUARDIANS_EYE = registerItem("elder_guardians_eye",
+            new Item(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
 
     public static final Item GLIMMERING_SWORD = registerItem("glimmering_sword",
             new SwordItem((ToolMaterial) ModToolMaterial.GLIMMERING_AMETHYST, 3, -2.4f,
@@ -260,6 +263,10 @@ public class ModItems {
 
     public static final Item ELDER_SCALE_SHIELD  = registerItem("elder_scale_shield",
             new FabricShieldItem(new FabricItemSettings().maxDamage(3276).rarity(Rarity.EPIC).group(ModItemGroup.MORE_WEAPONRY), 7, 18, ModItems.ELDER_GUARDIAN_SCALE));
+
+    public static final Item ELDER_SCALE_TRIDENT = registerItem("elder_scale_trident",
+            new TridentItem(new FabricItemSettings().rarity(Rarity.EPIC).group(ModItemGroup.MORE_WEAPONRY)));
+
 
     private static Item registerItem (String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(MoreWeaponry.MOD_ID, name), item);
