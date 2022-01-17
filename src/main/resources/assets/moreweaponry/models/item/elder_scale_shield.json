@@ -1,0 +1,14 @@
+{
+  "parent":"fabricshieldlib:item/fabric_shield",
+  "textures":{
+    "shield":"moreweaponry:item/elder_scale_shield"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "blocking": 1
+      },
+      "model": "moreweaponry:item/elder_scale_shield_blocking"
+    }
+  ]
+}

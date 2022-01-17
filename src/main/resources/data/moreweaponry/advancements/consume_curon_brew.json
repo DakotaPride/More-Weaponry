@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "moreweaponry:curon_brew"
+    },
+    "title": "Why Would You Do That?",
+    "description": "Consume Night Curon Brew",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "moreweaponry:night_curon",
+
+  "criteria": {
+    "example": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "moreweaponry:curon_brew"
+            ]
+          }
+        }
+      }
+    }
+  }

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#P#",
+    "#A#",
+    " A "
+  ],
+  "key": {
+    "#": {
+      "item": "moreweaponry:guardian_scale"
+    },
+    "P": {
+      "item": "moreweaponry:curon_brew"
+    },
+    "A": {
+      "item": "minecraft:prismarine_shard"
+    }
+  },
+  "result": {
+    "item": "moreweaponry:elder_scale_shield",
+    "count": 1
+  }
+}

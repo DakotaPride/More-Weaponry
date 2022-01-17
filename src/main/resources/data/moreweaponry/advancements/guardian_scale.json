@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "moreweaponry:guardian_scale"
+    },
+    "title": "What Are They Guarding?",
+    "description": "Obtain Guardian Scales",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "moreweaponry:night_curon",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "moreweaponry:guardian_scale"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

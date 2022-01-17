@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "moreweaponry:blackstone_metal_block"
+    }
+  ],
+  "result": {
+    "item": "moreweaponry:blackstone_ingot",
+    "count": 9
+  }
+}

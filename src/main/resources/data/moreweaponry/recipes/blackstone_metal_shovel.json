@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " IX",
+    " # ",
+    "#  "
+  ],
+  "key": {
+    "#": {
+      "item": "moreweaponry:netherite_handle"
+    },
+    "X": {
+      "item": "moreweaponry:blackstone_ingot"
+    },
+    "I": {
+      "item": "moreweaponry:netherite_nugget"
+    }
+  },
+  "result": {
+    "item": "moreweaponry:blackstone_metal_shovel"
+  }
+}

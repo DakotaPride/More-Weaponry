@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "moreweaponry:blackstone_metal_battleaxe"
+    },
+    "title": "More Weaponry",
+    "description": "And So It Begins...",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "background": "moreweaponry:textures/block/blackstone_metal_block.png"
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "moreweaponry:handle"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

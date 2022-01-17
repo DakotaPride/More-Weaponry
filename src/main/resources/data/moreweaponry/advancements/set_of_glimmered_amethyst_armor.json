@@ -1,0 +1,42 @@
+{
+  "display": {
+    "icon": {
+      "item": "moreweaponry:glimmering_chestplate"
+    },
+    "title": "So... Glimmering",
+    "description": "Obtain A Full Set of Glimmered Amethyst Armor",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "moreweaponry:set_of_glimmered_amethyst_tools",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "moreweaponry:glimmering_helmet"
+            ]
+          },
+          {
+            "items": [
+              "moreweaponry:glimmering_chestplate"
+            ]
+          },
+          {
+            "items": [
+              "moreweaponry:glimmering_leggings"
+            ]
+          },
+          {
+            "items": [
+              "moreweaponry:glimmering_boots"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

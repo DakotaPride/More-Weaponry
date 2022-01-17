@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "minecraft:blackstone"
+  },
+  "result": "moreweaponry:blackstone_ingot",
+  "experience": 1.0,
+  "cookingtime": 200
+}

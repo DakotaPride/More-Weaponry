@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#P#",
+    "#A#",
+    " A "
+  ],
+  "key": {
+    "#": {
+      "item": "moreweaponry:moon_stone_dust_block"
+    },
+    "P": {
+      "item": "moreweaponry:refined_moon_stone"
+    },
+    "A": {
+      "item": "moreweaponry:moon_stone_dust"
+    }
+  },
+  "result": {
+    "item": "moreweaponry:moon_stone_shield",
+    "count": 1
+  }
+}

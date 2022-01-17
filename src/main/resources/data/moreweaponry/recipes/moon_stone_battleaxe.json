@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " IX",
+    " #I",
+    "#  "
+  ],
+  "key": {
+    "#": {
+      "item": "moreweaponry:handle"
+    },
+    "X": {
+      "item": "moreweaponry:moon_stone_dust_block"
+    },
+    "I": {
+      "item": "moreweaponry:refined_moon_stone"
+    }
+  },
+  "result": {
+    "item": "moreweaponry:moon_stone_battleaxe"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "display": {
+    "icon": {
+      "item": "moreweaponry:elder_guardian_scale_chestplate"
+    },
+    "title": "Finally, I Have The Power!",
+    "description": "Obtain A Full Set of Elder Scale Armor And Gain The Effects Of The Elder Guardian",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "moreweaponry:set_of_guardian_scale_armor",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "moreweaponry:elder_guardian_scale_helmet"
+            ]
+          },
+          {
+            "items": [
+              "moreweaponry:elder_guardian_scale_chestplate"
+            ]
+          },
+          {
+            "items": [
+              "moreweaponry:elder_guardian_scale_leggings"
+            ]
+          },
+          {
+            "items": [
+              "moreweaponry:elder_guardian_scale_boots"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

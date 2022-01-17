@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#P#",
+    "#A#",
+    " A "
+  ],
+  "key": {
+    "#": {
+      "item": "moreweaponry:blackstone_metal_block"
+    },
+    "P": {
+      "item": "moreweaponry:blackstone_ingot"
+    },
+    "A": {
+      "item": "minecraft:blaze_rod"
+    }
+  },
+  "result": {
+    "item": "moreweaponry:blackstone_metal_shield",
+    "count": 1
+  }
+}

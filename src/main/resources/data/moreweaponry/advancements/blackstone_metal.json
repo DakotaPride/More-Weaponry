@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "moreweaponry:blackstone_ingot"
+    },
+    "title": "Journey To Hell...",
+    "description": "Obtain Blackstone Metal",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "moreweaponry:kuro_plant",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "moreweaponry:blackstone_ingot"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

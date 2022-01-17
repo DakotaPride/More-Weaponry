@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "moreweaponry:moon_stone_dust"
+  },
+  "result": "moreweaponry:refined_moon_stone",
+  "experience": 1.0,
+  "cookingtime": 200
+}

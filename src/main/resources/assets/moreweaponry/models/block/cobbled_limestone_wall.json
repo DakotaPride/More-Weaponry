@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall",
+  "textures": {
+    "texture": "moreweaponry:block/cobbled_limestone"
+  }
+}

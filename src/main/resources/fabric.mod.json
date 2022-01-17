@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "moreweaponry",
+  "version": "${version}",
+
+  "name": "More Weaponry",
+  "description": "This mod adds new weapons, armor, tools, items, and more!",
+  "authors": [
+    "DakotaPride"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "MIT",
+  "icon": "assets/moreweaponry/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.DakotaPride.moreweaponry.MoreWeaponry"
+    ]
+  },
+  "mixins": [
+    "moreweaponry.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "minecraft": "1.18.x",
+    "java": ">=17",
+    "fabric-key-binding-api-v1": "*"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}

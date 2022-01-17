@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "M M",
+        "# #"
+    ],
+    "key": {
+        "#": {
+            "item": "moreweaponry:blackstone_ingot"
+        },
+        "M": {
+            "item": "moreweaponry:netherite_nugget"
+        }
+    },
+    "result": {
+        "item": "moreweaponry:blackstone_metal_leggings",
+        "count": 1
+    }
+}

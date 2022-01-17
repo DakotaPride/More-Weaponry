@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "moreweaponry:moon_stone_dust"
+    },
+    "title": "Isn't This Snow?",
+    "description": "Obtain Moon Stone Dust",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "moreweaponry:moreweaponry",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "moreweaponry:moon_stone_dust"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

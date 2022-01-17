@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "moreweaponry:blackstone_metal_battleaxe"
+    },
+    "title": "Forged In Hell",
+    "description": "Obtain A Blackstone Metal Battleaxe",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "moreweaponry:blackstone_metal",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "moreweaponry:blackstone_metal_battleaxe"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

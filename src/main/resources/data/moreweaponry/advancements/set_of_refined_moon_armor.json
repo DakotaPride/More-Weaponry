@@ -1,0 +1,42 @@
+{
+  "display": {
+    "icon": {
+      "item": "moreweaponry:moon_stone_chestplate"
+    },
+    "title": "You Are The Moon, Player!",
+    "description": "Obtain A Full Set of Refined Moon Armor",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "moreweaponry:set_of_refined_moon_tools",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "moreweaponry:moon_stone_helmet"
+            ]
+          },
+          {
+            "items": [
+              "moreweaponry:moon_stone_chestplate"
+            ]
+          },
+          {
+            "items": [
+              "moreweaponry:moon_stone_leggings"
+            ]
+          },
+          {
+            "items": [
+              "moreweaponry:moon_stone_boots"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

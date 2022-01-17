@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " IX",
+    " #I",
+    "#  "
+  ],
+  "key": {
+    "#": {
+      "item": "moreweaponry:amethyst_handle"
+    },
+    "X": {
+      "item": "moreweaponry:glimmering_amethyst"
+    },
+    "I": {
+      "item": "moreweaponry:moon_stone_dust"
+    }
+  },
+  "result": {
+    "item": "moreweaponry:glimmering_axe"
+  }
+}

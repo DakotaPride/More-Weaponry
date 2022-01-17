@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "moreweaponry:moon_stone_dust"
+  },
+  "result": "moreweaponry:refined_moon_stone",
+  "experience": 0.7,
+  "cookingtime": 100
+}

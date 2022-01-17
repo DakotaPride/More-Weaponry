@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "moreweaponry:block/kuro_wheat_block_top",
+    "side": "moreweaponry:block/kuro_wheat_block"
+  }
+}

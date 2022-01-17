@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "moreweaponry:kuro"
+    },
+    "title": "I wonder...",
+    "description": "Harvest Kuro",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "moreweaponry:set_of_refined_moon_armor",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "moreweaponry:kuro"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

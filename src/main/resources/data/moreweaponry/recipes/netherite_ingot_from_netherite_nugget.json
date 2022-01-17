@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "moreweaponry:netherite_nugget"
+    }
+  },
+  "result": {
+    "item": "minecraft:netherite_ingot"
+  }
+}

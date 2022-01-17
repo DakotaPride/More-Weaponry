@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "moreweaponry:stripped_nitris_wood"
+    }
+  ],
+  "result": {
+    "item": "moreweaponry:nitris_planks",
+    "count": 4
+  }
+}

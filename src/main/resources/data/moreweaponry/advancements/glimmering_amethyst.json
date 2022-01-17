@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "moreweaponry:glimmering_amethyst"
+    },
+    "title": "SHINE BRIGHT",
+    "description": "Obtain Glimmering Amethyst",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "moreweaponry:moreweaponry",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "moreweaponry:glimmering_amethyst"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

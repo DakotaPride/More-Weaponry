@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "moreweaponry:moon_stone_dust_block"
+    }
+  ],
+  "result": {
+    "item": "moreweaponry:moon_stone_dust",
+    "count": 4
+  }
+}

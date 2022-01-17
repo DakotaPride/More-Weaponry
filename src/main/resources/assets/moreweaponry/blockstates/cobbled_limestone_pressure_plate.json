@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "powered=false": { "model": "moreweaponry:block/cobbled_limestone_pressure_plate" },
+    "powered=true": { "model": "moreweaponry:block/cobbled_limestone_pressure_plate_down" }
+  }
+}

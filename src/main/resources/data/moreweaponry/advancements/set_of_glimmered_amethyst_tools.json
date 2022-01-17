@@ -1,0 +1,52 @@
+{
+  "display": {
+    "icon": {
+      "item": "moreweaponry:glimmering_pickaxe"
+    },
+    "title": "Shiny 2.0",
+    "description": "Obtain A Full Set of Glimmered Amethyst Tools",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "moreweaponry:moreweaponry",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "moreweaponry:glimmering_pickaxe"
+            ]
+          },
+          {
+            "items": [
+              "moreweaponry:glimmering_axe"
+            ]
+          },
+          {
+            "items": [
+              "moreweaponry:glimmering_sword"
+            ]
+          },
+          {
+            "items": [
+              "moreweaponry:glimmering_shovel"
+            ]
+          },
+          {
+            "items": [
+              "moreweaponry:glimmering_hoe"
+            ]
+          },
+          {
+            "items": [
+              "moreweaponry:glimmering_battleaxe"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

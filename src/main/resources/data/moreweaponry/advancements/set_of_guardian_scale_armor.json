@@ -1,0 +1,42 @@
+{
+  "display": {
+    "icon": {
+      "item": "moreweaponry:guardian_scale_chestplate"
+    },
+    "title": "Starting To Feel Nauseous...",
+    "description": "Obtain A Full Set of Guardian Scale Armor",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "moreweaponry:night_curon",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "moreweaponry:guardian_scale_helmet"
+            ]
+          },
+          {
+            "items": [
+              "moreweaponry:guardian_scale_chestplate"
+            ]
+          },
+          {
+            "items": [
+              "moreweaponry:guardian_scale_leggings"
+            ]
+          },
+          {
+            "items": [
+              "moreweaponry:guardian_scale_boots"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

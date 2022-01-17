@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "minecraft:amethyst_shard"
+  },
+  "result": "moreweaponry:blasted_amethyst",
+  "experience": 0.7,
+  "cookingtime": 100
+}

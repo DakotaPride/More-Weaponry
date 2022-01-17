@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "moreweaponry:elder_guardian_scale"
+    },
+    "title": "Changing The Tides!",
+    "description": "Obtain Elder Guardian Scales",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "moreweaponry:guardian_scale",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "moreweaponry:elder_guardian_scale"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

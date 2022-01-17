@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "moreweaponry:kuro_wheat_block"
+    }
+  ],
+  "result": {
+    "item": "moreweaponry:kuro",
+    "count": 9
+  }
+}

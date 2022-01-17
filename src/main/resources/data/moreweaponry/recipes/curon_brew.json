@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "MN ",
+    "BNW"
+  ],
+  "key": {
+    "#": {
+      "item": "moreweaponry:crushed_kuro"
+    },
+    "M": {
+      "item": "moreweaponry:night_curon"
+    },
+    "N": {
+      "item": "moreweaponry:curon_flower_petals"
+    },
+    "B": {
+      "item": "moreweaponry:nitris_bowl"
+    },
+    "W": {
+      "item": "minecraft:wither_rose"
+    }
+  },
+  "result": {
+    "item": "moreweaponry:curon_brew",
+    "count": 1
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "moreweaponry:block/cobbled_limestone",
+    "top": "moreweaponry:block/cobbled_limestone",
+    "side": "moreweaponry:block/cobbled_limestone"
+  }
+}

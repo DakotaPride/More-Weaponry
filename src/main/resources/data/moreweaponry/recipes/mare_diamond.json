@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "moreweaponry:mare_diamond_block"
+    }
+  ],
+  "result": {
+    "item": "moreweaponry:mare_diamond",
+    "count": 9
+  }
+}

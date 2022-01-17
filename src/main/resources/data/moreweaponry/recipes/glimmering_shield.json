@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#P#",
+    "#A#",
+    " A "
+  ],
+  "key": {
+    "#": {
+      "item": "moreweaponry:glimmering_amethyst_block"
+    },
+    "P": {
+      "item": "moreweaponry:glimmering_amethyst"
+    },
+    "A": {
+      "item": "minecraft:amethyst_block"
+    }
+  },
+  "result": {
+    "item": "moreweaponry:glimmering_shield",
+    "count": 1
+  }
+}

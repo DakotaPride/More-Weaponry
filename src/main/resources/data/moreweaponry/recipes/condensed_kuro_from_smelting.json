@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "moreweaponry:kuro"
+  },
+  "result": "moreweaponry:condensed_kuro",
+  "experience": 1.0,
+  "cookingtime": 200
+}

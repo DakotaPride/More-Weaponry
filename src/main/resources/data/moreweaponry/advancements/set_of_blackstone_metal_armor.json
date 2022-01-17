@@ -1,0 +1,42 @@
+{
+  "display": {
+    "icon": {
+      "item": "moreweaponry:blackstone_metal_chestplate"
+    },
+    "title": "Cover Me In... Blackstone?",
+    "description": "Obtain A Full Set of Blackstone Metal Armor",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "moreweaponry:blackstone_metal",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "moreweaponry:blackstone_metal_helmet"
+            ]
+          },
+          {
+            "items": [
+              "moreweaponry:blackstone_metal_chestplate"
+            ]
+          },
+          {
+            "items": [
+              "moreweaponry:blackstone_metal_leggings"
+            ]
+          },
+          {
+            "items": [
+              "moreweaponry:blackstone_metal_boots"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

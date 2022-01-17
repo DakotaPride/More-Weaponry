@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "moreweaponry:block/limestone_slab"
+    },
+    "type=double": {
+      "model": "moreweaponry:block/limestone"
+    },
+    "type=top": {
+      "model": "moreweaponry:block/limestone_slab_top"
+    }
+  }
+}

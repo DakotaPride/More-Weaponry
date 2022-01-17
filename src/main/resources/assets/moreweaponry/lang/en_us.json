@@ -1,0 +1,139 @@
+{
+  "item.moreweaponry.blasted_amethyst": "Blasted Amethyst",
+  "item.moreweaponry.glimmering_amethyst": "Glimmering Amethyst",
+  "item.moreweaponry.moon_stone_dust": "Moonstone Dust",
+  "item.moreweaponry.handle": "Handle",
+  "item.moreweaponry.refined_moon_stone": "Refined Moonstone",
+  "item.moreweaponry.netherite_handle": "Netherite Handle",
+  "item.moreweaponry.blackstone_ingot": "Blackstone Metal",
+  "item.moreweaponry.mare_diamond": "Mare Diamond",
+  "item.moreweaponry.netherite_nugget": "Netherite Nugget",
+  "item.moreweaponry.amethyst_handle": "Amethyst Handle",
+
+
+  "item.moreweaponry.glimmering_sword": "Glimmered Amethyst Sword",
+  "item.moreweaponry.glimmering_axe": "Glimmered Amethyst Axe",
+  "item.moreweaponry.glimmering_hoe": "Glimmered Amethyst Hoe",
+  "item.moreweaponry.glimmering_pickaxe": "Glimmered Amethyst Pickaxe",
+  "item.moreweaponry.glimmering_shovel": "Glimmered Amethyst Shovel",
+
+  "item.moreweaponry.glimmering_battleaxe": "Glimmered Amethyst Battleaxe",
+
+  "item.moreweaponry.moon_stone_sword": "Refined Moon Sword",
+  "item.moreweaponry.moon_stone_axe": "Refined Moon Axe",
+  "item.moreweaponry.moon_stone_hoe": "Refined Moon Hoe",
+  "item.moreweaponry.moon_stone_pickaxe": "Refined Moon Pickaxe",
+  "item.moreweaponry.moon_stone_shovel": "Refined Moon Shovel",
+
+  "item.moreweaponry.moon_stone_battleaxe": "Refined Moon Battleaxe",
+
+  "item.moreweaponry.blackstone_metal_sword": "Blackstone Metal Sword",
+  "item.moreweaponry.blackstone_metal_axe": "Blackstone Metal Axe",
+  "item.moreweaponry.blackstone_metal_hoe": "Blackstone Metal Hoe",
+  "item.moreweaponry.blackstone_metal_pickaxe": "Blackstone Metal Pickaxe",
+  "item.moreweaponry.blackstone_metal_shovel": "Blackstone Metal Shovel",
+
+  "item.moreweaponry.blackstone_metal_battleaxe": "Blackstone Metal Battlaxe",
+
+  "item.moreweaponry.netherite_battleaxe": "Netherite Battleaxe",
+
+  "item.moreweaponry.diamond_battleaxe": "Diamond Battleaxe",
+
+
+  "block.moreweaponry.moon_stone_dust_block": "Moonstone Dust Block",
+  "block.moreweaponry.blackstone_metal_block": "Blackstone Metal Block",
+  "block.moreweaponry.glimmering_amethyst_block": "Glimmering Amethyst Block",
+
+  "block.moreweaponry.limestone": "Limestone",
+  "block.moreweaponry.cobbled_limestone": "Cobbled Limestone",
+  "block.moreweaponry.limestone_slab": "Limestone Slab",
+  "block.moreweaponry.limestone_stairs": "Limestone Stairs",
+  "block.moreweaponry.cobbled_limestone_slab": "Cobbled Limestone Slab",
+  "block.moreweaponry.cobbled_limestone_stairs": "Cobbled Limestone Stairs",
+
+  "block.moreweaponry.nitris_log": "Nitris Log",
+  "block.moreweaponry.nitris_wood": "Nitris Wood",
+  "block.moreweaponry.nitris_planks": "Nitris Planks",
+  "block.moreweaponry.stripped_nitris_log": "Stripped Nitris Log",
+  "block.moreweaponry.stripped_nitris_wood": "Stripped Nitris Wood",
+  "block.moreweaponry.nitris_leaves": "Nitris Leaves",
+  "block.moreweaponry.nitris_sapling": "Nitris Sapling",
+  "block.moreweaponry.nitris_stairs": "Nitris Stairs",
+  "block.moreweaponry.nitris_slab": "Nitris Slab",
+  "block.moreweaponry.nitris_fence": "Nitris Fence",
+  "block.moreweaponry.nitris_fence_gate": "Nitris Fence Gate",
+
+  "block.moreweaponry.nitris_button": "Nitris Button",
+  "block.moreweaponry.nitris_pressure_plate": "Nitris Pressure Plate",
+  "block.moreweaponry.cobblestone_button": "Cobblestone Button",
+  "block.moreweaponry.cobblestone_pressure_plate": "Cobblestone Pressure Plate",
+  "block.moreweaponry.limestone_button": "Limestone Button",
+  "block.moreweaponry.cobbled_limestone_button": "Cobbled Limestone Button",
+  "block.moreweaponry.limestone_pressure_plate": "Limestone Pressure Plate",
+  "block.moreweaponry.cobbled_limestone_pressure_plate": "Cobbled Limestone Pressure Plate",
+  "block.moreweaponry.nitris_door": "Nitris Door",
+  "block.moreweaponry.nitris_trapdoor": "Nitris Trapdoor",
+
+  "block.moreweaponry.mare_diamond_block": "Mare Diamond Block",
+  "block.moreweaponry.mare_diamond_ore_block": "Mare Diamond Ore",
+  "block.moreweaponry.deepslate_mare_diamond_ore": "Deepslate Mare Diamond Ore",
+
+
+  "itemGroup.moreweaponry.more_weaponry": "More Weaponry",
+
+
+  "item.moreweaponry.glimmering_chestplate": "Glimmered Amethyst Chestplate",
+  "item.moreweaponry.glimmering_boots": "Glimmered Amethyst Boots",
+  "item.moreweaponry.glimmering_helmet": "Glimmered Amethyst Helm",
+  "item.moreweaponry.glimmering_leggings": "Glimmered Amethyst Leggings",
+
+  "item.moreweaponry.moon_stone_chestplate": "Refined Moon Chestplate",
+  "item.moreweaponry.moon_stone_boots": "Refined Moon Boots",
+  "item.moreweaponry.moon_stone_helmet": "Refined Moon Helm",
+  "item.moreweaponry.moon_stone_leggings": "Refined Moon Leggings",
+
+  "item.moreweaponry.blackstone_metal_chestplate": "Blackstone Metal Chestplate",
+  "item.moreweaponry.blackstone_metal_boots": "Blackstone Metal Boots",
+  "item.moreweaponry.blackstone_metal_helmet": "Blackstone Metal Helm",
+  "item.moreweaponry.blackstone_metal_leggings": "Blackstone Metal Leggings",
+
+  "item.moreweaponry.elder_guardian_scale_chestplate": "Elder Scale Chestplate",
+  "item.moreweaponry.elder_guardian_scale_boots": "Elder Scale Boots",
+  "item.moreweaponry.elder_guardian_scale_helmet": "Elder Scale Helm",
+  "item.moreweaponry.elder_guardian_scale_leggings": "Elder Scale Leggings",
+
+  "item.moreweaponry.guardian_scale_chestplate": "Guardian Scale Chestplate",
+  "item.moreweaponry.guardian_scale_boots": "Guardian Scale Boots",
+  "item.moreweaponry.guardian_scale_helmet": "Guardian Scale Helm",
+  "item.moreweaponry.guardian_scale_leggings": "Guardian Scale Leggings",
+
+
+  "block.moreweaponry.kuro_plant": "Kuro Seeds",
+  "item.moreweaponry.kuro": "Kuro Wheat",
+  "item.moreweaponry.kuro_bread": "Kuro Bread",
+  "item.moreweaponry.crushed_kuro": "Crushed Kuro",
+  "item.moreweaponry.condensed_kuro": "Condensed Kuro",
+  "block.moreweaponry.kuro_wheat_block": "Kuro Bale",
+  "block.moreweaponry.night_curon": "Night Curon Flower",
+  "item.moreweaponry.curon_brew": "Night Curon Brew",
+  "item.moreweaponry.nitris_bowl": "Nitris Bowl",
+  "item.moreweaponry.curon_flower_petals": "Night Curon Flower Petal",
+
+
+  "enchantment.moreweaponry.thundering": "Thundering",
+  "enchantment.moreweaponry.evokers_revenge": "Evoker's Revenge",
+  "enchantment.moreweaponry.auto_mending": "Auto Mending",
+  "enchantment.moreweaponry.power_of_the_wither": "Withering Power",
+  "enchantment.moreweaponry.stray_bonage": "Stray Bonage",
+
+
+  "item.moreweaponry.glimmering_shield": "Glimmered Amethyst Shield",
+  "item.moreweaponry.blackstone_metal_shield": "Blackstone Metal Shield",
+  "item.moreweaponry.moon_stone_shield": "Refined Moon Shield",
+  "item.moreweaponry.elder_scale_shield": "Elder Scale Shield",
+  "item.moreweaponry.guardian_scale_shield": "Guardian Scale Shield",
+
+
+  "block.moreweaponry.limestone_wall": "Limestone Wall",
+  "block.moreweaponry.cobbled_limestone_wall": "Cobbled Limestone Wall"
+}

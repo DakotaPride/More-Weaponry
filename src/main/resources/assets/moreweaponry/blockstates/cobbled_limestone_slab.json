@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "moreweaponry:block/cobbled_limestone_slab"
+    },
+    "type=double": {
+      "model": "moreweaponry:block/cobbled_limestone"
+    },
+    "type=top": {
+      "model": "moreweaponry:block/cobbled_limestone_slab_top"
+    }
+  }
+}
