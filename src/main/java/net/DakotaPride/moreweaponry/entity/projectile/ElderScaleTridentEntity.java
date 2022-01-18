@@ -1,5 +1,6 @@
 package net.DakotaPride.moreweaponry.entity.projectile;
 
+import net.DakotaPride.moreweaponry.entity.ModEntityType;
 import net.DakotaPride.moreweaponry.item.ModItems;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
@@ -37,7 +38,7 @@ public class ElderScaleTridentEntity
     }
 
     public ElderScaleTridentEntity(World world, LivingEntity owner, ItemStack stack) {
-        super(EntityType.TRIDENT, owner, world);
+        super(ModEntityType.ELDER_SCALE_TRIDENT, owner, world);
         this.ElderScaleTridentStack = stack.copy();
         this.dataTracker.set(LOYALTY, (byte)EnchantmentHelper.getLoyalty(stack));
         this.dataTracker.set(ENCHANTED, stack.hasGlint());

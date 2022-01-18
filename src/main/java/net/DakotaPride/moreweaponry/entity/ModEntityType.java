@@ -22,7 +22,7 @@ public class ModEntityType<T extends Entity> extends EntityType<PersistentProjec
     public static final String ENTITY_TAG_KEY = "EntityTag";
     private static final float field_30054 = 1.3964844f;
 
-    public static final Entity ELDER_SCALE_TRIDENT = EntityType.createInstanceFromId("elder_scale_trident", EntityType.Builder.create(ElderScaleTridentEntity::new, SpawnGroup.MISC).setDimensions(0.5f, 0.5f).maxTrackingRange(4).trackingTickInterval(20));
+    public static final ModEntityType<ElderScaleTridentEntity> ELDER_SCALE_TRIDENT = EntityType.register("elder_scale_trident", EntityType.Builder.create(ElderScaleTridentEntity::new, SpawnGroup.MISC).setDimensions(0.5f, 0.5f).maxTrackingRange(4).trackingTickInterval(20));
 
     public ModEntityType(EntityFactory<PersistentProjectileEntity> factory, SpawnGroup spawnGroup, boolean saveable, boolean summonable, boolean fireImmune, boolean spawnableFarFromPlayer, ImmutableSet<Block> canSpawnInside, EntityDimensions dimensions, int maxTrackDistance, int trackTickInterval) {
         super((EntityType.EntityFactory<PersistentProjectileEntity>) factory, spawnGroup, saveable, summonable, fireImmune, spawnableFarFromPlayer, canSpawnInside, dimensions, maxTrackDistance, trackTickInterval);
