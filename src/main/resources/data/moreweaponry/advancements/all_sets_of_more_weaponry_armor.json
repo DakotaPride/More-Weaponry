@@ -1,15 +1,15 @@
 {
   "display": {
     "icon": {
-      "item": "moreweaponry:elder_guardian_scale_battleaxe"
+      "item": "moreweaponry:heated_cirtict_battleaxe"
     },
-    "title": "You Are The Moon, Player!",
-    "description": "Obtain A Full Set of Refined Moon Armor",
+    "title": "It All Belongs To Me!",
+    "description": "Obtain All Sets Of Armor In The More Weaponry Mod",
     "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true
   },
-  "parent": "moreweaponry:set_of_refined_moon_tools",
+  "parent": "moreweaponry:moreweaponry",
   "criteria": {
     "requirement": {
       "trigger": "minecraft:inventory_changed",

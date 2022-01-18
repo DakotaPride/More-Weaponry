@@ -9,7 +9,7 @@
     "show_toast": true,
     "announce_to_chat": true
   },
-  "parent": "moreweaponry:night_curon",
+  "parent": "moreweaponry:guardian_scale",
   "criteria": {
     "requirement": {
       "trigger": "minecraft:inventory_changed",

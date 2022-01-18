@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "moreweaponry:item/iron_battleaxe"
+  }
+}

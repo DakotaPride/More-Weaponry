@@ -1,16 +1,16 @@
 {
   "replace": false,
   "values": [
-    "minecraft:wooden_knife",
-    "minecraft:stone_knife",
-    "minecraft:golden_knife",
-    "minecraft:iron_knife",
-    "minecraft:diamond_knife",
-    "minecraft:netherite_knife",
-    "moreweaponry:moon_stone_knife",
-    "moreweaponry:glimmering_knife",
+    "moreweaponry:wooden_knife",
+    "moreweaponry:stone_knife",
+    "moreweaponry:golden_knife",
+    "moreweaponry:iron_knife",
+    "moreweaponry:diamond_knife",
+    "moreweaponry:netherite_knife",
+    "moreweaponry:refined_moon_knife",
+    "moreweaponry:glimmered_amethyst_knife",
     "moreweaponry:blackstone_metal_knife",
     "moreweaponry:guardian_scale_knife",
-    "moreweaponry:elder_scale_knife"
+    "moreweaponry:elder_guardian_scale_knife"
   ]
 }

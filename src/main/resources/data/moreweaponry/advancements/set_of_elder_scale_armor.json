@@ -10,7 +10,7 @@
     "announce_to_chat": true,
     "hidden": true
   },
-  "parent": "moreweaponry:set_of_guardian_scale_armor",
+  "parent": "moreweaponry:elder_guardian_scale",
   "criteria": {
     "requirement": {
       "trigger": "minecraft:inventory_changed",

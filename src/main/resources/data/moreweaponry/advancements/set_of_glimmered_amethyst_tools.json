@@ -9,7 +9,7 @@
     "show_toast": true,
     "announce_to_chat": true
   },
-  "parent": "moreweaponry:moreweaponry",
+  "parent": "moreweaponry:glimmering_amethyst",
   "criteria": {
     "requirement": {
       "trigger": "minecraft:inventory_changed",

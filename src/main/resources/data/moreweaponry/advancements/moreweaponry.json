@@ -1,14 +1,14 @@
 {
   "display": {
     "icon": {
-      "item": "moreweaponry:blackstone_metal_battleaxe"
+      "item": "moreweaponry:cirtict_battleaxe"
     },
     "title": "More Weaponry",
     "description": "And So It Begins...",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": false,
-    "background": "moreweaponry:textures/block/blackstone_metal_block.png"
+    "background": "moreweaponry:textures/block/stripped_nitris_log.png"
   },
   "criteria": {
     "requirement": {

@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "moreweaponry:item/heated_cirtict_battleaxe"
+  }
+}

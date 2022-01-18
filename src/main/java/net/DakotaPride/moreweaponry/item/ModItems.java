@@ -313,6 +313,74 @@ public class ModItems {
     public static final Item ELDER_SCALE_TRIDENT = registerItem("elder_scale_trident",
             new ElderScaleTridentItem(new FabricItemSettings().maxDamage(15).rarity(Rarity.EPIC).group(ModItemGroup.MORE_WEAPONRY)));
 
+    public static final Item GOLDEN_KNIFE = registerItem("golden_knife",
+            new ModKnifeItem((ToolMaterial) ModToolMaterial.OG_GOLD, 2, 1.0f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item STONE_KNIFE = registerItem("stone_knife",
+            new ModKnifeItem((ToolMaterial) ModToolMaterial.OG_STONE, 2, -0.2f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item IRON_KNIFE = registerItem("diamond_knife",
+            new ModKnifeItem((ToolMaterial) ModToolMaterial.OG_IRON, 5, 0.3f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item DIAMOND_KNIFE = registerItem("iron_knife",
+            new ModKnifeItem((ToolMaterial) ModToolMaterial.OG_DIAMOND, 4, -0.1f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item WOODEN_KNIFE = registerItem("wooden_knife",
+            new ModKnifeItem((ToolMaterial) ModToolMaterial.OG_WOOD, 1, -0.3f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item NETHERITE_KNIFE = registerItem("netherite_knife",
+            new ModKnifeItem((ToolMaterial) ModToolMaterial.OG_NETHERITE, 7, 0.5f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item REFINED_MOON_KNIFE = registerItem("refined_moon_knife",
+            new ModKnifeItem((ToolMaterial) ModToolMaterial.REFINED_MOON_STONE, 6, 0.4f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item GLIMMERED_AMETHYST_KNIFE = registerItem("glimmered_amethyst_knife",
+            new ModKnifeItem((ToolMaterial) ModToolMaterial.GLIMMERING_AMETHYST, 5, 0.5f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item BLACKSTONE_METAL_KNIFE = registerItem("blackstone_metal_knife",
+            new ModKnifeItem((ToolMaterial) ModToolMaterial.BLACKSTONE_METAL, 8, 0.6f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item GUARDIAN_SCALE_KNIFE = registerItem("guardian_scale_knife",
+            new ModKnifeItem((ToolMaterial) ModToolMaterial.GUARDIAN_SCALE, 8, 0.6f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item ELDER_GUARDIAN_SCALE_KNIFE = registerItem("elder_guardian_scale_knife",
+            new ModKnifeItem((ToolMaterial) ModToolMaterial.ELDER_GUARDIAN_SCALE, 8, 0.6f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item GOLDEN_BATTLEAXE = registerItem("golden_battleaxe",
+            new ModBattleaxeItem((ToolMaterial) ModToolMaterial.OG_GOLD, 11, -2.9f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item WOODEN_BATTLEAXE = registerItem("wooden_battleaxe",
+            new ModBattleaxeItem((ToolMaterial) ModToolMaterial.OG_WOOD, 8, -3.6f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item STONE_BATTLEAXE = registerItem("stone_battleaxe",
+            new ModBattleaxeItem((ToolMaterial) ModToolMaterial.OG_STONE, 10, -3.5f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item IRON_BATTLEAXE = registerItem("iron_battleaxe",
+            new ModBattleaxeItem((ToolMaterial) ModToolMaterial.OG_IRON, 13, -3.2f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item CIRTICT_BATTLEAXE = registerItem("cirtict_battleaxe",
+            new ModBattleaxeItem((ToolMaterial) ModToolMaterial.HELLFIRE, 26, -3.0f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item HEATED_CIRTICT_BATTLEAXE = registerItem("heated_cirtict_battleaxe",
+            new ModBattleaxeItem((ToolMaterial) ModToolMaterial.HELLFIRE, 26, -3.0f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
 
     private static Item registerItem (String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(MoreWeaponry.MOD_ID, name), item);

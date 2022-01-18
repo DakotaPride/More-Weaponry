@@ -12,6 +12,8 @@
   "item.moreweaponry.guardian_scale": "Guardian Scale",
   "item.moreweaponry.elder_guardian_scale": "Elder Guardian Scale",
   "item.moreweaponry.elder_guardians_eye": "Elder Guardian Eye",
+  "item.moreweaponry.wither_essence": "Wither Essence",
+  "item.moreweaponry.with_bone": "Wither Bone",
 
 
   "item.moreweaponry.glimmering_sword": "Glimmered Amethyst Sword",
@@ -41,6 +43,11 @@
   "item.moreweaponry.netherite_battleaxe": "Netherite Battleaxe",
 
   "item.moreweaponry.diamond_battleaxe": "Diamond Battleaxe",
+
+  "item.moreweaponry.golden_battleaxe": "Golden Battleaxe",
+  "item.moreweaponry.iron_battleaxe": "Iron Battleaxe",
+  "item.moreweaponry.stone_battleaxe": "Stone Battleaxe",
+  "item.moreweaponry.wooden_battleaxe": "Wooden Battleaxe",
 
 
   "block.moreweaponry.moon_stone_dust_block": "Moonstone Dust Block",
@@ -135,6 +142,20 @@
   "item.moreweaponry.moon_stone_shield": "Refined Moon Shield",
   "item.moreweaponry.elder_scale_shield": "Elder Scale Shield",
   "item.moreweaponry.guardian_scale_shield": "Guardian Scale Shield",
+
+
+  "item.moreweaponry.wooden_knife": "Wooden Knife",
+  "item.moreweaponry.stone_knife": "Stone Knife",
+  "item.moreweaponry.iron_knife": "Iron Knife",
+  "item.moreweaponry.golden_knife": "Golden Knife",
+  "item.moreweaponry.diamond_knife": "Diamond Knife",
+  "item.moreweaponry.netherite_knife": "Netherite Knife",
+  "item.moreweaponry.refined_moon_knife": "Refined Moon Knife",
+  "item.moreweaponry.glimmered_amethyst_knife": "Glimmered Amethyst Knife",
+  "item.moreweaponry.blackstone_metal_knife": "Blackstone Metal Knife",
+  "item.moreweaponry.guardian_scale_knife": "Guardian Scale Knife",
+  "item.moreweaponry.elder_guardian_scale_knife": "Elder Guardian Scale Knife",
+
 
   "item.moreweaponry.elder_scale_trident": "Elder Scale Trident (WIP)",
   "item.moreweaponry.hellfire_broad_axe": "Hellfire Broad Axe (WIP)",

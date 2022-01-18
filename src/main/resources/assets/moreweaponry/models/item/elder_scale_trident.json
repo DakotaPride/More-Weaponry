@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:item/trident",
+  "parent": "minecraft:item/generated",
   "textures": {
     "layer0": "moreweaponry:item/elder_scale_trident"
   }
