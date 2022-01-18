@@ -1,16 +1,16 @@
 {
   "display": {
     "icon": {
-      "item": "moreweaponry:elder_guardians_eye"
+      "item": "moreweaponry:elder_scale_trident"
     },
-    "title": "Won't Be Needing This Anymore",
-    "description": "Obtain The Elder Guardian's Eye",
-    "frame": "task",
+    "title": "Poseidon's Power! (WIP)",
+    "description": "Obtain The Elder Scale Trident",
+    "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "moreweaponry:elder_guardian_scale",
+  "parent": "moreweaponry:elder_guardians_eye",
   "criteria": {
     "requirement": {
       "trigger": "minecraft:inventory_changed",
@@ -18,7 +18,7 @@
         "items": [
           {
             "items": [
-              "moreweaponry:elder_guardians_eye"
+              "moreweaponry:elder_scale_trident"
             ]
           }
         ]

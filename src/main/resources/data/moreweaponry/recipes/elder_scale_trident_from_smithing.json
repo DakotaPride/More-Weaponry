@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:trident"
+  },
+  "addition": {
+    "item": "moreweaponry:elder_guardians_eye"
+  },
+  "result": {
+    "item": "moreweaponry:elder_scale_trident"
+  }
+}

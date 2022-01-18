@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "moreweaponry:handle",
+    "moreweaponry:amethyst_handle",
+    "moreweaponry:netherite_handle",
+    "moreweaponry:prismarine_handle"
+  ]
+}
