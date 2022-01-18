@@ -104,6 +104,17 @@ public class ModItems {
     public static final Item PRISMARINE_HANDLE = registerItem("prismarine_handle",
             new ModHandleItem(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
+    public static final Item WITHER_ESSENCE = registerItem("wither_essence",
+            new ModEssenceItem(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item WITHER_BONE = registerItem("wither_bone",
+            new Item(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+
+    public static final Item HELLFIRE_BROAD_AXE = registerItem("hellfire_broad_axe",
+            new ModBroadAxeItem((ToolMaterial) ModToolMaterial.HELLFIRE, 24, -3.0f,
+                    new FabricItemSettings().rarity(Rarity.EPIC).group(ModItemGroup.MORE_WEAPONRY)));
+
 
     public static final Item GLIMMERING_SWORD = registerItem("glimmering_sword",
             new SwordItem((ToolMaterial) ModToolMaterial.GLIMMERING_AMETHYST, 3, -2.4f,
@@ -230,24 +241,24 @@ public class ModItems {
                     new FabricItemSettings().rarity(Rarity.EPIC).group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item ELDER_GUARDIAN_SCALE_SWORD = registerItem("elder_guardian_scale_sword",
-            new SwordItem((ToolMaterial) ModToolMaterial.ELDER_GUARDIAN_SCALE, 5, -1.8f,
+            new SwordItem((ToolMaterial) ModToolMaterial.ELDER_GUARDIAN_SCALE, 9, -1.8f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
     public static final Item ELDER_GUARDIAN_SCALE_SHOVEL = registerItem("elder_guardian_scale_shovel",
-            new ShovelItem((ToolMaterial) ModToolMaterial.ELDER_GUARDIAN_SCALE, 1, -2.5f,
+            new ShovelItem((ToolMaterial) ModToolMaterial.ELDER_GUARDIAN_SCALE, 4, -2.5f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item ELDER_GUARDIAN_SCALE_PICKAXE = registerItem("elder_guardian_scale_pickaxe",
-            new ModPickaxeItem((ToolMaterial) ModToolMaterial.ELDER_GUARDIAN_SCALE, 2, -2.4f,
+            new ModPickaxeItem((ToolMaterial) ModToolMaterial.ELDER_GUARDIAN_SCALE, 5, -2.4f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
     public static final Item ELDER_GUARDIAN_SCALE_AXE = registerItem("elder_guardian_scale_axe",
-            new ModAxeItem((ToolMaterial) ModToolMaterial.ELDER_GUARDIAN_SCALE, 7, -2.8f,
+            new ModAxeItem((ToolMaterial) ModToolMaterial.ELDER_GUARDIAN_SCALE, 18, -2.8f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
     public static final Item ELDER_GUARDIAN_SCALE_HOE = registerItem("elder_guardian_scale_hoe",
-            new ModHoeItem((ToolMaterial) ModToolMaterial.ELDER_GUARDIAN_SCALE, 0, -0.1f,
+            new ModHoeItem((ToolMaterial) ModToolMaterial.ELDER_GUARDIAN_SCALE, 1, -0.1f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item ELDER_GUARDIAN_SCALE_BATTLEAXE = registerItem("elder_guardian_scale_battleaxe",
-            new ModBattleaxeItem((ToolMaterial) ModToolMaterial.ELDER_GUARDIAN_SCALE, 10, -3.2f,
+            new ModBattleaxeItem((ToolMaterial) ModToolMaterial.ELDER_GUARDIAN_SCALE, 21, -3.2f,
                     new FabricItemSettings().rarity(Rarity.RARE).group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item GUARDIAN_SCALE_HELMET = registerItem("guardian_scale_helmet",
@@ -264,24 +275,24 @@ public class ModItems {
                     new FabricItemSettings().rarity(Rarity.UNCOMMON).group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item GUARDIAN_SCALE_SWORD = registerItem("guardian_scale_sword",
-            new SwordItem((ToolMaterial) ModToolMaterial.GUARDIAN_SCALE, 5, -1.8f,
+            new SwordItem((ToolMaterial) ModToolMaterial.GUARDIAN_SCALE, 9, -1.8f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
     public static final Item GUARDIAN_SCALE_SHOVEL = registerItem("guardian_scale_shovel",
-            new ShovelItem((ToolMaterial) ModToolMaterial.ELDER_GUARDIAN_SCALE, 1, -2.5f,
+            new ShovelItem((ToolMaterial) ModToolMaterial.ELDER_GUARDIAN_SCALE, 3, -2.5f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item GUARDIAN_SCALE_PICKAXE = registerItem("guardian_scale_pickaxe",
-            new ModPickaxeItem((ToolMaterial) ModToolMaterial.GUARDIAN_SCALE, 2, -2.4f,
+            new ModPickaxeItem((ToolMaterial) ModToolMaterial.GUARDIAN_SCALE, 4, -2.4f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
     public static final Item GUARDIAN_SCALE_AXE = registerItem("guardian_scale_axe",
-            new ModAxeItem((ToolMaterial) ModToolMaterial.GUARDIAN_SCALE, 7, -2.8f,
+            new ModAxeItem((ToolMaterial) ModToolMaterial.GUARDIAN_SCALE, 14, -2.8f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
     public static final Item GUARDIAN_SCALE_HOE = registerItem("guardian_scale_hoe",
-            new ModHoeItem((ToolMaterial) ModToolMaterial.GUARDIAN_SCALE, 0, -0.1f,
+            new ModHoeItem((ToolMaterial) ModToolMaterial.GUARDIAN_SCALE, 1, -0.1f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item GUARDIAN_SCALE_BATTLEAXE = registerItem("guardian_scale_battleaxe",
-            new ModBattleaxeItem((ToolMaterial) ModToolMaterial.GUARDIAN_SCALE, 10, -3.2f,
+            new ModBattleaxeItem((ToolMaterial) ModToolMaterial.GUARDIAN_SCALE, 19, -3.2f,
                     new FabricItemSettings().rarity(Rarity.RARE).group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item GLIMMERING_SHIELD = registerItem("glimmering_shield",
@@ -300,7 +311,7 @@ public class ModItems {
             new FabricShieldItem(new FabricItemSettings().maxDamage(3276).rarity(Rarity.EPIC).group(ModItemGroup.MORE_WEAPONRY), 7, 18, ModItems.ELDER_GUARDIAN_SCALE));
 
     public static final Item ELDER_SCALE_TRIDENT = registerItem("elder_scale_trident",
-            new ElderScaleTridentItem(new FabricItemSettings().rarity(Rarity.EPIC).group(ModItemGroup.MORE_WEAPONRY)));
+            new ElderScaleTridentItem(new FabricItemSettings().maxDamage(15).rarity(Rarity.EPIC).group(ModItemGroup.MORE_WEAPONRY)));
 
 
     private static Item registerItem (String name, Item item) {

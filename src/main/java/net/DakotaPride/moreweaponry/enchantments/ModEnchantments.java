@@ -20,7 +20,7 @@ public class ModEnchantments {
 
     public static Enchantment AUTO_MENDING = register("auto_mending",
             new AutoMendingEnchantment(Enchantment.Rarity.UNCOMMON,
-                    EnchantmentTarget.ARMOR));
+                    EnchantmentTarget.ARMOR_CHEST));
 
     public static Enchantment POWER_OF_THE_WITHER = register("power_of_the_wither",
             new PowerOfTheWitherEnchantment(Enchantment.Rarity.RARE,

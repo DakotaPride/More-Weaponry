@@ -17,7 +17,8 @@ public enum ModToolMaterial implements ToolMaterial {
     OG_DIAMOND(MiningLevels.DIAMOND, 1661, 8.0f, 3.0f, 19, () -> Ingredient.ofItems(Items.DIAMOND)),
     BLACKSTONE_METAL(MiningLevels.NETHERITE, 2176, 9.5f, 5.0f, 13, () -> Ingredient.ofItems(ModItems.BLACKSTONE_INGOT)),
     GUARDIAN_SCALE(MiningLevels.NETHERITE, 2458, 10.0f, 7.0f, 16, () -> Ingredient.ofItems(ModItems.GUARDIAN_SCALE)),
-    ELDER_GUARDIAN_SCALE(MiningLevels.NETHERITE, 2986, 11.0f, 8.0f, 17, () -> Ingredient.ofItems(ModItems.ELDER_GUARDIAN_SCALE));
+    ELDER_GUARDIAN_SCALE(MiningLevels.NETHERITE, 2986, 11.0f, 8.0f, 17, () -> Ingredient.ofItems(ModItems.ELDER_GUARDIAN_SCALE)),
+    HELLFIRE(MiningLevels.NETHERITE, 3182, 12.0f, 17.0f, 14, () -> Ingredient.ofItems(ModItems.WITHER_ESSENCE));
 
     private final int miningLevel;
     private final int itemDurability;
