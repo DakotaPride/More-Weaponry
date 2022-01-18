@@ -8,9 +8,9 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(TitleScreen.class)
-public class MoreWeaponryMixin {
+public class ExampleMixin {
 	@Inject(at = @At("HEAD"), method = "init()V")
 	private void init(CallbackInfo info) {
-		MoreWeaponry.LOGGER.info("This line is printed by More Weaponry mixin!");
+		MoreWeaponry.LOGGER.info("This line is printed by an example mod mixin!");
 	}
 }
