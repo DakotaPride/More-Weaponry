@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "moreweaponry:guardian_scale_shovel"
+  },
+  "addition": {
+    "item": "moreweaponry:elder_guardian_scale"
+  },
+  "result": {
+    "item": "moreweaponry:elder_guardian_scale_shovel"
+  }
+}

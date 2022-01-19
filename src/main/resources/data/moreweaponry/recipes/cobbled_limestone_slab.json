@@ -7,11 +7,11 @@
   ],
   "key": {
     "#": {
-      "item": "moreweaponry:limestone"
+      "item": "moreweaponry:cobbled_limestone"
     }
   },
   "result": {
-    "item": "moreweaponry:limestone_slab",
+    "item": "moreweaponry:cobbled_limestone_slab",
     "count": 6
   }
 }

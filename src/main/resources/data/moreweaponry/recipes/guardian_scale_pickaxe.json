@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " IX",
+    " #X",
+    "#  "
+  ],
+  "key": {
+    "#": {
+      "item": "moreweaponry:prismarine_handle"
+    },
+    "X": {
+      "item": "minecraft:prismarine_shard"
+    },
+    "I": {
+      "item": "moreweaponry:guardian_scale"
+    }
+  },
+  "result": {
+    "item": "moreweaponry:guardian_scale_pickaxe"
+  }
+}

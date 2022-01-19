@@ -1,17 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "#  ",
-    "## ",
+    "###",
     "###"
   ],
   "key": {
     "#": {
-      "item": "moreweaponry:limestone"
+      "item": "moreweaponry:nitris_planks"
     }
   },
   "result": {
-    "item": "moreweaponry:limestone_stairs",
-    "count": 4
+    "item": "moreweaponry:nitris_trapdoor",
+    "count": 2
   }
 }

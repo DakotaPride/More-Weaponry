@@ -1,17 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "   ",
-    "   ",
-    "###"
+    "##"
   ],
   "key": {
     "#": {
-      "item": "moreweaponry:limestone"
+      "item": "moreweaponry:cobbled_limestone"
     }
   },
   "result": {
-    "item": "moreweaponry:limestone_slab",
+    "item": "moreweaponry:cobbled_limestone_pressure_plate",
     "count": 6
   }
 }

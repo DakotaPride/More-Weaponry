@@ -26,7 +26,10 @@ public enum ModArmorMaterial implements ArmorMaterial
             5.0f, 0.6f, () -> Ingredient.ofItems(ModItems.GUARDIAN_SCALE)),
     ELDER_GUARDIAN_SCALE("elder_guardian_scale", 47,
             new int[]{13, 15, 16, 11}, 20, SoundEvents.ENTITY_ELDER_GUARDIAN_AMBIENT,
-            7.0f, 0.7f, () -> Ingredient.ofItems(ModItems.ELDER_GUARDIAN_SCALE));
+            7.0f, 0.7f, () -> Ingredient.ofItems(ModItems.ELDER_GUARDIAN_SCALE)),
+    PHANTOM_SCALE("phantom_scale", 45,
+            new int[]{13, 15, 16, 11}, 17, SoundEvents.ENTITY_PHANTOM_BITE,
+            6.0f, 0.7f, () -> Ingredient.ofItems(ModItems.PHANTOM_SCALE));
 
     private static final int[] BASE_DURABILITY;
     private final String name;

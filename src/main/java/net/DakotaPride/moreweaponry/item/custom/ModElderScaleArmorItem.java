@@ -17,13 +17,14 @@ import net.minecraft.world.World;
 import java.util.Map;
 import java.util.Random;
 
-public class ModArmorItem extends ArmorItem {
+public class ModElderScaleArmorItem extends ArmorItem {
 
     private static final Map<ArmorMaterial, StatusEffect> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, StatusEffect>())
                     .put(ModArmorMaterial.ELDER_GUARDIAN_SCALE, StatusEffects.WATER_BREATHING).build();
 
-    public ModArmorItem(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
+
+    public ModElderScaleArmorItem(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
         super(material, slot, settings);
     }
 

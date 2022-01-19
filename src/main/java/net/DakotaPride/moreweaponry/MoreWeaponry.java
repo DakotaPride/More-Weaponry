@@ -4,6 +4,7 @@ import net.DakotaPride.moreweaponry.block.ModBlocks;
 import net.DakotaPride.moreweaponry.enchantments.ModEnchantments;
 import net.DakotaPride.moreweaponry.item.ModItems;
 import net.DakotaPride.moreweaponry.registries.ModRegistries;
+import net.DakotaPride.moreweaponry.statuseffect.PhantomSenseStatusEffect;
 import net.DakotaPride.moreweaponry.util.ModRendererHelper;
 import net.DakotaPride.moreweaponry.world.features.ModConfiguredFeatures;
 import net.DakotaPride.moreweaponry.world.gen.ModWorldGen;
@@ -39,6 +40,8 @@ public class MoreWeaponry implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+
+		Registry.register(Registry.STATUS_EFFECT, MoreWeaponry, PhantomSenseStatusEffect);
 
 		ModConfiguredFeatures.registerConfiguredFeatures();
 

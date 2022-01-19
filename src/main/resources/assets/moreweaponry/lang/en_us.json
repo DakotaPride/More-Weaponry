@@ -13,7 +13,8 @@
   "item.moreweaponry.elder_guardian_scale": "Elder Guardian Scale",
   "item.moreweaponry.elder_guardians_eye": "Elder Guardian Eye",
   "item.moreweaponry.wither_essence": "Wither Essence",
-  "item.moreweaponry.with_bone": "Wither Bone",
+  "item.moreweaponry.wither_bone": "Wither Bone",
+  "item.moreweaponry.prismarine_handle": "Prismarine Handle",
 
 
   "item.moreweaponry.glimmering_sword": "Glimmered Amethyst Sword",
@@ -39,6 +40,22 @@
   "item.moreweaponry.blackstone_metal_shovel": "Blackstone Metal Shovel",
 
   "item.moreweaponry.blackstone_metal_battleaxe": "Blackstone Metal Battleaxe",
+
+  "item.moreweaponry.guardian_scale_sword": "Guardian Scale Sword",
+  "item.moreweaponry.guardian_scale_axe": "Guardian Scale Axe",
+  "item.moreweaponry.guardian_scale_hoe": "Guardian Scale Hoe",
+  "item.moreweaponry.guardian_scale_pickaxe": "Guardian Scale Pickaxe",
+  "item.moreweaponry.guardian_scale_shovel": "Guardian Scale Shovel",
+
+  "item.moreweaponry.guardian_scale_battleaxe": "Guardian Scale Battleaxe",
+
+  "item.moreweaponry.elder_guardian_scale_sword": "Elder Guardian Scale Sword",
+  "item.moreweaponry.elder_guardian_scale_axe": "Elder Guardian Scale Axe",
+  "item.moreweaponry.elder_guardian_scale_hoe": "Elder Guardian Scale Hoe",
+  "item.moreweaponry.elder_guardian_scale_pickaxe": "Elder Guardian Scale Pickaxe",
+  "item.moreweaponry.elder_guardian_scale_shovel": "Elder Guardian Scale Shovel",
+
+  "item.moreweaponry.elder_guardian_scale_battleaxe": "Elder Guardian Scale Battleaxe",
 
   "item.moreweaponry.netherite_battleaxe": "Netherite Battleaxe",
 
