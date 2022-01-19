@@ -212,6 +212,12 @@ public class ModBlocks {
                     .requiresTool()
             ), ModItemGroup.MORE_WEAPONRY);
 
+    public static final Block CIRTICT_BLOCK = registerBlock("cirtict_block",
+            new Block(FabricBlockSettings.of(Material.METAL).strength(4f)
+                    .sounds(BlockSoundGroup.METAL).breakByTool(FabricToolTags.PICKAXES)
+                    .requiresTool()
+            ), ModItemGroup.MORE_WEAPONRY);
+
     public static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItem(name, block, group);
         return Registry.register(Registry.BLOCK, new Identifier(MoreWeaponry.MOD_ID, name), block);

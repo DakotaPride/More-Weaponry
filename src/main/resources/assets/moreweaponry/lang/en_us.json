@@ -17,9 +17,10 @@
   "item.moreweaponry.prismarine_handle": "Prismarine Handle",
   "item.moreweaponry.phantom_essence": "Phantom Essence",
   "item.moreweaponry.phantom_scale": "Phantom Scale",
+  "item.moreweaponry.cirtict_ingot": "Cirtict Ingot",
 
   
-  "item.moreweaponry.phantom_scale_helmet": "Phantom Scale Helm",
+  "item.moreweaponry.phantom_helmet": "Phantom Scale Helm",
 
 
   "item.moreweaponry.glimmering_sword": "Glimmered Amethyst Sword",
@@ -94,6 +95,7 @@
   "block.moreweaponry.nitris_slab": "Nitris Slab",
   "block.moreweaponry.nitris_fence": "Nitris Fence",
   "block.moreweaponry.nitris_fence_gate": "Nitris Fence Gate",
+  "block.moreweaponry.cirtict_block": "Cirtict Block",
 
   "block.moreweaponry.nitris_button": "Nitris Button",
   "block.moreweaponry.nitris_pressure_plate": "Nitris Pressure Plate",

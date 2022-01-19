@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#M#",
+        "# #",
+        "   "
+    ],
+    "key": {
+        "#": {
+            "item": "moreweaponry:phantom_essence"
+        },
+        "M": {
+            "item": "moreweaponry:phantom_scale"
+        }
+    },
+    "result": {
+        "item": "moreweaponry:phantom_helmet",
+        "count": 1
+    }
+}

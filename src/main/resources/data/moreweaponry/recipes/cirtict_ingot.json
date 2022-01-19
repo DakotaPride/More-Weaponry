@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "moreweaponry:cirtict_block"
+    }
+  ],
+  "result": {
+    "item": "moreweaponry:cirtict_ingot",
+    "count": 9
+  }
+}
