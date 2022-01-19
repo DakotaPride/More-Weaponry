@@ -41,8 +41,6 @@ public class MoreWeaponry implements ModInitializer {
 	@Override
 	public void onInitialize() {
 
-		Registry.register(Registry.STATUS_EFFECT, MoreWeaponry, PhantomSenseStatusEffect);
-
 		ModConfiguredFeatures.registerConfiguredFeatures();
 
 		ModItems.registerModItems();
