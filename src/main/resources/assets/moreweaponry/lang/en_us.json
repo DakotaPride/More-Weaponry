@@ -5,7 +5,7 @@
   "item.moreweaponry.handle": "Handle",
   "item.moreweaponry.refined_moon_stone": "Refined Moonstone",
   "item.moreweaponry.netherite_handle": "Netherite Handle",
-  "item.moreweaponry.blackstone_ingot": "Blackstone Metal",
+  "item.moreweaponry.blackstone_ingot": "Blackstone Metal Ingot",
   "item.moreweaponry.mare_diamond": "Mare Diamond",
   "item.moreweaponry.netherite_nugget": "Netherite Nugget",
   "item.moreweaponry.amethyst_handle": "Amethyst Handle",
@@ -38,7 +38,7 @@
   "item.moreweaponry.blackstone_metal_pickaxe": "Blackstone Metal Pickaxe",
   "item.moreweaponry.blackstone_metal_shovel": "Blackstone Metal Shovel",
 
-  "item.moreweaponry.blackstone_metal_battleaxe": "Blackstone Metal Battlaxe",
+  "item.moreweaponry.blackstone_metal_battleaxe": "Blackstone Metal Battleaxe",
 
   "item.moreweaponry.netherite_battleaxe": "Netherite Battleaxe",
 
@@ -159,6 +159,9 @@
 
   "item.moreweaponry.elder_scale_trident": "Elder Scale Trident (WIP)",
   "item.moreweaponry.hellfire_broad_axe": "Hellfire Broad Axe (WIP)",
+
+  "item.moreweaponry.cirtict_battleaxe": "Cirtict Battleaxe",
+  "item.moreweaponry.heated_cirtict_battleaxe": "Heated Cirtict Battleaxe",
 
 
   "block.moreweaponry.limestone_wall": "Limestone Wall",

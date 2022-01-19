@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "moreweaponry:block/deepslate_mare_diamond_ore"
-  }
-}

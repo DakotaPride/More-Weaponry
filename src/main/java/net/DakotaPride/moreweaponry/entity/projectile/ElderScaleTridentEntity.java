@@ -26,8 +26,8 @@ import org.jetbrains.annotations.Nullable;
 
 public class ElderScaleTridentEntity
         extends PersistentProjectileEntity {
-    private static final TrackedData<Byte> LOYALTY = DataTracker.registerData(net.DakotaPride.moreweaponry.entity.projectile.ElderScaleTridentEntity.class, TrackedDataHandlerRegistry.BYTE);
-    private static final TrackedData<Boolean> ENCHANTED = DataTracker.registerData(net.DakotaPride.moreweaponry.entity.projectile.ElderScaleTridentEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
+    private static final TrackedData<Byte> LOYALTY = DataTracker.registerData(ElderScaleTridentEntity.class, TrackedDataHandlerRegistry.BYTE);
+    private static final TrackedData<Boolean> ENCHANTED = DataTracker.registerData(ElderScaleTridentEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
     private ItemStack ElderScaleTridentStack = new ItemStack(ModItems.ELDER_SCALE_TRIDENT);
     private boolean dealtDamage;
     public int returnTimer;
@@ -55,7 +55,7 @@ public class ElderScaleTridentEntity
         byte i = this.dataTracker.get(LOYALTY);
         if (i > 0 && (this.dealtDamage || this.isNoClip()) && entity != null) {
             if (!this.isOwnerAlive()) {
-                if (!this.world.isClient && this.pickupType == PersistentProjectileEntity.PickupPermission.ALLOWED) {
+                if (!this.world.isClient && this.pickupType == PickupPermission.ALLOWED) {
                     this.dropStack(this.asItemStack(), 0.1f);
                 }
                 this.discard();
@@ -183,7 +183,7 @@ public class ElderScaleTridentEntity
     @Override
     public void age() {
         byte i = this.dataTracker.get(LOYALTY);
-        if (this.pickupType != PersistentProjectileEntity.PickupPermission.ALLOWED || i <= 0) {
+        if (this.pickupType != PickupPermission.ALLOWED || i <= 0) {
             super.age();
         }
     }

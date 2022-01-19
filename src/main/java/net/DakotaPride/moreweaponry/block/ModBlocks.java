@@ -212,19 +212,6 @@ public class ModBlocks {
                     .requiresTool()
             ), ModItemGroup.MORE_WEAPONRY);
 
-    public static final Block DEEPSLATE_MARE_DIAMOND_ORE = registerBlock("deepslate_mare_diamond_ore",
-            new Block(FabricBlockSettings.of(Material.STONE).strength(3f)
-                    .sounds(BlockSoundGroup.STONE).breakByTool(FabricToolTags.PICKAXES)
-                    .requiresTool()
-            ), ModItemGroup.MORE_WEAPONRY);
-
-    public static final Block MARE_DIAMOND_ORE_BLOCK = registerBlock("mare_diamond_ore_block",
-            new Block(FabricBlockSettings.of(Material.STONE).strength(3f)
-                    .sounds(BlockSoundGroup.STONE).breakByTool(FabricToolTags.PICKAXES)
-                    .requiresTool()
-            ), ModItemGroup.MORE_WEAPONRY);
-
-
     public static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItem(name, block, group);
         return Registry.register(Registry.BLOCK, new Identifier(MoreWeaponry.MOD_ID, name), block);
