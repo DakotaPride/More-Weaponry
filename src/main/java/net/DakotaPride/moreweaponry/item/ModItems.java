@@ -118,7 +118,7 @@ public class ModItems {
             new Item(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item PHANTOM_HELMET = registerItem("phantom_helmet",
-            new ModPhantomScaleArmorItem(ModArmorMaterial.PHANTOM_SCALE, EquipmentSlot.HEAD,
+            new PhantomScaleHelm(ModArmorMaterial.PHANTOM_SCALE, EquipmentSlot.HEAD,
                     new FabricItemSettings().rarity(Rarity.UNCOMMON).group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item HELLFIRE_BROAD_AXE = registerItem("hellfire_broad_axe",
@@ -391,7 +391,7 @@ public class ModItems {
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item HEATED_CIRTICT_BATTLEAXE = registerItem("heated_cirtict_battleaxe",
-            new ModBattleaxeItem((ToolMaterial) ModToolMaterial.HELLFIRE, 26, -3.0f,
+            new HeatedCirtictBattleaxe((ToolMaterial) ModToolMaterial.HELLFIRE, 30, -3.0f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
 

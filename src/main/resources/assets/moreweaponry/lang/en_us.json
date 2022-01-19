@@ -189,5 +189,14 @@
 
 
   "block.moreweaponry.limestone_wall": "Limestone Wall",
-  "block.moreweaponry.cobbled_limestone_wall": "Cobbled Limestone Wall"
+  "block.moreweaponry.cobbled_limestone_wall": "Cobbled Limestone Wall",
+
+
+  "item.moreweaponry.heated_cirtict_battleaxe.tooltip": "Can You Handle The Heat?",
+  "item.moreweaponry.phantom_scale_helm.tooltip": "Gives You The Powers Of The Phantom",
+  "item.moreweaponry.phantom_scale_helm_two.tooltip": "Grants Slow Falling While Equipped",
+
+
+  "block.moreweaponry.crop_cutter_block": "Crop Cutter"
+
 }

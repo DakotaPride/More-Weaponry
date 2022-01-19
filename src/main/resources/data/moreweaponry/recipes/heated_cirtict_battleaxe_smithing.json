@@ -1,12 +1,12 @@
 {
   "type": "minecraft:smithing",
   "base": {
-    "item": "moreweaponry:handle"
+    "item": "moreweaponry:cirtict_battleaxe"
   },
   "addition": {
-    "item": "minecraft:amethyst_shard"
+    "item": "minecraft:blaze_rod"
   },
   "result": {
-    "item": "moreweaponry:amethyst_handle"
+    "item": "moreweaponry:heated_cirtict_battleaxe"
   }
 }

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "moreweaponry:block/crop_cutter_block_top",
+    "side": "moreweaponry:block/crop_cutter_block_side"
+  }
+}

@@ -218,6 +218,9 @@ public class ModBlocks {
                     .requiresTool()
             ), ModItemGroup.MORE_WEAPONRY);
 
+    public static final Block CROP_CUTTER_BLOCK = registerBlock("crop_cutter_block",
+            new CropCutterBlock(FabricBlockSettings.of(Material.WOOD)), ModItemGroup.MORE_WEAPONRY);
+
     public static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItem(name, block, group);
         return Registry.register(Registry.BLOCK, new Identifier(MoreWeaponry.MOD_ID, name), block);
