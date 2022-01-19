@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " XX",
+    " #X",
+    "#  "
+  ],
+  "key": {
+    "#": {
+      "item": "moreweaponry:handle"
+    },
+    "X": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "result": {
+    "item": "moreweaponry:wooden_battleaxe"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " IX",
+    " #I",
+    "#  "
+  ],
+  "key": {
+    "#": {
+      "item": "moreweaponry:netherite_handle"
+    },
+    "X": {
+      "item": "moreweaponry:cirtict_block"
+    },
+    "I": {
+      "item": "moreweaponry:cirtict_ingot"
+    }
+  },
+  "result": {
+    "item": "moreweaponry:cirtict_battleaxe"
+  }
+}

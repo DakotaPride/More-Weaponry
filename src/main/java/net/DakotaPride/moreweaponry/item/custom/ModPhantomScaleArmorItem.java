@@ -19,7 +19,7 @@ public class ModPhantomScaleArmorItem extends ArmorItem {
 
     private static final Map<ArmorMaterial, StatusEffect> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, StatusEffect>())
-                    .put(ModArmorMaterial.PHANTOM_SCALE, StatusEffects.NIGHT_VISION).build();
+                    .put(ModArmorMaterial.PHANTOM_SCALE, StatusEffects.SLOW_FALLING).build();
 
 
     public ModPhantomScaleArmorItem(ArmorMaterial material, EquipmentSlot slot, Settings settings) {

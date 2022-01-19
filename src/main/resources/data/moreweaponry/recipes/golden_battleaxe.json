@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " IX",
+    " #I",
+    "#  "
+  ],
+  "key": {
+    "#": {
+      "item": "moreweaponry:handle"
+    },
+    "X": {
+      "item": "minecraft:gold_block"
+    },
+    "I": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "result": {
+    "item": "moreweaponry:golden_battleaxe"
+  }
+}

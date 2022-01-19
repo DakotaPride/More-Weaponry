@@ -125,6 +125,9 @@ public class ModItems {
             new ModBroadAxeItem((ToolMaterial) ModToolMaterial.HELLFIRE, 24, -3.0f,
                     new FabricItemSettings().rarity(Rarity.EPIC).group(ModItemGroup.MORE_WEAPONRY)));
 
+    public static final Item CIRTICT_INGOT = registerItem("cirtict_ingot",
+            new Item(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
 
     public static final Item GLIMMERING_SWORD = registerItem("glimmering_sword",
             new SwordItem((ToolMaterial) ModToolMaterial.GLIMMERING_AMETHYST, 3, -2.4f,
