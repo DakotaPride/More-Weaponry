@@ -1,0 +1,33 @@
+{
+  "replace": false,
+  "values": [
+    "moreweaponry:blackstone_metal_block",
+    "moreweaponry:glimmering_amethyst_block",
+    "moreweaponry:limestone",
+    "moreweaponry:cobbled_limestone",
+    "moreweaponry:limestone_stairs",
+    "moreweaponry:limestone_slab",
+    "moreweaponry:limestone_wall",
+    "moreweaponry:cobbled_limestone_stairs",
+    "moreweaponry:cobbled_limestone_slab",
+    "moreweaponry:cobbled_limestone_wall",
+    "moreweaponry:limestone_button",
+    "moreweaponry:cobbled_limestone_button",
+    "moreweaponry:limestone_pressure_plate",
+    "moreweaponry:cobbled_limestone_pressure_plate",
+    "moreweaponry:cobbled_limestone_wall",
+    "moreweaponry:cobblestone_button",
+    "moreweaponry:cobblestone_pressure_plate",
+    "moreweaponry:mare_diamond_block",
+    "moreweaponry:cirtict_block",
+    "moreweaponry:mare_diamond_ore",
+    "moreweaponry:deepslate_mare_diamond_ore",
+    "moreweaponry:bluestone",
+    "moreweaponry:cobbled_bluestone",
+    "moreweaponry:bluestone_slab",
+    "moreweaponry:cobbled_bluestone_slab",
+    "moreweaponry:bluestone_stairs",
+    "moreweaponry:cobbled_bluestone_stairs",
+    "moreweaponry:cirtict_debris"
+  ]
+}

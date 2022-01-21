@@ -1,11 +1,12 @@
 package net.DakotaPride.moreweaponry;
 
 import net.DakotaPride.moreweaponry.block.ModBlocks;
+import net.DakotaPride.moreweaponry.block.entity.ModBlockEntities;
 import net.DakotaPride.moreweaponry.enchantments.ModEnchantments;
 import net.DakotaPride.moreweaponry.item.ModItems;
 import net.DakotaPride.moreweaponry.registries.ModRegistries;
-import net.DakotaPride.moreweaponry.statuseffect.PhantomSenseStatusEffect;
 import net.DakotaPride.moreweaponry.util.ModRendererHelper;
+import net.DakotaPride.moreweaponry.world.dimension.ModPortals;
 import net.DakotaPride.moreweaponry.world.features.ModConfiguredFeatures;
 import net.DakotaPride.moreweaponry.world.gen.ModWorldGen;
 import net.fabricmc.api.ModInitializer;
@@ -17,6 +18,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
@@ -46,10 +48,14 @@ public class MoreWeaponry implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 
+		ModPortals.registerPortals();
+
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.NITRIS_TRAPDOOR, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.NITRIS_DOOR, RenderLayer.getCutout());
 
 		ModRendererHelper.setRenderLayers();
+
+		ModBlockEntities.registerBlockEntities();
 
 		ModEnchantments.registerModEnchantments();
 

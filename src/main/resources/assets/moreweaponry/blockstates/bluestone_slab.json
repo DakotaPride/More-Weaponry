@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "moreweaponry:block/bluestone_slab"
+    },
+    "type=double": {
+      "model": "moreweaponry:block/bluestone"
+    },
+    "type=top": {
+      "model": "moreweaponry:block/bluestone_slab_top"
+    }
+  }
+}

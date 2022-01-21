@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "moreweaponry:bluestone_rock"
+    },
+    "title": "The First Piece Of The Puzzle",
+    "description": "Obtain A Bluestone Rock",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "moreweaponry:moreweaponry",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "moreweaponry:bluestone_rock"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

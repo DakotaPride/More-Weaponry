@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "moreweaponry:block/bluestone",
+    "top": "moreweaponry:block/bluestone",
+    "side": "moreweaponry:block/bluestone"
+  }
+}

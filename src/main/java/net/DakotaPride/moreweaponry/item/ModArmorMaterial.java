@@ -13,22 +13,22 @@ import java.util.function.Supplier;
 public enum ModArmorMaterial implements ArmorMaterial
 {
     GLIMMERING_AMETHYST("glimmering_amethyst", 30,
-            new int[]{13, 15, 16, 11}, 23, SoundEvents.BLOCK_AMETHYST_BLOCK_CHIME,
+            new int[]{5, 8, 9, 5}, 23, SoundEvents.BLOCK_AMETHYST_BLOCK_CHIME,
             2.0f, 0.2f, () -> Ingredient.ofItems(ModItems.GLIMMERING_AMETHYST)),
     REFINED_MOON_STONE("refined_moon_stone", 37,
-            new int[]{13, 15, 16, 11}, 17, SoundEvents.BLOCK_NOTE_BLOCK_CHIME,
+            new int[]{8, 11, 12, 8}, 17, SoundEvents.BLOCK_NOTE_BLOCK_CHIME,
             3.0f, 0.4f, () -> Ingredient.ofItems(ModItems.REFINED_MOON_STONE)),
     BLACKSTONE_METAL("blackstone_metal", 41,
-            new int[]{13, 15, 16, 11}, 14, SoundEvents.BLOCK_BASALT_PLACE,
+            new int[]{11, 14, 15, 11}, 14, SoundEvents.BLOCK_BASALT_PLACE,
             4.0f, 0.6f, () -> Ingredient.ofItems(ModItems.BLACKSTONE_INGOT)),
     GUARDIAN_SCALE("guardian_scale", 43,
-            new int[]{13, 15, 16, 11}, 16, SoundEvents.ENTITY_GUARDIAN_AMBIENT,
+            new int[]{14, 17, 18, 14}, 16, SoundEvents.ENTITY_GUARDIAN_AMBIENT,
             5.0f, 0.6f, () -> Ingredient.ofItems(ModItems.GUARDIAN_SCALE)),
     ELDER_GUARDIAN_SCALE("elder_guardian_scale", 47,
-            new int[]{13, 15, 16, 11}, 20, SoundEvents.ENTITY_ELDER_GUARDIAN_AMBIENT,
+            new int[]{17, 20, 21, 17}, 20, SoundEvents.ENTITY_ELDER_GUARDIAN_AMBIENT,
             7.0f, 0.7f, () -> Ingredient.ofItems(ModItems.ELDER_GUARDIAN_SCALE)),
     PHANTOM_SCALE("phantom_scale", 45,
-            new int[]{13, 15, 16, 11}, 17, SoundEvents.ENTITY_PHANTOM_BITE,
+            new int[]{18, 21, 22, 18}, 17, SoundEvents.ENTITY_PHANTOM_BITE,
             6.0f, 0.7f, () -> Ingredient.ofItems(ModItems.PHANTOM_SCALE));
 
     private static final int[] BASE_DURABILITY;

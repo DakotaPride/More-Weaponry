@@ -9,7 +9,6 @@ import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
-import net.minecraft.potion.Potion;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
@@ -39,7 +38,7 @@ public class ModItems {
             new Item(new FabricItemSettings().fireproof().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item KURO_BREAD = registerItem("kuro_bread",
-            new Item(new FabricItemSettings().fireproof().rarity(Rarity.RARE).food
+            new Item(new FabricItemSettings().fireproof().food
                     (new FoodComponent.Builder().alwaysEdible().hunger(10).statusEffect
                                     (new StatusEffectInstance(StatusEffects.ABSORPTION, 20*15), 1f)
                             .statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 20*5), 1f)
@@ -393,6 +392,15 @@ public class ModItems {
     public static final Item HEATED_CIRTICT_BATTLEAXE = registerItem("heated_cirtict_battleaxe",
             new HeatedCirtictBattleaxe((ToolMaterial) ModToolMaterial.HELLFIRE, 30, -3.0f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item BLUESTONE_IGNITOR = registerItem("bluestone_ignitor",
+            new BluestoneIgnitor(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item BLUESTONE_ROCK = registerItem("bluestone_rock",
+            new Item(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item CIRTICT_SCRAP = registerItem("cirtict_scrap",
+            new Item(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
 
     private static Item registerItem (String name, Item item) {

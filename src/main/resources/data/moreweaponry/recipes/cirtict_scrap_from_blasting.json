@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "moreweaponry:cirtict_debris"
+  },
+  "result": "moreweaponry:cirtict_scrap",
+  "experience": 2.0,
+  "cookingtime": 100
+}

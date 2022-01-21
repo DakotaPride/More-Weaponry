@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "moreweaponry:cirtict_debris"
+    },
+    "title": "Hidden In The Void",
+    "description": "Obtain Cirtict Debris",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "moreweaponry:moreweaponry",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "moreweaponry:cirtict_debris"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

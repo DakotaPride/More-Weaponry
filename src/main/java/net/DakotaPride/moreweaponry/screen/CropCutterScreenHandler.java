@@ -11,7 +11,8 @@ import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.slot.Slot;
 import net.minecraft.world.World;
 
-public class CropCutterScreenHandler extends ScreenHandler {private final Inventory inventory;
+public class CropCutterScreenHandler extends ScreenHandler {
+    private final Inventory inventory;
     private final World world;
     private final PropertyDelegate propertyDelegate;
 
@@ -52,7 +53,7 @@ public class CropCutterScreenHandler extends ScreenHandler {private final Invent
     }
 
     public boolean isNight() {
-        return world.isThundering();
+        return world.isNight();
     }
 
     @Override

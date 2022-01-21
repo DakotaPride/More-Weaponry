@@ -2,6 +2,8 @@ package net.DakotaPride.moreweaponry.world.features;
 
 import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.DakotaPride.moreweaponry.block.ModBlocks;
+import net.minecraft.block.Blocks;
+import net.minecraft.structure.rule.BlockMatchRuleTest;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.util.registry.BuiltinRegistries;
@@ -42,6 +44,34 @@ public class ModConfiguredFeatures {
     public static final ConfiguredFeature<RandomPatchFeatureConfig, ?> NIGHT_CURON =
             ModConfiguredFeatures.register("night_curon_feature", Feature.FLOWER.configure(
                     createRandomPatchFeatureConfig(BlockStateProvider.of(ModBlocks.NIGHT_CURON), 64)));
+
+    public static final List<OreFeatureConfig.Target> OVERWORLD_MARE_DIAMOND_ORES = List.of(
+            OreFeatureConfig.createTarget(OreConfiguredFeatures.STONE_ORE_REPLACEABLES, ModBlocks.MARE_DIAMOND_ORE.getDefaultState()),
+            OreFeatureConfig.createTarget(OreConfiguredFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_MARE_DIAMOND_ORE.getDefaultState()));
+
+    public static final ConfiguredFeature<?, ?> MARE_DIAMOND_ORE = register("mare_diamond_ore",
+            Feature.ORE.configure(new OreFeatureConfig(OVERWORLD_MARE_DIAMOND_ORES, 10)));
+
+    public static final List<OreFeatureConfig.Target> END_CIRTICT_DEBRIS = List.of(
+            OreFeatureConfig.createTarget(OreConfiguredFeatures.STONE_ORE_REPLACEABLES, ModBlocks.CIRTICT_DEBRIS.getDefaultState()));
+
+    public static final ConfiguredFeature<?, ?> CIRTICT_DEBRIS = register("cirtict_debris",
+            Feature.ORE.configure(new OreFeatureConfig(new BlockMatchRuleTest(Blocks.END_STONE),
+                    ModBlocks.CIRTICT_DEBRIS.getDefaultState(),
+                    4)));
+
+    public static final List<OreFeatureConfig.Target> OVERWORLD_LIMESTONE = List.of(
+            OreFeatureConfig.createTarget(OreConfiguredFeatures.STONE_ORE_REPLACEABLES, ModBlocks.LIMESTONE.getDefaultState()));
+
+    public static final ConfiguredFeature<?, ?> LIMESTONE = register("limestone",
+            Feature.ORE.configure(new OreFeatureConfig(OVERWORLD_LIMESTONE, 34)));
+
+    public static final List<OreFeatureConfig.Target> OVERWORLD_BLUESTONE = List.of(
+            OreFeatureConfig.createTarget(OreConfiguredFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.BLUESTONE.getDefaultState()));
+
+    public static final ConfiguredFeature<?, ?> BLUESTONE = register("bluestone",
+            Feature.ORE.configure(new OreFeatureConfig(OVERWORLD_BLUESTONE, 34)));
+
 
 
     private static RegistryKey<ConfiguredFeature<?, ?>> registryKey(String name) {

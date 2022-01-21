@@ -15,6 +15,8 @@ public class ModWorldGen {
         //        VEGETAL_DECORATION,
         //        TOP_LAYER_MODIFICATION
 
+        ModOreGeneration.generateOres();
+
         ModTreeGeneration.generateTrees();
         ModFlowerGeneration.generateFlowers();
     }

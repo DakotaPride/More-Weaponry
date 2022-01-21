@@ -1,6 +1,8 @@
 package net.DakotaPride.moreweaponry.block.entity;
 
 import net.DakotaPride.moreweaponry.item.inventory.ImplementedInventory;
+import net.DakotaPride.moreweaponry.screen.CropCutterScreen;
+import net.DakotaPride.moreweaponry.screen.CropCutterScreenHandler;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -10,6 +12,7 @@ import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.screen.NamedScreenHandlerFactory;
+import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
@@ -24,6 +27,7 @@ public class CropCutterBlockEntity extends BlockEntity implements NamedScreenHan
             DefaultedList.ofSize(3, ItemStack.EMPTY);
     private int progress;
     private int maxProgress;
+    private PropertyDelegate propertyDelegate;
 
     public CropCutterBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.CROP_CUTTER_BLOCK_ENTITY, pos, state);
@@ -42,7 +46,7 @@ public class CropCutterBlockEntity extends BlockEntity implements NamedScreenHan
     @Nullable
     @Override
     public ScreenHandler createMenu(int syncId, PlayerInventory inv, PlayerEntity player) {
-        return null;
+        return new CropCutterScreenHandler(syncId, inv, this, this.propertyDelegate);
     }
 
     @Override

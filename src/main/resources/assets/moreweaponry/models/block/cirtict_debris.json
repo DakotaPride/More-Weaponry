@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "moreweaponry:block/cirtict_debris_top",
+    "side": "moreweaponry:block/cirtict_debris_side"
+  }
+}

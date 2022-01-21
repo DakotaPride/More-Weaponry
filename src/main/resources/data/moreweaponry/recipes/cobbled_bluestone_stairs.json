@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "moreweaponry:cobbled_bluestone"
+    }
+  },
+  "result": {
+    "item": "moreweaponry:cobbled_bluestone_stairs",
+    "count": 4
+  }
+}

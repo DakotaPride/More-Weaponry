@@ -2,6 +2,7 @@ package net.DakotaPride.moreweaponry.item;
 
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
+import net.DakotaPride.moreweaponry.item.custom.MoreWeaponryTridentItem;
 import net.minecraft.block.BlockState;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.EquipmentSlot;
@@ -30,7 +31,7 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
 public class ElderScaleTridentItem
-        extends TridentItem
+        extends MoreWeaponryTridentItem
         implements Vanishable {
     public static final int field_30926 = 10;
     public static final float field_30927 = 8.0f;

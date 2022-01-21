@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "moreweaponry:bluestone_rock"
+    }
+  },
+  "result": {
+    "item": "moreweaponry:cobbled_bluestone"
+  }
+}

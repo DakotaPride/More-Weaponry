@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "moreweaponry:blackstone_ingot"
+    "moreweaponry:blackstone_ingot",
+    "moreweaponry:cirtict_ingot",
+    "moreweaponry:mare_diamond"
   ]
 }

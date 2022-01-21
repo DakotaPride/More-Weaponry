@@ -197,6 +197,22 @@
   "item.moreweaponry.phantom_scale_helm_two.tooltip": "Grants Slow Falling While Equipped",
 
 
-  "block.moreweaponry.crop_cutter_block": "Crop Cutter"
+  "block.moreweaponry.crop_cutter_block": "Crop Cutter",
+
+  "block.moreweaponry.mare_diamond_ore": "Mare Diamond Ore",
+  "block.moreweaponry.bluestone": "Bluestone",
+  "block.moreweaponry.cobbled_bluestone": "Cobbled Bluestone",
+  "block.moreweaponry.bluestone_slab": "Bluestone Slab",
+  "block.moreweaponry.cobbled_bluestone_slab": "Cobbled Bluestone Slab",
+  "block.moreweaponry.bluestone_stairs": "Bluestone Stairs",
+  "block.moreweaponry.cobbled_bluestone_stairs": "Cobbled Bluestone Stairs",
+
+  "item.moreweaponry.bluestone_rock": "Bluestone Rock",
+  "item.moreweaponry.bluestone_ignitor": "Bluestone Ignitor",
+  "item.moreweaponry.bluestone_ignitor.tooltip": "Use To Ignite The Cold Dark Portal",
+  "block.moreweaponry.cirtict_debris": "Cirtict Debris",
+  "item.moreweaponry.cirtict_scrap": "Cirtict Scrap",
+  "block.moreweaponry.bluestone_wall": "Bluestone Wall",
+  "block.moreweaponry.cobbled_bluestone_wall": "Cobbled Bluestone Wall"
 
 }

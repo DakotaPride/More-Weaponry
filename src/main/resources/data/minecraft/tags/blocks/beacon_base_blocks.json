@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "moreweaponry:blackstone_metal_block"
+    "moreweaponry:blackstone_metal_block",
+    "moreweaponry:mare_diamond_block",
+    "moreweaponry:cirtict_block"
   ]
 }

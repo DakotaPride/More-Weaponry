@@ -9,7 +9,7 @@
     "show_toast": true,
     "announce_to_chat": true
   },
-  "parent": "moreweaponry:moreweaponry",
+  "parent": "moreweaponry:find_cirtict_debris",
   "criteria": {
     "requirement": {
       "trigger": "minecraft:inventory_changed",
@@ -118,5 +118,8 @@
         ]
       }
     }
+  },
+  "rewards": {
+    "experience": 400
   }
 }

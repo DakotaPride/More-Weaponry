@@ -9,7 +9,7 @@
     "show_toast": true,
     "announce_to_chat": true
   },
-  "parent": "moreweaponry:set_of_refined_moon_armor",
+  "parent": "moreweaponry:moreweaponry",
   "criteria": {
     "requirement": {
       "trigger": "minecraft:inventory_changed",

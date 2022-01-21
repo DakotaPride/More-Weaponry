@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "moreweaponry:mare_diamond"
+    },
+    "title": "Diamonds! Wait...",
+    "description": "Collect Mare Diamonds",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "moreweaponry:glimmering_amethyst",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "moreweaponry:mare_diamond"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "moreweaponry:bluestone"
+  },
+  "result": "moreweaponry:bluestone_wall",
+  "count": 1
+}

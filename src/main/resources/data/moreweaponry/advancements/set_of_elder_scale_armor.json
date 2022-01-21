@@ -39,5 +39,8 @@
         ]
       }
     }
+  },
+  "rewards": {
+    "experience": 500
   }
 }

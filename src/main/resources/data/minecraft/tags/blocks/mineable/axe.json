@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    "moreweaponry:nitris_log",
+    "moreweaponry:nitris_planks",
+    "moreweaponry:nitris_wood",
+    "moreweaponry:nitris_fence",
+    "moreweaponry:nitris_door",
+    "moreweaponry:stripped_nitris_log",
+    "moreweaponry:stripped_nitris_wood",
+    "moreweaponry:nitris_slab",
+    "moreweaponry:nitris_stairs",
+    "moreweaponry:nitris_fence_gate",
+    "moreweaponry:nitris_button",
+    "moreweaponry:nitris_pressure_plate",
+    "moreweaponry:nitris_trapdoor",
+    "moreweaponry:crop_cutter_block"
+  ]
+}
