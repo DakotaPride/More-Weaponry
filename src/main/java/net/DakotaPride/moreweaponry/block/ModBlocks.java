@@ -8,7 +8,6 @@ import net.DakotaPride.moreweaponry.world.features.ModConfiguredFeatures;
 import net.DakotaPride.moreweaponry.world.features.tree.ModSaplingGenerator;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.*;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
@@ -244,22 +243,24 @@ public class ModBlocks {
                     .requiresTool()), ModItemGroup.MORE_WEAPONRY);
 
     public static final Block BLUESTONE_STAIRS = registerBlock("bluestone_stairs",
-            new Block(FabricBlockSettings.of(Material.STONE).strength(2f)
+            new ModStairsBlock(ModBlocks.BLUESTONE.getDefaultState(),
+                    FabricBlockSettings.of(Material.STONE).strength(2f)
                     .sounds(BlockSoundGroup.STONE)
                     .requiresTool()), ModItemGroup.MORE_WEAPONRY);
 
     public static final Block COBBLED_BLUESTONE_STAIRS = registerBlock("cobbled_bluestone_stairs",
-            new Block(FabricBlockSettings.of(Material.STONE).strength(2f)
+            new ModStairsBlock(ModBlocks.COBBLED_BLUESTONE.getDefaultState(),
+                    FabricBlockSettings.of(Material.STONE).strength(2f)
                     .sounds(BlockSoundGroup.STONE)
                     .requiresTool()), ModItemGroup.MORE_WEAPONRY);
 
     public static final Block BLUESTONE_SLAB = registerBlock("bluestone_slab",
-            new Block(FabricBlockSettings.of(Material.STONE).strength(2f)
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(2f)
                     .sounds(BlockSoundGroup.STONE)
                     .requiresTool()), ModItemGroup.MORE_WEAPONRY);
 
     public static final Block COBBLED_BLUESTONE_SLAB = registerBlock("cobbled_bluestone_slab",
-            new Block(FabricBlockSettings.of(Material.STONE).strength(2f)
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(2f)
                     .sounds(BlockSoundGroup.STONE)
                     .requiresTool()), ModItemGroup.MORE_WEAPONRY);
 
@@ -292,6 +293,20 @@ public class ModBlocks {
     public static final Block KURO_PLANT = registerBlockWithoutBlockItem("kuro_plant",
             new KuroPlantBlock(FabricBlockSettings.of(Material.PLANT).sounds(BlockSoundGroup.ROOTS).nonOpaque()
                     .noCollision()), ModItemGroup.MORE_WEAPONRY);
+
+
+    public static final Block POTTED_NIGHT_CURON = registerBlockWithoutBlockItem("potted_night_curon",
+            new FlowerPotBlock(ModBlocks.NIGHT_CURON, FabricBlockSettings.copy(Blocks.POTTED_ALLIUM)),
+            ModItemGroup.MORE_WEAPONRY);
+
+
+    public static final Block NITRIS_WALL_SIGN_BLOCK = registerBlockWithoutBlockItem("nitris_wall_sign",
+            new WallSignBlock(FabricBlockSettings.copy(Blocks.OAK_WALL_SIGN), ModSignTypes.NITRIS),
+            ModItemGroup.MORE_WEAPONRY);
+
+    public static final Block NITRIS_SIGN_BLOCK = registerBlockWithoutBlockItem("nitris_sign",
+            new SignBlock(FabricBlockSettings.copy(Blocks.OAK_SIGN), ModSignTypes.NITRIS),
+            ModItemGroup.MORE_WEAPONRY);
 
     public static Block registerBlockWithoutBlockItem(String name, Block block, ItemGroup group) {
         return Registry.register(Registry.BLOCK, new Identifier(MoreWeaponry.MOD_ID, name), block);

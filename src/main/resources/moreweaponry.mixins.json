@@ -4,6 +4,8 @@
   "package": "net.DakotaPride.moreweaponry.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
+    "SignTypeAccessor",
+    "BlockEntityTypeMixin"
   ],
   "client": [
     "ExampleMixin"

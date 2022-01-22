@@ -4,6 +4,7 @@ import com.github.crimsondawn45.fabricshieldlib.lib.object.FabricShieldItem;
 import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.DakotaPride.moreweaponry.block.ModBlocks;
 import net.DakotaPride.moreweaponry.item.custom.*;
+import net.DakotaPride.moreweaponry.sound.ModSounds;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -401,6 +402,20 @@ public class ModItems {
 
     public static final Item CIRTICT_SCRAP = registerItem("cirtict_scrap",
             new Item(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item WARDENS_STEP_MUSIC_DISC = registerItem("wardens_step_music_disc",
+            new ModMusicDiscItem(9, ModSounds.WARDENS_STEP,
+                    new FabricItemSettings().maxCount(1).group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item ELDER_SCALE_BOW = registerItem("elder_scale_bow",
+            new BowItem(new FabricItemSettings().maxCount(1).maxDamage(476).group(ModItemGroup.MORE_WEAPONRY)));
+
+
+    public static final Item NITRIS_SIGN = registerItem("nitris_sign",
+            new SignItem(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY).maxCount(16),
+                    ModBlocks.NITRIS_SIGN_BLOCK, ModBlocks.NITRIS_WALL_SIGN_BLOCK));
+
+
 
 
     private static Item registerItem (String name, Item item) {

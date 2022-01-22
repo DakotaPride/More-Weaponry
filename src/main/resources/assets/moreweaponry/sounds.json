@@ -1,0 +1,10 @@
+{
+  "wardens_step": {
+    "sounds": [
+      {
+        "name": "moreweaponry:wardens_step",
+        "stream": true
+      }
+    ]
+  }
+}

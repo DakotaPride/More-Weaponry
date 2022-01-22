@@ -10,7 +10,7 @@ import net.minecraft.entity.effect.StatusEffects;
 
 public class StrayBonageEnchantment extends Enchantment {
     public StrayBonageEnchantment() {
-        super(Enchantment.Rarity.UNCOMMON, EnchantmentTarget.BOW, new EquipmentSlot[] {EquipmentSlot.MAINHAND});
+        super(Rarity.UNCOMMON, EnchantmentTarget.BOW, new EquipmentSlot[] {EquipmentSlot.MAINHAND});
     }
 
     @Override

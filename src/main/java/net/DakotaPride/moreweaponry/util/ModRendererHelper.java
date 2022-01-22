@@ -12,5 +12,6 @@ public class ModRendererHelper {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.NITRIS_LEAVES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.NITRIS_SAPLING, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.NIGHT_CURON, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_NIGHT_CURON, RenderLayer.getCutout());
     }
 }

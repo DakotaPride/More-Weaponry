@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "moreweaponry:wardens_step_music_disc"
+    },
+    "title": "You Sure You Wanna Play That?",
+    "description": "Find The Warden's Step Music Disc",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "moreweaponry:travel_to_the_ever_frost_dimension",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "moreweaponry:wardens_step_music_disc"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

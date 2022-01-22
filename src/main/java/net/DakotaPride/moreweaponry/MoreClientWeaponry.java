@@ -17,6 +17,8 @@ public class MoreClientWeaponry implements ClientModInitializer {
 
         ScreenRegistry.register(ModScreenHandlers.CROP_CUTTER_SCREEN_HANDLER, CropCutterScreen::new);
 
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_NIGHT_CURON, RenderLayer.getCutout());
+
 
     }
 }

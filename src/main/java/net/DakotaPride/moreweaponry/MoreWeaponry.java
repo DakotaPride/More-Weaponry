@@ -4,6 +4,7 @@ import net.DakotaPride.moreweaponry.block.ModBlocks;
 import net.DakotaPride.moreweaponry.block.entity.ModBlockEntities;
 import net.DakotaPride.moreweaponry.enchantments.ModEnchantments;
 import net.DakotaPride.moreweaponry.item.ModItems;
+import net.DakotaPride.moreweaponry.painting.ModPaintings;
 import net.DakotaPride.moreweaponry.registries.ModRegistries;
 import net.DakotaPride.moreweaponry.util.ModRendererHelper;
 import net.DakotaPride.moreweaponry.world.dimension.ModPortals;
@@ -48,16 +49,20 @@ public class MoreWeaponry implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 
+		ModEnchantments.registerModEnchantments();
+
+		ModPaintings.registerPaintings();
+
 		ModPortals.registerPortals();
 
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.NITRIS_TRAPDOOR, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.NITRIS_DOOR, RenderLayer.getCutout());
 
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_NIGHT_CURON, RenderLayer.getCutout());
+
 		ModRendererHelper.setRenderLayers();
 
 		ModBlockEntities.registerBlockEntities();
-
-		ModEnchantments.registerModEnchantments();
 
 		ModRegistries.registerStrippables();
 

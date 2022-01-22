@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "moreweaponry:handle"
+  },
+  "addition": {
+    "item": "minecraft:prismarine_shard"
+  },
+  "result": {
+    "item": "moreweaponry:prismarine_handle"
+  }
+}
