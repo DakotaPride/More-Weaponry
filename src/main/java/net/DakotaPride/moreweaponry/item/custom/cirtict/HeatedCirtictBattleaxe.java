@@ -1,5 +1,6 @@
-package net.DakotaPride.moreweaponry.item.custom;
+package net.DakotaPride.moreweaponry.item.custom.cirtict;
 
+import net.DakotaPride.moreweaponry.item.custom.mod_tools.ModBattleaxeItem;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolMaterial;
@@ -11,7 +12,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class HeatedCirtictBattleaxe extends ModBattleaxeItem{
+public class HeatedCirtictBattleaxe extends ModBattleaxeItem {
 
     public HeatedCirtictBattleaxe(ToolMaterial material, float attackDamage, float attackSpeed, Settings settings) {
         super(material, attackDamage, attackSpeed, settings);

@@ -181,7 +181,7 @@
   "item.moreweaponry.elder_guardian_scale_knife": "Elder Guardian Scale Knife",
 
 
-  "item.moreweaponry.elder_scale_trident": "Elder Scale Trident (WIP)",
+  "item.moreweaponry.elder_scale_artifact": "Elder Scale Artifact",
   "item.moreweaponry.hellfire_broad_axe": "Hellfire Broad Axe (WIP)",
 
   "item.moreweaponry.cirtict_battleaxe": "Cirtict Battleaxe",
@@ -221,8 +221,9 @@
 
   "item.moreweaponry.wardens_step_music_disc": "Music Disc",
   "item.moreweaponry.wardens_step_music_disc.desc": "DakotaPride - Warden's Step",
-  "item.moreweaponry.elder_scale_bow": "Elder Scale Bow",
   "item.moreweaponry.nitris_sign": "Nitris Sign",
-  "block.moreweaponry.nitris_sign": "Nitris Sign"
+  "block.moreweaponry.nitris_sign": "Nitris Sign",
+  "item.moreweaponry.cooled_cirtict_ingot": "Cooled Cirtict Ingot",
+  "item.moreweaponry.cooled_cirtict_battleaxe": "Cooled Cirtict Battleaxe"
 
 }

@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "netherite_ingot",
+  "ingredients": [
+    {
+      "item": "moreweaponry:cirtict_scrap"
+    },
+    {
+      "item": "moreweaponry:cirtict_scrap"
+    },
+    {
+      "item": "moreweaponry:cirtict_scrap"
+    },
+    {
+      "item": "moreweaponry:cirtict_scrap"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    }
+  ],
+  "result": {
+    "item": "moreweaponry:cirtict_ingot"
+  }
+}

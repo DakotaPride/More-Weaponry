@@ -1,4 +1,4 @@
-package net.DakotaPride.moreweaponry.item.custom;
+package net.DakotaPride.moreweaponry.item.custom.vanilla_tools;
 
 import net.minecraft.item.HoeItem;
 import net.minecraft.item.ToolMaterial;
