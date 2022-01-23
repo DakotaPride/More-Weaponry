@@ -15,14 +15,14 @@ import net.minecraft.world.World;
 
 import java.util.Map;
 
-public class ModPhantomScaleArmorItem extends ModPhantomScaleArmorItemTwo {
+public class ModDragonScaleFistItem extends DragonScaleFistItem {
 
     private static final Map<ArmorMaterial, StatusEffect> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, StatusEffect>())
-                    .put(ModArmorMaterial.PHANTOM_SCALE, StatusEffects.SLOW_FALLING).build();
+                    .put(ModArmorMaterial.DRAGON_SCALE, StatusEffects.STRENGTH).build();
 
 
-    public ModPhantomScaleArmorItem(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
+    public ModDragonScaleFistItem(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
         super(material, slot, settings);
     }
 
@@ -58,21 +58,21 @@ public class ModPhantomScaleArmorItem extends ModPhantomScaleArmorItemTwo {
         boolean hasPlayerEffect = player.hasStatusEffect(mapStatusEffect);
 
         if(hasCorrectArmorOn(mapArmorMaterial, player) && !hasPlayerEffect) {
-            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect, 0));
+            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect, 0, 10));
 
         }
     }
 
     private boolean hasFullSuitOfArmorOn(PlayerEntity player) {
-        ItemStack helmet = player.getInventory().getArmorStack(3);
+        ItemStack breastplate = player.getInventory().getArmorStack(2);
 
-        return !helmet.isEmpty();
+        return !breastplate.isEmpty();
     }
 
     private boolean hasCorrectArmorOn(ArmorMaterial material, PlayerEntity player) {
-        ArmorItem helmet = ((ArmorItem)player.getInventory().getArmorStack(3).getItem());
+        ArmorItem breastplate = ((ArmorItem)player.getInventory().getArmorStack(2).getItem());
 
-        return helmet.getMaterial() == material;
+        return breastplate.getMaterial() == material;
     }
 
 }
