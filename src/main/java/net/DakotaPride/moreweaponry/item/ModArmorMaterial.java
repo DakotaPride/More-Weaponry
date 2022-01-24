@@ -13,26 +13,29 @@ import java.util.function.Supplier;
 public enum ModArmorMaterial implements ArmorMaterial
 {
     GLIMMERING_AMETHYST("glimmering_amethyst", 30,
-            new int[]{5, 8, 9, 5}, 23, SoundEvents.BLOCK_AMETHYST_BLOCK_CHIME,
-            2.0f, 0.2f, () -> Ingredient.ofItems(ModItems.GLIMMERING_AMETHYST)),
+            new int[]{2, 5, 6, 3}, 23, SoundEvents.BLOCK_AMETHYST_BLOCK_CHIME,
+            0.0f, 0.0f, () -> Ingredient.ofItems(ModItems.GLIMMERING_AMETHYST)),
     REFINED_MOON_STONE("refined_moon_stone", 37,
-            new int[]{8, 11, 12, 8}, 17, SoundEvents.BLOCK_NOTE_BLOCK_CHIME,
-            3.0f, 0.4f, () -> Ingredient.ofItems(ModItems.REFINED_MOON_STONE)),
+            new int[]{3, 7, 6, 4}, 17, SoundEvents.BLOCK_NOTE_BLOCK_CHIME,
+            0.5f, 0.1f, () -> Ingredient.ofItems(ModItems.REFINED_MOON_STONE)),
     BLACKSTONE_METAL("blackstone_metal", 41,
-            new int[]{11, 14, 15, 11}, 14, SoundEvents.BLOCK_BASALT_PLACE,
-            4.0f, 0.6f, () -> Ingredient.ofItems(ModItems.BLACKSTONE_INGOT)),
+            new int[]{5, 8, 7, 6}, 14, SoundEvents.BLOCK_BASALT_PLACE,
+            3.5f, 0.2f, () -> Ingredient.ofItems(ModItems.BLACKSTONE_INGOT)),
     GUARDIAN_SCALE("guardian_scale", 43,
-            new int[]{14, 17, 18, 14}, 16, SoundEvents.ENTITY_GUARDIAN_AMBIENT,
-            5.0f, 0.6f, () -> Ingredient.ofItems(ModItems.GUARDIAN_SCALE)),
+            new int[]{7, 10, 9, 8}, 16, SoundEvents.ENTITY_GUARDIAN_AMBIENT,
+            4.0f, 0.4f, () -> Ingredient.ofItems(ModItems.GUARDIAN_SCALE)),
     ELDER_GUARDIAN_SCALE("elder_guardian_scale", 47,
-            new int[]{17, 20, 21, 17}, 20, SoundEvents.ENTITY_ELDER_GUARDIAN_AMBIENT,
-            7.0f, 0.7f, () -> Ingredient.ofItems(ModItems.ELDER_GUARDIAN_SCALE)),
+            new int[]{10, 13, 12, 11}, 20, SoundEvents.ENTITY_ELDER_GUARDIAN_AMBIENT,
+            5.0f, 0.7f, () -> Ingredient.ofItems(ModItems.ELDER_GUARDIAN_SCALE)),
     PHANTOM_SCALE("phantom_scale", 45,
-            new int[]{18, 21, 22, 18}, 17, SoundEvents.ENTITY_PHANTOM_BITE,
-            6.0f, 0.7f, () -> Ingredient.ofItems(ModItems.PHANTOM_SCALE)),
+            new int[]{10, 14, 12, 11}, 17, SoundEvents.ENTITY_PHANTOM_BITE,
+            5.0f, 0.7f, () -> Ingredient.ofItems(ModItems.PHANTOM_SCALE)),
     DRAGON_SCALE("dragon_scale", 53,
-            new int[]{20, 23, 24, 20}, 18, SoundEvents.ENTITY_ENDER_DRAGON_FLAP,
-            8.0f, 0.8f, () -> Ingredient.ofItems(ModItems.DRAGON_SCALE));
+            new int[]{12, 16, 14, 13}, 18, SoundEvents.ENTITY_ENDER_DRAGON_FLAP,
+            6.0f, 0.8f, () -> Ingredient.ofItems(ModItems.DRAGON_SCALE)),
+    SHULKER_SHELL("shulker_shell", 49,
+            new int[]{11, 17, 13, 12}, 19, SoundEvents.BLOCK_SHULKER_BOX_OPEN,
+            7.0f, 0.9f, () -> Ingredient.ofItems(Items.SHULKER_SHELL));
 
     private static final int[] BASE_DURABILITY;
     private final String name;

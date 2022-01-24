@@ -8,8 +8,6 @@ import net.minecraft.util.Identifier;
 public class ModModelPredicateProvider {
     public static void registerModModels() {
 
-        registerBow(ModItems.ELDER_SCALE_BOW);
-
     }
 
     private static void registerBow(Item bow) {

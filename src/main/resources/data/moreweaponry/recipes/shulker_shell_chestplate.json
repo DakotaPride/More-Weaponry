@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "# #",
+        "###",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:shulker_shell"
+        }
+
+    },
+    "result": {
+        "item": "moreweaponry:shulker_shell_chestplate",
+        "count": 1
+    }
+}

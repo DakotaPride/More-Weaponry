@@ -9,7 +9,7 @@ import net.DakotaPride.moreweaponry.item.custom.cirtict.HeatedCirtictBattleaxe;
 import net.DakotaPride.moreweaponry.item.custom.elder_scale_items.*;
 import net.DakotaPride.moreweaponry.item.custom.mod_tools.BluestoneIgnitor;
 import net.DakotaPride.moreweaponry.item.custom.mod_tools.ModBattleaxeItem;
-import net.DakotaPride.moreweaponry.item.custom.mod_tools.ModBroadAxeItem;
+import net.DakotaPride.moreweaponry.item.custom.mod_tools.ModBroadHammerItem;
 import net.DakotaPride.moreweaponry.item.custom.mod_tools.ModKnifeItem;
 import net.DakotaPride.moreweaponry.item.custom.vanilla_tools.ModHoeItem;
 import net.DakotaPride.moreweaponry.item.custom.vanilla_tools.ModPickaxeItem;
@@ -126,10 +126,6 @@ public class ModItems {
     public static final Item PHANTOM_HELMET = registerItem("phantom_helmet",
             new PhantomScaleHelm(ModArmorMaterial.PHANTOM_SCALE, EquipmentSlot.HEAD,
                     new FabricItemSettings().rarity(Rarity.UNCOMMON).group(ModItemGroup.MORE_WEAPONRY)));
-
-    public static final Item HELLFIRE_BROAD_AXE = registerItem("hellfire_broad_axe",
-            new ModBroadAxeItem((ToolMaterial) ModToolMaterial.HELLFIRE, 24, -3.0f,
-                    new FabricItemSettings().rarity(Rarity.EPIC).group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item CIRTICT_INGOT = registerItem("cirtict_ingot",
             new Item(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
@@ -394,15 +390,15 @@ public class ModItems {
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item CIRTICT_BATTLEAXE = registerItem("cirtict_battleaxe",
-            new ModBattleaxeItem((ToolMaterial) ModToolMaterial.CIRTICT, 26, -3.0f,
+            new ModBattleaxeItem((ToolMaterial) ModToolMaterial.CIRTICT, 19, -3.0f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item HEATED_CIRTICT_BATTLEAXE = registerItem("heated_cirtict_battleaxe",
-            new HeatedCirtictBattleaxe((ToolMaterial) ModToolMaterial.HEATED_CIRTICT, 30, -3.0f,
+            new HeatedCirtictBattleaxe((ToolMaterial) ModToolMaterial.HEATED_CIRTICT, 22, -3.0f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item COOLED_CIRTICT_BATTLEAXE = registerItem("cooled_cirtict_battleaxe",
-            new CooledCirtictBattleaxe((ToolMaterial) ModToolMaterial.COOLED, 30, -3.0f,
+            new CooledCirtictBattleaxe((ToolMaterial) ModToolMaterial.COOLED, 22, -3.0f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item BLUESTONE_IGNITOR = registerItem("bluestone_ignitor",
@@ -428,8 +424,13 @@ public class ModItems {
     public static final Item DRAGON_SCALE = registerItem("dragon_scale",
             new Item(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
-    public static final Item ELDER_SCALE_BOW = registerItem("elder_scale_bow",
-            new BowItem(new FabricItemSettings().maxCount(1).maxDamage(476).group(ModItemGroup.MORE_WEAPONRY)));
+    public static final Item SHULKER_SHELL_CHESTPLATE = registerItem("shulker_shell_chestplate",
+            new ShulkerShellChestplate(ModArmorMaterial.SHULKER_SHELL, EquipmentSlot.CHEST,
+                    new FabricItemSettings().rarity(Rarity.UNCOMMON).group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item WITHER_BROAD_HAMMER = registerItem("wither_broad_hammer",
+            new ModBroadHammerItem((ToolMaterial) ModToolMaterial.WITHERED, 24, -3.0f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
 
     private static Item registerItem (String name, Item item) {

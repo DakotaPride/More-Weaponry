@@ -1,0 +1,14 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "moreweaponry:item/dragon_scale_wings"
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "broken": 1
+            },
+            "model": "moreweaponry:item/warn_out_dragon_scale_wings"
+        }
+    ]
+}

@@ -182,7 +182,7 @@
 
 
   "item.moreweaponry.elder_scale_artifact": "Elder Scale Artifact",
-  "item.moreweaponry.hellfire_broad_axe": "Hellfire Broad Axe (WIP)",
+  "item.moreweaponry.wither_broad_hammer": "Wither Broad Hammer (WIP)",
 
   "item.moreweaponry.cirtict_battleaxe": "Cirtict Battleaxe",
   "item.moreweaponry.heated_cirtict_battleaxe": "Heated Cirtict Battleaxe",
@@ -195,6 +195,7 @@
   "item.moreweaponry.heated_cirtict_battleaxe.tooltip": "Can You Handle The Heat?",
   "item.moreweaponry.phantom_scale_helm.tooltip": "Gives You The Powers Of The Phantom",
   "item.moreweaponry.phantom_scale_helm_two.tooltip": "Grants Slow Falling While Equipped",
+  "item.moreweaponry.cooled_cirtict_battleaxe.tooltip": "Is It Chilly Or Something?",
 
 
   "block.moreweaponry.crop_cutter_block": "Crop Cutter",
@@ -226,6 +227,7 @@
   "item.moreweaponry.cooled_cirtict_ingot": "Cooled Cirtict Ingot",
   "item.moreweaponry.cooled_cirtict_battleaxe": "Cooled Cirtict Battleaxe",
   "item.moreweaponry.dragon_scale": "Dragon Scale",
-  "item.moreweaponry.elder_scale_bow": "Elder Scale Bow"
+  "item.moreweaponry.shulker_shell_chestplate": "Shulker Shell Chestplate",
+  "item.moreweaponry.shulker_shell_chestplate.tooltip": "Equip To Levitate Infinitely"
 
 }
