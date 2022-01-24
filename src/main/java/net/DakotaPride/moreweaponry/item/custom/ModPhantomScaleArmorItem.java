@@ -58,7 +58,7 @@ public class ModPhantomScaleArmorItem extends ModPhantomScaleArmorItemTwo {
         boolean hasPlayerEffect = player.hasStatusEffect(mapStatusEffect);
 
         if(hasCorrectArmorOn(mapArmorMaterial, player) && !hasPlayerEffect) {
-            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect, 0));
+            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect, 1, 2));
 
         }
     }

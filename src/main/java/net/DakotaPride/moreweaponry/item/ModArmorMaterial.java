@@ -31,7 +31,7 @@ public enum ModArmorMaterial implements ArmorMaterial
             new int[]{18, 21, 22, 18}, 17, SoundEvents.ENTITY_PHANTOM_BITE,
             6.0f, 0.7f, () -> Ingredient.ofItems(ModItems.PHANTOM_SCALE)),
     DRAGON_SCALE("dragon_scale", 53,
-            new int[]{20, 14, 24, 20}, 18, SoundEvents.ENTITY_ENDER_DRAGON_FLAP,
+            new int[]{20, 23, 24, 20}, 18, SoundEvents.ENTITY_ENDER_DRAGON_FLAP,
             8.0f, 0.8f, () -> Ingredient.ofItems(ModItems.DRAGON_SCALE));
 
     private static final int[] BASE_DURABILITY;

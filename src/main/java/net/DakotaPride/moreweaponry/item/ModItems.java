@@ -425,10 +425,6 @@ public class ModItems {
             new SignItem(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY).maxCount(16),
                     ModBlocks.NITRIS_SIGN_BLOCK, ModBlocks.NITRIS_WALL_SIGN_BLOCK));
 
-    public static final Item DRAGON_SCALE_FIST = registerItem("dragon_scale_fist",
-            new ModDragonScaleFistItem(ModArmorMaterial.DRAGON_SCALE, EquipmentSlot.CHEST,
-                    new FabricItemSettings().rarity(Rarity.EPIC).group(ModItemGroup.MORE_WEAPONRY)));
-
     public static final Item DRAGON_SCALE = registerItem("dragon_scale",
             new Item(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
