@@ -74,7 +74,7 @@ public class ModItems {
             new Item(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item CURON_FLOWER_PETALS = registerItem("curon_flower_petals",
-            new Item(new FabricItemSettings().food(new FoodComponent.Builder().hunger(6).statusEffect
+            new Item(new FabricItemSettings().food(new FoodComponent.Builder().hunger(4).statusEffect
                     (new StatusEffectInstance(StatusEffects.WEAKNESS, 20*3), 0.5f)
                     .saturationModifier(1.0f).build()).group(ModItemGroup.MORE_WEAPONRY)));
 
