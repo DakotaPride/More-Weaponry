@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:iron_block"
+  },
+  "addition": {
+    "item": "moreweaponry:wither_essence"
+  },
+  "result": {
+    "item": "moreweaponry:wither_broad_hammer_head"
+  }
+}

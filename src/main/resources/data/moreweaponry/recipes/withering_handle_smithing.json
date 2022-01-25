@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "moreweaponry:handle"
+  },
+  "addition": {
+    "item": "moreweaponry:wither_bone"
+  },
+  "result": {
+    "item": "moreweaponry:withering_handle"
+  }
+}

@@ -1,13 +1,16 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "# #",
-        "###",
+        "M M",
+        "#M#",
         "###"
     ],
     "key": {
         "#": {
             "item": "minecraft:shulker_shell"
+        },
+        "M": {
+            "item": "minecraft:popped_chorus_fruit"
         }
 
     },

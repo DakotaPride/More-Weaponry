@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "moreweaponry:wither_broad_hammer_head"
+  },
+  "addition": {
+    "item": "moreweaponry:withering_handle"
+  },
+  "result": {
+    "item": "moreweaponry:wither_broad_hammer"
+  }
+}

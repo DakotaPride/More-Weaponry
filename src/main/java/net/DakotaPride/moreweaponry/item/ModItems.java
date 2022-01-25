@@ -23,6 +23,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 import net.DakotaPride.moreweaponry.item.custom.vanilla_tools.ModAxeItem;
+import org.lwjgl.system.CallbackI;
 
 public class ModItems {
 
@@ -429,8 +430,14 @@ public class ModItems {
                     new FabricItemSettings().rarity(Rarity.UNCOMMON).group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item WITHER_BROAD_HAMMER = registerItem("wither_broad_hammer",
-            new ModBroadHammerItem((ToolMaterial) ModToolMaterial.WITHERED, 24, -3.0f,
+            new WitherBroadHammerItem((ToolMaterial) ModToolMaterial.WITHERED, 24, -3.0f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item WITHERING_HANDLE = registerItem("withering_handle",
+            new ModHandleItem(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item WITHER_BROAD_HAMMER_HEAD = registerItem("wither_broad_hammer_head",
+            new Item(new FabricItemSettings().maxCount(1).group(ModItemGroup.MORE_WEAPONRY)));
 
 
     private static Item registerItem (String name, Item item) {
