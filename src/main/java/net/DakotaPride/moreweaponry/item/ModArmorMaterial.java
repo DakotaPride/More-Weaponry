@@ -16,7 +16,7 @@ public enum ModArmorMaterial implements ArmorMaterial
             new int[]{2, 5, 6, 3}, 23, SoundEvents.BLOCK_AMETHYST_BLOCK_CHIME,
             0.0f, 0.0f, () -> Ingredient.ofItems(ModItems.GLIMMERING_AMETHYST)),
     REFINED_MOON_STONE("refined_moon_stone", 37,
-            new int[]{3, 7, 6, 4}, 17, SoundEvents.BLOCK_NOTE_BLOCK_CHIME,
+            new int[]{4, 7, 6, 5}, 17, SoundEvents.BLOCK_NOTE_BLOCK_CHIME,
             0.5f, 0.1f, () -> Ingredient.ofItems(ModItems.REFINED_MOON_STONE)),
     BLACKSTONE_METAL("blackstone_metal", 41,
             new int[]{5, 8, 7, 6}, 14, SoundEvents.BLOCK_BASALT_PLACE,
