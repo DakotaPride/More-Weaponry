@@ -279,6 +279,14 @@ public class ModBlocks {
     public static final Block CIRTICT_DEBRIS = registerBlock("cirtict_debris",
             new Block(FabricBlockSettings.copy(Blocks.ANCIENT_DEBRIS)), ModItemGroup.MORE_WEAPONRY);
 
+
+    // Plague Update
+
+    public static final Block SANDSTONE_DUST_BLOCK = registerBlock("sandstone_dust_block",
+            new Block(FabricBlockSettings.copy(Blocks.SAND)), ModItemGroup.MORE_WEAPONRY);
+
+
+
     public static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItem(name, block, group);
         return Registry.register(Registry.BLOCK, new Identifier(MoreWeaponry.MOD_ID, name), block);

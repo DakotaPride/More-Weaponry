@@ -10,10 +10,6 @@ import net.minecraft.util.registry.Registry;
 
 public class ModEnchantments {
 
-    public static Enchantment THUNDERING = register("thundering",
-            new ThunderingEnchantment(Enchantment.Rarity.UNCOMMON,
-                    EnchantmentTarget.WEAPON));
-
     public static Enchantment EVOKERS_REVENGE = register("evokers_revenge",
             new EvokersRevengeEnchantment(Enchantment.Rarity.UNCOMMON,
                     EnchantmentTarget.WEAPON));
