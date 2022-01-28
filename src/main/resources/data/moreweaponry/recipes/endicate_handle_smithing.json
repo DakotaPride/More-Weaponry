@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "moreweaponry:handle"
+  },
+  "addition": {
+    "item": "minecraft:popped_chorus_fruit"
+  },
+  "result": {
+    "item": "moreweaponry:endicate_handle"
+  }
+}

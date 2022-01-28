@@ -58,7 +58,10 @@ public enum ModToolMaterial implements ToolMaterial {
             () -> Ingredient.ofItems(ModItems.WITHER_ESSENCE)),
     DRAGON_SCALE(MiningLevels.NETHERITE, 3486, 13.0f,
             19.5f, 18,
-            () -> Ingredient.ofItems(ModItems.DRAGON_SCALE));
+            () -> Ingredient.ofItems(ModItems.DRAGON_SCALE)),
+    ENDICATE_STAFF(MiningLevels.NETHERITE, 388, 14.0f,
+            20.0f, 23,
+            () -> Ingredient.ofItems(Items.ENDER_EYE));
 
 
     private final int miningLevel;

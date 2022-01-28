@@ -439,6 +439,15 @@ public class ModItems {
     public static final Item WITHER_BROAD_HAMMER_HEAD = registerItem("wither_broad_hammer_head",
             new Item(new FabricItemSettings().maxCount(1).group(ModItemGroup.MORE_WEAPONRY)));
 
+    // Plague Update
+
+    public static final Item ENDICATE_STAFF = registerItem("endicate_staff",
+            new SwordItem((ToolMaterial) ModToolMaterial.ENDICATE_STAFF, 26, -3.4f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item ENDICATE_HANDLE = registerItem("endicate_handle",
+            new ModHandleItem(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
 
     private static Item registerItem (String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(MoreWeaponry.MOD_ID, name), item);

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  X",
+    " # ",
+    "#  "
+  ],
+  "key": {
+    "#": {
+      "item": "moreweaponry:endicate_handle"
+    },
+    "X": {
+      "item": "minecraft:ender_eye"
+    }
+  },
+  "result": {
+    "item": "moreweaponry:endicate_staff"
+  }
+}
