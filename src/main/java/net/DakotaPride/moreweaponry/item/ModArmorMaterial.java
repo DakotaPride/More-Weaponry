@@ -34,7 +34,7 @@ public enum ModArmorMaterial implements ArmorMaterial
             new int[]{12, 16, 14, 13}, 18, SoundEvents.ENTITY_ENDER_DRAGON_FLAP,
             6.0f, 0.8f, () -> Ingredient.ofItems(ModItems.DRAGON_SCALE)),
     SHULKER_SHELL("shulker_shell", 49,
-            new int[]{11, 17, 13, 12}, 19, SoundEvents.BLOCK_SHULKER_BOX_OPEN,
+            new int[]{5, 9, 8, 6}, 19, SoundEvents.BLOCK_SHULKER_BOX_OPEN,
             7.0f, 0.9f, () -> Ingredient.ofItems(Items.SHULKER_SHELL));
 
     private static final int[] BASE_DURABILITY;

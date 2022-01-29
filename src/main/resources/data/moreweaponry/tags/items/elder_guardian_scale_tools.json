@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "moreweaponry:elder_guardian_scale_sword",
+    "moreweaponry:elder_guardian_scale_axe",
+    "moreweaponry:elder_guardian_scale_battleaxe",
+    "moreweaponry:elder_guardian_scale_knife",
+    "moreweaponry:elder_guardian_scale_hoe",
+    "moreweaponry:elder_guardian_scale_pickaxe",
+    "moreweaponry:elder_guardian_scale_shovel",
+    "moreweaponry:elder_scale_artifact",
+    "moreweaponry:elder_scale_shield"
+  ]
+}

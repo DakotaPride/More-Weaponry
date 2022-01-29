@@ -1,15 +1,12 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "pattern": [
-    "#"
-  ],
-  "key": {
-    "#": {
+  "group": "wooden_button",
+  "ingredients": [
+    {
       "item": "moreweaponry:nitris_planks"
     }
-  },
+  ],
   "result": {
-    "item": "moreweaponry:nitris_button",
-    "count": 1
+    "item": "moreweaponry:nitris_button"
   }
 }

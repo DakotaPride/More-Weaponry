@@ -1,15 +1,11 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "pattern": [
-    "#"
-  ],
-  "key": {
-    "#": {
+  "ingredients": [
+    {
       "item": "minecraft:cobblestone"
     }
-  },
+  ],
   "result": {
-    "item": "moreweaponry:cobblestone_button",
-    "count": 1
+    "item": "moreweaponry:cobblestone_button"
   }
 }

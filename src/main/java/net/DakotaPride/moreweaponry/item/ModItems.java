@@ -9,7 +9,6 @@ import net.DakotaPride.moreweaponry.item.custom.cirtict.HeatedCirtictBattleaxe;
 import net.DakotaPride.moreweaponry.item.custom.elder_scale_items.*;
 import net.DakotaPride.moreweaponry.item.custom.mod_tools.BluestoneIgnitor;
 import net.DakotaPride.moreweaponry.item.custom.mod_tools.ModBattleaxeItem;
-import net.DakotaPride.moreweaponry.item.custom.mod_tools.ModBroadHammerItem;
 import net.DakotaPride.moreweaponry.item.custom.mod_tools.ModKnifeItem;
 import net.DakotaPride.moreweaponry.item.custom.vanilla_tools.ModHoeItem;
 import net.DakotaPride.moreweaponry.item.custom.vanilla_tools.ModPickaxeItem;
@@ -23,7 +22,6 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 import net.DakotaPride.moreweaponry.item.custom.vanilla_tools.ModAxeItem;
-import org.lwjgl.system.CallbackI;
 
 public class ModItems {
 
@@ -425,8 +423,8 @@ public class ModItems {
     public static final Item DRAGON_SCALE = registerItem("dragon_scale",
             new Item(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
-    public static final Item SHULKER_SHELL_CHESTPLATE = registerItem("shulker_shell_chestplate",
-            new ShulkerShellChestplate(ModArmorMaterial.SHULKER_SHELL, EquipmentSlot.CHEST,
+    public static final Item SHULKER_SHELL_BOOTS = registerItem("shulker_shell_boots",
+            new ShulkerShellBoots(ModArmorMaterial.SHULKER_SHELL, EquipmentSlot.FEET,
                     new FabricItemSettings().rarity(Rarity.UNCOMMON).group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item WITHER_BROAD_HAMMER = registerItem("wither_broad_hammer",
@@ -442,11 +440,14 @@ public class ModItems {
     // Plague Update
 
     public static final Item ENDICATE_STAFF = registerItem("endicate_staff",
-            new SwordItem((ToolMaterial) ModToolMaterial.ENDICATE_STAFF, 26, -3.4f,
+            new EndicateStaffItem((ToolMaterial) ModToolMaterial.ENDICATE_STAFF, 26, -3.4f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item ENDICATE_HANDLE = registerItem("endicate_handle",
             new ModHandleItem(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item SANDSTONE_DUST = registerItem("sandstone_dust",
+            new Item(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
 
     private static Item registerItem (String name, Item item) {

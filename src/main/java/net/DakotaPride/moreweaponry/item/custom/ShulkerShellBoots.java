@@ -21,13 +21,13 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 import java.util.Map;
 
-public class ShulkerShellChestplate extends ArmorItem {
+public class ShulkerShellBoots extends ArmorItem {
 
     private static final Map<ArmorMaterial, StatusEffect> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, StatusEffect>())
                     .put(ModArmorMaterial.SHULKER_SHELL, StatusEffects.LEVITATION).build();
 
-    public ShulkerShellChestplate(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
+    public ShulkerShellBoots(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
         super(material, slot, settings);
     }
 
@@ -63,26 +63,26 @@ public class ShulkerShellChestplate extends ArmorItem {
         boolean hasPlayerEffect = player.hasStatusEffect(mapStatusEffect);
 
         if(hasCorrectArmorOn(mapArmorMaterial, player) && !hasPlayerEffect) {
-            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect, 1, 1));
+            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect, 20*16, 1));
 
         }
     }
 
     private boolean hasFullSuitOfArmorOn(PlayerEntity player) {
-        ItemStack breastplate = player.getInventory().getArmorStack(2);
+        ItemStack boots = player.getInventory().getArmorStack(0);
 
-        return !breastplate.isEmpty();
+        return !boots.isEmpty();
     }
 
     private boolean hasCorrectArmorOn(ArmorMaterial material, PlayerEntity player) {
-        ArmorItem breastplate = ((ArmorItem)player.getInventory().getArmorStack(2).getItem());
+        ArmorItem boots = ((ArmorItem)player.getInventory().getArmorStack(0).getItem());
 
-        return breastplate.getMaterial() == material;
+        return boots.getMaterial() == material;
     }
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add( new TranslatableText("item.moreweaponry.shulker_shell_chestplate.tooltip").formatted(Formatting.AQUA));
+        tooltip.add( new TranslatableText("item.moreweaponry.shulker_shell_boots.tooltip").formatted(Formatting.AQUA));
     }
 
 }

@@ -227,11 +227,14 @@
   "item.moreweaponry.cooled_cirtict_ingot": "Cooled Cirtict Ingot",
   "item.moreweaponry.cooled_cirtict_battleaxe": "Cooled Cirtict Battleaxe",
   "item.moreweaponry.dragon_scale": "Dragon Scale",
-  "item.moreweaponry.shulker_shell_chestplate": "Shulker Shell Chestplate",
-  "item.moreweaponry.shulker_shell_chestplate.tooltip": "Equip To Levitate Infinitely",
+  "item.moreweaponry.shulker_shell_boots": "Shulker Shell Boots",
+  "item.moreweaponry.shulker_shell_boots.tooltip": "Equip To Levitate Infinitely",
   "item.moreweaponry.withering_handle": "Withering Handle",
   "item.moreweaponry.wither_broad_hammer_head": "Wither Broad Hammer Head",
   "item.moreweaponry.endicate_staff": "Endicate Staff",
-  "item.moreweaponry.endicate_handle": "Endicate Handle"
+  "item.moreweaponry.endicate_handle": "Endicate Handle",
+  "block.moreweaponry.sandstone_dust_block": "Sandstone Dust Block",
+  "item.moreweaponry.sandstone_dust": "Sandstone Dust",
+  "block.moreweaponry.cracked_dripstone_block": "Cracked Dripstone Block"
 
 }

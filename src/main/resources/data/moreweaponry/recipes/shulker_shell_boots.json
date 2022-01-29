@@ -2,8 +2,7 @@
     "type": "minecraft:crafting_shaped",
     "pattern": [
         "M M",
-        "#M#",
-        "###"
+        "# #"
     ],
     "key": {
         "#": {
@@ -15,7 +14,7 @@
 
     },
     "result": {
-        "item": "moreweaponry:shulker_shell_chestplate",
+        "item": "moreweaponry:shulker_shell_boots",
         "count": 1
     }
 }
