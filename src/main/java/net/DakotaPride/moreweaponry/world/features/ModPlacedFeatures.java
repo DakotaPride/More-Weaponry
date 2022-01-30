@@ -25,6 +25,7 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> CIRTICT_DEBRIS_KEY = registerKey("cirtict_debris");
     public static final RuleTest END_STONE_RULE = new BlockMatchRuleTest(Blocks.END_STONE);
 
+
     public static final PlacedFeature NITRIS_PLACED = registerPlacedFeature("nitris_spawn",
             ModConfiguredFeatures.NITRIS_TREE_RANDOM.withPlacement(VegetationPlacedFeatures.modifiers(
                     PlacedFeatures.createCountExtraModifier(1, 0.1f, 2))));

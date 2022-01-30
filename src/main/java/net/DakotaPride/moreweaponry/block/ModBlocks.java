@@ -283,12 +283,14 @@ public class ModBlocks {
     // Plague Update
 
     public static final Block SANDSTONE_DUST_BLOCK = registerBlock("sandstone_dust_block",
-            new Block(FabricBlockSettings.copy(Blocks.SAND)), ModItemGroup.MORE_WEAPONRY);
+            new SandstoneDustBlock((11098145),FabricBlockSettings.copy(Blocks.SAND)), ModItemGroup.MORE_WEAPONRY);
 
     public static final Block CRACKED_DRIPSTONE_BLOCK = registerBlock("cracked_dripstone_block",
             new Block(FabricBlockSettings.copy(Blocks.DRIPSTONE_BLOCK)), ModItemGroup.MORE_WEAPONRY);
 
-
+    public static final Block INFESTED_CRACKED_DRIPSTONE_BLOCK = registerBlock("infested_cracked_dripstone_block",
+            new InfestedBlock(ModBlocks.CRACKED_DRIPSTONE_BLOCK, FabricBlockSettings.copy(Blocks.INFESTED_STONE)),
+            ModItemGroup.MORE_WEAPONRY);
 
     public static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItem(name, block, group);

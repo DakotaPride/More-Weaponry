@@ -73,7 +73,6 @@ public class ModConfiguredFeatures {
             Feature.ORE.configure(new OreFeatureConfig(OVERWORLD_BLUESTONE, 34)));
 
 
-
     private static RegistryKey<ConfiguredFeature<?, ?>> registryKey(String name) {
         return RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY, new Identifier(MoreWeaponry.MOD_ID, name));
     }
