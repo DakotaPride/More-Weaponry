@@ -7,23 +7,15 @@ import net.minecraft.structure.rule.BlockMatchRuleTest;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.util.registry.BuiltinRegistries;
-import net.minecraft.util.registry.RegistryKey;
-import net.minecraft.world.Heightmap;
-import net.minecraft.world.gen.feature.ConfiguredFeature;
-
 import net.minecraft.util.registry.Registry;
-import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.TreeFeatureConfig;
+import net.minecraft.util.registry.RegistryKey;
+import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
-import net.minecraft.world.gen.stateprovider.SimpleBlockStateProvider;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
-import net.minecraft.world.gen.feature.*;
-
 
 import java.util.List;
-
 
 
 public class ModConfiguredFeatures {

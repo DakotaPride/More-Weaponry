@@ -5,7 +5,7 @@ import net.DakotaPride.moreweaponry.block.custom.*;
 import net.DakotaPride.moreweaponry.item.ModItemGroup;
 import net.DakotaPride.moreweaponry.item.custom.KuroPlantBlock;
 import net.DakotaPride.moreweaponry.world.features.ModConfiguredFeatures;
-import net.DakotaPride.moreweaponry.world.features.tree.ModSaplingGenerator;
+import net.DakotaPride.moreweaponry.world.features.tree.NitrisSaplingGenerator;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
@@ -78,7 +78,7 @@ public class ModBlocks {
             new LeavesBlock(FabricBlockSettings.copy(Blocks.OAK_LEAVES)), ModItemGroup.MORE_WEAPONRY);
 
     public static final Block NITRIS_SAPLING = registerBlock("nitris_sapling",
-            new ModSaplingBlock(new ModSaplingGenerator(ModConfiguredFeatures.NITRIS_TREE),
+            new ModSaplingBlock(new NitrisSaplingGenerator(ModConfiguredFeatures.NITRIS_TREE),
                     FabricBlockSettings.copy(Blocks.OAK_SAPLING)), ModItemGroup.MORE_WEAPONRY);
 
     public static final Block NIGHT_CURON = registerBlock("night_curon",
