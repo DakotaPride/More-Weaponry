@@ -23,6 +23,7 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> MARE_DIAMOND_ORE_KEY = registerKey("mare_diamond_ore");
     public static final RegistryKey<PlacedFeature> BLUESTONE_KEY = registerKey("bluestone");
     public static final RegistryKey<PlacedFeature> CIRTICT_DEBRIS_KEY = registerKey("cirtict_debris");
+    public static final RegistryKey<PlacedFeature> CRACKED_DRIPSTONE_KEY = registerKey("cracked_dripstone");
     public static final RuleTest END_STONE_RULE = new BlockMatchRuleTest(Blocks.END_STONE);
 
 
@@ -49,6 +50,10 @@ public class ModPlacedFeatures {
     public static final PlacedFeature BLUESTONE_PLACED = registerPlacedFeature("bluestone",
             ModConfiguredFeatures.BLUESTONE.withPlacement(modifiersWithCount(11,
                     HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(-80), YOffset.aboveBottom(100)))));
+
+    public static final PlacedFeature CRACKED_DRIPSTONE_PLACED = registerPlacedFeature("cracked_dripstone",
+            ModConfiguredFeatures.CRACKED_DRIPSTONE.withPlacement(modifiersWithCount(11,
+                    HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(-80), YOffset.aboveBottom(200)))));
 
     public static List<PlacementModifier> modifiers(PlacementModifier countModifier, PlacementModifier heightModifier) {
         return List.of(countModifier, SquarePlacementModifier.of(), heightModifier, BiomePlacementModifier.of());

@@ -64,6 +64,12 @@ public class ModConfiguredFeatures {
     public static final ConfiguredFeature<?, ?> BLUESTONE = register("bluestone",
             Feature.ORE.configure(new OreFeatureConfig(OVERWORLD_BLUESTONE, 34)));
 
+    public static final List<OreFeatureConfig.Target> OVERWORLD_CRACKED_DRIPSTONE = List.of(
+            OreFeatureConfig.createTarget(OreConfiguredFeatures.STONE_ORE_REPLACEABLES, ModBlocks.CRACKED_DRIPSTONE_BLOCK.getDefaultState()));
+
+    public static final ConfiguredFeature<?, ?> CRACKED_DRIPSTONE = register("cracked_dripstone",
+            Feature.ORE.configure(new OreFeatureConfig(OVERWORLD_CRACKED_DRIPSTONE, 34)));
+
 
     private static RegistryKey<ConfiguredFeature<?, ?>> registryKey(String name) {
         return RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY, new Identifier(MoreWeaponry.MOD_ID, name));

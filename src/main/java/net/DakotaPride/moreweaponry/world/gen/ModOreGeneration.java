@@ -20,5 +20,8 @@ public class ModOreGeneration {
         BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(),
                 GenerationStep.Feature.RAW_GENERATION, ModPlacedFeatures.CIRTICT_DEBRIS_KEY);
 
+        BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(),
+                GenerationStep.Feature.RAW_GENERATION, ModPlacedFeatures.CRACKED_DRIPSTONE_KEY);
+
     }
 }
