@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "moreweaponry:sandstone_dust"
+    }
+  },
+  "result": {
+    "item": "moreweaponry:sandstone_dust_block"
+  }
+}

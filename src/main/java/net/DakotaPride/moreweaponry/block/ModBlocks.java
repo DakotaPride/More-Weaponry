@@ -296,6 +296,10 @@ public class ModBlocks {
             new WretchedSpawnBlock(ModBlocks.CRACKED_DRIPSTONE_BLOCK, FabricBlockSettings.copy(Blocks.INFESTED_STONE)),
             ModItemGroup.MORE_WEAPONRY);
 
+    public static final Block INFESTED_DRIPSTONE_BLOCK = registerBlock("infested_dripstone_block",
+            new WretchedInfestedBlock(Blocks.DRIPSTONE_BLOCK, FabricBlockSettings.copy(Blocks.INFESTED_STONE)),
+            ModItemGroup.MORE_WEAPONRY);
+
     public static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItem(name, block, group);
         return Registry.register(Registry.BLOCK, new Identifier(MoreWeaponry.MOD_ID, name), block);
