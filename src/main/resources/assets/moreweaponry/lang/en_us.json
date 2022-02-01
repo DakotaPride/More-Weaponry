@@ -236,6 +236,7 @@
   "block.moreweaponry.sandstone_dust_block": "Sandstone Dust Block",
   "item.moreweaponry.sandstone_dust": "Sandstone Dust",
   "block.moreweaponry.cracked_dripstone_block": "Cracked Dripstone Block",
-  "block.moreweaponry.infested_cracked_dripstone_block": "Infested Cracked Dripstone Block"
+  "block.moreweaponry.infested_cracked_dripstone_block": "Infested Cracked Dripstone Block",
+  "block.moreweaponry.wretched_spawn_block": "Wretched Summoning Block"
 
 }

@@ -4,7 +4,8 @@
 
     "moreweaponry:sandstone_dust_block",
     "moreweaponry:cracked_dripstone_block",
-    "moreweaponry:infested_cracked_dripstone_block"
+    "moreweaponry:infested_cracked_dripstone_block",
+    "moreweaponry:wretched_spawn_block"
 
   ]
 }

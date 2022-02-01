@@ -10,6 +10,7 @@ import net.fabricmc.fabric.api.client.screenhandler.v1.ScreenRegistry;
 import net.minecraft.client.render.RenderLayer;
 
 public class MoreClientWeaponry implements ClientModInitializer {
+
     @Override
     public void onInitializeClient() {
 
