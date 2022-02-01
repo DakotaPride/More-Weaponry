@@ -19,6 +19,9 @@
   "entrypoints": {
     "main": [
       "net.DakotaPride.moreweaponry.MoreWeaponry"
+    ],
+    "client": [
+      "net.DakotaPride.moreweaponry.MoreClientWeaponry"
     ]
   },
   "mixins": [

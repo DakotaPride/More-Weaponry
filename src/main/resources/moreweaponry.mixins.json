@@ -5,10 +5,14 @@
   "compatibilityLevel": "JAVA_16",
   "mixins": [
     "SignTypeAccessor",
-    "BlockEntityTypeMixin"
+    "BlockEntityTypeMixin",
+    "MixinStructurePiece"
   ],
   "client": [
-    "ExampleMixin"
+    "MoreWeaponryMixin",
+    "SignTypeAccessor",
+    "BlockEntityTypeMixin",
+    "MixinStructurePiece"
   ],
   "injectors": {
     "defaultRequire": 1
