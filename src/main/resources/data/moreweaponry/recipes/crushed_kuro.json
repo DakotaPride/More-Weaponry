@@ -19,6 +19,87 @@
             "Damage": "$ i0.Damage + 2"
           }
         }
+      },
+      {
+        "item": "moreweaponry:wooden_knife",
+        "remainder": {
+          "item": "moreweaponry:wooden_knife",
+          "data": {
+            "Damage": "$ i0.Damage + 2"
+          }
+        }
+      },
+      {
+        "item": "moreweaponry:diamond_knife",
+        "remainder": {
+          "item": "moreweaponry:diamond_knife",
+          "data": {
+            "Damage": "$ i0.Damage + 2"
+          }
+        }
+      },
+      {
+        "item": "moreweaponry:stone_knife",
+        "remainder": {
+          "item": "moreweaponry:stone_knife",
+          "data": {
+            "Damage": "$ i0.Damage + 2"
+          }
+        }
+      },
+      {
+        "item": "moreweaponry:guardian_scale_knife",
+        "remainder": {
+          "item": "moreweaponry:guardian_scale_knife",
+          "data": {
+            "Damage": "$ i0.Damage + 2"
+          }
+        }
+      },
+      {
+        "item": "moreweaponry:elder_guardian_scale_knife",
+        "remainder": {
+          "item": "moreweaponry:elder_guardian_scale_knife",
+          "data": {
+            "Damage": "$ i0.Damage + 2"
+          }
+        }
+      },
+      {
+        "item": "moreweaponry:blackstone_metal_knife",
+        "remainder": {
+          "item": "moreweaponry:blackstone_metal_knife",
+          "data": {
+            "Damage": "$ i0.Damage + 2"
+          }
+        }
+      },
+      {
+        "item": "moreweaponry:refined_moon_knife",
+        "remainder": {
+          "item": "moreweaponry:refined_moon_knife",
+          "data": {
+            "Damage": "$ i0.Damage + 2"
+          }
+        }
+      },
+      {
+        "item": "moreweaponry:glimmered_amethyst_knife",
+        "remainder": {
+          "item": "moreweaponry:glimmered_amethsyt_knife",
+          "data": {
+            "Damage": "$ i0.Damage + 2"
+          }
+        }
+      },
+      {
+        "item": "moreweaponry:netherite_knife",
+        "remainder": {
+          "item": "moreweaponry:netherite_knife",
+          "data": {
+            "Damage": "$ i0.Damage + 2"
+          }
+        }
       }
       ],
     {
