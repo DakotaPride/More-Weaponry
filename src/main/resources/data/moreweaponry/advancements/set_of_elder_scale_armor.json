@@ -4,7 +4,7 @@
       "item": "moreweaponry:elder_guardian_scale_chestplate"
     },
     "title": "Finally, I Have The Power!",
-    "description": "Obtain A Full Set of Elder Scale Armor And Gain The Effects Of The Elder Guardian",
+    "description": "Obtain A Full Set of Elder Scale Armor",
     "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,

@@ -336,11 +336,11 @@ public class ModItems {
             new ModKnifeItem((ToolMaterial) ModToolMaterial.OG_STONE, 2, -0.2f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
-    public static final Item IRON_KNIFE = registerItem("diamond_knife",
+    public static final Item IRON_KNIFE = registerItem("iron_knife",
             new ModKnifeItem((ToolMaterial) ModToolMaterial.OG_IRON, 5, 0.3f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
-    public static final Item DIAMOND_KNIFE = registerItem("iron_knife",
+    public static final Item DIAMOND_KNIFE = registerItem("diamond_knife",
             new ModKnifeItem((ToolMaterial) ModToolMaterial.OG_DIAMOND, 4, -0.1f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 

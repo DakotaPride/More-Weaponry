@@ -33,7 +33,7 @@
     "fabric": "*",
     "minecraft": "1.18.x",
     "java": ">=17",
-    "fabric-key-binding-api-v1": "*"
+    "nbtcrafting": "*"
   },
   "suggests": {
     "another-mod": "*"

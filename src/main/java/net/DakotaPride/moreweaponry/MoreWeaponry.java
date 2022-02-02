@@ -1,7 +1,6 @@
 package net.DakotaPride.moreweaponry;
 
 import net.DakotaPride.moreweaponry.block.ModBlocks;
-import net.DakotaPride.moreweaponry.block.entity.ModBlockEntities;
 import net.DakotaPride.moreweaponry.enchantments.ModEnchantments;
 import net.DakotaPride.moreweaponry.item.ModItems;
 import net.DakotaPride.moreweaponry.painting.ModPaintings;
@@ -43,9 +42,9 @@ public class MoreWeaponry implements ModInitializer {
 
 		ModRendererHelper.setRenderLayers();
 
-		ModBlockEntities.registerBlockEntities();
-
 		ModRegistries.registerStrippables();
+
+		ModRegistries.registerModComposterChances();
 
 		ModWorldGen.generateModWorldGen();
 

@@ -1,16 +1,32 @@
 {
-  "type": "minecraft:crafting_shapeless",
+  "type": "crafting_shapeless",
   "ingredients": [
-    {
-      "item": "minecraft:sweet_berries"
-    },
+    [
+      {
+        "item": "moreweaponry:golden_knife",
+        "remainder": {
+          "item": "moreweaponry:golden_knife",
+          "data": {
+            "Damage": "$ i0.Damage + 2"
+          }
+        }
+      },
+      {
+        "item": "moreweaponry:iron_knife",
+        "remainder": {
+          "item": "moreweaponry:iron_knife",
+          "data": {
+            "Damage": "$ i0.Damage + 2"
+          }
+        }
+      }
+      ],
     {
       "item": "moreweaponry:kuro"
     }
-
   ],
-    "result": {
-      "item": "moreweaponry:crushed_kuro",
-      "count": 7
-    }
-    }
+  "result": {
+    "item": "moreweaponry:crushed_kuro",
+    "count": 3
+  }
+}

@@ -18,6 +18,10 @@ repositories {
 	// for more information about repositories.
 	allprojects { repositories { maven { url 'https://jitpack.io' } } }
 	maven {url = "https://maven.kyrptonaught.dev"}
+	maven {
+		name "Siphalor's Maven"
+		url "https://maven.siphalor.de"
+	}
 
 }
 
@@ -29,6 +33,7 @@ dependencies {
 	modImplementation "com.github.CrimsonDawn45:Fabric-Shield-Lib:v${project.fabric_shield_lib_version}"
 	modImplementation 'net.kyrptonaught:customportalapi:0.0.1-beta49-1.18'
 	include 'net.kyrptonaught:customportalapi:0.0.1-beta49-1.18'
+	modImplementation "de.siphalor:nbtcrafting-1.18:2+"
 
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
