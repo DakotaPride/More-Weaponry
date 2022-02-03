@@ -1,6 +1,7 @@
-package net.DakotaPride.moreweaponry.item.custom.cirtict;
+package net.DakotaPride.moreweaponry.item.custom.cirtict.heated;
 
 import net.DakotaPride.moreweaponry.item.custom.mod_tools.ModBattleaxeItem;
+import net.DakotaPride.moreweaponry.item.custom.mod_tools.ModKnifeItem;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolMaterial;
@@ -12,14 +13,15 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class HeatedCirtictBattleaxe extends ModBattleaxeItem {
+public class HeatedCirtictKnife extends ModKnifeItem {
 
-    public HeatedCirtictBattleaxe(ToolMaterial material, float attackDamage, float attackSpeed, Settings settings) {
-        super(material, attackDamage, attackSpeed, settings);
+
+    public HeatedCirtictKnife(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
+        super(toolMaterial, attackDamage, attackSpeed, settings);
     }
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add( new TranslatableText("item.moreweaponry.heated_cirtict_battleaxe.tooltip").formatted(Formatting.GOLD) );
+        tooltip.add( new TranslatableText("item.moreweaponry.heated_cirtict_items.tooltip").formatted(Formatting.GOLD) );
     }
 }

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "moreweaponry:cirtict_axe"
+  },
+  "addition": {
+    "item": "moreweaponry:heated_cirtict_ingot"
+  },
+  "result": {
+    "item": "moreweaponry:heated_cirtict_axe"
+  }
+}

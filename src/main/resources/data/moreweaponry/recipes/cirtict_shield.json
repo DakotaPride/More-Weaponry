@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#P#",
+    "#A#",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "moreweaponry:cirtict_ingot"
+    },
+    "P": {
+      "item": "moreweaponry:wither_essence"
+    },
+    "A": {
+      "item": "moreweaponry:cirtict_scrap"
+    }
+  },
+  "result": {
+    "item": "moreweaponry:cirtict_shield",
+    "count": 1
+  }
+}

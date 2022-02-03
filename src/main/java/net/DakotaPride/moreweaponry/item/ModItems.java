@@ -4,8 +4,8 @@ import com.github.crimsondawn45.fabricshieldlib.lib.object.FabricShieldItem;
 import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.DakotaPride.moreweaponry.block.ModBlocks;
 import net.DakotaPride.moreweaponry.item.custom.*;
-import net.DakotaPride.moreweaponry.item.custom.cirtict.CooledCirtictBattleaxe;
-import net.DakotaPride.moreweaponry.item.custom.cirtict.HeatedCirtictBattleaxe;
+import net.DakotaPride.moreweaponry.item.custom.cirtict.cooled.*;
+import net.DakotaPride.moreweaponry.item.custom.cirtict.heated.*;
 import net.DakotaPride.moreweaponry.item.custom.elder_scale_items.*;
 import net.DakotaPride.moreweaponry.item.custom.mod_tools.BluestoneIgnitor;
 import net.DakotaPride.moreweaponry.item.custom.mod_tools.ModBattleaxeItem;
@@ -365,11 +365,11 @@ public class ModItems {
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item GUARDIAN_SCALE_KNIFE = registerItem("guardian_scale_knife",
-            new ModKnifeItem((ToolMaterial) ModToolMaterial.GUARDIAN_SCALE, 8, 0.6f,
+            new ModKnifeItem((ToolMaterial) ModToolMaterial.GUARDIAN_SCALE, 9, 0.6f,
                     new FabricItemSettings().rarity(Rarity.UNCOMMON).group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item ELDER_GUARDIAN_SCALE_KNIFE = registerItem("elder_guardian_scale_knife",
-            new ModKnifeItem((ToolMaterial) ModToolMaterial.ELDER_GUARDIAN_SCALE, 8, 0.6f,
+            new ModKnifeItem((ToolMaterial) ModToolMaterial.ELDER_GUARDIAN_SCALE, 11, 0.6f,
                     new FabricItemSettings().rarity(Rarity.EPIC).group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item GOLDEN_BATTLEAXE = registerItem("golden_battleaxe",
@@ -397,7 +397,7 @@ public class ModItems {
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item COOLED_CIRTICT_BATTLEAXE = registerItem("cooled_cirtict_battleaxe",
-            new CooledCirtictBattleaxe((ToolMaterial) ModToolMaterial.COOLED, 22, -3.0f,
+            new CooledCirtictBattleaxe((ToolMaterial) ModToolMaterial.COOLED_CIRTICT, 22, -3.0f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item BLUESTONE_IGNITOR = registerItem("bluestone_ignitor",
@@ -410,7 +410,7 @@ public class ModItems {
             new Item(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item COOLED_CIRTICT_INGOT = registerItem("cooled_cirtict_ingot",
-            new Item(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+            new CooledCirtictIngot(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item WARDENS_STEP_MUSIC_DISC = registerItem("wardens_step_music_disc",
             new ModMusicDiscItem(9, ModSounds.WARDENS_STEP,
@@ -436,6 +436,101 @@ public class ModItems {
 
     public static final Item WITHER_BROAD_HAMMER_HEAD = registerItem("wither_broad_hammer_head",
             new Item(new FabricItemSettings().maxCount(1).group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item HEATED_CIRTICT_INGOT = registerItem("heated_cirtict_ingot",
+            new HeatedCirtictIngot(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item COOLED_CIRTICT_SWORD = registerItem("cooled_cirtict_sword",
+            new CooledCirtictSword((ToolMaterial) ModToolMaterial.COOLED_CIRTICT, 15, -1.6f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item COOLED_CIRTICT_AXE = registerItem("cooled_cirtict_axe",
+            new CooledCirtictAxe((ToolMaterial) ModToolMaterial.COOLED_CIRTICT, 18, -2.3f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item COOLED_CIRTICT_HOE = registerItem("cooled_cirtict_hoe",
+            new CooledCirtictHoe((ToolMaterial) ModToolMaterial.COOLED_CIRTICT, 2, 0.1f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item COOLED_CIRTICT_PICKAXE = registerItem("cooled_cirtict_pickaxe",
+            new CooledCirtictSword((ToolMaterial) ModToolMaterial.COOLED_CIRTICT, 6, -2.1f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item COOLED_CIRTICT_SHOVEL = registerItem("cooled_cirtict_shovel",
+            new CooledCirtictShovel((ToolMaterial) ModToolMaterial.COOLED_CIRTICT, 5, -1.9f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item COOLED_CIRTICT_KNIFE = registerItem("cooled_cirtict_knife",
+            new CooledCirtictKnife((ToolMaterial) ModToolMaterial.COOLED_CIRTICT, 14, 0.6f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item HEATED_CIRTICT_SWORD = registerItem("heated_cirtict_sword",
+            new HeatedCirtictSword((ToolMaterial) ModToolMaterial.HEATED_CIRTICT, 15, -1.6f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item HEATED_CIRTICT_AXE = registerItem("heated_cirtict_axe",
+            new HeatedCirtictAxe((ToolMaterial) ModToolMaterial.HEATED_CIRTICT, 18, -2.3f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item HEATED_CIRTICT_HOE = registerItem("heated_cirtict_hoe",
+            new HeatedCirtictHoe((ToolMaterial) ModToolMaterial.HEATED_CIRTICT, 2, 0.1f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item HEATED_CIRTICT_PICKAXE = registerItem("heated_cirtict_pickaxe",
+            new HeatedCirtictPickaxe((ToolMaterial) ModToolMaterial.HEATED_CIRTICT, 6, -2.1f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item HEATED_CIRTICT_SHOVEL = registerItem("heated_cirtict_shovel",
+            new HeatedCirtictShovel((ToolMaterial) ModToolMaterial.HEATED_CIRTICT, 5, -1.9f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item HEATED_CIRTICT_KNIFE = registerItem("heated_cirtict_knife",
+            new HeatedCirtictKnife((ToolMaterial) ModToolMaterial.HEATED_CIRTICT, 14, 0.6f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item CIRTICT_SWORD = registerItem("cirtict_sword",
+            new SwordItem((ToolMaterial) ModToolMaterial.CIRTICT, 13, -1.6f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item CIRTICT_AXE = registerItem("cirtict_axe",
+            new ModAxeItem((ToolMaterial) ModToolMaterial.CIRTICT, 16, -2.3f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item CIRTICT_HOE = registerItem("cirtict_hoe",
+            new ModHoeItem((ToolMaterial) ModToolMaterial.CIRTICT, 1, 0.1f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item CIRTICT_PICKAXE = registerItem("cirtict_pickaxe",
+            new ModPickaxeItem((ToolMaterial) ModToolMaterial.CIRTICT, 5, -2.1f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item CIRTICT_SHOVEL = registerItem("cirtict_shovel",
+            new ShovelItem((ToolMaterial) ModToolMaterial.CIRTICT, 4, -1.9f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item CIRTICT_KNIFE = registerItem("cirtict_knife",
+            new ModKnifeItem((ToolMaterial) ModToolMaterial.CIRTICT, 12, 0.6f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item COOLED_CIRTICT_SHIELD  = registerItem("cooled_cirtict_shield",
+            new CooledCirtictShield(new FabricItemSettings().maxDamage(3583).group(ModItemGroup.MORE_WEAPONRY), 6, 16, ModItems.COOLED_CIRTICT_INGOT));
+
+    public static final Item HEATED_CIRTICT_SHIELD  = registerItem("heated_cirtict_shield",
+            new HeatedCirtictShield(new FabricItemSettings().maxDamage(3583).group(ModItemGroup.MORE_WEAPONRY), 6, 16, ModItems.HEATED_CIRTICT_INGOT));
+
+    public static final Item CIRTICT_SHIELD  = registerItem("cirtict_shield",
+            new FabricShieldItem(new FabricItemSettings().maxDamage(3456).group(ModItemGroup.MORE_WEAPONRY), 6, 17, ModItems.CIRTICT_INGOT));
+
+    public static final Item CIRTICT_NUGGET = registerItem("cirtict_nugget",
+            new Item(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item HEATED_CIRTICT_NUGGET = registerItem("heated_cirtict_nugget",
+            new HeatedCirtictNugget(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item COOLED_CIRTICT_NUGGET = registerItem("cooled_cirtict_nugget",
+            new CooledCirtictNugget(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+
 
     // Plague Update
 

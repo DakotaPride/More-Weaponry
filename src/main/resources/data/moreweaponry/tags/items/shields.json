@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "moreweaponry:blackstone_metal_shield",
+    "moreweaponry:elder_scale_shield",
+    "moreweaponry:guardian_scale_shield",
+    "moreweaponry:glimmering_shield",
+    "moreweaponry:moon_stone_shield",
+    "moreweaponry:heated_cirtict_shield",
+    "moreweaponry:cooled_cirtict_shield",
+    "moreweaponry:cirtict_shield"
+  ]
+}

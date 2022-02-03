@@ -86,7 +86,7 @@
       {
         "item": "moreweaponry:glimmered_amethyst_knife",
         "remainder": {
-          "item": "moreweaponry:glimmered_amethsyt_knife",
+          "item": "moreweaponry:glimmered_amethyst_knife",
           "data": {
             "Damage": "$ i0.Damage + 2"
           }

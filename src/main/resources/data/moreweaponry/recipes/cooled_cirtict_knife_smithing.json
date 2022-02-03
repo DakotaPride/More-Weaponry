@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "moreweaponry:cirtict_knife"
+  },
+  "addition": {
+    "item": "moreweaponry:cooled_cirtict_ingot"
+  },
+  "result": {
+    "item": "moreweaponry:cooled_cirtict_knife"
+  }
+}

@@ -310,6 +310,12 @@ public class ModBlocks {
         new BlockItem(block, new FabricItemSettings().group(group)));
     }
 
+    public static Block registerCompostableBlock(String name, Block block, ItemGroup group, float compostValue) {
+        Item blockItem = registerBlockItem(name, block, group);
+        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(blockItem, compostValue);
+        return Registry.register(Registry.BLOCK, new Identifier(MoreWeaponry.MOD_ID, name), block);
+    }
+
 
     public static final Block KURO_PLANT = registerBlockWithoutBlockItem("kuro_plant",
             new KuroPlantBlock(FabricBlockSettings.of(Material.PLANT).sounds(BlockSoundGroup.ROOTS).nonOpaque()
