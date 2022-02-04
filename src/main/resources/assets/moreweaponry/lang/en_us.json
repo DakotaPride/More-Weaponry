@@ -267,5 +267,17 @@
   "item.moreweaponry.cirtict_shovel": "Cirtict Shovel",
   "item.moreweaponry.cirtict_knife": "Cirtict Knife",
   "item.moreweaponry.cirtict_nugget": "Cirtict Nugget",
-  "item.moreweaponry.cirtict_shield": "Cirtict Shield"
+  "item.moreweaponry.cirtict_shield": "Cirtict Shield",
+
+
+  "item.moreweaponry.wretched_core": "Mob Core",
+  "item.moreweaponry.wretched_core.tooltip": "Wretched",
+  "item.moreweaponry.wretched_essence": "Wretched Essence",
+  "item.moreweaponry.mob_core": "Mob Core",
+  "item.moreweaponry.core_forge_activator_item.tooltip": "Empty",
+  "block.moreweaponry.essence_translator": "Essence Translator",
+  "block.moreweaponry.core_forge": "Mob Core Forge",
+  "item.moreweaponry.charged_mob_core": "Mob Core",
+  "item.moreweaponry.charged_core_item.tooltip": "Charged"
+
 }

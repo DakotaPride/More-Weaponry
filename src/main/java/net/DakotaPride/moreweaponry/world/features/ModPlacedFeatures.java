@@ -1,6 +1,7 @@
 package net.DakotaPride.moreweaponry.world.features;
 
 import net.DakotaPride.moreweaponry.MoreWeaponry;
+import net.DakotaPride.moreweaponry.block.ModBlocks;
 import net.minecraft.block.Blocks;
 import net.minecraft.structure.rule.BlockMatchRuleTest;
 import net.minecraft.structure.rule.RuleTest;
@@ -24,7 +25,12 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> BLUESTONE_KEY = registerKey("bluestone");
     public static final RegistryKey<PlacedFeature> CIRTICT_DEBRIS_KEY = registerKey("cirtict_debris");
     public static final RegistryKey<PlacedFeature> CRACKED_DRIPSTONE_KEY = registerKey("cracked_dripstone");
+    public static final RegistryKey<PlacedFeature> SANDSTONE_DUST_KEY = registerKey("sandstone_dust");
+    public static final RegistryKey<PlacedFeature> INFESTED_DRIPSTONE_KEY = registerKey("infested_dripstone");
+    public static final RegistryKey<PlacedFeature> INFESTED_CRACKED_DRIPSTONE_KEY = registerKey("infested_cracked_dripstone");
     public static final RuleTest END_STONE_RULE = new BlockMatchRuleTest(Blocks.END_STONE);
+    public static final RuleTest SAND_RULE = new BlockMatchRuleTest(Blocks.SAND);
+
 
 
     public static final PlacedFeature NITRIS_PLACED = registerPlacedFeature("nitris_spawn",
@@ -43,6 +49,10 @@ public class ModPlacedFeatures {
             ModConfiguredFeatures.CIRTICT_DEBRIS.withPlacement(modifiersWithCount(3,
                     HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(-80), YOffset.aboveBottom(300)))));
 
+    public static final PlacedFeature SANDSTONE_DUST_PLACED = registerPlacedFeature("sandstone_dust",
+            ModConfiguredFeatures.SANDSTONE_DUST.withPlacement(modifiersWithCount(6,
+                    HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(-80), YOffset.aboveBottom(300)))));
+
     public static final PlacedFeature LIMESTONE_PLACED = registerPlacedFeature("limestone",
             ModConfiguredFeatures.LIMESTONE.withPlacement(modifiersWithCount(11,
                     HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(-80), YOffset.aboveBottom(200)))));
@@ -52,8 +62,18 @@ public class ModPlacedFeatures {
                     HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(-80), YOffset.aboveBottom(100)))));
 
     public static final PlacedFeature CRACKED_DRIPSTONE_PLACED = registerPlacedFeature("cracked_dripstone",
-            ModConfiguredFeatures.CRACKED_DRIPSTONE.withPlacement(modifiersWithCount(11,
-                    HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(-80), YOffset.aboveBottom(200)))));
+            ModConfiguredFeatures.CRACKED_DRIPSTONE.withPlacement(modifiersWithCount(3,
+                    HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(-80), YOffset.aboveBottom(300)))));
+
+    public static final PlacedFeature INFESTED_CRACKED_DRIPSTONE_PLACED = registerPlacedFeature("infested_cracked_dripstone",
+            ModConfiguredFeatures.INFESTED_CRACKED_DRIPSTONE.withPlacement(modifiersWithCount(3,
+                    HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(-80), YOffset.aboveBottom(300)))));
+
+    public static final PlacedFeature INFESTED_DRIPSTONE_PLACED = registerPlacedFeature("infested_dripstone",
+            ModConfiguredFeatures.INFESTED_DRIPSTONE.withPlacement(modifiersWithCount(3,
+                    HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(-80), YOffset.aboveBottom(300)))));
+
+
 
     public static List<PlacementModifier> modifiers(PlacementModifier countModifier, PlacementModifier heightModifier) {
         return List.of(countModifier, SquarePlacementModifier.of(), heightModifier, BiomePlacementModifier.of());

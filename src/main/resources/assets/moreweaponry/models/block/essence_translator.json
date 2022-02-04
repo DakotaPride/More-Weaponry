@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "moreweaponry:block/essence_translator_side",
+    "north": "moreweaponry:block/essence_translator_side",
+    "south": "moreweaponry:block/essence_translator_side",
+    "east": "moreweaponry:block/essence_translator_side",
+    "west": "moreweaponry:block/essence_translator_side",
+    "up": "moreweaponry:block/essence_translator_top",
+    "down": "moreweaponry:block/essence_translator_bottom"
+  }
+}

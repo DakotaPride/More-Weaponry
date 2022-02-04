@@ -1,0 +1,45 @@
+{
+  "display": {
+    "icon": {
+      "item": "moreweaponry:wretched_spawn_block"
+    },
+    "title": "Only Wretchedness Lies Ahead...",
+    "description": "Place the Wretched Summoning Block to fight the Wretched Boss",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "moreweaponry:moreweaponry",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "moreweaponry:wretched_boss",
+              "location": {
+                "biome": "minecraft:dripstone_caves",
+                "block": {
+                  "blocks": [
+                    "minecraft:dripstone_block",
+                    "moreweaponry:cracked_dripstone_block"
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "recipes": [
+      "moreweaponry:wretched_essence"
+    ],
+    "experience": 100
+  }
+}

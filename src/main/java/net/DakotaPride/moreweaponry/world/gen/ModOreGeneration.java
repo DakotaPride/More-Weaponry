@@ -23,5 +23,14 @@ public class ModOreGeneration {
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
                 GenerationStep.Feature.RAW_GENERATION, ModPlacedFeatures.CRACKED_DRIPSTONE_KEY);
 
+        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
+                GenerationStep.Feature.RAW_GENERATION, ModPlacedFeatures.INFESTED_CRACKED_DRIPSTONE_KEY);
+
+        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
+                GenerationStep.Feature.RAW_GENERATION, ModPlacedFeatures.INFESTED_DRIPSTONE_KEY);
+
+        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
+                GenerationStep.Feature.TOP_LAYER_MODIFICATION, ModPlacedFeatures.SANDSTONE_DUST_KEY);
+
     }
 }

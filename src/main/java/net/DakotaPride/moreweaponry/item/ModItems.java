@@ -6,6 +6,9 @@ import net.DakotaPride.moreweaponry.block.ModBlocks;
 import net.DakotaPride.moreweaponry.item.custom.*;
 import net.DakotaPride.moreweaponry.item.custom.cirtict.cooled.*;
 import net.DakotaPride.moreweaponry.item.custom.cirtict.heated.*;
+import net.DakotaPride.moreweaponry.item.custom.cores.ChargedMobCoreItem;
+import net.DakotaPride.moreweaponry.item.custom.cores.CoreForgeActivatorItem;
+import net.DakotaPride.moreweaponry.item.custom.cores.WretchedCoreItem;
 import net.DakotaPride.moreweaponry.item.custom.elder_scale_items.*;
 import net.DakotaPride.moreweaponry.item.custom.mod_tools.BluestoneIgnitor;
 import net.DakotaPride.moreweaponry.item.custom.mod_tools.ModBattleaxeItem;
@@ -543,6 +546,18 @@ public class ModItems {
 
     public static final Item SANDSTONE_DUST = registerItem("sandstone_dust",
             new Item(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item WRETCHED_ESSENCE = registerItem("wretched_essence",
+            new ModEssenceItem(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item WRETCHED_CORE = registerItem("wretched_core",
+            new WretchedCoreItem(new FabricItemSettings().maxCount(1).group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item MOB_CORE = registerItem("mob_core",
+            new CoreForgeActivatorItem(new FabricItemSettings().maxCount(1).group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item CHARGED_MOB_CORE = registerItem("charged_mob_core",
+            new ChargedMobCoreItem(new FabricItemSettings().maxCount(1).group(ModItemGroup.MORE_WEAPONRY)));
 
 
     private static Item registerItem (String name, Item item) {

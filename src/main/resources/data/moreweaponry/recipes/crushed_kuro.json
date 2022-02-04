@@ -100,6 +100,33 @@
             "Damage": "$ i0.Damage + 2"
           }
         }
+      },
+      {
+        "item": "moreweaponry:cirtict_knife",
+        "remainder": {
+          "item": "moreweaponry:cirtict_knife",
+          "data": {
+            "Damage": "$ i0.Damage + 2"
+          }
+        }
+      },
+      {
+        "item": "moreweaponry:heated_cirtict_knife",
+        "remainder": {
+          "item": "moreweaponry:heated_cirtict_knife",
+          "data": {
+            "Damage": "$ i0.Damage + 2"
+          }
+        }
+      },
+      {
+        "item": "moreweaponry:cooled_cirtict_knife",
+        "remainder": {
+          "item": "moreweaponry:cooled_cirtict_knife",
+          "data": {
+            "Damage": "$ i0.Damage + 2"
+          }
+        }
       }
       ],
     {

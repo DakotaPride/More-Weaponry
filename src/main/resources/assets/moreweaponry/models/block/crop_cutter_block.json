@@ -1,7 +1,12 @@
 {
-  "parent": "minecraft:block/cube_column",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "end": "moreweaponry:block/crop_cutter_block_top",
-    "side": "moreweaponry:block/crop_cutter_block_side"
+    "particle": "minecraft:block/birch_planks",
+    "north": "moreweaponry:block/crop_cutter_block_side",
+    "south": "moreweaponry:block/crop_cutter_block_side",
+    "east": "moreweaponry:block/crop_cutter_block_side",
+    "west": "moreweaponry:block/crop_cutter_block_side",
+    "up": "moreweaponry:block/crop_cutter_block_top",
+    "down": "minecraft:block/birch_planks"
   }
 }

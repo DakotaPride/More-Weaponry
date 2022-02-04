@@ -52,6 +52,14 @@ public class ModConfiguredFeatures {
                     ModBlocks.CIRTICT_DEBRIS.getDefaultState(),
                     4)));
 
+    public static final List<OreFeatureConfig.Target> OVERWORLD_SANDSTONE_DUST = List.of(
+            OreFeatureConfig.createTarget(ModOreConfiguredFeatures.SAND_REPLACEABLE_OVERWORLD, ModBlocks.SANDSTONE_DUST_BLOCK.getDefaultState()));
+
+    public static final ConfiguredFeature<?, ?> SANDSTONE_DUST = register("sandstone_dust",
+            Feature.ORE.configure(new OreFeatureConfig(new BlockMatchRuleTest(Blocks.SAND),
+                    ModBlocks.SANDSTONE_DUST_BLOCK.getDefaultState(),
+                    46)));
+
     public static final List<OreFeatureConfig.Target> OVERWORLD_LIMESTONE = List.of(
             OreFeatureConfig.createTarget(OreConfiguredFeatures.STONE_ORE_REPLACEABLES, ModBlocks.LIMESTONE.getDefaultState()));
 
@@ -68,7 +76,20 @@ public class ModConfiguredFeatures {
             OreFeatureConfig.createTarget(OreConfiguredFeatures.STONE_ORE_REPLACEABLES, ModBlocks.CRACKED_DRIPSTONE_BLOCK.getDefaultState()));
 
     public static final ConfiguredFeature<?, ?> CRACKED_DRIPSTONE = register("cracked_dripstone",
-            Feature.ORE.configure(new OreFeatureConfig(OVERWORLD_CRACKED_DRIPSTONE, 34)));
+            Feature.ORE.configure(new OreFeatureConfig(OVERWORLD_CRACKED_DRIPSTONE, 21)));
+
+    public static final List<OreFeatureConfig.Target> OVERWORLD_INFESTED_CRACKED_DRIPSTONE = List.of(
+            OreFeatureConfig.createTarget(OreConfiguredFeatures.STONE_ORE_REPLACEABLES, ModBlocks.INFESTED_CRACKED_DRIPSTONE_BLOCK.getDefaultState()));
+
+    public static final ConfiguredFeature<?, ?> INFESTED_CRACKED_DRIPSTONE = register("infested_cracked_dripstone",
+            Feature.ORE.configure(new OreFeatureConfig(OVERWORLD_INFESTED_CRACKED_DRIPSTONE, 11)));
+
+    public static final List<OreFeatureConfig.Target> OVERWORLD_INFESTED_DRIPSTONE = List.of(
+            OreFeatureConfig.createTarget(OreConfiguredFeatures.STONE_ORE_REPLACEABLES, ModBlocks.INFESTED_DRIPSTONE_BLOCK.getDefaultState()));
+
+    public static final ConfiguredFeature<?, ?> INFESTED_DRIPSTONE = register("infested_dripstone",
+            Feature.ORE.configure(new OreFeatureConfig(OVERWORLD_INFESTED_DRIPSTONE, 11)));
+
 
 
     private static RegistryKey<ConfiguredFeature<?, ?>> registryKey(String name) {
