@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "side": "moreweaponry:block/essence_upgrader_side",
-    "top": "moreweaponry:block/essence_upgrader_top"
-  }
-}

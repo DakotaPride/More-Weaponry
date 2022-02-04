@@ -301,13 +301,12 @@ public class ModBlocks {
             ModItemGroup.MORE_WEAPONRY);
 
     public static final Block ESSENCE_TRANSLATOR = registerBlock("essence_translator",
-            new Block(FabricBlockSettings.copy(Blocks.SMITHING_TABLE)), ModItemGroup.MORE_WEAPONRY);
+            new Block(FabricBlockSettings.copy(Blocks.STONE)), ModItemGroup.MORE_WEAPONRY);
 
     public static final Block CORE_FORGE = registerBlock("core_forge",
-            new Block(FabricBlockSettings.copy(Blocks.SMITHING_TABLE)), ModItemGroup.MORE_WEAPONRY);
+            new Block(FabricBlockSettings.copy(Blocks.STONE)), ModItemGroup.MORE_WEAPONRY);
 
-    public static final Block ESSENCE_UPGRADER = registerBlock("essence_upgrader",
-            new EssenceUpgraderBlock(FabricBlockSettings.copy(Blocks.SMITHING_TABLE)), ModItemGroup.MORE_WEAPONRY);
+
 
     public static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItem(name, block, group);
