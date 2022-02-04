@@ -559,6 +559,10 @@ public class ModItems {
     public static final Item CHARGED_MOB_CORE = registerItem("charged_mob_core",
             new ChargedMobCoreItem(new FabricItemSettings().maxCount(1).group(ModItemGroup.MORE_WEAPONRY)));
 
+    public static final Item ESSENCE_CIRTICT_AXE = registerItem("essence_cirtict_axe",
+            new ModAxeItem((ToolMaterial) ModToolMaterial.CIRTICT, 18, -2.3f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
 
     private static Item registerItem (String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(MoreWeaponry.MOD_ID, name), item);

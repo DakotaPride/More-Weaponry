@@ -306,6 +306,9 @@ public class ModBlocks {
     public static final Block CORE_FORGE = registerBlock("core_forge",
             new Block(FabricBlockSettings.copy(Blocks.SMITHING_TABLE)), ModItemGroup.MORE_WEAPONRY);
 
+    public static final Block ESSENCE_UPGRADER = registerBlock("essence_upgrader",
+            new EssenceUpgraderBlock(FabricBlockSettings.copy(Blocks.SMITHING_TABLE)), ModItemGroup.MORE_WEAPONRY);
+
     public static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItem(name, block, group);
         return Registry.register(Registry.BLOCK, new Identifier(MoreWeaponry.MOD_ID, name), block);
