@@ -456,7 +456,7 @@ public class ModItems {
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item COOLED_CIRTICT_PICKAXE = registerItem("cooled_cirtict_pickaxe",
-            new CooledCirtictSword((ToolMaterial) ModToolMaterial.COOLED_CIRTICT, 6, -2.1f,
+            new CooledCirtictPickaxe((ToolMaterial) ModToolMaterial.COOLED_CIRTICT, 6, -2.1f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item COOLED_CIRTICT_SHOVEL = registerItem("cooled_cirtict_shovel",

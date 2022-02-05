@@ -7,7 +7,12 @@
     "moreweaponry:sandstone_dust",
     "moreweaponry:sandstone_dust_block",
     "moreweaponry:cracked_dripstone_block",
-    "moreweaponry:wretched_spawn_block"
+    "moreweaponry:wretched_spawn_block",
+    "moreweaponry:wretched_essence",
+    "moreweaponry:wretched_core",
+    "moreweaponry:wicked_spawn_block",
+    "moreweaponry:essence_translator",
+    "moreweaponry:core_forge"
 
   ]
 }

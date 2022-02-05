@@ -3,6 +3,10 @@
   "values": [
     "moreweaponry:cirtict_block",
     "moreweaponry:cirtict_debris",
-    "moreweaponry:blackstone_metal_block"
+    "moreweaponry:blackstone_metal_block",
+
+
+    "moreweaponry:essence_translator",
+    "moreweaponry:core_forge"
   ]
 }

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AA",
+    "FF",
+    "FF"
+  ],
+  "key": {
+    "A": {
+      "tag": "moreweaponry:essence"
+    },
+    "F": {
+      "item": "minecraft:crying_obsidian"
+    }
+  },
+  "result": {
+    "item": "moreweaponry:essence_translator",
+    "count": 1
+  }
+}
