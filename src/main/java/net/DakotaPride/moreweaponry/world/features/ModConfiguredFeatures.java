@@ -52,14 +52,6 @@ public class ModConfiguredFeatures {
                     ModBlocks.CIRTICT_DEBRIS.getDefaultState(),
                     4)));
 
-    public static final List<OreFeatureConfig.Target> END_PEPLEX_NYLIUM = List.of(
-            OreFeatureConfig.createTarget(OreConfiguredFeatures.STONE_ORE_REPLACEABLES, ModBlocks.PEPLEX_NYLIUM.getDefaultState()));
-
-    public static final ConfiguredFeature<?, ?> PEPLEX_NYLIUM = register("peplex_nylium",
-            Feature.ORE.configure(new OreFeatureConfig(new BlockMatchRuleTest(Blocks.END_STONE),
-                    ModBlocks.PEPLEX_NYLIUM.getDefaultState(),
-                    4)));
-
     public static final List<OreFeatureConfig.Target> OVERWORLD_SANDSTONE_DUST = List.of(
             OreFeatureConfig.createTarget(ModOreConfiguredFeatures.SAND_REPLACEABLE_OVERWORLD, ModBlocks.SANDSTONE_DUST_BLOCK.getDefaultState()));
 

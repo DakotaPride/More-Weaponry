@@ -28,7 +28,6 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> SANDSTONE_DUST_KEY = registerKey("sandstone_dust");
     public static final RegistryKey<PlacedFeature> INFESTED_DRIPSTONE_KEY = registerKey("infested_dripstone");
     public static final RegistryKey<PlacedFeature> INFESTED_CRACKED_DRIPSTONE_KEY = registerKey("infested_cracked_dripstone");
-    public static final RegistryKey<PlacedFeature> PEPLEX_NYLIUM_KEY = registerKey("peplex_nylium");
     public static final RuleTest END_STONE_RULE = new BlockMatchRuleTest(Blocks.END_STONE);
     public static final RuleTest SAND_RULE = new BlockMatchRuleTest(Blocks.SAND);
 
@@ -48,10 +47,6 @@ public class ModPlacedFeatures {
 
     public static final PlacedFeature CIRTICT_DEBRIS_PLACED = registerPlacedFeature("cirtict_debris",
             ModConfiguredFeatures.CIRTICT_DEBRIS.withPlacement(modifiersWithCount(3,
-                    HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(-80), YOffset.aboveBottom(300)))));
-
-    public static final PlacedFeature PEPLEX_NYLIUM_PLACED = registerPlacedFeature("peplex_nylium",
-            ModConfiguredFeatures.PEPLEX_NYLIUM.withPlacement(modifiersWithCount(3,
                     HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(-80), YOffset.aboveBottom(300)))));
 
     public static final PlacedFeature SANDSTONE_DUST_PLACED = registerPlacedFeature("sandstone_dust",

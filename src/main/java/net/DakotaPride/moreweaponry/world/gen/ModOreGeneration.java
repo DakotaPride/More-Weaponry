@@ -32,8 +32,5 @@ public class ModOreGeneration {
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
                 GenerationStep.Feature.TOP_LAYER_MODIFICATION, ModPlacedFeatures.SANDSTONE_DUST_KEY);
 
-        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
-                GenerationStep.Feature.TOP_LAYER_MODIFICATION, ModPlacedFeatures.PEPLEX_NYLIUM_KEY);
-
     }
 }
