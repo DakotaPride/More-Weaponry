@@ -6,6 +6,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.mob.EndermanEntity;
 import net.minecraft.entity.mob.SpiderEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
@@ -16,20 +17,19 @@ import net.minecraft.world.explosion.Explosion;
 
 import java.util.Map;
 
-public class WretchedSpawnBlock
-        extends Block {
+public class WickedSpawnBlock extends Block {
     private final Block regularBlock;
     private static final Map<Block, Block> REGULAR_TO_INFESTED_BLOCK = Maps.newIdentityHashMap();
     private static final Map<BlockState, BlockState> REGULAR_TO_INFESTED_STATE = Maps.newIdentityHashMap();
     private static final Map<BlockState, BlockState> INFESTED_TO_REGULAR_STATE = Maps.newIdentityHashMap();
 
-    public WretchedSpawnBlock(Block regularBlock, Settings settings) {
+    public WickedSpawnBlock(Block regularBlock, Settings settings) {
         super(settings.hardness(regularBlock.getHardness() / 2.0f).resistance(0.75f));
         this.regularBlock = regularBlock;
         REGULAR_TO_INFESTED_BLOCK.put(regularBlock, this);
     }
 
-    public WretchedSpawnBlock(Settings settings, Block regularBlock) {
+    public WickedSpawnBlock(Settings settings, Block regularBlock) {
         super(settings);
         this.regularBlock = regularBlock;
     }
@@ -43,10 +43,10 @@ public class WretchedSpawnBlock
     }
 
     private void spawnSpider(ServerWorld world, BlockPos pos) {
-        SpiderEntity spiderEntity = EntityType.SPIDER.create(world);
-        spiderEntity.refreshPositionAndAngles((double)pos.getX() + 0.5, pos.getY(), (double)pos.getZ() + 0.5, 0.0f, 0.0f);
-        world.spawnEntity(spiderEntity);
-        spiderEntity.playSpawnEffects();
+        EndermanEntity endermanEntity = EntityType.ENDERMAN.create(world);
+        endermanEntity.refreshPositionAndAngles((double)pos.getX() + 0.5, pos.getY(), (double)pos.getZ() + 0.5, 0.0f, 0.0f);
+        world.spawnEntity(endermanEntity);
+        endermanEntity.playSpawnEffects();
     }
 
     @Override

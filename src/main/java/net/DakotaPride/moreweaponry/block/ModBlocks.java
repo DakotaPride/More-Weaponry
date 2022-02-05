@@ -296,6 +296,10 @@ public class ModBlocks {
             new WretchedSpawnBlock(ModBlocks.CRACKED_DRIPSTONE_BLOCK, FabricBlockSettings.copy(Blocks.INFESTED_STONE)),
             ModItemGroup.MORE_WEAPONRY);
 
+    public static final Block WICKED_SPAWN_BLOCK = registerBlock("wicked_spawn_block",
+            new WickedSpawnBlock(Blocks.END_STONE, FabricBlockSettings.copy(Blocks.INFESTED_STONE)),
+            ModItemGroup.MORE_WEAPONRY);
+
     public static final Block INFESTED_DRIPSTONE_BLOCK = registerBlock("infested_dripstone_block",
             new WretchedInfestedBlock(Blocks.DRIPSTONE_BLOCK, FabricBlockSettings.copy(Blocks.INFESTED_STONE)),
             ModItemGroup.MORE_WEAPONRY);
@@ -305,6 +309,9 @@ public class ModBlocks {
 
     public static final Block CORE_FORGE = registerBlock("core_forge",
             new Block(FabricBlockSettings.copy(Blocks.STONE)), ModItemGroup.MORE_WEAPONRY);
+
+    public static final Block PEPLEX_NYLIUM = registerBlock("peplex_nylium",
+            new EndNyliumBlock(FabricBlockSettings.copy(Blocks.END_STONE)), ModItemGroup.MORE_WEAPONRY);
 
 
 
