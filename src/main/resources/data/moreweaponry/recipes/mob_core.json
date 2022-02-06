@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "#S#",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "tag": "moreweaponry:essence"
+    },
+    "S": {
+      "item": "moreweaponry:cirtict_ingot"
+    }
+  },
+  "result": {
+    "item": "moreweaponry:mob_core",
+    "count": 1
+  }
+}

@@ -35,7 +35,16 @@ public enum ModArmorMaterial implements ArmorMaterial
             6.0f, 0.8f, () -> Ingredient.ofItems(ModItems.DRAGON_SCALE)),
     SHULKER_SHELL("shulker_shell", 49,
             new int[]{5, 9, 8, 6}, 19, SoundEvents.BLOCK_SHULKER_BOX_OPEN,
-            7.0f, 0.9f, () -> Ingredient.ofItems(Items.SHULKER_SHELL));
+            7.0f, 0.9f, () -> Ingredient.ofItems(Items.SHULKER_SHELL)),
+    CIRTICT("cirtict", 51,
+            new int[]{11, 15, 13, 12}, 16, SoundEvents.BLOCK_RESPAWN_ANCHOR_CHARGE,
+            6.5f, 0.7f, () -> Ingredient.ofItems(ModItems.CIRTICT_INGOT)),
+    HEATED_CIRTICT("heated_cirtict", 57,
+            new int[]{13, 17, 15, 14}, 17, SoundEvents.ITEM_BUCKET_EMPTY_LAVA,
+            7.5f, 0.9f, () -> Ingredient.ofItems(ModItems.HEATED_CIRTICT_INGOT)),
+    COOLED_CIRTICT("cooled_cirtict", 57,
+            new int[]{13, 17, 15, 14}, 17, SoundEvents.ITEM_BUCKET_EMPTY_POWDER_SNOW,
+            7.5f, 0.9f, () -> Ingredient.ofItems(ModItems.COOLED_CIRTICT_INGOT));
 
     private static final int[] BASE_DURABILITY;
     private final String name;
