@@ -43,6 +43,22 @@
         },
         {
           "type": "minecraft:item",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1.0,
+                "max": 1.0
+              },
+              "add": false
+            }
+          ],
+          "name": "moreweaponry:wardens_step_music_disc"
+        },
+        {
+          "type": "minecraft:item",
           "weight": 10,
           "functions": [
             {
