@@ -22,6 +22,7 @@ repositories {
 		name "Siphalor's Maven"
 		url "https://maven.siphalor.de"
 	}
+	maven { url = 'https://maven.blamejared.com' }
 
 }
 
@@ -34,6 +35,7 @@ dependencies {
 	modImplementation 'net.kyrptonaught:customportalapi:0.0.1-beta49-1.18'
 	include 'net.kyrptonaught:customportalapi:0.0.1-beta49-1.18'
 	modImplementation "de.siphalor:nbtcrafting-1.18:2+"
+	modImplementation "vazkii.patchouli:Patchouli:[1.18-60-FABRIC]"
 
 
 	// Fabric API. This is technically optional, but you probably want it anyway.

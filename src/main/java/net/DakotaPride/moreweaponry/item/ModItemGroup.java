@@ -10,5 +10,5 @@ import net.minecraft.util.Identifier;
 
 public class ModItemGroup {
     public static final ItemGroup MORE_WEAPONRY = FabricItemGroupBuilder.build(new Identifier(MoreWeaponry.MOD_ID, "more_weaponry"),
-            () -> new ItemStack(ModBlocks.MOON_STONE_DUST_BLOCK));
+            () -> new ItemStack(ModItems.HEATED_CIRTICT_BATTLEAXE));
 }

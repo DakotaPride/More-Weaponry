@@ -21,4 +21,8 @@ public class ChargedMobCoreItem extends Item {
         tooltip.add( new TranslatableText("item.moreweaponry.charged_core_item.tooltip").formatted(Formatting.AQUA));
     }
 
+    @Override
+    public boolean hasGlint(ItemStack stack) {
+        return true;
+    }
 }

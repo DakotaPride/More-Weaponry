@@ -65,4 +65,10 @@ public class WretchedCoreItem extends Item {
     private void writeNbt(RegistryKey<World> registryKey, BlockPos blockPos, NbtCompound nbtCompound) {
 
     }
+
+    @Override
+    public boolean hasGlint(ItemStack stack) {
+        return true;
+    }
+
 }

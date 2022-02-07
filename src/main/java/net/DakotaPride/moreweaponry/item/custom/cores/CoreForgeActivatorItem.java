@@ -64,4 +64,9 @@ public class CoreForgeActivatorItem extends Item {
 
     }
 
+    @Override
+    public boolean hasGlint(ItemStack stack) {
+        return true;
+    }
+
 }

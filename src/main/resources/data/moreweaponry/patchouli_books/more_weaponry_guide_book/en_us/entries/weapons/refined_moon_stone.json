@@ -1,0 +1,16 @@
+{
+  "name": "Refined Moonstone Tools",
+  "icon": "moreweaponry:refined_moon_stone",
+  "category": "moreweaponry:weapons",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Refined Moonstone is one of the two base tier materials that can used to craft armor and tools."
+    },
+    {
+      "type": "smelting",
+      "recipe": "moreweaponry:refined_moon_stone",
+      "text": "Refined Moonstone is slightly better than Diamond"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "More Weaponry Guide",
+  "landing_text": "Welcome to the All You Can Need Guide to the More Weaponry Mod!",
+  "version": 1,
+  "model": "moreweaponry:more_weaponry_guide",
+  "creative_tab": "more_weaponry"
+}

@@ -270,17 +270,17 @@
   "item.moreweaponry.cirtict_shield": "Cirtict Shield",
 
 
-  "item.moreweaponry.wretched_core": "Mob Core",
+  "item.moreweaponry.wretched_core": "Mob Core (NOT COMPLETE)",
   "item.moreweaponry.wretched_core.tooltip": "Wretched",
   "item.moreweaponry.wretched_essence": "Wretched Essence",
-  "item.moreweaponry.mob_core": "Mob Core",
+  "item.moreweaponry.mob_core": "Mob Core (NOT COMPLETE)",
   "item.moreweaponry.core_forge_activator_item.tooltip": "Empty",
-  "block.moreweaponry.essence_translator": "Essence Translator",
-  "block.moreweaponry.core_forge": "Mob Core Forge",
-  "item.moreweaponry.charged_mob_core": "Mob Core",
+  "block.moreweaponry.essence_translator": "Essence Translator (NOT COMPLETE)",
+  "block.moreweaponry.core_forge": "Mob Core Forge (NOT COMPLETE)",
+  "item.moreweaponry.charged_mob_core": "Mob Core (NOT COMPLETE)",
   "item.moreweaponry.charged_core_item.tooltip": "Charged",
   "item.moreweaponry.essence_cirtict_axe": "Essence Cirtict Axe",
-  "block.moreweaponry.peplex_nylium": "Peplex Nylium",
-  "block.moreweaponry.wicked_spawn_block": "Wicked Spawn Block"
+  "block.moreweaponry.peplex_nylium": "Peplex Nylium (NOT COMPLETE)",
+  "block.moreweaponry.wicked_spawn_block": "Wicked Spawn Block (NOT COMPLETE)"
 
 }
