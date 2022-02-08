@@ -1,6 +1,7 @@
 package net.DakotaPride.moreweaponry;
 
 import net.DakotaPride.moreweaponry.block.ModBlocks;
+import net.DakotaPride.moreweaponry.enchantments.ModEnchantments;
 import net.DakotaPride.moreweaponry.util.ModModelPredicateProvider;
 import net.DakotaPride.moreweaponry.util.ModRendererHelper;
 import net.fabricmc.api.ClientModInitializer;
@@ -18,6 +19,8 @@ public class MoreClientWeaponry implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_NIGHT_CURON, RenderLayer.getCutout());
 
         ModModelPredicateProvider.registerModModels();
+
+        ModEnchantments.registerModEnchantments();
 
 
 

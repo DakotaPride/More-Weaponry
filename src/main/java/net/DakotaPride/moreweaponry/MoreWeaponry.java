@@ -50,6 +50,8 @@ public class MoreWeaponry implements ModInitializer {
 
 		ModWorldGen.generateModWorldGen();
 
+		ModEnchantments.registerModEnchantments();
+
 	}
 
 }

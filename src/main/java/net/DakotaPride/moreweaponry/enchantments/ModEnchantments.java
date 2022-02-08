@@ -24,6 +24,10 @@ public class ModEnchantments {
             new StrayBonageEnchantment()
     );
 
+    public static Enchantment AUTO_MENDING = register("auto_mending",
+            new AutoMendingEnchantment(Enchantment.Rarity.UNCOMMON,
+                    EnchantmentTarget.ARMOR_CHEST));
+
 
     private static Enchantment register(String name, Enchantment enchantment) {
         return Registry.register(Registry.ENCHANTMENT, new Identifier(MoreWeaponry.MOD_ID, name), enchantment);
