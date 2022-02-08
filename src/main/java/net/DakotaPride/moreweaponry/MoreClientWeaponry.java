@@ -20,8 +20,6 @@ public class MoreClientWeaponry implements ClientModInitializer {
 
         ModModelPredicateProvider.registerModModels();
 
-        ModEnchantments.registerModEnchantments();
-
 
 
 
