@@ -4,6 +4,7 @@ import net.DakotaPride.moreweaponry.block.ModBlocks;
 import net.DakotaPride.moreweaponry.enchantments.ModEnchantments;
 import net.DakotaPride.moreweaponry.item.ModItems;
 import net.DakotaPride.moreweaponry.painting.ModPaintings;
+import net.DakotaPride.moreweaponry.util.ModModelPredicateProvider;
 import net.DakotaPride.moreweaponry.util.ModRegistries;
 import net.DakotaPride.moreweaponry.util.ModRendererHelper;
 import net.DakotaPride.moreweaponry.world.dimension.ModPortals;
@@ -31,6 +32,8 @@ public class MoreWeaponry implements ModInitializer {
 
 		ModEnchantments.registerModEnchantments();
 
+		MoreWeaponryVillagerTrades.registerTrades();
+
 		ModPaintings.registerPaintings();
 
 		ModPortals.registerPortals();
@@ -49,6 +52,8 @@ public class MoreWeaponry implements ModInitializer {
 		ModRegistries.registerStrippables();
 
 		ModWorldGen.generateModWorldGen();
+
+		ModModelPredicateProvider.registerModModels();
 
 	}
 
