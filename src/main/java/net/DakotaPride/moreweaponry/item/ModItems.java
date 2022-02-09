@@ -206,49 +206,49 @@ public class ModItems {
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item GLIMMERING_HELMET = registerItem("glimmering_helmet",
-            new ModElderScaleArmorItem(ModArmorMaterial.GLIMMERING_AMETHYST, EquipmentSlot.HEAD,
+            new ArmorItem(ModArmorMaterial.GLIMMERING_AMETHYST, EquipmentSlot.HEAD,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
     public static final Item GLIMMERING_CHESTPLATE = registerItem("glimmering_chestplate",
-            new ModElderScaleArmorItem(ModArmorMaterial.GLIMMERING_AMETHYST, EquipmentSlot.CHEST,
+            new ArmorItem(ModArmorMaterial.GLIMMERING_AMETHYST, EquipmentSlot.CHEST,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
     public static final Item GLIMMERING_LEGGINGS = registerItem("glimmering_leggings",
-            new ModElderScaleArmorItem(ModArmorMaterial.GLIMMERING_AMETHYST, EquipmentSlot.LEGS,
+            new ArmorItem(ModArmorMaterial.GLIMMERING_AMETHYST, EquipmentSlot.LEGS,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
     public static final Item GLIMMERING_BOOTS = registerItem("glimmering_boots",
-            new ModElderScaleArmorItem(ModArmorMaterial.GLIMMERING_AMETHYST, EquipmentSlot.FEET,
+            new ArmorItem(ModArmorMaterial.GLIMMERING_AMETHYST, EquipmentSlot.FEET,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item MOON_STONE_HELMET = registerItem("moon_stone_helmet",
-            new ModElderScaleArmorItem(ModArmorMaterial.REFINED_MOON_STONE, EquipmentSlot.HEAD,
+            new ArmorItem(ModArmorMaterial.REFINED_MOON_STONE, EquipmentSlot.HEAD,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
     public static final Item MOON_STONE_CHESTPLATE = registerItem("moon_stone_chestplate",
-            new ModElderScaleArmorItem(ModArmorMaterial.REFINED_MOON_STONE, EquipmentSlot.CHEST,
+            new ArmorItem(ModArmorMaterial.REFINED_MOON_STONE, EquipmentSlot.CHEST,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
     public static final Item MOON_STONE_LEGGINGS = registerItem("moon_stone_leggings",
-            new ModElderScaleArmorItem(ModArmorMaterial.REFINED_MOON_STONE, EquipmentSlot.LEGS,
+            new ArmorItem(ModArmorMaterial.REFINED_MOON_STONE, EquipmentSlot.LEGS,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
     public static final Item MOON_STONE_BOOTS = registerItem("moon_stone_boots",
-            new ModElderScaleArmorItem(ModArmorMaterial.REFINED_MOON_STONE, EquipmentSlot.FEET,
+            new ArmorItem(ModArmorMaterial.REFINED_MOON_STONE, EquipmentSlot.FEET,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item BLACKSTONE_METAL_HELMET = registerItem("blackstone_metal_helmet",
-            new ModElderScaleArmorItem(ModArmorMaterial.BLACKSTONE_METAL, EquipmentSlot.HEAD,
+            new ArmorItem(ModArmorMaterial.BLACKSTONE_METAL, EquipmentSlot.HEAD,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
     public static final Item BLACKSTONE_METAL_CHESTPLATE = registerItem("blackstone_metal_chestplate",
-            new ModElderScaleArmorItem(ModArmorMaterial.BLACKSTONE_METAL, EquipmentSlot.CHEST,
+            new ArmorItem(ModArmorMaterial.BLACKSTONE_METAL, EquipmentSlot.CHEST,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
     public static final Item BLACKSTONE_METAL_LEGGINGS = registerItem("blackstone_metal_leggings",
-            new ModElderScaleArmorItem(ModArmorMaterial.BLACKSTONE_METAL, EquipmentSlot.LEGS,
+            new ArmorItem(ModArmorMaterial.BLACKSTONE_METAL, EquipmentSlot.LEGS,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
     public static final Item BLACKSTONE_METAL_BOOTS = registerItem("blackstone_metal_boots",
-            new ModElderScaleArmorItem(ModArmorMaterial.BLACKSTONE_METAL, EquipmentSlot.FEET,
+            new ArmorItem(ModArmorMaterial.BLACKSTONE_METAL, EquipmentSlot.FEET,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item ELDER_GUARDIAN_SCALE_HELMET = registerItem("elder_guardian_scale_helmet",
             new ModElderScaleArmorItem(ModArmorMaterial.ELDER_GUARDIAN_SCALE, EquipmentSlot.HEAD,
                     new FabricItemSettings().rarity(Rarity.EPIC).group(ModItemGroup.MORE_WEAPONRY)));
     public static final Item ELDER_GUARDIAN_SCALE_CHESTPLATE = registerItem("elder_guardian_scale_chestplate",
-            new ModElderScaleArmorItem(ModArmorMaterial.ELDER_GUARDIAN_SCALE, EquipmentSlot.CHEST,
+            new ArmorItem(ModArmorMaterial.ELDER_GUARDIAN_SCALE, EquipmentSlot.CHEST,
                     new FabricItemSettings().rarity(Rarity.EPIC).group(ModItemGroup.MORE_WEAPONRY)));
     public static final Item ELDER_GUARDIAN_SCALE_LEGGINGS = registerItem("elder_guardian_scale_leggings",
             new ModElderScaleArmorItem(ModArmorMaterial.ELDER_GUARDIAN_SCALE, EquipmentSlot.LEGS,
