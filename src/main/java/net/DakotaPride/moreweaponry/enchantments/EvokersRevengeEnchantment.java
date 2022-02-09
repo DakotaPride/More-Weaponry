@@ -14,29 +14,37 @@ public class EvokersRevengeEnchantment extends Enchantment {
 
     @Override
     public void onTargetDamaged(LivingEntity user, Entity target, int level) {
-        if (!user.world.isClient()) {
+        if(!user.world.isClient()) {
             ServerWorld world = ((ServerWorld) user.world);
-            PlayerEntity player = ((PlayerEntity) user);
             BlockPos position = target.getBlockPos();
 
-            if (level == 1) {
-                EntityType.EVOKER_FANGS.spawn(world, null, null, player, position,
+            if(level == 1) {
+                EntityType.EVOKER_FANGS.spawn(world, null, null, null, position,
                         SpawnReason.TRIGGERED, true, true);
             }
-            if (level == 2) {
-                EntityType.EVOKER_FANGS.spawn(world, null, null, player, position,
+
+            if(level == 2) {
+                EntityType.EVOKER_FANGS.spawn(world, null, null, null, position,
                         SpawnReason.TRIGGERED, true, true);
 
+                EntityType.EVOKER_FANGS.spawn(world, null, null, null, position,
+                        SpawnReason.TRIGGERED, true, true);
             }
+
             if(level == 3) {
-                EntityType.EVOKER_FANGS.spawn(world, null, null, player, position,
+                EntityType.EVOKER_FANGS.spawn(world, null, null, null, position,
+                        SpawnReason.TRIGGERED, true, true);
+
+                EntityType.EVOKER_FANGS.spawn(world, null, null, null, position,
+                        SpawnReason.TRIGGERED, true, true);
+
+                EntityType.EVOKER_FANGS.spawn(world, null, null, null, position,
                         SpawnReason.TRIGGERED, true, true);
             }
 
-
-            super.onTargetDamaged(user, target, level);
         }
 
+        super.onTargetDamaged(user, target, level);
     }
 
     @Override

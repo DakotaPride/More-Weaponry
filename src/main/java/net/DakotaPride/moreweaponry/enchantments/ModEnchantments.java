@@ -2,11 +2,11 @@ package net.DakotaPride.moreweaponry.enchantments;
 
 import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.minecraft.enchantment.Enchantment;
-import net.minecraft.enchantment.EnchantmentLevelEntry;
 import net.minecraft.enchantment.EnchantmentTarget;
-import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
+
+import java.security.Guard;
 
 public class ModEnchantments {
 
@@ -18,11 +18,13 @@ public class ModEnchantments {
             new PowerOfTheWitherEnchantment(Enchantment.Rarity.RARE,
                     EnchantmentTarget.BOW));
 
-    private static Enchantment STRAY_BONAGE = Registry.register(
-            Registry.ENCHANTMENT,
-            new Identifier("moreweaponry", "stray_bonage"),
-            new StrayBonageEnchantment()
-    );
+    public static Enchantment STRAY_BONAGE = register("stray_bonage",
+            new StrayBonageEnchantment(Enchantment.Rarity.RARE,
+                    EnchantmentTarget.BOW));
+
+    public static Enchantment GUARDIANS_SMITE = register("guardians_smite",
+            new GuardiansSmiteEnchantment(Enchantment.Rarity.RARE,
+                    EnchantmentTarget.WEAPON));
 
     public static Enchantment AUTO_MENDING = register("auto_mending",
             new AutoMendingEnchantment(Enchantment.Rarity.UNCOMMON,

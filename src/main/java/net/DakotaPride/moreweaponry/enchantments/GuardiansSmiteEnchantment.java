@@ -9,8 +9,8 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 
 public class GuardiansSmiteEnchantment extends Enchantment {
-    public GuardiansSmiteEnchantment() {
-        super(Rarity.UNCOMMON, EnchantmentTarget.BOW, new EquipmentSlot[] {EquipmentSlot.MAINHAND});
+    public GuardiansSmiteEnchantment(Rarity weight, EnchantmentTarget type, EquipmentSlot... slotTypes) {
+        super(weight, type, slotTypes);
     }
 
     @Override
