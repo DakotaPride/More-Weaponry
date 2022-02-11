@@ -342,11 +342,11 @@ public class ModBlocks {
             ModItemGroup.MORE_WEAPONRY);
 
 
-    public static final Block NITRIS_WALL_SIGN_BLOCK = registerBlockWithoutBlockItem("nitris_wall_sign",
+    public static final Block NITRIS_WALL_SIGN = registerBlockWithoutBlockItem("nitris_wall_sign",
             new WallSignBlock(FabricBlockSettings.copy(Blocks.OAK_WALL_SIGN), ModSignTypes.NITRIS),
             ModItemGroup.MORE_WEAPONRY);
 
-    public static final Block NITRIS_SIGN_BLOCK = registerBlockWithoutBlockItem("nitris_sign",
+    public static final Block NITRIS_SIGN = registerBlockWithoutBlockItem("nitris_sign",
             new SignBlock(FabricBlockSettings.copy(Blocks.OAK_SIGN), ModSignTypes.NITRIS),
             ModItemGroup.MORE_WEAPONRY);
 

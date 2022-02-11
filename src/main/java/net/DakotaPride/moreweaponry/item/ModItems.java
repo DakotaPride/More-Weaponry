@@ -421,7 +421,7 @@ public class ModItems {
 
     public static final Item NITRIS_SIGN = registerItem("nitris_sign",
             new SignItem(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY).maxCount(16),
-                    ModBlocks.NITRIS_SIGN_BLOCK, ModBlocks.NITRIS_WALL_SIGN_BLOCK));
+                    ModBlocks.NITRIS_SIGN, ModBlocks.NITRIS_WALL_SIGN));
 
     public static final Item DRAGON_SCALE = registerItem("dragon_scale",
             new Item(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
