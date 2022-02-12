@@ -23,7 +23,7 @@ public abstract class TitleScreenMixin extends Screen {
     @Inject(at = @At("RETURN"), method = "initWidgetsNormal")
         private void customButtonMod(int y, int spacingY, CallbackInfo ci) {
         this.addDrawableChild(new ButtonWidget(this.width /
-                2 + 104, y, 20, 20, new LiteralText("MW"), (button) -> {
+                2 + 104, y, 20, 20, new LiteralText("MF"), (button) -> {
             this.client.setScreen(new SelectWorldScreen(this));
         }));
     }
