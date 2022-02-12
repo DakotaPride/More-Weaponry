@@ -1,6 +1,7 @@
 package net.DakotaPride.moreweaponry;
 
 import net.DakotaPride.moreweaponry.block.ModBlocks;
+import net.DakotaPride.moreweaponry.painting.ModPaintings;
 import net.DakotaPride.moreweaponry.util.ModModelPredicateProvider;
 import net.DakotaPride.moreweaponry.util.ModRendererHelper;
 import net.fabricmc.api.ClientModInitializer;
@@ -19,7 +20,7 @@ public class MoreClientWeaponry implements ClientModInitializer {
 
         ModModelPredicateProvider.registerModModels();
 
-
+        ModPaintings.registerPaintings();
 
 
     }

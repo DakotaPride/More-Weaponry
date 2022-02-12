@@ -6,7 +6,9 @@
   "mixins": [
     "SignTypeAccessor",
     "BlockEntityTypeMixin",
-    "MixinStructurePiece"
+    "MixinStructurePiece",
+    "SignTypeAccessor",
+    "TitleScreenMixin"
   ],
   "client": [
     "MoreWeaponryMixin",
