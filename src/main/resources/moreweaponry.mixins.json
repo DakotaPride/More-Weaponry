@@ -7,8 +7,7 @@
     "SignTypeAccessor",
     "BlockEntityTypeMixin",
     "MixinStructurePiece",
-    "SignTypeAccessor",
-    "TitleScreenMixin"
+    "SignTypeAccessor"
   ],
   "client": [
     "MoreWeaponryMixin",

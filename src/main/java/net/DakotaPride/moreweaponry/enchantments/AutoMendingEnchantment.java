@@ -19,77 +19,77 @@ public class AutoMendingEnchantment extends Enchantment {
             BlockPos position = target.getBlockPos();
 
             if(level == 1) {
-                EntityType.EXPERIENCE_ORB.spawn(world, null, null, null, position,
+                EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
                         SpawnReason.TRIGGERED, true, true);
             }
 
             if(level == 2) {
-                EntityType.EXPERIENCE_ORB.spawn(world, null, null, null, position,
+                EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
                         SpawnReason.TRIGGERED, true, true);
 
-                EntityType.EXPERIENCE_ORB.spawn(world, null, null, null, position,
+                EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
                         SpawnReason.TRIGGERED, true, true);
             }
 
             if(level == 3) {
-                EntityType.EXPERIENCE_ORB.spawn(world, null, null, null, position,
+                EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
                         SpawnReason.TRIGGERED, true, true);
 
-                EntityType.EXPERIENCE_ORB.spawn(world, null, null, null, position,
+                EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
                         SpawnReason.TRIGGERED, true, true);
 
-                EntityType.EXPERIENCE_ORB.spawn(world, null, null, null, position,
+                EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
                         SpawnReason.TRIGGERED, true, true);
             }
 
             if(level == 4) {
-                EntityType.EXPERIENCE_ORB.spawn(world, null, null, null, position,
+                EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
                         SpawnReason.TRIGGERED, true, true);
 
-                EntityType.EXPERIENCE_ORB.spawn(world, null, null, null, position,
+                EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
                         SpawnReason.TRIGGERED, true, true);
 
-                EntityType.EXPERIENCE_ORB.spawn(world, null, null, null, position,
+                EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
                         SpawnReason.TRIGGERED, true, true);
 
-                EntityType.EXPERIENCE_ORB.spawn(world, null, null, null, position,
+                EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
                         SpawnReason.TRIGGERED, true, true);
             }
 
             if(level == 5) {
-                EntityType.EXPERIENCE_ORB.spawn(world, null, null, null, position,
+                EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
                         SpawnReason.TRIGGERED, true, true);
 
-                EntityType.EXPERIENCE_ORB.spawn(world, null, null, null, position,
+                EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
                         SpawnReason.TRIGGERED, true, true);
 
-                EntityType.EXPERIENCE_ORB.spawn(world, null, null, null, position,
+                EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
                         SpawnReason.TRIGGERED, true, true);
 
-                EntityType.EXPERIENCE_ORB.spawn(world, null, null, null, position,
+                EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
                         SpawnReason.TRIGGERED, true, true);
 
-                EntityType.EXPERIENCE_ORB.spawn(world, null, null, null, position,
+                EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
                         SpawnReason.TRIGGERED, true, true);
             }
 
             if(level == 6) {
-                EntityType.EXPERIENCE_ORB.spawn(world, null, null, null, position,
+                EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
                         SpawnReason.TRIGGERED, true, true);
 
-                EntityType.EXPERIENCE_ORB.spawn(world, null, null, null, position,
+                EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
                         SpawnReason.TRIGGERED, true, true);
 
-                EntityType.EXPERIENCE_ORB.spawn(world, null, null, null, position,
+                EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
                         SpawnReason.TRIGGERED, true, true);
 
-                EntityType.EXPERIENCE_ORB.spawn(world, null, null, null, position,
+                EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
                         SpawnReason.TRIGGERED, true, true);
 
-                EntityType.EXPERIENCE_ORB.spawn(world, null, null, null, position,
+                EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
                         SpawnReason.TRIGGERED, true, true);
 
-                EntityType.EXPERIENCE_ORB.spawn(world, null, null, null, position,
+                EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
                         SpawnReason.TRIGGERED, true, true);
             }
         }
@@ -100,6 +100,6 @@ public class AutoMendingEnchantment extends Enchantment {
 
     @Override
     public int getMaxLevel() {
-        return 5;
+        return 6;
     }
 }
