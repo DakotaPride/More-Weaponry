@@ -24,7 +24,7 @@ public abstract class TitleScreenMixin extends Screen {
     @Inject(at = @At("RETURN"), method = "initWidgetsNormal")
         private void customButtonMod(int y, int spacingY, CallbackInfo ci) {
         this.addDrawableChild(new ButtonWidget(this.width /
-                2 + 407, y + -180 + 12, 70, 20, new LiteralText("Midas Foods"), (button) -> {
+                2 + 407, y + -190 + 12, 70, 20, new LiteralText("Midas Foods"), (button) -> {
             Util.getOperatingSystem().open("https://github.com/DakotaPride/Midas-Foods-1.18");;
         }));
     }
