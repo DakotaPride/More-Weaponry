@@ -568,19 +568,23 @@ public class ModItems {
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item ESSENCE_CIRTICT_SWORD = registerItem("essence_cirtict_sword",
-            new CooledCirtictSword((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 21, -1.3f,
+            new SwordItem((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 21, -1.3f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item ESSENCE_CIRTICT_SHOVEL = registerItem("essence_cirtict_shovel",
-            new CooledCirtictShovel((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 8, -1.6f,
+            new ShovelItem((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 8, -1.6f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item ESSENCE_CIRTICT_KNIFE = registerItem("essence_cirtict_knife",
-            new CooledCirtictKnife((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 14, 0.8f,
+            new ModKnifeItem((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 14, 0.8f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item ESSENCE_CIRTICT_HOE = registerItem("essence_cirtict_hoe",
-            new CooledCirtictHoe((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 4, 0.4f,
+            new ModHoeItem((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 4, 0.4f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item ESSENCE_CIRTICT_BATTLEAXE = registerItem("essence_cirtict_battleaxe",
+            new ModBattleaxeItem((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 25, -2.6f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
 
