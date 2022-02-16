@@ -5,6 +5,7 @@ import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.DakotaPride.moreweaponry.block.ModBlocks;
 import net.DakotaPride.moreweaponry.item.custom.*;
 import net.DakotaPride.moreweaponry.item.custom.cirtict.cooled.*;
+import net.DakotaPride.moreweaponry.item.custom.cirtict.essence.*;
 import net.DakotaPride.moreweaponry.item.custom.cirtict.heated.*;
 import net.DakotaPride.moreweaponry.item.custom.cores.ChargedMobCoreItem;
 import net.DakotaPride.moreweaponry.item.custom.cores.CoreForgeActivatorItem;
@@ -560,31 +561,31 @@ public class ModItems {
             new ChargedMobCoreItem(new FabricItemSettings().maxCount(1).group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item ESSENCE_CIRTICT_AXE = registerItem("essence_cirtict_axe",
-            new ModAxeItem((ToolMaterial) ModToolMaterial.CIRTICT, 25, -2.0f,
+            new EssenceCirtictAxe((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 25, -2.0f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item ESSENCE_CIRTICT_PICKAXE = registerItem("essence_cirtict_pickaxe",
-            new ModPickaxeItem((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 7, -1.8f,
+            new EssenceCirtictPickaxe((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 7, -1.8f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item ESSENCE_CIRTICT_SWORD = registerItem("essence_cirtict_sword",
-            new SwordItem((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 21, -1.3f,
+            new EssenceCirtictSword((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 21, -1.3f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item ESSENCE_CIRTICT_SHOVEL = registerItem("essence_cirtict_shovel",
-            new ShovelItem((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 8, -1.6f,
+            new EssenceCirtictShovel((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 8, -1.6f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item ESSENCE_CIRTICT_KNIFE = registerItem("essence_cirtict_knife",
-            new ModKnifeItem((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 14, 0.8f,
+            new EssenceCirtictKnife((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 14, 0.8f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item ESSENCE_CIRTICT_HOE = registerItem("essence_cirtict_hoe",
-            new ModHoeItem((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 4, 0.4f,
+            new EssenceCirtictHoe((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 4, 0.4f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item ESSENCE_CIRTICT_BATTLEAXE = registerItem("essence_cirtict_battleaxe",
-            new ModBattleaxeItem((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 25, -2.6f,
+            new EssenceCirtictBattleaxe((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 25, -2.6f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
 
