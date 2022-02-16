@@ -192,10 +192,6 @@
   "block.moreweaponry.cobbled_limestone_wall": "Cobbled Limestone Wall",
 
 
-  "item.moreweaponry.phantom_scale_helm.tooltip": "Gives You The Powers Of The Phantom",
-  "item.moreweaponry.phantom_scale_helm_two.tooltip": "Grants Slow Falling While Equipped",
-
-
   "block.moreweaponry.crop_cutter_block": "Crop Cutter",
 
   "block.moreweaponry.mare_diamond_ore": "Mare Diamond Ore",
@@ -208,7 +204,6 @@
 
   "item.moreweaponry.bluestone_rock": "Bluestone Rock",
   "item.moreweaponry.bluestone_ignitor": "Bluestone Ignitor",
-  "item.moreweaponry.bluestone_ignitor.tooltip": "Use To Ignite The Cold Dark Portal",
   "block.moreweaponry.cirtict_debris": "Cirtict Debris",
   "item.moreweaponry.cirtict_scrap": "Cirtict Scrap",
   "block.moreweaponry.bluestone_wall": "Bluestone Wall",
@@ -226,7 +221,6 @@
   "item.moreweaponry.cooled_cirtict_battleaxe": "Cirtict Battleaxe",
   "item.moreweaponry.dragon_scale": "Dragon Scale",
   "item.moreweaponry.shulker_shell_boots": "Shulker Shell Boots",
-  "item.moreweaponry.shulker_shell_boots.tooltip": "Equip To Levitate Infinitely",
   "item.moreweaponry.withering_handle": "Withering Handle",
   "item.moreweaponry.wither_broad_hammer_head": "Wither Broad Hammer Head",
   "item.moreweaponry.endicate_staff": "Endicate Staff",
@@ -278,16 +272,18 @@
 
 
   "item.moreweaponry.wretched_core": "Mob Core (NOT COMPLETE)",
-  "item.moreweaponry.wretched_core.tooltip": "Wretched",
   "item.moreweaponry.wretched_essence": "Wretched Essence",
   "item.moreweaponry.mob_core": "Mob Core (NOT COMPLETE)",
-  "item.moreweaponry.core_forge_activator_item.tooltip": "Empty",
   "block.moreweaponry.essence_translator": "Essence Translator (NOT COMPLETE)",
   "block.moreweaponry.core_forge": "Mob Core Forge (NOT COMPLETE)",
   "item.moreweaponry.charged_mob_core": "Mob Core (NOT COMPLETE)",
-  "item.moreweaponry.charged_core_item.tooltip": "Charged",
   "item.moreweaponry.essence_cirtict_axe": "Essence Cirtict Axe",
-  "block.moreweaponry.peplex_nylium": "Peplex Nylium (NOT COMPLETE)",
-  "block.moreweaponry.wicked_spawn_block": "Wicked Spawn Block (NOT COMPLETE)"
+  "block.moreweaponry.peplex_nylium": "Peplex Nylium",
+  "block.moreweaponry.wicked_spawn_block": "Wicked Spawn Block (NOT COMPLETE)",
 
+  "item.moreweaponry.powered_wretched_mob_core": "Powered Mob Core (NOT COMPLETE)",
+  "item.moreweaponry.powered_plagued_mob_core": "Powered Mob Core (NOT COMPLETE)",
+  "item.moreweaponry.powered_maiden_mob_core": "Powered Mob Core (NOT COMPLETE)",
+  "item.moreweaponry.powered_suppressed_mob_core": "Powered Mob Core (NOT COMPLETE)",
+  "item.moreweaponry.powered_wicked_mob_core": "Powered Mob Core (NOT COMPLETE)"
 }

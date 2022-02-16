@@ -10,6 +10,7 @@ import net.minecraft.item.ItemUsageContext;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.ActionResult;
@@ -57,7 +58,7 @@ public class CoreForgeActivatorItem extends Item {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add( new TranslatableText("item.moreweaponry.core_forge_activator_item.tooltip").formatted(Formatting.GRAY));
+        tooltip.add( new LiteralText("Empty").formatted(Formatting.GRAY));
     }
 
     private void writeNbt(RegistryKey<World> registryKey, BlockPos blockPos, NbtCompound nbtCompound) {

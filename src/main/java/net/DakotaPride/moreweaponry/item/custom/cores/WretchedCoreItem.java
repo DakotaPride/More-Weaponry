@@ -12,6 +12,7 @@ import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.ActionResult;
@@ -59,7 +60,7 @@ public class WretchedCoreItem extends Item {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add( new TranslatableText("item.moreweaponry.wretched_core.tooltip").formatted(Formatting.DARK_RED));
+        tooltip.add( new LiteralText("Wretched").formatted(Formatting.DARK_RED));
     }
 
     private void writeNbt(RegistryKey<World> registryKey, BlockPos blockPos, NbtCompound nbtCompound) {

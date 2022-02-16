@@ -14,6 +14,7 @@ import net.DakotaPride.moreweaponry.item.custom.elder_scale_items.*;
 import net.DakotaPride.moreweaponry.item.custom.mod_tools.BluestoneIgnitor;
 import net.DakotaPride.moreweaponry.item.custom.mod_tools.ModBattleaxeItem;
 import net.DakotaPride.moreweaponry.item.custom.mod_tools.ModKnifeItem;
+import net.DakotaPride.moreweaponry.item.custom.powered_cores.*;
 import net.DakotaPride.moreweaponry.item.custom.vanilla_tools.ModHoeItem;
 import net.DakotaPride.moreweaponry.item.custom.vanilla_tools.ModPickaxeItem;
 import net.DakotaPride.moreweaponry.sound.ModSounds;
@@ -587,6 +588,17 @@ public class ModItems {
     public static final Item ESSENCE_CIRTICT_BATTLEAXE = registerItem("essence_cirtict_battleaxe",
             new EssenceCirtictBattleaxe((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 25, -2.6f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item POWERED_WRETCHED_MOB_CORE = registerItem("powered_wretched_mob_core",
+            new PoweredWretchedItem(new FabricItemSettings().maxCount(1).group(ModItemGroup.MORE_WEAPONRY)));
+    public static final Item POWERED_WICKED_MOB_CORE = registerItem("powered_wicked_mob_core",
+            new PoweredWickedItem(new FabricItemSettings().maxCount(1).group(ModItemGroup.MORE_WEAPONRY)));
+    public static final Item POWERED_MAIDEN_MOB_CORE = registerItem("powered_maiden_mob_core",
+            new PoweredMaidenItem(new FabricItemSettings().maxCount(1).group(ModItemGroup.MORE_WEAPONRY)));
+    public static final Item POWERED_PLAGUED_MOB_CORE = registerItem("powered_plagued_mob_core",
+            new PoweredPlaguedItem(new FabricItemSettings().maxCount(1).group(ModItemGroup.MORE_WEAPONRY)));
+    public static final Item POWERED_SUPPRESSED_MOB_CORE = registerItem("powered_suppressed_mob_core",
+            new PoweredSuppressedItem(new FabricItemSettings().maxCount(1).group(ModItemGroup.MORE_WEAPONRY)));
 
 
     private static Item registerItem (String name, Item item) {

@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "moreweaponry:item/powered_wicked_mob_core"
+  }
+}
