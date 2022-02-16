@@ -12,6 +12,8 @@ public class MoreWeaponryMiningLevels {
 
     public static final int ELDER_GUARDIAN_SCALE = 5;
 
+    public static final int ESSENCE = 8;
+
     private MoreWeaponryMiningLevels() {
     }
 
