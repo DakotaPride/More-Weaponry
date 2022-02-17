@@ -11,7 +11,7 @@ NBT Crafting By Siphaler
 https://www.curseforge.com/minecraft/mc-mods/nbt-crafting
 https://github.com/Siphalor/nbt-crafting
 
-Plague Update Mob Concepts by @block_snake on Twitter
+Plague Update Mob Concepts by @block_snake on Twitter (As of pre 1.14.00+1.18 version and up of More Weaponry)
 https://twitter.com/block_snake/status/1468346040558497792/photo/1
 https://twitter.com/block_snake
 
