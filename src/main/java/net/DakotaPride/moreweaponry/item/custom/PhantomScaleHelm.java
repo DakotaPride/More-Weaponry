@@ -4,6 +4,7 @@ import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
+import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
@@ -19,8 +20,8 @@ public class PhantomScaleHelm extends ModPhantomScaleArmorItem{
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add( new TranslatableText("item.moreweaponry.phantom_scale_helm.tooltip").formatted(Formatting.AQUA));
-        tooltip.add( new TranslatableText("item.moreweaponry.phantom_scale_helm_two.tooltip").formatted(Formatting.DARK_GRAY));
+        tooltip.add( new LiteralText("Obtain the Powers of the Phantom").formatted(Formatting.AQUA));
+        tooltip.add( new LiteralText("Grants Slow Falling and Night Vision Upon Equipping").formatted(Formatting.DARK_GRAY));
     }
 
 }
