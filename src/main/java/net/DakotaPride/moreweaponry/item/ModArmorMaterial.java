@@ -30,7 +30,7 @@ public enum ModArmorMaterial implements ArmorMaterial
     PHANTOM_SCALE("phantom_scale", 45,
             new int[]{10, 14, 12, 11}, 17, SoundEvents.ENTITY_PHANTOM_BITE,
             5.0f, 0.7f, () -> Ingredient.ofItems(ModItems.PHANTOM_SCALE)),
-    DRAGON_SCALE("dragon_scale", 53,
+    ENDER("ender", 53,
             new int[]{12, 16, 14, 13}, 18, SoundEvents.ENTITY_ENDER_DRAGON_FLAP,
             6.0f, 0.8f, () -> Ingredient.ofItems(ModItems.DRAGON_SCALE)),
     SHULKER_SHELL("shulker_shell", 49,
