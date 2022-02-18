@@ -3,10 +3,10 @@
   "group": "wooden_button",
   "ingredients": [
     {
-      "item": "moreweaponry:nitris_planks"
+      "item": "moreweaponry:frodon_planks"
     }
   ],
   "result": {
-    "item": "moreweaponry:nitris_button"
+    "item": "moreweaponry:frodon_button"
   }
 }

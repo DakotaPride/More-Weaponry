@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "moreweaponry:stripped_nitris_log"
+      "tag": "moreweaponry:frodon_logs"
     }
   ],
   "result": {
-    "item": "moreweaponry:nitris_planks",
+    "item": "moreweaponry:frodon_planks",
     "count": 4
   }
 }

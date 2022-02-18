@@ -1,16 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "###",
+    "   ",
+    "   ",
     "###"
   ],
   "key": {
     "#": {
-      "item": "moreweaponry:nitris_planks"
+      "item": "moreweaponry:frodon_planks"
     }
   },
   "result": {
-    "item": "moreweaponry:nitris_trapdoor",
-    "count": 2
+    "item": "moreweaponry:frodon_slab",
+    "count": 6
   }
 }

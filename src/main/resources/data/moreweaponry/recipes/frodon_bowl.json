@@ -7,14 +7,14 @@
   ],
   "key": {
     "#": {
-      "item": "moreweaponry:nitris_planks"
+      "item": "moreweaponry:frodon_planks"
     },
     "B": {
       "item": "minecraft:bowl"
     }
   },
   "result": {
-    "item": "moreweaponry:nitris_bowl",
+    "item": "moreweaponry:frodon_bowl",
     "count": 4
   }
 }

@@ -1,17 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "##",
-    "##",
     "##"
   ],
   "key": {
     "#": {
-      "item": "moreweaponry:nitris_planks"
+      "item": "moreweaponry:frodon_planks"
     }
   },
   "result": {
-    "item": "moreweaponry:nitris_door",
-    "count": 3
+    "item": "moreweaponry:frodon_pressure_plate",
+    "count": 1
   }
 }

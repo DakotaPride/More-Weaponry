@@ -8,14 +8,14 @@
   ],
   "key": {
     "#": {
-      "item": "moreweaponry:nitris_planks"
+      "item": "moreweaponry:frodon_planks"
     },
     "X": {
       "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "moreweaponry:nitris_sign",
+    "item": "moreweaponry:frodon_sign",
     "count": 3
   }
 }

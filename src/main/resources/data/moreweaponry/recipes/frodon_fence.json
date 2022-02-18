@@ -7,14 +7,14 @@
   ],
   "key": {
     "W": {
-      "item": "moreweaponry:nitris_planks"
+      "item": "moreweaponry:frodon_planks"
     },
     "#": {
       "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "moreweaponry:nitris_fence",
+    "item": "moreweaponry:frodon_fence",
     "count": 3
   }
 }

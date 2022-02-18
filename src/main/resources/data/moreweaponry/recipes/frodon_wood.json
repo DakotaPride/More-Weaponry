@@ -6,11 +6,11 @@
   ],
   "key": {
     "#": {
-      "item": "moreweaponry:nitris_log"
+      "item": "moreweaponry:frodon_log"
     }
   },
   "result": {
-    "item": "moreweaponry:nitris_wood",
+    "item": "moreweaponry:frodon_wood",
     "count": 3
   }
 }

@@ -10,10 +10,10 @@
       "item": "minecraft:stick"
     },
     "W": {
-      "item": "moreweaponry:nitris_planks"
+      "item": "moreweaponry:frodon_planks"
     }
   },
   "result": {
-    "item": "moreweaponry:nitris_fence_gate"
+    "item": "moreweaponry:frodon_fence_gate"
   }
 }
