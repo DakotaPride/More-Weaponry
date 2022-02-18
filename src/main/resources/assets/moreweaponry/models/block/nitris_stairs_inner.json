@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "moreweaponry:block/nitris_planks",
-    "top": "moreweaponry:block/nitris_planks",
-    "side": "moreweaponry:block/nitris_planks"
-  }
-}

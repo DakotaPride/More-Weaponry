@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "moreweaponry:block/frodon_sapling"
+  }
+}

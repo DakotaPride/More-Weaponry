@@ -5,7 +5,7 @@ import net.DakotaPride.moreweaponry.block.custom.*;
 import net.DakotaPride.moreweaponry.item.ModItemGroup;
 import net.DakotaPride.moreweaponry.item.custom.KuroPlantBlock;
 import net.DakotaPride.moreweaponry.world.features.ModConfiguredFeatures;
-import net.DakotaPride.moreweaponry.world.features.tree.NitrisSaplingGenerator;
+import net.DakotaPride.moreweaponry.world.features.tree.FrodonSaplingGenerator;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
@@ -49,36 +49,36 @@ public class ModBlocks {
                     .sounds(BlockSoundGroup.STONE)
                     .requiresTool()), ModItemGroup.MORE_WEAPONRY);
 
-    public static final Block NITRIS_LOG = registerBlock("nitris_log",
+    public static final Block FRODON_LOG = registerBlock("frodon_log",
             new PillarBlock(FabricBlockSettings.of(Material.WOOD).strength(2f)
                     .sounds(BlockSoundGroup.WOOD)
                     ), ModItemGroup.MORE_WEAPONRY);
 
-    public static final Block NITRIS_WOOD = registerBlock("nitris_wood",
+    public static final Block FRODON_WOOD = registerBlock("frodon_wood",
             new PillarBlock(FabricBlockSettings.of(Material.WOOD).strength(2f)
                     .sounds(BlockSoundGroup.WOOD)
                     ), ModItemGroup.MORE_WEAPONRY);
 
-    public static final Block NITRIS_PLANKS = registerBlock("nitris_planks",
+    public static final Block FRODON_PLANKS = registerBlock("frodon_planks",
             new Block(FabricBlockSettings.of(Material.WOOD).strength(2f)
                     .sounds(BlockSoundGroup.WOOD)
                     ), ModItemGroup.MORE_WEAPONRY);
 
-    public static final Block STRIPPED_NITRIS_LOG = registerBlock("stripped_nitris_log",
+    public static final Block STRIPPED_FRODON_LOG = registerBlock("stripped_frodon_log",
             new PillarBlock(FabricBlockSettings.of(Material.WOOD).strength(2f)
                     .sounds(BlockSoundGroup.WOOD)
                     ), ModItemGroup.MORE_WEAPONRY);
 
-    public static final Block STRIPPED_NITRIS_WOOD = registerBlock("stripped_nitris_wood",
+    public static final Block STRIPPED_FRODON_WOOD = registerBlock("stripped_frodon_wood",
             new PillarBlock(FabricBlockSettings.of(Material.WOOD).strength(2f)
                     .sounds(BlockSoundGroup.WOOD)
             ), ModItemGroup.MORE_WEAPONRY);
 
-    public static final Block NITRIS_LEAVES = registerBlock("nitris_leaves",
+    public static final Block FRODON_LEAVES = registerBlock("frodon_leaves",
             new LeavesBlock(FabricBlockSettings.copy(Blocks.OAK_LEAVES)), ModItemGroup.MORE_WEAPONRY);
 
-    public static final Block NITRIS_SAPLING = registerBlock("nitris_sapling",
-            new ModSaplingBlock(new NitrisSaplingGenerator(ModConfiguredFeatures.NITRIS_TREE),
+    public static final Block FRODON_SAPLING = registerBlock("frodon_sapling",
+            new FrodonSaplingBlock(new FrodonSaplingGenerator(ModConfiguredFeatures.FRODON_TREE),
                     FabricBlockSettings.copy(Blocks.OAK_SAPLING)), ModItemGroup.MORE_WEAPONRY);
 
     public static final Block NIGHT_CURON = registerBlock("night_curon",
@@ -86,13 +86,13 @@ public class ModBlocks {
                     FabricBlockSettings.copy(Blocks.DANDELION).nonOpaque().noCollision()),
                     ModItemGroup.MORE_WEAPONRY);
 
-    public static final Block NITRIS_SLAB = registerBlock("nitris_slab",
+    public static final Block FRODON_SLAB = registerBlock("frodon_slab",
             new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(2f)
                     .sounds(BlockSoundGroup.WOOD)
             ), ModItemGroup.MORE_WEAPONRY);
 
-    public static final Block NITRIS_STAIRS = registerBlock("nitris_stairs",
-            new ModStairsBlock(ModBlocks.NITRIS_PLANKS.getDefaultState(), FabricBlockSettings.of(Material.WOOD).strength(2f)
+    public static final Block FRODON_STAIRS = registerBlock("frodon_stairs",
+            new ModStairsBlock(ModBlocks.FRODON_PLANKS.getDefaultState(), FabricBlockSettings.of(Material.WOOD).strength(2f)
                     .sounds(BlockSoundGroup.WOOD)
             ), ModItemGroup.MORE_WEAPONRY);
 
@@ -121,12 +121,12 @@ public class ModBlocks {
                     .sounds(BlockSoundGroup.STONE)
             ), ModItemGroup.MORE_WEAPONRY);
 
-    public static final Block NITRIS_FENCE = registerBlock("nitris_fence",
+    public static final Block FRODON_FENCE = registerBlock("frodon_fence",
             new FenceBlock(FabricBlockSettings.of(Material.WOOD).strength(2f)
                     .sounds(BlockSoundGroup.WOOD)
             ), ModItemGroup.MORE_WEAPONRY);
 
-    public static final Block NITRIS_FENCE_GATE = registerBlock("nitris_fence_gate",
+    public static final Block FRODON_FENCE_GATE = registerBlock("frodon_fence_gate",
             new FenceGateBlock(FabricBlockSettings.of(Material.WOOD).strength(2f)
                     .sounds(BlockSoundGroup.WOOD)
             ), ModItemGroup.MORE_WEAPONRY);
@@ -143,7 +143,7 @@ public class ModBlocks {
                     .requiresTool()
             ), ModItemGroup.MORE_WEAPONRY);
 
-    public static final Block NITRIS_BUTTON = registerBlock("nitris_button",
+    public static final Block FRODON_BUTTON = registerBlock("frodon_button",
             new ModWoodenButtonBlock(FabricBlockSettings.of(Material.WOOD).strength(2f)
                     .sounds(BlockSoundGroup.WOOD)
             ), ModItemGroup.MORE_WEAPONRY);
@@ -166,7 +166,7 @@ public class ModBlocks {
                     .requiresTool()
             ), ModItemGroup.MORE_WEAPONRY);
 
-    public static final Block NITRIS_PRESSURE_PLATE = registerBlock("nitris_pressure_plate",
+    public static final Block FRODON_PRESSURE_PLATE = registerBlock("frodon_pressure_plate",
             new ModPressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING,
                     FabricBlockSettings.of(Material.WOOD).strength(2f)
                     .sounds(BlockSoundGroup.WOOD)
@@ -193,13 +193,13 @@ public class ModBlocks {
                     .requiresTool()
             ), ModItemGroup.MORE_WEAPONRY);
 
-    public static final Block NITRIS_DOOR = registerBlock("nitris_door",
+    public static final Block FRODON_DOOR = registerBlock("frodon_door",
             new ModDoorBlock(FabricBlockSettings.of(Material.WOOD).strength(2f)
                             .sounds(BlockSoundGroup.WOOD)
                     .nonOpaque()
                         ), ModItemGroup.MORE_WEAPONRY);
 
-    public static final Block NITRIS_TRAPDOOR = registerBlock("nitris_trapdoor",
+    public static final Block FRODON_TRAPDOOR = registerBlock("frodon_trapdoor",
             new ModTrapdoorBlock(FabricBlockSettings.of(Material.WOOD).strength(2f)
                     .sounds(BlockSoundGroup.WOOD)
                     .nonOpaque()
@@ -342,12 +342,12 @@ public class ModBlocks {
             ModItemGroup.MORE_WEAPONRY);
 
 
-    public static final Block NITRIS_WALL_SIGN = registerBlockWithoutBlockItem("nitris_wall_sign",
-            new WallSignBlock(FabricBlockSettings.copy(Blocks.OAK_WALL_SIGN), ModSignTypes.NITRIS),
+    public static final Block FRODON_WALL_SIGN = registerBlockWithoutBlockItem("frodon_wall_sign",
+            new WallSignBlock(FabricBlockSettings.copy(Blocks.OAK_WALL_SIGN), ModSignTypes.FRODON),
             ModItemGroup.MORE_WEAPONRY);
 
-    public static final Block NITRIS_SIGN = registerBlockWithoutBlockItem("nitris_sign",
-            new SignBlock(FabricBlockSettings.copy(Blocks.OAK_SIGN), ModSignTypes.NITRIS),
+    public static final Block FRODON_SIGN = registerBlockWithoutBlockItem("frodon_sign",
+            new SignBlock(FabricBlockSettings.copy(Blocks.OAK_SIGN), ModSignTypes.FRODON),
             ModItemGroup.MORE_WEAPONRY);
 
     public static Block registerBlockWithoutBlockItem(String name, Block block, ItemGroup group) {

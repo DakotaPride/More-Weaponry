@@ -18,7 +18,7 @@ import net.minecraft.world.gen.feature.VegetationPlacedFeatures;
 import java.util.List;
 
 public class ModPlacedFeatures {
-    public static final RegistryKey<PlacedFeature> NITRIS_TREE_KEY = registerKey("nitris_spawn");
+    public static final RegistryKey<PlacedFeature> FRODON_TREE_KEY = registerKey("frodon_spawn");
     public static final RegistryKey<PlacedFeature> NIGHT_CURON_KEY = registerKey("night_curon");
     public static final RegistryKey<PlacedFeature> LIMESTONE_KEY = registerKey("limestone");
     public static final RegistryKey<PlacedFeature> MARE_DIAMOND_ORE_KEY = registerKey("mare_diamond_ore");
@@ -33,8 +33,8 @@ public class ModPlacedFeatures {
 
 
 
-    public static final PlacedFeature NITRIS_PLACED = registerPlacedFeature("nitris_spawn",
-            ModConfiguredFeatures.NITRIS_TREE_RANDOM.withPlacement(VegetationPlacedFeatures.modifiers(
+    public static final PlacedFeature FRODON_PLACED = registerPlacedFeature("frodon_spawn",
+            ModConfiguredFeatures.FRODON_TREE_RANDOM.withPlacement(VegetationPlacedFeatures.modifiers(
                     PlacedFeatures.createCountExtraModifier(1, 0.1f, 2))));
 
     public static final PlacedFeature NIGHT_CURON_PLACED = registerPlacedFeature("night_curon",

@@ -74,7 +74,7 @@ public class ModItems {
                             .statusEffect(new StatusEffectInstance(StatusEffects.UNLUCK, 20*5), 1f)
                             .saturationModifier(1.0f).build()).group(ModItemGroup.MORE_WEAPONRY)));
 
-    public static final Item NITRIS_BOWL = registerItem("nitris_bowl",
+    public static final Item FRODON_BOWL = registerItem("frodon_bowl",
             new Item(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item CURON_FLOWER_PETALS = registerItem("curon_flower_petals",
@@ -421,9 +421,9 @@ public class ModItems {
             new ModMusicDiscItem(9, ModSounds.WARDENS_STEP,
                     new FabricItemSettings().maxCount(1).group(ModItemGroup.MORE_WEAPONRY)));
 
-    public static final Item NITRIS_SIGN = registerItem("nitris_sign",
+    public static final Item FRODON_SIGN = registerItem("frodon_sign",
             new SignItem(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY).maxCount(16),
-                    ModBlocks.NITRIS_SIGN, ModBlocks.NITRIS_WALL_SIGN));
+                    ModBlocks.FRODON_SIGN, ModBlocks.FRODON_WALL_SIGN));
 
     public static final Item DRAGON_SCALE = registerItem("dragon_scale",
             new Item(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));

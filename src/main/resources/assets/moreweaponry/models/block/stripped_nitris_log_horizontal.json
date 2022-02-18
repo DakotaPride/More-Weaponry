@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column_horizontal",
-  "textures": {
-    "end": "moreweaponry:block/stripped_nitris_log_top",
-    "side": "moreweaponry:block/stripped_nitris_log"
-  }
-}

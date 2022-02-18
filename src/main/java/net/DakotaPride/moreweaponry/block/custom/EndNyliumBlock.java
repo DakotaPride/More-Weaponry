@@ -7,6 +7,7 @@ import net.minecraft.block.NyliumBlock;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
+import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldView;
 import net.minecraft.world.chunk.light.ChunkLightProvider;
 import net.minecraft.world.gen.chunk.ChunkGenerator;
@@ -27,12 +28,12 @@ public class EndNyliumBlock extends NyliumBlock {
         return i < world.getMaxLightLevel();
     }
 
-
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         if (!EndNyliumBlock.stayAlive(state, world, pos)) {
             world.setBlockState(pos, Blocks.END_STONE.getDefaultState());
         }
     }
+
 
 }

@@ -19,15 +19,15 @@ public class ModRegistries {
         ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.KURO_SEEDS, 0.3f);
         ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.KURO, 0.3f);
         ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModBlocks.KURO_WHEAT_BLOCK.asItem(), 0.85f);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModBlocks.NITRIS_LEAVES.asItem(), 0.5f);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModBlocks.NITRIS_SAPLING.asItem(), 0.3f);
+        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModBlocks.FRODON_LEAVES.asItem(), 0.5f);
+        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModBlocks.FRODON_SAPLING.asItem(), 0.3f);
         ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModBlocks.NIGHT_CURON.asItem(), 0.65f);
         ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.CURON_FLOWER_PETALS, 0.45f);
     }
 
     public static void registerStrippables() {
-        StrippableBlockRegistry.register(ModBlocks.NITRIS_LOG, ModBlocks.STRIPPED_NITRIS_LOG);
-        StrippableBlockRegistry.register(ModBlocks.NITRIS_WOOD, ModBlocks.STRIPPED_NITRIS_WOOD);
+        StrippableBlockRegistry.register(ModBlocks.FRODON_LOG, ModBlocks.STRIPPED_FRODON_LOG);
+        StrippableBlockRegistry.register(ModBlocks.FRODON_WOOD, ModBlocks.STRIPPED_FRODON_WOOD);
     }
 
 }

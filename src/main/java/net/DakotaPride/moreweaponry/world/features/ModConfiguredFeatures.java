@@ -6,12 +6,14 @@ import net.minecraft.block.Blocks;
 import net.minecraft.structure.rule.BlockMatchRuleTest;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
+import net.minecraft.world.gen.foliage.SpruceFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 
@@ -20,18 +22,19 @@ import java.util.List;
 
 public class ModConfiguredFeatures {
 
-    public static final ConfiguredFeature<TreeFeatureConfig, ?> NITRIS_TREE = register("nitris",
+    public static final ConfiguredFeature<TreeFeatureConfig, ?> FRODON_TREE = register("frodon",
             Feature.TREE.configure(new TreeFeatureConfig.Builder(
-                    BlockStateProvider.of(ModBlocks.NITRIS_LOG),
-                    new StraightTrunkPlacer(5, 2, 4),
-                    BlockStateProvider.of(ModBlocks.NITRIS_LEAVES.getDefaultState()),
-                    new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 3),
-                    new TwoLayersFeatureSize(1, 0, 1)).build()));
+                    BlockStateProvider.of(ModBlocks.FRODON_LOG),
+                    new StraightTrunkPlacer(5, 2, 1),
+                    BlockStateProvider.of(ModBlocks.FRODON_LEAVES.getDefaultState()),
+                    new SpruceFoliagePlacer((UniformIntProvider.create(2, 3)),
+                            UniformIntProvider.create(0, 2), UniformIntProvider.create(1, 2)),
+                    new TwoLayersFeatureSize(2, 0, 2)).build()));
 
-    public static final ConfiguredFeature<RandomFeatureConfig, ?> NITRIS_TREE_RANDOM = register("nitris_feature",
+    public static final ConfiguredFeature<RandomFeatureConfig, ?> FRODON_TREE_RANDOM = register("frodon_feature",
             Feature.RANDOM_SELECTOR.configure(new RandomFeatureConfig(List.of(new RandomFeatureEntry(
-                    NITRIS_TREE.withWouldSurviveFilter(ModBlocks.NITRIS_SAPLING), 0.1f)),
-                    NITRIS_TREE.withWouldSurviveFilter(ModBlocks.NITRIS_SAPLING))));;
+                    FRODON_TREE.withWouldSurviveFilter(ModBlocks.FRODON_SAPLING), 0.1f)),
+                    FRODON_TREE.withWouldSurviveFilter(ModBlocks.FRODON_SAPLING))));
 
     public static final ConfiguredFeature<RandomPatchFeatureConfig, ?> NIGHT_CURON =
             ModConfiguredFeatures.register("night_curon_feature", Feature.FLOWER.configure(

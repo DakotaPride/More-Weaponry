@@ -1,19 +1,19 @@
 {
   "replace": false,
   "values": [
-    "moreweaponry:nitris_log",
-    "moreweaponry:nitris_planks",
-    "moreweaponry:nitris_wood",
-    "moreweaponry:nitris_fence",
-    "moreweaponry:nitris_door",
-    "moreweaponry:stripped_nitris_log",
-    "moreweaponry:stripped_nitris_wood",
-    "moreweaponry:nitris_slab",
-    "moreweaponry:nitris_stairs",
-    "moreweaponry:nitris_fence_gate",
-    "moreweaponry:nitris_button",
-    "moreweaponry:nitris_pressure_plate",
-    "moreweaponry:nitris_trapdoor",
+    "moreweaponry:frodon_log",
+    "moreweaponry:frodon_planks",
+    "moreweaponry:frodon_wood",
+    "moreweaponry:frodon_fence",
+    "moreweaponry:frodon_door",
+    "moreweaponry:stripped_frodon_log",
+    "moreweaponry:stripped_frodon_wood",
+    "moreweaponry:frodon_slab",
+    "moreweaponry:frodon_stairs",
+    "moreweaponry:frodon_fence_gate",
+    "moreweaponry:frodon_button",
+    "moreweaponry:frodon_pressure_plate",
+    "moreweaponry:frodon_trapdoor",
     "moreweaponry:crop_cutter_block"
   ]
 }

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "moreweaponry:block/frodon_slab"
+    },
+    "type=double": {
+      "model": "moreweaponry:block/frodon_planks"
+    },
+    "type=top": {
+      "model": "moreweaponry:block/frodon_slab_top"
+    }
+  }
+}

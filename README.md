@@ -38,3 +38,10 @@ have that ability as well.
 (ALL PLAGUE UPDATE MOB CONCEPTS BELONG TO @block_snake ON TWITTER)
 
 MORE INFORMATION WILL LIKELY BE ADDED LATER ON
+
+
+SIDENOTE: NITRIS WOOD AND TREES ARE CHANGING IN THE NEXT BUG FIX. SOME CHANGES ARE LISTED BELOW;
+
+- Nitris renamed to Frodon
+- Frodon Trees now generate in the End Dimension instead of the overworld
+- Textures for Frodon Wood and Planks adjusted to a light blue color

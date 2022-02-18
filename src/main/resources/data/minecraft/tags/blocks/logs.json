@@ -1,9 +1,9 @@
 {
   "replace": false,
   "values": [
-    "moreweaponry:nitris_log",
-    "moreweaponry:nitris_wood",
-    "moreweaponry:stripped_nitris_wood",
-    "moreweaponry:stripped_nitris_log"
+    "moreweaponry:frodon_log",
+    "moreweaponry:frodon_wood",
+    "moreweaponry:stripped_frodon_wood",
+    "moreweaponry:stripped_frodon_log"
   ]
 }

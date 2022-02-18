@@ -16,9 +16,12 @@ public class ModWorldGen {
         //        TOP_LAYER_MODIFICATION
 
         ModOreGeneration.generateOres();
+        ModRawGeneration.generateRawGeneration();
 
         ModTreeGeneration.generateTrees();
         ModFlowerGeneration.generateFlowers();
+
+        ModTopLayerModification.generateTopLayerModifications();
     }
 
 

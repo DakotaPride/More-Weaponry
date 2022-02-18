@@ -19,7 +19,7 @@ public class ModStewItem
         if (user instanceof PlayerEntity && ((PlayerEntity)user).getAbilities().creativeMode) {
             return itemStack;
         }
-        return new ItemStack(ModItems.NITRIS_BOWL);
+        return new ItemStack(ModItems.FRODON_BOWL);
     }
 }
 
