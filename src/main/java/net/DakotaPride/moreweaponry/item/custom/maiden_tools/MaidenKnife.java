@@ -1,5 +1,6 @@
 package net.DakotaPride.moreweaponry.item.custom.maiden_tools;
 
+import net.DakotaPride.moreweaponry.item.custom.mod_tools.ModKnifeItem;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -15,7 +16,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class MaidenKnife extends SwordItem {
+public class MaidenKnife extends ModKnifeItem {
     public MaidenKnife(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
         super(toolMaterial, attackDamage, attackSpeed, settings);
     }
