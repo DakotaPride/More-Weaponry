@@ -43,5 +43,5 @@ MORE INFORMATION WILL LIKELY BE ADDED LATER ON
 SIDENOTE: NITRIS WOOD AND TREES ARE CHANGING IN THE NEXT BUG FIX. SOME CHANGES ARE LISTED BELOW;
 
 - Nitris renamed to Frodon
-- Frodon Trees now generate in the End Dimension instead of the overworld
+- Frodon Trees now generate in biomes with the "ICY" tag
 - Textures for Frodon Wood and Planks adjusted to a light blue color
