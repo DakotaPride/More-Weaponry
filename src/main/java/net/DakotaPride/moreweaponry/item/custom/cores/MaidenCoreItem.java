@@ -31,11 +31,11 @@ public class MaidenCoreItem extends Item {
         BlockPos blockPos = context.getBlockPos();
         World world = context.getWorld();
         if (world.getBlockState(blockPos).isOf(ModBlocks.CORE_FORGE)) {
-            boolean bl;
+            boolean bl = false;
             world.playSound(null, blockPos, SoundEvents.PARTICLE_SOUL_ESCAPE, SoundCategory.PLAYERS, 1.0f, 1.0f);
             PlayerEntity playerEntity = context.getPlayer();
             ItemStack itemStack = context.getStack();
-            boolean bl2 = bl = !playerEntity.getAbilities().creativeMode && itemStack.getCount() == 1;
+
             if (bl) {
                 this.writeNbt(world.getRegistryKey(), blockPos, itemStack.getOrCreateNbt());
             } else {
