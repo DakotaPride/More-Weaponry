@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "#S#",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "moreweaponry:wretched_essence"
+    },
+    "S": {
+      "item": "moreweaponry:mob_core"
+    }
+  },
+  "result": {
+    "item": "moreweaponry:wretched_core",
+    "count": 1
+  }
+}

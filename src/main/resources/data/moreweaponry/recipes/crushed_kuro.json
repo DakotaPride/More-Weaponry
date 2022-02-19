@@ -127,8 +127,35 @@
             "Damage": "$ i0.Damage + 2"
           }
         }
+      },
+      {
+        "item": "moreweaponry:essence_cirtict_knife",
+        "remainder": {
+          "item": "moreweaponry:essence_cirtict_knife",
+          "data": {
+            "Damage": "$ i0.Damage + 2"
+          }
+        }
+      },
+      {
+        "item": "moreweaponry:watcher_essence_cirtict_knife",
+        "remainder": {
+          "item": "moreweaponry:watcher_essence_cirtict_knife",
+          "data": {
+            "Damage": "$ i0.Damage + 2"
+          }
+        }
+      },
+      {
+        "item": "moreweaponry:maiden_essence_cirtict_knife",
+        "remainder": {
+          "item": "moreweaponry:maiden_essence_cirtict_knife",
+          "data": {
+            "Damage": "$ i0.Damage + 2"
+          }
+        }
       }
-      ],
+    ],
     {
       "item": "moreweaponry:kuro"
     }

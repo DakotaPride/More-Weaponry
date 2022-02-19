@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "#S#",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "moreweaponry:leeching_essence"
+    },
+    "S": {
+      "item": "moreweaponry:mob_core"
+    }
+  },
+  "result": {
+    "item": "moreweaponry:plagued_core",
+    "count": 1
+  }
+}

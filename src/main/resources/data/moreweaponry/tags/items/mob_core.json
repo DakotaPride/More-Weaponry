@@ -1,6 +1,10 @@
 {
   "replace": false,
   "values": [
-    "moreweaponry:wretched_core"
+    "moreweaponry:wretched_core",
+    "moreweaponry:watcher_core",
+    "moreweaponry:maiden_core",
+    "moreweaponry:plagued_core",
+    "moreweaponry:suppressed_core"
   ]
 }

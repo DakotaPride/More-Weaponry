@@ -666,6 +666,9 @@ public class ModItems {
             new MaidenBattleaxe((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 25, -3.3f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
+    public static final Item LEECHING_ESSENCE = registerItem("leeching_essence",
+            new ModEssenceItem(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
 
     private static Item registerItem (String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(MoreWeaponry.MOD_ID, name), item);
