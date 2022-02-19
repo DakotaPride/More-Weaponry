@@ -9,7 +9,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.Random;
 
 public class FrodonSaplingGenerator extends SaplingGenerator {
-    public FrodonSaplingGenerator(ConfiguredFeature<TreeFeatureConfig, ?> nitrisTree) {
+    public FrodonSaplingGenerator(ConfiguredFeature<TreeFeatureConfig, ?> frodonTree) {
 
     }
 
