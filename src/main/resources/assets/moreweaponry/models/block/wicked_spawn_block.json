@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "moreweaponry:block/wicked_spawn_block"
-  }
-}
