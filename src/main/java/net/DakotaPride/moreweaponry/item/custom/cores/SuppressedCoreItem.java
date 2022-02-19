@@ -2,19 +2,16 @@ package net.DakotaPride.moreweaponry.item.custom.cores;
 
 import net.DakotaPride.moreweaponry.block.ModBlocks;
 import net.DakotaPride.moreweaponry.item.ModItems;
-import net.minecraft.block.Blocks;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
-import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.math.BlockPos;
@@ -24,8 +21,8 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class WretchedCoreItem extends Item {
-    public WretchedCoreItem(Settings settings) {
+public class SuppressedCoreItem extends Item {
+    public SuppressedCoreItem(Settings settings) {
         super(settings);
     }
 
@@ -42,7 +39,7 @@ public class WretchedCoreItem extends Item {
             if (bl) {
                 this.writeNbt(world.getRegistryKey(), blockPos, itemStack.getOrCreateNbt());
             } else {
-                ItemStack itemStack2 = new ItemStack(ModItems.POWERED_WRETCHED_MOB_CORE, 1);
+                ItemStack itemStack2 = new ItemStack(ModItems.POWERED_SUPPRESSED_MOB_CORE, 1);
                 NbtCompound nbtCompound = itemStack.hasNbt() ? itemStack.getNbt().copy() : new NbtCompound();
                 itemStack2.setNbt(nbtCompound);
                 if (!playerEntity.getAbilities().creativeMode) {
@@ -60,7 +57,7 @@ public class WretchedCoreItem extends Item {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add( new LiteralText("Wretched").formatted(Formatting.DARK_RED));
+        tooltip.add( new LiteralText("Suppressed").formatted(Formatting.GREEN));
     }
 
     private void writeNbt(RegistryKey<World> registryKey, BlockPos blockPos, NbtCompound nbtCompound) {

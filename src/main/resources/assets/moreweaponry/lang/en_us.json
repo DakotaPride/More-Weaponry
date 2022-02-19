@@ -272,6 +272,10 @@
 
 
   "item.moreweaponry.wretched_core": "Mob Core (NOT COMPLETE)",
+  "item.moreweaponry.watcher_core": "Mob Core (NOT COMPLETE)",
+  "item.moreweaponry.suppressed_core": "Mob Core (NOT COMPLETE)",
+  "item.moreweaponry.plagued_core": "Mob Core (NOT COMPLETE)",
+  "item.moreweaponry.maiden_core": "Mob Core (NOT COMPLETE)",
   "item.moreweaponry.wretched_essence": "Wretched Essence",
   "item.moreweaponry.mob_core": "Mob Core (NOT COMPLETE)",
   "block.moreweaponry.essence_translator": "Essence Translator (NOT COMPLETE)",
@@ -285,5 +289,21 @@
   "item.moreweaponry.powered_plagued_mob_core": "Powered Mob Core (NOT COMPLETE)",
   "item.moreweaponry.powered_maiden_mob_core": "Powered Mob Core (NOT COMPLETE)",
   "item.moreweaponry.powered_suppressed_mob_core": "Powered Mob Core (NOT COMPLETE)",
-  "item.moreweaponry.powered_wicked_mob_core": "Powered Mob Core (NOT COMPLETE)"
+  "item.moreweaponry.powered_watcher_mob_core": "Powered Mob Core (NOT COMPLETE)",
+
+  "item.moreweaponry.watcher_essence_cirtict_sword": "Essence Cirtict Sword",
+  "item.moreweaponry.watcher_essence_cirtict_axe": "Essence Cirtict Axe",
+  "item.moreweaponry.watcher_essence_cirtict_pickaxe": "Essence Cirtict Pickaxe",
+  "item.moreweaponry.watcher_essence_cirtict_hoe": "Essence Cirtict Hoe",
+  "item.moreweaponry.watcher_essence_cirtict_shovel": "Essence Cirtict Shovel",
+  "item.moreweaponry.watcher_essence_cirtict_knife": "Essence Cirtict Knife",
+  "item.moreweaponry.watcher_essence_cirtict_battleaxe": "Essence Cirtict Battleaxe",
+
+  "item.moreweaponry.maiden_essence_cirtict_sword": "Essence Cirtict Sword",
+  "item.moreweaponry.maiden_essence_cirtict_axe": "Essence Cirtict Axe",
+  "item.moreweaponry.maiden_essence_cirtict_pickaxe": "Essence Cirtict Pickaxe",
+  "item.moreweaponry.maiden_essence_cirtict_hoe": "Essence Cirtict Hoe",
+  "item.moreweaponry.maiden_essence_cirtict_shovel": "Essence Cirtict Shovel",
+  "item.moreweaponry.maiden_essence_cirtict_knife": "Essence Cirtict Knife",
+  "item.moreweaponry.maiden_essence_cirtict_battleaxe": "Essence Cirtict Battleaxe"
 }

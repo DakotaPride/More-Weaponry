@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "moreweaponry:item/watcher_essence_cirtict_battleaxe"
+  }
+}
