@@ -9,7 +9,7 @@ import net.minecraft.world.gen.GenerationStep;
 
     public class ModTreeGeneration {
         public static void generateTrees() {
-            BiomeModifications.addFeature(BiomeSelectors.categories(Biome.Category.valueOf("THEEND")),
+            BiomeModifications.addFeature(BiomeSelectors.categories(Biome.Category.valueOf("ICY")),
                     GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.FRODON_TREE_KEY);
         }
 
