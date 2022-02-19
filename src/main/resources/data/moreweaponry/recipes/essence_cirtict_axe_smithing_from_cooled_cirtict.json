@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "moreweaponry:cooled_cirtict_axe"
+  },
+  "addition": {
+    "tag": "moreweaponry:essence"
+  },
+  "result": {
+    "item": "moreweaponry:essence_cirtict_axe"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "moreweaponry:cirtict_hoe"
+  },
+  "addition": {
+    "tag": "moreweaponry:essence"
+  },
+  "result": {
+    "item": "moreweaponry:essence_cirtict_hoe"
+  }
+}

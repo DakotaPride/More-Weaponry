@@ -1,8 +1,10 @@
 package net.DakotaPride.moreweaponry.item.custom.powered_cores;
 
+import net.DakotaPride.moreweaponry.item.custom.cores.MaidenCoreItem;
 import net.DakotaPride.moreweaponry.item.custom.cores.WretchedCoreItem;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.ItemStack;
@@ -14,7 +16,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class PoweredMaidenItem extends WretchedCoreItem {
+public class PoweredMaidenItem extends MaidenCoreItem {
     public PoweredMaidenItem(Settings settings) {
         super(settings);
     }
@@ -32,4 +34,8 @@ public class PoweredMaidenItem extends WretchedCoreItem {
         tooltip.add( new LiteralText("Maiden's Call").formatted(Formatting.WHITE));
     }
 
+    @Override
+    public boolean damage(DamageSource source) {
+        return super.damage(source);
+    }
 }

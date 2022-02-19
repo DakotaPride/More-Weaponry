@@ -1,5 +1,6 @@
 package net.DakotaPride.moreweaponry.item.custom.powered_cores;
 
+import net.DakotaPride.moreweaponry.item.custom.cores.SuppressedCoreItem;
 import net.DakotaPride.moreweaponry.item.custom.cores.WretchedCoreItem;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.LivingEntity;
@@ -14,7 +15,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class PoweredSuppressedItem extends WretchedCoreItem {
+public class PoweredSuppressedItem extends SuppressedCoreItem {
     public PoweredSuppressedItem(Settings settings) {
         super(settings);
     }

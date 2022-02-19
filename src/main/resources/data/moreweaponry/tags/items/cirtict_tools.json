@@ -8,6 +8,8 @@
     "moreweaponry:cirtict_sword",
     "moreweaponry:cirtict_knife",
     "moreweaponry:cirtict_battleaxe",
-    "moreweaponry:cirtict_shield"
+    "moreweaponry:cirtict_shield",
+    "#moreweaponry:cooled_cirtict_tools",
+    "#moreweaponry:heated_cirtict_tools"
   ]
 }
