@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "moreweaponry:essence_cirtict_battleaxe"
+  },
+  "addition": {
+    "item": "moreweaponry:powered_watcher_mob_core"
+  },
+  "result": {
+    "item": "moreweaponry:watcher_essence_cirtict_battleaxe"
+  }
+}

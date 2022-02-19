@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "moreweaponry:essence_cirtict_hoe"
+  },
+  "addition": {
+    "item": "moreweaponry:powered_maiden_mob_core"
+  },
+  "result": {
+    "item": "moreweaponry:maiden_essence_cirtict_hoe"
+  }
+}
