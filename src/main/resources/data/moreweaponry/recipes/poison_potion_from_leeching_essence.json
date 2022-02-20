@@ -1,0 +1,12 @@
+{
+  "type": "nbtcrafting:brewing",
+  "base": {
+    "potion": "minecraft:mundane"
+  },
+  "ingredient": {
+    "item": "moreweaponry:leeching_essence"
+  },
+  "result": {
+    "potion": "minecraft:poison"
+  }
+}
