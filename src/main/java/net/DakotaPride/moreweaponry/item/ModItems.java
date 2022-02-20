@@ -17,7 +17,6 @@ import net.DakotaPride.moreweaponry.item.custom.phantom_helm.PhantomScaleHelm;
 import net.DakotaPride.moreweaponry.item.custom.powered_cores.*;
 import net.DakotaPride.moreweaponry.item.custom.vanilla_tools.ModHoeItem;
 import net.DakotaPride.moreweaponry.item.custom.vanilla_tools.ModPickaxeItem;
-import net.DakotaPride.moreweaponry.item.custom.watcher.WatcherHelm;
 import net.DakotaPride.moreweaponry.item.custom.watcher_tools.*;
 import net.DakotaPride.moreweaponry.sound.ModSounds;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
