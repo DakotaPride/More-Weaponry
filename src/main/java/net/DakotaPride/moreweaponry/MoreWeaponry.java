@@ -1,6 +1,7 @@
 package net.DakotaPride.moreweaponry;
 
 import net.DakotaPride.moreweaponry.block.ModBlocks;
+import net.DakotaPride.moreweaponry.block.ModSignTypes;
 import net.DakotaPride.moreweaponry.enchantments.ModEnchantments;
 import net.DakotaPride.moreweaponry.item.ModItems;
 import net.DakotaPride.moreweaponry.painting.ModPaintings;
