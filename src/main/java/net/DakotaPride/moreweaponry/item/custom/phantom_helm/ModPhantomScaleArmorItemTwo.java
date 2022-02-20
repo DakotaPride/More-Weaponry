@@ -1,4 +1,4 @@
-package net.DakotaPride.moreweaponry.item.custom;
+package net.DakotaPride.moreweaponry.item.custom.phantom_helm;
 
 import com.google.common.collect.ImmutableMap;
 import net.DakotaPride.moreweaponry.item.ModArmorMaterial;
@@ -15,14 +15,14 @@ import net.minecraft.world.World;
 
 import java.util.Map;
 
-public class ModPhantomScaleArmorItem extends ModPhantomScaleArmorItemTwo {
+public class ModPhantomScaleArmorItemTwo extends ArmorItem {
 
     private static final Map<ArmorMaterial, StatusEffect> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, StatusEffect>())
-                    .put(ModArmorMaterial.PHANTOM_SCALE, StatusEffects.SLOW_FALLING).build();
+                    .put(ModArmorMaterial.PHANTOM_SCALE, StatusEffects.NIGHT_VISION).build();
 
 
-    public ModPhantomScaleArmorItem(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
+    public ModPhantomScaleArmorItemTwo(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
         super(material, slot, settings);
     }
 
@@ -58,7 +58,7 @@ public class ModPhantomScaleArmorItem extends ModPhantomScaleArmorItemTwo {
         boolean hasPlayerEffect = player.hasStatusEffect(mapStatusEffect);
 
         if(hasCorrectArmorOn(mapArmorMaterial, player) && !hasPlayerEffect) {
-            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect, 1, 2));
+            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect, 20*16, 2));
 
         }
     }
