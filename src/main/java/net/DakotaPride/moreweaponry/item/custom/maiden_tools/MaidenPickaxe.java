@@ -30,7 +30,7 @@ public class MaidenPickaxe extends PickaxeItem {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add( new LiteralText("Maiden's Call").formatted(Formatting.GRAY));
+        tooltip.add( new LiteralText("Maiden's Call").formatted(Formatting.WHITE));
     }
 
 }

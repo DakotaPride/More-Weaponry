@@ -31,7 +31,7 @@ public class WatcherAxe extends AxeItem {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add( new LiteralText("Voided").formatted(Formatting.GRAY));
+        tooltip.add( new LiteralText("Voided").formatted(Formatting.LIGHT_PURPLE));
     }
 
 }
