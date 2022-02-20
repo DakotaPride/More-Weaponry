@@ -38,11 +38,6 @@ public class MoreWeaponry implements ModInitializer {
 
 		ModPortals.registerPortals();
 
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FRODON_TRAPDOOR, RenderLayer.getCutout());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FRODON_DOOR, RenderLayer.getCutout());
-
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_NIGHT_CURON, RenderLayer.getCutout());
-
 		ModRendererHelper.setRenderLayers();
 
 		ModRegistries.registerModFeatures();
