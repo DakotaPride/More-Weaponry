@@ -6,7 +6,8 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class ModPaintings {
-    public static final PaintingMotive NIGHT_OF_THE_UNDEAD = registerPainting("night_of_the_undead", new PaintingMotive(32, 48));
+    public static final PaintingMotive MASTERS = registerPainting("masters", new PaintingMotive(32, 32));
+    public static final PaintingMotive WATCHER = registerPainting("watcher", new PaintingMotive(64, 64));
 
     private static PaintingMotive registerPainting(String name, PaintingMotive paintingMotive) {
         return Registry.register(Registry.PAINTING_MOTIVE, new Identifier(MoreWeaponry.MOD_ID, name), paintingMotive);
