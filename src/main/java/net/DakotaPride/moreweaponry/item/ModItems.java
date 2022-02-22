@@ -670,6 +670,14 @@ public class ModItems {
     public static final Item LEECHING_ESSENCE = registerItem("leeching_essence",
             new ModEssenceItem(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
+    public static final Item WATCHER_HELMET = registerItem("watcher_helmet",
+            new ArmorItem(ModArmorMaterial.ENDER, EquipmentSlot.HEAD,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item WATCHER_CHESTPLATE = registerItem("watcher_chestplate",
+            new ArmorItem(ModArmorMaterial.ENDER, EquipmentSlot.CHEST,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
 
     private static Item registerItem (String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(MoreWeaponry.MOD_ID, name), item);

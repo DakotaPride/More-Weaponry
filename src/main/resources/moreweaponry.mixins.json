@@ -8,14 +8,16 @@
     "BlockEntityTypeMixin",
     "MixinStructurePiece",
     "SignTypeAccessor",
-    "TitleScreenMixin"
+    "TitleScreenMixin",
+    "HeadFeatureRendererMixin"
   ],
   "client": [
     "MoreWeaponryMixin",
     "SignTypeAccessor",
     "BlockEntityTypeMixin",
     "MixinStructurePiece",
-    "TitleScreenMixin"
+    "TitleScreenMixin",
+    "HeadFeatureRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1
