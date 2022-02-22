@@ -39,8 +39,6 @@ public class MoreWeaponry implements ModInitializer {
 
 		ModPortals.registerPortals();
 
-		ModRendererHelper.setRenderLayers();
-
 		ModRegistries.registerModFeatures();
 
 		ModRegistries.registerModComposterChances();
