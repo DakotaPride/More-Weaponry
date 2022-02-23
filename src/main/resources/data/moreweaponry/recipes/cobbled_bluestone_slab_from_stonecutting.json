@@ -3,6 +3,6 @@
   "ingredient": {
     "tag": "c:cobbled_bluestone"
   },
-  "result": "moreweaponry:cobbled_bluestone_wall",
-  "count": 1
+  "result": "moreweaponry:cobbled_bluestone_slab",
+  "count": 2
 }

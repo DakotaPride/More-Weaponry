@@ -4,7 +4,7 @@
     "item": "moreweaponry:cirtict_pickaxe"
   },
   "addition": {
-    "tag": "moreweaponry:essence"
+    "tag": "c:essence"
   },
   "result": {
     "item": "moreweaponry:essence_cirtict_pickaxe"

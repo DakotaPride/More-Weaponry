@@ -4,7 +4,7 @@
     "item": "moreweaponry:cooled_cirtict_shovel"
   },
   "addition": {
-    "tag": "moreweaponry:essence"
+    "tag": "c:essence"
   },
   "result": {
     "item": "moreweaponry:essence_cirtict_shovel"

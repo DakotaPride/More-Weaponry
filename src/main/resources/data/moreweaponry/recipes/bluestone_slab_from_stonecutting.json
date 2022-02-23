@@ -1,7 +1,7 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": {
-    "tag": "moreweaponry:bluestone"
+    "tag": "c:bluestone"
   },
   "result": "moreweaponry:bluestone_slab",
   "count": 2

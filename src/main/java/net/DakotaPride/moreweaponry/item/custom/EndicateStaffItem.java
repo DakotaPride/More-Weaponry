@@ -30,6 +30,6 @@ public class EndicateStaffItem extends SwordItem {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add( new LiteralText("Grants Levitation, Weakness And Mining Fatigue to Opponents").formatted(Formatting.GRAY));
+        tooltip.add( new LiteralText("Grants Levitation, Weakness And Mining Fatigue to Opponents").formatted(Formatting.DARK_GRAY));
     }
 }

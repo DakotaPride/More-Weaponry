@@ -4,7 +4,7 @@
     "item": "moreweaponry:heated_cirtict_sword"
   },
   "addition": {
-    "tag": "moreweaponry:essence"
+    "tag": "c:essence"
   },
   "result": {
     "item": "moreweaponry:essence_cirtict_sword"

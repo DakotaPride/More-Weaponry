@@ -4,20 +4,16 @@
   "package": "net.DakotaPride.moreweaponry.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
-    "SignTypeAccessor",
+    "MoreWeaponryMixin",
     "BlockEntityTypeMixin",
     "MixinStructurePiece",
-    "SignTypeAccessor",
-    "TitleScreenMixin",
-    "HeadFeatureRendererMixin"
+    "SignTypeAccessor"
   ],
   "client": [
     "MoreWeaponryMixin",
     "SignTypeAccessor",
     "BlockEntityTypeMixin",
-    "MixinStructurePiece",
-    "TitleScreenMixin",
-    "HeadFeatureRendererMixin"
+    "MixinStructurePiece"
   ],
   "injectors": {
     "defaultRequire": 1
