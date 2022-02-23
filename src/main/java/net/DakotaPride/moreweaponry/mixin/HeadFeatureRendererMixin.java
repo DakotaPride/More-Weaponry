@@ -39,7 +39,7 @@ public class HeadFeatureRendererMixin {
     private final WatcherHelmetModel watcherHelmetModel = new WatcherHelmetModel
             (WatcherHelmetModel.getTexturedModelData().createModel());
 
-    @Inject(method = "render", at = @At("HEAD"), cancellable = true)
+    @Inject(method = "render*", at = @At("HEAD"), cancellable = true)
     public void render(MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider,
                        int i, LivingEntity livingEntity, float f, float g, float h, float j, float k, float l,
                        CallbackInfo info) {
