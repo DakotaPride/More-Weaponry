@@ -31,7 +31,7 @@ public enum ModArmorMaterial implements ArmorMaterial
             new int[]{10, 14, 12, 11}, 17, SoundEvents.ENTITY_PHANTOM_BITE,
             5.0f, 0.7f, () -> Ingredient.ofItems(ModItems.PHANTOM_SCALE)),
     ENDER("ender", 53,
-            new int[]{12, 16, 14, 13}, 18, SoundEvents.ENTITY_ENDER_DRAGON_FLAP,
+            new int[]{12, 16, 14, 13}, 18, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER,
             6.0f, 0.8f, () -> Ingredient.ofItems(ModItems.DRAGON_SCALE)),
     SHULKER_SHELL("shulker_shell", 49,
             new int[]{5, 9, 8, 6}, 19, SoundEvents.BLOCK_SHULKER_BOX_OPEN,

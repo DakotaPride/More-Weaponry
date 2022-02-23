@@ -678,6 +678,10 @@ public class ModItems {
             new ArmorItem(ModArmorMaterial.ENDER, EquipmentSlot.CHEST,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
+    public static final Item WATCHER_STAFF = registerItem("watcher_staff",
+            new WatcherStaffItem((ToolMaterial) ModToolMaterial.WATCHER_STAFF, 28, -3.1f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
 
     private static Item registerItem (String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(MoreWeaponry.MOD_ID, name), item);

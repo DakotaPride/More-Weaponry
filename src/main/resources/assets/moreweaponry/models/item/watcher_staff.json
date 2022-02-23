@@ -1,0 +1,70 @@
+{
+	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
+	"texture_size": [32, 32],
+	"textures": {
+		"0": "moreweaponry:entity/watcher_staff",
+		"particle": "moreweaponry:entity/watcher_staff"
+	},
+	"elements": [
+		{
+			"from": [7, -2, 7],
+			"to": [8, 20, 8],
+			"faces": {
+				"north": {"uv": [0.5, 0.5, 1, 11.5], "texture": "#0"},
+				"east": {"uv": [0, 0.5, 0.5, 11.5], "texture": "#0"},
+				"south": {"uv": [1.5, 0.5, 2, 11.5], "texture": "#0"},
+				"west": {"uv": [1, 0.5, 1.5, 11.5], "texture": "#0"},
+				"up": {"uv": [1, 0.5, 0.5, 0], "texture": "#0"},
+				"down": {"uv": [1.5, 0, 1, 0.5], "texture": "#0"}
+			}
+		},
+		{
+			"from": [5.5, 16.5, 6.5],
+			"to": [7.5, 18.5, 8.5],
+			"rotation": {"angle": 45, "axis": "z", "origin": [7.5, 18.5, 7.5]},
+			"faces": {
+				"north": {"uv": [3, 1, 4, 2], "texture": "#0"},
+				"east": {"uv": [2, 1, 3, 2], "texture": "#0"},
+				"south": {"uv": [5, 1, 6, 2], "texture": "#0"},
+				"west": {"uv": [4, 1, 5, 2], "texture": "#0"},
+				"up": {"uv": [4, 1, 3, 0], "texture": "#0"},
+				"down": {"uv": [5, 0, 4, 1], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"translation": [0.5, 0, 2.25],
+			"scale": [1.63672, 1.63672, 1.63672]
+		},
+		"thirdperson_lefthand": {
+			"translation": [-1.5, 0, 2.25],
+			"scale": [1.63672, 1.63672, 1.63672]
+		},
+		"firstperson_righthand": {
+			"rotation": [-0.09, 19.49, 0.25],
+			"translation": [1.75, 3.25, 0]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, 12, 0],
+			"translation": [1.5, 2.75, 0]
+		},
+		"ground": {
+			"rotation": [-3.62, -12.89, 19.87],
+			"translation": [0, 15.75, 0],
+			"scale": [1.8418, 1.8418, 1.8418]
+		},
+		"gui": {
+			"rotation": [-180, -0.25, 135.25],
+			"translation": [0, -0.75, 0],
+			"scale": [0.91406, 0.91406, 0.91406]
+		},
+		"head": {
+			"translation": [0, 16.25, 6.5]
+		},
+		"fixed": {
+			"rotation": [0, 0, 42.5]
+		}
+	}
+}
