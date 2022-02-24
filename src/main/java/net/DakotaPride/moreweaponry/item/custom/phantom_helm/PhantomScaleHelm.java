@@ -1,5 +1,6 @@
 package net.DakotaPride.moreweaponry.item.custom.phantom_helm;
 
+import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorMaterial;
@@ -19,8 +20,13 @@ public class PhantomScaleHelm extends ModPhantomScaleArmorItem{
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add( new LiteralText("Obtain the Powers of the Phantom").formatted(Formatting.AQUA));
-        tooltip.add( new LiteralText("Grants Slow Falling and Night Vision Upon Equipping").formatted(Formatting.DARK_GRAY));
+        if (Screen.hasShiftDown()) {
+            tooltip.add( new LiteralText("Grants Slow Falling and Night Vision Upon Equipping").formatted(Formatting.BLUE));
+            tooltip.add( new LiteralText("Using The Scales Of A Phantom, You Gain The Powers Of The Creature").formatted(Formatting.BLUE));
+            tooltip.add( new LiteralText("Of The Darkest Nights").formatted(Formatting.BLUE));
+        } else {
+            tooltip.add( new LiteralText("Press Shift For More Information").formatted(Formatting.DARK_GRAY));
+        }
     }
 
 }

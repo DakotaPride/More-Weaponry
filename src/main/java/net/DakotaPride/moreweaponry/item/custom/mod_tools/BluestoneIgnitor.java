@@ -1,5 +1,6 @@
 package net.DakotaPride.moreweaponry.item.custom.mod_tools;
 
+import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -20,7 +21,11 @@ public class BluestoneIgnitor extends Item {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add( new LiteralText("Use To Open A Portal To The Ever Frost Dimension").formatted(Formatting.DARK_GRAY) );
+        if (Screen.hasShiftDown()) {
+            tooltip.add(new LiteralText("Use To Open A Portal To The Ever Frost Dimension").formatted(Formatting.DARK_AQUA));
+        }  else {
+            tooltip.add( new LiteralText("Press Shift For More Information").formatted(Formatting.DARK_GRAY));
+        }
     }
 
 }

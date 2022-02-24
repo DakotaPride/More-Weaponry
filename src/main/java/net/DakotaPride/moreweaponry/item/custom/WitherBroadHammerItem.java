@@ -22,14 +22,4 @@ public class WitherBroadHammerItem extends ModBroadHammerItem {
         target.addStatusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 200, 2), attacker);
         return super.postHit(stack, target, attacker);
     }
-
-    @Override
-    public boolean hasGlint(ItemStack stack) {
-        hasGlint(ItemStack, stack);
-        return super.hasGlint(stack);
-    }
-
-    private void hasGlint(Object itemStack, ItemStack stack) {
-
-    }
 }

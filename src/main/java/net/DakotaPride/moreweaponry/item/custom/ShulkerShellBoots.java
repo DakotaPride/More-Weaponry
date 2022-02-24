@@ -2,6 +2,7 @@ package net.DakotaPride.moreweaponry.item.custom;
 
 import com.google.common.collect.ImmutableMap;
 import net.DakotaPride.moreweaponry.item.ModArmorMaterial;
+import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
@@ -83,7 +84,14 @@ public class ShulkerShellBoots extends ArmorItem {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add( new LiteralText("Grants Levitation Upon Equipping").formatted(Formatting.DARK_GRAY));
+
+        if(Screen.hasShiftDown()){
+        tooltip.add( new LiteralText("Grants Levitation Upon Equipping").formatted(Formatting.DARK_PURPLE));
+        tooltip.add( new LiteralText("Crafted from Shulker Shells, taken from deep within").formatted(Formatting.DARK_PURPLE));
+                tooltip.add( new LiteralText("the End Dimension, you now have the ability to Levitate!").formatted(Formatting.DARK_PURPLE));
+        } else {
+            tooltip.add( new LiteralText("Press Shift For More Information").formatted(Formatting.DARK_GRAY));
+        }
     }
 
 }

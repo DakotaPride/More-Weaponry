@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "MN",
+    "MV",
     "BN"
   ],
   "key": {
@@ -13,6 +13,9 @@
     },
     "B": {
       "item": "moreweaponry:frodon_bowl"
+    },
+    "V": {
+      "item": "moreweaponry:crushed_kuro"
     }
   },
   "result": {
