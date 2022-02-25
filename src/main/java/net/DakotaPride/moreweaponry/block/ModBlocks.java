@@ -305,6 +305,12 @@ public class ModBlocks {
     public static final Block PEPLEX_NYLIUM = registerBlock("peplex_nylium",
             new EndNyliumBlock(FabricBlockSettings.copy(Blocks.END_STONE)), ModItemGroup.MORE_WEAPONRY);
 
+    public static final Block INTOXICATED_STONE = registerBlock("intoxicated_stone",
+            new Block(FabricBlockSettings.copy(Blocks.STONE)), ModItemGroup.MORE_WEAPONRY);
+
+    public static final Block INTOXICATED_GRASS_BLOCK = registerBlock("intoxicated_grass_block",
+            new GrassBlock(FabricBlockSettings.copy(Blocks.GRASS_BLOCK)), ModItemGroup.MORE_WEAPONRY);
+
 
 
     public static Block registerBlock(String name, Block block, ItemGroup group) {

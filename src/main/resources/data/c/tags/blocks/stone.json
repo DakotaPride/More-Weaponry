@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "#moreweaponry:limestone",
-    "#moreweaponry:bluestone"
+    "moreweaponry:limestone",
+    "moreweaponry:bluestone"
   ]
 }

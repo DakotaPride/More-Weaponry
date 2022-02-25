@@ -7,7 +7,7 @@ import net.minecraft.util.Identifier;
 
 public class ModModelPredicateProvider {
     public static void registerModModels() {
-
+        registerBow(ModItems.MAIDENS_STEM_BOW);
     }
 
     private static void registerBow(Item bow) {
@@ -22,7 +22,9 @@ public class ModModelPredicateProvider {
                     return (float)(stack.getMaxUseTime() - entity.getItemUseTimeLeft()) / 20.0f;
                 });
 
-        FabricModelPredicateProviderRegistry.register(bow, new Identifier("pulling"), (stack, world, entity, seed) -> entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0f : 0.0f);
+        FabricModelPredicateProviderRegistry.register(bow, new Identifier("pulling"),
+                (stack, world, entity, seed) -> entity != null && entity.isUsingItem()
+                        && entity.getActiveItem() == stack ? 1.0f : 0.0f);
     }
 
 }

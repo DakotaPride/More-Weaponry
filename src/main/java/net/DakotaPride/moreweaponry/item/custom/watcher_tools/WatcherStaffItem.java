@@ -1,5 +1,6 @@
-package net.DakotaPride.moreweaponry.item.custom;
+package net.DakotaPride.moreweaponry.item.custom.watcher_tools;
 
+import net.DakotaPride.moreweaponry.item.custom.EndicateStaffItem;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;

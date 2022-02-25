@@ -9,10 +9,6 @@ import net.minecraft.util.Identifier;
 
 public class ModTags {
     public static class Blocks {
-        public static final Tag.Identified<Block> BLUESTONE = createTag("bluestone");
-        public static final Tag.Identified<Block> COBBLED_BLUESTONE = createTag("cobbled_bluestone");
-        public static final Tag.Identified<Block> LIMESTONE = createTag("limestone");
-        public static final Tag.Identified<Block> COBBLED_LIMESTONE = createTag("cobbled_limestone");
 
         private static Tag.Identified<Block> createTag(String name) {
             return TagFactory.BLOCK.create(new Identifier(MoreWeaponry.MOD_ID, name));

@@ -25,7 +25,6 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 import net.DakotaPride.moreweaponry.item.custom.vanilla_tools.ModAxeItem;
 
@@ -681,6 +680,9 @@ public class ModItems {
     public static final Item WATCHER_STAFF = registerItem("watcher_staff",
             new WatcherStaffItem((ToolMaterial) ModToolMaterial.WATCHER_STAFF, 26, -3.1f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item MAIDENS_STEM_BOW = registerItem("maidens_stem_bow",
+            new MaidensStemBowItem(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY).maxCount(1)));
 
 
     private static Item registerItem (String name, Item item) {

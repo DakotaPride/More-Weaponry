@@ -1,18 +1,13 @@
 package net.DakotaPride.moreweaponry.block.custom;
 
-import net.DakotaPride.moreweaponry.block.ModBlocks;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.NyliumBlock;
+import net.minecraft.block.*;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.BlockView;
+import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 import net.minecraft.world.chunk.light.ChunkLightProvider;
-import net.minecraft.world.gen.chunk.ChunkGenerator;
-import net.minecraft.world.gen.feature.EndConfiguredFeatures;
-import net.minecraft.world.gen.feature.NetherConfiguredFeatures;
 
 import java.util.Random;
 
@@ -35,5 +30,14 @@ public class EndNyliumBlock extends NyliumBlock {
         }
     }
 
+    @Override
+    public boolean isFertilizable(BlockView world, BlockPos pos, BlockState state, boolean isClient) {
+        return world.getBlockState(pos.up()).isAir();
+    }
+
+    @Override
+    public boolean canGrow(World world, Random random, BlockPos pos, BlockState state) {
+        return true;
+    }
 
 }
