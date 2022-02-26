@@ -2,16 +2,12 @@ package net.DakotaPride.moreweaponry.world.features;
 
 import net.DakotaPride.moreweaponry.block.ModBlocks;
 import net.DakotaPride.moreweaponry.util.ModTags;
-import net.minecraft.block.Blocks;
-import net.minecraft.tag.BlockTags;
-import net.minecraft.util.collection.DataPool;
 import net.minecraft.util.math.VerticalSurfaceType;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.world.gen.decorator.PlacementModifier;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
-import net.minecraft.world.gen.stateprovider.WeightedBlockStateProvider;
 
 public class EndConfiguredFeatures extends UndergroundConfiguredFeatures {
 
