@@ -15,8 +15,11 @@ import net.minecraft.world.gen.stateprovider.WeightedBlockStateProvider;
 
 public class EndConfiguredFeatures {
 
-
-    private static final ConfiguredFeature PEPLEX_VEGETATION = null;
+    public static final ConfiguredFeature<SimpleBlockFeatureConfig, ?> PEPLEX_VEGETATION =
+            ConfiguredFeatures.register("peplex_vegetation", Feature.SIMPLE_BLOCK.configure
+                    (new SimpleBlockFeatureConfig(new WeightedBlockStateProvider
+                            (DataPool.builder().add(ModBlocks.PEPLEX_NYLIUM.getDefaultState(), 4)))));
+    
     public static final ConfiguredFeature<VegetationPatchFeatureConfig, ?> PEPLEX_PATCH =
             ConfiguredFeatures.register("peplex_patch", Feature.VEGETATION_PATCH.configure
                     (new VegetationPatchFeatureConfig(ModBlockTags.PEPLEX_REPLACEABLE.getId(), BlockStateProvider.of
