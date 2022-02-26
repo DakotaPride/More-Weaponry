@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "snowy=false": [
+      {
+        "model": "moreweaponry:block/intoxicated_grass_block"
+      },
+      {
+        "model": "moreweaponry:block/intoxicated_grass_block",
+        "y": 90
+      },
+      {
+        "model": "moreweaponry:block/intoxicated_grass_block",
+        "y": 180
+      },
+      {
+        "model": "moreweaponry:block/intoxicated_grass_block",
+        "y": 270
+      }
+    ]
+  }
+}

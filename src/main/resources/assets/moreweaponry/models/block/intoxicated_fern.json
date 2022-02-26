@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/tinted_cross",
+  "textures": {
+    "cross": "moreweaponry:block/intoxicated_fern"
+  }
+}

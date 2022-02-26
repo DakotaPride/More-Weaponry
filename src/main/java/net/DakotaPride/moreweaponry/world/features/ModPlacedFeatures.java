@@ -13,6 +13,7 @@ import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.decorator.*;
 import net.minecraft.world.gen.feature.PlacedFeature;
 import net.minecraft.world.gen.feature.PlacedFeatures;
+import net.minecraft.world.gen.feature.VegetationConfiguredFeatures;
 import net.minecraft.world.gen.feature.VegetationPlacedFeatures;
 
 import java.util.List;
@@ -73,6 +74,8 @@ public class ModPlacedFeatures {
             ModConfiguredFeatures.INFESTED_DRIPSTONE.withPlacement(modifiersWithCount(3,
                     HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(-80), YOffset.aboveBottom(300)))));
 
+    public static final PlacedFeature INTOXICATED_GRASS_BONEMEAL = PlacedFeatures.register("intoxicated_grass_bonemeal",
+            ModConfiguredFeatures.INTOXICATED_SINGLE_PIECE_OF_GRASS.withInAirFilter());
 
 
     public static List<PlacementModifier> modifiers(PlacementModifier countModifier, PlacementModifier heightModifier) {

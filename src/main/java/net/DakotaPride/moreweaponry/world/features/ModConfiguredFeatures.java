@@ -93,6 +93,11 @@ public class ModConfiguredFeatures {
     public static final ConfiguredFeature<?, ?> INFESTED_DRIPSTONE = register("infested_dripstone",
             Feature.ORE.configure(new OreFeatureConfig(OVERWORLD_INFESTED_DRIPSTONE, 11)));
 
+    public static final ConfiguredFeature<SimpleBlockFeatureConfig, ?> INTOXICATED_SINGLE_PIECE_OF_GRASS =
+            ConfiguredFeatures.register("intoxicated_single_piece_of_grass",
+                    Feature.SIMPLE_BLOCK.configure(new SimpleBlockFeatureConfig
+                    (BlockStateProvider.of(Blocks.GRASS.getDefaultState()))));
+
 
 
     private static RegistryKey<ConfiguredFeature<?, ?>> registryKey(String name) {

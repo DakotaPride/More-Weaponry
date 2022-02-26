@@ -311,6 +311,17 @@ public class ModBlocks {
     public static final Block INTOXICATED_GRASS_BLOCK = registerBlock("intoxicated_grass_block",
             new GrassBlock(FabricBlockSettings.copy(Blocks.GRASS_BLOCK)), ModItemGroup.MORE_WEAPONRY);
 
+    public static final Block INTOXICATED_GRASS = registerBlock("intoxicated_grass",
+            new IntoxicatedFernBlock(FabricBlockSettings.copy(Blocks.GRASS)), ModItemGroup.MORE_WEAPONRY);
+
+    public static final Block INTOXICATED_FERN = registerBlock("intoxicated_fern",
+            new IntoxicatedFernBlock(FabricBlockSettings.copy(Blocks.FERN)), ModItemGroup.MORE_WEAPONRY);
+
+    public static final Block INTOXICATED_TALL_GRASS = registerBlock("intoxicated_tall_grass",
+            new TallPlantBlock(FabricBlockSettings.copy(Blocks.TALL_GRASS)), ModItemGroup.MORE_WEAPONRY);
+
+    public static final Block INTOXICATED_LARGE_FERN = registerBlock("intoxicated_large_fern",
+            new TallPlantBlock(FabricBlockSettings.copy(Blocks.LARGE_FERN)), ModItemGroup.MORE_WEAPONRY);
 
 
     public static Block registerBlock(String name, Block block, ItemGroup group) {

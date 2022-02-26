@@ -270,25 +270,25 @@
   "item.moreweaponry.essence_cirtict_knife": "Essence Cirtict Knife",
 
 
-  "item.moreweaponry.wretched_core": "Mob Core (NOT COMPLETE)",
-  "item.moreweaponry.watcher_core": "Mob Core (NOT COMPLETE)",
-  "item.moreweaponry.suppressed_core": "Mob Core (NOT COMPLETE)",
-  "item.moreweaponry.plagued_core": "Mob Core (NOT COMPLETE)",
-  "item.moreweaponry.maiden_core": "Mob Core (NOT COMPLETE)",
+  "item.moreweaponry.wretched_core": "Mob Core ",
+  "item.moreweaponry.watcher_core": "Mob Core ",
+  "item.moreweaponry.suppressed_core": "Mob Core ",
+  "item.moreweaponry.plagued_core": "Mob Core ",
+  "item.moreweaponry.maiden_core": "Mob Core ",
   "item.moreweaponry.wretched_essence": "Wretched Essence",
-  "item.moreweaponry.mob_core": "Mob Core (NOT COMPLETE)",
-  "block.moreweaponry.essence_translator": "Essence Translator (NOT COMPLETE)",
-  "block.moreweaponry.core_forge": "Mob Core Forge (NOT COMPLETE)",
-  "item.moreweaponry.charged_mob_core": "Mob Core (NOT COMPLETE)",
+  "item.moreweaponry.mob_core": "Mob Core ",
+  "block.moreweaponry.essence_translator": "Essence Translator ",
+  "block.moreweaponry.core_forge": "Mob Core Forge ",
+  "item.moreweaponry.charged_mob_core": "Mob Core ",
   "item.moreweaponry.essence_cirtict_axe": "Essence Cirtict Axe",
   "block.moreweaponry.peplex_nylium": "Peplex Nylium",
   "item.moreweaponry.leeching_essence": "Leeching Essence",
 
-  "item.moreweaponry.powered_wretched_mob_core": "Powered Mob Core (NOT COMPLETE)",
-  "item.moreweaponry.powered_plagued_mob_core": "Powered Mob Core (NOT COMPLETE)",
-  "item.moreweaponry.powered_maiden_mob_core": "Powered Mob Core (NOT COMPLETE)",
-  "item.moreweaponry.powered_suppressed_mob_core": "Powered Mob Core (NOT COMPLETE)",
-  "item.moreweaponry.powered_watcher_mob_core": "Powered Mob Core (NOT COMPLETE)",
+  "item.moreweaponry.powered_wretched_mob_core": "Powered Mob Core ",
+  "item.moreweaponry.powered_plagued_mob_core": "Powered Mob Core ",
+  "item.moreweaponry.powered_maiden_mob_core": "Powered Mob Core ",
+  "item.moreweaponry.powered_suppressed_mob_core": "Powered Mob Core ",
+  "item.moreweaponry.powered_watcher_mob_core": "Powered Mob Core ",
 
   "item.moreweaponry.watcher_essence_cirtict_sword": "Essence Cirtict Sword",
   "item.moreweaponry.watcher_essence_cirtict_axe": "Essence Cirtict Axe",
@@ -308,5 +308,12 @@
   "item.moreweaponry.watcher_helmet": "Watcher Hood",
   "item.moreweaponry.watcher_chestplate": "Watcher Cloak",
   "item.moreweaponry.watcher_staff": "Watcher Staff",
-  "item.moreweaponry.maidens_stem_bow": "Maiden's Stem Bow"
+  "item.moreweaponry.maidens_stem_bow": "Maiden's Stem Bow",
+
+
+  "block.moreweaponry.intoxicated_stone": "Intoxicated Stone",
+  "block.moreweaponry.intoxicated_grass_block": "Intoxicated Grass Block",
+  "block.moreweaponry.intoxicated_tall_grass": "Intoxicated Tall Grass",
+  "block.moreweaponry.intoxicated_fern": "Intoxicated Fern",
+  "block.moreweaponry.intoxicated_large_fern": "Intoxicated Large Fern"
 }

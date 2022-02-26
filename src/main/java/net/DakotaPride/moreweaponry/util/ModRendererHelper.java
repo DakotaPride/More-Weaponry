@@ -18,5 +18,11 @@ public class ModRendererHelper {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FRODON_DOOR, RenderLayer.getCutout());
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_NIGHT_CURON, RenderLayer.getCutout());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.INTOXICATED_FERN, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.INTOXICATED_LARGE_FERN, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.INTOXICATED_GRASS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.INTOXICATED_TALL_GRASS, RenderLayer.getCutout());
+
     }
 }
