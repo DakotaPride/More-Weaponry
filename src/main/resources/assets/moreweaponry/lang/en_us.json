@@ -315,5 +315,7 @@
   "block.moreweaponry.intoxicated_grass_block": "Intoxicated Grass Block",
   "block.moreweaponry.intoxicated_tall_grass": "Intoxicated Tall Grass",
   "block.moreweaponry.intoxicated_fern": "Intoxicated Fern",
-  "block.moreweaponry.intoxicated_large_fern": "Intoxicated Large Fern"
+  "block.moreweaponry.intoxicated_large_fern": "Intoxicated Large Fern",
+  "block.moreweaponry.intoxicated_grass": "Intoxicated Grass",
+  "item.moreweaponry.wither_bone_meal": "Wither Bone Meal"
 }
