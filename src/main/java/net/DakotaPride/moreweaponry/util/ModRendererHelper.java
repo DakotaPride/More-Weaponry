@@ -23,6 +23,7 @@ public class ModRendererHelper {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.INTOXICATED_LARGE_FERN, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.INTOXICATED_GRASS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.INTOXICATED_TALL_GRASS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.INTOXICATED_GRASS_BLOCK, RenderLayer.getCutout());
 
     }
 }

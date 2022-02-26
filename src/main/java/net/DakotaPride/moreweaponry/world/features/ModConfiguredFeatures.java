@@ -96,7 +96,7 @@ public class ModConfiguredFeatures {
     public static final ConfiguredFeature<SimpleBlockFeatureConfig, ?> INTOXICATED_SINGLE_PIECE_OF_GRASS =
             ConfiguredFeatures.register("intoxicated_single_piece_of_grass",
                     Feature.SIMPLE_BLOCK.configure(new SimpleBlockFeatureConfig
-                    (BlockStateProvider.of(Blocks.GRASS.getDefaultState()))));
+                    (BlockStateProvider.of(ModBlocks.INTOXICATED_GRASS.getDefaultState()))));
 
 
 

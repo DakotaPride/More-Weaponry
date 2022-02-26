@@ -4,7 +4,7 @@
         "bottom": "block/dirt",
         "top": "moreweaponry:block/intoxicated_grass_block_top",
         "side": "moreweaponry:block/intoxicated_grass_block_side",
-        "overlay": "moreweaponry:block/intoxicated_grass_block_side"
+        "overlay": "moreweaponry:block/intoxicated_grass_block_side_overlay"
     },
     "elements": [
         {   "from": [ 0, 0, 0 ],

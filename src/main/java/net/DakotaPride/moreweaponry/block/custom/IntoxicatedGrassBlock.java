@@ -1,6 +1,7 @@
 package net.DakotaPride.moreweaponry.block.custom;
 
 import net.DakotaPride.moreweaponry.block.ModBlocks;
+import net.DakotaPride.moreweaponry.world.features.ModPlacedFeatures;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.Fertilizable;
@@ -40,7 +41,7 @@ public class IntoxicatedGrassBlock extends GrassBlock {
                 if (list.isEmpty()) continue;
                 placedFeature = ((RandomPatchFeatureConfig)list.get(0).getConfig()).feature().get();
             } else {
-                placedFeature = VegetationPlacedFeatures.GRASS_BONEMEAL;
+                placedFeature = ModPlacedFeatures.INTOXICATED_GRASS_BONEMEAL;
             }
             placedFeature.generateUnregistered(world, world.getChunkManager().getChunkGenerator(), random, blockPos2);
         }

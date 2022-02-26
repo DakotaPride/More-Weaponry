@@ -684,6 +684,9 @@ public class ModItems {
     public static final Item MAIDENS_STEM_BOW = registerItem("maidens_stem_bow",
             new MaidensStemBowItem(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY).maxCount(1)));
 
+    public static final Item WITHER_BONE_MEAL = registerItem("wither_bone_meal",
+            new BoneMealItem(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
 
     private static Item registerItem (String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(MoreWeaponry.MOD_ID, name), item);

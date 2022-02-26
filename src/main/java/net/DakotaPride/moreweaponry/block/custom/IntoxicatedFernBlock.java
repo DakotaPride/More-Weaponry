@@ -6,7 +6,9 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.FernBlock;
 import net.minecraft.block.TallPlantBlock;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.tag.BlockTags;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.BlockView;
 
 import java.util.Random;
 
@@ -23,6 +25,11 @@ public class IntoxicatedFernBlock extends FernBlock {
         if (tallPlantBlock.getDefaultState().canPlaceAt(world, pos) && world.isAir(pos.up())) {
             TallPlantBlock.placeAt(world, tallPlantBlock.getDefaultState(), pos, 2);
         }
+    }
+
+    @Override
+    public boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
+        return floor.isOf(ModBlocks.INTOXICATED_GRASS_BLOCK);
     }
 
 }
