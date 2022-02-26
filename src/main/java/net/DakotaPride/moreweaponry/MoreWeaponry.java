@@ -8,6 +8,7 @@ import net.DakotaPride.moreweaponry.painting.ModPaintings;
 import net.DakotaPride.moreweaponry.util.ModModelPredicateProvider;
 import net.DakotaPride.moreweaponry.util.ModRegistries;
 import net.DakotaPride.moreweaponry.util.ModRendererHelper;
+import net.DakotaPride.moreweaponry.util.ModTags;
 import net.DakotaPride.moreweaponry.util.biome.ModBiomes;
 import net.DakotaPride.moreweaponry.util.structure.ModStructures;
 import net.DakotaPride.moreweaponry.world.dimension.ModPortals;
@@ -56,6 +57,10 @@ public class MoreWeaponry implements ModInitializer {
 		ModStructures.registerSuppressedStructures();
 		ModStructures.registerWatcherStructures();
 		ModStructures.registerWretchedStructures();
+
+
+		ModTags.registerItemTags();
+		ModTags.registerBlockTags();
 
 	}
 
