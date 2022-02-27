@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "# #",
+        "#M#",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "moreweaponry:watcher_cloth"
+        },
+        "M": {
+            "item": "minecraft:ender_eye"
+        }
+    },
+    "result": {
+        "item": "moreweaponry:watcher_chestplate",
+        "count": 1
+    }
+}

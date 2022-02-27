@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " #C",
+    "#MC",
+    " #C"
+  ],
+  "key": {
+    "#": {
+      "item": "moreweaponry:reinforced_bone"
+    },
+    "C": {
+      "item": "minecraft:string"
+    },
+    "M": {
+      "item": "moreweaponry:maiden_stem"
+    }
+  },
+  "result": {
+    "item": "moreweaponry:maidens_stem_bow",
+    "count": 1
+  }
+}

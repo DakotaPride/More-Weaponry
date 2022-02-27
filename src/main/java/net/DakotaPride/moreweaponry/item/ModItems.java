@@ -53,40 +53,36 @@ public class ModItems {
 
     public static final Item KURO_BREAD = registerItem("kuro_bread",
             new Item(new FabricItemSettings().fireproof().food
-                    (new FoodComponent.Builder().alwaysEdible().hunger(10).statusEffect
-                                    (new StatusEffectInstance(StatusEffects.ABSORPTION, 20*15), 1f)
-                            .statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 20*5), 1f)
-                            .statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 20*20), 1f)
-                            .saturationModifier(0.8f).build()).group(ModItemGroup.MORE_WEAPONRY)));
+                    (new FoodComponent.Builder().alwaysEdible().hunger(8).statusEffect
+                                    (new StatusEffectInstance(StatusEffects.ABSORPTION, 20*10), 1f)
+                            .statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 20*5), 0.5f)
+                            .statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 20*15), 1f)
+                            .saturationModifier(0.7f).build()).group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item CURON_BREW = registerItem("curon_brew",
             new ModStewItem(new FabricItemSettings().maxCount(1).food
-                    (new FoodComponent.Builder().alwaysEdible().hunger(16).statusEffect
+                    (new FoodComponent.Builder().alwaysEdible().hunger(7).statusEffect
                             (new StatusEffectInstance(StatusEffects.BLINDNESS, 20*10), 1f)
                             .statusEffect(new StatusEffectInstance(StatusEffects.WITHER, 20*5), 1f)
                             .statusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 20*5), 1f)
-                            .statusEffect(new StatusEffectInstance(StatusEffects.BAD_OMEN, 20*10), 1f)
                             .statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 20*3), 1f)
                             .statusEffect(new StatusEffectInstance(StatusEffects.MINING_FATIGUE, 20*10), 1f)
                             .statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 20*5), 1f)
                             .statusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 20*10), 1f)
                             .statusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 20*10), 1f)
                             .statusEffect(new StatusEffectInstance(StatusEffects.UNLUCK, 20*5), 1f)
-                            .saturationModifier(1.0f).build()).group(ModItemGroup.MORE_WEAPONRY)));
+                            .saturationModifier(0.6f).build()).group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item FRODON_BOWL = registerItem("frodon_bowl",
             new Item(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item CURON_FLOWER_PETALS = registerItem("curon_flower_petals",
-            new Item(new FabricItemSettings().food(new FoodComponent.Builder().hunger(4).statusEffect
-                    (new StatusEffectInstance(StatusEffects.WEAKNESS, 20*3), 0.5f)
-                    .saturationModifier(1.0f).build()).group(ModItemGroup.MORE_WEAPONRY)));
+            new Item(new FabricItemSettings().food(new FoodComponent.Builder().hunger(2).statusEffect
+                    (new StatusEffectInstance(StatusEffects.WEAKNESS, 20*3), 0.7f)
+                    .saturationModifier(0.4f).build()).group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item CRUSHED_KURO = registerItem("crushed_kuro",
-            new Item(new FabricItemSettings().food
-                    (new FoodComponent.Builder().hunger(5).statusEffect
-                                    (new StatusEffectInstance(StatusEffects.HASTE, 20*5), 0.5f)
-                            .saturationModifier(1.0f).build()).fireproof().group(ModItemGroup.MORE_WEAPONRY)));
+            new Item(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item BLACKSTONE_INGOT = registerItem("blackstone_ingot",
             new Item(new FabricItemSettings().fireproof().group(ModItemGroup.MORE_WEAPONRY)));
@@ -116,13 +112,13 @@ public class ModItems {
             new ModHandleItem(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item WITHER_ESSENCE = registerItem("wither_essence",
-            new WeakEssenceItem(new FabricItemSettings().maxCount(1).group(ModItemGroup.MORE_WEAPONRY)));
+            new WeakEssenceItem(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item WITHER_BONE = registerItem("wither_bone",
             new Item(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item PHANTOM_ESSENCE = registerItem("phantom_essence",
-            new StrongEssenceItem(new FabricItemSettings().maxCount(1).group(ModItemGroup.MORE_WEAPONRY)));
+            new StrongEssenceItem(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item PHANTOM_SCALE = registerItem("phantom_scale",
             new Item(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
@@ -157,17 +153,17 @@ public class ModItems {
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item MOON_STONE_SWORD = registerItem("moon_stone_sword",
-            new SwordItem((ToolMaterial) ModToolMaterial.REFINED_MOON_STONE, 5, -2.4f,
+            new SwordItem((ToolMaterial) ModToolMaterial.REFINED_MOON_STONE, 3, -2.4f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
     public static final Item MOON_STONE_SHOVEL = registerItem("moon_stone_shovel",
             new ShovelItem((ToolMaterial) ModToolMaterial.REFINED_MOON_STONE, 1, -3f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item MOON_STONE_PICKAXE = registerItem("moon_stone_pickaxe",
-            new ModPickaxeItem((ToolMaterial) ModToolMaterial.REFINED_MOON_STONE, 2, -2.8f,
+            new ModPickaxeItem((ToolMaterial) ModToolMaterial.REFINED_MOON_STONE, 1, -2.8f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
     public static final Item MOON_STONE_AXE = registerItem("moon_stone_axe",
-            new ModAxeItem((ToolMaterial) ModToolMaterial.REFINED_MOON_STONE, 7, -3f,
+            new ModAxeItem((ToolMaterial) ModToolMaterial.REFINED_MOON_STONE, 6, -3f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
     public static final Item MOON_STONE_HOE = registerItem("moon_stone_hoe",
             new ModHoeItem((ToolMaterial) ModToolMaterial.REFINED_MOON_STONE, 0, 0f,
@@ -178,7 +174,7 @@ public class ModItems {
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item BLACKSTONE_METAL_SWORD = registerItem("blackstone_metal_sword",
-            new SwordItem((ToolMaterial) ModToolMaterial.BLACKSTONE_METAL, 8, -2.4f,
+            new SwordItem((ToolMaterial) ModToolMaterial.BLACKSTONE_METAL, 4, -2.4f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
     public static final Item BLACKSTONE_METAL_SHOVEL = registerItem("blackstone_metal_shovel",
             new ShovelItem((ToolMaterial) ModToolMaterial.BLACKSTONE_METAL, 2, -3f,
@@ -188,14 +184,14 @@ public class ModItems {
             new ModPickaxeItem((ToolMaterial) ModToolMaterial.BLACKSTONE_METAL, 3, -2.8f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
     public static final Item BLACKSTONE_METAL_AXE = registerItem("blackstone_metal_axe",
-            new ModAxeItem((ToolMaterial) ModToolMaterial.BLACKSTONE_METAL, 12, -3f,
+            new ModAxeItem((ToolMaterial) ModToolMaterial.BLACKSTONE_METAL, 8, -3f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
     public static final Item BLACKSTONE_METAL_HOE = registerItem("blackstone_metal_hoe",
-            new ModHoeItem((ToolMaterial) ModToolMaterial.BLACKSTONE_METAL, 1, 0f,
+            new ModHoeItem((ToolMaterial) ModToolMaterial.BLACKSTONE_METAL, -4, 0f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item BLACKSTONE_METAL_BATTLEAXE = registerItem("blackstone_metal_battleaxe",
-            new ModBattleaxeItem((ToolMaterial) ModToolMaterial.BLACKSTONE_METAL, 15, -3.3f,
+            new ModBattleaxeItem((ToolMaterial) ModToolMaterial.BLACKSTONE_METAL, 13, -3.3f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
 
@@ -260,24 +256,24 @@ public class ModItems {
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item ELDER_GUARDIAN_SCALE_SWORD = registerItem("elder_guardian_scale_sword",
-            new ElderScaleSword((ToolMaterial) ModToolMaterial.ELDER_GUARDIAN_SCALE, 9, -2.4f,
+            new ElderScaleSword((ToolMaterial) ModToolMaterial.ELDER_GUARDIAN_SCALE, 8, -2.4f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
     public static final Item ELDER_GUARDIAN_SCALE_SHOVEL = registerItem("elder_guardian_scale_shovel",
-            new ElderScaleShovel((ToolMaterial) ModToolMaterial.ELDER_GUARDIAN_SCALE, 4, -3f,
+            new ElderScaleShovel((ToolMaterial) ModToolMaterial.ELDER_GUARDIAN_SCALE, 2, -3f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item ELDER_GUARDIAN_SCALE_PICKAXE = registerItem("elder_guardian_scale_pickaxe",
             new ElderScalePickaxe((ToolMaterial) ModToolMaterial.ELDER_GUARDIAN_SCALE, 5, -2.8f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
     public static final Item ELDER_GUARDIAN_SCALE_AXE = registerItem("elder_guardian_scale_axe",
-            new ElderScaleAxe((ToolMaterial) ModToolMaterial.ELDER_GUARDIAN_SCALE, 18, -3f,
+            new ElderScaleAxe((ToolMaterial) ModToolMaterial.ELDER_GUARDIAN_SCALE, 12, -3f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
     public static final Item ELDER_GUARDIAN_SCALE_HOE = registerItem("elder_guardian_scale_hoe",
-            new ElderScaleHoe((ToolMaterial) ModToolMaterial.ELDER_GUARDIAN_SCALE, 1, 0f,
+            new ElderScaleHoe((ToolMaterial) ModToolMaterial.ELDER_GUARDIAN_SCALE, 2, 0f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item ELDER_GUARDIAN_SCALE_BATTLEAXE = registerItem("elder_guardian_scale_battleaxe",
-            new ElderScaleBattleaxe((ToolMaterial) ModToolMaterial.ELDER_GUARDIAN_SCALE, 21, -3.3f,
+            new ElderScaleBattleaxe((ToolMaterial) ModToolMaterial.ELDER_GUARDIAN_SCALE, 16, -3.3f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item GUARDIAN_SCALE_HELMET = registerItem("guardian_scale_helmet",
@@ -294,24 +290,24 @@ public class ModItems {
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item GUARDIAN_SCALE_SWORD = registerItem("guardian_scale_sword",
-            new SwordItem((ToolMaterial) ModToolMaterial.GUARDIAN_SCALE, 9, -2.4f,
+            new SwordItem((ToolMaterial) ModToolMaterial.GUARDIAN_SCALE, 7, -2.4f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
     public static final Item GUARDIAN_SCALE_SHOVEL = registerItem("guardian_scale_shovel",
-            new ShovelItem((ToolMaterial) ModToolMaterial.ELDER_GUARDIAN_SCALE, 3, -3f,
+            new ShovelItem((ToolMaterial) ModToolMaterial.ELDER_GUARDIAN_SCALE, 1, -3f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item GUARDIAN_SCALE_PICKAXE = registerItem("guardian_scale_pickaxe",
             new ModPickaxeItem((ToolMaterial) ModToolMaterial.GUARDIAN_SCALE, 4, -2.8f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
     public static final Item GUARDIAN_SCALE_AXE = registerItem("guardian_scale_axe",
-            new ModAxeItem((ToolMaterial) ModToolMaterial.GUARDIAN_SCALE, 14, -3f,
+            new ModAxeItem((ToolMaterial) ModToolMaterial.GUARDIAN_SCALE, 9, -3f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
     public static final Item GUARDIAN_SCALE_HOE = registerItem("guardian_scale_hoe",
             new ModHoeItem((ToolMaterial) ModToolMaterial.GUARDIAN_SCALE, 1, 0f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item GUARDIAN_SCALE_BATTLEAXE = registerItem("guardian_scale_battleaxe",
-            new ModBattleaxeItem((ToolMaterial) ModToolMaterial.GUARDIAN_SCALE, 19, -3.3f,
+            new ModBattleaxeItem((ToolMaterial) ModToolMaterial.GUARDIAN_SCALE, 14, -3.3f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item GLIMMERING_SHIELD = registerItem("glimmering_shield",
@@ -358,7 +354,7 @@ public class ModItems {
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item REFINED_MOON_KNIFE = registerItem("refined_moon_knife",
-            new ModKnifeItem((ToolMaterial) ModToolMaterial.REFINED_MOON_STONE, 6, -1f,
+            new ModKnifeItem((ToolMaterial) ModToolMaterial.REFINED_MOON_STONE, 5, -1f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item GLIMMERED_AMETHYST_KNIFE = registerItem("glimmered_amethyst_knife",
@@ -550,7 +546,7 @@ public class ModItems {
             new Item(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item WRETCHED_ESSENCE = registerItem("wretched_essence",
-            new WeakEssenceItem(new FabricItemSettings().maxCount(1).group(ModItemGroup.MORE_WEAPONRY)));
+            new WeakEssenceItem(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item WRETCHED_CORE = registerItem("wretched_core",
             new WretchedCoreItem(new FabricItemSettings().maxCount(1).group(ModItemGroup.MORE_WEAPONRY)));
@@ -667,7 +663,7 @@ public class ModItems {
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item LEECHING_ESSENCE = registerItem("leeching_essence",
-            new WeakEssenceItem(new FabricItemSettings().maxCount(1).group(ModItemGroup.MORE_WEAPONRY)));
+            new WeakEssenceItem(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item WATCHER_HELMET = registerItem("watcher_helmet",
             new ArmorItem(ModArmorMaterial.ENDER, EquipmentSlot.HEAD,
@@ -688,8 +684,16 @@ public class ModItems {
             new BoneMealItem(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item WATCHER_CLOTH = registerItem("watcher_cloth",
-            new StrongEssenceItem(new FabricItemSettings().maxCount(1).group(ModItemGroup.MORE_WEAPONRY)));
+            new StrongEssenceItem(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
+    public static final Item MAIDEN_STEM = registerItem("maiden_stem",
+            new Item(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item REINFORCED_BONE = registerItem("reinforced_bone",
+            new Item(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item MELODIC_ESSENCE = registerItem("melodic_essence",
+            new StrongEssenceItem(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     private static Item registerItem (String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(MoreWeaponry.MOD_ID, name), item);

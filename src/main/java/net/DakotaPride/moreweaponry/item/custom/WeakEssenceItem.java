@@ -20,6 +20,7 @@ public class WeakEssenceItem extends Item {
         playerEntity.playSound(SoundEvents.PARTICLE_SOUL_ESCAPE, 2.0F, 1.0F);
         playerEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.WITHER, 200, 0), playerEntity);
         playerEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 200, 0), playerEntity);
+        playerEntity.getItemCooldownManager().set(this, 200);
         return TypedActionResult.success(playerEntity.getStackInHand(hand));
     }
 

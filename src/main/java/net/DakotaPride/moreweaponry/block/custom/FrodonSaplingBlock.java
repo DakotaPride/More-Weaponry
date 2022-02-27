@@ -16,7 +16,7 @@ public class FrodonSaplingBlock extends SaplingBlock {
     }
 
     public boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
-        return floor.isOf(ModBlocks.PEPLEX_NYLIUM);
+        return floor.isIn(BlockTags.DIRT) || floor.isOf(Blocks.GRASS_BLOCK);
     }
 
 }

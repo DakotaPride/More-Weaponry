@@ -4,6 +4,7 @@ import com.mojang.datafixers.util.Pair;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.EnderPearlItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
@@ -30,6 +31,7 @@ public class StrongEssenceItem extends Item {
         playerEntity.playSound(SoundEvents.PARTICLE_SOUL_ESCAPE, 2.0F, 1.0F);
         playerEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 200, 0), playerEntity);
         playerEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 200, 0), playerEntity);
+        playerEntity.getItemCooldownManager().set(this, 200);
         return TypedActionResult.success(playerEntity.getStackInHand(hand));
     }
 

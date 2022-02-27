@@ -146,7 +146,6 @@
   "item.moreweaponry.kuro": "Kuro Wheat",
   "item.moreweaponry.kuro_bread": "Kuro Bread",
   "item.moreweaponry.crushed_kuro": "Crushed Kuro",
-  "item.moreweaponry.condensed_kuro": "Condensed Kuro",
   "block.moreweaponry.kuro_wheat_block": "Kuro Bale",
   "block.moreweaponry.night_curon": "Night Curon Flower",
   "item.moreweaponry.curon_brew": "Night Curon Brew",
@@ -318,5 +317,8 @@
   "block.moreweaponry.intoxicated_large_fern": "Intoxicated Large Fern",
   "block.moreweaponry.intoxicated_grass": "Intoxicated Grass",
   "item.moreweaponry.wither_bone_meal": "Wither Bone Meal",
-  "item.moreweaponry.watcher_cloth": "Watcher Cloth"
+  "item.moreweaponry.watcher_cloth": "Watcher Cloth",
+  "item.moreweaponry.maiden_stem": "Maiden Stem",
+  "item.moreweaponry.melodic_essence": "Melodic Essence",
+  "item.moreweaponry.reinforced_bone": "Reinforced Bone"
 }
