@@ -112,13 +112,13 @@ public class ModItems {
             new ModHandleItem(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item WITHER_ESSENCE = registerItem("wither_essence",
-            new WeakEssenceItem(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+            new Item(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item WITHER_BONE = registerItem("wither_bone",
             new Item(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item PHANTOM_ESSENCE = registerItem("phantom_essence",
-            new StrongEssenceItem(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+            new Item(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item PHANTOM_SCALE = registerItem("phantom_scale",
             new Item(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
@@ -546,7 +546,7 @@ public class ModItems {
             new Item(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item WRETCHED_ESSENCE = registerItem("wretched_essence",
-            new WeakEssenceItem(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+            new Item(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item WRETCHED_CORE = registerItem("wretched_core",
             new WretchedCoreItem(new FabricItemSettings().maxCount(1).group(ModItemGroup.MORE_WEAPONRY)));
@@ -663,7 +663,7 @@ public class ModItems {
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item LEECHING_ESSENCE = registerItem("leeching_essence",
-            new WeakEssenceItem(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+            new Item(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item WATCHER_HELMET = registerItem("watcher_helmet",
             new ArmorItem(ModArmorMaterial.ENDER, EquipmentSlot.HEAD,
@@ -684,7 +684,7 @@ public class ModItems {
             new BoneMealItem(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item WATCHER_CLOTH = registerItem("watcher_cloth",
-            new StrongEssenceItem(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+            new Item(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item MAIDEN_STEM = registerItem("maiden_stem",
             new Item(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
@@ -693,7 +693,9 @@ public class ModItems {
             new Item(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item MELODIC_ESSENCE = registerItem("melodic_essence",
-            new StrongEssenceItem(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+            new Item(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+
 
     private static Item registerItem (String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(MoreWeaponry.MOD_ID, name), item);

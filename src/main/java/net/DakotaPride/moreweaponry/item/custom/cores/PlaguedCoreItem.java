@@ -3,6 +3,8 @@ package net.DakotaPride.moreweaponry.item.custom.cores;
 import net.DakotaPride.moreweaponry.block.ModBlocks;
 import net.DakotaPride.moreweaponry.item.ModItems;
 import net.minecraft.client.item.TooltipContext;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -14,6 +16,8 @@ import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Formatting;
+import net.minecraft.util.Hand;
+import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.World;
@@ -24,6 +28,15 @@ import java.util.List;
 public class PlaguedCoreItem extends Item {
     public PlaguedCoreItem(Settings settings) {
         super(settings);
+    }
+
+    @Override
+    public TypedActionResult<ItemStack> use(World world, PlayerEntity playerEntity, Hand hand) {
+        playerEntity.playSound(SoundEvents.PARTICLE_SOUL_ESCAPE, 2.0F, 1.0F);
+        playerEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 200, 0), playerEntity);
+        playerEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, 200, 0), playerEntity);
+        playerEntity.getItemCooldownManager().set(this, 200);
+        return TypedActionResult.success(playerEntity.getStackInHand(hand));
     }
 
     @Override
