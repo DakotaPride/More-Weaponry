@@ -116,13 +116,13 @@ public class ModItems {
             new ModHandleItem(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item WITHER_ESSENCE = registerItem("wither_essence",
-            new ModEssenceItem(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+            new WeakEssenceItem(new FabricItemSettings().maxCount(1).group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item WITHER_BONE = registerItem("wither_bone",
             new Item(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item PHANTOM_ESSENCE = registerItem("phantom_essence",
-            new ModEssenceItem(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+            new StrongEssenceItem(new FabricItemSettings().maxCount(1).group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item PHANTOM_SCALE = registerItem("phantom_scale",
             new Item(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
@@ -550,7 +550,7 @@ public class ModItems {
             new Item(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item WRETCHED_ESSENCE = registerItem("wretched_essence",
-            new ModEssenceItem(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+            new WeakEssenceItem(new FabricItemSettings().maxCount(1).group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item WRETCHED_CORE = registerItem("wretched_core",
             new WretchedCoreItem(new FabricItemSettings().maxCount(1).group(ModItemGroup.MORE_WEAPONRY)));
@@ -667,7 +667,7 @@ public class ModItems {
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item LEECHING_ESSENCE = registerItem("leeching_essence",
-            new ModEssenceItem(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+            new WeakEssenceItem(new FabricItemSettings().maxCount(1).group(ModItemGroup.MORE_WEAPONRY)));
 
     public static final Item WATCHER_HELMET = registerItem("watcher_helmet",
             new ArmorItem(ModArmorMaterial.ENDER, EquipmentSlot.HEAD,
@@ -686,6 +686,9 @@ public class ModItems {
 
     public static final Item WITHER_BONE_MEAL = registerItem("wither_bone_meal",
             new BoneMealItem(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item WATCHER_CLOTH = registerItem("watcher_cloth",
+            new StrongEssenceItem(new FabricItemSettings().maxCount(1).group(ModItemGroup.MORE_WEAPONRY)));
 
 
     private static Item registerItem (String name, Item item) {
