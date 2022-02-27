@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#B#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "moreweaponry:watcher_cloth"
+    },
+    "B": {
+      "item": "moreweaponry:endicate_staff"
+    }
+  },
+  "result": {
+    "item": "moreweaponry:watcher_staff",
+    "count": 1
+  }
+}
