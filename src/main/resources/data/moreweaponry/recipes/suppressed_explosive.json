@@ -6,11 +6,9 @@
     "X#X"
   ],
   "key": {
-    "#": [
-      {
-        "item": "minecraft:sandstone_dust_block"
-      }
-    ],
+    "#": {
+        "item": "moreweaponry:sandstone_dust_block"
+      },
     "X": {
       "item": "moreweaponry:explosive_essence"
     }

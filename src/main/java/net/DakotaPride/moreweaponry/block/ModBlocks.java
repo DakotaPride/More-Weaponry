@@ -300,7 +300,7 @@ public class ModBlocks {
             new Block(FabricBlockSettings.copy(Blocks.STONE)), ModItemGroup.MORE_WEAPONRY);
 
     public static final Block CORE_FORGE = registerBlock("core_forge",
-            new Block(FabricBlockSettings.copy(Blocks.STONE)), ModItemGroup.MORE_WEAPONRY);
+            new Block(FabricBlockSettings.copy(Blocks.OBSIDIAN)), ModItemGroup.MORE_WEAPONRY);
 
     public static final Block PEPLEX_NYLIUM = registerBlock("peplex_nylium",
             new EndNyliumBlock(FabricBlockSettings.copy(Blocks.END_STONE)), ModItemGroup.MORE_WEAPONRY);
