@@ -78,7 +78,7 @@ public class SuppressedExplosiveEntity extends TntEntity {
 
     private void explode() {
         float f = 4.0f;
-        this.world.createExplosion(this, this.getX(), this.getBodyY(0.0625), this.getZ(), 4.0f, Explosion.DestructionType.BREAK);
+        this.world.createExplosion(this, this.getX(), this.getBodyY(0.0625), this.getZ(), 40.0f, Explosion.DestructionType.BREAK);
     }
 
     @Override

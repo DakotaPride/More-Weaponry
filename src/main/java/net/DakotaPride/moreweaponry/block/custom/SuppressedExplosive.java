@@ -67,7 +67,7 @@ public class SuppressedExplosive extends TntBlock {
         }
         SuppressedExplosiveEntity suppressedExplosiveEntity = new SuppressedExplosiveEntity(world, (double) pos.getX() + 0.5, pos.getY(), (double) pos.getZ() + 0.5, explosion.getCausingEntity());
         int i = suppressedExplosiveEntity.getFuse();
-        suppressedExplosiveEntity.setFuse((short) (world.random.nextInt(i / 4) + i / 8));
+        suppressedExplosiveEntity.setFuse((short) (world.random.nextInt(i / 8) + i / 16));
         world.spawnEntity(suppressedExplosiveEntity);
     }
 

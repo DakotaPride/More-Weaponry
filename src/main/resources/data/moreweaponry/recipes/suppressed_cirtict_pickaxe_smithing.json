@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "moreweaponry:essence_cirtict_pickaxe"
+  },
+  "addition": {
+    "item": "moreweaponry:powered_suppressed_mob_core"
+  },
+  "result": {
+    "item": "moreweaponry:suppressed_essence_cirtict_pickaxe"
+  }
+}

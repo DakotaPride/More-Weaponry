@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X#X",
+    "#X#",
+    "X#X"
+  ],
+  "key": {
+    "#": [
+      {
+        "item": "minecraft:sandstone_dust_block"
+      }
+    ],
+    "X": {
+      "item": "moreweaponry:explosive_essence"
+    }
+  },
+  "result": {
+    "item": "moreweaponry:suppressed_explosion"
+  }
+}

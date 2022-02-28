@@ -329,5 +329,6 @@
   "item.moreweaponry.maiden_stem": "Maiden Stem",
   "item.moreweaponry.melodic_essence": "Melodic Essence",
   "item.moreweaponry.reinforced_bone": "Reinforced Bone",
-  "item.moreweaponry.explosive_essence": "Explosive Essence"
+  "item.moreweaponry.explosive_essence": "Explosive Essence",
+  "block.moreweaponry.suppressed_explosion": "Suppressed Explosive"
 }
