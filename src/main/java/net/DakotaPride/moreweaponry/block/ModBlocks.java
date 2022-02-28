@@ -323,6 +323,9 @@ public class ModBlocks {
     public static final Block INTOXICATED_LARGE_FERN = registerBlock("intoxicated_large_fern",
             new IntoxicatedTallPlantBlock(FabricBlockSettings.copy(Blocks.LARGE_FERN)), ModItemGroup.MORE_WEAPONRY);
 
+    public static final Block SUPPRESSED_EXPLOSION = registerBlock("suppressed_explosion",
+            new SuppressedExplosive(FabricBlockSettings.copy(Blocks.TNT)), ModItemGroup.MORE_WEAPONRY);
+
 
     public static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItem(name, block, group);

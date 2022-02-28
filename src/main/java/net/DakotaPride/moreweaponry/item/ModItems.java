@@ -15,6 +15,7 @@ import net.DakotaPride.moreweaponry.item.custom.mod_tools.ModBattleaxeItem;
 import net.DakotaPride.moreweaponry.item.custom.mod_tools.ModKnifeItem;
 import net.DakotaPride.moreweaponry.item.custom.phantom_helm.PhantomScaleHelm;
 import net.DakotaPride.moreweaponry.item.custom.powered_cores.*;
+import net.DakotaPride.moreweaponry.item.custom.suppressed_tools.*;
 import net.DakotaPride.moreweaponry.item.custom.vanilla_tools.ModHoeItem;
 import net.DakotaPride.moreweaponry.item.custom.vanilla_tools.ModPickaxeItem;
 import net.DakotaPride.moreweaponry.item.custom.watcher_tools.*;
@@ -697,6 +698,34 @@ public class ModItems {
 
     public static final Item EXPLOSIVE_ESSENCE = registerItem("explosive_essence",
             new Item(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item SUPPRESSED_ESSENCE_CIRTICT_AXE = registerItem("suppressed_essence_cirtict_axe",
+            new SuppressedAxe((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 25, -3f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item SUPPRESSED_ESSENCE_CIRTICT_PICKAXE = registerItem("suppressed_essence_cirtict_pickaxe",
+            new SuppressedPickaxe((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 7, -2.8f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item SUPPRESSED_ESSENCE_CIRTICT_SWORD = registerItem("suppressed_essence_cirtict_sword",
+            new SuppressedSword((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 21, -2.0f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item SUPPRESSED_ESSENCE_CIRTICT_SHOVEL = registerItem("suppressed_essence_cirtict_shovel",
+            new SuppressedShovel((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 8, -1.6f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item SUPPRESSED_ESSENCE_CIRTICT_KNIFE = registerItem("suppressed_essence_cirtict_knife",
+            new SuppressedKnife((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 14, -1f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item SUPPRESSED_ESSENCE_CIRTICT_HOE = registerItem("suppressed_essence_cirtict_hoe",
+            new SuppressedHoe((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 4, 0f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item SUPPRESSED_ESSENCE_CIRTICT_BATTLEAXE = registerItem("suppressed_essence_cirtict_battleaxe",
+            new SuppressedBattleaxe((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 25, -3.3f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
 
     private static Item registerItem (String name, Item item) {
