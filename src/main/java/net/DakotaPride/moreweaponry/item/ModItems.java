@@ -695,6 +695,8 @@ public class ModItems {
     public static final Item MELODIC_ESSENCE = registerItem("melodic_essence",
             new Item(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
+    public static final Item EXPLOSIVE_ESSENCE = registerItem("explosive_essence",
+            new Item(new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
 
     private static Item registerItem (String name, Item item) {
