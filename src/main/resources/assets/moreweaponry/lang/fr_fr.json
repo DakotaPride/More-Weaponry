@@ -330,5 +330,8 @@
   "item.moreweaponry.melodic_essence": "Essence mélodique",
   "item.moreweaponry.reinforced_bone": "Os renforcé",
   "item.moreweaponry.explosive_essence": "Essence explosive",
-  "block.moreweaponry.suppressed_explosion": "Explosif supprimé"
+  "block.moreweaponry.suppressed_explosion": "Explosif supprimé",
+  "block.moreweaponry.intoxicated_poppy": "Coquelicot ivre",
+  "block.moreweaponry.intoxicated_dandelion": "Pissenlit ivre",
+  "block.moreweaponry.packed_watcher_cloth_block": "Bloc de tissu d'observateur emballé"
 }

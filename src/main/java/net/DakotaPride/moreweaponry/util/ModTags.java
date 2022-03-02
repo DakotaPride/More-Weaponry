@@ -16,6 +16,8 @@ public class ModTags {
         Tag.Identified<Block> sand_replaceable = SAND_REPLACEABLE_OVERWORLD;
         Tag.Identified<Block> dripstone_replaceable = DRIPSTONE_REPLACEABLE_OVERWORLD;
         Tag.Identified<Block> peplex_replaceable = PEPLEX_REPLACEABLE;
+        Tag.Identified<Block> intoxicated_plants = INTOXICATED_PLANTS;
+        Tag.Identified<Block> small_intoxicated_flowers = SMALL_INTOXICATED_FLOWERS;
     }
 
     public static void registerItemTags() {
@@ -36,6 +38,10 @@ public class ModTags {
                 createTag("dripstone_replaceable_overworld");
         public static final Tag.Identified<Block> PEPLEX_REPLACEABLE =
                 createTag("peplex_replaceable");
+        public static final Tag.Identified<Block> INTOXICATED_PLANTS =
+                createTag("intoxicated_plants");
+        public static final Tag.Identified<Block> SMALL_INTOXICATED_FLOWERS =
+                createTag("small_intoxicated_flowers");
 
         private static Tag.Identified<Block> createTag(String name) {
             return TagFactory.BLOCK.create(new Identifier(MoreWeaponry.MOD_ID, name));

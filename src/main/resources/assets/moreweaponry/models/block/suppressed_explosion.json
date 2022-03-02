@@ -2,11 +2,11 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "minecraft:block/tnt_bottom",
-		"1": "minecraft:block/tnt_side",
-		"2": "minecraft:block/tnt_top",
+		"0": "moreweaponry:block/tnt_bottom",
+		"1": "moreweaponry:block/tnt_side",
+		"2": "moreweaponry:block/tnt_top",
 		"3": "moreweaponry:block/suppressed_explosion",
-		"particle": "minecraft:block/tnt_bottom"
+		"particle": "moreweaponry:block/tnt_bottom"
 	},
 	"elements": [
 		{

@@ -1,20 +1,12 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###",
-    "#B#",
-    "###"
-  ],
-  "key": {
-    "#": {
-      "item": "moreweaponry:watcher_cloth"
-    },
-    "B": {
-      "item": "moreweaponry:endicate_staff"
-    }
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "moreweaponry:endicate_staff"
+  },
+  "addition": {
+    "item": "moreweaponry:packed_watcher_cloth_block"
   },
   "result": {
-    "item": "moreweaponry:watcher_staff",
-    "count": 1
+    "item": "moreweaponry:watcher_staff"
   }
 }

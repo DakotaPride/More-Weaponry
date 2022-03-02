@@ -326,6 +326,19 @@ public class ModBlocks {
     public static final Block SUPPRESSED_EXPLOSION = registerBlock("suppressed_explosion",
             new SuppressedExplosive(FabricBlockSettings.copy(Blocks.TNT)), ModItemGroup.MORE_WEAPONRY);
 
+    public static final Block INTOXICATED_POPPY = registerBlock("intoxicated_poppy",
+            new IntoxicatedFlowerBlock(StatusEffects.POISON, 100,
+                    FabricBlockSettings.copy(Blocks.POPPY).nonOpaque().noCollision()),
+            ModItemGroup.MORE_WEAPONRY);
+
+    public static final Block INTOXICATED_DANDELION = registerBlock("intoxicated_dandelion",
+            new IntoxicatedFlowerBlock(StatusEffects.ABSORPTION, 100,
+                    FabricBlockSettings.copy(Blocks.DANDELION).nonOpaque().noCollision()),
+            ModItemGroup.MORE_WEAPONRY);
+
+    public static final Block PACKED_WATCHER_CLOTH_BLOCK = registerBlock("packed_watcher_cloth_block",
+            new Block(FabricBlockSettings.copy(Blocks.BLACK_WOOL)), ModItemGroup.MORE_WEAPONRY);
+
 
     public static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItem(name, block, group);

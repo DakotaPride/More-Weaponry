@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "B#X",
+    "#C#",
+    "X#B"
+  ],
+  "key": {
+    "#": {
+      "item": "moreweaponry:watcher_cloth"
+    },
+    "X": {
+      "item": "minecraft:ender_eye"
+    },
+    "B": {
+      "item": "minecraft:ender_pearl"
+    },
+    "C": {
+      "item": "moreweaponry:watcher_core"
+    }
+  },
+  "result": {
+    "item": "moreweaponry:packed_watcher_cloth_block"
+  }
+}

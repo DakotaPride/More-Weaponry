@@ -330,5 +330,8 @@
   "item.moreweaponry.melodic_essence": "Melodic Essence",
   "item.moreweaponry.reinforced_bone": "Reinforced Bone",
   "item.moreweaponry.explosive_essence": "Explosive Essence",
-  "block.moreweaponry.suppressed_explosion": "Suppressed Explosive"
+  "block.moreweaponry.suppressed_explosion": "Suppressed Explosive",
+  "block.moreweaponry.intoxicated_poppy": "Intoxicated Poppy",
+  "block.moreweaponry.intoxicated_dandelion": "Intoxicated Dandelion",
+  "block.moreweaponry.packed_watcher_cloth_block": "Packed Watcher Cloth Block"
 }

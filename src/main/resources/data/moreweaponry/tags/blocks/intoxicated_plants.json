@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "moreweaponry:intoxicated_grass",
+    "moreweaponry:intoxicated_fern",
+    "moreweaponry:intoxicated_tall_grass",
+    "moreweaponry:intoxicated_large_fern",
+    "#moreweaponry:small_intoxicated_flowers"
+  ]
+}
