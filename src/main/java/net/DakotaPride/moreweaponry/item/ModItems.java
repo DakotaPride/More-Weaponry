@@ -14,6 +14,7 @@ import net.DakotaPride.moreweaponry.item.custom.mod_tools.BluestoneIgnitor;
 import net.DakotaPride.moreweaponry.item.custom.mod_tools.ModBattleaxeItem;
 import net.DakotaPride.moreweaponry.item.custom.mod_tools.ModKnifeItem;
 import net.DakotaPride.moreweaponry.item.custom.phantom_helm.PhantomScaleHelm;
+import net.DakotaPride.moreweaponry.item.custom.plagued_tools.*;
 import net.DakotaPride.moreweaponry.item.custom.powered_cores.*;
 import net.DakotaPride.moreweaponry.item.custom.suppressed_tools.*;
 import net.DakotaPride.moreweaponry.item.custom.vanilla_tools.ModHoeItem;
@@ -725,6 +726,35 @@ public class ModItems {
 
     public static final Item SUPPRESSED_ESSENCE_CIRTICT_BATTLEAXE = registerItem("suppressed_essence_cirtict_battleaxe",
             new SuppressedBattleaxe((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 15, -3.3f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+
+    public static final Item PLAGUED_ESSENCE_CIRTICT_AXE = registerItem("plagued_essence_cirtict_axe",
+            new PlaguedAxe((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 25, -3f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item PLAGUED_ESSENCE_CIRTICT_PICKAXE = registerItem("plagued_essence_cirtict_pickaxe",
+            new PlaguedPickaxe((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 7, -2.8f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item PLAGUED_ESSENCE_CIRTICT_SWORD = registerItem("plagued_essence_cirtict_sword",
+            new PlaguedSword((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 21, -2.4f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item PLAGUED_ESSENCE_CIRTICT_SHOVEL = registerItem("plagued_essence_cirtict_shovel",
+            new PlaguedShovel((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 8, -3f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item PLAGUED_ESSENCE_CIRTICT_KNIFE = registerItem("plagued_essence_cirtict_knife",
+            new PlaguedKnife((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 12, -1f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item PLAGUED_ESSENCE_CIRTICT_HOE = registerItem("plagued_essence_cirtict_hoe",
+            new PlaguedHoe((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 4, 0f,
+                    new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
+
+    public static final Item PLAGUED_ESSENCE_CIRTICT_BATTLEAXE = registerItem("plagued_essence_cirtict_battleaxe",
+            new PlaguedBattleaxe((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 15, -3.3f,
                     new FabricItemSettings().group(ModItemGroup.MORE_WEAPONRY)));
 
 

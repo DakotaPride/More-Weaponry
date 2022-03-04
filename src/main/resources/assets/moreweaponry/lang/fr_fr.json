@@ -333,5 +333,13 @@
   "block.moreweaponry.suppressed_explosion": "Explosif supprimé",
   "block.moreweaponry.intoxicated_poppy": "Coquelicot ivre",
   "block.moreweaponry.intoxicated_dandelion": "Pissenlit ivre",
-  "block.moreweaponry.packed_watcher_cloth_block": "Bloc de tissu d'observateur emballé"
+  "block.moreweaponry.packed_watcher_cloth_block": "Bloc de tissu d'observateur emballé",
+
+  "item.moreweaponry.plagued_essence_cirtict_sword": "Épée Cirtict d'Essence",
+  "item.moreweaponry.plagued_essence_cirtict_axe": "Hache de Cirtict d'Essence",
+  "item.moreweaponry.plagued_essence_cirtict_battleaxe": "Hache d'armes du Cirtict d'essence",
+  "item.moreweaponry.plagued_essence_cirtict_pickaxe": "Pioche du circuit d'essence",
+  "item.moreweaponry.plagued_essence_cirtict_hoe": "Houe Cirtict Essence",
+  "item.moreweaponry.plagued_essence_cirtict_shovel": "Pelle Cirtict Essence",
+  "item.moreweaponry.plagued_essence_cirtict_knife": "Couteau à circulation d'essence"
 }

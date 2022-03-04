@@ -333,5 +333,13 @@
   "block.moreweaponry.suppressed_explosion": "Suppressed Explosive",
   "block.moreweaponry.intoxicated_poppy": "Intoxicated Poppy",
   "block.moreweaponry.intoxicated_dandelion": "Intoxicated Dandelion",
-  "block.moreweaponry.packed_watcher_cloth_block": "Packed Watcher Cloth Block"
+  "block.moreweaponry.packed_watcher_cloth_block": "Packed Watcher Cloth Block",
+
+  "item.moreweaponry.plagued_essence_cirtict_sword": "Essence Cirtict Sword",
+  "item.moreweaponry.plagued_essence_cirtict_axe": "Essence Cirtict Axe",
+  "item.moreweaponry.plagued_essence_cirtict_pickaxe": "Essence Cirtict Pickaxe",
+  "item.moreweaponry.plagued_essence_cirtict_hoe": "Essence Cirtict Hoe",
+  "item.moreweaponry.plagued_essence_cirtict_shovel": "Essence Cirtict Shovel",
+  "item.moreweaponry.plagued_essence_cirtict_knife": "Essence Cirtict Knife",
+  "item.moreweaponry.plagued_essence_cirtict_battleaxe": "Essence Cirtict Battleaxe"
 }
