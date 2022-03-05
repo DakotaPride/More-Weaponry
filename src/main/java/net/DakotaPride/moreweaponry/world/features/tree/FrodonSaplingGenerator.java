@@ -1,6 +1,6 @@
 package net.DakotaPride.moreweaponry.world.features.tree;
 
-import net.DakotaPride.moreweaponry.world.features.ModConfiguredFeatures;
+import net.DakotaPride.moreweaponry.world.features.MoreWeaponryConfiguredFeatures;
 import net.minecraft.block.sapling.SaplingGenerator;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.TreeFeatureConfig;
@@ -16,6 +16,6 @@ public class FrodonSaplingGenerator extends SaplingGenerator {
     @Nullable
     @Override
     protected ConfiguredFeature<?, ?> getTreeFeature(Random random, boolean bees) {
-        return ModConfiguredFeatures.FRODON_TREE;
+        return MoreWeaponryConfiguredFeatures.FRODON_TREE;
     }
 }

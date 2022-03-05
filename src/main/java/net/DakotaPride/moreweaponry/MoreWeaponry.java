@@ -1,22 +1,17 @@
 package net.DakotaPride.moreweaponry;
 
-import net.DakotaPride.moreweaponry.block.ModBlocks;
-import net.DakotaPride.moreweaponry.block.ModSignTypes;
-import net.DakotaPride.moreweaponry.enchantments.ModEnchantments;
-import net.DakotaPride.moreweaponry.item.ModItems;
-import net.DakotaPride.moreweaponry.painting.ModPaintings;
-import net.DakotaPride.moreweaponry.util.ModModelPredicateProvider;
-import net.DakotaPride.moreweaponry.util.ModRegistries;
-import net.DakotaPride.moreweaponry.util.ModRendererHelper;
-import net.DakotaPride.moreweaponry.util.ModTags;
-import net.DakotaPride.moreweaponry.util.biome.ModBiomes;
-import net.DakotaPride.moreweaponry.util.structure.ModStructures;
-import net.DakotaPride.moreweaponry.world.dimension.ModPortals;
-import net.DakotaPride.moreweaponry.world.features.ModConfiguredFeatures;
-import net.DakotaPride.moreweaponry.world.gen.ModWorldGen;
+import net.DakotaPride.moreweaponry.block.MoreWeaponryBlocks;
+import net.DakotaPride.moreweaponry.enchantments.MoreWeaponryEnchantments;
+import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
+import net.DakotaPride.moreweaponry.painting.MoreWeaponryPaintings;
+import net.DakotaPride.moreweaponry.util.MoreWeaponryRegistries;
+import net.DakotaPride.moreweaponry.util.MoreWeaponryTags;
+import net.DakotaPride.moreweaponry.util.biome.MoreWeaponryBiomes;
+import net.DakotaPride.moreweaponry.util.structure.MoreWeaponryStructures;
+import net.DakotaPride.moreweaponry.world.dimension.MoreWeaponryPortals;
+import net.DakotaPride.moreweaponry.world.features.MoreWeaponryConfiguredFeatures;
+import net.DakotaPride.moreweaponry.world.gen.MoreWeaponryWorldGen;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
-import net.minecraft.client.render.RenderLayer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -29,38 +24,38 @@ public class MoreWeaponry implements ModInitializer {
 	@Override
 	public void onInitialize() {
 
-		ModConfiguredFeatures.registerConfiguredFeatures();
+		MoreWeaponryConfiguredFeatures.registerConfiguredFeatures();
 
-		ModItems.registerModItems();
-		ModBlocks.registerModBlocks();
+		MoreWeaponryItems.registerModItems();
+		MoreWeaponryBlocks.registerModBlocks();
 
-		ModEnchantments.registerModEnchantments();
+		MoreWeaponryEnchantments.registerModEnchantments();
 
 		MoreWeaponryVillagerTrades.registerTrades();
 
-		ModPaintings.registerPaintings();
+		MoreWeaponryPaintings.registerPaintings();
 
-		ModPortals.registerPortals();
+		MoreWeaponryPortals.registerMoreWeaponryPortals();
 
-		ModRegistries.registerModFeatures();
+		MoreWeaponryRegistries.registerModFeatures();
 
-		ModRegistries.registerModComposterChances();
+		MoreWeaponryRegistries.registerModComposterChances();
 
-		ModRegistries.registerStrippables();
+		MoreWeaponryRegistries.registerStrippables();
 
-		ModWorldGen.generateModWorldGen();
+		MoreWeaponryWorldGen.generateModWorldGen();
 
-		ModBiomes.registerModBiomes();
+		MoreWeaponryBiomes.registerModBiomes();
 
-		ModStructures.registerMaidenStructures();
-		ModStructures.registerPlaguedStructures();
-		ModStructures.registerSuppressedStructures();
-		ModStructures.registerWatcherStructures();
-		ModStructures.registerWretchedStructures();
+		MoreWeaponryStructures.registerMaidenStructures();
+		MoreWeaponryStructures.registerPlaguedStructures();
+		MoreWeaponryStructures.registerSuppressedStructures();
+		MoreWeaponryStructures.registerWatcherStructures();
+		MoreWeaponryStructures.registerWretchedStructures();
 
 
-		ModTags.registerItemTags();
-		ModTags.registerBlockTags();
+		MoreWeaponryTags.registerItemTags();
+		MoreWeaponryTags.registerBlockTags();
 
 	}
 

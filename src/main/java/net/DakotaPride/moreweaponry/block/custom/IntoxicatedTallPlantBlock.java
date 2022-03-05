@@ -1,6 +1,6 @@
 package net.DakotaPride.moreweaponry.block.custom;
 
-import net.DakotaPride.moreweaponry.block.ModBlocks;
+import net.DakotaPride.moreweaponry.block.MoreWeaponryBlocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.TallPlantBlock;
 import net.minecraft.util.math.BlockPos;
@@ -13,7 +13,7 @@ public class IntoxicatedTallPlantBlock extends TallPlantBlock {
 
     @Override
     public boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
-        return floor.isOf(ModBlocks.INTOXICATED_GRASS_BLOCK);
+        return floor.isOf(MoreWeaponryBlocks.INTOXICATED_GRASS_BLOCK);
     }
 
 }

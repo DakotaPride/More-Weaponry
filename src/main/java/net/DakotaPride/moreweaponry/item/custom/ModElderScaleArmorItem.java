@@ -1,12 +1,11 @@
 package net.DakotaPride.moreweaponry.item.custom;
 
 import com.google.common.collect.ImmutableMap;
-import net.DakotaPride.moreweaponry.item.ModArmorMaterial;
+import net.DakotaPride.moreweaponry.item.MoreWeaponryArmorMaterials;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
@@ -22,13 +21,12 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 import java.util.Map;
-import java.util.Random;
 
 public class ModElderScaleArmorItem extends ArmorItem {
 
     private static final Map<ArmorMaterial, StatusEffect> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, StatusEffect>())
-                    .put(ModArmorMaterial.ELDER_GUARDIAN_SCALE, StatusEffects.WATER_BREATHING).build();
+                    .put(MoreWeaponryArmorMaterials.ELDER_GUARDIAN_SCALE, StatusEffects.WATER_BREATHING).build();
 
 
     public ModElderScaleArmorItem(ArmorMaterial material, EquipmentSlot slot, Settings settings) {

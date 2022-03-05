@@ -1,6 +1,6 @@
 package net.DakotaPride.moreweaponry.mixin;
 
-import net.DakotaPride.moreweaponry.block.ModBlocks;
+import net.DakotaPride.moreweaponry.block.MoreWeaponryBlocks;
 
 import java.util.Random;
 
@@ -19,13 +19,13 @@ public abstract class MixinStructurePiece {
     @ModifyVariable(method = "addBlock", at = @At("HEAD"))
     private BlockState onaddBlock(BlockState blockState_1) {
 
-        if (blockState_1.equals(ModBlocks.CRACKED_DRIPSTONE_BLOCK.getDefaultState())) {
+        if (blockState_1.equals(MoreWeaponryBlocks.CRACKED_DRIPSTONE_BLOCK.getDefaultState())) {
             if (new Random().nextInt(12) == 0)
-                blockState_1 = ModBlocks.INFESTED_CRACKED_DRIPSTONE_BLOCK.getDefaultState();
+                blockState_1 = MoreWeaponryBlocks.INFESTED_CRACKED_DRIPSTONE_BLOCK.getDefaultState();
 
         } else if (blockState_1.equals(Blocks.DRIPSTONE_BLOCK.getDefaultState())) {
             if (new Random().nextInt(12) == 0)
-                blockState_1 = ModBlocks.INFESTED_DRIPSTONE_BLOCK.getDefaultState();
+                blockState_1 = MoreWeaponryBlocks.INFESTED_DRIPSTONE_BLOCK.getDefaultState();
         }
 
         return blockState_1;

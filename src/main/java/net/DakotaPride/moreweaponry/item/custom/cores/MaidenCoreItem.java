@@ -1,7 +1,7 @@
 package net.DakotaPride.moreweaponry.item.custom.cores;
 
-import net.DakotaPride.moreweaponry.block.ModBlocks;
-import net.DakotaPride.moreweaponry.item.ModItems;
+import net.DakotaPride.moreweaponry.block.MoreWeaponryBlocks;
+import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
@@ -43,7 +43,7 @@ public class MaidenCoreItem extends Item {
     public ActionResult useOnBlock(ItemUsageContext context) {
         BlockPos blockPos = context.getBlockPos();
         World world = context.getWorld();
-        if (world.getBlockState(blockPos).isOf(ModBlocks.CORE_FORGE)) {
+        if (world.getBlockState(blockPos).isOf(MoreWeaponryBlocks.CORE_FORGE)) {
             boolean bl = false;
             world.playSound(null, blockPos, SoundEvents.PARTICLE_SOUL_ESCAPE, SoundCategory.PLAYERS, 1.0f, 1.0f);
             PlayerEntity playerEntity = context.getPlayer();
@@ -52,7 +52,7 @@ public class MaidenCoreItem extends Item {
             if (bl) {
                 this.writeNbt(world.getRegistryKey(), blockPos, itemStack.getOrCreateNbt());
             } else {
-                ItemStack itemStack2 = new ItemStack(ModItems.POWERED_MAIDEN_MOB_CORE, 1);
+                ItemStack itemStack2 = new ItemStack(MoreWeaponryItems.POWERED_MAIDEN_MOB_CORE, 1);
                 NbtCompound nbtCompound = itemStack.hasNbt() ? itemStack.getNbt().copy() : new NbtCompound();
                 itemStack2.setNbt(nbtCompound);
                 if (!playerEntity.getAbilities().creativeMode) {

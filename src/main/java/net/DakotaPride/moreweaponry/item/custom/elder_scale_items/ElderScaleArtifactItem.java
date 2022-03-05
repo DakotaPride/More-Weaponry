@@ -1,6 +1,5 @@
 package net.DakotaPride.moreweaponry.item.custom.elder_scale_items;
 
-import net.DakotaPride.moreweaponry.item.ModItems;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
