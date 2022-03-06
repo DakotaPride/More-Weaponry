@@ -14,6 +14,7 @@ import net.DakotaPride.moreweaponry.world.gen.MoreWeaponryWorldGen;
 import net.fabricmc.api.ModInitializer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import software.bernie.geckolib3.GeckoLib;
 
 
 public class MoreWeaponry implements ModInitializer {
@@ -56,6 +57,8 @@ public class MoreWeaponry implements ModInitializer {
 
 		MoreWeaponryTags.registerItemTags();
 		MoreWeaponryTags.registerBlockTags();
+
+		GeckoLib.initialize();
 
 	}
 

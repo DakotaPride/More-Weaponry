@@ -70,6 +70,9 @@ public class MoreWeaponryTags {
         private static Tag.Identified<Item> createCommonTag(String name) {
             return TagFactory.ITEM.create(new Identifier("c", name));
         }
+
+        private static class Identified<T> {
+        }
     }
 
 }

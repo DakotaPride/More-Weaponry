@@ -4,6 +4,7 @@ import net.minecraft.entity.*;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
+import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.Packet;
 import net.minecraft.network.packet.s2c.play.EntitySpawnS2CPacket;
@@ -20,7 +21,7 @@ public class SuppressedExplosiveEntity extends TntEntity {
 
     public SuppressedExplosiveEntity(EntityType<? extends TntEntity> entityType, World world) {
         super(entityType, world);
-        this.inanimate = true;
+        this.ignoreCameraFrustum = true;
     }
 
     public SuppressedExplosiveEntity(World world, double x, double y, double z, @Nullable LivingEntity igniter) {

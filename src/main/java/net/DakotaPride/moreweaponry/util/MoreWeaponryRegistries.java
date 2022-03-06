@@ -1,7 +1,10 @@
 package net.DakotaPride.moreweaponry.util;
 
 import net.DakotaPride.moreweaponry.block.MoreWeaponryBlocks;
+import net.DakotaPride.moreweaponry.entity.MoreWeaponryEntities;
+import net.DakotaPride.moreweaponry.entity.custom.WatcherEntity;
 import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.minecraft.block.ComposterBlock;
 
@@ -10,6 +13,7 @@ public class MoreWeaponryRegistries {
     {
         registerModComposterChances();
         registerStrippables();
+        registerAttributes();
     }
 
     public static void registerModComposterChances() {
@@ -25,6 +29,10 @@ public class MoreWeaponryRegistries {
     public static void registerStrippables() {
         StrippableBlockRegistry.register(MoreWeaponryBlocks.FRODON_LOG, MoreWeaponryBlocks.STRIPPED_FRODON_LOG);
         StrippableBlockRegistry.register(MoreWeaponryBlocks.FRODON_WOOD, MoreWeaponryBlocks.STRIPPED_FRODON_WOOD);
+    }
+
+    private static void registerAttributes() {
+        FabricDefaultAttributeRegistry.register(MoreWeaponryEntities.WATCHER, WatcherEntity.setAttributes());
     }
 
 }
