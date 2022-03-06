@@ -47,10 +47,22 @@
 				{
 					"name": "legs",
 					"parent": "body",
-					"pivot": [0, 0, 0],
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "left4",
+					"parent": "legs",
+					"pivot": [2, 36.5, 0],
 					"cubes": [
-						{"origin": [-3, 0, -1], "size": [2, 37, 2], "uv": [8, 16]},
 						{"origin": [1, 0, -1], "size": [2, 37, 2], "uv": [0, 16]}
+					]
+				},
+				{
+					"name": "right4",
+					"parent": "legs",
+					"pivot": [-2, 36.5, 0],
+					"cubes": [
+						{"origin": [-3, 0, -1], "size": [2, 37, 2], "uv": [8, 16]}
 					]
 				},
 				{
