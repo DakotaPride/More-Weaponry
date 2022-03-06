@@ -13,7 +13,7 @@ public class WatcherModel extends AnimatedGeoModel<WatcherEntity> {
 
     @Override
     public Identifier getTextureLocation(WatcherEntity entity) {
-        return new Identifier(MoreWeaponry.MOD_ID, "textures/entity/watcher/raccoon.png");
+        return new Identifier(MoreWeaponry.MOD_ID, "textures/entity/watcher/watcher.png");
     }
 
     @Override

@@ -221,13 +221,13 @@ public class MoreWeaponryBlocks {
             new Block(FabricBlockSettings.of(Material.WOOD)), MoreWeaponryItemGroup.MORE_WEAPONRY);
 
     public static final Block MARE_DIAMOND_ORE = registerBlock("mare_diamond_ore",
-            new Block(FabricBlockSettings.of(Material.STONE).strength(3f)
+            new OreBlock(FabricBlockSettings.of(Material.STONE).strength(3f)
                     .sounds(BlockSoundGroup.STONE)
                     .requiresTool()
             ), MoreWeaponryItemGroup.MORE_WEAPONRY);
 
     public static final Block DEEPSLATE_MARE_DIAMOND_ORE = registerBlock("deepslate_mare_diamond_ore",
-            new Block(FabricBlockSettings.of(Material.STONE).strength(3f)
+            new OreBlock(FabricBlockSettings.of(Material.STONE).strength(3f)
                     .sounds(BlockSoundGroup.STONE)
                     .requiresTool()
             ), MoreWeaponryItemGroup.MORE_WEAPONRY);
