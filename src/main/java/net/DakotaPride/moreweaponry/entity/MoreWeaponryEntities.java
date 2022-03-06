@@ -13,5 +13,5 @@ public class MoreWeaponryEntities {
     public static final EntityType<WatcherEntity> WATCHER = Registry.register(
             Registry.ENTITY_TYPE, new Identifier(MoreWeaponry.MOD_ID, "watcher"),
             FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, WatcherEntity::new)
-                    .dimensions(EntityDimensions.fixed(0.4f, 0.3f)).build());
+                    .dimensions(EntityDimensions.fixed(1.0f, 3.0f)).build());
 }
