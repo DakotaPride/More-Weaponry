@@ -54,7 +54,6 @@ public class MoreWeaponry implements ModInitializer {
 		MoreWeaponryStructures.registerWatcherStructures();
 		MoreWeaponryStructures.registerWretchedStructures();
 
-
 		MoreWeaponryTags.registerItemTags();
 		MoreWeaponryTags.registerBlockTags();
 

@@ -1,6 +1,7 @@
 package net.DakotaPride.moreweaponry;
 
 import net.minecraft.entity.Entity;
+import net.minecraft.loot.provider.number.LootNumberProvider;
 import net.minecraft.village.TradeOffer;
 import net.minecraft.village.TradeOffers;
 import org.jetbrains.annotations.Nullable;

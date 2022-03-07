@@ -3,6 +3,7 @@ package net.DakotaPride.moreweaponry.item;
 import com.github.crimsondawn45.fabricshieldlib.lib.object.FabricShieldItem;
 import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.DakotaPride.moreweaponry.block.MoreWeaponryBlocks;
+import net.DakotaPride.moreweaponry.entity.MoreWeaponryEntities;
 import net.DakotaPride.moreweaponry.item.custom.*;
 import net.DakotaPride.moreweaponry.item.custom.cirtict.cooled.*;
 import net.DakotaPride.moreweaponry.item.custom.cirtict.essence.*;
@@ -755,6 +756,14 @@ public class MoreWeaponryItems {
 
     public static final Item PLAGUED_ESSENCE_CIRTICT_BATTLEAXE = registerItem("plagued_essence_cirtict_battleaxe",
             new PlaguedBattleaxe((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 15, -3.3f,
+                    new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+
+    public static final Item WATCHER_SPAWN_EGG = registerItem("watcher_spawn_egg",
+            new SpawnEggItem(MoreWeaponryEntities.WATCHER,0xC938FF, 0x420059,
+                    new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+
+    public static final Item LURKER_SPAWN_EGG = registerItem("lurker_spawn_egg",
+            new SpawnEggItem(MoreWeaponryEntities.LURKER,0x271A2D, 0x3B2744,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
 

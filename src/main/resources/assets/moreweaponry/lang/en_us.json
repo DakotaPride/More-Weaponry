@@ -341,5 +341,11 @@
   "item.moreweaponry.plagued_essence_cirtict_hoe": "Essence Cirtict Hoe",
   "item.moreweaponry.plagued_essence_cirtict_shovel": "Essence Cirtict Shovel",
   "item.moreweaponry.plagued_essence_cirtict_knife": "Essence Cirtict Knife",
-  "item.moreweaponry.plagued_essence_cirtict_battleaxe": "Essence Cirtict Battleaxe"
+  "item.moreweaponry.plagued_essence_cirtict_battleaxe": "Essence Cirtict Battleaxe",
+
+  "entity.moreweaponry.watcher": "Watcher",
+  "item.moreweaponry.watcher_spawn_egg": "Watcher Spawn Egg",
+
+  "entity.moreweaponry.lurker": "Lurker",
+  "item.moreweaponry.lurker_spawn_egg": "Lurker Spawn Egg"
 }
