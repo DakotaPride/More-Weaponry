@@ -339,9 +339,6 @@ public class MoreWeaponryBlocks {
     public static final Block PACKED_WATCHER_CLOTH_BLOCK = registerBlock("packed_watcher_cloth_block",
             new Block(FabricBlockSettings.copy(Blocks.BLACK_WOOL)), MoreWeaponryItemGroup.MORE_WEAPONRY);
 
-    public static final Block CORE_CREATOR = registerBlock("core_creator",
-            new Block(FabricBlockSettings.copy(Blocks.IRON_BLOCK).nonOpaque()), MoreWeaponryItemGroup.MORE_WEAPONRY);
-
 
     public static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItem(name, block, group);

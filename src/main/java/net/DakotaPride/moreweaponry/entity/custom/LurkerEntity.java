@@ -8,6 +8,7 @@ import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.mob.EndermanEntity;
+import net.minecraft.entity.mob.EndermiteEntity;
 import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.world.ServerWorld;
@@ -53,13 +54,12 @@ public class LurkerEntity extends HostileEntity implements IAnimatable {
 
     protected void initGoals() {
         this.goalSelector.add(0, new SwimGoal(this));
-        this.goalSelector.add(2, new WanderAroundPointOfInterestGoal(this, 0.75f, false));
-        this.goalSelector.add(3, new WanderAroundFarGoal(this, 0.75f, 1));
-        this.goalSelector.add(4, new LookAroundGoal(this));
-        this.goalSelector.add(5, new LookAtEntityGoal(this, PlayerEntity.class, 8.0f));
-        this.goalSelector.add(7, new MeleeAttackGoal(this, 1.0D, false));
+        this.goalSelector.add(2, new MeleeAttackGoal(this, 1.0D, false));
+        this.goalSelector.add(7, new WanderAroundFarGoal(this, 1.0D, 0.0F));
+        this.goalSelector.add(8, new LookAroundGoal(this));
 
-        this.targetSelector.add(1, new ActiveTargetGoal<>(this, PlayerEntity.class, true));
+        this.targetSelector.add(1, new ActiveTargetGoal<>(this, PlayerEntity.class, true, false));
+        this.targetSelector.add(3, new ActiveTargetGoal<>(this, EndermiteEntity.class, true, false));
     }
 
     @Nullable

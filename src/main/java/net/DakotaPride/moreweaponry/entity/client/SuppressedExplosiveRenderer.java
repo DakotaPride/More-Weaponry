@@ -43,7 +43,7 @@ public class SuppressedExplosiveRenderer extends TntEntityRenderer {
     }
 
 
-    public Identifier getTexture(TntEntity tntEntity) {
+    public Identifier getTexture(SuppressedExplosiveEntity suppressedExplosiveEntity) {
         return SpriteAtlasTexture.BLOCK_ATLAS_TEXTURE;
     }
 }
