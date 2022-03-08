@@ -30,9 +30,9 @@ public class CoreForgeScreenHandler  extends ScreenHandler {
         propertyDelegate = delegate;
 
         // Our Slots
-        this.addSlot(new Slot(inventory, 1, 86, 16));
-        this.addSlot(new Slot(inventory, 2, 86, 50));
-        this.addSlot(new MoreWeaponryResultSlot(inventory, 3, 114, 33));
+        this.addSlot(new Slot(inventory, 1, 64, 18));
+        this.addSlot(new Slot(inventory, 2, 64, 52));
+        this.addSlot(new MoreWeaponryResultSlot(inventory, 3, 92, 35));
 
         addPlayerInventory(playerInventory);
         addPlayerHotbar(playerInventory);
