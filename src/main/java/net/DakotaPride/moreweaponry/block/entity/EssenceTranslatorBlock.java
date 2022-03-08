@@ -32,8 +32,8 @@ public class EssenceTranslatorBlock extends BlockWithEntity implements BlockEnti
     public void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
         if (state.getBlock() != newState.getBlock()) {
             BlockEntity blockEntity = world.getBlockEntity(pos);
-            if (blockEntity instanceof CoreForgeEntity) {
-                ItemScatterer.spawn(world, pos, (CoreForgeEntity)blockEntity);
+            if (blockEntity instanceof EssenceTranslatorEntity) {
+                ItemScatterer.spawn(world, pos, (EssenceTranslatorEntity)blockEntity);
                 world.updateComparators(pos,this);
             }
             super.onStateReplaced(state, world, pos, newState, moved);
@@ -57,12 +57,12 @@ public class EssenceTranslatorBlock extends BlockWithEntity implements BlockEnti
     @Nullable
     @Override
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-        return new CoreForgeEntity(pos, state);
+        return new EssenceTranslatorEntity(pos, state);
     }
 
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        return checkType(type, MoreWeaponryBlockEntities.CORE_FORGE, CoreForgeEntity::tick);
+        return checkType(type, MoreWeaponryBlockEntities.ESSENCE_TRANSLATOR, EssenceTranslatorEntity::tick);
     }
 }

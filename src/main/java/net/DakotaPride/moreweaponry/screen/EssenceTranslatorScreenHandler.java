@@ -12,17 +12,17 @@ import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.slot.Slot;
 import net.minecraft.world.World;
 
-public class CoreForgeScreenHandler  extends ScreenHandler {
+public class EssenceTranslatorScreenHandler extends ScreenHandler {
     private final Inventory inventory;
     private final World world;
     private final PropertyDelegate propertyDelegate;
 
-    public CoreForgeScreenHandler(int syncId, PlayerInventory playerInventory) {
+    public EssenceTranslatorScreenHandler(int syncId, PlayerInventory playerInventory) {
         this(syncId, playerInventory, new SimpleInventory(4), new ArrayPropertyDelegate(4));
     }
 
-    public CoreForgeScreenHandler(int syncId, PlayerInventory playerInventory, Inventory inventory, PropertyDelegate delegate) {
-        super(MoreWeaponryScreenHandlers.CORE_FORGE_SCREEN_HANDLER, syncId);
+    public EssenceTranslatorScreenHandler(int syncId, PlayerInventory playerInventory, Inventory inventory, PropertyDelegate delegate) {
+        super(MoreWeaponryScreenHandlers.ESSENCE_TRANSLATOR_SCREEN_HANDLER, syncId);
         checkSize(inventory, 4);
         this.inventory = inventory;
         this.world = playerInventory.player.world;
@@ -30,9 +30,9 @@ public class CoreForgeScreenHandler  extends ScreenHandler {
         propertyDelegate = delegate;
 
         // Our Slots
-        this.addSlot(new Slot(inventory, 1, 86, 16));
-        this.addSlot(new Slot(inventory, 2, 86, 50));
-        this.addSlot(new MoreWeaponryResultSlot(inventory, 3, 114, 33));
+        this.addSlot(new Slot(inventory, 1, 41, 33));
+        this.addSlot(new Slot(inventory, 2, 78, 33));
+        this.addSlot(new MoreWeaponryResultSlot(inventory, 3, 115, 33));
 
         addPlayerInventory(playerInventory);
         addPlayerHotbar(playerInventory);

@@ -9,11 +9,11 @@ import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
-public class CoreForgeScreen extends HandledScreen<CoreForgeScreenHandler> {
+public class EssenceTranslatorScreen extends HandledScreen<EssenceTranslatorScreenHandler> {
     private static final Identifier TEXTURE =
-            new Identifier(MoreWeaponry.MOD_ID, "textures/gui/core_forge_gui.png");
+            new Identifier(MoreWeaponry.MOD_ID, "textures/gui/essence_translator_gui.png");
 
-    public CoreForgeScreen(CoreForgeScreenHandler handler, PlayerInventory inventory, Text title) {
+    public EssenceTranslatorScreen(EssenceTranslatorScreenHandler handler, PlayerInventory inventory, Text title) {
         super(handler, inventory, title);
     }
 
@@ -33,7 +33,7 @@ public class CoreForgeScreen extends HandledScreen<CoreForgeScreenHandler> {
         drawTexture(matrices, x, y, 0, 0, backgroundWidth, backgroundHeight);
 
         if(handler.isCrafting()) {
-            drawTexture(matrices, x + 84, y + 22, 176, 14, handler.getScaledProgress(), 36);
+            drawTexture(matrices, x + 60, y + 40, 176, 14, handler.getScaledProgress(), 36);
         }
     }
 

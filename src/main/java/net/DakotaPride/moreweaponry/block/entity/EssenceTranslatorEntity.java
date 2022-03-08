@@ -2,7 +2,9 @@ package net.DakotaPride.moreweaponry.block.entity;
 
 import net.DakotaPride.moreweaponry.item.inventory.ImplementedInventory;
 import net.DakotaPride.moreweaponry.recipe.CoreForgeRecipe;
+import net.DakotaPride.moreweaponry.recipe.EssenceTranslatorRecipe;
 import net.DakotaPride.moreweaponry.screen.CoreForgeScreenHandler;
+import net.DakotaPride.moreweaponry.screen.EssenceTranslatorScreenHandler;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -35,7 +37,7 @@ public class EssenceTranslatorEntity extends BlockEntity implements NamedScreenH
     private int maxFuelTime = 0;
 
     public EssenceTranslatorEntity(BlockPos pos, BlockState state) {
-        super(MoreWeaponryBlockEntities.CORE_FORGE, pos, state);
+        super(MoreWeaponryBlockEntities.ESSENCE_TRANSLATOR, pos, state);
         this.propertyDelegate = new PropertyDelegate() {
             public int get(int index) {
                 switch (index) {
@@ -75,25 +77,25 @@ public class EssenceTranslatorEntity extends BlockEntity implements NamedScreenH
     @Nullable
     @Override
     public ScreenHandler createMenu(int syncId, PlayerInventory inv, PlayerEntity player) {
-        return new CoreForgeScreenHandler(syncId, inv, this, this.propertyDelegate);
+        return new EssenceTranslatorScreenHandler(syncId, inv, this, this.propertyDelegate);
     }
 
     @Override
     protected void writeNbt(NbtCompound nbt) {
         super.writeNbt(nbt);
         Inventories.writeNbt(nbt, inventory);
-        nbt.putInt("core_forge.progress", progress);
-        nbt.putInt("core_forge.fuelTime", fuelTime);
-        nbt.putInt("core_forge.maxFuelTime", maxFuelTime);
+        nbt.putInt("essence_translator.progress", progress);
+        nbt.putInt("essence_translator.fuelTime", fuelTime);
+        nbt.putInt("essence_translator.maxFuelTime", maxFuelTime);
     }
 
     @Override
     public void readNbt(NbtCompound nbt) {
         Inventories.readNbt(nbt, inventory);
         super.readNbt(nbt);
-        progress = nbt.getInt("core_forge.progress");
-        fuelTime = nbt.getInt("core_forge.fuelTime");
-        maxFuelTime = nbt.getInt("core_forge.maxFuelTime");
+        progress = nbt.getInt("essence_translator.progress");
+        fuelTime = nbt.getInt("essence_translator.fuelTime");
+        maxFuelTime = nbt.getInt("essence_translator.maxFuelTime");
     }
 
     public static void tick(World world, BlockPos pos, BlockState state, EssenceTranslatorEntity entity) {
@@ -115,8 +117,8 @@ public class EssenceTranslatorEntity extends BlockEntity implements NamedScreenH
             inventory.setStack(i, entity.getStack(i));
         }
 
-        Optional<CoreForgeRecipe> match = world.getRecipeManager()
-                .getFirstMatch(CoreForgeRecipe.Type.INSTANCE, inventory, world);
+        Optional<EssenceTranslatorRecipe> match = world.getRecipeManager()
+                .getFirstMatch(EssenceTranslatorRecipe.Type.INSTANCE, inventory, world);
 
         return match.isPresent() && canInsertAmountIntoOutputSlot(inventory)
                 && canInsertItemIntoOutputSlot(inventory, match.get().getOutput());
@@ -129,8 +131,8 @@ public class EssenceTranslatorEntity extends BlockEntity implements NamedScreenH
             inventory.setStack(i, entity.getStack(i));
         }
 
-        Optional<CoreForgeRecipe> match = world.getRecipeManager()
-                .getFirstMatch(CoreForgeRecipe.Type.INSTANCE, inventory, world);
+        Optional<EssenceTranslatorRecipe> match = world.getRecipeManager()
+                .getFirstMatch(EssenceTranslatorRecipe.Type.INSTANCE, inventory, world);
 
         if(match.isPresent()) {
             entity.removeStack(1,1);

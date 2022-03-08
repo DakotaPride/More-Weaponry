@@ -3,6 +3,7 @@ package net.DakotaPride.moreweaponry.block;
 import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.DakotaPride.moreweaponry.block.custom.*;
 import net.DakotaPride.moreweaponry.block.entity.CoreForgeBlock;
+import net.DakotaPride.moreweaponry.block.entity.EssenceTranslatorBlock;
 import net.DakotaPride.moreweaponry.item.MoreWeaponryItemGroup;
 import net.DakotaPride.moreweaponry.item.custom.KuroPlantBlock;
 import net.DakotaPride.moreweaponry.world.features.MoreWeaponryConfiguredFeatures;
@@ -298,7 +299,7 @@ public class MoreWeaponryBlocks {
             MoreWeaponryItemGroup.MORE_WEAPONRY);
 
     public static final Block ESSENCE_TRANSLATOR = registerBlock("essence_translator",
-            new Block(FabricBlockSettings.copy(Blocks.STONE)), MoreWeaponryItemGroup.MORE_WEAPONRY);
+            new EssenceTranslatorBlock(FabricBlockSettings.copy(Blocks.STONE)), MoreWeaponryItemGroup.MORE_WEAPONRY);
 
     public static final Block CORE_FORGE = registerBlock("core_forge",
             new CoreForgeBlock(FabricBlockSettings.copy(Blocks.OBSIDIAN)), MoreWeaponryItemGroup.MORE_WEAPONRY);
