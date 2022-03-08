@@ -80,16 +80,16 @@ public class ModElderScaleArmorItem extends ArmorItem {
                 && !leggings.isEmpty() && !boots.isEmpty();
     }
 
-    private <Player> boolean hasCorrectArmorOn(ArmorMaterial material, PlayerEntity player) {
+    private boolean hasCorrectArmorOn(ArmorMaterial material, PlayerEntity player) {
         for (ItemStack armorStack: player.getInventory().armor) {
-            if(!(armorStack.getItem() instanceof ArmorItem)) {
+            if(!(armorStack.getItem() instanceof ModElderScaleArmorItem)) {
                 return true;
             }
         }
-        ArmorItem boots = ((ArmorItem)player.getInventory().getArmorStack(0).getItem());
-        ArmorItem leggings = ((ArmorItem)player.getInventory().getArmorStack(1).getItem());
-        ArmorItem breastplate = ((ArmorItem)player.getInventory().getArmorStack(2).getItem());
-        ArmorItem helmet = ((ArmorItem)player.getInventory().getArmorStack(3).getItem());
+        ModElderScaleArmorItem boots = ((ModElderScaleArmorItem)player.getInventory().getArmorStack(0).getItem());
+        ModElderScaleArmorItem leggings = ((ModElderScaleArmorItem)player.getInventory().getArmorStack(1).getItem());
+        ModElderScaleArmorItem breastplate = ((ModElderScaleArmorItem)player.getInventory().getArmorStack(2).getItem());
+        ModElderScaleArmorItem helmet = ((ModElderScaleArmorItem)player.getInventory().getArmorStack(3).getItem());
 
         return helmet.getMaterial() == material && breastplate.getMaterial() == material &&
                 leggings.getMaterial() == material && boots.getMaterial() == material;
