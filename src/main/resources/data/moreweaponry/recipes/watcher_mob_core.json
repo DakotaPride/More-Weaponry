@@ -1,20 +1,14 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    " # ",
-    "#S#",
-    " # "
-  ],
-  "key": {
-    "#": {
-      "item": "moreweaponry:watcher_cloth"
-    },
-    "S": {
+  "type": "moreweaponry:core_forge",
+  "ingredients": [
+    {
       "item": "moreweaponry:charged_mob_core"
+    },
+    {
+      "item": "moreweaponry:watcher_cloth"
     }
-  },
-  "result": {
-    "item": "moreweaponry:watcher_core",
-    "count": 1
+  ],
+  "output": {
+    "item": "moreweaponry:watcher_core"
   }
 }
