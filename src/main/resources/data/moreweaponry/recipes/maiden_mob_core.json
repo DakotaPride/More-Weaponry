@@ -1,20 +1,14 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    " # ",
-    "#S#",
-    " # "
-  ],
-  "key": {
-    "#": {
-      "item": "moreweaponry:melodic_essence"
-    },
-    "S": {
+  "type": "moreweaponry:core_forge",
+  "ingredients": [
+    {
       "item": "moreweaponry:charged_mob_core"
+    },
+    {
+      "item": "moreweaponry:melodic_essence"
     }
-  },
-  "result": {
-    "item": "moreweaponry:maiden_core",
-    "count": 1
+  ],
+  "output": {
+    "item": "moreweaponry:maiden_mob_core"
   }
 }

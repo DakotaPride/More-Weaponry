@@ -1,9 +1,11 @@
 package net.DakotaPride.moreweaponry;
 
 import net.DakotaPride.moreweaponry.block.MoreWeaponryBlocks;
+import net.DakotaPride.moreweaponry.block.entity.MoreWeaponryBlockEntities;
 import net.DakotaPride.moreweaponry.enchantments.MoreWeaponryEnchantments;
 import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
 import net.DakotaPride.moreweaponry.painting.MoreWeaponryPaintings;
+import net.DakotaPride.moreweaponry.recipe.MoreWeaponryRecipes;
 import net.DakotaPride.moreweaponry.util.MoreWeaponryRegistries;
 import net.DakotaPride.moreweaponry.util.MoreWeaponryTags;
 import net.DakotaPride.moreweaponry.util.biome.MoreWeaponryBiomes;
@@ -26,6 +28,9 @@ public class MoreWeaponry implements ModInitializer {
 	public void onInitialize() {
 
 		MoreWeaponryConfiguredFeatures.registerConfiguredFeatures();
+
+		MoreWeaponryBlockEntities.registerMoreWeaponryBlockEntities();
+		MoreWeaponryRecipes.registerMoreWeaponryRecipes();
 
 		MoreWeaponryItems.registerModItems();
 		MoreWeaponryBlocks.registerModBlocks();

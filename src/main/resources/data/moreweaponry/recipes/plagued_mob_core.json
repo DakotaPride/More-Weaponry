@@ -1,20 +1,14 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    " # ",
-    "#S#",
-    " # "
-  ],
-  "key": {
-    "#": {
-      "item": "moreweaponry:leeching_essence"
-    },
-    "S": {
+  "type": "moreweaponry:core_forge",
+  "ingredients": [
+    {
       "item": "moreweaponry:charged_mob_core"
+    },
+    {
+      "item": "moreweaponry:leeching_essence"
     }
-  },
-  "result": {
-    "item": "moreweaponry:plagued_core",
-    "count": 1
+  ],
+  "output": {
+    "item": "moreweaponry:plagued_mob_core"
   }
 }
