@@ -26,5 +26,7 @@ public class MoreWeaponryRendererHelper {
         BlockRenderLayerMap.INSTANCE.putBlock(MoreWeaponryBlocks.INTOXICATED_POPPY, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(MoreWeaponryBlocks.INTOXICATED_DANDELION, RenderLayer.getCutout());
 
+        BlockRenderLayerMap.INSTANCE.putBlock(MoreWeaponryBlocks.WRETCHED_SKULL, RenderLayer.getCutout());
+
     }
 }

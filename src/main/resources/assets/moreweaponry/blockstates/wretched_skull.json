@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "moreweaponry:block/wretched_skull" },
+    "facing=east": { "model": "moreweaponry:block/wretched_skull", "y": 90 },
+    "facing=south": { "model": "moreweaponry:block/wretched_skull", "y": 180 },
+    "facing=west": { "model": "moreweaponry:block/wretched_skull", "y": 270 }
+  }
+}

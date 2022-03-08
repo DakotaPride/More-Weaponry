@@ -341,5 +341,13 @@
   "item.moreweaponry.plagued_essence_cirtict_pickaxe": "Pioche du circuit d'essence",
   "item.moreweaponry.plagued_essence_cirtict_hoe": "Houe Cirtict Essence",
   "item.moreweaponry.plagued_essence_cirtict_shovel": "Pelle Cirtict Essence",
-  "item.moreweaponry.plagued_essence_cirtict_knife": "Couteau à circulation d'essence"
+  "item.moreweaponry.plagued_essence_cirtict_knife": "Couteau à circulation d'essence",
+
+  "entity.moreweaponry.watcher": "Observatrice",
+  "item.moreweaponry.watcher_spawn_egg": "Œuf d'apparition de l'observateur",
+  "entity.moreweaponry.lurker": "Rôdeuse",
+  "item.moreweaponry.lurker_spawn_egg": "Oeuf d'apparition de rôdeur",
+  "entity.moreweaponry.wretched": "Misérable",
+  "item.moreweaponry.wretched_spawn_egg": "Oeuf de spawn misérable",
+  "block.moreweaponry.wretched_skull": "Crâne misérable"
 }

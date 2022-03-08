@@ -2,6 +2,7 @@ package net.DakotaPride.moreweaponry.block;
 
 import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.DakotaPride.moreweaponry.block.custom.*;
+import net.DakotaPride.moreweaponry.block.entity.CoreForgeBlock;
 import net.DakotaPride.moreweaponry.item.MoreWeaponryItemGroup;
 import net.DakotaPride.moreweaponry.item.custom.KuroPlantBlock;
 import net.DakotaPride.moreweaponry.world.features.MoreWeaponryConfiguredFeatures;
@@ -338,6 +339,10 @@ public class MoreWeaponryBlocks {
 
     public static final Block PACKED_WATCHER_CLOTH_BLOCK = registerBlock("packed_watcher_cloth_block",
             new Block(FabricBlockSettings.copy(Blocks.BLACK_WOOL)), MoreWeaponryItemGroup.MORE_WEAPONRY);
+
+    public static final Block WRETCHED_SKULL = registerBlock("wretched_skull",
+            new WretchedSkullBlock(FabricBlockSettings.copy(Blocks.PLAYER_HEAD).nonOpaque()),
+            MoreWeaponryItemGroup.MORE_WEAPONRY);
 
 
     public static Block registerBlock(String name, Block block, ItemGroup group) {

@@ -33,7 +33,7 @@ public class CoreForgeScreen extends HandledScreen<CoreForgeScreenHandler> {
         drawTexture(matrices, x, y, 0, 0, backgroundWidth, backgroundHeight);
 
         if(handler.isCrafting()) {
-            drawTexture(matrices, x + 84, y + 22, 176, 14, handler.getScaledProgress(), 36);
+            drawTexture(matrices, x + 64, y + 22, 176, 14, handler.getScaledProgress(), 36);
         }
     }
 

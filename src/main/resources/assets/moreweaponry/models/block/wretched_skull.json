@@ -1,0 +1,64 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [32, 32],
+	"textures": {
+		"0": "moreweaponry:block/wretched_skull",
+		"particle": "moreweaponry:block/wretched_skull"
+	},
+	"elements": [
+		{
+			"from": [4, 0, 4],
+			"to": [12, 8, 12],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 4, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 4, 4], "texture": "#0"},
+				"east": {"uv": [0, 4, 4, 8], "texture": "#0"},
+				"south": {"uv": [4, 0, 8, 4], "texture": "#0"},
+				"west": {"uv": [4, 4, 8, 8], "texture": "#0"},
+				"up": {"uv": [4, 12, 0, 8], "texture": "#0"},
+				"down": {"uv": [12, 0, 8, 4], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [2.5, 25.24, -11.3],
+			"translation": [-0.75, 1, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [2.5, 25.24, -11.3],
+			"translation": [-0.75, 1, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"firstperson_righthand": {
+			"translation": [-1, 2.25, 2.75]
+		},
+		"firstperson_lefthand": {
+			"translation": [-1, 2.25, 2.75]
+		},
+		"ground": {
+			"translation": [0, 2.25, 1.25],
+			"scale": [0.6, 0.6, 0.6]
+		},
+		"gui": {
+			"rotation": [-154.49, -42.21, -179.7],
+			"translation": [0, 3.25, 0]
+		},
+		"head": {
+			"translation": [0, 7, 0],
+			"scale": [1.81055, 1.81055, 1.81055]
+		},
+		"fixed": {
+			"translation": [0, 4.75, 0]
+		}
+	},
+	"groups": [
+		{
+			"name": "VoxelShapes",
+			"origin": [8, 4, 8],
+			"color": 0,
+			"children": [0]
+		}
+	]
+}

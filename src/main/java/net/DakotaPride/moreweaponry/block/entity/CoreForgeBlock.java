@@ -1,4 +1,4 @@
-package net.DakotaPride.moreweaponry.block;
+package net.DakotaPride.moreweaponry.block.entity;
 
 import net.DakotaPride.moreweaponry.block.entity.CoreForgeEntity;
 import net.DakotaPride.moreweaponry.block.entity.MoreWeaponryBlockEntities;
