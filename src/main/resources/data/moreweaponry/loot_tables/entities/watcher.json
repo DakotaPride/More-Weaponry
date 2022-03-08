@@ -1,10 +1,54 @@
 {
+  "type": "minecraft:entity",
   "pools": [
     {
       "rolls": 1,
       "entries": [
         {
           "type": "minecraft:item",
+          "weight": 20,
+          "name": "minecraft:ender_pearl",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 0,
+                "max": 1
+              },
+              "add": false,
+              "conditions": [
+                {
+                  "condition": "minecraft:killed_by_player",
+                  "inverse": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 40,
+          "name": "minecraft:ender_eye",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 0,
+                "max": 2
+              },
+              "add": false,
+              "conditions": [
+                {
+                  "condition": "minecraft:killed_by_player",
+                  "inverse": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 10,
           "name": "moreweaponry:watcher_cloth",
           "functions": [
             {
@@ -12,48 +56,14 @@
               "count": {
                 "min": 0,
                 "max": 1
-              }
-            }
-          ]
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:killed_by_player"
-        }
-      ]
-    },
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:ender_pearl",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 0,
-                "max": 2
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:ender_eye",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 0,
-                "max": 1
-              }
+              },
+              "add": false,
+              "conditions": [
+                {
+                  "condition": "minecraft:killed_by_player",
+                  "inverse": false
+                }
+              ]
             }
           ]
         }
