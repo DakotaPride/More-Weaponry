@@ -1,0 +1,14 @@
+{
+  "type": "moreweaponry:core_forge",
+  "ingredients": [
+    {
+      "item": "moreweaponry:watcher_core"
+    },
+    {
+      "item": "moreweaponry:packed_watcher_cloth_block"
+    }
+  ],
+  "output": {
+    "item": "moreweaponry:powered_watcher_mob_core"
+  }
+}
