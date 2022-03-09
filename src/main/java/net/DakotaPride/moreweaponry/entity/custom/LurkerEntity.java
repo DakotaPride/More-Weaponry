@@ -80,64 +80,6 @@ public class LurkerEntity extends HostileEntity implements IAnimatable {
         return true;
     }
 
-    protected void mobTick() {
-        if (this.world.isDay() && this.age >= this.ageWhenTargetSet + 600) {
-            float f = getBrightnessAtEyes();
-            if (f > 0.5F &&
-                    this.world.isSkyVisible(getBlockPos()) && this.random.nextFloat() * 30.0F < (f - 0.4F) * 2.0F) {
-                setTarget((LivingEntity)null);
-                teleportRandomly();
-            }
-        }
-
-
-        super.mobTick();
-    }
-
-    protected boolean teleportRandomly() {
-        if (this.world.isClient() || !isAlive()) {
-            return false;
-        }
-
-        double d = getX() + (this.random.nextDouble() - 0.5D) * 64.0D;
-        double e = getY() + (this.random.nextInt(64) - 32);
-        double f = getZ() + (this.random.nextDouble() - 0.5D) * 64.0D;
-        return teleportTo(d, e, f);
-    }
-
-    boolean teleportTo(Entity entity) {
-        Vec3d vec3d = new Vec3d(getX() - entity.getX(), getBodyY(0.5D) - entity.getEyeY(), getZ() - entity.getZ());
-        vec3d = vec3d.normalize();
-        double d = 16.0D;
-        double e = getX() + (this.random.nextDouble() - 0.5D) * 8.0D - vec3d.x * 16.0D;
-        double f = getY() + (this.random.nextInt(16) - 8) - vec3d.y * 16.0D;
-        double g = getZ() + (this.random.nextDouble() - 0.5D) * 8.0D - vec3d.z * 16.0D;
-        return teleportTo(e, f, g);
-    }
-
-    private boolean teleportTo(double x, double y, double z) {
-        BlockPos.Mutable mutable = new BlockPos.Mutable(x, y, z);
-        while (mutable.getY() > this.world.getBottomY() && !this.world.getBlockState(mutable).getMaterial().blocksMovement()) {
-            mutable.move(Direction.DOWN);
-        }
-        BlockState blockState = this.world.getBlockState(mutable);
-        boolean bl = blockState.getMaterial().blocksMovement();
-        boolean bl2 = blockState.getFluidState().isIn(FluidTags.WATER);
-        if (!bl || bl2) {
-            return false;
-        }
-
-        boolean bl3 = teleport(x, y, z, true);
-        if (bl3 &&
-                !isSilent()) {
-            this.world.playSound((PlayerEntity)null, this.prevX, this.prevY, this.prevZ, SoundEvents.ENTITY_ENDERMAN_TELEPORT, getSoundCategory(), 1.0F, 1.0F);
-            playSound(SoundEvents.ENTITY_ENDERMAN_TELEPORT, 1.0F, 1.0F);
-        }
-
-
-        return bl3;
-    }
-
     protected int getXpToDrop(PlayerEntity player) {
         if (isBaby()) {
             this.experiencePoints = (int)(this.experiencePoints * 24.0F);

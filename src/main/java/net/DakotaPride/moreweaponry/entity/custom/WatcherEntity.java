@@ -9,6 +9,7 @@ import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.ai.pathing.PathNodeType;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.boss.ServerBossBar;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.mob.EndermiteEntity;
 import net.minecraft.entity.mob.HostileEntity;
@@ -16,6 +17,8 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.text.LiteralText;
+import net.minecraft.text.Text;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
@@ -26,17 +29,25 @@ import software.bernie.geckolib3.core.controller.AnimationController;
 import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
+import net.minecraft.entity.boss.BossBar.Color;
+import net.minecraft.entity.boss.BossBar.Style;
 
 public class WatcherEntity extends HostileEntity implements IAnimatable {
+    private final ServerBossBar bossBar;
     private AnimationFactory factory = new AnimationFactory(this);
     public WatcherEntity(EntityType<? extends HostileEntity> entityType, World world) {
         super(entityType, world);
         this.ignoreCameraFrustum = true;
         this.stepHeight = 1.0F;
+        this.bossBar = (ServerBossBar)(new ServerBossBar(this.getDisplayName((LiteralText) getDisplayName()), Color.PURPLE, Style.PROGRESS)).setDarkenSky(false);
 
 
         setPathfindingPenalty(PathNodeType.WATER, -1.0F);
 
+    }
+
+    private LiteralText getDisplayName(LiteralText name) {
+        return new LiteralText("The Watcher");
     }
 
     public static DefaultAttributeContainer.Builder setAttributes() {
