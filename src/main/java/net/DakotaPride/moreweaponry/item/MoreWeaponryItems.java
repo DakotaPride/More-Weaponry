@@ -249,13 +249,13 @@ public class MoreWeaponryItems {
             new ModElderScaleArmorItem(MoreWeaponryArmorMaterials.ELDER_GUARDIAN_SCALE, EquipmentSlot.HEAD,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
     public static final Item ELDER_GUARDIAN_SCALE_CHESTPLATE = registerItem("elder_guardian_scale_chestplate",
-            new ModElderScaleArmorItem(MoreWeaponryArmorMaterials.ELDER_GUARDIAN_SCALE, EquipmentSlot.CHEST,
+            new ArmorItem(MoreWeaponryArmorMaterials.ELDER_GUARDIAN_SCALE, EquipmentSlot.CHEST,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
     public static final Item ELDER_GUARDIAN_SCALE_LEGGINGS = registerItem("elder_guardian_scale_leggings",
-            new ModElderScaleArmorItem(MoreWeaponryArmorMaterials.ELDER_GUARDIAN_SCALE, EquipmentSlot.LEGS,
+            new ArmorItem(MoreWeaponryArmorMaterials.ELDER_GUARDIAN_SCALE, EquipmentSlot.LEGS,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
     public static final Item ELDER_GUARDIAN_SCALE_BOOTS = registerItem("elder_guardian_scale_boots",
-            new ModElderScaleArmorItem(MoreWeaponryArmorMaterials.ELDER_GUARDIAN_SCALE, EquipmentSlot.FEET,
+            new ArmorItem(MoreWeaponryArmorMaterials.ELDER_GUARDIAN_SCALE, EquipmentSlot.FEET,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item ELDER_GUARDIAN_SCALE_SWORD = registerItem("elder_guardian_scale_sword",
