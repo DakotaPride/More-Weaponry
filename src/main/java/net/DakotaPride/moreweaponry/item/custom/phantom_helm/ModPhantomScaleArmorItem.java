@@ -16,10 +16,10 @@ import net.minecraft.world.World;
 import java.util.Map;
 
 public class ModPhantomScaleArmorItem extends ModPhantomScaleArmorItemTwo {
-
-    private static final Map<ArmorMaterial, StatusEffect> MATERIAL_TO_EFFECT_MAP =
-            (new ImmutableMap.Builder<ArmorMaterial, StatusEffect>())
-                    .put(MoreWeaponryArmorMaterials.PHANTOM_SCALE, StatusEffects.SLOW_FALLING).build();
+    private static final Map<ArmorMaterial, StatusEffectInstance> MATERIAL_TO_EFFECT_MAP =
+            (new ImmutableMap.Builder<ArmorMaterial, StatusEffectInstance>())
+                    .put(MoreWeaponryArmorMaterials.PHANTOM_SCALE,
+                            new StatusEffectInstance(StatusEffects.SLOW_FALLING, 100, 0)).build();
 
 
     public ModPhantomScaleArmorItem(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
@@ -43,9 +43,9 @@ public class ModPhantomScaleArmorItem extends ModPhantomScaleArmorItemTwo {
 
 
     private void evaluateArmorEffects(PlayerEntity player) {
-        for (Map.Entry<ArmorMaterial, StatusEffect> entry : MATERIAL_TO_EFFECT_MAP.entrySet()) {
+        for (Map.Entry<ArmorMaterial, StatusEffectInstance> entry : MATERIAL_TO_EFFECT_MAP.entrySet()) {
             ArmorMaterial mapArmorMaterial = entry.getKey();
-            StatusEffect mapStatusEffect = entry.getValue();
+            StatusEffectInstance mapStatusEffect = entry.getValue();
 
             if(hasCorrectArmorOn(mapArmorMaterial, player)) {
                 addStatusEffectForMaterial(player, mapArmorMaterial, mapStatusEffect);
@@ -54,12 +54,12 @@ public class ModPhantomScaleArmorItem extends ModPhantomScaleArmorItemTwo {
     }
 
 
-    private void addStatusEffectForMaterial(PlayerEntity player, ArmorMaterial mapArmorMaterial, StatusEffect mapStatusEffect) {
-        boolean hasPlayerEffect = player.hasStatusEffect(mapStatusEffect);
+    private void addStatusEffectForMaterial(PlayerEntity player, ArmorMaterial mapArmorMaterial, StatusEffectInstance mapStatusEffect) {
+        boolean hasPlayerEffect = player.hasStatusEffect(mapStatusEffect.getEffectType());
 
         if(hasCorrectArmorOn(mapArmorMaterial, player) && !hasPlayerEffect) {
-            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect, 1, 2));
-
+            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect.getEffectType(),
+                    mapStatusEffect.getDuration(), mapStatusEffect.getAmplifier()));
         }
     }
 

@@ -1,11 +1,13 @@
 package net.DakotaPride.moreweaponry.item.custom;
 
 import com.google.common.collect.ImmutableMap;
+import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.DakotaPride.moreweaponry.item.MoreWeaponryArmorMaterials;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
@@ -23,11 +25,10 @@ import java.util.List;
 import java.util.Map;
 
 public class ModElderScaleArmorItem extends ArmorItem {
-
-    private static final Map<ArmorMaterial, StatusEffect> MATERIAL_TO_EFFECT_MAP =
-            (new ImmutableMap.Builder<ArmorMaterial, StatusEffect>())
-                    .put(MoreWeaponryArmorMaterials.ELDER_GUARDIAN_SCALE, StatusEffects.WATER_BREATHING).build();
-
+    private static final Map<ArmorMaterial, StatusEffectInstance> MATERIAL_TO_EFFECT_MAP =
+            (new ImmutableMap.Builder<ArmorMaterial, StatusEffectInstance>())
+                    .put(MoreWeaponryArmorMaterials.ELDER_GUARDIAN_SCALE,
+                            new StatusEffectInstance(StatusEffects.WATER_BREATHING, 100, 0)).build();
 
     public ModElderScaleArmorItem(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
         super(material, slot, settings);
@@ -48,11 +49,10 @@ public class ModElderScaleArmorItem extends ArmorItem {
         super.inventoryTick(stack, world, entity, slot, selected);
     }
 
-
     private void evaluateArmorEffects(PlayerEntity player) {
-        for (Map.Entry<ArmorMaterial, StatusEffect> entry : MATERIAL_TO_EFFECT_MAP.entrySet()) {
+        for (Map.Entry<ArmorMaterial, StatusEffectInstance> entry : MATERIAL_TO_EFFECT_MAP.entrySet()) {
             ArmorMaterial mapArmorMaterial = entry.getKey();
-            StatusEffect mapStatusEffect = entry.getValue();
+            StatusEffectInstance mapStatusEffect = entry.getValue();
 
             if(hasCorrectArmorOn(mapArmorMaterial, player)) {
                 addStatusEffectForMaterial(player, mapArmorMaterial, mapStatusEffect);
@@ -60,13 +60,16 @@ public class ModElderScaleArmorItem extends ArmorItem {
         }
     }
 
-
-    private void addStatusEffectForMaterial(PlayerEntity player, ArmorMaterial mapArmorMaterial, StatusEffect mapStatusEffect) {
-        boolean hasPlayerEffect = player.hasStatusEffect(mapStatusEffect);
+    private void addStatusEffectForMaterial(PlayerEntity player, ArmorMaterial mapArmorMaterial, StatusEffectInstance mapStatusEffect) {
+        boolean hasPlayerEffect = player.hasStatusEffect(mapStatusEffect.getEffectType());
 
         if(hasCorrectArmorOn(mapArmorMaterial, player) && !hasPlayerEffect) {
-            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect, 200));
+            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect.getEffectType(),
+                    mapStatusEffect.getDuration(), mapStatusEffect.getAmplifier()));
 
+            // if(new Random().nextFloat() > 0.6f) { // 40% of damaging the armor! Possibly!
+            //     player.getInventory().damageArmor(DamageSource.MAGIC, 1f, new int[]{0, 1, 2, 3});
+            // }
         }
     }
 
@@ -80,20 +83,22 @@ public class ModElderScaleArmorItem extends ArmorItem {
                 && !leggings.isEmpty() && !boots.isEmpty();
     }
 
-    private boolean hasCorrectArmorOn(ArmorMaterial material, PlayerEntity player) {
+    private  boolean hasCorrectArmorOn(ArmorMaterial material, PlayerEntity player) {
         for (ItemStack armorStack: player.getInventory().armor) {
-            if(!(armorStack.getItem() instanceof ModElderScaleArmorItem)) {
-                return true;
+            if(!(armorStack.getItem() instanceof ArmorItem)) {
+                return false;
             }
         }
-        ModElderScaleArmorItem boots = ((ModElderScaleArmorItem)player.getInventory().getArmorStack(0).getItem());
-        ModElderScaleArmorItem leggings = ((ModElderScaleArmorItem)player.getInventory().getArmorStack(1).getItem());
-        ModElderScaleArmorItem breastplate = ((ModElderScaleArmorItem)player.getInventory().getArmorStack(2).getItem());
-        ModElderScaleArmorItem helmet = ((ModElderScaleArmorItem)player.getInventory().getArmorStack(3).getItem());
+
+        ArmorItem boots = ((ArmorItem)player.getInventory().getArmorStack(0).getItem());
+        ArmorItem leggings = ((ArmorItem)player.getInventory().getArmorStack(1).getItem());
+        ArmorItem breastplate = ((ArmorItem)player.getInventory().getArmorStack(2).getItem());
+        ArmorItem helmet = ((ArmorItem)player.getInventory().getArmorStack(3).getItem());
 
         return helmet.getMaterial() == material && breastplate.getMaterial() == material &&
                 leggings.getMaterial() == material && boots.getMaterial() == material;
     }
+
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
