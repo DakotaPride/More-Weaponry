@@ -1,5 +1,5 @@
 {
-  "type": "moreweaponry:core_forge",
+  "type": "moreweaponry:essence_translator",
   "ingredients": [
     {
       "item": "moreweaponry:charged_mob_core"

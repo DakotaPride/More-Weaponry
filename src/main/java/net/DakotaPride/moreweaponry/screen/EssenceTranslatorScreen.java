@@ -33,7 +33,7 @@ public class EssenceTranslatorScreen extends HandledScreen<EssenceTranslatorScre
         drawTexture(matrices, x, y, 0, 0, backgroundWidth, backgroundHeight);
 
         if(handler.isCrafting()) {
-            drawTexture(matrices, x + 60, y + 40, 176, 14, handler.getScaledProgress(), 36);
+            drawTexture(matrices, x + 60, y + 23, 176, 14, handler.getScaledProgress(), 36);
         }
     }
 

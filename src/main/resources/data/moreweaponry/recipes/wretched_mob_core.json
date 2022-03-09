@@ -1,14 +1,14 @@
 {
-  "type": "moreweaponry:core_forge",
+  "type": "moreweaponry:essence_translator",
   "ingredients": [
     {
-      "item": "moreweaponry:wretched_core"
+      "item": "moreweaponry:charged_mob_core"
     },
     {
-      "item": "moreweaponry:wretched_skull"
+      "item": "moreweaponry:wretched_essence"
     }
   ],
   "output": {
-    "item": "moreweaponry:powered_wretched_mob_core"
+    "item": "moreweaponry:wretched_core"
   }
 }
