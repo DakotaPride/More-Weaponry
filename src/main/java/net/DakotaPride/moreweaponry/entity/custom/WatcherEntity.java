@@ -17,8 +17,6 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.text.LiteralText;
-import net.minecraft.text.Text;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
@@ -39,15 +37,11 @@ public class WatcherEntity extends HostileEntity implements IAnimatable {
         super(entityType, world);
         this.ignoreCameraFrustum = true;
         this.stepHeight = 1.0F;
-        this.bossBar = (ServerBossBar)(new ServerBossBar(this.getDisplayName((LiteralText) getDisplayName()), Color.PURPLE, Style.PROGRESS)).setDarkenSky(false);
+        this.bossBar = (ServerBossBar)(new ServerBossBar(this.getDisplayName(), Color.PURPLE, Style.PROGRESS)).setDarkenSky(false);
 
 
         setPathfindingPenalty(PathNodeType.WATER, -1.0F);
 
-    }
-
-    private LiteralText getDisplayName(LiteralText name) {
-        return new LiteralText("The Watcher");
     }
 
     public static DefaultAttributeContainer.Builder setAttributes() {
