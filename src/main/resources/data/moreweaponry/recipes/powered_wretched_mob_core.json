@@ -1,0 +1,14 @@
+{
+  "type": "moreweaponry:core_forge",
+  "ingredients": [
+    {
+      "item": "moreweaponry:wretched_core"
+    },
+    {
+      "item": "moreweaponry:wretched_skull"
+    }
+  ],
+  "output": {
+    "item": "moreweaponry:powered_wretched_mob_core"
+  }
+}

@@ -563,7 +563,7 @@ public class MoreWeaponryItems {
             new SuppressedCoreItem(new FabricItemSettings().maxCount(1).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item MOB_CORE = registerItem("mob_core",
-            new CoreForgeActivatorItem(new FabricItemSettings().maxCount(1).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+            new EmptyCoreItem(new FabricItemSettings().maxCount(1).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item CHARGED_MOB_CORE = registerItem("charged_mob_core",
             new ChargedMobCoreItem(new FabricItemSettings().maxCount(1).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));

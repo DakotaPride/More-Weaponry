@@ -39,43 +39,12 @@ public class WretchedCoreItem extends Item {
         return TypedActionResult.success(playerEntity.getStackInHand(hand));
     }
 
-    @Override
-    public ActionResult useOnBlock(ItemUsageContext context) {
-        BlockPos blockPos = context.getBlockPos();
-        World world = context.getWorld();
-        if (world.getBlockState(blockPos).isOf(MoreWeaponryBlocks.CORE_FORGE)) {
-            boolean bl = false;
-            world.playSound(null, blockPos, SoundEvents.PARTICLE_SOUL_ESCAPE, SoundCategory.PLAYERS, 1.0f, 1.0f);
-            PlayerEntity playerEntity = context.getPlayer();
-            ItemStack itemStack = context.getStack();
-
-            if (bl) {
-                this.writeNbt(world.getRegistryKey(), blockPos, itemStack.getOrCreateNbt());
-            } else {
-                ItemStack itemStack2 = new ItemStack(MoreWeaponryItems.POWERED_WRETCHED_MOB_CORE, 1);
-                NbtCompound nbtCompound = itemStack.hasNbt() ? itemStack.getNbt().copy() : new NbtCompound();
-                itemStack2.setNbt(nbtCompound);
-                if (!playerEntity.getAbilities().creativeMode) {
-                    itemStack.decrement(1);
-                }
-                this.writeNbt(world.getRegistryKey(), blockPos, nbtCompound);
-                if (!playerEntity.getInventory().insertStack(itemStack2)) {
-                    playerEntity.dropItem(itemStack2, false);
-                }
-            }
-            return ActionResult.success(world.isClient);
-        }
-        return super.useOnBlock(context);
-    }
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         tooltip.add( new LiteralText("Wretched").formatted(Formatting.DARK_RED));
     }
 
-    private void writeNbt(RegistryKey<World> registryKey, BlockPos blockPos, NbtCompound nbtCompound) {
-
-    }
 
     @Override
     public boolean hasGlint(ItemStack stack) {

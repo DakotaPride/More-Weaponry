@@ -345,6 +345,10 @@ public class MoreWeaponryBlocks {
             new WretchedSkullBlock(FabricBlockSettings.copy(Blocks.PLAYER_HEAD).nonOpaque()),
             MoreWeaponryItemGroup.MORE_WEAPONRY);
 
+    public static final Block WATCHER_SKULL = registerBlock("watcher_skull",
+            new WatcherSkullBlock(FabricBlockSettings.copy(Blocks.PLAYER_HEAD).nonOpaque()),
+            MoreWeaponryItemGroup.MORE_WEAPONRY);
+
 
     public static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItem(name, block, group);
