@@ -26,10 +26,11 @@ public class WandererEntity extends HostileEntity implements IAnimatable {
 
     public static DefaultAttributeContainer.Builder setAttributes() {
         return HostileEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_MAX_HEALTH, 450.0D)
-                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 16.0f)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.3f)
-                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 72.0D);
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, 1200.0D)
+                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 36.0f)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.37)
+                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 186.0D)
+                .add(EntityAttributes.GENERIC_ATTACK_SPEED, 0.92f);
     }
 
     protected void initGoals() {

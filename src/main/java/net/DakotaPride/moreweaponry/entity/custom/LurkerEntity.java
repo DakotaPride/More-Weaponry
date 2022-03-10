@@ -45,48 +45,53 @@ public class LurkerEntity extends HostileEntity implements IAnimatable {
 
     public static DefaultAttributeContainer.Builder setAttributes() {
         return HostileEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_MAX_HEALTH, 450.0D)
-                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 16.0f)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.3f)
-                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 72.0D)
-                .add(EntityAttributes.GENERIC_ATTACK_SPEED, 0.8f);
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, 850.0D)
+                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 22.0f)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.31f)
+                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 84.0D)
+                .add(EntityAttributes.GENERIC_ATTACK_SPEED, 0.85f);
     }
 
     protected void initGoals() {
         this.goalSelector.add(0, new SwimGoal(this));
-        this.goalSelector.add(2, new MeleeAttackGoal(this, 1.0D, false));
-        this.goalSelector.add(7, new WanderAroundFarGoal(this, 1.0D, 0.0F));
-        this.goalSelector.add(8, new LookAroundGoal(this));
+        this.goalSelector.add(1, new MeleeAttackGoal(this, 1.0D, false));
+        this.goalSelector.add(3, new WanderAroundFarGoal(this, 1.0D, 0.0F));
+        this.goalSelector.add(4, new LookAroundGoal(this));
 
-        this.targetSelector.add(2, new ActiveTargetGoal<>(this, PlayerEntity.class, true, false));
-        this.targetSelector.add(2, new ActiveTargetGoal<>(this, SpiderEntity.class, true, false));
-        this.targetSelector.add(2, new ActiveTargetGoal<>(this, CaveSpiderEntity.class, true, false));
-        this.targetSelector.add(2, new ActiveTargetGoal<>(this, ZombieEntity.class, true, false));
-        this.targetSelector.add(2, new ActiveTargetGoal<>(this, HuskEntity.class, true, false));
-        this.targetSelector.add(2, new ActiveTargetGoal<>(this, DrownedEntity.class, true, false));
-        this.targetSelector.add(2, new ActiveTargetGoal<>(this, SkeletonEntity.class, true, false));
-        this.targetSelector.add(2, new ActiveTargetGoal<>(this, StrayEntity.class, true, false));
-        this.targetSelector.add(2, new ActiveTargetGoal<>(this, SkeletonHorseEntity.class, true, false));
-        this.targetSelector.add(2, new ActiveTargetGoal<>(this, HorseEntity.class, true, false));
-        this.targetSelector.add(2, new ActiveTargetGoal<>(this, MuleEntity.class, true, false));
-        this.targetSelector.add(2, new ActiveTargetGoal<>(this, PillagerEntity.class, true, false));
-        this.targetSelector.add(2, new ActiveTargetGoal<>(this, EvokerEntity.class, true, false));
-        this.targetSelector.add(2, new ActiveTargetGoal<>(this, RavagerEntity.class, true, false));
-        this.targetSelector.add(2, new ActiveTargetGoal<>(this, VexEntity.class, true, false));
-        this.targetSelector.add(2, new ActiveTargetGoal<>(this, PigEntity.class, true, false));
-        this.targetSelector.add(2, new ActiveTargetGoal<>(this, PiglinEntity.class, true, false));
-        this.targetSelector.add(2, new ActiveTargetGoal<>(this, ZombifiedPiglinEntity.class, true, false));
-        this.targetSelector.add(2, new ActiveTargetGoal<>(this, HoglinEntity.class, true, false));
-        this.targetSelector.add(2, new ActiveTargetGoal<>(this, CowEntity.class, true, false));
-        this.targetSelector.add(2, new ActiveTargetGoal<>(this, SheepEntity.class, true, false));
-        this.targetSelector.add(2, new ActiveTargetGoal<>(this, CreeperEntity.class, true, false));
-        this.targetSelector.add(2, new ActiveTargetGoal<>(this, RabbitEntity.class, true, false));
-        this.targetSelector.add(2, new ActiveTargetGoal<>(this, PolarBearEntity.class, true, false));
-        this.targetSelector.add(2, new ActiveTargetGoal<>(this, FoxEntity.class, true, false));
-        this.targetSelector.add(2, new ActiveTargetGoal<>(this, BatEntity.class, true, false));
-      //  this.targetSelector.add(2, new ActiveTargetGoal<>(this, WardenEntity.class, true, false));
-        this.targetSelector.add(2, new ActiveTargetGoal<>(this, GuardianEntity.class, true, false));
-        this.targetSelector.add(2, new ActiveTargetGoal<>(this, ElderGuardianEntity.class, true, false));
+        this.targetSelector.add(5, new ActiveTargetGoal<>(this, PlayerEntity.class, true, false));
+        this.targetSelector.add(6, new ActiveTargetGoal<>(this, SpiderEntity.class, true, false));
+        this.targetSelector.add(7, new ActiveTargetGoal<>(this, CaveSpiderEntity.class, true, false));
+        this.targetSelector.add(8, new ActiveTargetGoal<>(this, ZombieEntity.class, true, false));
+        this.targetSelector.add(9, new ActiveTargetGoal<>(this, HuskEntity.class, true, false));
+        this.targetSelector.add(10, new ActiveTargetGoal<>(this, DrownedEntity.class, true, false));
+        this.targetSelector.add(11, new ActiveTargetGoal<>(this, SkeletonEntity.class, true, false));
+        this.targetSelector.add(12, new ActiveTargetGoal<>(this, StrayEntity.class, true, false));
+        this.targetSelector.add(13, new ActiveTargetGoal<>(this, SkeletonHorseEntity.class, true, false));
+        this.targetSelector.add(14, new ActiveTargetGoal<>(this, HorseEntity.class, true, false));
+        this.targetSelector.add(15, new ActiveTargetGoal<>(this, MuleEntity.class, true, false));
+        this.targetSelector.add(16, new ActiveTargetGoal<>(this, PillagerEntity.class, true, false));
+        this.targetSelector.add(17, new ActiveTargetGoal<>(this, EvokerEntity.class, true, false));
+        this.targetSelector.add(18, new ActiveTargetGoal<>(this, RavagerEntity.class, true, false));
+        this.targetSelector.add(19, new ActiveTargetGoal<>(this, VexEntity.class, true, false));
+        this.targetSelector.add(20, new ActiveTargetGoal<>(this, PigEntity.class, true, false));
+        this.targetSelector.add(21, new ActiveTargetGoal<>(this, PiglinEntity.class, true, false));
+        this.targetSelector.add(22, new ActiveTargetGoal<>(this, ZombifiedPiglinEntity.class, true, false));
+        this.targetSelector.add(23, new ActiveTargetGoal<>(this, HoglinEntity.class, true, false));
+        this.targetSelector.add(24, new ActiveTargetGoal<>(this, CowEntity.class, true, false));
+        this.targetSelector.add(25, new ActiveTargetGoal<>(this, SheepEntity.class, true, false));
+        this.targetSelector.add(26, new ActiveTargetGoal<>(this, CreeperEntity.class, true, false));
+        this.targetSelector.add(27, new ActiveTargetGoal<>(this, RabbitEntity.class, true, false));
+        this.targetSelector.add(28, new ActiveTargetGoal<>(this, PolarBearEntity.class, true, false));
+        this.targetSelector.add(29, new ActiveTargetGoal<>(this, FoxEntity.class, true, false));
+        this.targetSelector.add(30, new ActiveTargetGoal<>(this, BatEntity.class, true, false));
+      //  this.targetSelector.add(31, new ActiveTargetGoal<>(this, WardenEntity.class, true, false));
+        this.targetSelector.add(32, new ActiveTargetGoal<>(this, GuardianEntity.class, true, false));
+        this.targetSelector.add(33, new ActiveTargetGoal<>(this, ElderGuardianEntity.class, true, false));
+        this.targetSelector.add(34, new ActiveTargetGoal<>(this, OcelotEntity.class, true, false));
+        this.targetSelector.add(35, new ActiveTargetGoal<>(this, CatEntity.class, true, false));
+        this.targetSelector.add(36, new ActiveTargetGoal<>(this, WolfEntity.class, true, false));
+        this.targetSelector.add(34, new ActiveTargetGoal<>(this, ZombieHorseEntity.class, true, false));
+        this.targetSelector.add(34, new ActiveTargetGoal<>(this, PandaEntity.class, true, false));
     }
 
     public boolean hurtByWater() {
