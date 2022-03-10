@@ -48,7 +48,8 @@ public class LurkerEntity extends HostileEntity implements IAnimatable {
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, 450.0D)
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 16.0f)
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.3f)
-                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 72.0D);
+                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 72.0D)
+                .add(EntityAttributes.GENERIC_ATTACK_SPEED, 0.8f);
     }
 
     protected void initGoals() {
@@ -57,65 +58,35 @@ public class LurkerEntity extends HostileEntity implements IAnimatable {
         this.goalSelector.add(7, new WanderAroundFarGoal(this, 1.0D, 0.0F));
         this.goalSelector.add(8, new LookAroundGoal(this));
 
-        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, PlayerEntity.class));
-        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, SpiderEntity.class));
-        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, CaveSpiderEntity.class));
-        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, ZombieEntity.class));
-        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, HuskEntity.class));
-        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, DrownedEntity.class));
-        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, SkeletonEntity.class));
-        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, StrayEntity.class));
-        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, SkeletonHorseEntity.class));
-        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, HorseEntity.class));
-        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, MuleEntity.class));
-        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, PillagerEntity.class));
-        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, EvokerEntity.class));
-        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, RavagerEntity.class));
-        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, VexEntity.class));
-        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, PigEntity.class));
-        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, PiglinEntity.class));
-        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, ZombifiedPiglinEntity.class));
-        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, HoglinEntity.class));
-        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, CowEntity.class));
-        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, SheepEntity.class));
-        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, CreeperEntity.class));
-        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, RabbitEntity.class));
-        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, PolarBearEntity.class));
-        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, FoxEntity.class));
-        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, BatEntity.class));
-      //  this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, WardenEntity.class));
-        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, GuardianEntity.class));
-        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, ElderGuardianEntity.class));
-    }
-
-    private static class TargetGoal<T extends LivingEntity> extends ActiveTargetGoal<T> {
-        public TargetGoal(LurkerEntity lurkerEntity, Class<T> targetEntityClass) {
-            super(lurkerEntity, targetEntityClass, true);
-        }
-
-
-        public boolean canStart() {
-            float f = this.mob.getBrightnessAtEyes();
-            if (f >= 0.5F) {
-                return false;
-            }
-
-            return super.canStart();
-        }
-    }
-
-    @Nullable
-    public UUID getAngryAt() {
-        return this.targetUuid;
-    }
-
-    public void playAngrySound() {
-        if (this.age >= this.lastAngrySoundAge + 400) {
-            this.lastAngrySoundAge = this.age;
-            if (!isSilent()) {
-                this.world.playSound(getX(), getEyeY(), getZ(), SoundEvents.ENTITY_ENDERMAN_STARE, getSoundCategory(), 2.5F, 1.0F, true);
-            }
-        }
+        this.targetSelector.add(2, new ActiveTargetGoal<>(this, PlayerEntity.class, true, false));
+        this.targetSelector.add(2, new ActiveTargetGoal<>(this, SpiderEntity.class, true, false));
+        this.targetSelector.add(2, new ActiveTargetGoal<>(this, CaveSpiderEntity.class, true, false));
+        this.targetSelector.add(2, new ActiveTargetGoal<>(this, ZombieEntity.class, true, false));
+        this.targetSelector.add(2, new ActiveTargetGoal<>(this, HuskEntity.class, true, false));
+        this.targetSelector.add(2, new ActiveTargetGoal<>(this, DrownedEntity.class, true, false));
+        this.targetSelector.add(2, new ActiveTargetGoal<>(this, SkeletonEntity.class, true, false));
+        this.targetSelector.add(2, new ActiveTargetGoal<>(this, StrayEntity.class, true, false));
+        this.targetSelector.add(2, new ActiveTargetGoal<>(this, SkeletonHorseEntity.class, true, false));
+        this.targetSelector.add(2, new ActiveTargetGoal<>(this, HorseEntity.class, true, false));
+        this.targetSelector.add(2, new ActiveTargetGoal<>(this, MuleEntity.class, true, false));
+        this.targetSelector.add(2, new ActiveTargetGoal<>(this, PillagerEntity.class, true, false));
+        this.targetSelector.add(2, new ActiveTargetGoal<>(this, EvokerEntity.class, true, false));
+        this.targetSelector.add(2, new ActiveTargetGoal<>(this, RavagerEntity.class, true, false));
+        this.targetSelector.add(2, new ActiveTargetGoal<>(this, VexEntity.class, true, false));
+        this.targetSelector.add(2, new ActiveTargetGoal<>(this, PigEntity.class, true, false));
+        this.targetSelector.add(2, new ActiveTargetGoal<>(this, PiglinEntity.class, true, false));
+        this.targetSelector.add(2, new ActiveTargetGoal<>(this, ZombifiedPiglinEntity.class, true, false));
+        this.targetSelector.add(2, new ActiveTargetGoal<>(this, HoglinEntity.class, true, false));
+        this.targetSelector.add(2, new ActiveTargetGoal<>(this, CowEntity.class, true, false));
+        this.targetSelector.add(2, new ActiveTargetGoal<>(this, SheepEntity.class, true, false));
+        this.targetSelector.add(2, new ActiveTargetGoal<>(this, CreeperEntity.class, true, false));
+        this.targetSelector.add(2, new ActiveTargetGoal<>(this, RabbitEntity.class, true, false));
+        this.targetSelector.add(2, new ActiveTargetGoal<>(this, PolarBearEntity.class, true, false));
+        this.targetSelector.add(2, new ActiveTargetGoal<>(this, FoxEntity.class, true, false));
+        this.targetSelector.add(2, new ActiveTargetGoal<>(this, BatEntity.class, true, false));
+      //  this.targetSelector.add(2, new ActiveTargetGoal<>(this, WardenEntity.class, true, false));
+        this.targetSelector.add(2, new ActiveTargetGoal<>(this, GuardianEntity.class, true, false));
+        this.targetSelector.add(2, new ActiveTargetGoal<>(this, ElderGuardianEntity.class, true, false));
     }
 
     public boolean hurtByWater() {
