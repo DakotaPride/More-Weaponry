@@ -2,6 +2,7 @@ package net.DakotaPride.moreweaponry.entity;
 
 import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.DakotaPride.moreweaponry.entity.custom.LurkerEntity;
+import net.DakotaPride.moreweaponry.entity.custom.WandererEntity;
 import net.DakotaPride.moreweaponry.entity.custom.WatcherEntity;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.minecraft.entity.EntityDimensions;
@@ -19,4 +20,8 @@ public class MoreWeaponryEntities {
             Registry.ENTITY_TYPE, new Identifier(MoreWeaponry.MOD_ID, "lurker"),
             FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, LurkerEntity::new)
                     .dimensions(EntityDimensions.fixed(0.7f, 1.9f)).build());
+    public static final EntityType<WandererEntity> WANDERER = Registry.register(
+            Registry.ENTITY_TYPE, new Identifier(MoreWeaponry.MOD_ID, "wanderer"),
+            FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, WandererEntity::new)
+                    .dimensions(EntityDimensions.fixed(1.8f, 2.3f)).build());
 }
