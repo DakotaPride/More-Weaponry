@@ -38,6 +38,11 @@
 					]
 				},
 				{
+					"name": "bone",
+					"parent": "head",
+					"pivot": [0, 26, 0]
+				},
+				{
 					"name": "arms",
 					"parent": "body2",
 					"pivot": [0, 24, 0],

@@ -7,9 +7,8 @@ import net.minecraft.entity.ai.pathing.PathNodeType;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
-import net.minecraft.entity.mob.EndermanEntity;
-import net.minecraft.entity.mob.EndermiteEntity;
-import net.minecraft.entity.mob.HostileEntity;
+import net.minecraft.entity.mob.*;
+import net.minecraft.entity.passive.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
@@ -58,8 +57,51 @@ public class LurkerEntity extends HostileEntity implements IAnimatable {
         this.goalSelector.add(7, new WanderAroundFarGoal(this, 1.0D, 0.0F));
         this.goalSelector.add(8, new LookAroundGoal(this));
 
-        this.targetSelector.add(1, new ActiveTargetGoal<>(this, PlayerEntity.class, true, false));
-        this.targetSelector.add(3, new ActiveTargetGoal<>(this, EndermiteEntity.class, true, false));
+        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, PlayerEntity.class));
+        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, SpiderEntity.class));
+        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, CaveSpiderEntity.class));
+        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, ZombieEntity.class));
+        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, HuskEntity.class));
+        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, DrownedEntity.class));
+        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, SkeletonEntity.class));
+        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, StrayEntity.class));
+        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, SkeletonHorseEntity.class));
+        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, HorseEntity.class));
+        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, MuleEntity.class));
+        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, PillagerEntity.class));
+        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, EvokerEntity.class));
+        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, RavagerEntity.class));
+        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, VexEntity.class));
+        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, PigEntity.class));
+        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, PiglinEntity.class));
+        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, ZombifiedPiglinEntity.class));
+        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, HoglinEntity.class));
+        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, CowEntity.class));
+        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, SheepEntity.class));
+        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, CreeperEntity.class));
+        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, RabbitEntity.class));
+        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, PolarBearEntity.class));
+        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, FoxEntity.class));
+        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, BatEntity.class));
+      //  this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, WardenEntity.class));
+        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, GuardianEntity.class));
+        this.targetSelector.add(2, new LurkerEntity.TargetGoal<>(this, ElderGuardianEntity.class));
+    }
+
+    private static class TargetGoal<T extends LivingEntity> extends ActiveTargetGoal<T> {
+        public TargetGoal(LurkerEntity lurkerEntity, Class<T> targetEntityClass) {
+            super(lurkerEntity, targetEntityClass, true);
+        }
+
+
+        public boolean canStart() {
+            float f = this.mob.getBrightnessAtEyes();
+            if (f >= 0.5F) {
+                return false;
+            }
+
+            return super.canStart();
+        }
     }
 
     @Nullable
