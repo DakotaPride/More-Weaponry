@@ -1,12 +1,20 @@
 {
-  "type": "minecraft:smithing",
-  "base": {
-    "item": "moreweaponry:mob_core"
-  },
-  "addition": {
-    "tag": "c:essence"
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#S#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "tag": "c:essence"
+    },
+    "S": {
+      "item": "moreweaponry:mob_core"
+    }
   },
   "result": {
-    "item": "moreweaponry:charged_mob_core"
+    "item": "moreweaponry:charged_mob_core",
+    "count": 1
   }
 }

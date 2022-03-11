@@ -47,7 +47,7 @@ public class LurkerEntity extends HostileEntity implements IAnimatable {
         return HostileEntity.createMobAttributes()
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, 850.0D)
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 22.0f)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.31f)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.22f)
                 .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 84.0D)
                 .add(EntityAttributes.GENERIC_ATTACK_SPEED, 0.85f);
     }
