@@ -6,7 +6,33 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "weight": 20,
+          "weight": 1,
+          "name": "moreweaponry:watcher_core",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 0,
+                "max": 1
+              },
+              "add": false,
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance_with_looting",
+                  "chance": 0.007,
+                  "looting_multiplier": 0.035
+                },
+                {
+                  "condition": "minecraft:killed_by_player",
+                  "inverse": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 40,
           "name": "minecraft:ender_pearl",
           "functions": [
             {
@@ -27,7 +53,7 @@
         },
         {
           "type": "minecraft:item",
-          "weight": 40,
+          "weight": 50,
           "name": "minecraft:ender_eye",
           "functions": [
             {
@@ -48,7 +74,7 @@
         },
         {
           "type": "minecraft:item",
-          "weight": 10,
+          "weight": 30,
           "name": "moreweaponry:watcher_cloth",
           "functions": [
             {
