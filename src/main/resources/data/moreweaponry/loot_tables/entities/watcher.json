@@ -19,8 +19,8 @@
               "conditions": [
                 {
                   "condition": "minecraft:random_chance_with_looting",
-                  "chance": 0.007,
-                  "looting_multiplier": 0.035
+                  "chance": 0.000019,
+                  "looting_multiplier": 0.025
                 },
                 {
                   "condition": "minecraft:killed_by_player",
@@ -44,6 +44,11 @@
               "add": false,
               "conditions": [
                 {
+                  "condition": "minecraft:random_chance_with_looting",
+                  "chance": 0.092,
+                  "looting_multiplier": 0.01
+                },
+                {
                   "condition": "minecraft:killed_by_player",
                   "inverse": false
                 }
@@ -65,6 +70,11 @@
               "add": false,
               "conditions": [
                 {
+                  "condition": "minecraft:random_chance_with_looting",
+                  "chance": 0.0063,
+                  "looting_multiplier": 0.01
+                },
+                {
                   "condition": "minecraft:killed_by_player",
                   "inverse": false
                 }
@@ -85,6 +95,11 @@
               },
               "add": false,
               "conditions": [
+                {
+                  "condition": "minecraft:random_chance_with_looting",
+                  "chance": 0.000073,
+                  "looting_multiplier": 0.015
+                },
                 {
                   "condition": "minecraft:killed_by_player",
                   "inverse": false

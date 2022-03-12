@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "moreweaponry:block/wanderer_skull" },
+    "facing=east": { "model": "moreweaponry:block/wanderer_skull", "y": 90 },
+    "facing=south": { "model": "moreweaponry:block/wanderer_skull", "y": 180 },
+    "facing=west": { "model": "moreweaponry:block/wanderer_skull", "y": 270 }
+  }
+}

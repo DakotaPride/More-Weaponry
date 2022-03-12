@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "item": "moreweaponry:watcher_skull"
+    },
+    "title": "Cut Throat",
+    "description": "Defeat The Watcher",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "moreweaponry:moreweaponry",
+  "criteria": {
+    "moreweaponry:watcher": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "moreweaponry:watcher"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    }
+  }
+}
