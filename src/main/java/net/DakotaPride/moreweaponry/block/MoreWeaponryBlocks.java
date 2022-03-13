@@ -341,11 +341,11 @@ public class MoreWeaponryBlocks {
     public static final Block PACKED_WATCHER_CLOTH_BLOCK = registerBlock("packed_watcher_cloth_block",
             new Block(FabricBlockSettings.copy(Blocks.BLACK_WOOL)), MoreWeaponryItemGroup.MORE_WEAPONRY);
 
-    public static final Block WANDERER_SKULL = registerBlockWithoutBlockItem("wanderer_skull",
+    public static final Block WANDERER_SKULL = registerBlock("wanderer_skull",
             new WandererSkullBlock(FabricBlockSettings.copy(Blocks.PLAYER_HEAD).nonOpaque()),
             MoreWeaponryItemGroup.MORE_WEAPONRY);
 
-    public static final Block WATCHER_SKULL = registerBlockWithoutBlockItem("watcher_skull",
+    public static final Block WATCHER_SKULL = registerBlock("watcher_skull",
             new WatcherSkullBlock(FabricBlockSettings.copy(Blocks.PLAYER_HEAD).nonOpaque()),
             MoreWeaponryItemGroup.MORE_WEAPONRY);
 

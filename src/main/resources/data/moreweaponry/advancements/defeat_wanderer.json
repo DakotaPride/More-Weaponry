@@ -1,16 +1,16 @@
 {
   "display": {
     "icon": {
-      "item": "moreweaponry:watcher_skull"
+      "item": "moreweaponry:wanderer_skull"
     },
-    "title": "Cut Throat",
-    "description": "Defeat The Watcher",
+    "title": "Arachnophobia",
+    "description": "Defeat The Wanderer",
     "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": true
   },
-  "parent": "moreweaponry:defeat_wanderer",
+  "parent": "moreweaponry:moreweaponry",
   "criteria": {
     "moreweaponry:watcher": {
       "trigger": "minecraft:player_killed_entity",
@@ -19,7 +19,7 @@
           {
             "condition": "minecraft:entity_properties",
             "predicate": {
-              "type": "moreweaponry:watcher"
+              "type": "moreweaponry:wanderer"
             },
             "entity": "this"
           }
