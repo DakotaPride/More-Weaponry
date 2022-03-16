@@ -1,5 +1,8 @@
 {
   "variants": {
-    "": { "model": "moreweaponry:block/watcher_skull" }
+    "facing=north": { "model": "moreweaponry:block/watcher_skull_north" },
+    "facing=east": { "model": "moreweaponry:block/watcher_skull_east"},
+    "facing=south": { "model": "moreweaponry:block/watcher_skull_south"},
+    "facing=west": { "model": "moreweaponry:block/watcher_skull_west"}
   }
 }

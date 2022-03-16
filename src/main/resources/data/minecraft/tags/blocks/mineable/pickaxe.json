@@ -36,6 +36,10 @@
     "moreweaponry:infested_dripstone_block",
     "moreweaponry:essence_translator",
     "moreweaponry:core_forge",
-    "moreweaponry:peplex_nylium"
+    "moreweaponry:peplex_nylium",
+    "moreweaponry:intoxicated_stone",
+    "moreweaponry:watcher_summoner",
+    "moreweaponry:wanderer_summoner",
+    "moreweaponry:crackler_summoner"
   ]
 }

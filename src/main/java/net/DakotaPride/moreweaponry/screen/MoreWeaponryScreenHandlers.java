@@ -12,4 +12,7 @@ public class MoreWeaponryScreenHandlers {
     public static ScreenHandlerType<EssenceTranslatorScreenHandler> ESSENCE_TRANSLATOR_SCREEN_HANDLER =
             ScreenHandlerRegistry.registerSimple(new Identifier(MoreWeaponry.MOD_ID, "essence_translator"),
                     EssenceTranslatorScreenHandler::new);
+    public static ScreenHandlerType<CirtictForgeScreenHandler> CIRTICT_FORGE_SCREEN_HANDLER =
+            ScreenHandlerRegistry.registerSimple(new Identifier(MoreWeaponry.MOD_ID, "cirtict_forge"),
+                    CirtictForgeScreenHandler::new);
 }

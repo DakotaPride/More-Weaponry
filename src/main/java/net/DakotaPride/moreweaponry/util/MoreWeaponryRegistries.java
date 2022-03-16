@@ -2,6 +2,7 @@ package net.DakotaPride.moreweaponry.util;
 
 import net.DakotaPride.moreweaponry.block.MoreWeaponryBlocks;
 import net.DakotaPride.moreweaponry.entity.MoreWeaponryEntities;
+import net.DakotaPride.moreweaponry.entity.custom.CracklerEntity;
 import net.DakotaPride.moreweaponry.entity.custom.LurkerEntity;
 import net.DakotaPride.moreweaponry.entity.custom.WandererEntity;
 import net.DakotaPride.moreweaponry.entity.custom.WatcherEntity;
@@ -37,6 +38,7 @@ public class MoreWeaponryRegistries {
         FabricDefaultAttributeRegistry.register(MoreWeaponryEntities.WATCHER, WatcherEntity.setAttributes());
         FabricDefaultAttributeRegistry.register(MoreWeaponryEntities.LURKER, LurkerEntity.setAttributes());
         FabricDefaultAttributeRegistry.register(MoreWeaponryEntities.WANDERER, WandererEntity.setAttributes());
+        FabricDefaultAttributeRegistry.register(MoreWeaponryEntities.CRACKLER, CracklerEntity.setAttributes());
     }
 
 }
