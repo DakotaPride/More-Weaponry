@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "summoner",
+  "pattern": [
+    "@#@",
+    "#S#",
+    "@#@"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:gunpowder"
+    },
+    "#": [
+      {
+        "item": "minecraft:sand"
+      },
+      {
+        "item": "minecraft:red_sand"
+      }
+    ],
+    "@": {
+      "item": "minecraft:gravel"
+    }
+  },
+  "result": {
+    "item": "moreweaponry:crackler_summoner",
+    "count": 1
+  }
+}

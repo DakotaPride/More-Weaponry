@@ -1,0 +1,64 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "moreweaponry:entity/crackler/crackler",
+		"particle": "moreweaponry:entity/crackler/crackler"
+	},
+	"elements": [
+		{
+			"name": "head",
+			"from": [4, 0, 4],
+			"to": [12, 8, 12],
+			"faces": {
+				"north": {"uv": [2, 2, 4, 4], "texture": "#0"},
+				"east": {"uv": [0, 2, 2, 4], "texture": "#0"},
+				"south": {"uv": [6, 2, 8, 4], "texture": "#0"},
+				"west": {"uv": [4, 2, 6, 4], "texture": "#0"},
+				"up": {"uv": [4, 2, 2, 0], "texture": "#0"},
+				"down": {"uv": [6, 0, 4, 2], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [66.28, 19.05, 21.68],
+			"translation": [-1.5, 0.75, 1.25],
+			"scale": [0.3, 0.3, 0.3]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [66.28, 19.05, 21.68],
+			"translation": [-1.5, 0.75, 1.25],
+			"scale": [0.3, 0.3, 0.3]
+		},
+		"firstperson_righthand": {
+			"translation": [0, 1.25, 0.5]
+		},
+		"firstperson_lefthand": {
+			"translation": [0, 1.25, 0.5]
+		},
+		"ground": {
+			"translation": [0, 0.25, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"gui": {
+			"rotation": [-154.08, 45.3, -179.96],
+			"translation": [0, 3, 0],
+			"scale": [0.8, 0.8, 0.8]
+		},
+		"head": {
+			"translation": [0, 7, 0],
+			"scale": [1.6875, 1.6875, 1.6875]
+		},
+		"fixed": {
+			"translation": [0, 4, 0]
+		}
+	},
+	"groups": [
+		{
+			"name": "VoxelShapes",
+			"origin": [0, 18, 0],
+			"color": 0,
+			"children": [0]
+		}
+	]
+}

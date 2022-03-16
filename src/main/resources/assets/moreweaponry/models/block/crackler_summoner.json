@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "particle": "minecraft:block/tnt_side",
+    "north": "moreweaponry:block/crackler_summoner",
+    "south": "moreweaponry:block/crackler_summoner",
+    "east": "moreweaponry:block/crackler_summoner",
+    "west": "moreweaponry:block/crackler_summoner",
+    "up": "minecraft:block/tnt_top",
+    "down": "minecraft:block/tnt_bottom"
+  }
+}
