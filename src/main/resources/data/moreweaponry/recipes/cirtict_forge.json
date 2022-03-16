@@ -1,0 +1,15 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:smithing_table"
+    },
+    {
+      "item": "moreweaponry:cirtict_ingot"
+    }
+  ],
+  "result": {
+    "item": "moreweaponry:cirtict_forge",
+    "count": 1
+  }
+}
