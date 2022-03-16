@@ -348,6 +348,13 @@
   "entity.moreweaponry.lurker": "Rôdeuse",
   "item.moreweaponry.lurker_spawn_egg": "Oeuf d'apparition de rôdeur",
   "entity.moreweaponry.wretched": "Misérable",
-  "item.moreweaponry.wretched_spawn_egg": "Oeuf de spawn misérable",
-  "block.moreweaponry.wretched_skull": "Crâne misérable"
+  "block.moreweaponry.wretched_skull": "Crâne misérable",
+  "block.moreweaponry.watcher_skull": "Watcher Skull",
+  "block.moreweaponry.watcher_summoner": "Watcher Summoning Table",
+  "item.moreweaponry.wanderer_spawn_egg": "Wanderer Spawn Egg",
+  "item.moreweaponry.wanderer_helmet": "Wanderer Mask",
+  "item.moreweaponry.wanderer_chestplate": "Wanderer Chestplate",
+  "entity.moreweaponry.crackler": "Crackler",
+  "item.moreweaponry.crackler_spawn_egg": "Crackler Spawn Egg",
+  "block.moreweaponry.crackler_skull": "Crackler Skull"
 }

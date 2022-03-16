@@ -274,7 +274,7 @@
   "item.moreweaponry.suppressed_core": "Mob Core ",
   "item.moreweaponry.plagued_core": "Mob Core ",
   "item.moreweaponry.maiden_core": "Mob Core ",
-  "item.moreweaponry.wretched_essence": "Wretched Essence",
+  "item.moreweaponry.wretched_essence": "Wanderer Essence",
   "item.moreweaponry.mob_core": "Mob Core ",
   "block.moreweaponry.essence_translator": "Essence Translator ",
   "block.moreweaponry.core_forge": "Mob Core Forge ",
@@ -315,7 +315,7 @@
   "item.moreweaponry.watcher_helmet": "Watcher Hood",
   "item.moreweaponry.watcher_chestplate": "Watcher Cloak",
   "item.moreweaponry.watcher_staff": "Watcher Staff",
-  "item.moreweaponry.maidens_stem_bow": "Maiden's Stem Bow",
+  "item.moreweaponry.maidens_stem_bow": "Bard's Stem Bow",
 
 
   "block.moreweaponry.intoxicated_stone": "Intoxicated Stone",
@@ -326,11 +326,11 @@
   "block.moreweaponry.intoxicated_grass": "Intoxicated Grass",
   "item.moreweaponry.wither_bone_meal": "Wither Bone Meal",
   "item.moreweaponry.watcher_cloth": "Watcher Cloth",
-  "item.moreweaponry.maiden_stem": "Maiden Stem",
+  "item.moreweaponry.maiden_stem": "Bard Stem",
   "item.moreweaponry.melodic_essence": "Melodic Essence",
   "item.moreweaponry.reinforced_bone": "Reinforced Bone",
   "item.moreweaponry.explosive_essence": "Explosive Essence",
-  "block.moreweaponry.suppressed_explosion": "Suppressed Explosive",
+  "block.moreweaponry.suppressed_explosion": "Crackled Explosive",
   "block.moreweaponry.intoxicated_poppy": "Intoxicated Poppy",
   "block.moreweaponry.intoxicated_dandelion": "Intoxicated Dandelion",
   "block.moreweaponry.packed_watcher_cloth_block": "Packed Watcher Cloth Block",
@@ -345,12 +345,23 @@
 
   "entity.moreweaponry.watcher": "Watcher",
   "item.moreweaponry.watcher_spawn_egg": "Watcher Spawn Egg",
+  "block.moreweaponry.watcher_skull": "Watcher Skull",
+  "block.moreweaponry.watcher_summoner": "Watcher Summoning Table",
 
   "entity.moreweaponry.lurker": "Lurker",
   "item.moreweaponry.lurker_spawn_egg": "Lurker Spawn Egg",
 
 
-  "entity.moreweaponry.wretched": "Wretched",
-  "item.moreweaponry.wretched_spawn_egg": "Wretched Spawn Egg",
-  "block.moreweaponry.wretched_skull": "Wretched Skull"
+  "entity.moreweaponry.wretched": "Wanderer",
+  "item.moreweaponry.wanderer_spawn_egg": "Wanderer Spawn Egg",
+  "block.moreweaponry.wretched_skull": "Wanderer Skull",
+  "item.moreweaponry.wanderer_helmet": "Wanderer Mask",
+  "item.moreweaponry.wanderer_chestplate": "Wanderer Chestplate",
+  "block.moreweaponry.wanderer_summoner": "Wanderer Summoning Table",
+
+
+  "entity.moreweaponry.crackler": "Crackler",
+  "item.moreweaponry.crackler_spawn_egg": "Crackler Spawn Egg",
+  "block.moreweaponry.crackler_skull": "Crackler Skull",
+  "block.moreweaponry.crackler_summoner": "Crackler Summoning Table"
 }
