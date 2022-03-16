@@ -31,8 +31,8 @@ public class EssenceTranslatorScreenHandler extends ScreenHandler {
 
         // Our Slots
         this.addSlot(new Slot(inventory, 1, 41, 33));
-        this.addSlot(new Slot(inventory, 2, 78, 33));
-        this.addSlot(new MoreWeaponryResultSlot(inventory, 3, 115, 33));
+        this.addSlot(new MoreWeaponryResultSlot(inventory, 3, 78, 33));
+        this.addSlot(new Slot(inventory, 2, 115, 33));
 
         addPlayerInventory(playerInventory);
         addPlayerHotbar(playerInventory);
@@ -47,7 +47,7 @@ public class EssenceTranslatorScreenHandler extends ScreenHandler {
     public int getScaledProgress() {
         int progress = this.propertyDelegate.get(0);
         int maxProgress = this.propertyDelegate.get(1);  // Max Progress
-        int progressArrowSize = 53; // This is the width in pixels of your arrow
+        int progressArrowSize = 106; // This is the width in pixels of your arrow
 
         return maxProgress != 0 && progress != 0 ? progress * progressArrowSize / maxProgress : 0;
     }

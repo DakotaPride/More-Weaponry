@@ -2,8 +2,12 @@ package net.DakotaPride.moreweaponry.block;
 
 import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.DakotaPride.moreweaponry.block.custom.*;
+import net.DakotaPride.moreweaponry.block.entity.CirtictForgeBlock;
 import net.DakotaPride.moreweaponry.block.entity.CoreForgeBlock;
 import net.DakotaPride.moreweaponry.block.entity.EssenceTranslatorBlock;
+import net.DakotaPride.moreweaponry.block.skulls.CracklerSkullBlock;
+import net.DakotaPride.moreweaponry.block.skulls.WandererSkullBlock;
+import net.DakotaPride.moreweaponry.block.skulls.WatcherSkullBlock;
 import net.DakotaPride.moreweaponry.item.MoreWeaponryItemGroup;
 import net.DakotaPride.moreweaponry.item.custom.KuroPlantBlock;
 import net.DakotaPride.moreweaponry.world.features.MoreWeaponryConfiguredFeatures;
@@ -305,10 +309,10 @@ public class MoreWeaponryBlocks {
             new CoreForgeBlock(FabricBlockSettings.copy(Blocks.OBSIDIAN)), MoreWeaponryItemGroup.MORE_WEAPONRY);
 
     public static final Block PEPLEX_NYLIUM = registerBlock("peplex_nylium",
-            new EndNyliumBlock(FabricBlockSettings.copy(Blocks.END_STONE)), MoreWeaponryItemGroup.MORE_WEAPONRY);
+            new EndNyliumBlock(FabricBlockSettings.copy(Blocks.END_STONE).requiresTool()), MoreWeaponryItemGroup.MORE_WEAPONRY);
 
     public static final Block INTOXICATED_STONE = registerBlock("intoxicated_stone",
-            new Block(FabricBlockSettings.copy(Blocks.STONE)), MoreWeaponryItemGroup.MORE_WEAPONRY);
+            new Block(FabricBlockSettings.copy(Blocks.STONE).requiresTool()), MoreWeaponryItemGroup.MORE_WEAPONRY);
 
     public static final Block INTOXICATED_GRASS_BLOCK = registerBlock("intoxicated_grass_block",
             new IntoxicatedGrassBlock(FabricBlockSettings.copy(Blocks.GRASS_BLOCK)), MoreWeaponryItemGroup.MORE_WEAPONRY);
@@ -342,11 +346,32 @@ public class MoreWeaponryBlocks {
             new Block(FabricBlockSettings.copy(Blocks.BLACK_WOOL)), MoreWeaponryItemGroup.MORE_WEAPONRY);
 
     public static final Block WANDERER_SKULL = registerBlock("wanderer_skull",
-            new WandererSkullBlock(FabricBlockSettings.copy(Blocks.PLAYER_HEAD).nonOpaque()),
+            new WandererSkullBlock(FabricBlockSettings.copy(Blocks.PLAYER_HEAD)),
             MoreWeaponryItemGroup.MORE_WEAPONRY);
 
     public static final Block WATCHER_SKULL = registerBlock("watcher_skull",
             new WatcherSkullBlock(FabricBlockSettings.copy(Blocks.PLAYER_HEAD).nonOpaque()),
+            MoreWeaponryItemGroup.MORE_WEAPONRY);
+
+    public static final Block WATCHER_SUMMONER = registerBlock("watcher_summoner",
+            new WatcherSummoningBlock(MoreWeaponryBlocks.WATCHER_SKULL, FabricBlockSettings.copy(Blocks.END_STONE).requiresTool()),
+            MoreWeaponryItemGroup.MORE_WEAPONRY);
+
+    public static final Block CRACKLER_SUMMONER = registerBlock("crackler_summoner",
+            new CracklerSummoningBlock(MoreWeaponryBlocks.CRACKLER_SKULL, FabricBlockSettings.copy(Blocks.TNT).requiresTool()),
+            MoreWeaponryItemGroup.MORE_WEAPONRY);
+
+    public static final Block WANDERER_SUMMONER = registerBlock("wanderer_summoner",
+            new WandererSummoningBlock(MoreWeaponryBlocks.CRACKLER_SKULL, FabricBlockSettings.copy(Blocks.DRIPSTONE_BLOCK).requiresTool()),
+            MoreWeaponryItemGroup.MORE_WEAPONRY);
+
+
+    public static final Block CIRTICT_FORGE = registerBlock("cirtict_forge",
+            new CirtictForgeBlock(FabricBlockSettings.copy(MoreWeaponryBlocks.CIRTICT_BLOCK)),
+            MoreWeaponryItemGroup.MORE_WEAPONRY);
+
+    public static final Block CRACKLER_SKULL = registerBlock("crackler_skull",
+            new CracklerSkullBlock(FabricBlockSettings.copy(Blocks.PLAYER_HEAD).nonOpaque()),
             MoreWeaponryItemGroup.MORE_WEAPONRY);
 
 

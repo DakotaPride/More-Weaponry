@@ -1,6 +1,7 @@
 package net.DakotaPride.moreweaponry;
 
 import net.DakotaPride.moreweaponry.entity.MoreWeaponryEntityRegistry;
+import net.DakotaPride.moreweaponry.screen.CirtictForgeScreen;
 import net.DakotaPride.moreweaponry.screen.CoreForgeScreen;
 import net.DakotaPride.moreweaponry.screen.EssenceTranslatorScreen;
 import net.DakotaPride.moreweaponry.screen.MoreWeaponryScreenHandlers;
@@ -16,6 +17,7 @@ public class MoreClientWeaponry implements ClientModInitializer {
 
         ScreenRegistry.register(MoreWeaponryScreenHandlers.CORE_FORGE_SCREEN_HANDLER, CoreForgeScreen::new);
         ScreenRegistry.register(MoreWeaponryScreenHandlers.ESSENCE_TRANSLATOR_SCREEN_HANDLER, EssenceTranslatorScreen::new);
+        ScreenRegistry.register(MoreWeaponryScreenHandlers.CIRTICT_FORGE_SCREEN_HANDLER, CirtictForgeScreen::new);
 
         MoreWeaponryRendererHelper.setRenderLayers();
 
