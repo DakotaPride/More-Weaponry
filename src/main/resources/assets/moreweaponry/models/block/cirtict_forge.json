@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "moreweaponry:block/cirtict_block",
+    "north": "moreweaponry:block/cirtict_forge_side",
+    "south": "moreweaponry:block/cirtict_forge_side",
+    "east": "moreweaponry:block/cirtict_forge_side",
+    "west": "moreweaponry:block/cirtict_forge_side",
+    "up": "moreweaponry:block/cirtict_block",
+    "down": "moreweaponry:block/cirtict_forge_bottom"
+  }
+}
