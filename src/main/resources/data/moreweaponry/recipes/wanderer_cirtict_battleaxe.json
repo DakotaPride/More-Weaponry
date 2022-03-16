@@ -1,0 +1,14 @@
+{
+  "type": "moreweaponry:cirtict_forge",
+  "ingredients": [
+    {
+      "item": "moreweaponry:essence_cirtict_battleaxe"
+    },
+    {
+      "item": "moreweaponry:powered_wretched_mob_core"
+    }
+  ],
+  "output": {
+    "item": "moreweaponry:wanderer_essence_cirtict_battleaxe"
+  }
+}

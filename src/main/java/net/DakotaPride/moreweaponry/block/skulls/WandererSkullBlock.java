@@ -1,4 +1,4 @@
-package net.DakotaPride.moreweaponry.block;
+package net.DakotaPride.moreweaponry.block.skulls;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;

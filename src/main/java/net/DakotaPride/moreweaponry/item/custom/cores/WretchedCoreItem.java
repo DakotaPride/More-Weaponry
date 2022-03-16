@@ -42,7 +42,7 @@ public class WretchedCoreItem extends Item {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add( new LiteralText("Wretched").formatted(Formatting.DARK_RED));
+        tooltip.add( new LiteralText("Wanderer").formatted(Formatting.DARK_RED));
     }
 
 

@@ -1,24 +1,23 @@
-package net.DakotaPride.moreweaponry.item.custom.powered_cores;
+package net.DakotaPride.moreweaponry.item.custom.wanderer_tools;
 
-import net.DakotaPride.moreweaponry.item.custom.cores.WretchedCoreItem;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ShovelItem;
+import net.minecraft.item.ToolMaterial;
 import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class PoweredWretchedItem extends Item {
-    public PoweredWretchedItem(Settings settings) {
-        super(settings);
+public class WandererShovel extends ShovelItem {
+    public WandererShovel(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
+        super(toolMaterial, attackDamage, attackSpeed, settings);
     }
 
     @Override
@@ -30,7 +29,6 @@ public class PoweredWretchedItem extends Item {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add( new LiteralText("Abilities").formatted(Formatting.GRAY));
         tooltip.add( new LiteralText("Wandering").formatted(Formatting.DARK_RED));
     }
 

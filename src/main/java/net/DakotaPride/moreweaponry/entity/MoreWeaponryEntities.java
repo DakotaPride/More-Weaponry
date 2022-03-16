@@ -1,6 +1,7 @@
 package net.DakotaPride.moreweaponry.entity;
 
 import net.DakotaPride.moreweaponry.MoreWeaponry;
+import net.DakotaPride.moreweaponry.entity.custom.CracklerEntity;
 import net.DakotaPride.moreweaponry.entity.custom.LurkerEntity;
 import net.DakotaPride.moreweaponry.entity.custom.WandererEntity;
 import net.DakotaPride.moreweaponry.entity.custom.WatcherEntity;
@@ -23,5 +24,9 @@ public class MoreWeaponryEntities {
     public static final EntityType<WandererEntity> WANDERER = Registry.register(
             Registry.ENTITY_TYPE, new Identifier(MoreWeaponry.MOD_ID, "wanderer"),
             FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, WandererEntity::new)
-                    .dimensions(EntityDimensions.fixed(1.8f, 2.3f)).build());
+                    .dimensions(EntityDimensions.fixed(1.4f, 1.2f)).build());
+    public static final EntityType<CracklerEntity> CRACKLER = Registry.register(
+            Registry.ENTITY_TYPE, new Identifier(MoreWeaponry.MOD_ID, "crackler"),
+            FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, CracklerEntity::new)
+                    .dimensions(EntityDimensions.fixed(0.8f, 1.7f)).build());
 }

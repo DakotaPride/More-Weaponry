@@ -6,10 +6,9 @@ import net.DakotaPride.moreweaponry.enchantments.MoreWeaponryEnchantments;
 import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
 import net.DakotaPride.moreweaponry.painting.MoreWeaponryPaintings;
 import net.DakotaPride.moreweaponry.recipe.MoreWeaponryRecipes;
+import net.DakotaPride.moreweaponry.util.MoreWeaponryLootTableModifiers;
 import net.DakotaPride.moreweaponry.util.MoreWeaponryRegistries;
 import net.DakotaPride.moreweaponry.util.MoreWeaponryTags;
-import net.DakotaPride.moreweaponry.util.biome.MoreWeaponryBiomes;
-import net.DakotaPride.moreweaponry.util.structure.MoreWeaponryStructures;
 import net.DakotaPride.moreweaponry.world.dimension.MoreWeaponryPortals;
 import net.DakotaPride.moreweaponry.world.features.MoreWeaponryConfiguredFeatures;
 import net.DakotaPride.moreweaponry.world.gen.MoreWeaponryWorldGen;
@@ -51,16 +50,10 @@ public class MoreWeaponry implements ModInitializer {
 
 		MoreWeaponryWorldGen.generateModWorldGen();
 
-		MoreWeaponryBiomes.registerModBiomes();
-
-		MoreWeaponryStructures.registerMaidenStructures();
-		MoreWeaponryStructures.registerPlaguedStructures();
-		MoreWeaponryStructures.registerSuppressedStructures();
-		MoreWeaponryStructures.registerWatcherStructures();
-		MoreWeaponryStructures.registerWretchedStructures();
-
 		MoreWeaponryTags.registerItemTags();
 		MoreWeaponryTags.registerBlockTags();
+
+		MoreWeaponryLootTableModifiers.modifyLootTables();
 
 		GeckoLib.initialize();
 

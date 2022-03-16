@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "summoner",
+  "pattern": [
+    "###",
+    "#S#",
+    "###"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:cobweb"
+    },
+    "#": {
+      "item": "minecraft:dripstone_block"
+    }
+  },
+  "result": {
+    "item": "moreweaponry:wanderer_summoner",
+    "count": 1
+  }
+}
+

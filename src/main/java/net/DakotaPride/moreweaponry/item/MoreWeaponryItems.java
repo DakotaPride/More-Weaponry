@@ -20,6 +20,7 @@ import net.DakotaPride.moreweaponry.item.custom.powered_cores.*;
 import net.DakotaPride.moreweaponry.item.custom.suppressed_tools.*;
 import net.DakotaPride.moreweaponry.item.custom.vanilla_tools.ModHoeItem;
 import net.DakotaPride.moreweaponry.item.custom.vanilla_tools.ModPickaxeItem;
+import net.DakotaPride.moreweaponry.item.custom.wanderer_tools.*;
 import net.DakotaPride.moreweaponry.item.custom.watcher_tools.*;
 import net.DakotaPride.moreweaponry.sound.MoreWeaponrySounds;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -636,6 +637,34 @@ public class MoreWeaponryItems {
             new WatcherBattleaxe((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 15, -3.3f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
+    public static final Item WANDERER_ESSENCE_CIRTICT_AXE = registerItem("wanderer_essence_cirtict_axe",
+            new WandererAxe((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 25, -3f,
+                    new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+
+    public static final Item WANDERER_ESSENCE_CIRTICT_PICKAXE = registerItem("wanderer_essence_cirtict_pickaxe",
+            new WandererPickaxe((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 7, -2.8f,
+                    new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+
+    public static final Item WANDERER_ESSENCE_CIRTICT_SWORD = registerItem("wanderer_essence_cirtict_sword",
+            new WandererSword((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 21, -2.4f,
+                    new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+
+    public static final Item WANDERER_ESSENCE_CIRTICT_SHOVEL = registerItem("wanderer_essence_cirtict_shovel",
+            new WandererShovel((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 8, -3f,
+                    new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+
+    public static final Item WANDERER_ESSENCE_CIRTICT_KNIFE = registerItem("wanderer_essence_cirtict_knife",
+            new WandererKnife((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 12, -1f,
+                    new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+
+    public static final Item WANDERER_ESSENCE_CIRTICT_HOE = registerItem("wanderer_essence_cirtict_hoe",
+            new WandererHoe((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 4, 0f,
+                    new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+
+    public static final Item WANDERER_ESSENCE_CIRTICT_BATTLEAXE = registerItem("wanderer_essence_cirtict_battleaxe",
+            new WandererBattleaxe((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 15, -3.3f,
+                    new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+
 
     public static final Item MAIDEN_ESSENCE_CIRTICT_AXE = registerItem("maiden_essence_cirtict_axe",
             new MaidenAxe((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 25, -3f,
@@ -764,6 +793,22 @@ public class MoreWeaponryItems {
 
     public static final Item LURKER_SPAWN_EGG = registerItem("lurker_spawn_egg",
             new SpawnEggItem(MoreWeaponryEntities.LURKER,0x271A2D, 0x3B2744,
+                    new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+
+    public static final Item WANDERER_SPAWN_EGG = registerItem("wanderer_spawn_egg",
+            new SpawnEggItem(MoreWeaponryEntities.WANDERER, 0x4C4138, 0x302924,
+                    new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+
+    public static final Item WANDERER_HELMET = registerItem("wanderer_helmet",
+            new ArmorItem(MoreWeaponryArmorMaterials.WANDERER, EquipmentSlot.HEAD,
+                    new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+
+    public static final Item WANDERER_CHESTPLATE = registerItem("wanderer_chestplate",
+            new ArmorItem(MoreWeaponryArmorMaterials.WANDERER, EquipmentSlot.CHEST,
+                    new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+
+    public static final Item CRACKLER_SPAWN_EGG = registerItem("crackler_spawn_egg",
+            new SpawnEggItem(MoreWeaponryEntities.CRACKLER, 0xBDEAB2, 0xAAE59C,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
 
