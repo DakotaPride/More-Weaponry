@@ -1,0 +1,14 @@
+{
+  "type": "moreweaponry:cirtict_forge",
+  "ingredients": [
+    {
+      "item": "moreweaponry:essence_cirtict_battleaxe"
+    },
+    {
+      "item": "moreweaponry:powered_maiden_mob_core"
+    }
+  ],
+  "output": {
+    "item": "moreweaponry:maiden_essence_cirtict_battleaxe"
+  }
+}

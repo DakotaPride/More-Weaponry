@@ -1,0 +1,14 @@
+{
+  "type": "moreweaponry:cirtict_forge",
+  "ingredients": [
+    {
+      "item": "moreweaponry:essence_cirtict_hoe"
+    },
+    {
+      "item": "moreweaponry:powered_plagued_mob_core"
+    }
+  ],
+  "output": {
+    "item": "moreweaponry:plagued_essence_cirtict_hoe"
+  }
+}

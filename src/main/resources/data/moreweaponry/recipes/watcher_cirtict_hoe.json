@@ -1,0 +1,14 @@
+{
+  "type": "moreweaponry:cirtict_forge",
+  "ingredients": [
+    {
+      "item": "moreweaponry:essence_cirtict_hoe"
+    },
+    {
+      "item": "moreweaponry:powered_watcher_mob_core"
+    }
+  ],
+  "output": {
+    "item": "moreweaponry:watcher_essence_cirtict_hoe"
+  }
+}

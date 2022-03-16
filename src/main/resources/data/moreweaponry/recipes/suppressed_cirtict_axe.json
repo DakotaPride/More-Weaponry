@@ -1,0 +1,14 @@
+{
+  "type": "moreweaponry:cirtict_forge",
+  "ingredients": [
+    {
+      "item": "moreweaponry:essence_cirtict_axe"
+    },
+    {
+      "item": "moreweaponry:powered_suppressed_mob_core"
+    }
+  ],
+  "output": {
+    "item": "moreweaponry:suppressed_essence_cirtict_axe"
+  }
+}
