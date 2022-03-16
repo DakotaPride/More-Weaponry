@@ -41,7 +41,7 @@ public class PlaguedCoreItem extends Item {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add( new LiteralText("Plagued").formatted(Formatting.DARK_GREEN));
+        tooltip.add( new LiteralText("Sickened").formatted(Formatting.DARK_GREEN));
     }
 
     @Override

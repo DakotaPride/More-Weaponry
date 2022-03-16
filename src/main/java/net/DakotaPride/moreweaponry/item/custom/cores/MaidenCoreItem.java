@@ -41,7 +41,7 @@ public class MaidenCoreItem extends Item {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add( new LiteralText("Maiden").formatted(Formatting.WHITE));
+        tooltip.add( new LiteralText("Bard").formatted(Formatting.WHITE));
     }
 
     @Override

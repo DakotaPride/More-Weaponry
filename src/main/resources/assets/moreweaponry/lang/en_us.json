@@ -343,6 +343,14 @@
   "item.moreweaponry.plagued_essence_cirtict_knife": "Essence Cirtict Knife",
   "item.moreweaponry.plagued_essence_cirtict_battleaxe": "Essence Cirtict Battleaxe",
 
+  "item.moreweaponry.wanderer_essence_cirtict_sword": "Essence Cirtict Sword",
+  "item.moreweaponry.wanderer_essence_cirtict_axe": "Essence Cirtict Axe",
+  "item.moreweaponry.wanderer_essence_cirtict_pickaxe": "Essence Cirtict Pickaxe",
+  "item.moreweaponry.wanderer_essence_cirtict_hoe": "Essence Cirtict Hoe",
+  "item.moreweaponry.wanderer_essence_cirtict_shovel": "Essence Cirtict Shovel",
+  "item.moreweaponry.wanderer_essence_cirtict_knife": "Essence Cirtict Knife",
+  "item.moreweaponry.wanderer_essence_cirtict_battleaxe": "Essence Cirtict Battleaxe",
+
   "entity.moreweaponry.watcher": "Watcher",
   "item.moreweaponry.watcher_spawn_egg": "Watcher Spawn Egg",
   "block.moreweaponry.watcher_skull": "Watcher Skull",
@@ -354,7 +362,7 @@
 
   "entity.moreweaponry.wretched": "Wanderer",
   "item.moreweaponry.wanderer_spawn_egg": "Wanderer Spawn Egg",
-  "block.moreweaponry.wretched_skull": "Wanderer Skull",
+  "block.moreweaponry.wanderer_skull": "Wanderer Skull",
   "item.moreweaponry.wanderer_helmet": "Wanderer Mask",
   "item.moreweaponry.wanderer_chestplate": "Wanderer Chestplate",
   "block.moreweaponry.wanderer_summoner": "Wanderer Summoning Table",

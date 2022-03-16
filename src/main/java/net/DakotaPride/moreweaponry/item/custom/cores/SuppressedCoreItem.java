@@ -41,7 +41,7 @@ public class SuppressedCoreItem extends Item {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add( new LiteralText("Suppressed").formatted(Formatting.GREEN));
+        tooltip.add( new LiteralText("Crackled").formatted(Formatting.GREEN));
     }
 
     @Override

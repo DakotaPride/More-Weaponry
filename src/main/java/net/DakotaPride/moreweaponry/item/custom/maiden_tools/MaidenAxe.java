@@ -30,7 +30,7 @@ public class MaidenAxe extends AxeItem {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add( new LiteralText("Maiden's Call").formatted(Formatting.WHITE));
+        tooltip.add( new LiteralText("Bard's Call").formatted(Formatting.WHITE));
     }
 
 }
