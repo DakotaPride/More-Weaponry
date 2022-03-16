@@ -60,7 +60,9 @@ public class WatcherEntity extends HostileEntity implements IAnimatable {
         this.goalSelector.add(8, new LookAroundGoal(this));
 
         this.targetSelector.add(1, new ActiveTargetGoal<>(this, PlayerEntity.class, true, false));
-        this.targetSelector.add(3, new ActiveTargetGoal<>(this, EndermiteEntity.class, true, false));
+        this.targetSelector.add(3, new ActiveTargetGoal<>(this, WandererEntity.class, true, false));
+        this.targetSelector.add(3, new ActiveTargetGoal<>(this, CracklerEntity.class, true, false));
+
     }
 
     public boolean hurtByWater() {

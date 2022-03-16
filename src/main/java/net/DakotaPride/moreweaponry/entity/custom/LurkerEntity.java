@@ -92,6 +92,9 @@ public class LurkerEntity extends HostileEntity implements IAnimatable {
         this.targetSelector.add(36, new ActiveTargetGoal<>(this, WolfEntity.class, true, false));
         this.targetSelector.add(34, new ActiveTargetGoal<>(this, ZombieHorseEntity.class, true, false));
         this.targetSelector.add(34, new ActiveTargetGoal<>(this, PandaEntity.class, true, false));
+        this.targetSelector.add(3, new ActiveTargetGoal<>(this, WandererEntity.class, true, false));
+        this.targetSelector.add(3, new ActiveTargetGoal<>(this, CracklerEntity.class, true, false));
+        this.targetSelector.add(6, new ActiveTargetGoal<>(this, EndermiteEntity.class, true, false));
     }
 
     public boolean hurtByWater() {

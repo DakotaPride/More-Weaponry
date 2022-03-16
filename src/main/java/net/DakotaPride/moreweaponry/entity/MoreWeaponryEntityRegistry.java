@@ -1,5 +1,6 @@
 package net.DakotaPride.moreweaponry.entity;
 
+import net.DakotaPride.moreweaponry.entity.client.CracklerRenderer;
 import net.DakotaPride.moreweaponry.entity.client.LurkerRenderer;
 import net.DakotaPride.moreweaponry.entity.client.WandererRenderer;
 import net.DakotaPride.moreweaponry.entity.client.WatcherRenderer;
@@ -10,5 +11,6 @@ public class MoreWeaponryEntityRegistry {
         EntityRendererRegistry.register(MoreWeaponryEntities.WATCHER, WatcherRenderer::new);
         EntityRendererRegistry.register(MoreWeaponryEntities.LURKER, LurkerRenderer::new);
         EntityRendererRegistry.register(MoreWeaponryEntities.WANDERER, WandererRenderer::new);
+        EntityRendererRegistry.register(MoreWeaponryEntities.CRACKLER, CracklerRenderer::new);
     }
 }
