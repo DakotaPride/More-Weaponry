@@ -1,23 +1,26 @@
 package net.DakotaPride.moreweaponry.entity.custom;
 
+import net.DakotaPride.moreweaponry.block.MoreWeaponryBlocks;
+import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
 import net.minecraft.block.BlockState;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityDimensions;
-import net.minecraft.entity.EntityPose;
-import net.minecraft.entity.EntityType;
+import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.ai.pathing.PathNodeType;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.boss.ServerBossBar;
 import net.minecraft.entity.damage.DamageSource;
-import net.minecraft.entity.mob.EndermiteEntity;
+import net.minecraft.entity.mob.CreeperEntity;
+import net.minecraft.entity.mob.WitherSkeletonEntity;
 import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib3.core.IAnimatable;
@@ -51,6 +54,22 @@ public class WatcherEntity extends HostileEntity implements IAnimatable {
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.21f)
                 .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 186.0D)
                 .add(EntityAttributes.GENERIC_ATTACK_SPEED, 0.96f);
+    }
+
+    public void dropEquipment(DamageSource source, int lootingMultiplier, boolean allowDrops) {
+        super.dropEquipment(source, lootingMultiplier, allowDrops);
+        Entity entity = source.getAttacker();
+        if (entity instanceof CreeperEntity) {
+            CreeperEntity creeperEntity = (CreeperEntity)entity;
+            if (creeperEntity.shouldDropHead()) {
+                creeperEntity.onHeadDropped();
+                dropItem(MoreWeaponryBlocks.WATCHER_SKULL.asItem());
+            }
+        }
+    }
+
+    public void initEquipment(LocalDifficulty difficulty) {
+        equipStack(EquipmentSlot.MAINHAND, new ItemStack(MoreWeaponryItems.WATCHER_STAFF));
     }
 
     protected void initGoals() {

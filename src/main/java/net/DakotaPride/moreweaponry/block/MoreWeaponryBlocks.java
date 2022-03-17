@@ -10,11 +10,13 @@ import net.DakotaPride.moreweaponry.block.skulls.WandererSkullBlock;
 import net.DakotaPride.moreweaponry.block.skulls.WatcherSkullBlock;
 import net.DakotaPride.moreweaponry.item.MoreWeaponryItemGroup;
 import net.DakotaPride.moreweaponry.item.custom.KuroPlantBlock;
+import net.DakotaPride.moreweaponry.sound.MoreWeaponrySounds;
 import net.DakotaPride.moreweaponry.world.features.MoreWeaponryConfiguredFeatures;
 import net.DakotaPride.moreweaponry.world.features.tree.FrodonSaplingGenerator;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -346,7 +348,7 @@ public class MoreWeaponryBlocks {
             new Block(FabricBlockSettings.copy(Blocks.BLACK_WOOL)), MoreWeaponryItemGroup.MORE_WEAPONRY);
 
     public static final Block WANDERER_SKULL = registerBlock("wanderer_skull",
-            new WandererSkullBlock(FabricBlockSettings.copy(Blocks.PLAYER_HEAD)),
+            new WandererSkullBlock(FabricBlockSettings.copy(Blocks.PLAYER_HEAD).nonOpaque()),
             MoreWeaponryItemGroup.MORE_WEAPONRY);
 
     public static final Block WATCHER_SKULL = registerBlock("watcher_skull",
@@ -354,15 +356,18 @@ public class MoreWeaponryBlocks {
             MoreWeaponryItemGroup.MORE_WEAPONRY);
 
     public static final Block WATCHER_SUMMONER = registerBlock("watcher_summoner",
-            new WatcherSummoningBlock(MoreWeaponryBlocks.WATCHER_SKULL, FabricBlockSettings.copy(Blocks.END_STONE).requiresTool()),
+            new WatcherSummoningBlock(MoreWeaponryBlocks.WATCHER_SKULL, FabricBlockSettings.copy(Blocks.END_STONE)
+                    .sounds(MoreWeaponrySounds.SUMMONER).requiresTool()),
             MoreWeaponryItemGroup.MORE_WEAPONRY);
 
     public static final Block CRACKLER_SUMMONER = registerBlock("crackler_summoner",
-            new CracklerSummoningBlock(MoreWeaponryBlocks.CRACKLER_SKULL, FabricBlockSettings.copy(Blocks.TNT).requiresTool()),
+            new CracklerSummoningBlock(MoreWeaponryBlocks.CRACKLER_SKULL, FabricBlockSettings.copy(Blocks.TNT)
+                    .sounds(MoreWeaponrySounds.SUMMONER_TWO)),
             MoreWeaponryItemGroup.MORE_WEAPONRY);
 
     public static final Block WANDERER_SUMMONER = registerBlock("wanderer_summoner",
-            new WandererSummoningBlock(MoreWeaponryBlocks.CRACKLER_SKULL, FabricBlockSettings.copy(Blocks.DRIPSTONE_BLOCK).requiresTool()),
+            new WandererSummoningBlock(MoreWeaponryBlocks.WANDERER_SKULL, FabricBlockSettings.copy(Blocks.DRIPSTONE_BLOCK)
+                    .sounds(MoreWeaponrySounds.SUMMONER).requiresTool()),
             MoreWeaponryItemGroup.MORE_WEAPONRY);
 
 

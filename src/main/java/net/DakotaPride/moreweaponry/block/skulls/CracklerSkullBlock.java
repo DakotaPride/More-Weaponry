@@ -1,6 +1,10 @@
 package net.DakotaPride.moreweaponry.block.skulls;
 
+import com.google.common.collect.Multimap;
 import net.minecraft.block.*;
+import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.entity.attribute.EntityAttribute;
+import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
@@ -16,7 +20,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.stream.Stream;
 
-public class CracklerSkullBlock extends HorizontalFacingBlock {
+public class CracklerSkullBlock extends Block {
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
     public CracklerSkullBlock(Settings settings) {
         super(settings);
@@ -34,7 +38,6 @@ public class CracklerSkullBlock extends HorizontalFacingBlock {
     private static final VoxelShape SHAPE_E = Stream.of(
             Block.createCuboidShape(4, 0, 4, 12, 8, 12)
     ).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
-
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
