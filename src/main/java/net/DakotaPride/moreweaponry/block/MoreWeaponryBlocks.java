@@ -86,8 +86,8 @@ public class MoreWeaponryBlocks {
             new LeavesBlock(FabricBlockSettings.copy(Blocks.OAK_LEAVES)), MoreWeaponryItemGroup.MORE_WEAPONRY);
 
     public static final Block FRODON_SAPLING = registerBlock("frodon_sapling",
-            new FrodonSaplingBlock(new FrodonSaplingGenerator(MoreWeaponryConfiguredFeatures.FRODON_TREE),
-                    FabricBlockSettings.copy(Blocks.OAK_SAPLING)), MoreWeaponryItemGroup.MORE_WEAPONRY);
+            new FrodonSaplingBlock(new FrodonSaplingGenerator(),
+                    FabricBlockSettings.copy(Blocks.SPRUCE_SAPLING)), MoreWeaponryItemGroup.MORE_WEAPONRY);
 
     public static final Block NIGHT_CURON = registerBlock("night_curon",
             new FlowerBlock(StatusEffects.WITHER, 100,

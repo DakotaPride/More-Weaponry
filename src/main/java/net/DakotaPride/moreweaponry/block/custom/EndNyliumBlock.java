@@ -9,6 +9,7 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 import net.minecraft.world.chunk.light.ChunkLightProvider;
+import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.UndergroundConfiguredFeatures;
 
 import java.util.Random;
@@ -30,8 +31,8 @@ public class EndNyliumBlock extends MossBlock {
 
     @Override
     public void grow(ServerWorld world, Random random, BlockPos pos, BlockState state) {
-        EndConfiguredFeatures.PEPLEX_PATCH_BONEMEAL.generate(world,
-                world.getChunkManager().getChunkGenerator(), random, pos.up());
+        ((ConfiguredFeature)EndConfiguredFeatures.PEPLEX_PATCH_BONEMEAL.value())
+                .generate(world, world.getChunkManager().getChunkGenerator(), random, pos.up());
     }
 
 }

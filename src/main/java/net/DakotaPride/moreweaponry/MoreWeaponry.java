@@ -50,9 +50,6 @@ public class MoreWeaponry implements ModInitializer {
 
 		MoreWeaponryWorldGen.generateModWorldGen();
 
-		MoreWeaponryTags.registerItemTags();
-		MoreWeaponryTags.registerBlockTags();
-
 		MoreWeaponryLootTableModifiers.modifyLootTables();
 
 		GeckoLib.initialize();

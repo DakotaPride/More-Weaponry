@@ -17,11 +17,9 @@ repositories {
 	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
 	// for more information about repositories.
 	allprojects { repositories { maven { url 'https://jitpack.io' } } }
+	maven { url = "https://maven.shedaniel.me/" }
+	maven { url = "https://maven.terraformersmc.com/" }
 	maven {url = "https://maven.kyrptonaught.dev"}
-	maven {
-		name "Siphalor's Maven"
-		url "https://maven.siphalor.de"
-	}
 	maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
 
 }
@@ -34,8 +32,11 @@ dependencies {
 	modImplementation "com.github.CrimsonDawn45:Fabric-Shield-Lib:v${project.fabric_shield_lib_version}"
 	modImplementation 'net.kyrptonaught:customportalapi:0.0.1-beta49-1.18'
 	include 'net.kyrptonaught:customportalapi:0.0.1-beta49-1.18'
-	modImplementation "de.siphalor:nbtcrafting-1.18:2+"
 	modImplementation 'software.bernie.geckolib:geckolib-fabric-1.18:3.0.21'
+	modApi("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}") {
+		exclude(group: "net.fabricmc.fabric-api")
+	}
+	include("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}")
 
 
 	// Fabric API. This is technically optional, but you probably want it anyway.

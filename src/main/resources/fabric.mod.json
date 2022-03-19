@@ -33,7 +33,6 @@
     "fabric": "*",
     "minecraft": "1.18.x",
     "java": ">=17",
-    "nbtcrafting": "*",
     "fabricshieldlib": "*"
   },
   "suggests": {

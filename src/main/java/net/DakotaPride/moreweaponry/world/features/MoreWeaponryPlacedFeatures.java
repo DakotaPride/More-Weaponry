@@ -7,12 +7,13 @@ import net.minecraft.structure.rule.RuleTest;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
+import net.minecraft.util.registry.RegistryEntry;
 import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.gen.YOffset;
-import net.minecraft.world.gen.decorator.*;
 import net.minecraft.world.gen.feature.PlacedFeature;
 import net.minecraft.world.gen.feature.PlacedFeatures;
 import net.minecraft.world.gen.feature.VegetationPlacedFeatures;
+import net.minecraft.world.gen.placementmodifier.*;
 
 import java.util.List;
 
@@ -32,48 +33,48 @@ public class MoreWeaponryPlacedFeatures {
 
 
 
-    public static final PlacedFeature FRODON_PLACED = registerPlacedFeature("frodon_spawn",
-            MoreWeaponryConfiguredFeatures.FRODON_TREE_RANDOM.withPlacement(VegetationPlacedFeatures.modifiers(
-                    PlacedFeatures.createCountExtraModifier(1, 0.1f, 2))));
+    public static final RegistryEntry<PlacedFeature> FRODON_TREE_PLACED = PlacedFeatures.register("frodon_spawn",
+            MoreWeaponryConfiguredFeatures.FRODON_TREE_SPAWN, VegetationPlacedFeatures.modifiers(
+                    PlacedFeatures.createCountExtraModifier(1, 0.1f, 2)));
 
-    public static final PlacedFeature NIGHT_CURON_PLACED = registerPlacedFeature("night_curon",
-            MoreWeaponryConfiguredFeatures.NIGHT_CURON.withPlacement(RarityFilterPlacementModifier.of(4), SquarePlacementModifier.of(),
-                    PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of()));
+    public static final RegistryEntry<PlacedFeature> NIGHT_CURON_PLACED = PlacedFeatures.register("night_curon",
+            MoreWeaponryConfiguredFeatures.NIGHT_CURON, RarityFilterPlacementModifier.of(4), SquarePlacementModifier.of(),
+            PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
 
-    public static final PlacedFeature MARE_DIAMOND_ORE_PLACED = registerPlacedFeature("mare_diamond_ore",
-            MoreWeaponryConfiguredFeatures.MARE_DIAMOND_ORE.withPlacement(modifiersWithCount(8,
-                    HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(-80), YOffset.aboveBottom(100)))));
+    public static final RegistryEntry<PlacedFeature> MARE_DIAMOND_ORE_PLACED = PlacedFeatures.register("mare_diamond_ore",
+            MoreWeaponryConfiguredFeatures.MARE_DIAMOND_ORE, MoreWeaponryOreFeatures.modifiersWithCount(8,
+                    HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(-80), YOffset.aboveBottom(100))));
 
-    public static final PlacedFeature CIRTICT_DEBRIS_PLACED = registerPlacedFeature("cirtict_debris",
-            MoreWeaponryConfiguredFeatures.CIRTICT_DEBRIS.withPlacement(modifiersWithCount(3,
-                    HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(-80), YOffset.aboveBottom(300)))));
+    public static final RegistryEntry<PlacedFeature> CIRTICT_DEBRIS_PLACED = PlacedFeatures.register("cirtict_debris",
+            MoreWeaponryConfiguredFeatures.CIRTICT_DEBRIS, MoreWeaponryOreFeatures.modifiersWithCount(3,
+                    HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(-80), YOffset.aboveBottom(100))));
 
-    public static final PlacedFeature SANDSTONE_DUST_PLACED = registerPlacedFeature("sandstone_dust",
-            MoreWeaponryConfiguredFeatures.SANDSTONE_DUST.withPlacement(modifiersWithCount(6,
-                    HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(-80), YOffset.aboveBottom(300)))));
+    public static final RegistryEntry<PlacedFeature> SANDSTONE_DUST_PLACED = PlacedFeatures.register("sandstone_dust",
+            MoreWeaponryConfiguredFeatures.SANDSTONE_DUST, MoreWeaponryOreFeatures.modifiersWithCount(6,
+                    HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(-80), YOffset.aboveBottom(300))));
 
-    public static final PlacedFeature LIMESTONE_PLACED = registerPlacedFeature("limestone",
-            MoreWeaponryConfiguredFeatures.LIMESTONE.withPlacement(modifiersWithCount(11,
-                    HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(-80), YOffset.aboveBottom(200)))));
+    public static final RegistryEntry<PlacedFeature> LIMESTONE_PLACED = PlacedFeatures.register("limestone",
+            MoreWeaponryConfiguredFeatures.LIMESTONE, MoreWeaponryOreFeatures.modifiersWithCount(11,
+                    HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(-80), YOffset.aboveBottom(200))));
 
-    public static final PlacedFeature BLUESTONE_PLACED = registerPlacedFeature("bluestone",
-            MoreWeaponryConfiguredFeatures.BLUESTONE.withPlacement(modifiersWithCount(11,
-                    HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(-80), YOffset.aboveBottom(100)))));
+    public static final RegistryEntry<PlacedFeature> BLUESTONE_PLACED = PlacedFeatures.register("bluestone",
+            MoreWeaponryConfiguredFeatures.BLUESTONE, MoreWeaponryOreFeatures.modifiersWithCount(11,
+                    HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(-80), YOffset.aboveBottom(100))));
 
-    public static final PlacedFeature CRACKED_DRIPSTONE_PLACED = registerPlacedFeature("cracked_dripstone",
-            MoreWeaponryConfiguredFeatures.CRACKED_DRIPSTONE.withPlacement(modifiersWithCount(3,
-                    HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(-80), YOffset.aboveBottom(300)))));
+    public static final RegistryEntry<PlacedFeature> CRACKED_DRIPSTONE_PLACED = PlacedFeatures.register("cracked_dripstone",
+            MoreWeaponryConfiguredFeatures.CRACKED_DRIPSTONE, MoreWeaponryOreFeatures.modifiersWithCount(3,
+                    HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(-80), YOffset.aboveBottom(300))));
 
-    public static final PlacedFeature INFESTED_CRACKED_DRIPSTONE_PLACED = registerPlacedFeature("infested_cracked_dripstone",
-            MoreWeaponryConfiguredFeatures.INFESTED_CRACKED_DRIPSTONE.withPlacement(modifiersWithCount(3,
-                    HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(-80), YOffset.aboveBottom(300)))));
+    public static final RegistryEntry<PlacedFeature> INFESTED_CRACKED_DRIPSTONE_PLACED = PlacedFeatures.register("infested_cracked_dripstone",
+            MoreWeaponryConfiguredFeatures.INFESTED_CRACKED_DRIPSTONE, MoreWeaponryOreFeatures.modifiersWithCount(3,
+                    HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(-80), YOffset.aboveBottom(300))));
 
-    public static final PlacedFeature INFESTED_DRIPSTONE_PLACED = registerPlacedFeature("infested_dripstone",
-            MoreWeaponryConfiguredFeatures.INFESTED_DRIPSTONE.withPlacement(modifiersWithCount(3,
-                    HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(-80), YOffset.aboveBottom(300)))));
+    public static final RegistryEntry<PlacedFeature> INFESTED_DRIPSTONE_PLACED = PlacedFeatures.register("infested_dripstone",
+            MoreWeaponryConfiguredFeatures.INFESTED_DRIPSTONE, MoreWeaponryOreFeatures.modifiersWithCount(3,
+                    HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(-80), YOffset.aboveBottom(300))));
 
-    public static final PlacedFeature INTOXICATED_GRASS_BONEMEAL = PlacedFeatures.register("intoxicated_grass_bonemeal",
-            MoreWeaponryConfiguredFeatures.INTOXICATED_SINGLE_PIECE_OF_GRASS.withInAirFilter());
+    public static final RegistryEntry<PlacedFeature> INTOXICATED_GRASS_BONEMEAL = PlacedFeatures.register("intoxicated_grass_bonemeal",
+            MoreWeaponryConfiguredFeatures.INTOXICATED_SINGLE_PIECE_OF_GRASS);
 
 
     public static List<PlacementModifier> modifiers(PlacementModifier countModifier, PlacementModifier heightModifier) {
