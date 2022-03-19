@@ -33,9 +33,6 @@ dependencies {
 	modImplementation 'net.kyrptonaught:customportalapi:0.0.1-beta49-1.18'
 	include 'net.kyrptonaught:customportalapi:0.0.1-beta49-1.18'
 	modImplementation 'software.bernie.geckolib:geckolib-fabric-1.18:3.0.21'
-	modApi("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}") {
-		exclude(group: "net.fabricmc.fabric-api")
-	}
 	include("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}")
 
 
