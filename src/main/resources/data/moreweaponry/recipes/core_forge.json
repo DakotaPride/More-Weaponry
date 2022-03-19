@@ -10,10 +10,10 @@
       "item": "minecraft:crying_obsidian"
     },
     "S": {
-      "tag": "c:essence"
+      "tag": "#c:essence"
     },
     "G": {
-      "tag": "moreweaponry:mob_core"
+      "tag": "#moreweaponry:mob_core"
     }
   },
   "result": {

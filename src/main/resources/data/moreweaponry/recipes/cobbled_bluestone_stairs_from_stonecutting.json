@@ -1,7 +1,7 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": {
-    "tag": "c:cobbled_bluestone"
+    "item": "moreweaponry:cobbled_bluestone"
   },
   "result": "moreweaponry:cobbled_bluestone_stairs",
   "count": 1

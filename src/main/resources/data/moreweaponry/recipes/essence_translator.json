@@ -7,7 +7,7 @@
   ],
   "key": {
     "A": {
-      "tag": "c:essence"
+      "tag": "#c:essence"
     },
     "F": {
       "item": "minecraft:crying_obsidian"

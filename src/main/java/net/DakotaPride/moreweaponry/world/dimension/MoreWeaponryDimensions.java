@@ -16,6 +16,6 @@ public class MoreWeaponryDimensions {
             new Identifier(MoreWeaponry.MOD_ID, "ever_frost_type"));
 
     public static void register() {
-        System.out.println("Registering ModDimensions for " + MoreWeaponry.MOD_ID);
+        System.out.println("Registering Mod Dimensions for " + MoreWeaponry.MOD_ID);
     }
 }

@@ -26,9 +26,6 @@ public class MoreWeaponryTags {
         TagKey<Item> handles = HANDLES;
         TagKey<Item> rapiers = RAPIERS;
         TagKey<Item> shields = SHIELDS;
-        TagKey<Item> bluestone = BLUESTONE;
-        TagKey<Item> cobbled_bluestone = COBBLED_BLUESTONE;
-        TagKey<Item> cobbled_limestone = COBBLED_LIMESTONE;
     }
 
     public static class Blocks {
@@ -54,9 +51,6 @@ public class MoreWeaponryTags {
         public static final TagKey<Item> HANDLES = createCommonTag("handles");
         public static final TagKey<Item> RAPIERS = createCommonTag("rapiers");
         public static final TagKey<Item> SHIELDS = createCommonTag("shields");
-        public static final TagKey<Item> BLUESTONE = createCommonTag("bluestone");
-        public static final TagKey<Item> COBBLED_BLUESTONE = createCommonTag("cobbled_bluestone");
-        public static final TagKey<Item> COBBLED_LIMESTONE = createCommonTag("cobbled_limestone");
 
         private static TagKey<Item> createCommonTag(String name) {
             return TagKey.of(Registry.ITEM_KEY, new Identifier("c", name));

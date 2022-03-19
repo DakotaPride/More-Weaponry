@@ -7,7 +7,7 @@
   ],
   "key": {
     "#": {
-      "tag": "minecraft:planks"
+      "tag": "#minecraft:planks"
     },
     "@": {
       "item": "moreweaponry:kuro"

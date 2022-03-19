@@ -4,9 +4,6 @@ Fabric Shield Library By CrimsonDawn45
 https://www.curseforge.com/minecraft/mc-mods/fabric-shield-lib
 https://github.com/CrimsonDawn45/Fabric-Shield-Lib
 
-Custom Portal API By Kyrptonaught
-https://github.com/kyrptonaught/customportalapi
-
 NBT Crafting By Siphaler
 https://www.curseforge.com/minecraft/mc-mods/nbt-crafting
 https://github.com/Siphalor/nbt-crafting
