@@ -57,6 +57,7 @@ public class LurkerEntity extends HostileEntity implements IAnimatable {
         this.goalSelector.add(1, new MeleeAttackGoal(this, 1.0D, false));
         this.goalSelector.add(3, new WanderAroundFarGoal(this, 1.0D, 0.0F));
         this.goalSelector.add(4, new LookAroundGoal(this));
+        this.goalSelector.add(6, new LookAtEntityGoal(this, (Class)PlayerEntity.class, 8.0F));
 
         this.targetSelector.add(5, new ActiveTargetGoal<>(this, PlayerEntity.class, true, false));
         this.targetSelector.add(6, new ActiveTargetGoal<>(this, SpiderEntity.class, true, false));

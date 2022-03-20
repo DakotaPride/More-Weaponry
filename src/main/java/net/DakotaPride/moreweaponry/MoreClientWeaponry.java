@@ -1,6 +1,8 @@
 package net.DakotaPride.moreweaponry;
 
 import net.DakotaPride.moreweaponry.entity.MoreWeaponryEntityRegistry;
+import net.DakotaPride.moreweaponry.entity.client.armor.WatcherArmorRenderer;
+import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
 import net.DakotaPride.moreweaponry.screen.CirtictForgeScreen;
 import net.DakotaPride.moreweaponry.screen.CoreForgeScreen;
 import net.DakotaPride.moreweaponry.screen.EssenceTranslatorScreen;
@@ -9,6 +11,7 @@ import net.DakotaPride.moreweaponry.util.MoreWeaponryModelPredicateProvider;
 import net.DakotaPride.moreweaponry.util.MoreWeaponryRendererHelper;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.screenhandler.v1.ScreenRegistry;
+import software.bernie.geckolib3.renderers.geo.GeoArmorRenderer;
 
 public class MoreClientWeaponry implements ClientModInitializer {
 
@@ -24,6 +27,9 @@ public class MoreClientWeaponry implements ClientModInitializer {
         MoreWeaponryModelPredicateProvider.registerMoreWeaponryModels();
 
         MoreWeaponryEntityRegistry.registerMoreWeaponryEntities();
+
+        GeoArmorRenderer.registerArmorRenderer(new WatcherArmorRenderer(), MoreWeaponryItems.WATCHER_HELMET,
+                MoreWeaponryItems.WATCHER_CHESTPLATE);
 
 
     }

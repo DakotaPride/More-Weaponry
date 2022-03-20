@@ -698,11 +698,11 @@ public class MoreWeaponryItems {
             new Item(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item WATCHER_HELMET = registerItem("watcher_helmet",
-            new ArmorItem(MoreWeaponryArmorMaterials.ENDER, EquipmentSlot.HEAD,
+            new WatcherArmorItem(MoreWeaponryArmorMaterials.ENDER, EquipmentSlot.HEAD,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item WATCHER_CHESTPLATE = registerItem("watcher_chestplate",
-            new ArmorItem(MoreWeaponryArmorMaterials.ENDER, EquipmentSlot.CHEST,
+            new WatcherArmorItem(MoreWeaponryArmorMaterials.ENDER, EquipmentSlot.CHEST,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item WATCHER_STAFF = registerItem("watcher_staff",
