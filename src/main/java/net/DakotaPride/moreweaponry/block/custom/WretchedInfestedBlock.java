@@ -1,15 +1,12 @@
 package net.DakotaPride.moreweaponry.block.custom;
 
 import com.google.common.collect.Maps;
-import java.util.Map;
-
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.mob.SilverfishEntity;
 import net.minecraft.entity.mob.SpiderEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
@@ -17,6 +14,8 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.GameRules;
 import net.minecraft.world.World;
 import net.minecraft.world.explosion.Explosion;
+
+import java.util.Map;
 
 public class WretchedInfestedBlock
         extends Block {

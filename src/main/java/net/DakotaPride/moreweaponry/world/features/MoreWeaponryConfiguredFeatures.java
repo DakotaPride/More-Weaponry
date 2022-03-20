@@ -40,7 +40,7 @@ public class MoreWeaponryConfiguredFeatures {
                             0.2F)), FRODON_TREE_CHECKED));
 
     public static final RegistryEntry<ConfiguredFeature<RandomPatchFeatureConfig, ?>> NIGHT_CURON =
-            ConfiguredFeatures.register("flower_pink_rose", Feature.FLOWER,
+            ConfiguredFeatures.register("night_curon", Feature.FLOWER,
                     new RandomPatchFeatureConfig(32, 6, 2, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
                             new SimpleBlockFeatureConfig(BlockStateProvider.of(MoreWeaponryBlocks.NIGHT_CURON)))));
 

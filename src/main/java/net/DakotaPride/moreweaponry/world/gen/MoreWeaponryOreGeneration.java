@@ -8,7 +8,6 @@ import net.DakotaPride.moreweaponry.world.features.MoreWeaponryPlacedFeatures;
 public class MoreWeaponryOreGeneration {
     public static void generateOres() {
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
-                GenerationStep.Feature.UNDERGROUND_ORES, MoreWeaponryPlacedFeatures.MARE_DIAMOND_ORE_KEY);
-
+                GenerationStep.Feature.UNDERGROUND_ORES, MoreWeaponryPlacedFeatures.MARE_DIAMOND_ORE_PLACED.getKey().get());
     }
 }

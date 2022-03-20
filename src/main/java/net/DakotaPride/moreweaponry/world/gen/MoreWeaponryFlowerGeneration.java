@@ -8,9 +8,9 @@ import net.DakotaPride.moreweaponry.world.features.MoreWeaponryPlacedFeatures;
 
 public class MoreWeaponryFlowerGeneration {
     public static void generateFlowers() {
-        BiomeModifications.addFeature(BiomeSelectors.categories(Biome.Category.valueOf("PLAINS")),
-                GenerationStep.Feature.VEGETAL_DECORATION, MoreWeaponryPlacedFeatures.NIGHT_CURON_KEY);
-        BiomeModifications.addFeature(BiomeSelectors.categories(Biome.Category.valueOf("FOREST")),
-                GenerationStep.Feature.VEGETAL_DECORATION, MoreWeaponryPlacedFeatures.NIGHT_CURON_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.categories(Biome.Category.PLAINS),
+                GenerationStep.Feature.VEGETAL_DECORATION, MoreWeaponryPlacedFeatures.NIGHT_CURON_PLACED.getKey().get());
+        BiomeModifications.addFeature(BiomeSelectors.categories(Biome.Category.FOREST),
+                GenerationStep.Feature.VEGETAL_DECORATION, MoreWeaponryPlacedFeatures.NIGHT_CURON_PLACED.getKey().get());
     }
 }

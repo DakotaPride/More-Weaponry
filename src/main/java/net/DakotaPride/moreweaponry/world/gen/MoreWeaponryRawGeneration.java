@@ -9,21 +9,21 @@ import net.minecraft.world.gen.GenerationStep;
 public class MoreWeaponryRawGeneration {
     public static void generateRawGeneration() {
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
-                GenerationStep.Feature.RAW_GENERATION, MoreWeaponryPlacedFeatures.LIMESTONE_KEY);
+                GenerationStep.Feature.RAW_GENERATION, MoreWeaponryPlacedFeatures.LIMESTONE_PLACED.getKey().get());
 
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
-                GenerationStep.Feature.RAW_GENERATION, MoreWeaponryPlacedFeatures.BLUESTONE_KEY);
+                GenerationStep.Feature.RAW_GENERATION, MoreWeaponryPlacedFeatures.BLUESTONE_PLACED.getKey().get());
 
         BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(),
-                GenerationStep.Feature.RAW_GENERATION, MoreWeaponryPlacedFeatures.CIRTICT_DEBRIS_KEY);
+                GenerationStep.Feature.RAW_GENERATION, MoreWeaponryPlacedFeatures.CIRTICT_DEBRIS_PLACED.getKey().get());
 
-        BiomeModifications.addFeature(BiomeSelectors.categories(Biome.Category.valueOf("UNDERGROUND")),
-                GenerationStep.Feature.RAW_GENERATION, MoreWeaponryPlacedFeatures.CRACKED_DRIPSTONE_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.categories(Biome.Category.UNDERGROUND),
+                GenerationStep.Feature.RAW_GENERATION, MoreWeaponryPlacedFeatures.CRACKED_DRIPSTONE_PLACED.getKey().get());
 
-        BiomeModifications.addFeature(BiomeSelectors.categories(Biome.Category.valueOf("UNDERGROUND")),
-                GenerationStep.Feature.RAW_GENERATION, MoreWeaponryPlacedFeatures.INFESTED_CRACKED_DRIPSTONE_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.categories(Biome.Category.UNDERGROUND),
+                GenerationStep.Feature.RAW_GENERATION, MoreWeaponryPlacedFeatures.INFESTED_CRACKED_DRIPSTONE_PLACED.getKey().get());
 
-        BiomeModifications.addFeature(BiomeSelectors.categories(Biome.Category.valueOf("UNDERGROUND")),
-                GenerationStep.Feature.RAW_GENERATION, MoreWeaponryPlacedFeatures.INFESTED_DRIPSTONE_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.categories(Biome.Category.UNDERGROUND),
+                GenerationStep.Feature.RAW_GENERATION, MoreWeaponryPlacedFeatures.INFESTED_DRIPSTONE_PLACED.getKey().get());
     }
 }

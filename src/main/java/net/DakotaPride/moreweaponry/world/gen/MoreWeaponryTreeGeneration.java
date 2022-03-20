@@ -8,8 +8,8 @@ import net.minecraft.world.gen.GenerationStep;
 
     public class MoreWeaponryTreeGeneration {
         public static void generateTrees() {
-            BiomeModifications.addFeature(BiomeSelectors.categories(Biome.Category.valueOf("ICY")),
-                    GenerationStep.Feature.VEGETAL_DECORATION, MoreWeaponryPlacedFeatures.FRODON_TREE_KEY);
+            BiomeModifications.addFeature(BiomeSelectors.categories(Biome.Category.ICY),
+                    GenerationStep.Feature.VEGETAL_DECORATION, MoreWeaponryPlacedFeatures.FRODON_TREE_PLACED.getKey().get());
         }
 
 }

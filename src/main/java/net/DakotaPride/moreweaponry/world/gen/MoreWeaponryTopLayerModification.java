@@ -8,7 +8,7 @@ import net.minecraft.world.gen.GenerationStep;
 
 public class MoreWeaponryTopLayerModification {
     public static void generateTopLayerModifications() {
-        BiomeModifications.addFeature(BiomeSelectors.categories(Biome.Category.valueOf("DESERT")),
-                GenerationStep.Feature.TOP_LAYER_MODIFICATION, MoreWeaponryPlacedFeatures.SANDSTONE_DUST_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.categories(Biome.Category.DESERT),
+                GenerationStep.Feature.TOP_LAYER_MODIFICATION, MoreWeaponryPlacedFeatures.SANDSTONE_DUST_PLACED.getKey().get());
     }
 }
