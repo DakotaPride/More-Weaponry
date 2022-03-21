@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:village",
+
+  "config": {
+    "start_pool": "moreweaponry:watcher_tower/start_pool",
+
+    "size": 2
+  },
+
+  "biomes": "#moreweaponry:has_structure/watcher_tower_biomes",
+
+  "adapt_noise": true,
+
+  "spawn_overrides": {
+    "creature": {
+      "bounding_box": "piece",
+      "spawns": [
+        {
+          "type": "moreweaponry:lurker",
+          "weight": 40,
+          "minCount": 1,
+          "maxCount": 4
+        }
+      ]
+    }
+  }
+
+}

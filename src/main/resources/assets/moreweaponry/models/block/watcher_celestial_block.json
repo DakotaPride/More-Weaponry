@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "moreweaponry:block/watcher_celestial_block"
+  }
+}

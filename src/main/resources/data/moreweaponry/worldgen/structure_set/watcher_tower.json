@@ -1,0 +1,17 @@
+{
+  "structures": [
+    {
+      "structure": "moreweaponry:watcher_tower",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 10,
+
+    "spacing": 16,
+
+    "separation": 6,
+
+    "type": "minecraft:random_spread"
+  }
+}

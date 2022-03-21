@@ -379,6 +379,14 @@ public class MoreWeaponryBlocks {
             new CracklerSkullBlock(FabricBlockSettings.copy(Blocks.PLAYER_HEAD).nonOpaque()),
             MoreWeaponryItemGroup.MORE_WEAPONRY);
 
+    public static final Block WATCHER_CELESTIAL_BLOCK = registerBlock("watcher_celestial_block",
+            new GlassBlock(FabricBlockSettings.copy(Blocks.GLASS).nonOpaque().strength(1000f, 1000f)),
+            MoreWeaponryItemGroup.MORE_WEAPONRY);
+
+    public static final Block CRYSTALINE_WATCHER_CORE = registerBlock("crystaline_watcher_core",
+            new GlassBlock(FabricBlockSettings.copy(Blocks.GLASS).nonOpaque()),
+            MoreWeaponryItemGroup.MORE_WEAPONRY);
+
 
     public static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItem(name, block, group);

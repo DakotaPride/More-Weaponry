@@ -9,9 +9,9 @@
     "SignTypeAccessor"
   ],
   "client": [
-    "SignTypeAccessor",
     "BlockEntityTypeMixin",
-    "MixinStructurePiece"
+    "MixinStructurePiece",
+    "SignTypeAccessor"
   ],
   "injectors": {
     "defaultRequire": 1

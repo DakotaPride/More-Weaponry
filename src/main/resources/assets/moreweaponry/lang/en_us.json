@@ -360,7 +360,7 @@
   "item.moreweaponry.lurker_spawn_egg": "Lurker Spawn Egg",
 
 
-  "entity.moreweaponry.wretched": "Wanderer",
+  "entity.moreweaponry.wanderer": "Wanderer",
   "item.moreweaponry.wanderer_spawn_egg": "Wanderer Spawn Egg",
   "block.moreweaponry.wanderer_skull": "Wanderer Skull",
   "item.moreweaponry.wanderer_helmet": "Wanderer Mask",
@@ -373,5 +373,7 @@
   "block.moreweaponry.crackler_skull": "Crackler Skull",
   "block.moreweaponry.crackler_summoner": "Crackler Summoning Table",
 
-  "block.moreweaponry.cirtict_forge": "Cirtict Forge"
+  "block.moreweaponry.cirtict_forge": "Cirtict Forge",
+  "block.moreweaponry.watcher_celestial_block": "Watcher Celestial Block",
+  "block.moreweaponry.crystaline_watcher_core": "Crystaline Core Block"
 }

@@ -470,7 +470,7 @@
 				},
 				{
 					"name": "mid",
-					"parent": "head",
+					"parent": "body2",
 					"pivot": [0, 14, 4],
 					"rotation": [7.5, 0, 0]
 				},

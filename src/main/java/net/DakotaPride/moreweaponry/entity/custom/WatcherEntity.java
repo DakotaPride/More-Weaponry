@@ -68,10 +68,6 @@ public class WatcherEntity extends HostileEntity implements IAnimatable {
         }
     }
 
-    public void initEquipment(LocalDifficulty difficulty) {
-        equipStack(EquipmentSlot.MAINHAND, new ItemStack(MoreWeaponryItems.WATCHER_STAFF));
-    }
-
     protected void initGoals() {
         this.goalSelector.add(0, new SwimGoal(this));
         this.goalSelector.add(2, new MeleeAttackGoal(this, 1.0D, false));

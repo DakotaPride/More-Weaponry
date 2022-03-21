@@ -23,6 +23,7 @@ public class MoreClientWeaponry implements ClientModInitializer {
         ScreenRegistry.register(MoreWeaponryScreenHandlers.CIRTICT_FORGE_SCREEN_HANDLER, CirtictForgeScreen::new);
 
         MoreWeaponryRendererHelper.setRenderLayers();
+        MoreWeaponryRendererHelper.setTransparentBlocks();
 
         MoreWeaponryModelPredicateProvider.registerMoreWeaponryModels();
 
