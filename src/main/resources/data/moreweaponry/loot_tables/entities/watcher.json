@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "weight": 1,
+          "weight": 100,
           "name": "moreweaponry:watcher_core",
           "functions": [
             {
@@ -32,7 +32,7 @@
         },
         {
           "type": "minecraft:item",
-          "weight": 40,
+          "weight": 20,
           "name": "minecraft:ender_pearl",
           "functions": [
             {
@@ -58,7 +58,7 @@
         },
         {
           "type": "minecraft:item",
-          "weight": 50,
+          "weight": 25,
           "name": "minecraft:ender_eye",
           "functions": [
             {
@@ -84,7 +84,7 @@
         },
         {
           "type": "minecraft:item",
-          "weight": 30,
+          "weight": 35,
           "name": "moreweaponry:watcher_cloth",
           "functions": [
             {
