@@ -31,6 +31,9 @@ public class MoreWeaponryRendererHelper {
     public static void setTransparentBlocks() {
         BlockRenderLayerMap.INSTANCE.putBlock(MoreWeaponryBlocks.WATCHER_CELESTIAL_BLOCK, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(MoreWeaponryBlocks.CRYSTALINE_WATCHER_CORE, RenderLayer.getTranslucent());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(MoreWeaponryBlocks.WANDERER_CELESTIAL_BLOCK, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(MoreWeaponryBlocks.CRYSTALINE_WANDERER_CORE, RenderLayer.getTranslucent());
     }
 
 }

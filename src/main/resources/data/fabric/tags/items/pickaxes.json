@@ -11,7 +11,10 @@
     "moreweaponry:watcher_essence_cirtict_pickaxe",
     "moreweaponry:cooled_cirtict_pickaxe",
     "moreweaponry:heated_cirtict_pickaxe",
-    "moreweaponry:maiden_essence_cirtict_pickaxe"
+    "moreweaponry:maiden_essence_cirtict_pickaxe",
+    "moreweaponry:suppressed_essence_cirtict_pickaxe",
+    "moreweaponry:wanderer_essence_cirtict_pickaxe",
+    "moreweaponry:plagued_essence_cirtict_pickaxe"
   ]
 
 }

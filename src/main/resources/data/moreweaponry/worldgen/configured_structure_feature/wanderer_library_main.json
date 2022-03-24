@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:village",
+
+  "config": {
+    "start_pool": "moreweaponry:wanderer_library_main/start_pool",
+
+    "size": 2
+  },
+
+  "biomes": "#moreweaponry:has_structure/wanderer_library_biomes",
+
+  "adapt_noise": true,
+
+  "spawn_overrides": {
+    "creature": {
+      "bounding_box": "piece",
+      "spawns": [
+        {
+          "type": "",
+          "weight": 0,
+          "minCount": 0,
+          "maxCount": 0
+        }
+      ]
+    }
+  }
+
+}

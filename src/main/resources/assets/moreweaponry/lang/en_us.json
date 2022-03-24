@@ -334,6 +334,8 @@
   "block.moreweaponry.intoxicated_poppy": "Intoxicated Poppy",
   "block.moreweaponry.intoxicated_dandelion": "Intoxicated Dandelion",
   "block.moreweaponry.packed_watcher_cloth_block": "Packed Watcher Cloth Block",
+  "block.moreweaponry.bluestone_tiles": "Bluestone Tiles",
+  "block.moreweaponry.limestone_tiles": "Limestone Tiles",
 
   "item.moreweaponry.plagued_essence_cirtict_sword": "Essence Cirtict Sword",
   "item.moreweaponry.plagued_essence_cirtict_axe": "Essence Cirtict Axe",
@@ -375,5 +377,8 @@
 
   "block.moreweaponry.cirtict_forge": "Cirtict Forge",
   "block.moreweaponry.watcher_celestial_block": "Watcher Celestial Block",
-  "block.moreweaponry.crystaline_watcher_core": "Crystaline Core Block"
+  "block.moreweaponry.crystaline_watcher_core": "Crystaline Core Block",
+  "block.moreweaponry.wanderer_celestial_block": "Wanderer Celestial Block",
+  "block.moreweaponry.crystaline_wanderer_core": "Crystaline Core Block",
+  "block.moreweaponry.empty_bookshelf": "Empty Bookshelf"
 }
