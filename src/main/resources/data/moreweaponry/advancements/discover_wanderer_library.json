@@ -1,0 +1,25 @@
+{
+  "display": {
+    "icon": {
+      "item": "moreweaponry:wretched_core"
+    },
+    "title": "That's A Lot Of Books",
+    "description": "Discover The Wanderer's Library",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "moreweaponry:moreweaponry",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "biome": "minecraft:dripstone_caves",
+          "feature": "moreweaponry:wanderer_library_main"
+        }
+      }
+    }
+  }
+}

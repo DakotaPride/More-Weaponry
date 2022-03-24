@@ -1,6 +1,7 @@
 package net.DakotaPride.moreweaponry;
 
 import net.DakotaPride.moreweaponry.entity.MoreWeaponryEntityRegistry;
+import net.DakotaPride.moreweaponry.entity.client.armor.WandererArmorRenderer;
 import net.DakotaPride.moreweaponry.entity.client.armor.WatcherArmorRenderer;
 import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
 import net.DakotaPride.moreweaponry.screen.CirtictForgeScreen;
@@ -31,6 +32,8 @@ public class MoreClientWeaponry implements ClientModInitializer {
 
         GeoArmorRenderer.registerArmorRenderer(new WatcherArmorRenderer(), MoreWeaponryItems.WATCHER_HELMET,
                 MoreWeaponryItems.WATCHER_CHESTPLATE);
+        GeoArmorRenderer.registerArmorRenderer(new WandererArmorRenderer(), MoreWeaponryItems.WANDERER_HELMET,
+                MoreWeaponryItems.WANDERER_CHESTPLATE);
 
 
     }

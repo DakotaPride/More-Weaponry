@@ -800,11 +800,11 @@ public class MoreWeaponryItems {
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item WANDERER_HELMET = registerItem("wanderer_helmet",
-            new ArmorItem(MoreWeaponryArmorMaterials.WANDERER, EquipmentSlot.HEAD,
+            new WandererArmorItem(MoreWeaponryArmorMaterials.WANDERER, EquipmentSlot.HEAD,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item WANDERER_CHESTPLATE = registerItem("wanderer_chestplate",
-            new ArmorItem(MoreWeaponryArmorMaterials.WANDERER, EquipmentSlot.CHEST,
+            new WandererArmorItem(MoreWeaponryArmorMaterials.WANDERER, EquipmentSlot.CHEST,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item CRACKLER_SPAWN_EGG = registerItem("crackler_spawn_egg",

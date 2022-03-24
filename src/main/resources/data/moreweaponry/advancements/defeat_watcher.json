@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "moreweaponry:watcher_skull"
+      "item": "moreweaponry:watcher_helmet"
     },
     "title": "Cut Throat",
     "description": "Defeat The Watcher",
@@ -10,7 +10,7 @@
     "announce_to_chat": true,
     "hidden": true
   },
-  "parent": "moreweaponry:defeat_wanderer",
+  "parent": "moreweaponry:dicover_watcher_tower",
   "criteria": {
     "moreweaponry:watcher": {
       "trigger": "minecraft:player_killed_entity",

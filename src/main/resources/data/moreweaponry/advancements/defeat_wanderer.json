@@ -10,7 +10,7 @@
     "announce_to_chat": true,
     "hidden": true
   },
-  "parent": "moreweaponry:moreweaponry",
+  "parent": "moreweaponry:discover_wanderer_library",
   "criteria": {
     "moreweaponry:watcher": {
       "trigger": "minecraft:player_killed_entity",
