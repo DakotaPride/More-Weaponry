@@ -21,8 +21,4 @@ public class MoreWeaponrySounds {
             SoundEvents.ENTITY_ENDER_DRAGON_SHOOT, SoundEvents.BLOCK_STONE_STEP, SoundEvents.BLOCK_STONE_PLACE,
             SoundEvents.BLOCK_STONE_HIT, SoundEvents.BLOCK_STONE_FALL);
 
-    public static final BlockSoundGroup SUMMONER_TWO = new BlockSoundGroup(1f, 1f,
-            SoundEvents.ENTITY_ENDER_DRAGON_SHOOT, SoundEvents.BLOCK_GRASS_STEP, SoundEvents.BLOCK_GRASS_PLACE,
-            SoundEvents.BLOCK_GRASS_HIT, SoundEvents.BLOCK_GRASS_FALL);
-
 }

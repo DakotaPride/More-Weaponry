@@ -1,0 +1,25 @@
+{
+  "display": {
+    "icon": {
+      "item": "moreweaponry:suppressed_core"
+    },
+    "title": "Careful, It's Explosive!",
+    "description": "Discover The Bombaton Nuclear Yard",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "moreweaponry:moreweaponry",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "biome": "minecraft:desert",
+          "feature": "moreweaponry:bombaton_nuclear_yard"
+        }
+      }
+    }
+  }
+}

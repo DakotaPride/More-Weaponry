@@ -362,7 +362,7 @@ public class MoreWeaponryBlocks {
 
     public static final Block CRACKLER_SUMMONER = registerBlock("crackler_summoner",
             new CracklerSummoningBlock(MoreWeaponryBlocks.CRACKLER_SKULL, FabricBlockSettings.copy(Blocks.TNT)
-                    .sounds(MoreWeaponrySounds.SUMMONER_TWO)),
+                    .sounds(MoreWeaponrySounds.SUMMONER)),
             MoreWeaponryItemGroup.MORE_WEAPONRY);
 
     public static final Block WANDERER_SUMMONER = registerBlock("wanderer_summoner",

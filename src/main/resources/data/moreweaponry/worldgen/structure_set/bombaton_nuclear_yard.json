@@ -1,0 +1,17 @@
+{
+  "structures": [
+    {
+      "structure": "moreweaponry:bombaton_nuclear_yard",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 12,
+
+    "spacing": 16,
+
+    "separation": 6,
+
+    "type": "minecraft:random_spread"
+  }
+}

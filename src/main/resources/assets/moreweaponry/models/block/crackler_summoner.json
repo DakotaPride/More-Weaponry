@@ -1,12 +1,8 @@
 {
-  "parent": "minecraft:block/cube_column",
+  "parent": "minecraft:block/cube_bottom_top",
   "textures": {
-    "particle": "moreweaponry:block/tnt_side",
-    "north": "moreweaponry:block/crackler_summoner",
-    "south": "moreweaponry:block/crackler_summoner",
-    "east": "moreweaponry:block/crackler_summoner",
-    "west": "moreweaponry:block/crackler_summoner",
-    "up": "moreweaponry:block/tnt_top",
-    "down": "moreweaponry:block/tnt_bottom"
+    "top": "moreweaponry:block/sandstone_top",
+    "bottom": "moreweaponry:block/sandstone_bottom",
+    "side": "moreweaponry:block/crackler_summoner"
   }
 }

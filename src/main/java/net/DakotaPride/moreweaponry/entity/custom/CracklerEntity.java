@@ -6,11 +6,16 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.boss.BossBar;
+import net.minecraft.entity.boss.ServerBossBar;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.nbt.NbtCompound;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.text.LiteralText;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import software.bernie.geckolib3.core.IAnimatable;
@@ -23,9 +28,42 @@ import software.bernie.geckolib3.core.manager.AnimationFactory;
 
 public class CracklerEntity extends HostileEntity implements IAnimatable {
     private AnimationFactory factory = new AnimationFactory(this);
+    private final ServerBossBar bossBar;
     public CracklerEntity(EntityType<? extends HostileEntity> entityType, World world) {
         super(entityType, world);
+
+        this.bossBar = (ServerBossBar)(new ServerBossBar(new LiteralText("Crackler"),
+                BossBar.Color.GREEN, BossBar.Style.NOTCHED_10)).setDragonMusic(false).setThickenFog(false);
+
     }
+
+    @Override
+    public void onStartedTrackingBy(ServerPlayerEntity player) {
+        super.onStartedTrackingBy(player);
+        this.bossBar.addPlayer(player);
+    }
+
+    public void onStoppedTrackingBy(ServerPlayerEntity player) {
+        super.onStoppedTrackingBy(player);
+        this.bossBar.removePlayer(player);
+    }
+
+    public void writeCustomDataToNbt(NbtCompound nbt) {
+        super.writeCustomDataToNbt(nbt);
+    }
+
+    public void readCustomDataFromNbt(NbtCompound nbt) {
+        super.readCustomDataFromNbt(nbt);
+        if (this.hasCustomName()) {
+            this.bossBar.setName(this.getDisplayName());
+        }
+
+    }
+
+    protected void mobTick() {
+        this.bossBar.setPercent(this.getHealth() / this.getMaxHealth());
+    }
+
 
     public static DefaultAttributeContainer.Builder setAttributes() {
         return HostileEntity.createMobAttributes()
