@@ -10,7 +10,7 @@
     "announce_to_chat": true,
     "hidden": true
   },
-  "parent": "moreweaponry:discover_watcher_tower",
+  "parent": "moreweaponry:discover_bombaton_nuclear_yard",
   "criteria": {
     "moreweaponry:watcher": {
       "trigger": "minecraft:player_killed_entity",
@@ -19,7 +19,7 @@
           {
             "condition": "minecraft:entity_properties",
             "predicate": {
-              "type": "moreweaponry:watcher"
+              "type": "moreweaponry:crackler"
             },
             "entity": "this"
           }
