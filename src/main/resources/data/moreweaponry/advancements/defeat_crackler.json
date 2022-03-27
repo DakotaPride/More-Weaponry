@@ -3,8 +3,8 @@
     "icon": {
       "item": "moreweaponry:crackler_skull"
     },
-    "title": "Cut Throat",
-    "description": "Defeat The Watcher",
+    "title": "Boom!",
+    "description": "Defeat The Crackler",
     "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,
