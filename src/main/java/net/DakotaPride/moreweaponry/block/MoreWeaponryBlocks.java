@@ -357,7 +357,7 @@ public class MoreWeaponryBlocks {
 
     public static final Block WATCHER_SUMMONER = registerBlock("watcher_summoner",
             new WatcherSummoningBlock(MoreWeaponryBlocks.WATCHER_SKULL, FabricBlockSettings.copy(Blocks.END_STONE)
-                    .sounds(MoreWeaponrySounds.SUMMONER).requiresTool()),
+                    .sounds(MoreWeaponrySounds.SUMMONER)),
             MoreWeaponryItemGroup.MORE_WEAPONRY);
 
     public static final Block CRACKLER_SUMMONER = registerBlock("crackler_summoner",
@@ -367,7 +367,7 @@ public class MoreWeaponryBlocks {
 
     public static final Block WANDERER_SUMMONER = registerBlock("wanderer_summoner",
             new WandererSummoningBlock(MoreWeaponryBlocks.WANDERER_SKULL, FabricBlockSettings.copy(Blocks.DRIPSTONE_BLOCK)
-                    .sounds(MoreWeaponrySounds.SUMMONER).requiresTool()),
+                    .sounds(MoreWeaponrySounds.SUMMONER)),
             MoreWeaponryItemGroup.MORE_WEAPONRY);
 
 
