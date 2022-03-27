@@ -387,6 +387,14 @@ public class MoreWeaponryBlocks {
             new GlassBlock(FabricBlockSettings.copy(Blocks.GLASS).nonOpaque()),
             MoreWeaponryItemGroup.MORE_WEAPONRY);
 
+    public static final Block CRACKLER_CELESTIAL_BLOCK = registerBlock("crackler_celestial_block",
+            new GlassBlock(FabricBlockSettings.copy(Blocks.GLASS).nonOpaque().strength(1000f, 1000f)),
+            MoreWeaponryItemGroup.MORE_WEAPONRY);
+
+    public static final Block CRYSTALINE_CRACKLER_CORE = registerBlock("crystaline_crackler_core",
+            new GlassBlock(FabricBlockSettings.copy(Blocks.GLASS).nonOpaque()),
+            MoreWeaponryItemGroup.MORE_WEAPONRY);
+
     public static final Block WANDERER_CELESTIAL_BLOCK = registerBlock("wanderer_celestial_block",
             new GlassBlock(FabricBlockSettings.copy(Blocks.GLASS).nonOpaque().strength(1000f, 1000f)),
             MoreWeaponryItemGroup.MORE_WEAPONRY);

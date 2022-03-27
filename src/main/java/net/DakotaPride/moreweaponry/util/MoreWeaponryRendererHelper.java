@@ -34,6 +34,9 @@ public class MoreWeaponryRendererHelper {
 
         BlockRenderLayerMap.INSTANCE.putBlock(MoreWeaponryBlocks.WANDERER_CELESTIAL_BLOCK, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(MoreWeaponryBlocks.CRYSTALINE_WANDERER_CORE, RenderLayer.getTranslucent());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(MoreWeaponryBlocks.CRACKLER_CELESTIAL_BLOCK, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(MoreWeaponryBlocks.CRYSTALINE_CRACKLER_CORE, RenderLayer.getTranslucent());
     }
 
 }
