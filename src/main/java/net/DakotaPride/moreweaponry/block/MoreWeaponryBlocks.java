@@ -412,6 +412,12 @@ public class MoreWeaponryBlocks {
     public static final Block EMPTY_BOOKSHELF = registerBlock("empty_bookshelf",
             new Block(FabricBlockSettings.copy(Blocks.BOOKSHELF)), MoreWeaponryItemGroup.MORE_WEAPONRY);
 
+    public static final Block CORRUPTED_END_STONE_BRICKS = registerBlock("corrupted_end_stone_bricks",
+            new Block(FabricBlockSettings.copy(Blocks.END_STONE_BRICKS)), MoreWeaponryItemGroup.MORE_WEAPONRY);
+
+    public static final Block CORRUPTED_END_STONE = registerBlock("corrupted_end_stone",
+            new Block(FabricBlockSettings.copy(Blocks.END_STONE)), MoreWeaponryItemGroup.MORE_WEAPONRY);
+
 
     public static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItem(name, block, group);

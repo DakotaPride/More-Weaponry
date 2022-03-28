@@ -1,11 +1,11 @@
 {
-  "name": "moreweaponry:bombaton_nuclear_yard/side_pool",
+  "name": "moreweaponry:crackler_nuclear_yard/side_pool",
   "fallback": "minecraft:empty",
   "elements": [
     {
       "weight": 100,
       "element": {
-        "location": "moreweaponry:bombaton_nuclear_yard_two",
+        "location": "moreweaponry:crackler_nuclear_yard_two",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -14,7 +14,7 @@
     {
       "weight": 100,
       "element": {
-        "location": "moreweaponry:bombaton_nuclear_yard_three",
+        "location": "moreweaponry:crackler_nuclear_yard_three",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -23,7 +23,7 @@
     {
       "weight": 100,
       "element": {
-        "location": "moreweaponry:bombaton_nuclear_yard_four",
+        "location": "moreweaponry:crackler_nuclear_yard_four",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"

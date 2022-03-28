@@ -2,12 +2,12 @@
   "type": "minecraft:village",
 
   "config": {
-    "start_pool": "moreweaponry:bombaton_nuclear_yard/start_pool",
+    "start_pool": "moreweaponry:crackler_nuclear_yard/start_pool",
 
     "size": 2
   },
 
-  "biomes": "#moreweaponry:has_structure/bombaton_nuclear_yard_biomes",
+  "biomes": "#moreweaponry:has_structure/crackler_nuclear_yard_biomes",
 
   "adapt_noise": true,
 
