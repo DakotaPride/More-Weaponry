@@ -9,7 +9,7 @@
 
   "biomes": "#moreweaponry:has_structure/bard_rock_biomes",
 
-  "adapt_noise": true,
+  "adapt_noise": false,
 
   "spawn_overrides": {
     "creature": {
