@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "minecraft:block/polished_andesite",
+    "side": "moreweaponry:block/bard_summoner"
+  }
+}

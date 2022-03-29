@@ -721,7 +721,7 @@ public class MoreWeaponryItems {
     public static final Item MAIDEN_STEM = registerItem("maiden_stem",
             new Item(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
-    public static final Item MAIDEN_CLOTH = registerItem("maiden_cloth",
+    public static final Item BARD_CLOTH = registerItem("bard_cloth",
             new Item(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item REINFORCED_BONE = registerItem("reinforced_bone",
@@ -792,6 +792,14 @@ public class MoreWeaponryItems {
 
     public static final Item WATCHER_SPAWN_EGG = registerItem("watcher_spawn_egg",
             new SpawnEggItem(MoreWeaponryEntities.WATCHER,0xC938FF, 0x420059,
+                    new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+
+    public static final Item BARD_SPAWN_EGG = registerItem("bard_spawn_egg",
+            new SpawnEggItem(MoreWeaponryEntities.BARD,0xF2F2F2, 0x7A7EDB,
+                    new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+
+    public static final Item SICKENED_SPAWN_EGG = registerItem("sickened_spawn_egg",
+            new SpawnEggItem(MoreWeaponryEntities.SICKENED,0x447C3D, 0x335B2C,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item LURKER_SPAWN_EGG = registerItem("lurker_spawn_egg",

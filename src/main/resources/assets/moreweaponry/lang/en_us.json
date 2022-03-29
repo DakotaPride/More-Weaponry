@@ -375,6 +375,14 @@
   "block.moreweaponry.crackler_skull": "Crackler Skull",
   "block.moreweaponry.crackler_summoner": "Crackler Summoning Table",
 
+
+  "entity.moreweaponry.bard": "Bard",
+  "item.moreweaponry.bard_spawn_egg": "Bard Spawn Egg",
+  "block.moreweaponry.bard_skull": "Bard Skull",
+  "block.moreweaponry.bard_summoner": "Bard Summoning Table",
+  "item.moreweaponry.bard_cloth": "Bard Cloth",
+
+
   "block.moreweaponry.cirtict_forge": "Cirtict Forge",
   "block.moreweaponry.watcher_celestial_block": "Watcher Celestial Block",
   "block.moreweaponry.crystaline_watcher_core": "Crystaline Core Block",

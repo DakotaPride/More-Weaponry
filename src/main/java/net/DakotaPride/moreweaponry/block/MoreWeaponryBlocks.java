@@ -5,6 +5,7 @@ import net.DakotaPride.moreweaponry.block.custom.*;
 import net.DakotaPride.moreweaponry.block.entity.CirtictForgeBlock;
 import net.DakotaPride.moreweaponry.block.entity.CoreForgeBlock;
 import net.DakotaPride.moreweaponry.block.entity.EssenceTranslatorBlock;
+import net.DakotaPride.moreweaponry.block.skulls.BardSkullBlock;
 import net.DakotaPride.moreweaponry.block.skulls.CracklerSkullBlock;
 import net.DakotaPride.moreweaponry.block.skulls.WandererSkullBlock;
 import net.DakotaPride.moreweaponry.block.skulls.WatcherSkullBlock;
@@ -355,6 +356,10 @@ public class MoreWeaponryBlocks {
             new WatcherSkullBlock(FabricBlockSettings.copy(Blocks.PLAYER_HEAD).nonOpaque()),
             MoreWeaponryItemGroup.MORE_WEAPONRY);
 
+    public static final Block BARD_SKULL = registerBlock("bard_skull",
+            new BardSkullBlock(FabricBlockSettings.copy(Blocks.PLAYER_HEAD).nonOpaque()),
+            MoreWeaponryItemGroup.MORE_WEAPONRY);
+
     public static final Block WATCHER_SUMMONER = registerBlock("watcher_summoner",
             new WatcherSummoningBlock(MoreWeaponryBlocks.WATCHER_SKULL, FabricBlockSettings.copy(Blocks.END_STONE)
                     .sounds(MoreWeaponrySounds.SUMMONER)),
@@ -367,6 +372,11 @@ public class MoreWeaponryBlocks {
 
     public static final Block WANDERER_SUMMONER = registerBlock("wanderer_summoner",
             new WandererSummoningBlock(MoreWeaponryBlocks.WANDERER_SKULL, FabricBlockSettings.copy(Blocks.DRIPSTONE_BLOCK)
+                    .sounds(MoreWeaponrySounds.SUMMONER)),
+            MoreWeaponryItemGroup.MORE_WEAPONRY);
+
+    public static final Block BARD_SUMMONER = registerBlock("bard_summoner",
+            new WandererSummoningBlock(MoreWeaponryBlocks.BARD_SKULL, FabricBlockSettings.copy(Blocks.POLISHED_ANDESITE)
                     .sounds(MoreWeaponrySounds.SUMMONER)),
             MoreWeaponryItemGroup.MORE_WEAPONRY);
 
