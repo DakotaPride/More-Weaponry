@@ -6,7 +6,8 @@
   "mixins": [
     "BlockEntityTypeMixin",
     "MixinStructurePiece",
-    "SignTypeAccessor"
+    "SignTypeAccessor",
+    "StructureFeatureAccessor"
   ],
   "client": [
     "BlockEntityTypeMixin",

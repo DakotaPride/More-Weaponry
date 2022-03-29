@@ -6,6 +6,7 @@ import net.DakotaPride.moreweaponry.enchantments.MoreWeaponryEnchantments;
 import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
 import net.DakotaPride.moreweaponry.painting.MoreWeaponryPaintings;
 import net.DakotaPride.moreweaponry.recipe.MoreWeaponryRecipes;
+import net.DakotaPride.moreweaponry.structure.MoreWeaponryStructureTypes;
 import net.DakotaPride.moreweaponry.util.MoreWeaponryLootTableModifiers;
 import net.DakotaPride.moreweaponry.util.MoreWeaponryRegistries;
 import net.DakotaPride.moreweaponry.util.MoreWeaponryTags;
@@ -26,6 +27,8 @@ public class MoreWeaponry implements ModInitializer {
 	@Override
 	public void onInitialize() {
 
+		MoreWeaponryStructureTypes.registerStructureFeatures();
+
 		MoreWeaponryConfiguredFeatures.registerConfiguredFeatures();
 
 		MoreWeaponryBlockEntities.registerMoreWeaponryBlockEntities();
@@ -35,8 +38,6 @@ public class MoreWeaponry implements ModInitializer {
 		MoreWeaponryBlocks.registerModBlocks();
 
 		MoreWeaponryEnchantments.registerModEnchantments();
-
-		MoreWeaponryVillagerTrades.registerTrades();
 
 		MoreWeaponryPaintings.registerPaintings();
 

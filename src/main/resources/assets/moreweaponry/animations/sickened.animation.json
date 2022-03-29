@@ -1,0 +1,149 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.sickened.walk": {
+			"loop": true,
+			"animation_length": 5.04,
+			"bones": {
+				"head": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.64": {
+							"vector": [0, 0, 0]
+						},
+						"0.68": {
+							"vector": [0, 0, -22.5]
+						},
+						"0.72": {
+							"vector": [0, 0, 0]
+						},
+						"2.92": {
+							"vector": [0, 0, 0]
+						},
+						"2.96": {
+							"vector": [0, 0, -22.5]
+						},
+						"3.0": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"RightArm": {
+					"rotation": {
+						"vector": [-15, 0, 0]
+					}
+				},
+				"LeftArm": {
+					"rotation": {
+						"vector": [-15, 0, 0]
+					}
+				},
+				"RightLeg": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"1.32": {
+							"vector": [-20, 0, 0]
+						},
+						"2.64": {
+							"vector": [0, 0, 0]
+						},
+						"3.96": {
+							"vector": [20, 0, 0]
+						},
+						"5.04": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"LeftLeg": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"1.32": {
+							"vector": [20, 0, 0]
+						},
+						"2.64": {
+							"vector": [0, 0, 0]
+						},
+						"3.96": {
+							"vector": [-20, 0, 0]
+						},
+						"5.04": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"other": {
+					"rotation": {
+						"vector": [12.5, 0, 0]
+					},
+					"position": {
+						"vector": [0, -0.675, 0]
+					}
+				}
+			}
+		},
+		"animation.sickened.idle": {
+			"loop": true,
+			"animation_length": 3.04,
+			"bones": {
+				"head": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.64": {
+							"vector": [0, 0, 0]
+						},
+						"0.68": {
+							"vector": [0, 0, -22.5]
+						},
+						"0.72": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"RightArm": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"1.52": {
+							"vector": [-2.54778, 2.36806, 0.86063]
+						},
+						"3.04": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"LeftArm": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"1.52": {
+							"vector": [2.44047, -2.31476, -0.95913]
+						},
+						"3.04": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"other": {
+					"rotation": {
+						"vector": [25, 0, 0]
+					},
+					"position": {
+						"vector": [0, -0.3, 0]
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

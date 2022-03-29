@@ -721,6 +721,9 @@ public class MoreWeaponryItems {
     public static final Item MAIDEN_STEM = registerItem("maiden_stem",
             new Item(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
+    public static final Item MAIDEN_CLOTH = registerItem("maiden_cloth",
+            new Item(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+
     public static final Item REINFORCED_BONE = registerItem("reinforced_bone",
             new Item(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 

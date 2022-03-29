@@ -2,10 +2,7 @@ package net.DakotaPride.moreweaponry.util;
 
 import net.DakotaPride.moreweaponry.block.MoreWeaponryBlocks;
 import net.DakotaPride.moreweaponry.entity.MoreWeaponryEntities;
-import net.DakotaPride.moreweaponry.entity.custom.CracklerEntity;
-import net.DakotaPride.moreweaponry.entity.custom.LurkerEntity;
-import net.DakotaPride.moreweaponry.entity.custom.WandererEntity;
-import net.DakotaPride.moreweaponry.entity.custom.WatcherEntity;
+import net.DakotaPride.moreweaponry.entity.custom.*;
 import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
@@ -39,6 +36,8 @@ public class MoreWeaponryRegistries {
         FabricDefaultAttributeRegistry.register(MoreWeaponryEntities.LURKER, LurkerEntity.setAttributes());
         FabricDefaultAttributeRegistry.register(MoreWeaponryEntities.WANDERER, WandererEntity.setAttributes());
         FabricDefaultAttributeRegistry.register(MoreWeaponryEntities.CRACKLER, CracklerEntity.setAttributes());
+        FabricDefaultAttributeRegistry.register(MoreWeaponryEntities.BARD, BardEntity.setAttributes());
+        FabricDefaultAttributeRegistry.register(MoreWeaponryEntities.SICKENED, SickenedEntity.setAttributes());
     }
 
 }

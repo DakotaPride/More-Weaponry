@@ -18,7 +18,6 @@ import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.server.network.ServerPlayerEntity;
-import net.minecraft.entity.boss.WitherEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
@@ -41,7 +40,7 @@ public class WatcherEntity extends HostileEntity implements IAnimatable {
         super(entityType, world);
         this.ignoreCameraFrustum = true;
         this.bossBar = (ServerBossBar)(new ServerBossBar(new LiteralText("Watcher"),
-                BossBar.Color.PURPLE, BossBar.Style.NOTCHED_10)).setDragonMusic(false).setThickenFog(false);
+                BossBar.Color.PURPLE, BossBar.Style.PROGRESS)).setDragonMusic(false).setThickenFog(false);
         this.stepHeight = 1.0F;
 
         setPathfindingPenalty(PathNodeType.WATER, -1.0F);
@@ -77,8 +76,8 @@ public class WatcherEntity extends HostileEntity implements IAnimatable {
 
     public static DefaultAttributeContainer.Builder setAttributes() {
         return HostileEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_MAX_HEALTH, 1350.0D)
-                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 42.0f)
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, 1400.0D)
+                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 44.0f)
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.21f)
                 .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 186.0D)
                 .add(EntityAttributes.GENERIC_ATTACK_SPEED, 0.96f);
@@ -106,7 +105,7 @@ public class WatcherEntity extends HostileEntity implements IAnimatable {
         this.targetSelector.add(1, new ActiveTargetGoal<>(this, PlayerEntity.class, true, false));
         this.targetSelector.add(3, new ActiveTargetGoal<>(this, WandererEntity.class, true, false));
         this.targetSelector.add(3, new ActiveTargetGoal<>(this, CracklerEntity.class, true, false));
-
+        this.targetSelector.add(5, new ActiveTargetGoal<>(this, SickenedEntity.class, true, false));
     }
 
     public boolean hurtByWater() {
@@ -143,7 +142,7 @@ public class WatcherEntity extends HostileEntity implements IAnimatable {
     }
 
     protected float getActiveEyeHeight(EntityPose pose, EntityDimensions dimensions) {
-        return 3.4F;
+        return 3.5F;
     }
 
     @Override

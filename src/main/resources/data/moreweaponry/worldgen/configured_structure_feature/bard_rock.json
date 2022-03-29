@@ -1,13 +1,13 @@
 {
-  "type": "moreweaponry:wanderer_library",
+  "type": "moreweaponry:bard_rock",
 
   "config": {
-    "start_pool": "moreweaponry:wanderer_library_main/start_pool",
+    "start_pool": "moreweaponry:bard_rock/start_pool",
 
     "size": 2
   },
 
-  "biomes": "#moreweaponry:has_structure/wanderer_library_biomes",
+  "biomes": "#moreweaponry:has_structure/bard_rock_biomes",
 
   "adapt_noise": true,
 

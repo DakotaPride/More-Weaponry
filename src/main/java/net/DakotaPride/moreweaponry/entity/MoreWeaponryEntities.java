@@ -1,10 +1,7 @@
 package net.DakotaPride.moreweaponry.entity;
 
 import net.DakotaPride.moreweaponry.MoreWeaponry;
-import net.DakotaPride.moreweaponry.entity.custom.CracklerEntity;
-import net.DakotaPride.moreweaponry.entity.custom.LurkerEntity;
-import net.DakotaPride.moreweaponry.entity.custom.WandererEntity;
-import net.DakotaPride.moreweaponry.entity.custom.WatcherEntity;
+import net.DakotaPride.moreweaponry.entity.custom.*;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
@@ -28,5 +25,13 @@ public class MoreWeaponryEntities {
     public static final EntityType<CracklerEntity> CRACKLER = Registry.register(
             Registry.ENTITY_TYPE, new Identifier(MoreWeaponry.MOD_ID, "crackler"),
             FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, CracklerEntity::new)
-                    .dimensions(EntityDimensions.fixed(0.8f, 1.7f)).build());
+                    .dimensions(EntityDimensions.fixed(0.6f, 1.5f)).build());
+    public static final EntityType<BardEntity> BARD = Registry.register(
+            Registry.ENTITY_TYPE, new Identifier(MoreWeaponry.MOD_ID, "bard"),
+            FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, BardEntity::new)
+                    .dimensions(EntityDimensions.fixed(0.6f, 1.9f)).build());
+    public static final EntityType<SickenedEntity> SICKENED = Registry.register(
+            Registry.ENTITY_TYPE, new Identifier(MoreWeaponry.MOD_ID, "sickened"),
+            FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, SickenedEntity::new)
+                    .dimensions(EntityDimensions.fixed(0.6f, 1.9f)).build());
 }

@@ -1,6 +1,8 @@
 package net.DakotaPride.moreweaponry.entity.custom;
 
 import net.minecraft.block.BlockState;
+import net.minecraft.entity.EntityDimensions;
+import net.minecraft.entity.EntityPose;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.goal.*;
@@ -33,7 +35,7 @@ public class CracklerEntity extends HostileEntity implements IAnimatable {
         super(entityType, world);
 
         this.bossBar = (ServerBossBar)(new ServerBossBar(new LiteralText("Crackler"),
-                BossBar.Color.GREEN, BossBar.Style.NOTCHED_10)).setDragonMusic(false).setThickenFog(false);
+                BossBar.Color.GREEN, BossBar.Style.PROGRESS)).setDragonMusic(false).setThickenFog(false);
 
     }
 
@@ -85,6 +87,7 @@ public class CracklerEntity extends HostileEntity implements IAnimatable {
         this.targetSelector.add(3, new ActiveTargetGoal<>(this, LurkerEntity.class, true, false));
         this.targetSelector.add(1, new ActiveTargetGoal<>(this, WatcherEntity.class, true, false));
         this.targetSelector.add(3, new ActiveTargetGoal<>(this, WandererEntity.class, true, false));
+        this.targetSelector.add(5, new ActiveTargetGoal<>(this, SickenedEntity.class, true, false));
     }
 
     private static class AttackGoal extends MeleeAttackGoal {
@@ -123,6 +126,10 @@ public class CracklerEntity extends HostileEntity implements IAnimatable {
 
             return super.canStart();
         }
+    }
+
+    protected float getActiveEyeHeight(EntityPose pose, EntityDimensions dimensions) {
+        return 1.45F;
     }
 
 
