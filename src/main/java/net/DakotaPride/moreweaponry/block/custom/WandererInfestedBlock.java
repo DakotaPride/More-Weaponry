@@ -17,7 +17,7 @@ import net.minecraft.world.explosion.Explosion;
 
 import java.util.Map;
 
-public class WretchedInfestedBlock
+public class WandererInfestedBlock
         extends Block {
     private final Block regularBlock;
     private static final Map<Block, Block> REGULAR_TO_INFESTED_BLOCK = Maps.newIdentityHashMap();
@@ -30,13 +30,13 @@ public class WretchedInfestedBlock
      * @param regularBlock the block this infested block should mimic
      * @param settings block settings
      */
-    public WretchedInfestedBlock(Block regularBlock, AbstractBlock.Settings settings) {
+    public WandererInfestedBlock(Block regularBlock, AbstractBlock.Settings settings) {
         super(settings.hardness(regularBlock.getHardness() / 2.0f).resistance(0.75f));
         this.regularBlock = regularBlock;
         REGULAR_TO_INFESTED_BLOCK.put(regularBlock, this);
     }
 
-    public WretchedInfestedBlock(Settings settings, Block regularBlock) {
+    public WandererInfestedBlock(Settings settings, Block regularBlock) {
         super(settings);
         this.regularBlock = regularBlock;
     }

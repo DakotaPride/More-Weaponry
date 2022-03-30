@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "moreweaponry:entity/crackler/crackler",
-		"particle": "moreweaponry:block/crackler_skull"
+		"0": "moreweaponry:entity/bard/bard",
+		"particle": "moreweaponry:block/bard_skull"
 	},
 	"elements": [
 		{

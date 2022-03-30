@@ -3,7 +3,6 @@ package net.DakotaPride.moreweaponry.block.skulls;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ShapeContext;
-import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
@@ -18,8 +17,6 @@ import net.minecraft.world.BlockView;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.stream.Stream;
-
-import static net.DakotaPride.moreweaponry.block.custom.WretchedSkullBlock.FACING;
 
 public class WatcherSkullBlock extends Block {
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;

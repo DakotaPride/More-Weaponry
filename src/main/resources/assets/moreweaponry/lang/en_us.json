@@ -382,6 +382,11 @@
   "block.moreweaponry.bard_summoner": "Bard Summoning Table",
   "item.moreweaponry.bard_cloth": "Bard Cloth",
 
+  "entity.moreweaponry.sickened": "Sickened",
+  "item.moreweaponry.sickened_spawn_egg": "Sickened Spawn Egg",
+  "block.moreweaponry.sickened_skull": "Sickened Skull",
+  "block.moreweaponry.sickened_summoner": "Sickened Summoning Table",
+
 
   "block.moreweaponry.cirtict_forge": "Cirtict Forge",
   "block.moreweaponry.watcher_celestial_block": "Watcher Celestial Block",

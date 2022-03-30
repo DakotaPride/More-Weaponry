@@ -1,11 +1,9 @@
-package net.DakotaPride.moreweaponry.block.custom;
+package net.DakotaPride.moreweaponry.block.skulls;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.HorizontalFacingBlock;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.item.Wearable;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.state.property.Properties;
@@ -20,25 +18,21 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.stream.Stream;
 
-public class WretchedSkullBlock extends HorizontalFacingBlock implements Wearable {
+public class SickenedSkullBlock extends Block {
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
-
-    public WretchedSkullBlock(Settings settings) {
+    public SickenedSkullBlock(Settings settings) {
         super(settings);
     }
 
     private static final VoxelShape SHAPE_N = Stream.of(
             Block.createCuboidShape(4, 0, 4, 12, 8, 12)
     ).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
-
     private static final VoxelShape SHAPE_S = Stream.of(
             Block.createCuboidShape(4, 0, 4, 12, 8, 12)
     ).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
-
     private static final VoxelShape SHAPE_W = Stream.of(
             Block.createCuboidShape(4, 0, 4, 12, 8, 12)
     ).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
-
     private static final VoxelShape SHAPE_E = Stream.of(
             Block.createCuboidShape(4, 0, 4, 12, 8, 12)
     ).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
