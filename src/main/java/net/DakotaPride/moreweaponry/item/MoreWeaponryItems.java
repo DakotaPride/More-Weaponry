@@ -10,14 +10,14 @@ import net.DakotaPride.moreweaponry.item.custom.cirtict.essence.*;
 import net.DakotaPride.moreweaponry.item.custom.cirtict.heated.*;
 import net.DakotaPride.moreweaponry.item.custom.cores.*;
 import net.DakotaPride.moreweaponry.item.custom.elder_scale_items.*;
-import net.DakotaPride.moreweaponry.item.custom.maiden_tools.*;
+import net.DakotaPride.moreweaponry.item.custom.bard_tools.*;
 import net.DakotaPride.moreweaponry.item.custom.mod_tools.BluestoneIgnitor;
 import net.DakotaPride.moreweaponry.item.custom.mod_tools.ModBattleaxeItem;
 import net.DakotaPride.moreweaponry.item.custom.mod_tools.ModKnifeItem;
 import net.DakotaPride.moreweaponry.item.custom.phantom_helm.PhantomScaleHelm;
-import net.DakotaPride.moreweaponry.item.custom.plagued_tools.*;
+import net.DakotaPride.moreweaponry.item.custom.sickened_tools.*;
 import net.DakotaPride.moreweaponry.item.custom.powered_cores.*;
-import net.DakotaPride.moreweaponry.item.custom.suppressed_tools.*;
+import net.DakotaPride.moreweaponry.item.custom.crackler_tools.*;
 import net.DakotaPride.moreweaponry.item.custom.vanilla_tools.ModHoeItem;
 import net.DakotaPride.moreweaponry.item.custom.vanilla_tools.ModPickaxeItem;
 import net.DakotaPride.moreweaponry.item.custom.wanderer_tools.*;
@@ -667,31 +667,31 @@ public class MoreWeaponryItems {
 
 
     public static final Item MAIDEN_ESSENCE_CIRTICT_AXE = registerItem("maiden_essence_cirtict_axe",
-            new MaidenAxe((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 25, -3f,
+            new BardAxe((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 25, -3f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item MAIDEN_ESSENCE_CIRTICT_PICKAXE = registerItem("maiden_essence_cirtict_pickaxe",
-            new MaidenPickaxe((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 7, -2.8f,
+            new BardPickaxe((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 7, -2.8f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item MAIDEN_ESSENCE_CIRTICT_SWORD = registerItem("maiden_essence_cirtict_sword",
-            new MaidenSword((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 21, -2.4f,
+            new BardSword((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 21, -2.4f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item MAIDEN_ESSENCE_CIRTICT_SHOVEL = registerItem("maiden_essence_cirtict_shovel",
-            new MaidenShovel((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 8, -3f,
+            new BardShovel((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 8, -3f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item MAIDEN_ESSENCE_CIRTICT_KNIFE = registerItem("maiden_essence_cirtict_knife",
-            new MaidenKnife((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 12, -1f,
+            new BardKnife((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 12, -1f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item MAIDEN_ESSENCE_CIRTICT_HOE = registerItem("maiden_essence_cirtict_hoe",
-            new MaidenHoe((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 4, 0f,
+            new BardHoe((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 4, 0f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item MAIDEN_ESSENCE_CIRTICT_BATTLEAXE = registerItem("maiden_essence_cirtict_battleaxe",
-            new MaidenBattleaxe((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 15, -3.3f,
+            new BardBattleaxe((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 15, -3.3f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item LEECHING_ESSENCE = registerItem("leeching_essence",
@@ -708,9 +708,6 @@ public class MoreWeaponryItems {
     public static final Item WATCHER_STAFF = registerItem("watcher_staff",
             new WatcherStaffItem((ToolMaterial) ModToolMaterial.WATCHER_STAFF, 26, -3.1f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
-
-    public static final Item MAIDENS_STEM_BOW = registerItem("maidens_stem_bow",
-            new MaidensStemBowItem(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY).maxCount(1)));
 
     public static final Item WITHER_BONE_MEAL = registerItem("wither_bone_meal",
             new BoneMealItem(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
@@ -734,60 +731,60 @@ public class MoreWeaponryItems {
             new Item(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item SUPPRESSED_ESSENCE_CIRTICT_AXE = registerItem("suppressed_essence_cirtict_axe",
-            new SuppressedAxe((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 25, -3f,
+            new CracklerAxe((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 25, -3f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item SUPPRESSED_ESSENCE_CIRTICT_PICKAXE = registerItem("suppressed_essence_cirtict_pickaxe",
-            new SuppressedPickaxe((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 7, -2.8f,
+            new CracklerPickaxe((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 7, -2.8f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item SUPPRESSED_ESSENCE_CIRTICT_SWORD = registerItem("suppressed_essence_cirtict_sword",
-            new SuppressedSword((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 21, -2.4f,
+            new CracklerSword((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 21, -2.4f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item SUPPRESSED_ESSENCE_CIRTICT_SHOVEL = registerItem("suppressed_essence_cirtict_shovel",
-            new SuppressedShovel((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 8, -3f,
+            new CracklerShovel((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 8, -3f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item SUPPRESSED_ESSENCE_CIRTICT_KNIFE = registerItem("suppressed_essence_cirtict_knife",
-            new SuppressedKnife((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 12, -1f,
+            new CracklerKnife((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 12, -1f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item SUPPRESSED_ESSENCE_CIRTICT_HOE = registerItem("suppressed_essence_cirtict_hoe",
-            new SuppressedHoe((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 4, 0f,
+            new CracklerHoe((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 4, 0f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item SUPPRESSED_ESSENCE_CIRTICT_BATTLEAXE = registerItem("suppressed_essence_cirtict_battleaxe",
-            new SuppressedBattleaxe((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 15, -3.3f,
+            new CracklerBattleaxe((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 15, -3.3f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
 
     public static final Item PLAGUED_ESSENCE_CIRTICT_AXE = registerItem("plagued_essence_cirtict_axe",
-            new PlaguedAxe((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 25, -3f,
+            new SickenedAxe((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 25, -3f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item PLAGUED_ESSENCE_CIRTICT_PICKAXE = registerItem("plagued_essence_cirtict_pickaxe",
-            new PlaguedPickaxe((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 7, -2.8f,
+            new SickenedPickaxe((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 7, -2.8f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item PLAGUED_ESSENCE_CIRTICT_SWORD = registerItem("plagued_essence_cirtict_sword",
-            new PlaguedSword((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 21, -2.4f,
+            new SickenedSword((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 21, -2.4f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item PLAGUED_ESSENCE_CIRTICT_SHOVEL = registerItem("plagued_essence_cirtict_shovel",
-            new PlaguedShovel((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 8, -3f,
+            new SickenedShovel((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 8, -3f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item PLAGUED_ESSENCE_CIRTICT_KNIFE = registerItem("plagued_essence_cirtict_knife",
-            new PlaguedKnife((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 12, -1f,
+            new SickenedKnife((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 12, -1f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item PLAGUED_ESSENCE_CIRTICT_HOE = registerItem("plagued_essence_cirtict_hoe",
-            new PlaguedHoe((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 4, 0f,
+            new SickenedHoe((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 4, 0f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item PLAGUED_ESSENCE_CIRTICT_BATTLEAXE = registerItem("plagued_essence_cirtict_battleaxe",
-            new PlaguedBattleaxe((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 15, -3.3f,
+            new SickenedBattleaxe((ToolMaterial) ModToolMaterial.ESSENCE_CIRTICT, 15, -3.3f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item WATCHER_SPAWN_EGG = registerItem("watcher_spawn_egg",
@@ -820,6 +817,14 @@ public class MoreWeaponryItems {
 
     public static final Item CRACKLER_SPAWN_EGG = registerItem("crackler_spawn_egg",
             new SpawnEggItem(MoreWeaponryEntities.CRACKLER, 0xBDEAB2, 0xAAE59C,
+                    new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+
+    public static final Item CRACKLER_HELMET = registerItem("crackler_helmet",
+            new CracklerArmorItem(MoreWeaponryArmorMaterials.CRACKLER, EquipmentSlot.HEAD,
+                    new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+
+    public static final Item CRACKLER_CHESTPLATE = registerItem("crackler_chestplate",
+            new CracklerArmorItem(MoreWeaponryArmorMaterials.CRACKLER, EquipmentSlot.CHEST,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
 

@@ -1,4 +1,4 @@
-package net.DakotaPride.moreweaponry.item.custom.maiden_tools;
+package net.DakotaPride.moreweaponry.item.custom.sickened_tools;
 
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.LivingEntity;
@@ -6,7 +6,6 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.AxeItem;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
@@ -16,21 +15,21 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class MaidenAxe extends AxeItem {
-    public MaidenAxe(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
+public class SickenedAxe extends AxeItem {
+    public SickenedAxe(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
         super(toolMaterial, attackDamage, attackSpeed, settings);
     }
 
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-        target.addStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 200, 2), attacker);
-        target.addStatusEffect(new StatusEffectInstance(StatusEffects.WITHER, 200, 2), attacker);
+        target.addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 200, 2), attacker);
+        target.addStatusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, 200, 2), attacker);
         return super.postHit(stack, target, attacker);
     }
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add( new LiteralText("Bard's Call").formatted(Formatting.WHITE));
+        tooltip.add( new LiteralText("Missionary").formatted(Formatting.DARK_GREEN));
     }
 
 }

@@ -1,11 +1,11 @@
-package net.DakotaPride.moreweaponry.item.custom.plagued_tools;
+package net.DakotaPride.moreweaponry.item.custom.sickened_tools;
 
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.item.AxeItem;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
@@ -15,8 +15,8 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class PlaguedAxe extends AxeItem {
-    public PlaguedAxe(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
+public class SickenedSword extends SwordItem {
+    public SickenedSword(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
         super(toolMaterial, attackDamage, attackSpeed, settings);
     }
 

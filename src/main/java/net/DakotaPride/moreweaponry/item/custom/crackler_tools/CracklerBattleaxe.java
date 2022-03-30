@@ -1,11 +1,11 @@
-package net.DakotaPride.moreweaponry.item.custom.suppressed_tools;
+package net.DakotaPride.moreweaponry.item.custom.crackler_tools;
 
+import net.DakotaPride.moreweaponry.item.custom.mod_tools.ModBattleaxeItem;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ShovelItem;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
@@ -15,8 +15,8 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class SuppressedShovel extends ShovelItem {
-    public SuppressedShovel(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
+public class CracklerBattleaxe extends ModBattleaxeItem {
+    public CracklerBattleaxe(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
         super(toolMaterial, attackDamage, attackSpeed, settings);
     }
 

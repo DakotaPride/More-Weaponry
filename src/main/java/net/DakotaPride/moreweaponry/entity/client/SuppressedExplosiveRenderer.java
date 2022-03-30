@@ -35,7 +35,7 @@ public class SuppressedExplosiveRenderer extends TntEntityRenderer {
         matrixStack.translate(-0.5D, -0.5D, 0.5D);
         matrixStack.multiply(Vec3f.POSITIVE_Y.getDegreesQuaternion(90.0F));
 
-        TntMinecartEntityRenderer.renderFlashingBlock(MoreWeaponryBlocks.SUPPRESSED_EXPLOSION.getDefaultState(), matrixStack, vertexConsumerProvider, i, (j / 5 % 2 == 0));
+        TntMinecartEntityRenderer.renderFlashingBlock(MoreWeaponryBlocks.CRACKLED_EXPLOSION.getDefaultState(), matrixStack, vertexConsumerProvider, i, (j / 5 % 2 == 0));
 
         matrixStack.pop();
 

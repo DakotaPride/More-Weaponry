@@ -329,7 +329,7 @@ public class MoreWeaponryBlocks {
     public static final Block INTOXICATED_LARGE_FERN = registerBlock("intoxicated_large_fern",
             new IntoxicatedTallPlantBlock(FabricBlockSettings.copy(Blocks.LARGE_FERN)), MoreWeaponryItemGroup.MORE_WEAPONRY);
 
-    public static final Block SUPPRESSED_EXPLOSION = registerBlock("suppressed_explosion",
+    public static final Block CRACKLED_EXPLOSION = registerBlock("crackled_explosion",
             new SuppressedExplosive(FabricBlockSettings.copy(Blocks.TNT)), MoreWeaponryItemGroup.MORE_WEAPONRY);
 
     public static final Block INTOXICATED_POPPY = registerBlock("intoxicated_poppy",

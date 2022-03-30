@@ -7,7 +7,7 @@ import net.minecraft.util.Identifier;
 
 public class MoreWeaponryModelPredicateProvider {
     public static void registerMoreWeaponryModels() {
-        registerMoreWeaponryBow(MoreWeaponryItems.MAIDENS_STEM_BOW);
+
     }
 
     private static void registerMoreWeaponryBow(Item bow) {

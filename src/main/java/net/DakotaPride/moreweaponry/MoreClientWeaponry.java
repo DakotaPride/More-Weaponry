@@ -1,6 +1,7 @@
 package net.DakotaPride.moreweaponry;
 
 import net.DakotaPride.moreweaponry.entity.MoreWeaponryEntityRegistry;
+import net.DakotaPride.moreweaponry.entity.client.armor.CracklerArmorRenderer;
 import net.DakotaPride.moreweaponry.entity.client.armor.WandererArmorRenderer;
 import net.DakotaPride.moreweaponry.entity.client.armor.WatcherArmorRenderer;
 import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
@@ -34,6 +35,8 @@ public class MoreClientWeaponry implements ClientModInitializer {
                 MoreWeaponryItems.WATCHER_CHESTPLATE);
         GeoArmorRenderer.registerArmorRenderer(new WandererArmorRenderer(), MoreWeaponryItems.WANDERER_HELMET,
                 MoreWeaponryItems.WANDERER_CHESTPLATE);
+        GeoArmorRenderer.registerArmorRenderer(new CracklerArmorRenderer(), MoreWeaponryItems.CRACKLER_HELMET,
+                MoreWeaponryItems.CRACKLER_CHESTPLATE);
 
 
     }

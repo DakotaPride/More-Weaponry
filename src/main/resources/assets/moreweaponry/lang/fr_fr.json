@@ -391,6 +391,8 @@
   "entity.moreweaponry.sickened": "écoeuré",
   "item.moreweaponry.sickened_spawn_egg": "Œuf de spawn écoeuré",
   "block.moreweaponry.sickened_skull": "Crâne écoeuré",
-  "block.moreweaponry.sickened_summoner": "Table d'invocation écoeurée"
+  "block.moreweaponry.sickened_summoner": "Table d'invocation écoeurée",
+  "item.moreweaponry.crackler_helmet": "Casque de Craqueleur",
+  "item.moreweaponry.crackler_chestplate": "Pansière du Craqueleur"
 
 }
