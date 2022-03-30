@@ -376,21 +376,21 @@
   "block.moreweaponry.empty_bookshelf": "Bibliothèque vide",
 
 
-  "block.moreweaponry.crackler_celestial_block": "Crackler Celestial Block",
-  "block.moreweaponry.crystaline_crackler_core": "Crystaline Core Block",
+  "block.moreweaponry.crackler_celestial_block": "Bloc Céleste Craqueleur",
+  "block.moreweaponry.crystaline_crackler_core": "Bloc de noyau cristallin",
 
-  "block.moreweaponry.corrupted_end_stone_bricks": "Corrupted End Stone Bricks",
-  "block.moreweaponry.corrupted_end_stone": "Corrupted End Stone",
+  "block.moreweaponry.corrupted_end_stone_bricks": "Briques de pierre de l'End corrompues",
+  "block.moreweaponry.corrupted_end_stone": "Pierre de fin corrompue",
 
-  "entity.moreweaponry.bard": "Bard",
-  "item.moreweaponry.bard_spawn_egg": "Bard Spawn Egg",
-  "block.moreweaponry.bard_skull": "Bard Skull",
-  "block.moreweaponry.bard_summoner": "Bard Summoning Table",
-  "item.moreweaponry.bard_cloth": "Bard Cloth",
+  "entity.moreweaponry.bard": "Barde",
+  "item.moreweaponry.bard_spawn_egg": "Oeuf d'apparition de barde",
+  "block.moreweaponry.bard_skull": "Crâne de barde",
+  "block.moreweaponry.bard_summoner": "Table d'invocation de barde",
+  "item.moreweaponry.bard_cloth": "Tissu de barde",
 
-  "entity.moreweaponry.sickened": "Sickened",
-  "item.moreweaponry.sickened_spawn_egg": "Sickened Spawn Egg",
-  "block.moreweaponry.sickened_skull": "Sickened Skull",
-  "block.moreweaponry.sickened_summoner": "Sickened Summoning Table"
+  "entity.moreweaponry.sickened": "écoeuré",
+  "item.moreweaponry.sickened_spawn_egg": "Œuf de spawn écoeuré",
+  "block.moreweaponry.sickened_skull": "Crâne écoeuré",
+  "block.moreweaponry.sickened_summoner": "Table d'invocation écoeurée"
 
 }
