@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "moreweaponry:block/intoxicated_stone",
+    "side": "moreweaponry:block/sickened_summoner"
+  }
+}

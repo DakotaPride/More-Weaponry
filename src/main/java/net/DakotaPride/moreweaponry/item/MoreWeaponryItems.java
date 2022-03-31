@@ -827,6 +827,13 @@ public class MoreWeaponryItems {
             new CracklerArmorItem(MoreWeaponryArmorMaterials.CRACKLER, EquipmentSlot.CHEST,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
+    public static final Item BARD_HELMET = registerItem("bard_helmet",
+            new BardArmorItem(MoreWeaponryArmorMaterials.CRACKLER, EquipmentSlot.HEAD,
+                    new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+
+    public static final Item BARD_CHESTPLATE = registerItem("bard_chestplate",
+            new BardArmorItem(MoreWeaponryArmorMaterials.BARD, EquipmentSlot.CHEST,
+                    new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     private static Item registerItem (String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(MoreWeaponry.MOD_ID, name), item);

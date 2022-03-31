@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "moreweaponry:block/sickened_stone_grave" },
+    "facing=east": { "model": "moreweaponry:block/sickened_stone_grave", "y": 90 },
+    "facing=south": { "model": "moreweaponry:block/sickened_stone_grave", "y": 180 },
+    "facing=west": { "model": "moreweaponry:block/sickened_stone_grave", "y": 270 }
+  }
+}

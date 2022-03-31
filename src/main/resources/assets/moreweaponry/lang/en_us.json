@@ -314,6 +314,8 @@
   "item.moreweaponry.maiden_essence_cirtict_battleaxe": "Essence Cirtict Battleaxe",
   "item.moreweaponry.watcher_helmet": "Watcher Hood",
   "item.moreweaponry.watcher_chestplate": "Watcher Cloak",
+  "item.moreweaponry.bard_helmet": "Watcher Scarf",
+  "item.moreweaponry.bard_chestplate": "Watcher Cloak",
   "item.moreweaponry.watcher_staff": "Watcher Staff",
   "item.moreweaponry.maidens_stem_bow": "Bard's Stem Bow",
 
@@ -397,7 +399,12 @@
   "block.moreweaponry.crystaline_wanderer_core": "Crystalline Core Block",
   "block.moreweaponry.crackler_celestial_block": "Crackler Celestial Block",
   "block.moreweaponry.crystaline_crackler_core": "Crystalline Core Block",
+  "block.moreweaponry.bard_celestial_block": "Bard Celestial Block",
+  "block.moreweaponry.crystaline_bard_core": "Crystalline Core Block",
+  "block.moreweaponry.sickened_celestial_block": "Sickened Celestial Block",
+  "block.moreweaponry.crystaline_sickened_core": "Crystalline Core Block",
   "block.moreweaponry.empty_bookshelf": "Empty Bookshelf",
   "block.moreweaponry.corrupted_end_stone_bricks": "Corrupted End Stone Bricks",
-  "block.moreweaponry.corrupted_end_stone": "Corrupted End Stone"
+  "block.moreweaponry.corrupted_end_stone": "Corrupted End Stone",
+  "block.moreweaponry.sickened_stone_grave": "Sickened Stone Grave Block"
 }

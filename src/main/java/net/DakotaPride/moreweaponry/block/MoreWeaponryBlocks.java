@@ -314,6 +314,9 @@ public class MoreWeaponryBlocks {
     public static final Block INTOXICATED_STONE = registerBlock("intoxicated_stone",
             new Block(FabricBlockSettings.copy(Blocks.STONE).requiresTool()), MoreWeaponryItemGroup.MORE_WEAPONRY);
 
+    public static final Block SICKENED_STONE_GRAVE_BLOCK = registerBlock("sickened_stone_grave",
+            new SickenedStoneGraveBlock(FabricBlockSettings.copy(Blocks.STONE).requiresTool()), MoreWeaponryItemGroup.MORE_WEAPONRY);
+
     public static final Block INTOXICATED_GRASS_BLOCK = registerBlock("intoxicated_grass_block",
             new IntoxicatedGrassBlock(FabricBlockSettings.copy(Blocks.GRASS_BLOCK)), MoreWeaponryItemGroup.MORE_WEAPONRY);
 
@@ -405,6 +408,22 @@ public class MoreWeaponryBlocks {
 
     public static final Block CRACKLER_CELESTIAL_BLOCK = registerBlock("crackler_celestial_block",
             new GlassBlock(FabricBlockSettings.copy(Blocks.GLASS).nonOpaque().strength(1000f, 1000f)),
+            MoreWeaponryItemGroup.MORE_WEAPONRY);
+
+    public static final Block CRYSTALINE_BARD_CORE = registerBlock("crystaline_bard_core",
+            new GlassBlock(FabricBlockSettings.copy(Blocks.GLASS).nonOpaque()),
+            MoreWeaponryItemGroup.MORE_WEAPONRY);
+
+    public static final Block BARD_CELESTIAL_BLOCK = registerBlock("bard_celestial_block",
+            new GlassBlock(FabricBlockSettings.copy(Blocks.GLASS).nonOpaque().strength(1000f, 1000f)),
+            MoreWeaponryItemGroup.MORE_WEAPONRY);
+
+    public static final Block SICKENED_CELESTIAL_BLOCK = registerBlock("sickened_celestial_block",
+            new GlassBlock(FabricBlockSettings.copy(Blocks.GLASS).nonOpaque().strength(1000f, 1000f)),
+            MoreWeaponryItemGroup.MORE_WEAPONRY);
+
+    public static final Block CRYSTALINE_SICKENED_CORE = registerBlock("crystaline_sickened_core",
+            new GlassBlock(FabricBlockSettings.copy(Blocks.GLASS).nonOpaque()),
             MoreWeaponryItemGroup.MORE_WEAPONRY);
 
     public static final Block CRYSTALINE_CRACKLER_CORE = registerBlock("crystaline_crackler_core",

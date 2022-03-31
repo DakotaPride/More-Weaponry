@@ -26,6 +26,8 @@ public class MoreWeaponryRendererHelper {
         BlockRenderLayerMap.INSTANCE.putBlock(MoreWeaponryBlocks.INTOXICATED_POPPY, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(MoreWeaponryBlocks.INTOXICATED_DANDELION, RenderLayer.getCutout());
 
+        BlockRenderLayerMap.INSTANCE.putBlock(MoreWeaponryBlocks.SICKENED_STONE_GRAVE_BLOCK, RenderLayer.getCutout());
+
     }
 
     public static void setTransparentBlocks() {
@@ -37,6 +39,12 @@ public class MoreWeaponryRendererHelper {
 
         BlockRenderLayerMap.INSTANCE.putBlock(MoreWeaponryBlocks.CRACKLER_CELESTIAL_BLOCK, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(MoreWeaponryBlocks.CRYSTALINE_CRACKLER_CORE, RenderLayer.getTranslucent());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(MoreWeaponryBlocks.BARD_CELESTIAL_BLOCK, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(MoreWeaponryBlocks.CRYSTALINE_BARD_CORE, RenderLayer.getTranslucent());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(MoreWeaponryBlocks.SICKENED_CELESTIAL_BLOCK, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(MoreWeaponryBlocks.CRYSTALINE_SICKENED_CORE, RenderLayer.getTranslucent());
     }
 
 }
