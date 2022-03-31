@@ -41,7 +41,10 @@
     "moreweaponry:watcher_summoner",
     "moreweaponry:wanderer_summoner",
     "moreweaponry:crackler_summoner",
+    "moreweaponry:bard_summoner",
     "moreweaponry:bluestone_tiles",
-    "moreweaponry:limestone_tiles"
+    "moreweaponry:limestone_tiles",
+    "moreweaponry:corrupted_end_stone_bricks",
+    "moreweaponry:corrupted_end_stone"
   ]
 }

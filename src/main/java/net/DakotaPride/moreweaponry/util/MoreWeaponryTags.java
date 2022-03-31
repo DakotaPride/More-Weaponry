@@ -6,6 +6,7 @@ import net.minecraft.item.Item;
 import net.minecraft.tag.TagKey;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
+import net.minecraft.world.gen.feature.ConfiguredStructureFeature;
 
 import static net.DakotaPride.moreweaponry.util.MoreWeaponryTags.Blocks.*;
 import static net.DakotaPride.moreweaponry.util.MoreWeaponryTags.Items.*;

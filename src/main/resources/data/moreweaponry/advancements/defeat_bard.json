@@ -1,16 +1,16 @@
 {
   "display": {
     "icon": {
-      "item": "moreweaponry:crackler_helmet"
+      "item": "moreweaponry:bard_skull"
     },
-    "title": "Boom!",
-    "description": "Defeat The Crackler",
+    "title": "Damaged Melody",
+    "description": "Defeat The Bard",
     "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": true
   },
-  "parent": "moreweaponry:discover_crackler_nuclear_yard",
+  "parent": "moreweaponry:discover_bard_rock",
   "criteria": {
     "moreweaponry:watcher": {
       "trigger": "minecraft:player_killed_entity",
@@ -19,7 +19,7 @@
           {
             "condition": "minecraft:entity_properties",
             "predicate": {
-              "type": "moreweaponry:crackler"
+              "type": "moreweaponry:bard"
             },
             "entity": "this"
           }

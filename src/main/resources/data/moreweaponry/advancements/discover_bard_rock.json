@@ -1,0 +1,25 @@
+{
+  "display": {
+    "icon": {
+      "item": "moreweaponry:maiden_core"
+    },
+    "title": "Don't Fall For It",
+    "description": "Discover The Bard's Rock",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "moreweaponry:moreweaponry",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "biome": "minecraft:warm_ocean",
+          "feature": "moreweaponry:bard_rock"
+        }
+      }
+    }
+  }
+}
