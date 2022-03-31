@@ -4,7 +4,7 @@
       "item": "moreweaponry:suppressed_core"
     },
     "title": "Careful, It's Explosive!",
-    "description": "Discover The Bombaton Nuclear Yard",
+    "description": "Discover The Crackler Nuclear Yard",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
@@ -17,7 +17,7 @@
       "conditions": {
         "location": {
           "biome": "minecraft:desert",
-          "feature": "moreweaponry:bombaton_nuclear_yard"
+          "feature": "moreweaponry:crackler_nuclear_yard"
         }
       }
     }
