@@ -1,0 +1,25 @@
+{
+  "display": {
+    "icon": {
+      "item": "moreweaponry:plagued_core"
+    },
+    "title": "The Green Plague",
+    "description": "Discover The Sickened Graves",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "moreweaponry:moreweaponry",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "biome": "minecraft:plains",
+          "feature": "moreweaponry:sickened_graves"
+        }
+      }
+    }
+  }
+}

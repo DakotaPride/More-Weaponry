@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "item": "moreweaponry:sickened_skull"
+    },
+    "title": "Get Away You Leech!",
+    "description": "Defeat The Sickened",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "moreweaponry:discover_sickened_graves",
+  "criteria": {
+    "moreweaponry:watcher": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "moreweaponry:sickened"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    }
+  }
+}
