@@ -393,6 +393,21 @@
   "block.moreweaponry.sickened_skull": "Crâne écoeuré",
   "block.moreweaponry.sickened_summoner": "Table d'invocation écoeurée",
   "item.moreweaponry.crackler_helmet": "Casque de Craqueleur",
-  "item.moreweaponry.crackler_chestplate": "Pansière du Craqueleur"
+  "item.moreweaponry.crackler_chestplate": "Pansière du Craqueleur",
+
+  "item.moreweaponry.bard_helmet": "Bard Scarf",
+  "item.moreweaponry.bard_chestplate": "Bard Cloak",
+  "item.moreweaponry.sickened_helmet": "Sickened Helm",
+  "item.moreweaponry.sickened_chestplate": "Sickened Tattered Cloths",
+  "block.moreweaponry.bard_celestial_block": "Bard Celestial Block",
+  "block.moreweaponry.crystaline_bard_core": "Crystalline Core Block",
+  "block.moreweaponry.sickened_celestial_block": "Sickened Celestial Block",
+  "block.moreweaponry.crystaline_sickened_core": "Crystalline Core Block",
+  "block.moreweaponry.sickened_stone_grave": "Sickened Stone Grave Block",
+  "effect.moreweaponry.bard": "Bard's Call",
+  "effect.moreweaponry.watcher": "Voided",
+  "effect.moreweaponry.wanderer": "Wandering",
+  "effect.moreweaponry.crackler": "Explosion",
+  "effect.moreweaponry.sickened": "Missionary"
 
 }

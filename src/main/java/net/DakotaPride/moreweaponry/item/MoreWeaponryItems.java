@@ -698,11 +698,11 @@ public class MoreWeaponryItems {
             new Item(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item WATCHER_HELMET = registerItem("watcher_helmet",
-            new WatcherArmorItem(MoreWeaponryArmorMaterials.ENDER, EquipmentSlot.HEAD,
+            new WatcherEffectItem(MoreWeaponryArmorMaterials.ENDER, EquipmentSlot.HEAD,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item WATCHER_CHESTPLATE = registerItem("watcher_chestplate",
-            new WatcherArmorItem(MoreWeaponryArmorMaterials.ENDER, EquipmentSlot.CHEST,
+            new WatcherEffectItem(MoreWeaponryArmorMaterials.ENDER, EquipmentSlot.CHEST,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item WATCHER_STAFF = registerItem("watcher_staff",
@@ -808,11 +808,11 @@ public class MoreWeaponryItems {
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item WANDERER_HELMET = registerItem("wanderer_helmet",
-            new WandererArmorItem(MoreWeaponryArmorMaterials.WANDERER, EquipmentSlot.HEAD,
+            new WandererEffectItem(MoreWeaponryArmorMaterials.WANDERER, EquipmentSlot.HEAD,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item WANDERER_CHESTPLATE = registerItem("wanderer_chestplate",
-            new WandererArmorItem(MoreWeaponryArmorMaterials.WANDERER, EquipmentSlot.CHEST,
+            new WandererEffectItem(MoreWeaponryArmorMaterials.WANDERER, EquipmentSlot.CHEST,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item CRACKLER_SPAWN_EGG = registerItem("crackler_spawn_egg",
@@ -820,19 +820,27 @@ public class MoreWeaponryItems {
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item CRACKLER_HELMET = registerItem("crackler_helmet",
-            new CracklerArmorItem(MoreWeaponryArmorMaterials.CRACKLER, EquipmentSlot.HEAD,
+            new CracklerEffectItem(MoreWeaponryArmorMaterials.CRACKLER, EquipmentSlot.HEAD,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item CRACKLER_CHESTPLATE = registerItem("crackler_chestplate",
-            new CracklerArmorItem(MoreWeaponryArmorMaterials.CRACKLER, EquipmentSlot.CHEST,
+            new CracklerEffectItem(MoreWeaponryArmorMaterials.CRACKLER, EquipmentSlot.CHEST,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item BARD_HELMET = registerItem("bard_helmet",
-            new BardArmorItem(MoreWeaponryArmorMaterials.CRACKLER, EquipmentSlot.HEAD,
+            new BardEffectItem(MoreWeaponryArmorMaterials.BARD, EquipmentSlot.HEAD,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item BARD_CHESTPLATE = registerItem("bard_chestplate",
-            new BardArmorItem(MoreWeaponryArmorMaterials.BARD, EquipmentSlot.CHEST,
+            new BardEffectItem(MoreWeaponryArmorMaterials.BARD, EquipmentSlot.CHEST,
+                    new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+
+    public static final Item SICKENED_HELMET = registerItem("sickened_helmet",
+            new SickenedEffectItem(MoreWeaponryArmorMaterials.SICKENED, EquipmentSlot.HEAD,
+                    new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+
+    public static final Item SICKENED_CHESTPLATE = registerItem("sickened_chestplate",
+            new SickenedEffectItem(MoreWeaponryArmorMaterials.SICKENED, EquipmentSlot.CHEST,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     private static Item registerItem (String name, Item item) {

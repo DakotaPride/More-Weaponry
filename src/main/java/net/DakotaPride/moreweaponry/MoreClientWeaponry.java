@@ -1,10 +1,7 @@
 package net.DakotaPride.moreweaponry;
 
 import net.DakotaPride.moreweaponry.entity.MoreWeaponryEntityRegistry;
-import net.DakotaPride.moreweaponry.entity.client.armor.BardArmorRenderer;
-import net.DakotaPride.moreweaponry.entity.client.armor.CracklerArmorRenderer;
-import net.DakotaPride.moreweaponry.entity.client.armor.WandererArmorRenderer;
-import net.DakotaPride.moreweaponry.entity.client.armor.WatcherArmorRenderer;
+import net.DakotaPride.moreweaponry.entity.client.armor.*;
 import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
 import net.DakotaPride.moreweaponry.screen.CirtictForgeScreen;
 import net.DakotaPride.moreweaponry.screen.CoreForgeScreen;
@@ -40,6 +37,9 @@ public class MoreClientWeaponry implements ClientModInitializer {
                 MoreWeaponryItems.CRACKLER_CHESTPLATE);
         GeoArmorRenderer.registerArmorRenderer(new BardArmorRenderer(), MoreWeaponryItems.BARD_HELMET,
                 MoreWeaponryItems.BARD_CHESTPLATE);
+
+        GeoArmorRenderer.registerArmorRenderer(new SickenedArmorRenderer(), MoreWeaponryItems.SICKENED_HELMET,
+                MoreWeaponryItems.SICKENED_CHESTPLATE);
 
 
     }

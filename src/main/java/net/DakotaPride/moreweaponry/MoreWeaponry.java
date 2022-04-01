@@ -2,6 +2,7 @@ package net.DakotaPride.moreweaponry;
 
 import net.DakotaPride.moreweaponry.block.MoreWeaponryBlocks;
 import net.DakotaPride.moreweaponry.block.entity.MoreWeaponryBlockEntities;
+import net.DakotaPride.moreweaponry.effect.MoreWeaponryEffects;
 import net.DakotaPride.moreweaponry.enchantments.MoreWeaponryEnchantments;
 import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
 import net.DakotaPride.moreweaponry.painting.MoreWeaponryPaintings;
@@ -55,6 +56,8 @@ public class MoreWeaponry implements ModInitializer {
 
 		MoreWeaponryTags.MoreWeaponryBlockTags();
 		MoreWeaponryTags.MoreWeaponryItemTags();
+
+		MoreWeaponryEffects.registerEffects();
 
 		GeckoLib.initialize();
 

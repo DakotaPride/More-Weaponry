@@ -33,7 +33,7 @@ public class SickenedGravesStructure extends StructureFeature<StructurePoolFeatu
 
         BlockPos blockpos = context.chunkPos().getCenterAtY(0);
         int topLandY = context.chunkGenerator().getHeightOnGround(blockpos.getX(), blockpos.getZ(), Heightmap.Type.WORLD_SURFACE_WG, context.world());
-        blockpos = blockpos.up(topLandY + 1);
+        blockpos = blockpos.up(topLandY + 2);
 
         Optional<StructurePiecesGenerator<StructurePoolFeatureConfig>> structurePiecesGenerator =
                 StructurePoolBasedGenerator.generate(

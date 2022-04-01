@@ -314,8 +314,10 @@
   "item.moreweaponry.maiden_essence_cirtict_battleaxe": "Essence Cirtict Battleaxe",
   "item.moreweaponry.watcher_helmet": "Watcher Hood",
   "item.moreweaponry.watcher_chestplate": "Watcher Cloak",
-  "item.moreweaponry.bard_helmet": "Watcher Scarf",
-  "item.moreweaponry.bard_chestplate": "Watcher Cloak",
+  "item.moreweaponry.bard_helmet": "Bard Scarf",
+  "item.moreweaponry.bard_chestplate": "Bard Cloak",
+  "item.moreweaponry.sickened_helmet": "Sickened Helm",
+  "item.moreweaponry.sickened_chestplate": "Sickened Tattered Cloths",
   "item.moreweaponry.watcher_staff": "Watcher Staff",
   "item.moreweaponry.maidens_stem_bow": "Bard's Stem Bow",
 
@@ -376,7 +378,7 @@
   "item.moreweaponry.crackler_spawn_egg": "Crackler Spawn Egg",
   "block.moreweaponry.crackler_skull": "Crackler Skull",
   "block.moreweaponry.crackler_summoner": "Crackler Summoning Table",
-  "item.moreweaponry.crackler_helmet": "Crackler Helmet",
+  "item.moreweaponry.crackler_helmet": "Crackler Helm",
   "item.moreweaponry.crackler_chestplate": "Crackler Chestplate",
 
 
@@ -406,5 +408,12 @@
   "block.moreweaponry.empty_bookshelf": "Empty Bookshelf",
   "block.moreweaponry.corrupted_end_stone_bricks": "Corrupted End Stone Bricks",
   "block.moreweaponry.corrupted_end_stone": "Corrupted End Stone",
-  "block.moreweaponry.sickened_stone_grave": "Sickened Stone Grave Block"
+  "block.moreweaponry.sickened_stone_grave": "Sickened Stone Grave Block",
+
+  "effect.moreweaponry.bard": "Bard's Call",
+  "effect.moreweaponry.watcher": "Voided",
+  "effect.moreweaponry.wanderer": "Wandering",
+  "effect.moreweaponry.crackler": "Explosion",
+  "effect.moreweaponry.sickened": "Missionary"
+
 }
