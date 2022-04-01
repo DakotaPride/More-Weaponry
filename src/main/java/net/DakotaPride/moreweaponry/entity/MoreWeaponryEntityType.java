@@ -5,13 +5,13 @@ import net.DakotaPride.moreweaponry.entity.custom.SuppressedExplosiveEntity;
 import net.minecraft.entity.*;
 import net.minecraft.util.registry.Registry;
 
-public class ModEntityType extends EntityType {
-    public ModEntityType(EntityFactory<Entity> factory, SpawnGroup spawnGroup, boolean saveable, boolean summonable, boolean fireImmune, boolean spawnableFarFromPlayer, ImmutableSet<net.minecraft.block.Block> canSpawnInside, EntityDimensions dimensions, int maxTrackDistance, int trackTickInterval) {
+public class MoreWeaponryEntityType extends EntityType {
+    public MoreWeaponryEntityType(EntityFactory<Entity> factory, SpawnGroup spawnGroup, boolean saveable, boolean summonable, boolean fireImmune, boolean spawnableFarFromPlayer, ImmutableSet<net.minecraft.block.Block> canSpawnInside, EntityDimensions dimensions, int maxTrackDistance, int trackTickInterval) {
         super(factory, spawnGroup, saveable, summonable, fireImmune, spawnableFarFromPlayer, canSpawnInside, dimensions, maxTrackDistance, trackTickInterval);
     }
 
     private static EntityFactory<net.DakotaPride.moreweaponry.entity.custom.SuppressedExplosiveEntity> SuppressedExplosiveEntity;
-    public static final EntityType<SuppressedExplosiveEntity> SUPPRESSED_EXPLOSIVE = ModEntityType.modregister
+    public static final EntityType<SuppressedExplosiveEntity> SUPPRESSED_EXPLOSIVE = MoreWeaponryEntityType.modregister
             ("suppressed_explosive", Builder.create(SuppressedExplosiveEntity, SpawnGroup.MISC)
                     .makeFireImmune().setDimensions(0.98f, 0.98f).maxTrackingRange(10).trackingTickInterval(10));
 

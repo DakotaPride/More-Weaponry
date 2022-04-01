@@ -24,13 +24,13 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 import java.util.Map;
 
-public class ModElderScaleArmorItem extends ArmorItem {
+public class ElderScaleArmorItem extends ArmorItem {
     private static final Map<ArmorMaterial, StatusEffectInstance> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, StatusEffectInstance>())
                     .put(MoreWeaponryArmorMaterials.ELDER_GUARDIAN_SCALE,
                             new StatusEffectInstance(StatusEffects.WATER_BREATHING, 100, 0)).build();
 
-    public ModElderScaleArmorItem(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
+    public ElderScaleArmorItem(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
         super(material, slot, settings);
     }
 

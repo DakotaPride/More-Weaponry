@@ -1,11 +1,10 @@
 package net.DakotaPride.moreweaponry.entity.custom;
 
-import net.DakotaPride.moreweaponry.entity.ModEntityType;
+import net.DakotaPride.moreweaponry.entity.MoreWeaponryEntityType;
 import net.minecraft.entity.*;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
-import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.Packet;
 import net.minecraft.network.packet.s2c.play.EntitySpawnS2CPacket;
@@ -26,7 +25,7 @@ public class SuppressedExplosiveEntity extends TntEntity {
     }
 
     public SuppressedExplosiveEntity(World world, double x, double y, double z, @Nullable LivingEntity igniter) {
-        this((EntityType<? extends TntEntity>) ModEntityType.SUPPRESSED_EXPLOSIVE, world);
+        this((EntityType<? extends TntEntity>) MoreWeaponryEntityType.SUPPRESSED_EXPLOSIVE, world);
         this.setPosition(x, y, z);
         double d = world.random.nextDouble() * 3.2831854820251465;
         this.setVelocity(-Math.sin(d) * 0.01, 0.1f, -Math.cos(d) * 0.01);

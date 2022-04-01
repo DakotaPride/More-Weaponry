@@ -6,9 +6,9 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-public class ModStewItem
+public class NightCuronBrewItem
         extends Item {
-    public ModStewItem(Item.Settings settings) {
+    public NightCuronBrewItem(Item.Settings settings) {
         super(settings);
     }
 
