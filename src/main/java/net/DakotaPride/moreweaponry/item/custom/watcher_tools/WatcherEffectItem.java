@@ -11,6 +11,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.world.World;
 
 import java.util.Map;
@@ -19,7 +20,7 @@ public class WatcherEffectItem extends WatcherArmorItem {
     private static final Map<ArmorMaterial, StatusEffectInstance> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, StatusEffectInstance>())
                     .put(MoreWeaponryArmorMaterials.ENDER,
-                            new StatusEffectInstance(MoreWeaponryEffects.WATCHER, 400, 0)).build();
+                            new StatusEffectInstance(MoreWeaponryEffects.WATCHER, 20, 0)).build();
 
     public WatcherEffectItem(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
         super(material, slot, settings);
@@ -70,7 +71,7 @@ public class WatcherEffectItem extends WatcherArmorItem {
 
     private  boolean hasCorrectArmorOn(ArmorMaterial material, PlayerEntity player) {
         for (ItemStack armorStack: player.getInventory().armor) {
-            if(!(armorStack.getItem() instanceof ArmorItem)) {
+            if(!(armorStack.getItem() instanceof ArmorItem) && armorStack.getItem() != Items.AIR) {
                 return false;
             }
         }
