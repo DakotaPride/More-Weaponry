@@ -76,6 +76,4 @@ public class WatcherArmorItem extends ArmorItem implements IAnimatable {
         return factory;
     }
 
-    // Note
-
 }

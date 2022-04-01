@@ -81,6 +81,4 @@ public class WatcherEffectItem extends WatcherArmorItem {
         return helmet.getMaterial() == material && breastplate.getMaterial() == material;
     }
 
-    // Note
-
 }
