@@ -75,4 +75,7 @@ public class WatcherArmorItem extends ArmorItem implements IAnimatable {
     public AnimationFactory getFactory() {
         return factory;
     }
+
+    // Note
+
 }
