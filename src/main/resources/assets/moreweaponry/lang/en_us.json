@@ -230,6 +230,9 @@
   "block.moreweaponry.infested_cracked_dripstone_block": "Infested Cracked Dripstone Block",
   "block.moreweaponry.infested_dripstone_block": "Infested Dripstone Block",
   "item.moreweaponry.heated_cirtict_ingot": "Cirtict Ingot",
+  "item.moreweaponry.heated_cirtict_cluster": "Cirtict Cluster",
+  "item.moreweaponry.cooled_cirtict_cluster": "Cirtict Cluster",
+  "item.moreweaponry.cirtict_cluster": "Cirtict Cluster",
 
 
   "item.moreweaponry.cooled_cirtict_sword": "Cirtict Sword",

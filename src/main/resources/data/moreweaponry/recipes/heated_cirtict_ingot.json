@@ -1,9 +1,9 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "moreweaponry:cirtict_cluster"
+    "item": "moreweaponry:heated_cirtict_cluster"
   },
-  "result": "moreweaponry:cirtict_scrap",
+  "result": "moreweaponry:heated_cirtict_ingot",
   "experience": 2.0,
   "cookingtime": 200
 }

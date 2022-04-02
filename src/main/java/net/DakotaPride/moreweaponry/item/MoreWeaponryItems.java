@@ -5,6 +5,8 @@ import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.DakotaPride.moreweaponry.block.MoreWeaponryBlocks;
 import net.DakotaPride.moreweaponry.entity.MoreWeaponryEntities;
 import net.DakotaPride.moreweaponry.item.custom.*;
+import net.DakotaPride.moreweaponry.item.custom.cirtict.CooledCirtictClusterItem;
+import net.DakotaPride.moreweaponry.item.custom.cirtict.HeatedCirtictClusterItem;
 import net.DakotaPride.moreweaponry.item.custom.cirtict.cooled.*;
 import net.DakotaPride.moreweaponry.item.custom.cirtict.essence.*;
 import net.DakotaPride.moreweaponry.item.custom.cirtict.heated.*;
@@ -551,6 +553,15 @@ public class MoreWeaponryItems {
 
     public static final Item WRETCHED_ESSENCE = registerItem("wretched_essence",
             new Item(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+
+
+    public static final Item CIRTICT_CLUSTER = registerItem("cirtict_cluster",
+            new Item(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+    public static final Item HEATED_CIRTICT_CLUSTER = registerItem("heated_cirtict_cluster",
+            new HeatedCirtictClusterItem(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+    public static final Item COOLED_CIRTICT_CLUSTER = registerItem("cooled_cirtict_cluster",
+            new CooledCirtictClusterItem(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+
 
     public static final Item WRETCHED_CORE = registerItem("wretched_core",
             new WretchedCoreItem(new FabricItemSettings().maxCount(1).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));

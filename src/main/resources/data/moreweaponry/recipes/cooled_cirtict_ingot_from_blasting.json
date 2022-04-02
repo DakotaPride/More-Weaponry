@@ -1,9 +1,9 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "moreweaponry:cirtict_cluster"
+    "item": "moreweaponry:cooled_cirtict_cluster"
   },
-  "result": "moreweaponry:cirtict_scrap",
+  "result": "moreweaponry:cooled_cirtict_ingot",
   "experience": 2.0,
   "cookingtime": 100
 }
