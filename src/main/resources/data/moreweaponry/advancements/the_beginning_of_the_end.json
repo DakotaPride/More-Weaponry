@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "item": "moreweaponry:cirtict_axe"
+    },
+    "title": "What Comes After This?",
+    "description": "The Beginning Of The End",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "moreweaponry:moreweaponry",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "moreweaponry:cirtict_ingot",
+              "moreweaponry:cooled_cirtict_ingot",
+              "moreweaponry:heated_cirtict_ingot"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

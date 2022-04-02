@@ -10,7 +10,7 @@
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "moreweaponry:moreweaponry",
+  "parent": "moreweaponry:the_beginning_of_the_end",
   "criteria": {
     "requirement": {
       "trigger": "minecraft:location",
