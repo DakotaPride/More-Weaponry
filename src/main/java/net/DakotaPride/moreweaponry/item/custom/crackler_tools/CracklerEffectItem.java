@@ -20,7 +20,7 @@ public class CracklerEffectItem extends CracklerArmorItem {
     private static final Map<ArmorMaterial, StatusEffectInstance> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, StatusEffectInstance>())
                     .put(MoreWeaponryArmorMaterials.CRACKLER,
-                            new StatusEffectInstance(MoreWeaponryEffects.CRACKLER, 20, 0)).build();
+                            new StatusEffectInstance(MoreWeaponryEffects.CRACKLER, 1000000, 0)).build();
 
     public CracklerEffectItem(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
         super(material, slot, settings);

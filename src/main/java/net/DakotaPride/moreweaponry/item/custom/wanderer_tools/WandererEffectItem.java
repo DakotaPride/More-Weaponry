@@ -20,7 +20,7 @@ public class WandererEffectItem extends WandererArmorItem {
     private static final Map<ArmorMaterial, StatusEffectInstance> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, StatusEffectInstance>())
                     .put(MoreWeaponryArmorMaterials.WANDERER,
-                            new StatusEffectInstance(MoreWeaponryEffects.WANDERER, 20, 0)).build();
+                            new StatusEffectInstance(MoreWeaponryEffects.WANDERER, 1000000, 0)).build();
 
     public WandererEffectItem(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
         super(material, slot, settings);

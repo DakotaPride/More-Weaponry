@@ -3,12 +3,16 @@ package net.DakotaPride.moreweaponry.enchantments;
 import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
+import net.minecraft.enchantment.ProtectionEnchantment;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 import java.security.Guard;
 
 public class MoreWeaponryEnchantments {
+    private static final EquipmentSlot[] ALL_ARMOR = new EquipmentSlot[] { EquipmentSlot.HEAD, EquipmentSlot.CHEST, EquipmentSlot.LEGS, EquipmentSlot.FEET };
+
 
     public static Enchantment EVOKERS_REVENGE = register("evokers_revenge",
             new EvokersRevengeEnchantment(Enchantment.Rarity.UNCOMMON,
@@ -31,6 +35,7 @@ public class MoreWeaponryEnchantments {
                     EnchantmentTarget.ARMOR_CHEST));
 
 
+
     private static Enchantment register(String name, Enchantment enchantment) {
         return Registry.register(Registry.ENCHANTMENT, new Identifier(MoreWeaponry.MOD_ID, name), enchantment);
     }
@@ -38,7 +43,7 @@ public class MoreWeaponryEnchantments {
 
     public static void registerModEnchantments() {
 
-        System.out.println("Registering ModEnchantments for " + MoreWeaponry.MOD_ID);
+        System.out.println("Registering More Weaponry Enchantments for " + MoreWeaponry.MOD_ID);
 
     }
 }
