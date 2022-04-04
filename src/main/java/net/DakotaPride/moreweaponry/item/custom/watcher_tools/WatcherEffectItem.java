@@ -20,7 +20,7 @@ public class WatcherEffectItem extends WatcherArmorItem {
     private static final Map<ArmorMaterial, StatusEffectInstance> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, StatusEffectInstance>())
                     .put(MoreWeaponryArmorMaterials.ENDER,
-                            new StatusEffectInstance(MoreWeaponryEffects.WATCHER, 1000000, 0)).build();
+                            new StatusEffectInstance(MoreWeaponryEffects.WATCHER, 12000, 0)).build();
 
     public WatcherEffectItem(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
         super(material, slot, settings);

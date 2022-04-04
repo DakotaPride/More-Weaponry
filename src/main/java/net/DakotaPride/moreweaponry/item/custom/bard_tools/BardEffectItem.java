@@ -20,7 +20,7 @@ public class BardEffectItem extends BardArmorItem {
     private static final Map<ArmorMaterial, StatusEffectInstance> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, StatusEffectInstance>())
                     .put(MoreWeaponryArmorMaterials.BARD,
-                            new StatusEffectInstance(MoreWeaponryEffects.BARD, 1000000, 0)).build();
+                            new StatusEffectInstance(MoreWeaponryEffects.BARD, 12000, 0)).build();
 
     public BardEffectItem(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
         super(material, slot, settings);
