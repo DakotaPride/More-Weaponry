@@ -2,10 +2,7 @@ package net.DakotaPride.moreweaponry.entity.custom;
 
 import net.DakotaPride.moreweaponry.effect.MoreWeaponryEffects;
 import net.minecraft.block.BlockState;
-import net.minecraft.entity.EntityDimensions;
-import net.minecraft.entity.EntityPose;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
@@ -55,6 +52,19 @@ public class CracklerEntity extends HostileEntity implements IAnimatable {
                 != StatusEffects.WITHER && statusEffect
                 != StatusEffects.LEVITATION && statusEffect
                 != StatusEffects.HUNGER;
+    }
+
+    public boolean tryAttack(Entity target) {
+        if (!super.tryAttack(target)) {
+            return false;
+        } else {
+            if (target instanceof LivingEntity) {
+                ((LivingEntity)target).addStatusEffect
+                        (new StatusEffectInstance(MoreWeaponryEffects.EXPLOSIVE, 140), this);
+            }
+
+            return true;
+        }
     }
 
     @Override

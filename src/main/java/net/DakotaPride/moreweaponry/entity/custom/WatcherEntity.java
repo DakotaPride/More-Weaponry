@@ -3,10 +3,7 @@ package net.DakotaPride.moreweaponry.entity.custom;
 import net.DakotaPride.moreweaponry.block.MoreWeaponryBlocks;
 import net.DakotaPride.moreweaponry.effect.MoreWeaponryEffects;
 import net.minecraft.block.BlockState;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityDimensions;
-import net.minecraft.entity.EntityPose;
-import net.minecraft.entity.EntityType;
+import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.ai.pathing.PathNodeType;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
@@ -142,20 +139,16 @@ public class WatcherEntity extends HostileEntity implements IAnimatable {
     }
 
     public boolean tryAttack(Entity target) {
-        boolean bl = super.tryAttack(target);
-
-        if (bl) {
-            float f = this.world.getLocalDifficulty(getBlockPos()).getLocalDifficulty();
-
-
-            if (getMainHandStack().isEmpty() &&
-                    isOnFire() && this.random.nextFloat() < f * 0.3F) {
-                target.setOnFireFor(2 * (int)f);
+        if (!super.tryAttack(target)) {
+            return false;
+        } else {
+            if (target instanceof LivingEntity) {
+                ((LivingEntity)target).addStatusEffect
+                        (new StatusEffectInstance(MoreWeaponryEffects.TICKED, 140), this);
             }
+
+            return true;
         }
-
-
-        return bl;
     }
 
     protected int getXpToDrop(PlayerEntity player) {

@@ -1,5 +1,6 @@
 package net.DakotaPride.moreweaponry.entity.custom;
 
+import net.DakotaPride.moreweaponry.effect.MoreWeaponryEffects;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.*;
@@ -7,6 +8,7 @@ import net.minecraft.entity.ai.pathing.PathNodeType;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.mob.*;
 import net.minecraft.entity.passive.*;
 import net.minecraft.entity.player.PlayerEntity;
@@ -41,6 +43,19 @@ public class LurkerEntity extends HostileEntity implements IAnimatable {
 
         setPathfindingPenalty(PathNodeType.WATER, -1.0F);
 
+    }
+
+    public boolean tryAttack(Entity target) {
+        if (!super.tryAttack(target)) {
+            return false;
+        } else {
+            if (target instanceof LivingEntity) {
+                ((LivingEntity)target).addStatusEffect
+                        (new StatusEffectInstance(MoreWeaponryEffects.NUMBED, 100), this);
+            }
+
+            return true;
+        }
     }
 
     public static DefaultAttributeContainer.Builder setAttributes() {
