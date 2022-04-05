@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "item": "moreweaponry:sandstone_dust_block"
+    },
+    "title": "Welcome To The Wild West!",
+    "description": "Defeat The Sickened Husk (WIP)",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "moreweaponry:discover_sickened_graves",
+  "criteria": {
+    "moreweaponry:watcher": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "predicate": {
+              "type": "moreweaponry:sickened_husk"
+            },
+            "entity": "this"
+          }
+        ]
+      }
+    }
+  }
+}

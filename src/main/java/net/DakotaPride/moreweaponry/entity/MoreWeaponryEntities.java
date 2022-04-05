@@ -34,4 +34,8 @@ public class MoreWeaponryEntities {
             Registry.ENTITY_TYPE, new Identifier(MoreWeaponry.MOD_ID, "sickened"),
             FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, SickenedEntity::new)
                     .dimensions(EntityDimensions.fixed(0.6f, 1.9f)).build());
+    public static final EntityType<SickenedHuskEntity> SICKENED_HUSK = Registry.register(
+            Registry.ENTITY_TYPE, new Identifier(MoreWeaponry.MOD_ID, "sickened_husk"),
+            FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, SickenedHuskEntity::new)
+                    .dimensions(EntityDimensions.fixed(0.6f, 1.9f)).build());
 }

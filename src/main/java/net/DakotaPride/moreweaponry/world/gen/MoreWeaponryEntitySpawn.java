@@ -27,6 +27,8 @@ public class MoreWeaponryEntitySpawn {
                 Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, BardEntity::canSpawnIgnoreLightLevel);
         SpawnRestrictionAccessor.callRegister(MoreWeaponryEntities.SICKENED, SpawnRestriction.Location.ON_GROUND,
                 Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, SickenedEntity::canSpawnIgnoreLightLevel);
+        SpawnRestrictionAccessor.callRegister(MoreWeaponryEntities.SICKENED_HUSK, SpawnRestriction.Location.ON_GROUND,
+                Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, SickenedHuskEntity::canSpawnIgnoreLightLevel);
 
     }
 }
