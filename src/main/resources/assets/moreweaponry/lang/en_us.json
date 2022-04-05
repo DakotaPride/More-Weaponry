@@ -417,6 +417,17 @@
   "effect.moreweaponry.watcher": "Voided",
   "effect.moreweaponry.wanderer": "Wandering",
   "effect.moreweaponry.crackler": "Explosion",
-  "effect.moreweaponry.sickened": "Missionary"
+  "effect.moreweaponry.sickened": "Missionary",
 
+  "effect.moreweaponry.plagued": "Plagued",
+  "effect.moreweaponry.ticked": "Ticked",
+  "effect.moreweaponry.webbed": "Webbed",
+  "effect.moreweaponry.explosive": "Explosive",
+  "effect.moreweaponry.siren": "Siren",
+
+  "effect.moreweaponry.numbed": "Numbness",
+
+  "item.minecraft.potion.effect.numbness_potion": "Numbing Potion",
+  "item.minecraft.splash_potion.effect.numbness_potion": "Splash Potion of Numbing",
+  "item.minecraft.lingering_potion.effect.numbness_potion": "Lingering Potion of Numbing"
 }
