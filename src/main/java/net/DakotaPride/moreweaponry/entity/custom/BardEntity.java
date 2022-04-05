@@ -1,5 +1,6 @@
 package net.DakotaPride.moreweaponry.entity.custom;
 
+import net.DakotaPride.moreweaponry.effect.MoreWeaponryEffects;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityPose;
@@ -10,6 +11,9 @@ import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.boss.BossBar;
 import net.minecraft.entity.boss.ServerBossBar;
 import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.effect.StatusEffect;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.nbt.NbtCompound;
@@ -38,6 +42,24 @@ public class BardEntity extends HostileEntity implements IAnimatable {
         this.bossBar = (ServerBossBar)(new ServerBossBar(new LiteralText("Bard"),
                 BossBar.Color.BLUE, BossBar.Style.PROGRESS)).setDragonMusic(false).setThickenFog(false);
 
+    }
+
+    @Override
+    public boolean canHaveStatusEffect(StatusEffectInstance effect) {
+        StatusEffect statusEffect = effect.getEffectType();
+        return statusEffect
+                != StatusEffects.POISON && statusEffect
+                != MoreWeaponryEffects.SICKENED && statusEffect
+                != MoreWeaponryEffects.PLAGUED && statusEffect
+                != MoreWeaponryEffects.CRACKLER && statusEffect
+                != MoreWeaponryEffects.EXPLOSIVE && statusEffect
+                != MoreWeaponryEffects.BARD && statusEffect
+                != MoreWeaponryEffects.SIREN && statusEffect
+                != StatusEffects.WITHER && statusEffect
+                != StatusEffects.LEVITATION && statusEffect
+                != StatusEffects.GLOWING && statusEffect
+                != StatusEffects.UNLUCK && statusEffect
+                != StatusEffects.HUNGER;
     }
 
     @Override

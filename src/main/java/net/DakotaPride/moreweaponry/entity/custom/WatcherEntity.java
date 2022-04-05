@@ -1,6 +1,7 @@
 package net.DakotaPride.moreweaponry.entity.custom;
 
 import net.DakotaPride.moreweaponry.block.MoreWeaponryBlocks;
+import net.DakotaPride.moreweaponry.effect.MoreWeaponryEffects;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityDimensions;
@@ -13,6 +14,9 @@ import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.boss.BossBar;
 import net.minecraft.entity.boss.ServerBossBar;
 import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.effect.StatusEffect;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.CreeperEntity;
 import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -46,6 +50,31 @@ public class WatcherEntity extends HostileEntity implements IAnimatable {
         setPathfindingPenalty(PathNodeType.WATER, -1.0F);
 
     }
+
+    @Override
+    public boolean canHaveStatusEffect(StatusEffectInstance effect) {
+        StatusEffect statusEffect = effect.getEffectType();
+        return statusEffect
+                != StatusEffects.POISON && statusEffect
+                != MoreWeaponryEffects.SICKENED && statusEffect
+                != MoreWeaponryEffects.PLAGUED && statusEffect
+                != MoreWeaponryEffects.CRACKLER && statusEffect
+                != MoreWeaponryEffects.EXPLOSIVE && statusEffect
+                != MoreWeaponryEffects.BARD && statusEffect
+                != MoreWeaponryEffects.SIREN && statusEffect
+                != MoreWeaponryEffects.WANDERER && statusEffect
+                != MoreWeaponryEffects.WEBBED && statusEffect
+                != MoreWeaponryEffects.WATCHER && statusEffect
+                != MoreWeaponryEffects.TICKED && statusEffect
+                != MoreWeaponryEffects.NUMBED && statusEffect
+                != StatusEffects.WITHER && statusEffect
+                != StatusEffects.LEVITATION && statusEffect
+                != StatusEffects.GLOWING && statusEffect
+                != StatusEffects.UNLUCK && statusEffect
+                != StatusEffects.MINING_FATIGUE && statusEffect
+                != StatusEffects.HUNGER;
+    }
+
 
     @Override
     public void onStartedTrackingBy(ServerPlayerEntity player) {
