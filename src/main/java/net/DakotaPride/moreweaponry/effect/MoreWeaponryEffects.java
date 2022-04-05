@@ -69,8 +69,8 @@ public class MoreWeaponryEffects {
     public static final StatusEffect NUMBED = new NumbedStatusEffect(StatusEffectCategory.NEUTRAL, 0x1F1F1F)
             .addAttributeModifier(EntityAttributes.GENERIC_MOVEMENT_SPEED, "AF8B6E3F-3328-4C0A-AA36-5BA2BB9DBEF3",
                     -1.0D, EntityAttributeModifier.Operation.MULTIPLY_TOTAL)
-            .addAttributeModifier(EntityAttributes.GENERIC_MAX_HEALTH, "5D6F0BA2-1186-46AC-B896-C61C5CEE99CC",
-                    -4.0D, EntityAttributeModifier.Operation.ADDITION);
+            .addAttributeModifier(EntityAttributes.GENERIC_ATTACK_DAMAGE, "5D6F0BA2-1186-46AC-B896-C61C5CEE99CC",
+                    -10.0D, EntityAttributeModifier.Operation.ADDITION);
 
 
     public static void registerEffects() {
