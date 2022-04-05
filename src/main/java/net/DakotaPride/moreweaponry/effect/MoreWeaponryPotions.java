@@ -11,7 +11,6 @@ import net.minecraft.util.registry.Registry;
 
 public class MoreWeaponryPotions {
     public static Potion NUMBNESS_POTION;
-    public static Potion DYSPHORIA_POTION;
 
     public static Potion registerNumbedPotion(String name) {
         return Registry.register(Registry.POTION, new Identifier(MoreWeaponry.MOD_ID, name),
