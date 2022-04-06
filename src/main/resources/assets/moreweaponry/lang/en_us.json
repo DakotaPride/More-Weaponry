@@ -392,8 +392,11 @@
   "item.moreweaponry.bard_cloth": "Bard Cloth",
 
   "entity.moreweaponry.sickened": "Sickened",
+  "entity.moreweaponry.sickened_husk": "Sickened Husk",
   "item.moreweaponry.sickened_spawn_egg": "Sickened Spawn Egg",
+  "item.moreweaponry.sickened_husk_spawn_egg": "Sickened Husk Spawn Egg",
   "block.moreweaponry.sickened_skull": "Sickened Skull",
+  "block.moreweaponry.sickened_husk_skull": "Sickened Husk Skull",
   "block.moreweaponry.sickened_summoner": "Sickened Summoning Table",
 
 
@@ -425,9 +428,15 @@
   "effect.moreweaponry.explosive": "Explosive",
   "effect.moreweaponry.siren": "Siren",
 
-  "effect.moreweaponry.numbed": "Numbness",
+  "effect.moreweaponry.numbed": "Numbing",
 
   "item.minecraft.potion.effect.numbness_potion": "Numbing Potion",
   "item.minecraft.splash_potion.effect.numbness_potion": "Splash Potion of Numbing",
-  "item.minecraft.lingering_potion.effect.numbness_potion": "Lingering Potion of Numbing"
+  "item.minecraft.lingering_potion.effect.numbness_potion": "Lingering Potion of Numbing",
+
+  "item.moreweaponry.rusted_mare_diamond": "Rusted Mare Diamond",
+  "item.moreweaponry.rusted_mare_diamond_helmet": "Rusted Mare Diamond Helm",
+
+
+  "entity.moreweaponry.buried_knight": "Buried Knight"
 }

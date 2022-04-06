@@ -34,6 +34,10 @@ public class MoreWeaponryEnchantments {
             new AutoMendingEnchantment(Enchantment.Rarity.UNCOMMON,
                     EnchantmentTarget.ARMOR_CHEST));
 
+    public static Enchantment BLEEDING = register("bleeding",
+            new BleedingEnchantment(Enchantment.Rarity.RARE,
+                    EnchantmentTarget.WEAPON));
+
 
 
     private static Enchantment register(String name, Enchantment enchantment) {

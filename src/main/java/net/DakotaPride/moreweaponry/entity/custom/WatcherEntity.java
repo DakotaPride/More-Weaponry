@@ -102,10 +102,10 @@ public class WatcherEntity extends HostileEntity implements IAnimatable {
 
     public static DefaultAttributeContainer.Builder setAttributes() {
         return HostileEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_MAX_HEALTH, 1400.0D)
-                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 44.0f)
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, 1700.0D)
+                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 51.0f)
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.21f)
-                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 186.0D)
+                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 206.0D)
                 .add(EntityAttributes.GENERIC_ATTACK_SPEED, 0.96f);
     }
 
@@ -126,7 +126,7 @@ public class WatcherEntity extends HostileEntity implements IAnimatable {
         this.goalSelector.add(2, new MeleeAttackGoal(this, 1.0D, false));
         this.goalSelector.add(7, new WanderAroundFarGoal(this, 1.0D, 0.0F));
         this.goalSelector.add(8, new LookAroundGoal(this));
-        this.goalSelector.add(6, new LookAtEntityGoal(this, (Class)PlayerEntity.class, 8.0F));
+        this.goalSelector.add(6, new LookAtEntityGoal(this, PlayerEntity.class, 8.0F));
 
         this.targetSelector.add(1, new ActiveTargetGoal<>(this, PlayerEntity.class, true, false));
         this.targetSelector.add(3, new ActiveTargetGoal<>(this, WandererEntity.class, true, false));

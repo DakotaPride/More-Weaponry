@@ -741,6 +741,9 @@ public class MoreWeaponryItems {
     public static final Item EXPLOSIVE_ESSENCE = registerItem("explosive_essence",
             new Item(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
+    public static final Item RUSTED_MARE_DIAMOND = registerItem("rusted_mare_diamond",
+            new Item(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+
     public static final Item SUPPRESSED_ESSENCE_CIRTICT_AXE = registerItem("suppressed_essence_cirtict_axe",
             new CracklerAxe((ToolMaterial) MoreWeaponryToolMaterials.ESSENCE_CIRTICT, 25, -3f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
@@ -852,6 +855,14 @@ public class MoreWeaponryItems {
 
     public static final Item SICKENED_CHESTPLATE = registerItem("sickened_chestplate",
             new SickenedEffectItem(MoreWeaponryArmorMaterials.SICKENED, EquipmentSlot.CHEST,
+                    new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+
+    public static final Item RUSTED_MARE_DIAMOND_HELMET = registerItem("rusted_mare_diamond_helmet",
+            new ArmorItem(MoreWeaponryArmorMaterials.RUSTED, EquipmentSlot.HEAD,
+                    new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+
+    public static final Item HEAVY_SWORD = registerItem("heavy_sword",
+            new SwordItem((ToolMaterial) ToolMaterials.IRON, 8, -3.0f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     private static Item registerItem (String name, Item item) {

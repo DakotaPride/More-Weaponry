@@ -39,6 +39,9 @@ public class MoreWeaponryRegistries {
         FabricDefaultAttributeRegistry.register(MoreWeaponryEntities.BARD, BardEntity.setAttributes());
         FabricDefaultAttributeRegistry.register(MoreWeaponryEntities.SICKENED, SickenedEntity.setAttributes());
         FabricDefaultAttributeRegistry.register(MoreWeaponryEntities.SICKENED_HUSK, SickenedHuskEntity.setAttributes());
+
+        FabricDefaultAttributeRegistry.register(MoreWeaponryEntities.BURIED_KNIGHT, BuriedKnightEntity.setAttributes());
+
     }
 
 }

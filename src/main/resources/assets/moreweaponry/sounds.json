@@ -6,5 +6,11 @@
         "stream": true
       }
     ]
+  },
+  "entity_buried_knight_ambient": {
+    "subtitle": "moreweaponry.entity_buried_knight_ambient",
+    "sounds": [
+      "moreweaponry:entity_buried_knight_ambient"
+    ]
   }
 }

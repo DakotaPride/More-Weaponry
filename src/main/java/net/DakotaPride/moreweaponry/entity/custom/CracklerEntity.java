@@ -97,10 +97,10 @@ public class CracklerEntity extends HostileEntity implements IAnimatable {
 
     public static DefaultAttributeContainer.Builder setAttributes() {
         return HostileEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_MAX_HEALTH, 1250.0D)
-                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 40.0f)
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, 1450.0D)
+                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 45.0f)
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.23)
-                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 192.0D)
+                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 189.0D)
                 .add(EntityAttributes.GENERIC_ATTACK_SPEED, 1.0f);
     }
 

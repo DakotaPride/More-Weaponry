@@ -12,5 +12,8 @@ public class MoreWeaponryEntityRegistry {
         EntityRendererRegistry.register(MoreWeaponryEntities.BARD, BardRenderer::new);
         EntityRendererRegistry.register(MoreWeaponryEntities.SICKENED, SickenedRenderer::new);
         EntityRendererRegistry.register(MoreWeaponryEntities.SICKENED_HUSK, SickenedHuskRenderer::new);
+
+        EntityRendererRegistry.register(MoreWeaponryEntities.BURIED_KNIGHT, BuriedKnightRenderer::new);
+
     }
 }
