@@ -11,8 +11,8 @@ The Wanderer is a boss that you can find inside of the Wanderer's Library, which
 # The Crackler (Implemented)
 The Crackler is a boss that you can find at the Crackler Nuclear Yard, which can be found in the Barren Deserts of the world. You can summon the creature by destroying the Crackler Summoning Block, located in the center of the Celestial Area.
 
-# The Bard (Non-Implemented)
-The Bard will be a boss that you can find at the Bard's Rocks, which can be found in most ocean biomes, except for warm ocean biomes. You can summon the creature by destroying the Bard Summoning Block, located at the center Celestial Rock.
+# The Bard (Implemented)
+The Bard is a boss that you can find at the Bard's Rocks, which can be found in the Warm Oceans. You can summon the creature by destroying the Bard Summoning Block, located at the center Celestial Rock.
 
-# The Sickened (Non-Implemented)
-The Sickened will be a boss that you can find at the Sickened Graves, which can be found in the Plains biome. You can summon the creature by destroying the Sickened Summoning Block, located at the center Celestial Grave.
+# The Sickened (Implemented)
+The Sickened is a boss that you can find at the Sickened Graves, which can be found in the Plains biome. You can summon the creature by destroying the Sickened Summoning Block, located at the center Celestial Grave.
