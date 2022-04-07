@@ -10,7 +10,7 @@ import net.DakotaPride.moreweaponry.block.skulls.WandererSkullBlock;
 import net.DakotaPride.moreweaponry.block.skulls.WatcherSkullBlock;
 import net.DakotaPride.moreweaponry.item.MoreWeaponryItemGroup;
 import net.DakotaPride.moreweaponry.item.custom.KuroPlantBlock;
-import net.DakotaPride.moreweaponry.sound.MoreWeaponrySounds;
+import net.DakotaPride.moreweaponry.sound.MoreWeaponrySoundEvents;
 import net.DakotaPride.moreweaponry.world.features.tree.FrodonSaplingGenerator;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -363,27 +363,27 @@ public class MoreWeaponryBlocks {
 
     public static final Block WATCHER_SUMMONER = registerBlock("watcher_summoner",
             new WatcherSummoningBlock(MoreWeaponryBlocks.WATCHER_SKULL, FabricBlockSettings.copy(Blocks.END_STONE)
-                    .sounds(MoreWeaponrySounds.SUMMONER)),
+                    .sounds(MoreWeaponrySoundEvents.SUMMONER)),
             MoreWeaponryItemGroup.MORE_WEAPONRY);
 
     public static final Block CRACKLER_SUMMONER = registerBlock("crackler_summoner",
             new CracklerSummoningBlock(MoreWeaponryBlocks.CRACKLER_SKULL, FabricBlockSettings.copy(Blocks.SANDSTONE)
-                    .sounds(MoreWeaponrySounds.SUMMONER)),
+                    .sounds(MoreWeaponrySoundEvents.SUMMONER)),
             MoreWeaponryItemGroup.MORE_WEAPONRY);
 
     public static final Block WANDERER_SUMMONER = registerBlock("wanderer_summoner",
             new WandererSummoningBlock(MoreWeaponryBlocks.WANDERER_SKULL, FabricBlockSettings.copy(Blocks.DRIPSTONE_BLOCK)
-                    .sounds(MoreWeaponrySounds.SUMMONER)),
+                    .sounds(MoreWeaponrySoundEvents.SUMMONER)),
             MoreWeaponryItemGroup.MORE_WEAPONRY);
 
     public static final Block BARD_SUMMONER = registerBlock("bard_summoner",
             new BardSummoningBlock(MoreWeaponryBlocks.BARD_SKULL, FabricBlockSettings.copy(Blocks.POLISHED_ANDESITE)
-                    .sounds(MoreWeaponrySounds.SUMMONER)),
+                    .sounds(MoreWeaponrySoundEvents.SUMMONER)),
             MoreWeaponryItemGroup.MORE_WEAPONRY);
 
     public static final Block SICKENED_SUMMONER = registerBlock("sickened_summoner",
             new SickenedSummoningBlock(MoreWeaponryBlocks.SICKENED_SKULL, FabricBlockSettings.copy(Blocks.COBBLED_DEEPSLATE)
-                    .sounds(MoreWeaponrySounds.SUMMONER)),
+                    .sounds(MoreWeaponrySoundEvents.SUMMONER)),
             MoreWeaponryItemGroup.MORE_WEAPONRY);
 
 

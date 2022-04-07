@@ -1,7 +1,6 @@
 package net.DakotaPride.moreweaponry.entity.custom;
 
-import net.DakotaPride.moreweaponry.effect.MoreWeaponryEffects;
-import net.DakotaPride.moreweaponry.sound.MoreWeaponrySounds;
+import net.DakotaPride.moreweaponry.sound.MoreWeaponrySoundEvents;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.*;
@@ -77,17 +76,17 @@ public class BuriedKnightEntity extends HostileEntity implements IAnimatable {
 
     @Override
     protected SoundEvent getAmbientSound() {
-        return MoreWeaponrySounds.ENTITY_BURIED_KNIGHT_AMBIENT;
+        return MoreWeaponrySoundEvents.ENTITY_BURIED_KNIGHT_AMBIENT;
     }
 
     @Override
     protected SoundEvent getHurtSound(DamageSource source) {
-        return SoundEvents.ENTITY_CREEPER_HURT;
+        return MoreWeaponrySoundEvents.ENTITY_BURIED_KNIGHT_HURT;
     }
 
     @Override
     protected SoundEvent getDeathSound() {
-        return SoundEvents.ENTITY_CREEPER_DEATH;
+        return SoundEvents.ENTITY_SHULKER_DEATH;
     }
 
     @Override

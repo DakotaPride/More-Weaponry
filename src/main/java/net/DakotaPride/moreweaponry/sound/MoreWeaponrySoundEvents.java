@@ -7,7 +7,7 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
-public class MoreWeaponrySounds {
+public class MoreWeaponrySoundEvents {
 
     public static SoundEvent ENTITY_BURIED_KNIGHT_AMBIENT = registerSoundEvent("entity_buried_knight_ambient");
     public static SoundEvent ENTITY_BURIED_KNIGHT_DEATH = registerSoundEvent("entity_buried_knight_death");

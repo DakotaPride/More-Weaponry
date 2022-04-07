@@ -158,6 +158,7 @@
   "enchantment.moreweaponry.auto_mending": "Auto Mending",
   "enchantment.moreweaponry.power_of_the_wither": "Withering Power",
   "enchantment.moreweaponry.stray_bonage": "Stray Bonage",
+  "enchantment.moreweaponry.bleeding": "Bleeding",
 
 
   "item.moreweaponry.glimmering_shield": "Glimmered Amethyst Shield",
@@ -429,6 +430,7 @@
   "effect.moreweaponry.siren": "Siren",
 
   "effect.moreweaponry.numbed": "Numbing",
+  "effect.moreweaponry.bleeding": "Bleeding",
 
   "item.minecraft.potion.effect.numbness_potion": "Numbing Potion",
   "item.minecraft.splash_potion.effect.numbness_potion": "Splash Potion of Numbing",
@@ -436,6 +438,7 @@
 
   "item.moreweaponry.rusted_mare_diamond": "Rusted Mare Diamond",
   "item.moreweaponry.rusted_mare_diamond_helmet": "Rusted Mare Diamond Helm",
+  "item.moreweaponry.heavy_sword": "Heavy Sword",
 
 
   "entity.moreweaponry.buried_knight": "Buried Knight"

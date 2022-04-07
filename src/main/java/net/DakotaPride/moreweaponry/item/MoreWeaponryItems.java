@@ -24,7 +24,7 @@ import net.DakotaPride.moreweaponry.item.custom.vanilla_tools.ModHoeItem;
 import net.DakotaPride.moreweaponry.item.custom.vanilla_tools.ModPickaxeItem;
 import net.DakotaPride.moreweaponry.item.custom.wanderer_tools.*;
 import net.DakotaPride.moreweaponry.item.custom.watcher_tools.*;
-import net.DakotaPride.moreweaponry.sound.MoreWeaponrySounds;
+import net.DakotaPride.moreweaponry.sound.MoreWeaponrySoundEvents;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -420,7 +420,7 @@ public class MoreWeaponryItems {
             new CooledCirtictIngot(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item WARDENS_STEP_MUSIC_DISC = registerItem("wardens_step_music_disc",
-            new MoreWeaponryMusicDiscItem(9, MoreWeaponrySounds.WARDENS_STEP,
+            new MoreWeaponryMusicDiscItem(9, MoreWeaponrySoundEvents.WARDENS_STEP,
                     new FabricItemSettings().maxCount(1).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item FRODON_SIGN = registerItem("frodon_sign",
