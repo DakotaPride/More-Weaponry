@@ -9,6 +9,7 @@ import software.bernie.geckolib3.model.AnimatedGeoModel;
 import software.bernie.geckolib3.model.provider.data.EntityModelData;
 
 public class BuriedKnightModel extends AnimatedGeoModel<BuriedKnightEntity> {
+
     @Override
     public Identifier getModelLocation(BuriedKnightEntity entity) {
         return new Identifier(MoreWeaponry.MOD_ID, "geo/buried_knight.geo.json");

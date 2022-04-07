@@ -5,10 +5,10 @@
   "compatibilityLevel": "JAVA_16",
   "mixins": [
     "BlockEntityTypeMixin",
+    "BrewingRecipeRegistryMixin",
     "MixinStructurePiece",
     "SignTypeAccessor",
-    "StructureFeatureAccessor",
-    "BrewingRecipeRegistryMixin"
+    "StructureFeatureAccessor"
   ],
   "client": [
     "BlockEntityTypeMixin",

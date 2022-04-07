@@ -1,7 +1,7 @@
 package net.DakotaPride.moreweaponry.effect.status_effects;
 
 import net.DakotaPride.moreweaponry.effect.MoreWeaponryEffects;
-import net.DakotaPride.moreweaponry.entity.damage.MoreWeaponryDamageSource;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffect;

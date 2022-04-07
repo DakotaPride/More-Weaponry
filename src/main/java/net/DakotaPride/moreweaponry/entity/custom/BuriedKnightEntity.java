@@ -35,7 +35,7 @@ public class BuriedKnightEntity extends HostileEntity implements IAnimatable {
         return HostileEntity.createMobAttributes()
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, 500.0D)
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 32.0f)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.21f)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 5.0f)
                 .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 150.0D)
                 .add(EntityAttributes.GENERIC_ATTACK_SPEED, 0.96f);
     }
@@ -101,7 +101,7 @@ public class BuriedKnightEntity extends HostileEntity implements IAnimatable {
 
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
         if (event.isMoving()) {
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.buried_knight.walk", true));
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.buried_knight.walking", true));
             return PlayState.CONTINUE;
         }
 

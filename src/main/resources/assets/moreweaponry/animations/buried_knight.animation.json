@@ -103,7 +103,7 @@
 				}
 			}
 		},
-		"animation.buried_knight.walk": {
+		"animation.buried_knight.walking": {
 			"loop": true,
 			"animation_length": 3.52,
 			"bones": {
