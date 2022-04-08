@@ -35,6 +35,7 @@ import software.bernie.geckolib3.core.manager.AnimationFactory;
 public class BardEntity extends HostileEntity implements IAnimatable {
     private AnimationFactory factory = new AnimationFactory(this);
     private final ServerBossBar bossBar;
+
     public BardEntity(EntityType<? extends HostileEntity> entityType, World world) {
         super(entityType, world);
 
@@ -191,10 +192,10 @@ public class BardEntity extends HostileEntity implements IAnimatable {
         if (event.isMoving()) {
             event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.bard.walk", true));
             return PlayState.CONTINUE;
+        } else {
+            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.bard.idle", true));
+            return PlayState.CONTINUE;
         }
-
-        event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.bard.idle", true));
-        return PlayState.CONTINUE;
     }
 
 }
