@@ -40,7 +40,7 @@ public class WatcherEntity extends HostileEntity implements IAnimatable {
     public WatcherEntity(EntityType<? extends HostileEntity> entityType, World world) {
         super(entityType, world);
         this.ignoreCameraFrustum = true;
-        this.bossBar = (ServerBossBar)(new ServerBossBar(new LiteralText("Watcher"),
+        this.bossBar = (ServerBossBar)(new ServerBossBar(new LiteralText("entity.moreweaponry.watcher"),
                 BossBar.Color.PURPLE, BossBar.Style.PROGRESS)).setDragonMusic(false).setThickenFog(false);
         this.stepHeight = 1.0F;
 
@@ -149,6 +149,15 @@ public class WatcherEntity extends HostileEntity implements IAnimatable {
 
             return true;
         }
+    }
+
+    public boolean damage(DamageSource source, float amount) {
+        if (source.getAttacker() != null && !source.isProjectile() && source.getAttacker() instanceof LivingEntity) {
+            LivingEntity attacker = (LivingEntity) source.getAttacker();
+            attacker.addStatusEffect(new StatusEffectInstance(MoreWeaponryEffects.TICKED, 100), this);
+        }
+
+        return super.damage(source, amount);
     }
 
     protected int getXpToDrop(PlayerEntity player) {

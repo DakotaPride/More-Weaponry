@@ -19,7 +19,7 @@ public class CooledCirtictClusterItem extends Item {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add( new LiteralText("Cooled").formatted(Formatting.AQUA) );
+        tooltip.add( new TranslatableText("item.moreweaponry.cluster.description.cooled").formatted(Formatting.AQUA) );
     }
 
 }

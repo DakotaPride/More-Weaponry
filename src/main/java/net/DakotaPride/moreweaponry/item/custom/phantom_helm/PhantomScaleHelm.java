@@ -7,6 +7,7 @@ import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
@@ -21,11 +22,11 @@ public class PhantomScaleHelm extends ModPhantomScaleArmorItem{
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         if (Screen.hasShiftDown()) {
-            tooltip.add( new LiteralText("Grants Slow Falling and Night Vision Upon Equipping").formatted(Formatting.BLUE));
-            tooltip.add( new LiteralText("Using The Scales Of A Phantom, You Gain The Powers Of The Creature").formatted(Formatting.BLUE));
-            tooltip.add( new LiteralText("Of The Darkest Nights").formatted(Formatting.BLUE));
+            tooltip.add( new TranslatableText("armor.moreweaponry.shift_down.description.phantom_helm.one").formatted(Formatting.BLUE));
+            tooltip.add( new TranslatableText("armor.moreweaponry.shift_down.description.phantom_helm.two").formatted(Formatting.BLUE));
+            tooltip.add( new TranslatableText("armor.moreweaponry.shift_down.description.phantom_helm.three").formatted(Formatting.BLUE));
         } else {
-            tooltip.add( new LiteralText("Press Shift For More Information").formatted(Formatting.DARK_GRAY));
+            tooltip.add( new TranslatableText("misc.moreweaponry.shift_up").formatted(Formatting.DARK_GRAY));
         }
     }
 

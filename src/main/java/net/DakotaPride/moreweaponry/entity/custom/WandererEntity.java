@@ -37,9 +37,18 @@ public class WandererEntity extends HostileEntity implements IAnimatable {
     public WandererEntity(EntityType<? extends HostileEntity> entityType, World world) {
         super(entityType, world);
 
-        this.bossBar = (ServerBossBar)(new ServerBossBar(new LiteralText("Wanderer"),
+        this.bossBar = (ServerBossBar)(new ServerBossBar(new LiteralText("entity.moreweaponry.wanderer"),
                 BossBar.Color.YELLOW, BossBar.Style.PROGRESS)).setDragonMusic(false).setThickenFog(false);
 
+    }
+
+    public boolean damage(DamageSource source, float amount) {
+        if (source.getAttacker() != null && !source.isProjectile() && source.getAttacker() instanceof LivingEntity) {
+            LivingEntity attacker = (LivingEntity) source.getAttacker();
+            attacker.addStatusEffect(new StatusEffectInstance(MoreWeaponryEffects.WEBBED, 100), this);
+        }
+
+        return super.damage(source, amount);
     }
 
     @Override

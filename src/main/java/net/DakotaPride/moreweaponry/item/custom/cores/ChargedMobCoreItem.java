@@ -19,7 +19,7 @@ public class ChargedMobCoreItem extends Item {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add( new LiteralText("Charged").formatted(Formatting.AQUA));
+        tooltip.add( new TranslatableText("item.moreweaponry.core.charged").formatted(Formatting.AQUA));
     }
 
     @Override

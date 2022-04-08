@@ -8,19 +8,19 @@
     ]
   },
   "entity_buried_knight_ambient": {
-    "subtitle": "Buried Knight Ambient",
+    "subtitle": "entity.subtitle.buried_knight_ambient",
     "sounds": [
       "moreweaponry:entity_buried_knight_ambient"
     ]
   },
   "entity_buried_knight_hurt": {
-    "subtitle": "Buried Knight Hurt",
+    "subtitle": "entity.subtitle.buried_knight_hurt",
     "sounds": [
       "moreweaponry:entity_buried_knight_hurt"
     ]
   },
   "entity_buried_knight_death": {
-    "subtitle": "Buried Knight Death",
+    "subtitle": "entity.subtitle.buried_knight_death",
     "sounds": [
       "moreweaponry:entity_buried_knight_death"
     ]

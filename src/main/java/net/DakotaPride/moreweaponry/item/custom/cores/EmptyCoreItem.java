@@ -12,6 +12,7 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.math.BlockPos;
@@ -28,7 +29,7 @@ public class EmptyCoreItem extends Item {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add( new LiteralText("Empty").formatted(Formatting.GRAY));
+        tooltip.add( new TranslatableText("item.moreweaponry.core.empty").formatted(Formatting.GRAY));
     }
 
     @Override

@@ -564,15 +564,15 @@ public class MoreWeaponryItems {
 
 
     public static final Item WRETCHED_CORE = registerItem("wretched_core",
-            new WretchedCoreItem(new FabricItemSettings().maxCount(1).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+            new WandererCoreItem(new FabricItemSettings().maxCount(1).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
     public static final Item WATCHER_CORE = registerItem("watcher_core",
             new WatcherCoreItem(new FabricItemSettings().maxCount(1).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
     public static final Item MAIDEN_CORE = registerItem("maiden_core",
-            new MaidenCoreItem(new FabricItemSettings().maxCount(1).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+            new BardCoreItem(new FabricItemSettings().maxCount(1).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
     public static final Item PLAGUED_CORE = registerItem("plagued_core",
-            new PlaguedCoreItem(new FabricItemSettings().maxCount(1).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+            new SickenedCoreItem(new FabricItemSettings().maxCount(1).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
     public static final Item SUPPRESSED_CORE = registerItem("suppressed_core",
-            new SuppressedCoreItem(new FabricItemSettings().maxCount(1).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+            new CracklerCoreItem(new FabricItemSettings().maxCount(1).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item MOB_CORE = registerItem("mob_core",
             new EmptyCoreItem(new FabricItemSettings().maxCount(1).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
@@ -609,15 +609,15 @@ public class MoreWeaponryItems {
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item POWERED_WRETCHED_MOB_CORE = registerItem("powered_wretched_mob_core",
-            new PoweredWretchedItem(new FabricItemSettings().maxCount(1).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+            new PoweredWandererItem(new FabricItemSettings().maxCount(1).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
     public static final Item POWERED_WATCHER_MOB_CORE = registerItem("powered_watcher_mob_core",
-            new PoweredWickedItem(new FabricItemSettings().maxCount(1).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+            new PoweredWatcherItem(new FabricItemSettings().maxCount(1).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
     public static final Item POWERED_MAIDEN_MOB_CORE = registerItem("powered_maiden_mob_core",
-            new PoweredMaidenItem(new FabricItemSettings().maxCount(1).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+            new PoweredBardItem(new FabricItemSettings().maxCount(1).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
     public static final Item POWERED_PLAGUED_MOB_CORE = registerItem("powered_plagued_mob_core",
-            new PoweredPlaguedItem(new FabricItemSettings().maxCount(1).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+            new PoweredSickenedItem(new FabricItemSettings().maxCount(1).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
     public static final Item POWERED_SUPPRESSED_MOB_CORE = registerItem("powered_suppressed_mob_core",
-            new PoweredSuppressedItem(new FabricItemSettings().maxCount(1).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+            new PoweredCracklerItem(new FabricItemSettings().maxCount(1).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
 
     public static final Item WATCHER_ESSENCE_CIRTICT_AXE = registerItem("watcher_essence_cirtict_axe",

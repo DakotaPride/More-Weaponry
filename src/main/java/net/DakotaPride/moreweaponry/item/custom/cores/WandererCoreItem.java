@@ -1,6 +1,7 @@
 package net.DakotaPride.moreweaponry.item.custom.cores;
 
 import net.DakotaPride.moreweaponry.block.MoreWeaponryBlocks;
+import net.DakotaPride.moreweaponry.effect.MoreWeaponryEffects;
 import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -14,6 +15,7 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
@@ -25,24 +27,26 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class MaidenCoreItem extends Item {
-    public MaidenCoreItem(Settings settings) {
+public class WandererCoreItem extends Item {
+    public WandererCoreItem(Settings settings) {
         super(settings);
     }
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity playerEntity, Hand hand) {
         playerEntity.playSound(SoundEvents.PARTICLE_SOUL_ESCAPE, 2.0F, 1.0F);
-        playerEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 200, 0), playerEntity);
-        playerEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 200, 0), playerEntity);
+        playerEntity.addStatusEffect(new StatusEffectInstance(MoreWeaponryEffects.WANDERER, 200, 0), playerEntity);
+        playerEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 200, 0), playerEntity);
         playerEntity.getItemCooldownManager().set(this, 200);
         return TypedActionResult.success(playerEntity.getStackInHand(hand));
     }
 
+
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add( new LiteralText("Bard").formatted(Formatting.WHITE));
+        tooltip.add( new TranslatableText("item.moreweaponry.core.wanderer").formatted(Formatting.DARK_RED));
     }
+
 
     @Override
     public boolean hasGlint(ItemStack stack) {

@@ -20,6 +20,7 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.LiteralText;
+import net.minecraft.text.TranslatableText;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
@@ -37,9 +38,18 @@ public class SickenedHuskEntity extends HostileEntity implements IAnimatable {
     public SickenedHuskEntity(EntityType<? extends HostileEntity> entityType, World world) {
         super(entityType, world);
 
-        this.bossBar = (ServerBossBar)(new ServerBossBar(new LiteralText("Sickened Husk"),
+        this.bossBar = (ServerBossBar)(new ServerBossBar(new TranslatableText("entity.moreweaponry.sickened_husk"),
                 BossBar.Color.YELLOW, BossBar.Style.PROGRESS)).setDragonMusic(false).setThickenFog(false);
 
+    }
+
+    public boolean damage(DamageSource source, float amount) {
+        if (source.getAttacker() != null && !source.isProjectile() && source.getAttacker() instanceof LivingEntity) {
+            LivingEntity attacker = (LivingEntity) source.getAttacker();
+            attacker.addStatusEffect(new StatusEffectInstance(MoreWeaponryEffects.PLAGUED, 100), this);
+        }
+
+        return super.damage(source, amount);
     }
 
     @Override

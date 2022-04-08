@@ -9,6 +9,7 @@ import net.minecraft.item.PickaxeItem;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
@@ -29,7 +30,7 @@ public class SickenedPickaxe extends PickaxeItem {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add( new LiteralText("Missionary").formatted(Formatting.DARK_GREEN));
+        tooltip.add( new TranslatableText("item.moreweaponry.description.sickened_weapon").formatted(Formatting.DARK_GREEN));
     }
 
 }

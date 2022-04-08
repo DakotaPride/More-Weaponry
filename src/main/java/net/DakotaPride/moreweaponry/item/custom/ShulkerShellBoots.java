@@ -15,6 +15,7 @@ import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
@@ -83,13 +84,12 @@ public class ShulkerShellBoots extends ArmorItem {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-
         if(Screen.hasShiftDown()){
-        tooltip.add( new LiteralText("Grants Levitation Upon Equipping").formatted(Formatting.DARK_PURPLE));
-        tooltip.add( new LiteralText("Crafted from Shulker Shells, taken from deep within").formatted(Formatting.DARK_PURPLE));
-                tooltip.add( new LiteralText("the End Dimension, you now have the ability to Levitate!").formatted(Formatting.DARK_PURPLE));
+        tooltip.add( new TranslatableText("armor.moreweaponry.shift_down_description.shulker_boots.top").formatted(Formatting.DARK_PURPLE));
+        tooltip.add( new TranslatableText("armor.moreweaponry.shift_down.description.shulker_boots.bottom.one").formatted(Formatting.DARK_PURPLE));
+        tooltip.add( new TranslatableText("armor.moreweaponry.shift_down.description.shulker_boots.bottom.two").formatted(Formatting.DARK_PURPLE));
         } else {
-            tooltip.add( new LiteralText("Press Shift For More Information").formatted(Formatting.DARK_GRAY));
+            tooltip.add( new TranslatableText("misc.moreweaponry.shift_up").formatted(Formatting.DARK_GRAY));
         }
     }
 

@@ -22,9 +22,9 @@ public class BluestoneIgnitor extends Item {
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         if (Screen.hasShiftDown()) {
-            tooltip.add(new LiteralText("Use To Open A Portal To The Ever Frost Dimension").formatted(Formatting.DARK_AQUA));
+            tooltip.add(new TranslatableText("item.moreweaponry.ignitor.ever_frost").formatted(Formatting.DARK_AQUA));
         }  else {
-            tooltip.add( new LiteralText("Press Shift For More Information").formatted(Formatting.DARK_GRAY));
+            tooltip.add( new TranslatableText("misc.moreweaponry.shift_up").formatted(Formatting.DARK_GRAY));
         }
     }
 

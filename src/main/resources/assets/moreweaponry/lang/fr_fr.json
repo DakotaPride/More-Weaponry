@@ -18,72 +18,52 @@
   "item.moreweaponry.phantom_essence": "Essence fantôme",
   "item.moreweaponry.phantom_scale": "Échelle fantôme",
   "item.moreweaponry.cirtict_ingot": "Lingot de Cirtict",
-
-
   "item.moreweaponry.phantom_helmet": "Heaume d'écailles fantômes",
-
-
   "item.moreweaponry.glimmering_sword": "Épée d'améthyste scintillante",
   "item.moreweaponry.glimmering_axe": "Hache d'améthyste scintillante",
   "item.moreweaponry.glimmering_hoe": "Houe en améthyste scintillante",
   "item.moreweaponry.glimmering_pickaxe": "Pioche en améthyste scintillante",
   "item.moreweaponry.glimmering_shovel": "Pelle en améthyste scintillante",
-
   "item.moreweaponry.glimmering_battleaxe": "Hache de combat en améthyste scintillante",
-
   "item.moreweaponry.moon_stone_sword": "Épée lunaire raffinée",
   "item.moreweaponry.moon_stone_axe": "Hache lunaire raffinée",
   "item.moreweaponry.moon_stone_hoe": "Houe lunaire raffinée",
   "item.moreweaponry.moon_stone_pickaxe": "Pioche lunaire raffinée",
   "item.moreweaponry.moon_stone_shovel": "Pelle lunaire raffinée",
-
   "item.moreweaponry.moon_stone_battleaxe": "Hache de combat lunaire raffinée",
-
   "item.moreweaponry.blackstone_metal_sword": "Épée en métal de pierre noire",
   "item.moreweaponry.blackstone_metal_axe": "Hache en métal de pierre noire",
   "item.moreweaponry.blackstone_metal_hoe": "Houe en métal Blackstone",
   "item.moreweaponry.blackstone_metal_pickaxe": "Pioche en métal Blackstone",
   "item.moreweaponry.blackstone_metal_shovel": "Pelle en métal Blackstone",
-
   "item.moreweaponry.blackstone_metal_battleaxe": "Hache de combat en métal de pierre noire",
-
   "item.moreweaponry.guardian_scale_sword": "Épée d'écailles de gardien",
   "item.moreweaponry.guardian_scale_axe": "Hache en écailles de gardien",
   "item.moreweaponry.guardian_scale_hoe": "Houe en écailles de gardien",
   "item.moreweaponry.guardian_scale_pickaxe": "Pioche en écailles de gardien",
   "item.moreweaponry.guardian_scale_shovel": "Pelle à écailles de gardien",
-
   "item.moreweaponry.guardian_scale_battleaxe": "Hache de combat en écailles de gardien",
-
   "item.moreweaponry.elder_guardian_scale_sword": "Épée d'écailles de gardien ancien",
   "item.moreweaponry.elder_guardian_scale_axe": "Hache en écailles de gardien ancien",
   "item.moreweaponry.elder_guardian_scale_hoe": "Houe en écailles de gardien ancien",
   "item.moreweaponry.elder_guardian_scale_pickaxe": "Pioche en écailles de gardien ancien",
   "item.moreweaponry.elder_guardian_scale_shovel": "Pelle à écailles de gardien ancien",
-
   "item.moreweaponry.elder_guardian_scale_battleaxe": "Hache de combat en écailles de gardien ancien",
-
   "item.moreweaponry.netherite_battleaxe": "Hache de bataille de Netherite",
-
   "item.moreweaponry.diamond_battleaxe": "Hache de combat en diamant",
-
   "item.moreweaponry.golden_battleaxe": "Hache d'armes dorée",
   "item.moreweaponry.iron_battleaxe": "Hache de guerre en fer",
   "item.moreweaponry.stone_battleaxe": "Hache de combat en pierre",
   "item.moreweaponry.wooden_battleaxe": "Hache de combat en bois",
-
-
   "block.moreweaponry.moon_stone_dust_block": "Bloc de poussière de pierre de lune",
   "block.moreweaponry.blackstone_metal_block": "Bloc de métal Blackstone",
   "block.moreweaponry.glimmering_amethyst_block": "Bloc d'améthyste scintillant",
-
   "block.moreweaponry.limestone": "Calcaire",
   "block.moreweaponry.cobbled_limestone": "Calcaire pavé",
   "block.moreweaponry.limestone_slab": "Dalle de calcaire",
   "block.moreweaponry.limestone_stairs": "Escaliers en calcaire",
   "block.moreweaponry.cobbled_limestone_slab": "Dalle de calcaire pavée",
   "block.moreweaponry.cobbled_limestone_stairs": "Escaliers en pierre calcaire pavée",
-
   "block.moreweaponry.frodon_log": "Bûche de Frodon",
   "block.moreweaponry.frodon_wood": "Bois de Frodon",
   "block.moreweaponry.frodon_planks": "Planches de Frodon",
@@ -96,7 +76,6 @@
   "block.moreweaponry.frodon_fence": "Clôture de Frodon",
   "block.moreweaponry.frodon_fence_gate": "Porte de clôture de Frodon",
   "block.moreweaponry.cirtict_block": "Bloc de Cirtict",
-
   "block.moreweaponry.frodon_button": "Bouton Frodon",
   "block.moreweaponry.frodon_pressure_plate": "Plaque de pression Frodon",
   "block.moreweaponry.cobblestone_button": "Bouton Pavé",
@@ -107,41 +86,30 @@
   "block.moreweaponry.cobbled_limestone_pressure_plate": "Plaque de pression en pierre calcaire pavée",
   "block.moreweaponry.frodon_door": "Porte Frodon",
   "block.moreweaponry.frodon_trapdoor": "Trappe Frodon",
-
   "block.moreweaponry.mare_diamond_block": "Mare Diamant Bloc",
   "block.moreweaponry.mare_diamond_ore_block": "Minerai de diamant de jument",
   "block.moreweaponry.deepslate_mare_diamond_ore": "Minerai de diamant de Deepslate Mare",
-
-
   "itemGroup.moreweaponry.more_weaponry": "Plus d'armement",
-
-
   "item.moreweaponry.glimmering_chestplate": "Pansière en améthyste scintillante",
   "item.moreweaponry.glimmering_boots": "Bottes d'améthyste scintillantes",
   "item.moreweaponry.glimmering_helmet": "Casque d'améthyste scintillant",
   "item.moreweaponry.glimmering_leggings": "Jambières en améthyste scintillante",
-
   "item.moreweaponry.moon_stone_chestplate": "Pansière lunaire raffinée",
   "item.moreweaponry.moon_stone_boots": "Bottes lunaires raffinées",
   "item.moreweaponry.moon_stone_helmet": "Casque lunaire raffiné",
   "item.moreweaponry.moon_stone_leggings": "Jambières lunaires raffinées",
-
   "item.moreweaponry.blackstone_metal_chestplate": "Pansière en métal de Blackstone",
   "item.moreweaponry.blackstone_metal_boots": "Bottes en métal Blackstone",
   "item.moreweaponry.blackstone_metal_helmet": "Casque en métal Blackstone",
   "item.moreweaponry.blackstone_metal_leggings": "Jambières en métal Blackstone",
-
   "item.moreweaponry.elder_guardian_scale_chestplate": "Pansière en écailles de sureau",
   "item.moreweaponry.elder_guardian_scale_boots": "Bottes en écailles de sureau",
   "item.moreweaponry.elder_guardian_scale_helmet": "Casque en écailles de sureau",
   "item.moreweaponry.elder_guardian_scale_leggings": "Jambières en écailles de sureau",
-
   "item.moreweaponry.guardian_scale_chestplate": "Pansière en écailles de gardien",
   "item.moreweaponry.guardian_scale_boots": "Bottes en écailles de gardien",
   "item.moreweaponry.guardian_scale_helmet": "Casque en écailles de gardien",
   "item.moreweaponry.guardian_scale_leggings": "Jambières en écailles de gardien",
-
-
   "block.moreweaponry.kuro_plant": "Graines de Kuro",
   "item.moreweaponry.kuro": "Blé Kuro",
   "item.moreweaponry.kuro_bread": "Pain Kuro",
@@ -151,22 +119,16 @@
   "item.moreweaponry.curon_brew": "Infusion de curon de nuit",
   "item.moreweaponry.frodon_bowl": "Bol Frodon",
   "item.moreweaponry.curon_flower_petals": "Pétale de Fleur de Curon de Nuit",
-
-
   "enchantment.moreweaponry.guardians_smite": "Châtiment du gardien",
   "enchantment.moreweaponry.evokers_revenge": "Revanche de l'évocateur",
   "enchantment.moreweaponry.auto_mending": "Réparation automatique",
   "enchantment.moreweaponry.power_of_the_wither": "Pouvoir flétri",
   "enchantment.moreweaponry.stray_bonage": "Bonage égaré",
-
-
   "item.moreweaponry.glimmering_shield": "Bouclier d'améthyste scintillant",
   "item.moreweaponry.blackstone_metal_shield": "Bouclier en métal de pierre noire",
   "item.moreweaponry.moon_stone_shield": "Bouclier lunaire raffiné",
   "item.moreweaponry.elder_scale_shield": "Bouclier d'écailles de sureau",
   "item.moreweaponry.guardian_scale_shield": "Bouclier d'écailles de gardien",
-
-
   "item.moreweaponry.wooden_knife": "Couteau en bois",
   "item.moreweaponry.stone_knife": "Couteau de pierre",
   "item.moreweaponry.iron_knife": "Couteau en fer",
@@ -178,21 +140,13 @@
   "item.moreweaponry.blackstone_metal_knife": "Couteau en métal Blackstone",
   "item.moreweaponry.guardian_scale_knife": "Couteau en écailles de gardien",
   "item.moreweaponry.elder_guardian_scale_knife": "Couteau en écailles de gardien ancien",
-
-
   "item.moreweaponry.elder_scale_artifact": "Artefact à l'échelle des anciens",
   "item.moreweaponry.wither_broad_hammer": "Wither Large Marteau",
-
   "item.moreweaponry.cirtict_battleaxe": "Cirtict Battleaxe",
   "item.moreweaponry.heated_cirtict_battleaxe": "Cirtict Battleaxe",
-
-
   "block.moreweaponry.limestone_wall": "Mur de calcaire",
   "block.moreweaponry.cobbled_limestone_wall": "Mur de pierre calcaire pavée",
-
-
   "block.moreweaponry.crop_cutter_block": "Coupeur de culture",
-
   "block.moreweaponry.mare_diamond_ore": "Minerai de diamant de jument",
   "block.moreweaponry.bluestone": "Pierre bleue",
   "block.moreweaponry.cobbled_bluestone": "Pierre bleue pavée",
@@ -200,18 +154,13 @@
   "block.moreweaponry.cobbled_bluestone_slab": "Dalle de pierre bleue pavée",
   "block.moreweaponry.bluestone_stairs": "Escaliers en pierre bleue",
   "block.moreweaponry.cobbled_bluestone_stairs": "Escaliers pavés en pierre bleue",
-
   "item.moreweaponry.bluestone_rock": "Roche de pierre bleue",
   "item.moreweaponry.bluestone_ignitor": "Allumeur de pierre bleue",
   "block.moreweaponry.cirtict_debris": "Débris du Cirtict",
   "item.moreweaponry.cirtict_scrap": "Débris de Cirtict",
   "block.moreweaponry.bluestone_wall": "Mur de pierre bleue",
   "block.moreweaponry.cobbled_bluestone_wall": "Mur pavé de pierre bleue",
-
-
   "block.moreweaponry.potted_night_curon": "Curon de nuit en pot",
-
-
   "item.moreweaponry.wardens_step_music_disc": "Disque de musique",
   "item.moreweaponry.wardens_step_music_disc.desc": "DakotaPride - Étape du gardien",
   "item.moreweaponry.frodon_sign": "Signe de Frodon",
@@ -230,8 +179,6 @@
   "block.moreweaponry.infested_cracked_dripstone_block": "Bloc de Dripstone fissuré infesté",
   "block.moreweaponry.infested_dripstone_block": "Bloc de Dripstone infesté",
   "item.moreweaponry.heated_cirtict_ingot": "Lingot de Cirtict",
-
-
   "item.moreweaponry.cooled_cirtict_sword": "Épée circulaire",
   "item.moreweaponry.cooled_cirtict_axe": "Cirtict Hache",
   "item.moreweaponry.cooled_cirtict_pickaxe": "Pioche du district",
@@ -241,7 +188,6 @@
   "item.moreweaponry.cooled_cirtict_shield": "Bouclier de Cirtict",
   "item.moreweaponry.cooled_cirtict_nugget": "Pépite de Cirtict",
   "item.moreweaponry.cooled_cirtict_items.tooltip": "Refroidie",
-
   "item.moreweaponry.heated_cirtict_sword": "Épée circulaire",
   "item.moreweaponry.heated_cirtict_axe": "Cirtict Hache",
   "item.moreweaponry.heated_cirtict_pickaxe": "Pioche du district",
@@ -251,7 +197,6 @@
   "item.moreweaponry.heated_cirtict_shield": "Bouclier de Cirtict",
   "item.moreweaponry.heated_cirtict_nugget": "Pépite de Cirtict",
   "item.moreweaponry.heated_cirtict_items.tooltip": "Chauffé",
-
   "item.moreweaponry.cirtict_sword": "Épée circulaire",
   "item.moreweaponry.cirtict_axe": "Cirtict Hache",
   "item.moreweaponry.cirtict_pickaxe": "Pioche du district",
@@ -260,7 +205,6 @@
   "item.moreweaponry.cirtict_knife": "Couteau Cirtict",
   "item.moreweaponry.cirtict_shield": "Bouclier de Cirtict",
   "item.moreweaponry.cirtict_nugget": "Pépite de Cirtict",
-
   "item.moreweaponry.essence_cirtict_sword": "Épée Cirtict d'Essence",
   "item.moreweaponry.essence_cirtict_axe": "Hache de Cirtict d'Essence",
   "item.moreweaponry.essence_cirtict_battleaxe": "Hache d'armes du Cirtict d'essence",
@@ -268,8 +212,6 @@
   "item.moreweaponry.essence_cirtict_hoe": "Houe Cirtict Essence",
   "item.moreweaponry.essence_cirtict_shovel": "Pelle Cirtict Essence",
   "item.moreweaponry.essence_cirtict_knife": "Couteau à circulation d'essence",
-
-
   "item.moreweaponry.wretched_core": "Noyau de la foule",
   "item.moreweaponry.watcher_core": "Noyau de la foule",
   "item.moreweaponry.suppressed_core": "Noyau de la foule",
@@ -282,13 +224,11 @@
   "item.moreweaponry.charged_mob_core": "Noyau de la foule",
   "block.moreweaponry.peplex_nylium": "Peplex Nylium",
   "item.moreweaponry.leeching_essence": "Essence sangsue",
-
   "item.moreweaponry.powered_wretched_mob_core": "Noyau de foule alimenté",
   "item.moreweaponry.powered_plagued_mob_core": "Noyau de foule alimenté",
   "item.moreweaponry.powered_maiden_mob_core": "Noyau de foule alimenté",
   "item.moreweaponry.powered_suppressed_mob_core": "Noyau de foule alimenté",
   "item.moreweaponry.powered_watcher_mob_core": "Noyau de foule alimenté",
-
   "item.moreweaponry.watcher_essence_cirtict_sword": "Épée Cirtict d'Essence",
   "item.moreweaponry.watcher_essence_cirtict_axe": "Hache de Cirtict d'Essence",
   "item.moreweaponry.watcher_essence_cirtict_battleaxe": "Hache d'armes du Cirtict d'essence",
@@ -296,7 +236,6 @@
   "item.moreweaponry.watcher_essence_cirtict_hoe": "Houe Cirtict Essence",
   "item.moreweaponry.watcher_essence_cirtict_shovel": "Pelle Cirtict Essence",
   "item.moreweaponry.watcher_essence_cirtict_knife": "Couteau à circulation d'essence",
-
   "item.moreweaponry.suppressed_essence_cirtict_sword": "Épée Cirtict d'Essence",
   "item.moreweaponry.suppressed_essence_cirtict_axe": "Hache de Cirtict d'Essence",
   "item.moreweaponry.suppressed_essence_cirtict_battleaxe": "Hache d'armes du Cirtict d'essence",
@@ -304,7 +243,6 @@
   "item.moreweaponry.suppressed_essence_cirtict_hoe": "Houe Cirtict Essence",
   "item.moreweaponry.suppressed_essence_cirtict_shovel": "Pelle Cirtict Essence",
   "item.moreweaponry.suppressed_essence_cirtict_knife": "Couteau à circulation d'essence",
-
   "item.moreweaponry.maiden_essence_cirtict_sword": "Épée Cirtict d'Essence",
   "item.moreweaponry.maiden_essence_cirtict_axe": "Hache de Cirtict d'Essence",
   "item.moreweaponry.maiden_essence_cirtict_battleaxe": "Hache d'armes du Cirtict d'essence",
@@ -316,8 +254,6 @@
   "item.moreweaponry.watcher_chestplate": "Cape d'observateur",
   "item.moreweaponry.watcher_staff": "Bâton de surveillance",
   "item.moreweaponry.maidens_stem_bow": "Arc de tige de jeune fille",
-
-
   "block.moreweaponry.intoxicated_stone": "Pierre ivre",
   "block.moreweaponry.intoxicated_grass_block": "Bloc d'herbe ivre",
   "block.moreweaponry.intoxicated_tall_grass": "Herbe haute en état d'ébriété",
@@ -334,7 +270,6 @@
   "block.moreweaponry.intoxicated_poppy": "Coquelicot ivre",
   "block.moreweaponry.intoxicated_dandelion": "Pissenlit ivre",
   "block.moreweaponry.packed_watcher_cloth_block": "Bloc de tissu d'observateur emballé",
-
   "item.moreweaponry.plagued_essence_cirtict_sword": "Épée Cirtict d'Essence",
   "item.moreweaponry.plagued_essence_cirtict_axe": "Hache de Cirtict d'Essence",
   "item.moreweaponry.plagued_essence_cirtict_battleaxe": "Hache d'armes du Cirtict d'essence",
@@ -342,7 +277,6 @@
   "item.moreweaponry.plagued_essence_cirtict_hoe": "Houe Cirtict Essence",
   "item.moreweaponry.plagued_essence_cirtict_shovel": "Pelle Cirtict Essence",
   "item.moreweaponry.plagued_essence_cirtict_knife": "Couteau à circulation d'essence",
-
   "entity.moreweaponry.watcher": "Observatrice",
   "item.moreweaponry.watcher_spawn_egg": "Œuf d'apparition de l'observateur",
   "entity.moreweaponry.lurker": "Rôdeuse",
@@ -374,40 +308,84 @@
   "block.moreweaponry.wanderer_celestial_block": "Bloc céleste vagabond",
   "block.moreweaponry.crystaline_wanderer_core": "Bloc de noyau cristallin",
   "block.moreweaponry.empty_bookshelf": "Bibliothèque vide",
-
-
   "block.moreweaponry.crackler_celestial_block": "Bloc Céleste Craqueleur",
   "block.moreweaponry.crystaline_crackler_core": "Bloc de noyau cristallin",
-
   "block.moreweaponry.corrupted_end_stone_bricks": "Briques de pierre de l'End corrompues",
   "block.moreweaponry.corrupted_end_stone": "Pierre de fin corrompue",
-
   "entity.moreweaponry.bard": "Barde",
   "item.moreweaponry.bard_spawn_egg": "Oeuf d'apparition de barde",
   "block.moreweaponry.bard_skull": "Crâne de barde",
   "block.moreweaponry.bard_summoner": "Table d'invocation de barde",
   "item.moreweaponry.bard_cloth": "Tissu de barde",
-
   "entity.moreweaponry.sickened": "écoeuré",
   "item.moreweaponry.sickened_spawn_egg": "Œuf de spawn écoeuré",
   "block.moreweaponry.sickened_skull": "Crâne écoeuré",
   "block.moreweaponry.sickened_summoner": "Table d'invocation écoeurée",
   "item.moreweaponry.crackler_helmet": "Casque de Craqueleur",
   "item.moreweaponry.crackler_chestplate": "Pansière du Craqueleur",
-
-  "item.moreweaponry.bard_helmet": "Bard Scarf",
-  "item.moreweaponry.bard_chestplate": "Bard Cloak",
-  "item.moreweaponry.sickened_helmet": "Sickened Helm",
-  "item.moreweaponry.sickened_chestplate": "Sickened Tattered Cloths",
-  "block.moreweaponry.bard_celestial_block": "Bard Celestial Block",
-  "block.moreweaponry.crystaline_bard_core": "Crystalline Core Block",
-  "block.moreweaponry.sickened_celestial_block": "Sickened Celestial Block",
-  "block.moreweaponry.crystaline_sickened_core": "Crystalline Core Block",
-  "block.moreweaponry.sickened_stone_grave": "Sickened Stone Grave Block",
-  "effect.moreweaponry.bard": "Bard's Call",
-  "effect.moreweaponry.watcher": "Voided",
-  "effect.moreweaponry.wanderer": "Wandering",
+  "item.moreweaponry.bard_helmet": "Barde Foulard",
+  "item.moreweaponry.bard_chestplate": "Cape de barde",
+  "item.moreweaponry.sickened_helmet": "Heaume malade",
+  "item.moreweaponry.sickened_chestplate": "Vêtements en lambeaux écoeurés",
+  "block.moreweaponry.bard_celestial_block": "Barde Bloc Céleste",
+  "block.moreweaponry.crystaline_bard_core": "Bloc de noyau cristallin",
+  "block.moreweaponry.sickened_celestial_block": "Bloc céleste écoeuré",
+  "block.moreweaponry.crystaline_sickened_core": "Bloc de noyau cristallin",
+  "block.moreweaponry.sickened_stone_grave": "Bloc funéraire en pierre malade",
+  "effect.moreweaponry.bard": "L'appel du barde",
+  "effect.moreweaponry.watcher": "Annulé",
+  "effect.moreweaponry.wanderer": "Errante",
   "effect.moreweaponry.crackler": "Explosion",
-  "effect.moreweaponry.sickened": "Missionary"
-
+  "effect.moreweaponry.sickened": "Missionnaire",
+  "enchantment.moreweaponry.bleeding": "Saignement",
+  "item.moreweaponry.heated_cirtict_cluster": "Cluster Cirtict",
+  "item.moreweaponry.cooled_cirtict_cluster": "Cluster Cirtict",
+  "item.moreweaponry.cirtict_cluster": "Cluster Cirtict",
+  "entity.moreweaponry.sickened_husk": "Carcasse écoeurée",
+  "item.moreweaponry.sickened_husk_spawn_egg": "Œuf d'apparition de coque écoeurée",
+  "block.moreweaponry.sickened_husk_skull": "Crâne écoeuré",
+  "effect.moreweaponry.plagued": "En proie",
+  "effect.moreweaponry.ticked": "Coché",
+  "effect.moreweaponry.webbed": "Palmée",
+  "effect.moreweaponry.explosive": "Explosive",
+  "effect.moreweaponry.siren": "Sirène",
+  "effect.moreweaponry.numbed": "Engourdissement",
+  "effect.moreweaponry.bleeding": "Saignement",
+  "item.minecraft.potion.effect.numbness_potion": "Potion engourdissante",
+  "item.minecraft.splash_potion.effect.numbness_potion": "Potion éclaboussante d'engourdissement",
+  "item.minecraft.lingering_potion.effect.numbness_potion": "Potion persistante d'engourdissement",
+  "item.moreweaponry.rusted_mare_diamond": "Diamant de jument rouillé",
+  "item.moreweaponry.rusted_mare_diamond_helmet": "Heaume de diamant de jument rouillé",
+  "item.moreweaponry.heavy_sword": "Épée lourde",
+  "entity.moreweaponry.buried_knight": "Chevalier enterré",
+  "item.moreweaponry.description.bard_weapon": "L'appel du barde",
+  "item.moreweaponry.description.sickened_weapon": "Missionnaire",
+  "item.moreweaponry.description.watcher_weapon": "Annulé",
+  "item.moreweaponry.description.wanderer_weapon": "Errante",
+  "item.moreweaponry.description.crackler_weapon": "Explosion",
+  "item.moreweaponry.description.watcher_staff": "L'observateur",
+  "armor.moreweaponry.shift_down.description.elder_scale.one": "Accorde la respiration aquatique lors de l'ensemble complet après avoir vaincu",
+  "armor.moreweaponry.shift_down.description.elder_scale.two": "l'ancien gardien des profondeurs du monument de l'océan,",
+  "armor.moreweaponry.shift_down.description.elder_scale.three": "Cet équipement est bien respecté parmi les guerriers et les armuriers",
+  "misc.moreweaponry.shift_up": "Appuyez sur Maj pour plus d'informations",
+  "armor.moreweaponry.shift_down.description.shulker_boots.bottom.one": "Fabriqué à partir de coquilles Shulker, prises du plus profond de l'intérieur",
+  "armor.moreweaponry.shift_down.description.shulker_boots.bottom.two": "la dimension finale, vous avez maintenant la possibilité de léviter !",
+  "armor.moreweaponry.shift_down_description.shulker_boots.top": "Accorde la lévitation lors de l'équipement ",
+  "item.moreweaponry.core.charged": "Accusée",
+  "item.moreweaponry.core.empty": "Vide",
+  "item.moreweaponry.core.bard": "Barde",
+  "item.moreweaponry.core.sickened": "écoeuré",
+  "item.moreweaponry.core.crackler": "Craqueleur",
+  "item.moreweaponry.core.watcher": "Observatrice",
+  "item.moreweaponry.core.wanderer": "Vagabonde",
+  "item.moreweaponry.ignitor.ever_frost": "Utiliser pour ouvrir un portail vers la dimension Ever Frost",
+  "armor.moreweaponry.shift_down.description.phantom_helm.one": "Accorde une chute lente et une vision nocturne lors de l'équipement",
+  "armor.moreweaponry.shift_down.description.phantom_helm.two": "En utilisant les écailles d'un fantôme, vous gagnez les pouvoirs de la créature",
+  "armor.moreweaponry.shift_down.description.phantom_helm.three": "Des nuits les plus sombres",
+  "item.moreweaponry.cluster.description.cooled": "Refroidie",
+  "item.moreweaponry.cluster.description.heated": "Chauffé",
+  "misc.moreweaponry.core.abilities": "Capacités",
+  "entity.subtitle.buried_knight_ambient": "Sons inconnus",
+  "entity.subtitle.buried_knight_death": "Le chevalier enterré meurt",
+  "entity.subtitle.buried_knight_hurt": "Le chevalier enterré fait mal"
 }

@@ -35,7 +35,7 @@ public class BuriedKnightEntity extends HostileEntity implements IAnimatable {
         return HostileEntity.createMobAttributes()
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, 500.0D)
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 32.0f)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 5.0f)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, -1.0f)
                 .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 150.0D)
                 .add(EntityAttributes.GENERIC_ATTACK_SPEED, 0.96f);
     }
@@ -86,7 +86,7 @@ public class BuriedKnightEntity extends HostileEntity implements IAnimatable {
 
     @Override
     protected SoundEvent getDeathSound() {
-        return SoundEvents.ENTITY_SHULKER_DEATH;
+        return MoreWeaponrySoundEvents.ENTITY_BURIED_KNIGHT_DEATH;
     }
 
     @Override
