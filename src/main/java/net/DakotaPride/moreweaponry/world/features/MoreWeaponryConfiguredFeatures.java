@@ -97,10 +97,21 @@ public class MoreWeaponryConfiguredFeatures {
     public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> INFESTED_DRIPSTONE = ConfiguredFeatures.register("infested_dripstone",
             Feature.ORE, new OreFeatureConfig(OVERWORLD_INFESTED_DRIPSTONE, 11));
 
-    public static final RegistryEntry<ConfiguredFeature<SimpleBlockFeatureConfig, ?>> INTOXICATED_SINGLE_PIECE_OF_GRASS =
-            ConfiguredFeatures.register("intoxicated_single_piece_of_grass",
-                    Feature.SIMPLE_BLOCK, new SimpleBlockFeatureConfig
-                    (BlockStateProvider.of(MoreWeaponryBlocks.INTOXICATED_GRASS.getDefaultState())));
+    public static final RegistryEntry<ConfiguredFeature<SimpleBlockFeatureConfig, ?>>
+            SINGLE_PIECE_OF_INTOXICATED_GRASS = ConfiguredFeatures.register("single_piece_of_intoxicated_grass", Feature.SIMPLE_BLOCK, new
+    SimpleBlockFeatureConfig(BlockStateProvider.of(MoreWeaponryBlocks.INTOXICATED_GRASS.getDefaultState())));
+
+    public static final RegistryEntry<ConfiguredFeature<SimpleBlockFeatureConfig, ?>>
+            SINGLE_PIECE_OF_INTOXICATED_POPPY = ConfiguredFeatures.register("single_piece_of_intoxicated_poppy", Feature.SIMPLE_BLOCK, new
+            SimpleBlockFeatureConfig(BlockStateProvider.of(MoreWeaponryBlocks.INTOXICATED_POPPY.getDefaultState())));
+
+    public static final RegistryEntry<ConfiguredFeature<SimpleBlockFeatureConfig, ?>>
+            SINGLE_PIECE_OF_INTOXICATED_DANDELION = ConfiguredFeatures.register("single_piece_of_intoxicated_dandelion", Feature.SIMPLE_BLOCK, new
+            SimpleBlockFeatureConfig(BlockStateProvider.of(MoreWeaponryBlocks.INTOXICATED_DANDELION.getDefaultState())));
+
+    public static final RegistryEntry<ConfiguredFeature<SimpleBlockFeatureConfig, ?>>
+            SINGLE_PIECE_OF_INTOXICATED_FERN = ConfiguredFeatures.register("single_piece_of_intoxicated_fern", Feature.SIMPLE_BLOCK, new
+            SimpleBlockFeatureConfig(BlockStateProvider.of(MoreWeaponryBlocks.INTOXICATED_FERN.getDefaultState())));
 
 
 

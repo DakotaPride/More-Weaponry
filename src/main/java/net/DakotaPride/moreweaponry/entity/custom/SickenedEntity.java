@@ -1,7 +1,9 @@
 package net.DakotaPride.moreweaponry.entity.custom;
 
+import net.DakotaPride.moreweaponry.block.MoreWeaponryBlocks;
 import net.DakotaPride.moreweaponry.effect.MoreWeaponryEffects;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
@@ -13,6 +15,8 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.HostileEntity;
+import net.minecraft.entity.mob.SkeletonEntity;
+import net.minecraft.entity.mob.ZombieEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -24,8 +28,11 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.LiteralText;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.MathHelper;
+import net.minecraft.world.GameRules;
 import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.World;
+import net.minecraft.world.biome.Biome;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.PlayState;
@@ -110,7 +117,7 @@ public class SickenedEntity extends HostileEntity implements IAnimatable {
         return HostileEntity.createMobAttributes()
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, 1400.0D)
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 43.0f)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.21f)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.30f)
                 .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 186.0D)
                 .add(EntityAttributes.GENERIC_ATTACK_SPEED, 0.96f);
     }
@@ -122,12 +129,56 @@ public class SickenedEntity extends HostileEntity implements IAnimatable {
         this.goalSelector.add(8, new LookAroundGoal(this));
         this.goalSelector.add(6, new LookAtEntityGoal(this, (Class) PlayerEntity.class, 8.0F));
 
+        this.goalSelector.add(12, new RevengeGoal(this, PlayerEntity.class));
+        this.goalSelector.add(13, new RevengeGoal(this, WandererEntity.class));
+        this.goalSelector.add(14, new RevengeGoal(this, CracklerEntity.class));
+        this.goalSelector.add(15, new RevengeGoal(this, WatcherEntity.class));
+        this.goalSelector.add(16, new RevengeGoal(this, BardEntity.class));
+        this.goalSelector.add(17, new RevengeGoal(this, LurkerEntity.class));
+        this.goalSelector.add(18, new RevengeGoal(this, SkeletonEntity.class));
+
         this.targetSelector.add(1, new ActiveTargetGoal<>(this, PlayerEntity.class, true, false));
         this.targetSelector.add(3, new ActiveTargetGoal<>(this, WandererEntity.class, true, false));
         this.targetSelector.add(4, new ActiveTargetGoal<>(this, CracklerEntity.class, true, false));
         this.targetSelector.add(5, new ActiveTargetGoal<>(this, WatcherEntity.class, true, false));
         this.targetSelector.add(9, new ActiveTargetGoal<>(this, BardEntity.class, true,false));
+        this.targetSelector.add(10, new ActiveTargetGoal<>(this, LurkerEntity.class, true, false));
 
+    }
+
+    public void tickMovement() {
+        super.tickMovement();
+        if (!this.world.isClient) {
+            int i = MathHelper.floor(this.getX());
+            int j = MathHelper.floor(this.getY());
+            int k = MathHelper.floor(this.getZ());
+            BlockPos blockPos = new BlockPos(i, j - 1, k);
+
+            if (!this.world.getGameRules().getBoolean(GameRules.DO_MOB_GRIEFING)) {
+                return;
+            }
+
+            BlockState blockState = MoreWeaponryBlocks.INTOXICATED_GRASS_BLOCK.getDefaultState();
+            BlockState blockState1 = MoreWeaponryBlocks.INTOXICATED_STONE.getDefaultState();
+
+            for(int l = 0; l < 4; ++l) {
+                i = MathHelper.floor(this.getX() + (double)((float)(l % 2 * 2 - 1) * 0.25F));
+                j = MathHelper.floor(this.getY());
+                k = MathHelper.floor(this.getZ() + (double)((float)(l / 2 % 2 * 2 - 1) * 0.25F));
+                BlockPos blockPos2 = new BlockPos(i, j - 1, k);
+                if (this.world.getBlockState(blockPos2).isOf(Blocks.GRASS_BLOCK) && blockState.canPlaceAt(this.world, blockPos2)) {
+                    this.world.setBlockState(blockPos2, blockState);
+                } if (this.world.getBlockState(blockPos2).isOf(Blocks.STONE) && blockState.canPlaceAt(this.world, blockPos2)) {
+                    this.world.setBlockState(blockPos2, blockState1);
+                } if (this.world.getBlockState(blockPos2).isOf(Blocks.ANDESITE) && blockState.canPlaceAt(this.world, blockPos2)) {
+                    this.world.setBlockState(blockPos2, blockState1);
+                } if (this.world.getBlockState(blockPos2).isOf(Blocks.GRANITE) && blockState.canPlaceAt(this.world, blockPos2)) {
+                    this.world.setBlockState(blockPos2, blockState1);
+                } if (this.world.getBlockState(blockPos2).isOf(Blocks.DIORITE) && blockState.canPlaceAt(this.world, blockPos2)) {
+                    this.world.setBlockState(blockPos2, blockState1);
+                }
+            }
+        }
     }
 
     protected int getXpToDrop(PlayerEntity player) {

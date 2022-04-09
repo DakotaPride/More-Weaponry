@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#A#",
+    "# #"
+  ],
+  "key": {
+    "#": {
+      "item": "moreweaponry:explosive_essence"
+    },
+    "A": {
+      "item": "minecraft:gunpowder"
+    }
+  },
+  "result": {
+    "item": "moreweaponry:crackler_helmet",
+    "count": 1
+  }
+}

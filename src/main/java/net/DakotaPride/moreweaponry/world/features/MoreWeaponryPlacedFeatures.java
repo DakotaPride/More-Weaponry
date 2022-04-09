@@ -12,6 +12,7 @@ import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.feature.PlacedFeature;
 import net.minecraft.world.gen.feature.PlacedFeatures;
+import net.minecraft.world.gen.feature.VegetationConfiguredFeatures;
 import net.minecraft.world.gen.feature.VegetationPlacedFeatures;
 import net.minecraft.world.gen.placementmodifier.*;
 
@@ -74,7 +75,20 @@ public class MoreWeaponryPlacedFeatures {
                     HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(-80), YOffset.aboveBottom(300))));
 
     public static final RegistryEntry<PlacedFeature> INTOXICATED_GRASS_BONEMEAL = PlacedFeatures.register("intoxicated_grass_bonemeal",
-            MoreWeaponryConfiguredFeatures.INTOXICATED_SINGLE_PIECE_OF_GRASS);
+            MoreWeaponryConfiguredFeatures.SINGLE_PIECE_OF_INTOXICATED_GRASS,
+            PlacedFeatures.isAir());
+
+    public static final RegistryEntry<PlacedFeature> INTOXICATED_POPPY_BONEMEAL = PlacedFeatures.register("intoxicated_poppy_bonemeal",
+            MoreWeaponryConfiguredFeatures.SINGLE_PIECE_OF_INTOXICATED_POPPY,
+            PlacedFeatures.isAir());
+
+    public static final RegistryEntry<PlacedFeature> INTOXICATED_DANDELION_BONEMEAL = PlacedFeatures.register("intoxicated_dandelion_bonemeal",
+            MoreWeaponryConfiguredFeatures.SINGLE_PIECE_OF_INTOXICATED_DANDELION,
+            PlacedFeatures.isAir());
+
+    public static final RegistryEntry<PlacedFeature> INTOXICATED_FERN_BONEMEAL = PlacedFeatures.register("intoxicated_fern_bonemeal",
+            MoreWeaponryConfiguredFeatures.SINGLE_PIECE_OF_INTOXICATED_FERN,
+            PlacedFeatures.isAir());
 
 
     public static List<PlacementModifier> modifiers(PlacementModifier countModifier, PlacementModifier heightModifier) {

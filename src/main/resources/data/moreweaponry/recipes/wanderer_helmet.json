@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#A#",
+    "# #"
+  ],
+  "key": {
+    "#": {
+      "item": "moreweaponry:wretched_essence"
+    },
+    "A": {
+      "item": "minecraft:string"
+    }
+  },
+  "result": {
+    "item": "moreweaponry:wanderer_helmet",
+    "count": 1
+  }
+}

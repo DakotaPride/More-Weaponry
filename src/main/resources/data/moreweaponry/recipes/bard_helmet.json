@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#A#",
+    "# #"
+  ],
+  "key": {
+    "#": {
+      "item": "moreweaponry:melodic_essence"
+    },
+    "A": {
+      "item": "minecraft:bone"
+    }
+  },
+  "result": {
+    "item": "moreweaponry:bard_helmet",
+    "count": 1
+  }
+}

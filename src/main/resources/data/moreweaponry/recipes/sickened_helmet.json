@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#A#",
+    "# #"
+  ],
+  "key": {
+    "#": {
+      "item": "moreweaponry:leeching_essence"
+    },
+    "A": {
+      "item": "minecraft:rotten_flesh"
+    }
+  },
+  "result": {
+    "item": "moreweaponry:sickened_helmet",
+    "count": 1
+  }
+}

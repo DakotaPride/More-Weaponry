@@ -38,6 +38,10 @@ public class MoreWeaponryEntities {
             Registry.ENTITY_TYPE, new Identifier(MoreWeaponry.MOD_ID, "sickened_husk"),
             FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, SickenedHuskEntity::new)
                     .dimensions(EntityDimensions.fixed(0.6f, 1.9f)).build());
+    public static final EntityType<LeechEntity> LEECH = Registry.register(
+            Registry.ENTITY_TYPE, new Identifier(MoreWeaponry.MOD_ID, "leech"),
+            FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, LeechEntity::new)
+                    .dimensions(EntityDimensions.fixed(0.2f, 0.2f)).build());
 
     public static final EntityType<BuriedKnightEntity> BURIED_KNIGHT = Registry.register(
             Registry.ENTITY_TYPE, new Identifier(MoreWeaponry.MOD_ID, "buried_knight"),

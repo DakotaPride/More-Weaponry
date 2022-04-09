@@ -1,6 +1,7 @@
 package net.DakotaPride.moreweaponry.effect.status_effects;
 
 import net.DakotaPride.moreweaponry.effect.MoreWeaponryEffects;
+import net.DakotaPride.moreweaponry.entity.damage.MoreWeaponryDamageSource;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
@@ -15,7 +16,7 @@ public class BleedingStatusEffect extends StatusEffect {
     public void canApplyUpdateEffect(LivingEntity entity, int amplifier) {
         if (this == MoreWeaponryEffects.BLEEDING) {
             if (entity.getHealth() > 1.0F) {
-                entity.damage(DamageSource.MAGIC, 1.0F);
+                entity.damage(MoreWeaponryDamageSource.BLEEDING, 1.0F);
             }
         } else {
             entity.heal((float)Math.max(4 << amplifier, 0));

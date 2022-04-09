@@ -13,6 +13,7 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.HostileEntity;
+import net.minecraft.entity.mob.SkeletonEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -109,7 +110,7 @@ public class CracklerEntity extends HostileEntity implements IAnimatable {
         return HostileEntity.createMobAttributes()
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, 1450.0D)
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 45.0f)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.23)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.35)
                 .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 189.0D)
                 .add(EntityAttributes.GENERIC_ATTACK_SPEED, 1.0f);
     }
@@ -121,11 +122,21 @@ public class CracklerEntity extends HostileEntity implements IAnimatable {
         this.goalSelector.add(8, new LookAroundGoal(this));
         this.goalSelector.add(6, new LookAtEntityGoal(this, (Class)PlayerEntity.class, 8.0F));
 
+        this.goalSelector.add(12, new RevengeGoal(this, PlayerEntity.class));
+        this.goalSelector.add(13, new RevengeGoal(this, WandererEntity.class));
+        this.goalSelector.add(15, new RevengeGoal(this, WatcherEntity.class));
+        this.goalSelector.add(19, new RevengeGoal(this, SickenedEntity.class));
+        this.goalSelector.add(20, new RevengeGoal(this, SickenedHuskEntity.class));
+        this.goalSelector.add(16, new RevengeGoal(this, BardEntity.class));
+        this.goalSelector.add(17, new RevengeGoal(this, LurkerEntity.class));
+        this.goalSelector.add(18, new RevengeGoal(this, SkeletonEntity.class));
+
         this.targetSelector.add(1, new ActiveTargetGoal<>(this, PlayerEntity.class, true, false));
         this.targetSelector.add(3, new ActiveTargetGoal<>(this, LurkerEntity.class, true, false));
         this.targetSelector.add(1, new ActiveTargetGoal<>(this, WatcherEntity.class, true, false));
         this.targetSelector.add(3, new ActiveTargetGoal<>(this, WandererEntity.class, true, false));
         this.targetSelector.add(5, new ActiveTargetGoal<>(this, SickenedEntity.class, true, false));
+        this.targetSelector.add(4, new ActiveTargetGoal<>(this, SickenedHuskEntity.class, true, false));
     }
 
     private static class AttackGoal extends MeleeAttackGoal {

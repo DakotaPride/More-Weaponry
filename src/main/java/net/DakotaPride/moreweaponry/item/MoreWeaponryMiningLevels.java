@@ -15,6 +15,7 @@ public class MoreWeaponryMiningLevels {
     public static final int ESSENCE = 8;
 
     private MoreWeaponryMiningLevels() {
+
     }
 
 }

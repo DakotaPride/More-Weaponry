@@ -14,6 +14,7 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.EndermiteEntity;
 import net.minecraft.entity.mob.HostileEntity;
+import net.minecraft.entity.mob.SkeletonEntity;
 import net.minecraft.entity.mob.SpiderEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.nbt.NbtCompound;
@@ -21,6 +22,7 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.LiteralText;
+import net.minecraft.text.TranslatableText;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import software.bernie.geckolib3.core.IAnimatable;
@@ -37,7 +39,7 @@ public class WandererEntity extends HostileEntity implements IAnimatable {
     public WandererEntity(EntityType<? extends HostileEntity> entityType, World world) {
         super(entityType, world);
 
-        this.bossBar = (ServerBossBar)(new ServerBossBar(new LiteralText("entity.moreweaponry.wanderer"),
+        this.bossBar = (ServerBossBar)(new ServerBossBar(new TranslatableText("entity.moreweaponry.wanderer"),
                 BossBar.Color.YELLOW, BossBar.Style.PROGRESS)).setDragonMusic(false).setThickenFog(false);
 
     }
@@ -120,7 +122,7 @@ public class WandererEntity extends HostileEntity implements IAnimatable {
         return HostileEntity.createMobAttributes()
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, 1610.0D)
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 49.0f)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.25)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.39)
                 .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 194.0D)
                 .add(EntityAttributes.GENERIC_ATTACK_SPEED, 0.92f);
     }
@@ -132,11 +134,21 @@ public class WandererEntity extends HostileEntity implements IAnimatable {
         this.goalSelector.add(8, new LookAroundGoal(this));
         this.goalSelector.add(6, new LookAtEntityGoal(this, (Class)PlayerEntity.class, 8.0F));
 
+        this.goalSelector.add(12, new RevengeGoal(this, PlayerEntity.class));
+        this.goalSelector.add(13, new RevengeGoal(this, CracklerEntity.class));
+        this.goalSelector.add(15, new RevengeGoal(this, WatcherEntity.class));
+        this.goalSelector.add(19, new RevengeGoal(this, SickenedEntity.class));
+        this.goalSelector.add(20, new RevengeGoal(this, SickenedHuskEntity.class));
+        this.goalSelector.add(16, new RevengeGoal(this, BardEntity.class));
+        this.goalSelector.add(17, new RevengeGoal(this, LurkerEntity.class));
+        this.goalSelector.add(18, new RevengeGoal(this, SkeletonEntity.class));
+
         this.targetSelector.add(1, new ActiveTargetGoal<>(this, PlayerEntity.class, true, false));
         this.targetSelector.add(3, new ActiveTargetGoal<>(this, WatcherEntity.class, true, false));
         this.targetSelector.add(3, new ActiveTargetGoal<>(this, CracklerEntity.class, true, false));
-        this.targetSelector.add(3, new ActiveTargetGoal<>(this, LurkerEntity.class, true, false));
+        this.targetSelector.add(4, new ActiveTargetGoal<>(this, LurkerEntity.class, true, false));
         this.targetSelector.add(5, new ActiveTargetGoal<>(this, SickenedEntity.class, true, false));
+        this.targetSelector.add(9, new ActiveTargetGoal<>(this, SickenedHuskEntity.class, true, false));
     }
 
     private static class AttackGoal extends MeleeAttackGoal {

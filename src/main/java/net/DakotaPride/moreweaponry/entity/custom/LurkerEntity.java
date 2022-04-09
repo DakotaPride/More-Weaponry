@@ -73,6 +73,15 @@ public class LurkerEntity extends HostileEntity implements IAnimatable {
         this.goalSelector.add(3, new WanderAroundFarGoal(this, 1.0D, 0.0F));
         this.goalSelector.add(4, new LookAroundGoal(this));
 
+        this.goalSelector.add(12, new RevengeGoal(this, PlayerEntity.class));
+        this.goalSelector.add(13, new RevengeGoal(this, WandererEntity.class));
+        this.goalSelector.add(15, new RevengeGoal(this, WatcherEntity.class));
+        this.goalSelector.add(19, new RevengeGoal(this, SickenedEntity.class));
+        this.goalSelector.add(20, new RevengeGoal(this, SickenedHuskEntity.class));
+        this.goalSelector.add(16, new RevengeGoal(this, BardEntity.class));
+        this.goalSelector.add(17, new RevengeGoal(this, CracklerEntity.class));
+        this.goalSelector.add(18, new RevengeGoal(this, SkeletonEntity.class));
+
         this.targetSelector.add(5, new ActiveTargetGoal<>(this, PlayerEntity.class, true, false));
         this.targetSelector.add(6, new ActiveTargetGoal<>(this, SpiderEntity.class, true, false));
         this.targetSelector.add(7, new ActiveTargetGoal<>(this, CaveSpiderEntity.class, true, false));
@@ -105,11 +114,12 @@ public class LurkerEntity extends HostileEntity implements IAnimatable {
         this.targetSelector.add(34, new ActiveTargetGoal<>(this, OcelotEntity.class, true, false));
         this.targetSelector.add(35, new ActiveTargetGoal<>(this, CatEntity.class, true, false));
         this.targetSelector.add(36, new ActiveTargetGoal<>(this, WolfEntity.class, true, false));
-        this.targetSelector.add(34, new ActiveTargetGoal<>(this, ZombieHorseEntity.class, true, false));
-        this.targetSelector.add(34, new ActiveTargetGoal<>(this, PandaEntity.class, true, false));
+        this.targetSelector.add(37, new ActiveTargetGoal<>(this, ZombieHorseEntity.class, true, false));
+        this.targetSelector.add(38, new ActiveTargetGoal<>(this, PandaEntity.class, true, false));
         this.targetSelector.add(3, new ActiveTargetGoal<>(this, WandererEntity.class, true, false));
         this.targetSelector.add(3, new ActiveTargetGoal<>(this, CracklerEntity.class, true, false));
         this.targetSelector.add(6, new ActiveTargetGoal<>(this, EndermiteEntity.class, true, false));
+        this.targetSelector.add(39, new ActiveTargetGoal<>(this, SickenedHuskEntity.class, true, false));
     }
 
     public boolean hurtByWater() {
