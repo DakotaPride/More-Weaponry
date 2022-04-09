@@ -8,6 +8,7 @@
     "BrewingRecipeRegistryMixin",
     "MixinStructurePiece",
     "SignTypeAccessor",
+    "StatusEffectMixin",
     "StructureFeatureAccessor"
   ],
   "client": [
