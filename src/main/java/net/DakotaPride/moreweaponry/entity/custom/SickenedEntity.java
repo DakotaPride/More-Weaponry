@@ -115,8 +115,8 @@ public class SickenedEntity extends HostileEntity implements IAnimatable {
 
     public static DefaultAttributeContainer.Builder setAttributes() {
         return HostileEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_MAX_HEALTH, 1400.0D)
-                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 43.0f)
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, 700.0D)
+                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 14.0f)
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.30f)
                 .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 186.0D)
                 .add(EntityAttributes.GENERIC_ATTACK_SPEED, 0.96f);

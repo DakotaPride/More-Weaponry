@@ -14,7 +14,8 @@
   "client": [
     "BlockEntityTypeMixin",
     "MixinStructurePiece",
-    "SignTypeAccessor"
+    "SignTypeAccessor",
+    "StatusEffectMixin"
   ],
   "injectors": {
     "defaultRequire": 1

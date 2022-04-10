@@ -34,8 +34,8 @@ public class BuriedKnightEntity extends HostileEntity implements IAnimatable {
 
     public static DefaultAttributeContainer.Builder setAttributes() {
         return HostileEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_MAX_HEALTH, 500.0D)
-                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 32.0f)
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, 450.0D)
+                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 9.0f)
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.2f)
                 .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 150.0D)
                 .add(EntityAttributes.GENERIC_ATTACK_SPEED, 0.96f);

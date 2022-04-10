@@ -15,6 +15,16 @@ public class StatusEffectMixin {
     public void applyUpdateEffect(LivingEntity entity, int amplifier, CallbackInfo callbackInfo) {
         if (entity.hasStatusEffect(MoreWeaponryEffects.CELESTIAL)) {
             entity.removeStatusEffect(StatusEffects.REGENERATION);
+        } else if (entity.hasStatusEffect(MoreWeaponryEffects.PLAGUED)) {
+            entity.removeStatusEffect(StatusEffects.REGENERATION);
+        } else if (entity.hasStatusEffect(MoreWeaponryEffects.EXPLOSIVE)) {
+            entity.removeStatusEffect(StatusEffects.REGENERATION);
+        } else if (entity.hasStatusEffect(MoreWeaponryEffects.SIREN)) {
+            entity.removeStatusEffect(StatusEffects.REGENERATION);
+        } else if (entity.hasStatusEffect(MoreWeaponryEffects.TICKED)) {
+            entity.removeStatusEffect(StatusEffects.REGENERATION);
+        } else if (entity.hasStatusEffect(MoreWeaponryEffects.WEBBED)) {
+            entity.removeStatusEffect(StatusEffects.REGENERATION);
         }
 
     }

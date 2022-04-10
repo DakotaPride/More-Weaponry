@@ -104,8 +104,8 @@ public class WatcherEntity extends HostileEntity implements IAnimatable {
 
     public static DefaultAttributeContainer.Builder setAttributes() {
         return HostileEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_MAX_HEALTH, 1700.0D)
-                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 51.0f)
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, 917.0D)
+                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 25.0f)
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.40f)
                 .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 206.0D)
                 .add(EntityAttributes.GENERIC_ATTACK_SPEED, 0.96f);

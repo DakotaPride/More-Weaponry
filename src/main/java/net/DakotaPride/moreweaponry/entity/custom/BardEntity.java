@@ -115,8 +115,8 @@ public class BardEntity extends HostileEntity implements IAnimatable {
 
     public static DefaultAttributeContainer.Builder setAttributes() {
         return HostileEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_MAX_HEALTH, 1500.0D)
-                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 47.0f)
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, 803.0D)
+                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 19.0f)
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.37f)
                 .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 192.0D)
                 .add(EntityAttributes.GENERIC_ATTACK_SPEED, 0.96f);
