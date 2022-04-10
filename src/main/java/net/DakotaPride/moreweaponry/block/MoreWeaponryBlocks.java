@@ -367,7 +367,7 @@ public class MoreWeaponryBlocks {
             MoreWeaponryItemGroup.MORE_WEAPONRY);
 
     public static final Block CRACKLER_SUMMONER = registerBlock("crackler_summoner",
-            new CracklerSummoningBlock(MoreWeaponryBlocks.CRACKLER_SKULL, FabricBlockSettings.copy(Blocks.SANDSTONE)
+            new Block(FabricBlockSettings.copy(Blocks.SANDSTONE)
                     .sounds(MoreWeaponrySoundEvents.SUMMONER)),
             MoreWeaponryItemGroup.MORE_WEAPONRY);
 
@@ -382,7 +382,7 @@ public class MoreWeaponryBlocks {
             MoreWeaponryItemGroup.MORE_WEAPONRY);
 
     public static final Block SICKENED_SUMMONER = registerBlock("sickened_summoner",
-            new SickenedSummoningBlock(MoreWeaponryBlocks.SICKENED_SKULL, FabricBlockSettings.copy(Blocks.COBBLED_DEEPSLATE)
+            new Block(FabricBlockSettings.copy(Blocks.COBBLED_DEEPSLATE)
                     .sounds(MoreWeaponrySoundEvents.SUMMONER)),
             MoreWeaponryItemGroup.MORE_WEAPONRY);
 

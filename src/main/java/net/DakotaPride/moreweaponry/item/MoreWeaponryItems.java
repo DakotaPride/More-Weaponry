@@ -5,6 +5,9 @@ import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.DakotaPride.moreweaponry.block.MoreWeaponryBlocks;
 import net.DakotaPride.moreweaponry.entity.MoreWeaponryEntities;
 import net.DakotaPride.moreweaponry.item.custom.*;
+import net.DakotaPride.moreweaponry.item.custom.celestial_madalian.CelestialMadalianItem;
+import net.DakotaPride.moreweaponry.item.custom.celestial_madalian.CracklerCelestialMadalianItem;
+import net.DakotaPride.moreweaponry.item.custom.celestial_madalian.SickenedCelestialMadalianItem;
 import net.DakotaPride.moreweaponry.item.custom.cirtict.CooledCirtictClusterItem;
 import net.DakotaPride.moreweaponry.item.custom.cirtict.HeatedCirtictClusterItem;
 import net.DakotaPride.moreweaponry.item.custom.cirtict.cooled.*;
@@ -862,10 +865,18 @@ public class MoreWeaponryItems {
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item HEAVY_SWORD = registerItem("heavy_sword",
-            new SwordItem((ToolMaterial) ToolMaterials.IRON, 11, -3.0f,
+            new HeavySwordItem((ToolMaterial) MoreWeaponryToolMaterials.WITHERED, 11, -3.0f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
-    private static Item registerItem (String name, Item item) {
+    public static final Item CELESTIAL_MADALIAN = registerItem("celestial_madalian",
+            new CelestialMadalianItem(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+
+    public static final Item CELESTIAL_MADALIAN_SICKENED = registerItem("celestial_madalian_sickened",
+            new SickenedCelestialMadalianItem(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+    public static final Item CELESTIAL_MADALIAN_CRACKLER = registerItem("celestial_madalian_crackler",
+            new CracklerCelestialMadalianItem(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+
+    public static Item registerItem (String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(MoreWeaponry.MOD_ID, name), item);
     }
 

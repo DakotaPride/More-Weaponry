@@ -6,6 +6,7 @@
   "mixins": [
     "BlockEntityTypeMixin",
     "BrewingRecipeRegistryMixin",
+    "ItemMixin",
     "MixinStructurePiece",
     "SignTypeAccessor",
     "StatusEffectMixin",
