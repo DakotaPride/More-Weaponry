@@ -4,6 +4,7 @@ import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.DakotaPride.moreweaponry.effect.status_effects.BleedingStatusEffect;
 import net.DakotaPride.moreweaponry.effect.status_effects.NumbedStatusEffect;
 import net.DakotaPride.moreweaponry.effect.status_effects.base.CelestialEffect;
+import net.DakotaPride.moreweaponry.effect.status_effects.base.UnfortunedEffect;
 import net.DakotaPride.moreweaponry.effect.status_effects.celestial.*;
 import net.DakotaPride.moreweaponry.effect.status_effects.unfortuned.SirenStatusEffect;
 import net.DakotaPride.moreweaponry.effect.status_effects.unfortuned.TickedStatusEffect;
@@ -79,7 +80,14 @@ public class MoreWeaponryEffects {
                     -2.0D, EntityAttributeModifier.Operation.MULTIPLY_BASE)
             .addAttributeModifier(EntityAttributes.GENERIC_MOVEMENT_SPEED, "AF8B6E3F-3328-4C0A-AA36-5BA2BB9DBEF3",
                     -0.6D, EntityAttributeModifier.Operation.MULTIPLY_TOTAL);
-    public static final StatusEffect CELESTIAL = new CelestialEffect(StatusEffectCategory.BENEFICIAL, 0x00000);
+
+    public static final StatusEffect CELESTIAL = new CelestialEffect(StatusEffectCategory.BENEFICIAL, 0x000000);
+
+    public static final StatusEffect OVER_PACKAGED = new UnfortunedEffect(StatusEffectCategory.HARMFUL, 0x111111)
+            .addAttributeModifier(EntityAttributes.GENERIC_MOVEMENT_SPEED, "AF8B6E3F-3328-4C0A-AA36-5BA2BB9DBEF3",
+                    -0.1D, EntityAttributeModifier.Operation.MULTIPLY_TOTAL)
+            .addAttributeModifier(EntityAttributes.GENERIC_ATTACK_DAMAGE, "22653B89-116E-49DC-9B6B-9971489B5BE5",
+                    -1000.0D, EntityAttributeModifier.Operation.MULTIPLY_TOTAL);
 
 
     public static void registerEffects() {
@@ -107,6 +115,7 @@ public class MoreWeaponryEffects {
         Registry.register(Registry.STATUS_EFFECT, new Identifier(MoreWeaponry.MOD_ID, "numbed"), NUMBED);
         Registry.register(Registry.STATUS_EFFECT, new Identifier(MoreWeaponry.MOD_ID, "bleeding"), BLEEDING);
         Registry.register(Registry.STATUS_EFFECT, new Identifier(MoreWeaponry.MOD_ID, "celestial"), CELESTIAL);
+        Registry.register(Registry.STATUS_EFFECT, new Identifier(MoreWeaponry.MOD_ID, "over_packaged"), OVER_PACKAGED);
 
     }
 

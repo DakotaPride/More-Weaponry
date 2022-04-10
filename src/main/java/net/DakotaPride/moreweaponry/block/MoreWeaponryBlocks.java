@@ -386,6 +386,11 @@ public class MoreWeaponryBlocks {
                     .sounds(MoreWeaponrySoundEvents.SUMMONER)),
             MoreWeaponryItemGroup.MORE_WEAPONRY);
 
+    public static final Block SICKENED_HUSK_SUMMONER = registerBlock("sickened_husk_summoner",
+            new Block(FabricBlockSettings.copy(MoreWeaponryBlocks.SANDSTONE_DUST_BLOCK)
+                    .sounds(MoreWeaponrySoundEvents.SUMMONER)),
+            MoreWeaponryItemGroup.MORE_WEAPONRY);
+
 
     public static final Block CIRTICT_FORGE = registerBlock("cirtict_forge",
             new CirtictForgeBlock(FabricBlockSettings.copy(MoreWeaponryBlocks.CIRTICT_BLOCK)),

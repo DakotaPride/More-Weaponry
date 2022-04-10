@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "moreweaponry:block/sandstone_dust_block",
+    "side": "moreweaponry:block/sickened_husk_summoner"
+  }
+}

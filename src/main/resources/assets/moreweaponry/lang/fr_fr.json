@@ -387,5 +387,7 @@
   "misc.moreweaponry.core.abilities": "Capacités",
   "entity.subtitle.buried_knight_ambient": "Sons inconnus",
   "entity.subtitle.buried_knight_death": "Le chevalier enterré meurt",
-  "entity.subtitle.buried_knight_hurt": "Le chevalier enterré fait mal"
+  "entity.subtitle.buried_knight_hurt": "Le chevalier enterré fait mal",
+  "effect.moreweaponry.celestial": "Céleste",
+  "item.moreweaponry.description.celestial_madalian": "Accorde le passage à travers les épreuves célestes"
 }
