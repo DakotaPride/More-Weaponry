@@ -572,6 +572,8 @@ public class MoreWeaponryItems {
             new BardCoreItem(new FabricItemSettings().maxCount(1).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
     public static final Item PLAGUED_CORE = registerItem("plagued_core",
             new SickenedCoreItem(new FabricItemSettings().maxCount(1).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+    public static final Item SICKENED_HUSK_CORE = registerItem("sickened_husk_core",
+            new SickenedHuskCoreItem(new FabricItemSettings().maxCount(1).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
     public static final Item SUPPRESSED_CORE = registerItem("suppressed_core",
             new CracklerCoreItem(new FabricItemSettings().maxCount(1).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
@@ -617,6 +619,8 @@ public class MoreWeaponryItems {
             new PoweredBardItem(new FabricItemSettings().maxCount(1).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
     public static final Item POWERED_PLAGUED_MOB_CORE = registerItem("powered_plagued_mob_core",
             new PoweredSickenedItem(new FabricItemSettings().maxCount(1).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+    public static final Item POWERED_SICKENED_HUSK_MOB_CORE = registerItem("powered_sickened_husk_mob_core",
+            new PoweredSickenedHuskItem(new FabricItemSettings().maxCount(1).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
     public static final Item POWERED_SUPPRESSED_MOB_CORE = registerItem("powered_suppressed_mob_core",
             new PoweredCracklerItem(new FabricItemSettings().maxCount(1).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
@@ -871,6 +875,8 @@ public class MoreWeaponryItems {
 
     public static final Item CELESTIAL_MEDALLION_SICKENED = registerItem("celestial_medallion_sickened",
             new SickenedCelestialMedallionItem(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+    public static final Item CELESTIAL_MEDALLION_SICKENED_HUSK = registerItem("celestial_medallion_sickened_husk",
+            new SickenedHuskCelestialMadalianItem(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
     public static final Item CELESTIAL_MEDALLION_CRACKLER = registerItem("celestial_medallion_crackler",
             new CracklerCelestialMedallionItem(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
     public static final Item CELESTIAL_MEDALLION_BARD = registerItem("celestial_medallion_bard",

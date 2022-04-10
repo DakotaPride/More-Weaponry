@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "moreweaponry:item/celestial_madalian"
+    "layer0": "moreweaponry:item/sickened_husk_core"
   }
 }

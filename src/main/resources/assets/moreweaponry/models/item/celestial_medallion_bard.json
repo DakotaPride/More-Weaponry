@@ -1,0 +1,6 @@
+{
+  "parent": "moreweaponry:item/celestial_medallion",
+  "textures": {
+    "layer0": "moreweaponry:item/celestial_medallion_bard"
+  }
+}

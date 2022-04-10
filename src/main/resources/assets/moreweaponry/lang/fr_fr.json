@@ -389,5 +389,15 @@
   "entity.subtitle.buried_knight_death": "Le chevalier enterré meurt",
   "entity.subtitle.buried_knight_hurt": "Le chevalier enterré fait mal",
   "effect.moreweaponry.celestial": "Céleste",
-  "item.moreweaponry.description.celestial_madalian": "Accorde le passage à travers les épreuves célestes"
+  "item.moreweaponry.description.celestial_medallion": "Accorde le passage à travers les épreuves célestes",
+  "item.moreweaponry.celestial_medallion": "Médaillon céleste",
+  "item.moreweaponry.celestial_medallion_sickened": "Médaillon céleste",
+  "item.moreweaponry.celestial_medallion_crackler": "Médaillon céleste",
+  "item.moreweaponry.celestial_medallion_bard": "Médaillon céleste",
+  "item.moreweaponry.celestial_medallion_wanderer": "Médaillon céleste",
+  "item.moreweaponry.celestial_medallion_watcher": "Médaillon céleste",
+  "item.moreweaponry.celestial_medallion_sickened_husk": "Médaillon céleste",
+  "item.moreweaponry.description.double_handed": "Double main",
+  "effect.moreweaponry.over_packaged": "Suremballé",
+  "block.moreweaponry.sickened_husk_summoner": "Table d'invocation des carcasses écœurées"
 }

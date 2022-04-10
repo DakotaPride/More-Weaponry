@@ -1,6 +1,0 @@
-{
-  "parent": "moreweaponry:item/celestial_madalian",
-  "textures": {
-    "layer0": "moreweaponry:item/celestial_madalian_sickened"
-  }
-}
