@@ -18,7 +18,7 @@ public class ItemMixin {
     @Inject(method = "getUseAction", at = @At("HEAD"), cancellable = true)
     public void getUseAction(ItemStack stack, CallbackInfoReturnable<UseAction> cir) {
         if ((Item)(Object)this instanceof ToolItem toolItem) {
-            if (toolItem.getMaterial() == MoreWeaponryToolMaterials.WITHERED) {
+            if (stack.isOf(MoreWeaponryItems.HEAVY_SWORD)) {
 
             }
         }
