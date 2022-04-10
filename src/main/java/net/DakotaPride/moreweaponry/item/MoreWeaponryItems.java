@@ -865,7 +865,7 @@ public class MoreWeaponryItems {
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item HEAVY_SWORD = registerItem("heavy_sword",
-            new HeavySwordItem((ToolMaterial) MoreWeaponryToolMaterials.WITHERED, 11, -3.0f,
+            new HeavySwordItem((ToolMaterial) ToolMaterials.IRON, 11, -3.0f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item CELESTIAL_MADALIAN = registerItem("celestial_madalian",
