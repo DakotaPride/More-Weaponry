@@ -46,20 +46,4 @@ public abstract class LivingEntityMixin {
         }
     }
 
-    @Inject(method = "applyDamage", at = @At("HEAD"), cancellable = true)
-    protected void applyDamage(DamageSource source, float amount, CallbackInfo callbackInfo) {
-        LivingEntity livingEntity = LivingEntity.class.cast(this);
-        if (livingEntity.hasStatusEffect(MoreWeaponryEffects.PLAGUED)) {
-            livingEntity.removeStatusEffect(MoreWeaponryEffects.PLAGUED);
-        } else if (livingEntity.hasStatusEffect(MoreWeaponryEffects.TICKED)) {
-            livingEntity.removeStatusEffect(MoreWeaponryEffects.TICKED);
-        } else if (livingEntity.hasStatusEffect(MoreWeaponryEffects.WEBBED)) {
-            livingEntity.removeStatusEffect(MoreWeaponryEffects.WEBBED);
-        } else if (livingEntity.hasStatusEffect(MoreWeaponryEffects.SIREN)) {
-            livingEntity.removeStatusEffect(MoreWeaponryEffects.SIREN);
-        } else if (livingEntity.hasStatusEffect(MoreWeaponryEffects.EXPLOSIVE)) {
-            livingEntity.removeStatusEffect(MoreWeaponryEffects.EXPLOSIVE);
-        }
-    }
-
 }
