@@ -27,6 +27,33 @@ public class StatusEffectMixin {
             entity.removeStatusEffect(StatusEffects.REGENERATION);
         }
 
+        if (entity.hasStatusEffect(MoreWeaponryEffects.WATCHER)) {
+            entity.removeStatusEffect(StatusEffects.POISON);
+            entity.removeStatusEffect(StatusEffects.BLINDNESS);
+            entity.removeStatusEffect(StatusEffects.SLOWNESS);
+            entity.removeStatusEffect(StatusEffects.WEAKNESS);
+            entity.removeStatusEffect(StatusEffects.WITHER);
+            entity.removeStatusEffect(StatusEffects.UNLUCK);
+        } else if (entity.hasStatusEffect(MoreWeaponryEffects.SICKENED)) {
+            entity.removeStatusEffect(StatusEffects.SLOWNESS);
+            entity.removeStatusEffect(StatusEffects.UNLUCK);
+        } else if (entity.hasStatusEffect(MoreWeaponryEffects.CRACKLER)) {
+            entity.removeStatusEffect(StatusEffects.SLOWNESS);
+            entity.removeStatusEffect(StatusEffects.WEAKNESS);
+            entity.removeStatusEffect(StatusEffects.UNLUCK);
+        } else if (entity.hasStatusEffect(MoreWeaponryEffects.BARD)) {
+            entity.removeStatusEffect(StatusEffects.BLINDNESS);
+            entity.removeStatusEffect(StatusEffects.SLOWNESS);
+            entity.removeStatusEffect(StatusEffects.WEAKNESS);
+            entity.removeStatusEffect(StatusEffects.UNLUCK);
+        } else if (entity.hasStatusEffect(MoreWeaponryEffects.WANDERER)) {
+            entity.removeStatusEffect(StatusEffects.POISON);
+            entity.removeStatusEffect(StatusEffects.BLINDNESS);
+            entity.removeStatusEffect(StatusEffects.SLOWNESS);
+            entity.removeStatusEffect(StatusEffects.WEAKNESS);
+            entity.removeStatusEffect(StatusEffects.UNLUCK);
+        }
+
     }
 
 }
