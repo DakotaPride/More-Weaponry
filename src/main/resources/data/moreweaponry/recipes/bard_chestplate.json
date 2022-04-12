@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "# #",
+        "VMV",
+        "VVV"
+    ],
+    "key": {
+        "#": {
+            "item": "moreweaponry:melodic_essence"
+        },
+        "M": {
+            "item": "minecraft:bone"
+        },
+        "V": {
+            "item": "moreweaponry:bard_cloth"
+        }
+    },
+    "result": {
+        "item": "moreweaponry:bard_chestplate",
+        "count": 1
+    }
+}

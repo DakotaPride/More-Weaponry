@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "# #",
+        "#M#",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "moreweaponry:explosive_essence"
+        },
+        "M": {
+            "item": "minecraft:gunpowder"
+        }
+    },
+    "result": {
+        "item": "moreweaponry:crackler_chestplate",
+        "count": 1
+    }
+}

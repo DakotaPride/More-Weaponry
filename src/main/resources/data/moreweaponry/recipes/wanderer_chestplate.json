@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "V V",
+        "#M#",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "moreweaponry:wretched_essence"
+        },
+        "M": {
+            "item": "minecraft:string"
+        },
+        "V": {
+            "item": "minecraft:spider_eye"
+        }
+    },
+    "result": {
+        "item": "moreweaponry:wanderer_chestplate",
+        "count": 1
+    }
+}

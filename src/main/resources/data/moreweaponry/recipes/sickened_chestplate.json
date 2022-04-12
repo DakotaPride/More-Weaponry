@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "# #",
+        "#M#",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "moreweaponry:leeching_essence"
+        },
+        "M": {
+            "item": "minecraft:rotten_flesh"
+        }
+    },
+    "result": {
+        "item": "moreweaponry:sickened_chestplate",
+        "count": 1
+    }
+}
