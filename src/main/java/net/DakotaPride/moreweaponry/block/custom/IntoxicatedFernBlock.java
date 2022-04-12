@@ -2,6 +2,7 @@ package net.DakotaPride.moreweaponry.block.custom;
 
 import net.DakotaPride.moreweaponry.block.MoreWeaponryBlocks;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.FernBlock;
 import net.minecraft.block.TallPlantBlock;
 import net.minecraft.server.world.ServerWorld;
@@ -27,7 +28,8 @@ public class IntoxicatedFernBlock extends FernBlock {
 
     @Override
     public boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
-        return floor.isOf(MoreWeaponryBlocks.INTOXICATED_GRASS_BLOCK);
+        return floor.isOf(MoreWeaponryBlocks.INTOXICATED_GRASS_BLOCK) || floor.isOf(MoreWeaponryBlocks.SANDSTONE_DUST_BLOCK)
+                || floor.isOf(Blocks.DIRT);
     }
 
 }

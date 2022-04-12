@@ -28,7 +28,8 @@ public class IntoxicatedFlowerBlock extends PlantBlock {
 
     @Override
     public boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
-        return floor.isOf(MoreWeaponryBlocks.INTOXICATED_GRASS_BLOCK);
+        return floor.isOf(MoreWeaponryBlocks.INTOXICATED_GRASS_BLOCK) || floor.isOf(MoreWeaponryBlocks.SANDSTONE_DUST_BLOCK)
+                || floor.isOf(Blocks.DIRT);
     }
 
     @Override

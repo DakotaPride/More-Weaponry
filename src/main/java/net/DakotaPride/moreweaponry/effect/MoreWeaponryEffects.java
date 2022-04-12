@@ -79,7 +79,7 @@ public class MoreWeaponryEffects {
             .addAttributeModifier(EntityAttributes.GENERIC_ATTACK_DAMAGE, "22653B89-116E-49DC-9B6B-9971489B5BE5",
                     -2.0D, EntityAttributeModifier.Operation.MULTIPLY_BASE)
             .addAttributeModifier(EntityAttributes.GENERIC_MOVEMENT_SPEED, "AF8B6E3F-3328-4C0A-AA36-5BA2BB9DBEF3",
-                    -0.6D, EntityAttributeModifier.Operation.MULTIPLY_TOTAL);
+                    -0.2D, EntityAttributeModifier.Operation.MULTIPLY_TOTAL);
 
     public static final StatusEffect CELESTIAL = new CelestialEffect(StatusEffectCategory.BENEFICIAL, 0x000000);
 
