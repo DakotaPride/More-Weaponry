@@ -1,8 +1,8 @@
 {
   "parent": "minecraft:block/cube_bottom_top",
   "textures": {
-    "top": "moreweaponry:block/sandstone_top",
-    "bottom": "moreweaponry:block/sandstone_bottom",
+    "top": "moreweaponry:block/coarse_dirt",
+    "bottom": "moreweaponry:block/coarse_dirt",
     "side": "moreweaponry:block/crackler_summoner"
   }
 }

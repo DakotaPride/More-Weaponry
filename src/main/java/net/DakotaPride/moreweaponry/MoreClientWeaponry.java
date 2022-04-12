@@ -20,8 +20,8 @@ public class MoreClientWeaponry implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
 
-        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex)
-                -> 0x818269, MoreWeaponryBlocks.INTOXICATED_GRASS_BLOCK);
+        // ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex)
+           //     -> 0x818269, MoreWeaponryBlocks.INTOXICATED_GRASS_BLOCK);
 
         ScreenRegistry.register(MoreWeaponryScreenHandlers.CORE_FORGE_SCREEN_HANDLER, CoreForgeScreen::new);
         ScreenRegistry.register(MoreWeaponryScreenHandlers.ESSENCE_TRANSLATOR_SCREEN_HANDLER, EssenceTranslatorScreen::new);

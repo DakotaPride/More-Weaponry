@@ -1,0 +1,28 @@
+{
+  "type": "moreweaponry:dusted_graves",
+
+  "config": {
+    "start_pool": "moreweaponry:dusted_graves/start_pool",
+
+    "size": 2
+  },
+
+  "biomes": "#moreweaponry:has_structure/dusted_graves_biomes",
+
+  "adapt_noise": true,
+
+  "spawn_overrides": {
+    "creature": {
+      "bounding_box": "piece",
+      "spawns": [
+        {
+          "type": "",
+          "weight": 0,
+          "minCount": 0,
+          "maxCount": 0
+        }
+      ]
+    }
+  }
+
+}

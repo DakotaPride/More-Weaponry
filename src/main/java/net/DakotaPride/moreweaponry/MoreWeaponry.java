@@ -9,6 +9,7 @@ import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
 import net.DakotaPride.moreweaponry.painting.MoreWeaponryPaintings;
 import net.DakotaPride.moreweaponry.recipe.MoreWeaponryRecipes;
 import net.DakotaPride.moreweaponry.structure.MoreWeaponryStructureTypes;
+import net.DakotaPride.moreweaponry.util.MoreWeaponryHeadLootTables;
 import net.DakotaPride.moreweaponry.util.MoreWeaponryLootTableModifiers;
 import net.DakotaPride.moreweaponry.util.MoreWeaponryRegistries;
 import net.DakotaPride.moreweaponry.util.MoreWeaponryTags;
@@ -57,6 +58,7 @@ public class MoreWeaponry implements ModInitializer {
 		MoreWeaponryWorldGen.generateModWorldGen();
 
 		MoreWeaponryLootTableModifiers.modifyLootTables();
+		MoreWeaponryHeadLootTables.registerMoreWeaponryHeadLootTables();
 
 		MoreWeaponryTags.MoreWeaponryBlockTags();
 		MoreWeaponryTags.MoreWeaponryItemTags();

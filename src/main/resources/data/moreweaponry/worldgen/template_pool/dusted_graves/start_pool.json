@@ -1,0 +1,20 @@
+{
+  "name": "moreweaponry:dusted_graves/start_pool",
+
+  "fallback": "minecraft:empty",
+
+  "elements": [
+    {
+
+      "weight": 1,
+      "element": {
+
+        "location": "moreweaponry:dusted_graves",
+
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

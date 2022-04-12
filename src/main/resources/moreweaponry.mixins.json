@@ -6,6 +6,7 @@
   "mixins": [
     "BlockEntityTypeMixin",
     "BrewingRecipeRegistryMixin",
+    "DeadBushBlockMixin",
     "LivingEntityMixin",
     "MixinStructurePiece",
     "SignTypeAccessor",
@@ -14,9 +15,13 @@
   ],
   "client": [
     "BlockEntityTypeMixin",
+    "BrewingRecipeRegistryMixin",
+    "DeadBushBlockMixin",
+    "LivingEntityMixin",
     "MixinStructurePiece",
     "SignTypeAccessor",
-    "StatusEffectMixin"
+    "StatusEffectMixin",
+    "StructureFeatureAccessor"
   ],
   "injectors": {
     "defaultRequire": 1
