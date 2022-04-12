@@ -2,8 +2,6 @@ package net.DakotaPride.moreweaponry.block.custom;
 
 import net.DakotaPride.moreweaponry.block.MoreWeaponryBlocks;
 import net.DakotaPride.moreweaponry.world.features.MoreWeaponryPlacedFeatures;
-import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
-import net.fabricmc.fabric.api.rendering.data.v1.RenderAttachmentBlockEntity;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Fertilizable;
 import net.minecraft.block.GrassBlock;
@@ -15,18 +13,14 @@ import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.PlacedFeature;
 import net.minecraft.world.gen.feature.RandomPatchFeatureConfig;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 import java.util.Random;
 
-public class IntoxicatedGrassBlock extends GrassBlock implements RenderAttachmentBlockEntity {
+public class IntoxicatedGrassBlock extends GrassBlock {
     public IntoxicatedGrassBlock(Settings settings) {
         super(settings);
     }
-
-    ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex)
-            -> 0x3495eb, MoreWeaponryBlocks.INTOXICATED_GRASS_BLOCK);
 
     public boolean isFertilizable(BlockView world, BlockPos pos, BlockState state, boolean isClient) {
         return world.getBlockState(pos.up()).isAir();
@@ -128,8 +122,4 @@ public class IntoxicatedGrassBlock extends GrassBlock implements RenderAttachmen
 
     }
 
-    @Override
-    public @Nullable Object getRenderAttachmentData() {
-        return this;
-    }
 }

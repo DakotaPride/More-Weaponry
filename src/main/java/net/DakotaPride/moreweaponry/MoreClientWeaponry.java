@@ -1,5 +1,6 @@
 package net.DakotaPride.moreweaponry;
 
+import net.DakotaPride.moreweaponry.block.MoreWeaponryBlocks;
 import net.DakotaPride.moreweaponry.entity.MoreWeaponryEntityRegistry;
 import net.DakotaPride.moreweaponry.entity.client.armor.*;
 import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
@@ -10,6 +11,7 @@ import net.DakotaPride.moreweaponry.screen.MoreWeaponryScreenHandlers;
 import net.DakotaPride.moreweaponry.util.MoreWeaponryModelPredicateProvider;
 import net.DakotaPride.moreweaponry.util.MoreWeaponryRendererHelper;
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.client.screenhandler.v1.ScreenRegistry;
 import software.bernie.geckolib3.renderers.geo.GeoArmorRenderer;
 
@@ -17,6 +19,9 @@ public class MoreClientWeaponry implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
+
+        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex)
+                -> 0x818269, MoreWeaponryBlocks.INTOXICATED_GRASS_BLOCK);
 
         ScreenRegistry.register(MoreWeaponryScreenHandlers.CORE_FORGE_SCREEN_HANDLER, CoreForgeScreen::new);
         ScreenRegistry.register(MoreWeaponryScreenHandlers.ESSENCE_TRANSLATOR_SCREEN_HANDLER, EssenceTranslatorScreen::new);
