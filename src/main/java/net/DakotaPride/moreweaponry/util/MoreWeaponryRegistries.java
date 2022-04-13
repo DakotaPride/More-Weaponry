@@ -9,14 +9,14 @@ import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.minecraft.block.ComposterBlock;
 
 public class MoreWeaponryRegistries {
-    public static void registerModFeatures()
+    public static void registerMoreWeaponryFeatures()
     {
-        registerModComposterChances();
-        registerStrippables();
+        registerMoreWeaponryComposterChances();
+        registerMoreWeaponryStrippables();
         registerAttributes();
     }
 
-    public static void registerModComposterChances() {
+    public static void registerMoreWeaponryComposterChances() {
         ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(MoreWeaponryItems.KURO_SEEDS, 0.3f);
         ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(MoreWeaponryItems.KURO, 0.3f);
         ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(MoreWeaponryBlocks.KURO_WHEAT_BLOCK.asItem(), 0.85f);
@@ -26,7 +26,7 @@ public class MoreWeaponryRegistries {
         ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(MoreWeaponryItems.CURON_FLOWER_PETALS, 0.45f);
     }
 
-    public static void registerStrippables() {
+    public static void registerMoreWeaponryStrippables() {
         StrippableBlockRegistry.register(MoreWeaponryBlocks.FRODON_LOG, MoreWeaponryBlocks.STRIPPED_FRODON_LOG);
         StrippableBlockRegistry.register(MoreWeaponryBlocks.FRODON_WOOD, MoreWeaponryBlocks.STRIPPED_FRODON_WOOD);
     }

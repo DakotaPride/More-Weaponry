@@ -1,7 +1,7 @@
 package net.DakotaPride.moreweaponry.world.gen;
 
 public class MoreWeaponryWorldGen {
-    public static void generateModWorldGen() {
+    public static void generateMoreWeaponryWorldGen() {
 
         /// RAW_GENERATION,
         //        LAKES,

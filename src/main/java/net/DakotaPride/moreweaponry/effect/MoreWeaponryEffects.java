@@ -90,7 +90,7 @@ public class MoreWeaponryEffects {
                     -1000.0D, EntityAttributeModifier.Operation.MULTIPLY_TOTAL);
 
 
-    public static void registerEffects() {
+    public static void registerMoreWeaponryEffects() {
 
         // Celestial Effects
 

@@ -496,7 +496,7 @@ public class MoreWeaponryBlocks {
         return Registry.register(Registry.BLOCK, new Identifier(MoreWeaponry.MOD_ID, name), block);
     }
 
-    public static void registerModBlocks() {
+    public static void registerMoreWeaponryBlocks() {
         MoreWeaponry.LOGGER.info("Registering Mod Blocks for" + MoreWeaponry.MOD_ID);
     }
 

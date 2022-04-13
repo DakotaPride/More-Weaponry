@@ -13,7 +13,7 @@ public class MoreWeaponryPaintings {
         return Registry.register(Registry.PAINTING_MOTIVE, new Identifier(MoreWeaponry.MOD_ID, name), paintingMotive);
     }
 
-    public static void registerPaintings() {
+    public static void registerMoreWeaponryPaintings() {
         System.out.println("Registering Paintings for " + MoreWeaponry.MOD_ID);
     }
 }

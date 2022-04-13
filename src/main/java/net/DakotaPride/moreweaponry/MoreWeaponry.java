@@ -37,25 +37,25 @@ public class MoreWeaponry implements ModInitializer {
 		MoreWeaponryBlockEntities.registerMoreWeaponryBlockEntities();
 		MoreWeaponryRecipes.registerMoreWeaponryRecipes();
 
-		MoreWeaponryItems.registerModItems();
-		MoreWeaponryBlocks.registerModBlocks();
+		MoreWeaponryItems.registerMoreWeaponryItems();
+		MoreWeaponryBlocks.registerMoreWeaponryBlocks();
 
-		MoreWeaponryEnchantments.registerModEnchantments();
+		MoreWeaponryEnchantments.registerMoreWeaponryEnchantments();
 
 		MoreWeaponryPotions.registerMoreWeaponryPotions();
 		MoreWeaponryPotions.registerMoreWeaponryPotionRecipes();
 
-		MoreWeaponryPaintings.registerPaintings();
+		MoreWeaponryPaintings.registerMoreWeaponryPaintings();
 
 		MoreWeaponryPortals.registerMoreWeaponryPortals();
 
-		MoreWeaponryRegistries.registerModFeatures();
+		MoreWeaponryRegistries.registerMoreWeaponryFeatures();
 
-		MoreWeaponryRegistries.registerModComposterChances();
+		MoreWeaponryRegistries.registerMoreWeaponryComposterChances();
 
-		MoreWeaponryRegistries.registerStrippables();
+		MoreWeaponryRegistries.registerMoreWeaponryStrippables();
 
-		MoreWeaponryWorldGen.generateModWorldGen();
+		MoreWeaponryWorldGen.generateMoreWeaponryWorldGen();
 
 		MoreWeaponryLootTableModifiers.modifyLootTables();
 		MoreWeaponryHeadLootTables.registerMoreWeaponryHeadLootTables();
@@ -63,7 +63,7 @@ public class MoreWeaponry implements ModInitializer {
 		MoreWeaponryTags.MoreWeaponryBlockTags();
 		MoreWeaponryTags.MoreWeaponryItemTags();
 
-		MoreWeaponryEffects.registerEffects();
+		MoreWeaponryEffects.registerMoreWeaponryEffects();
 
 		GeckoLib.initialize();
 

@@ -45,8 +45,7 @@ public class MoreWeaponryEnchantments {
     }
 
 
-    public static void registerModEnchantments() {
-
+    public static void registerMoreWeaponryEnchantments() {
         System.out.println("Registering More Weaponry Enchantments for " + MoreWeaponry.MOD_ID);
 
     }

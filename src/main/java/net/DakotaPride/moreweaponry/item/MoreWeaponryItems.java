@@ -891,8 +891,8 @@ public class MoreWeaponryItems {
         return Registry.register(Registry.ITEM, new Identifier(MoreWeaponry.MOD_ID, name), item);
     }
 
-    public static void registerModItems() {
-        MoreWeaponry.LOGGER.info("Registering Mod Items for " + MoreWeaponry.MOD_ID);
+    public static void registerMoreWeaponryItems() {
+        MoreWeaponry.LOGGER.info("Registering More Weaponry Items for " + MoreWeaponry.MOD_ID);
     }
 
 }
