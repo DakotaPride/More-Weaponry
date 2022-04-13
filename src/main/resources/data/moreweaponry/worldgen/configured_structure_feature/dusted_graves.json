@@ -1,5 +1,5 @@
 {
-  "type": "moreweaponry:dusted_graves",
+  "type": "moreweaponry:sickened_graves",
 
   "config": {
     "start_pool": "moreweaponry:dusted_graves/start_pool",
