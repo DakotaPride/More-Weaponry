@@ -1,4 +1,4 @@
-package net.DakotaPride.moreweaponry.item;
+package net.DakotaPride.moreweaponry.item.custom;
 
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.Item;
