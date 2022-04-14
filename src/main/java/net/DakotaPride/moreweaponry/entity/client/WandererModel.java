@@ -24,17 +24,4 @@ public class WandererModel extends AnimatedGeoModel<WandererEntity> {
         return new Identifier(MoreWeaponry.MOD_ID, "animations/wanderer.animation.json");
     }
 
-    @SuppressWarnings({ "unchecked", "rawtypes" })
-    @Override
-    public void setLivingAnimations(WandererEntity entity, Integer uniqueID, AnimationEvent customPredicate) {
-        super.setLivingAnimations(entity, uniqueID, customPredicate);
-        IBone head = this.getAnimationProcessor().getBone("head");
-
-        EntityModelData extraData = (EntityModelData) customPredicate.getExtraDataOfType(EntityModelData.class).get(0);
-        if (head != null) {
-            head.setRotationX(extraData.headPitch * ((float) Math.PI / 180F));
-            head.setRotationY(extraData.netHeadYaw * ((float) Math.PI / 180F));
-        }
-    }
-
 }

@@ -30,5 +30,11 @@ public class MoreWeaponryEntitySpawn {
         SpawnRestrictionAccessor.callRegister(MoreWeaponryEntities.SICKENED_HUSK, SpawnRestriction.Location.ON_GROUND,
                 Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, SickenedHuskEntity::canSpawnIgnoreLightLevel);
 
+
+        SpawnRestrictionAccessor.callRegister(MoreWeaponryEntities.BURIED_KNIGHT, SpawnRestriction.Location.ON_GROUND,
+                Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, BuriedKnightEntity::canSpawnIgnoreLightLevel);
+        SpawnRestrictionAccessor.callRegister(MoreWeaponryEntities.CRAWLER, SpawnRestriction.Location.ON_GROUND,
+                Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, CrawlerEntity::canSpawnIgnoreLightLevel);
+
     }
 }

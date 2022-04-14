@@ -42,7 +42,7 @@ public class MoreWeaponryRegistries {
         FabricDefaultAttributeRegistry.register(MoreWeaponryEntities.LEECH, LeechEntity.setAttributes());
 
         FabricDefaultAttributeRegistry.register(MoreWeaponryEntities.BURIED_KNIGHT, BuriedKnightEntity.setAttributes());
-        FabricDefaultAttributeRegistry.register(MoreWeaponryEntities.CRACKLER, CrawlerEntity.setAttributes());
+        FabricDefaultAttributeRegistry.register(MoreWeaponryEntities.CRAWLER, CrawlerEntity.setAttributes());
 
     }
 
