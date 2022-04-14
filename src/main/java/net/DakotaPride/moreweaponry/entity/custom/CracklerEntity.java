@@ -190,7 +190,7 @@ public class CracklerEntity extends HostileEntity implements IAnimatable {
 
     @Override
     protected SoundEvent getAmbientSound() {
-        return SoundEvents.ENTITY_GENERIC_EXTINGUISH_FIRE;
+        return SoundEvents.ENTITY_PARROT_IMITATE_CREEPER;
     }
 
     @Override

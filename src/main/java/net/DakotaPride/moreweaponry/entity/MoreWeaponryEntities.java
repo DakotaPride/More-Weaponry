@@ -47,4 +47,8 @@ public class MoreWeaponryEntities {
             Registry.ENTITY_TYPE, new Identifier(MoreWeaponry.MOD_ID, "buried_knight"),
             FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, BuriedKnightEntity::new)
                     .dimensions(EntityDimensions.fixed(0.7f, 1.9f)).build());
+    public static final EntityType<CrawlerEntity> CRAWLER = Registry.register(
+            Registry.ENTITY_TYPE, new Identifier(MoreWeaponry.MOD_ID, "crawler"),
+            FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, CrawlerEntity::new)
+                    .dimensions(EntityDimensions.fixed(1.0f, 0.7f)).build());
 }

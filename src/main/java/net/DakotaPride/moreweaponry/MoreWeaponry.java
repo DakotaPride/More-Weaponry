@@ -34,7 +34,6 @@ public class MoreWeaponry implements ModInitializer {
 
 		MoreWeaponryConfiguredFeatures.registerConfiguredFeatures();
 
-		MoreWeaponryBlockEntities.registerMoreWeaponryBlockEntities();
 		MoreWeaponryRecipes.registerMoreWeaponryRecipes();
 
 		MoreWeaponryItems.registerMoreWeaponryItems();

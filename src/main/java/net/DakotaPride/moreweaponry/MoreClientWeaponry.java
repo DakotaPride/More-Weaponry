@@ -1,6 +1,7 @@
 package net.DakotaPride.moreweaponry;
 
 import net.DakotaPride.moreweaponry.block.MoreWeaponryBlocks;
+import net.DakotaPride.moreweaponry.block.entity.MoreWeaponryBlockEntities;
 import net.DakotaPride.moreweaponry.entity.MoreWeaponryEntityRegistry;
 import net.DakotaPride.moreweaponry.entity.client.armor.*;
 import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
@@ -33,6 +34,7 @@ public class MoreClientWeaponry implements ClientModInitializer {
         MoreWeaponryModelPredicateProvider.registerMoreWeaponryModels();
 
         MoreWeaponryEntityRegistry.registerMoreWeaponryEntities();
+        MoreWeaponryBlockEntities.registerMoreWeaponryBlockEntities();
 
         GeoArmorRenderer.registerArmorRenderer(new WatcherArmorRenderer(), MoreWeaponryItems.WATCHER_HELMET,
                 MoreWeaponryItems.WATCHER_CHESTPLATE);
