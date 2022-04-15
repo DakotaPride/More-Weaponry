@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "gRg",
+    "RMR",
+    "gRg"
+  ],
+  "key": {
+    "g": {
+      "item": "minecraft:obsidian"
+    },
+    "R": {
+      "item": "minecraft:ender_eye"
+    },
+    "M": {
+      "item": "moreweaponry:celestial_medallion"
+    }
+  },
+  "result": {
+    "item": "moreweaponry:celestial_medallion_watcher",
+    "count": 1
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "gRg",
+    "RMR",
+    "gRg"
+  ],
+  "key": {
+    "g": {
+      "item": "minecraft:bone"
+    },
+    "R": {
+      "item": "minecraft:water_bucket"
+    },
+    "M": {
+      "item": "moreweaponry:celestial_medallion"
+    }
+  },
+  "result": {
+    "item": "moreweaponry:celestial_medallion_bard",
+    "count": 1
+  }
+}

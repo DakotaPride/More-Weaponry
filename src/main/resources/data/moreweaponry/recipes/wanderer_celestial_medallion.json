@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "gRg",
+    "RMR",
+    "gRg"
+  ],
+  "key": {
+    "g": {
+      "item": "minecraft:string"
+    },
+    "R": {
+      "item": "minecraft:spider_eye"
+    },
+    "M": {
+      "item": "moreweaponry:celestial_medallion"
+    }
+  },
+  "result": {
+    "item": "moreweaponry:celestial_medallion_wanderer",
+    "count": 1
+  }
+}

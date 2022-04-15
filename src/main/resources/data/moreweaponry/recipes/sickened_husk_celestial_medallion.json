@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "gRg",
+    "RMR",
+    "gRg"
+  ],
+  "key": {
+    "g": {
+      "item": "moreweaponry:sandstone_dust"
+    },
+    "R": {
+      "item": "minecraft:sand"
+    },
+    "M": {
+      "item": "moreweaponry:celestial_medallion_sickened"
+    }
+  },
+  "result": {
+    "item": "moreweaponry:celestial_medallion_sickened_husk",
+    "count": 1
+  }
+}

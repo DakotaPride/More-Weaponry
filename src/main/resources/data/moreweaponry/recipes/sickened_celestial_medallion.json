@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "gRg",
+    "RMR",
+    "gRg"
+  ],
+  "key": {
+    "g": {
+      "item": "minecraft:rotten_flesh"
+    },
+    "R": {
+      "item": "minecraft:wheat_seeds"
+    },
+    "M": {
+      "item": "moreweaponry:celestial_medallion"
+    }
+  },
+  "result": {
+    "item": "moreweaponry:celestial_medallion_sickened",
+    "count": 1
+  }
+}
