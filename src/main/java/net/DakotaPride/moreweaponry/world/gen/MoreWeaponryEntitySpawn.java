@@ -14,6 +14,8 @@ public class MoreWeaponryEntitySpawn {
     public static void addEntitySpawn() {
         BiomeModifications.addSpawn(BiomeSelectors.categories(Biome.Category.THEEND), SpawnGroup.MONSTER,
                 MoreWeaponryEntities.LURKER, 2, 0, 3);
+        BiomeModifications.addSpawn(BiomeSelectors.categories(Biome.Category.DESERT), SpawnGroup.MONSTER,
+                MoreWeaponryEntities.CRAWLER, 8, 4, 12);
 
         SpawnRestrictionAccessor.callRegister(MoreWeaponryEntities.WATCHER, SpawnRestriction.Location.ON_GROUND,
                 Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, WatcherEntity::canSpawnIgnoreLightLevel);
