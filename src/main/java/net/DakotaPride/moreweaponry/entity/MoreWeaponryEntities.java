@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
+import net.minecraft.entity.projectile.ArrowEntity;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -51,4 +52,5 @@ public class MoreWeaponryEntities {
             Registry.ENTITY_TYPE, new Identifier(MoreWeaponry.MOD_ID, "crawler"),
             FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, CrawlerEntity::new)
                     .dimensions(EntityDimensions.fixed(1.0f, 0.7f)).build());
+
 }

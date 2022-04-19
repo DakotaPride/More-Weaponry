@@ -3,6 +3,7 @@ package net.DakotaPride.moreweaponry.item;
 import com.github.crimsondawn45.fabricshieldlib.lib.object.FabricShieldItem;
 import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.DakotaPride.moreweaponry.block.MoreWeaponryBlocks;
+import net.DakotaPride.moreweaponry.effect.MoreWeaponryEffects;
 import net.DakotaPride.moreweaponry.entity.MoreWeaponryEntities;
 import net.DakotaPride.moreweaponry.item.custom.*;
 import net.DakotaPride.moreweaponry.item.custom.celestial_madalian.*;
@@ -869,6 +870,9 @@ public class MoreWeaponryItems {
     public static final Item HEAVY_SWORD = registerItem("heavy_sword",
             new HeavySwordItem((ToolMaterial) ToolMaterials.IRON, 11, -3.0f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+
+    public static final Item HEAVY_CROSSBOW = registerItem("heavy_crossbow",
+            new HeavyCrossBowItem(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item CELESTIAL_MEDALLION = registerItem("celestial_medallion",
             new CelestialMadalianItem(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));

@@ -1,7 +1,6 @@
 package net.DakotaPride.moreweaponry;
 
 import net.DakotaPride.moreweaponry.block.MoreWeaponryBlocks;
-import net.DakotaPride.moreweaponry.block.entity.MoreWeaponryBlockEntities;
 import net.DakotaPride.moreweaponry.effect.MoreWeaponryEffects;
 import net.DakotaPride.moreweaponry.effect.MoreWeaponryPotions;
 import net.DakotaPride.moreweaponry.enchantments.MoreWeaponryEnchantments;
@@ -17,6 +16,10 @@ import net.DakotaPride.moreweaponry.world.dimension.MoreWeaponryPortals;
 import net.DakotaPride.moreweaponry.world.features.MoreWeaponryConfiguredFeatures;
 import net.DakotaPride.moreweaponry.world.gen.MoreWeaponryWorldGen;
 import net.fabricmc.api.ModInitializer;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityType;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.Registry;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import software.bernie.geckolib3.GeckoLib;
@@ -26,10 +29,15 @@ public class MoreWeaponry implements ModInitializer {
 	public static final String MOD_ID = "moreweaponry";
 	public static final Logger LOGGER = LogManager.getLogger(MOD_ID);
 
+	private static <T extends Entity> EntityType<T> registerEntity(String name, EntityType<T> entityType) {
+		return Registry.register(Registry.ENTITY_TYPE, new Identifier(MoreWeaponry.MOD_ID, name), entityType);
+	}
+
+
+
 
 	@Override
 	public void onInitialize() {
-
 		MoreWeaponryStructureTypes.registerStructureFeatures();
 
 		MoreWeaponryConfiguredFeatures.registerConfiguredFeatures();
@@ -65,6 +73,7 @@ public class MoreWeaponry implements ModInitializer {
 		MoreWeaponryEffects.registerMoreWeaponryEffects();
 
 		GeckoLib.initialize();
+
 
 	}
 

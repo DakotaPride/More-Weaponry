@@ -1,30 +1,22 @@
 package net.DakotaPride.moreweaponry.util;
 
+import net.DakotaPride.moreweaponry.item.HeavyCrossBowItem;
 import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
-import net.fabricmc.fabric.api.object.builder.v1.client.model.FabricModelPredicateProviderRegistry;
-import net.minecraft.item.Item;
+import net.minecraft.client.item.ModelPredicateProviderRegistry;
+import net.minecraft.item.CrossbowItem;
+import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 
-public class MoreWeaponryModelPredicateProvider {
+public class MoreWeaponryModelPredicateProvider extends ModelPredicateProviderRegistry {
     public static void registerMoreWeaponryModels() {
-
-    }
-
-    private static void registerMoreWeaponryBow(Item bow) {
-        FabricModelPredicateProviderRegistry.register(bow, new Identifier("pull"),
-                (stack, world, entity, seed) -> {
-                    if (entity == null) {
-                        return 0.0f;
-                    }
-                    if (entity.getActiveItem() != stack) {
-                        return 0.0f;
-                    }
-                    return (float)(stack.getMaxUseTime() - entity.getItemUseTimeLeft()) / 20.0f;
-                });
-
-        FabricModelPredicateProviderRegistry.register(bow, new Identifier("pulling"),
-                (stack, world, entity, seed) -> entity != null && entity.isUsingItem()
-                        && entity.getActiveItem() == stack ? 1.0f : 0.0f);
+        register(MoreWeaponryItems.HEAVY_CROSSBOW, new Identifier("pulling"), (stack, world, entity, seed) ->
+                (entity != null && entity.isUsingItem() && entity.getActiveItem()
+                        == stack && !HeavyCrossBowItem.isCharged(stack)) ? 1.0F : 0.0F);
+        register(MoreWeaponryItems.HEAVY_CROSSBOW, new Identifier("charged"), (stack, world, entity, seed) ->
+                (entity != null && HeavyCrossBowItem.isCharged(stack)) ? 1.0F : 0.0F);
+        register(MoreWeaponryItems.HEAVY_CROSSBOW, new Identifier("firework"), (stack, world, entity, seed) ->
+                (entity != null && HeavyCrossBowItem.isCharged(stack)
+                        && HeavyCrossBowItem.hasProjectile(stack, Items.FIREWORK_ROCKET)) ? 1.0F : 0.0F);
     }
 
 }
