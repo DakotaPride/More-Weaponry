@@ -403,5 +403,6 @@
   "misc.moreweaponry.core.abilities": "Abilities",
   "entity.subtitle.buried_knight_ambient": "Unknown Sounds",
   "entity.subtitle.buried_knight_death": "Buried Knight Dies",
-  "entity.subtitle.buried_knight_hurt": "Buried Knight Hurts"
+  "entity.subtitle.buried_knight_hurt": "Buried Knight Hurts",
+  "message.moreweaponry.celestial_medallion.activated": "Celestial Medallion Activated!"
 }

@@ -17,6 +17,9 @@ public class MoreWeaponryModelPredicateProvider extends ModelPredicateProviderRe
         register(MoreWeaponryItems.HEAVY_CROSSBOW, new Identifier("firework"), (stack, world, entity, seed) ->
                 (entity != null && HeavyCrossBowItem.isCharged(stack)
                         && HeavyCrossBowItem.hasProjectile(stack, Items.FIREWORK_ROCKET)) ? 1.0F : 0.0F);
+        register(MoreWeaponryItems.HEAVY_CROSSBOW, new Identifier("pull"), (stack, world, entity, seed) -> (entity == null)
+                ? 0.0F : (HeavyCrossBowItem.isCharged(stack) ? 0.0F :
+                ((stack.getMaxUseTime() - entity.getItemUseTimeLeft()) / HeavyCrossBowItem.getPullTime(stack))));
     }
 
 }

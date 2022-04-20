@@ -63,7 +63,7 @@ public class HeavyCrossBowItem extends RangedWeaponItem
 
 
     public Predicate<ItemStack> getProjectiles() {
-        return BOW_PROJECTILES;
+        return itemStack -> itemStack.isOf(MoreWeaponryItems.IRON_BOLT);
     }
 
 

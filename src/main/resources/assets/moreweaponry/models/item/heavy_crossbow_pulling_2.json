@@ -193,29 +193,25 @@
 			"translation": [0.75, 3.25, 1.25]
 		},
 		"thirdperson_lefthand": {
-			"translation": [-0.75, 3.25, 1.25]
+			"translation": [-1.25, 3.25, 1.25]
 		},
 		"firstperson_righthand": {
-			"rotation": [3, 0, 0],
-			"translation": [3.75, 5, 4.75],
-			"scale": [1.6, 1.6, 1.6]
+			"translation": [5.25, 1.5, -2]
 		},
 		"firstperson_lefthand": {
-			"rotation": [3, 0, 0],
-			"translation": [3.75, 5, 4.75],
-			"scale": [1.6, 1.6, 1.6]
+			"translation": [5.25, 1.5, -2]
 		},
 		"ground": {
-			"translation": [0, 0.25, 0],
+			"translation": [0, 2, 0],
 			"scale": [0.6, 0.6, 0.6]
 		},
 		"gui": {
 			"rotation": [90, -45, 0],
-			"translation": [0.25, -1.25, 4.25]
+			"translation": [-0.25, -1.5, 4.25]
 		},
 		"fixed": {
 			"rotation": [90, 45, 0],
-			"translation": [-0.25, 0, 2]
+			"translation": [1.5, 0, 6.75]
 		}
 	},
 	"groups": [

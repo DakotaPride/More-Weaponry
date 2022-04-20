@@ -334,7 +334,7 @@ public class MoreWeaponryItems {
             new FabricShieldItem(new FabricItemSettings().maxDamage(3276).group(MoreWeaponryItemGroup.MORE_WEAPONRY), 7, 18, MoreWeaponryItems.ELDER_GUARDIAN_SCALE));
 
     public static final Item ELDER_SCALE_ARTIFACT = registerItem("elder_scale_artifact",
-            new ElderScaleArtifactItem((ToolMaterial) MoreWeaponryToolMaterials.ELDER_GUARDIAN_SCALE, 15, -2.9f,
+            new ElderScaleArtifactItem((ToolMaterial) MoreWeaponryToolMaterials.ELDER_GUARDIAN_SCALE, 9, -2.9f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item GOLDEN_KNIFE = registerItem("golden_knife",
@@ -437,7 +437,7 @@ public class MoreWeaponryItems {
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item WITHER_BROAD_HAMMER = registerItem("wither_broad_hammer",
-            new WitherBroadHammerItem((ToolMaterial) MoreWeaponryToolMaterials.WITHERED, 24, -3.0f,
+            new WitherBroadHammerItem((ToolMaterial) MoreWeaponryToolMaterials.WITHERED, 11, -3.0f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item WITHERING_HANDLE = registerItem("withering_handle",
@@ -870,9 +870,10 @@ public class MoreWeaponryItems {
     public static final Item HEAVY_SWORD = registerItem("heavy_sword",
             new HeavySwordItem((ToolMaterial) ToolMaterials.IRON, 11, -3.0f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
-
     public static final Item HEAVY_CROSSBOW = registerItem("heavy_crossbow",
-            new HeavyCrossBowItem(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+            new HeavyCrossBowItem(new FabricItemSettings().maxDamage(521).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+    public static final Item IRON_BOLT = registerItem("iron_bolt",
+            new Item(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item CELESTIAL_MEDALLION = registerItem("celestial_medallion",
             new CelestialMadalianItem(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));

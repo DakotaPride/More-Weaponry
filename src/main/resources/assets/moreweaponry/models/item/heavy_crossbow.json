@@ -258,7 +258,7 @@
 				"charged": 1,
 				"firework": 1
 			},
-			"model": "moreweaponry:item/heavy_crossbow_firework"
+			"model": "moreweaponry:item/heavy_crossbow_rocket"
 		}
 	]
 }

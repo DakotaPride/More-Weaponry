@@ -8,19 +8,18 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.Formatting;
-import net.minecraft.util.Hand;
-import net.minecraft.util.TypedActionResult;
+import net.minecraft.util.*;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
 public class CelestialMadalianItem extends Item {
+
     public CelestialMadalianItem(Settings settings) {
         super(settings);
     }
@@ -30,6 +29,9 @@ public class CelestialMadalianItem extends Item {
         playerEntity.playSound(SoundEvents.PARTICLE_SOUL_ESCAPE, 2.0F, 1.0F);
         playerEntity.addStatusEffect(new StatusEffectInstance(MoreWeaponryEffects.CELESTIAL, 200, 0), playerEntity);
         playerEntity.getItemCooldownManager().set(this, 1200);
+        ServerPlayerEntity entity = null;
+        assert false;
+        entity.sendSystemMessage(new TranslatableText("message.moreweaponry.celestial_medallion.activated"), Util.NIL_UUID);
         return TypedActionResult.success(playerEntity.getStackInHand(hand));
     }
 
