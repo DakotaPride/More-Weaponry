@@ -1,7 +1,8 @@
-package net.DakotaPride.moreweaponry.item;
+package net.DakotaPride.moreweaponry.item.extra;
 
 import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.DakotaPride.moreweaponry.block.MoreWeaponryBlocks;
+import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;

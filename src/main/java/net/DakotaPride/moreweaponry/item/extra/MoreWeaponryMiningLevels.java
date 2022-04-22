@@ -1,4 +1,4 @@
-package net.DakotaPride.moreweaponry.item;
+package net.DakotaPride.moreweaponry.item.extra;
 
 public class MoreWeaponryMiningLevels {
 

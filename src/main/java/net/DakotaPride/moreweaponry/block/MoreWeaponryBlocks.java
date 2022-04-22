@@ -8,7 +8,7 @@ import net.DakotaPride.moreweaponry.block.entity.EssenceTranslatorBlock;
 import net.DakotaPride.moreweaponry.block.skulls.*;
 import net.DakotaPride.moreweaponry.block.skulls.WandererSkullBlock;
 import net.DakotaPride.moreweaponry.block.skulls.WatcherSkullBlock;
-import net.DakotaPride.moreweaponry.item.MoreWeaponryItemGroup;
+import net.DakotaPride.moreweaponry.item.extra.MoreWeaponryItemGroup;
 import net.DakotaPride.moreweaponry.item.custom.KuroPlantBlock;
 import net.DakotaPride.moreweaponry.sound.MoreWeaponrySoundEvents;
 import net.DakotaPride.moreweaponry.world.features.tree.FrodonSaplingGenerator;

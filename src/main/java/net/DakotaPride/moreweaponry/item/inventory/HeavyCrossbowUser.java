@@ -1,15 +1,13 @@
 package net.DakotaPride.moreweaponry.item.inventory;
 
-import net.DakotaPride.moreweaponry.item.HeavyCrossBowItem;
+import net.DakotaPride.moreweaponry.item.custom.HeavyCrossBowItem;
 import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.RangedAttackMob;
 import net.minecraft.entity.projectile.ProjectileEntity;
 import net.minecraft.entity.projectile.ProjectileUtil;
-import net.minecraft.item.CrossbowItem;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.Quaternion;

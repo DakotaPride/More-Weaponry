@@ -2,8 +2,7 @@ package net.DakotaPride.moreweaponry.item.custom.bard_tools;
 
 import com.google.common.collect.ImmutableMap;
 import net.DakotaPride.moreweaponry.effect.MoreWeaponryEffects;
-import net.DakotaPride.moreweaponry.item.MoreWeaponryArmorMaterials;
-import net.DakotaPride.moreweaponry.item.custom.sickened_tools.SickenedArmorItem;
+import net.DakotaPride.moreweaponry.item.extra.MoreWeaponryArmorMaterials;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.effect.StatusEffectInstance;

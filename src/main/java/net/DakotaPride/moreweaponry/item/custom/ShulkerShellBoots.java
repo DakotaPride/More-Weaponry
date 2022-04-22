@@ -1,7 +1,7 @@
 package net.DakotaPride.moreweaponry.item.custom;
 
 import com.google.common.collect.ImmutableMap;
-import net.DakotaPride.moreweaponry.item.MoreWeaponryArmorMaterials;
+import net.DakotaPride.moreweaponry.item.extra.MoreWeaponryArmorMaterials;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.Entity;
@@ -13,7 +13,6 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
-import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;

@@ -5,7 +5,6 @@ import net.DakotaPride.moreweaponry.effect.MoreWeaponryEffects;
 import net.DakotaPride.moreweaponry.effect.MoreWeaponryPotions;
 import net.DakotaPride.moreweaponry.enchantments.MoreWeaponryEnchantments;
 import net.DakotaPride.moreweaponry.entity.IronBoltEntity;
-import net.DakotaPride.moreweaponry.item.IronBoltItem;
 import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
 import net.DakotaPride.moreweaponry.painting.MoreWeaponryPaintings;
 import net.DakotaPride.moreweaponry.recipe.MoreWeaponryRecipes;

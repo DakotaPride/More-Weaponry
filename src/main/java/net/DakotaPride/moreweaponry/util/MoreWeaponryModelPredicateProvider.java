@@ -1,9 +1,8 @@
 package net.DakotaPride.moreweaponry.util;
 
-import net.DakotaPride.moreweaponry.item.HeavyCrossBowItem;
+import net.DakotaPride.moreweaponry.item.custom.HeavyCrossBowItem;
 import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
 import net.minecraft.client.item.ModelPredicateProviderRegistry;
-import net.minecraft.item.CrossbowItem;
 import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 

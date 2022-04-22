@@ -1,5 +1,6 @@
-package net.DakotaPride.moreweaponry.item;
+package net.DakotaPride.moreweaponry.item.extra;
 
+import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Items;

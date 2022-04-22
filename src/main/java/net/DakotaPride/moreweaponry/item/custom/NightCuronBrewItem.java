@@ -1,5 +1,6 @@
-package net.DakotaPride.moreweaponry.item;
+package net.DakotaPride.moreweaponry.item.custom;
 
+import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;

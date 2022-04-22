@@ -1,4 +1,4 @@
-package net.DakotaPride.moreweaponry.item;
+package net.DakotaPride.moreweaponry.item.custom;
 
 import net.DakotaPride.moreweaponry.entity.IronBoltEntity;
 import net.minecraft.entity.LivingEntity;

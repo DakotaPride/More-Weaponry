@@ -1,5 +1,6 @@
-package net.DakotaPride.moreweaponry.item;
+package net.DakotaPride.moreweaponry.item.extra;
 
+import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
 import net.fabricmc.yarn.constants.MiningLevels;
 import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;

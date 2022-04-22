@@ -2,11 +2,10 @@ package net.DakotaPride.moreweaponry.item.custom.sickened_tools;
 
 import com.google.common.collect.ImmutableMap;
 import net.DakotaPride.moreweaponry.effect.MoreWeaponryEffects;
-import net.DakotaPride.moreweaponry.item.MoreWeaponryArmorMaterials;
+import net.DakotaPride.moreweaponry.item.extra.MoreWeaponryArmorMaterials;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
