@@ -30,7 +30,7 @@ public class CelestialMadalianItem extends Item {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity playerEntity, Hand hand) {
         ItemStack itemStack = playerEntity.getStackInHand(hand);
         playerEntity.playSound(SoundEvents.PARTICLE_SOUL_ESCAPE, 2.0F, 1.0F);
-        playerEntity.addStatusEffect(new StatusEffectInstance(MoreWeaponryEffects.CELESTIAL, 200, 0), playerEntity);
+        playerEntity.addStatusEffect(new StatusEffectInstance(MoreWeaponryEffects.CELESTIAL, 3600, 0), playerEntity);
         playerEntity.getItemCooldownManager().set(this, 1200);
         itemStack.damage(1, playerEntity, (player) -> player.sendToolBreakStatus(player.getActiveHand()));
         playerEntity.sendMessage(new TranslatableText("message.moreweaponry.celestial_medallion.activated", playerEntity.getEntityName()).formatted(Formatting.YELLOW), true);

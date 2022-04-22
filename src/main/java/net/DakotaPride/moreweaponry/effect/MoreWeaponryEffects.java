@@ -85,6 +85,10 @@ public class MoreWeaponryEffects {
             .addAttributeModifier(EntityAttributes.GENERIC_MAX_HEALTH, "5D6F0BA2-1186-46AC-B896-C61C5CEE99CC",
                     10.0D, EntityAttributeModifier.Operation.ADDITION);
 
+    public static final StatusEffect CONFUSION = new UnfortunedEffect(StatusEffectCategory.HARMFUL, 0xFFEBB2)
+            .addAttributeModifier(EntityAttributes.GENERIC_MOVEMENT_SPEED, "AF8B6E3F-3328-4C0A-AA36-5BA2BB9DBEF3",
+                    -1.0D, EntityAttributeModifier.Operation.MULTIPLY_TOTAL);
+
     public static final StatusEffect OVER_PACKAGED = new UnfortunedEffect(StatusEffectCategory.HARMFUL, 0x9B6260)
             .addAttributeModifier(EntityAttributes.GENERIC_MOVEMENT_SPEED, "AF8B6E3F-3328-4C0A-AA36-5BA2BB9DBEF3",
                     -0.1D, EntityAttributeModifier.Operation.MULTIPLY_TOTAL)
@@ -115,6 +119,7 @@ public class MoreWeaponryEffects {
         // Misc
 
         Registry.register(Registry.STATUS_EFFECT, new Identifier(MoreWeaponry.MOD_ID, "numbed"), NUMBED);
+        Registry.register(Registry.STATUS_EFFECT, new Identifier(MoreWeaponry.MOD_ID, "confusion"), CONFUSION);
         Registry.register(Registry.STATUS_EFFECT, new Identifier(MoreWeaponry.MOD_ID, "bleeding"), BLEEDING);
         Registry.register(Registry.STATUS_EFFECT, new Identifier(MoreWeaponry.MOD_ID, "celestial"), CELESTIAL);
         Registry.register(Registry.STATUS_EFFECT, new Identifier(MoreWeaponry.MOD_ID, "over_packaged"), OVER_PACKAGED);

@@ -9,7 +9,7 @@ public class MoreWeaponryDamageSource extends DamageSource {
 
     public static final MoreWeaponryDamageSource BLEEDING = (new MoreWeaponryDamageSource("bleeding")).setBypassesArmor().setUnblockable();
     public static final MoreWeaponryDamageSource ANCIENT_DARKNESS = (new MoreWeaponryDamageSource("ancient_darkness")).setBypassesArmor();
-    public static final MoreWeaponryDamageSource CELESTIALITE = (new MoreWeaponryDamageSource("celestialite"));
+    public static final MoreWeaponryDamageSource CELESTIALITE = (new MoreWeaponryDamageSource("celestialite")).setBypassesArmor().setUnblockable();
 
     public MoreWeaponryDamageSource(String name) {
         super(name);

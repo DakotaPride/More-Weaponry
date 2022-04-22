@@ -413,5 +413,7 @@
   "death.attack.bleeding": "%1$s bled to death",
   "death.attack.celestialite.player": "%1$s was overcome by a greater power",
   "death.attack.celestialite": "%1$s was overcome by a greater power",
-  "item.moreweaponry.iron_bolt": "Iron Bolt"
+  "item.moreweaponry.iron_bolt": "Iron Bolt",
+  "item.moreweaponry.bothering_might": "Bothering Might",
+  "effect.moreweaponry.confusion": "Confusion"
 }

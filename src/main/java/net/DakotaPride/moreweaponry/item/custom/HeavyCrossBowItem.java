@@ -370,6 +370,7 @@ public class HeavyCrossBowItem extends RangedWeaponItem
 
 
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+        tooltip.add( new TranslatableText("item.moreweaponry.description.double_handed").formatted(Formatting.DARK_RED));
         List<ItemStack> list = getProjectiles(stack);
         if (!isCharged(stack) || list.isEmpty()) {
             return;
@@ -388,7 +389,6 @@ public class HeavyCrossBowItem extends RangedWeaponItem
                 tooltip.addAll(list2);
             }
         }
-        tooltip.add( new TranslatableText("item.moreweaponry.description.double_handed").formatted(Formatting.DARK_RED));
     }
 
 

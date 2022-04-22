@@ -13,6 +13,7 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -72,6 +73,20 @@ public abstract class LivingEntityMixin {
             if (livingEntity.getOffHandStack().isOf(MoreWeaponryItems.HEAVY_CROSSBOW)) {
                 addStatusEffect(new StatusEffectInstance(MoreWeaponryEffects.OVER_PACKAGED, 100));
             }
+        } if (livingEntity.getMainHandStack().isOf(MoreWeaponryItems.IRON_BOLT)) {
+            removeStatusEffect(MoreWeaponryEffects.OVER_PACKAGED);
+        } if (livingEntity.getMainHandStack().isOf(Items.FIREWORK_ROCKET)) {
+            removeStatusEffect(MoreWeaponryEffects.OVER_PACKAGED);
+        } if (livingEntity.getMainHandStack().isOf(Items.ARROW)) {
+            removeStatusEffect(MoreWeaponryEffects.OVER_PACKAGED);
+        }
+
+        if (livingEntity.getOffHandStack().isOf(MoreWeaponryItems.IRON_BOLT)) {
+            removeStatusEffect(MoreWeaponryEffects.OVER_PACKAGED);
+        } if (livingEntity.getOffHandStack().isOf(Items.FIREWORK_ROCKET)) {
+            removeStatusEffect(MoreWeaponryEffects.OVER_PACKAGED);
+        } if (livingEntity.getOffHandStack().isOf(Items.ARROW)) {
+            removeStatusEffect(MoreWeaponryEffects.OVER_PACKAGED);
         }
 
         if (livingEntity.hasStatusEffect(StatusEffects.BLINDNESS)) {
@@ -80,6 +95,10 @@ public abstract class LivingEntityMixin {
             } if (livingEntity.getAttacker() instanceof CrawlerEntity) {
                 livingEntity.damage(MoreWeaponryDamageSource.ANCIENT_DARKNESS, 1.0F);
             }
+        }
+
+        if (livingEntity.hasStatusEffect(MoreWeaponryEffects.CELESTIAL)) {
+            livingEntity.damage(MoreWeaponryDamageSource.CELESTIALITE, 0.3F);
         }
 
     }
