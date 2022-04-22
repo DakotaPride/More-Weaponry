@@ -1,0 +1,15 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+      "potion": "minecraft:water",
+      "remainder": { "item": "minecraft:glass_bottle" }
+    },
+    {
+      "item": "moreweaponry:mare_diamond"
+    }
+  ],
+  "result": {
+    "item": "moreweaponry:rusted_mare_diamond"
+  }
+}
