@@ -10,75 +10,83 @@ import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.PersistentProjectileEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtList;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionUtil;
 import net.minecraft.potion.Potions;
-import net.minecraft.sound.SoundEvent;
-import net.minecraft.sound.SoundEvents;
-import net.minecraft.util.Util;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
 
-import java.util.Collection;
 import java.util.Iterator;
 import java.util.Set;
 
 public class IronBoltEntity extends PersistentProjectileEntity {
-    private static final TrackedData<Integer> COLOR = DataTracker.registerData(IronBoltEntity.class, TrackedDataHandlerRegistry.INTEGER);
-    private static final TrackedData<ItemStack> ITEM = DataTracker.registerData(IronBoltEntity.class, TrackedDataHandlerRegistry.ITEM_STACK);
-    private final Set<StatusEffectInstance> effects = Sets.newHashSet();
+    private static final int field_30660 = 600;
+    private static final int field_30658 = -1;
+    private static final TrackedData<Integer> COLOR;
+    private static final byte field_30659 = 0;
+    private Potion potion;
+    private final Set<StatusEffectInstance> effects;
     private boolean colorSet;
 
     public IronBoltEntity(EntityType<? extends IronBoltEntity> entityType, World world) {
         super(entityType, world);
+        this.potion = Potions.EMPTY;
+        this.effects = Sets.newHashSet();
     }
 
     public IronBoltEntity(World world, double x, double y, double z) {
         super(MoreWeaponry.IRON_BOLT, x, y, z, world);
+        this.potion = Potions.EMPTY;
+        this.effects = Sets.newHashSet();
     }
 
     public IronBoltEntity(World world, LivingEntity owner) {
         super(MoreWeaponry.IRON_BOLT, owner, world);
+        this.potion = Potions.EMPTY;
+        this.effects = Sets.newHashSet();
     }
 
-    protected ItemStack getItem() {
-        return this.getDataTracker().get(ITEM);
+    public void initFromStack(ItemStack stack) {
+        if (stack.isOf(MoreWeaponryItems.IRON_BOLT)) {
+            this.potion = Potions.EMPTY;
+            this.effects.clear();
+            this.dataTracker.set(COLOR, -1);
+        }
+
     }
 
-    public void setItem(ItemStack item) {
-        this.getDataTracker().set(ITEM, Util.make(item.copy(), stack -> stack.setCount(1)));
+    public static int getCustomPotionColor(ItemStack stack) {
+        NbtCompound nbtCompound = stack.getNbt();
+        return nbtCompound != null && nbtCompound.contains("CustomPotionColor", 99) ? nbtCompound.getInt("CustomPotionColor") : -1;
     }
 
-    @Override
-    public double getDamage() {
-        return 0.1f;
-    }
+    private void initColor() {
+        this.colorSet = false;
+        if (this.potion == Potions.EMPTY && this.effects.isEmpty()) {
+            this.dataTracker.set(COLOR, -1);
+        } else {
+            this.dataTracker.set(COLOR, PotionUtil.getColor(PotionUtil.getPotionEffects(this.potion, this.effects)));
+        }
 
-    @Override
-    public int getPunch() {
-        return 0;
     }
 
     public void addEffect(StatusEffectInstance effect) {
         this.effects.add(effect);
+        this.getDataTracker().set(COLOR, PotionUtil.getColor(PotionUtil.getPotionEffects(this.potion, this.effects)));
     }
 
-    @Override
     protected void initDataTracker() {
         super.initDataTracker();
         this.dataTracker.startTracking(COLOR, -1);
-        this.getDataTracker().startTracking(ITEM, ItemStack.EMPTY);
     }
 
-    @Override
     public void tick() {
         super.tick();
-
         if (this.world.isClient) {
             if (this.inGround) {
                 if (this.inGroundTime % 5 == 0) {
@@ -88,128 +96,133 @@ public class IronBoltEntity extends PersistentProjectileEntity {
                 this.spawnParticles(2);
             }
         } else if (this.inGround && this.inGroundTime != 0 && !this.effects.isEmpty() && this.inGroundTime >= 600) {
-            this.world.sendEntityStatus(this, (byte) 0);
+            this.world.sendEntityStatus(this, (byte)0);
+            this.potion = Potions.EMPTY;
             this.effects.clear();
             this.dataTracker.set(COLOR, -1);
         }
-    }
 
-    @Override
-    protected boolean tryPickup(PlayerEntity player) {
-        switch (this.pickupType) {
-            case ALLOWED: {
-                if (player.isCreative()) {
-                    return true;
-                } else {
-                    return player.getInventory().insertStack(this.asItemStack());
-                }
-            }
-            case CREATIVE_ONLY: {
-                return player.getAbilities().creativeMode;
-            }
-        }
-        return true;
     }
 
     private void spawnParticles(int amount) {
         int i = this.getColor();
-        if (i == -1 || amount <= 0) {
-            return;
-        }
-        double d = (double) (i >> 16 & 0xFF) / 255.0;
-        double e = (double) (i >> 8 & 0xFF) / 255.0;
-        double f = (double) (i >> 0 & 0xFF) / 255.0;
-        for (int j = 0; j < amount; ++j) {
-            this.world.addParticle(ParticleTypes.ENTITY_EFFECT, this.getParticleX(0.5), this.getRandomBodyY(), this.getParticleZ(0.5), d, e, f);
+        if (i != -1 && amount > 0) {
+            double d = (double)(i >> 16 & 255) / 255.0D;
+            double e = (double)(i >> 8 & 255) / 255.0D;
+            double f = (double)(i >> 0 & 255) / 255.0D;
+
+            for(int j = 0; j < amount; ++j) {
+                this.world.addParticle(ParticleTypes.ENTITY_EFFECT, this.getParticleX(0.5D), this.getRandomBodyY(), this.getParticleZ(0.5D), d, e, f);
+            }
+
         }
     }
 
     public int getColor() {
-        return this.dataTracker.get(COLOR);
+        return (Integer)this.dataTracker.get(COLOR);
     }
 
-    public void initFromStack(ItemStack stack) {
-        if (stack.isOf(MoreWeaponryItems.IRON_BOLT)) {
-            this.effects.clear();
-            this.dataTracker.set(COLOR, -1);
-        }
-
-    }
-
-    public void setColor(int color) {
+    private void setColor(int color) {
         this.colorSet = true;
         this.dataTracker.set(COLOR, color);
     }
 
-    @Override
     public void writeCustomDataToNbt(NbtCompound nbt) {
         super.writeCustomDataToNbt(nbt);
+        if (this.potion != Potions.EMPTY) {
+            nbt.putString("Potion", Registry.POTION.getId(this.potion).toString());
+        }
 
         if (this.colorSet) {
             nbt.putInt("Color", this.getColor());
         }
+
         if (!this.effects.isEmpty()) {
             NbtList nbtList = new NbtList();
-            for (StatusEffectInstance statusEffectInstance : this.effects) {
+            Iterator var3 = this.effects.iterator();
+
+            while(var3.hasNext()) {
+                StatusEffectInstance statusEffectInstance = (StatusEffectInstance)var3.next();
                 nbtList.add(statusEffectInstance.writeNbt(new NbtCompound()));
             }
+
             nbt.put("CustomPotionEffects", nbtList);
         }
 
-        if (!this.getItem().isEmpty()) {
-            nbt.put("Item", this.getItem().writeNbt(new NbtCompound()));
-        }
     }
 
-    @Override
     public void readCustomDataFromNbt(NbtCompound nbt) {
         super.readCustomDataFromNbt(nbt);
-        for (StatusEffectInstance statusEffectInstance : PotionUtil.getCustomPotionEffects(nbt)) {
+        if (nbt.contains("Potion", 8)) {
+            this.potion = PotionUtil.getPotion(nbt);
+        }
+
+        Iterator var2 = PotionUtil.getCustomPotionEffects(nbt).iterator();
+
+        while(var2.hasNext()) {
+            StatusEffectInstance statusEffectInstance = (StatusEffectInstance)var2.next();
             this.addEffect(statusEffectInstance);
         }
+
         if (nbt.contains("Color", 99)) {
             this.setColor(nbt.getInt("Color"));
+        } else {
+            this.initColor();
         }
 
-        this.setItem(ItemStack.fromNbt(nbt.getCompound("Item")));
     }
 
-    @Override
     protected void onHit(LivingEntity target) {
         super.onHit(target);
         Entity entity = this.getEffectCause();
+        Iterator var3 = this.potion.getEffects().iterator();
+
+        StatusEffectInstance statusEffectInstance;
+        while(var3.hasNext()) {
+            statusEffectInstance = (StatusEffectInstance)var3.next();
+            target.addStatusEffect(new StatusEffectInstance(statusEffectInstance.getEffectType(), Math.max(statusEffectInstance.getDuration() / 8, 1), statusEffectInstance.getAmplifier(), statusEffectInstance.isAmbient(), statusEffectInstance.shouldShowParticles()), entity);
+        }
 
         if (!this.effects.isEmpty()) {
-            for (StatusEffectInstance statusEffectInstance : this.effects) {
+            var3 = this.effects.iterator();
+
+            while(var3.hasNext()) {
+                statusEffectInstance = (StatusEffectInstance)var3.next();
                 target.addStatusEffect(statusEffectInstance, entity);
             }
         }
+
     }
 
-    @Override
     protected ItemStack asItemStack() {
-        return this.getItem();
+        if (this.effects.isEmpty() && this.potion == Potions.EMPTY) {
+            return new ItemStack(MoreWeaponryItems.IRON_BOLT);
+        } else {
+            ItemStack itemStack = new ItemStack(MoreWeaponryItems.IRON_BOLT);
+
+            return itemStack;
+        }
     }
 
-    @Override
     public void handleStatus(byte status) {
         if (status == 0) {
             int i = this.getColor();
             if (i != -1) {
-                double d = (double) (i >> 16 & 0xFF) / 255.0;
-                double e = (double) (i >> 8 & 0xFF) / 255.0;
-                double f = (double) (i >> 0 & 0xFF) / 255.0;
-                for (int j = 0; j < 20; ++j) {
-                    this.world.addParticle(ParticleTypes.ENTITY_EFFECT, this.getParticleX(0.5), this.getRandomBodyY(), this.getParticleZ(0.5), d, e, f);
+                double d = (double)(i >> 16 & 255) / 255.0D;
+                double e = (double)(i >> 8 & 255) / 255.0D;
+                double f = (double)(i >> 0 & 255) / 255.0D;
+
+                for(int j = 0; j < 20; ++j) {
+                    this.world.addParticle(ParticleTypes.ENTITY_EFFECT, this.getParticleX(0.5D), this.getRandomBodyY(), this.getParticleZ(0.5D), d, e, f);
                 }
             }
         } else {
             super.handleStatus(status);
         }
+
     }
 
-    @Override
-    protected SoundEvent getHitSound() {
-        return SoundEvents.ENTITY_IRON_GOLEM_DAMAGE;
+    static {
+        COLOR = DataTracker.registerData(IronBoltEntity.class, TrackedDataHandlerRegistry.INTEGER);
     }
 }

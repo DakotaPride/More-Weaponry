@@ -9,7 +9,8 @@ import net.minecraft.util.Identifier;
 
 @Environment(value = EnvType.CLIENT)
 public class IronBoltEntityRenderer extends ProjectileEntityRenderer<IronBoltEntity> {
-    public static final Identifier TEXTURE = new Identifier(MoreWeaponry.MOD_ID, "textures/entity/projectiles/iron_bolt.png");
+    public static final Identifier TEXTURE = new Identifier
+            (MoreWeaponry.MOD_ID, "textures/entity/projectiles/iron_bolt.png");
 
     public IronBoltEntityRenderer(EntityRendererFactory.Context context) {
         super(context);
