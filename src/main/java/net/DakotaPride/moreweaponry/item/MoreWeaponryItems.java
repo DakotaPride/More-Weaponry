@@ -873,10 +873,10 @@ public class MoreWeaponryItems {
     public static final Item HEAVY_CROSSBOW = registerItem("heavy_crossbow",
             new HeavyCrossBowItem(new FabricItemSettings().maxDamage(521).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
     public static final Item IRON_BOLT = registerItem("iron_bolt",
-            new Item(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+            new IronBoltItem(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item CELESTIAL_MEDALLION = registerItem("celestial_medallion",
-            new CelestialMadalianItem(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+            new CelestialMadalianItem(new FabricItemSettings().maxDamage(107).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item CELESTIAL_MEDALLION_SICKENED = registerItem("celestial_medallion_sickened",
             new SickenedCelestialMedallionItem(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));

@@ -1,6 +1,7 @@
 package net.DakotaPride.moreweaponry;
 
 import net.DakotaPride.moreweaponry.block.entity.MoreWeaponryBlockEntities;
+import net.DakotaPride.moreweaponry.entity.IronBoltEntityRenderer;
 import net.DakotaPride.moreweaponry.entity.MoreWeaponryEntityRegistry;
 import net.DakotaPride.moreweaponry.entity.client.armor.*;
 import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
@@ -11,6 +12,7 @@ import net.DakotaPride.moreweaponry.screen.MoreWeaponryScreenHandlers;
 import net.DakotaPride.moreweaponry.util.MoreWeaponryModelPredicateProvider;
 import net.DakotaPride.moreweaponry.util.MoreWeaponryRendererHelper;
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.client.rendereregistry.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.client.screenhandler.v1.ScreenRegistry;
 import software.bernie.geckolib3.renderers.geo.GeoArmorRenderer;
 
@@ -19,6 +21,7 @@ public class MoreClientWeaponry implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
 
+        EntityRendererRegistry.INSTANCE.register(MoreWeaponry.IRON_BOLT, IronBoltEntityRenderer::new);
 
         // ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex)
            //     -> 0x818269, MoreWeaponryBlocks.INTOXICATED_GRASS_BLOCK);

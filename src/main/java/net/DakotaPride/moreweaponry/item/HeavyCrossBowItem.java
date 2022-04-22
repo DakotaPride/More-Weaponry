@@ -1,13 +1,15 @@
 package net.DakotaPride.moreweaponry.item;
 
 import com.google.common.collect.Lists;
+import net.DakotaPride.moreweaponry.item.inventory.HeavyCrossbowUser;
 import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
-import net.minecraft.entity.CrossbowUser;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.player.PlayerAbilities;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.projectile.FireworkRocketEntity;
 import net.minecraft.entity.projectile.PersistentProjectileEntity;
 import net.minecraft.entity.projectile.ProjectileEntity;
@@ -58,7 +60,7 @@ public class HeavyCrossBowItem extends RangedWeaponItem
 
 
     public Predicate<ItemStack> getHeldProjectiles() {
-        return CROSSBOW_HELD_PROJECTILES;
+        return itemStack -> itemStack.isOf(MoreWeaponryItems.IRON_BOLT) || itemStack.isOf(Items.FIREWORK_ROCKET);
     }
 
 
@@ -108,7 +110,7 @@ public class HeavyCrossBowItem extends RangedWeaponItem
     }
 
 
-    private static boolean loadProjectiles(LivingEntity shooter, ItemStack projectile) {
+    private boolean loadProjectiles(LivingEntity shooter, ItemStack projectile) {
         int i = EnchantmentHelper.getLevel(Enchantments.MULTISHOT, projectile);
         int j = (i == 0) ? 1 : 3;
         boolean bl = (shooter instanceof PlayerEntity && (((PlayerEntity)shooter).getAbilities()).creativeMode);
@@ -121,7 +123,7 @@ public class HeavyCrossBowItem extends RangedWeaponItem
             }
 
             if (itemStack.isEmpty() && bl) {
-                itemStack = new ItemStack(Items.ARROW);
+                itemStack = new ItemStack(MoreWeaponryItems.IRON_BOLT);
                 itemStack2 = itemStack.copy();
             }
 
@@ -132,12 +134,12 @@ public class HeavyCrossBowItem extends RangedWeaponItem
 
         return true;
     }
-    private static boolean loadProjectile(LivingEntity shooter, ItemStack crossbow, ItemStack projectile, boolean simulated, boolean creative) {
+    private static boolean loadProjectile(LivingEntity shooter, ItemStack item, ItemStack projectile, boolean simulated, boolean creative) {
         ItemStack itemStack;
         if (projectile.isEmpty()) {
             return false;
         }
-        boolean bl = (creative && projectile.getItem() instanceof ArrowItem);
+        boolean bl = (creative && projectile.getItem() instanceof IronBoltItem);
 
 
         if (!bl && !creative && !simulated) {
@@ -150,7 +152,7 @@ public class HeavyCrossBowItem extends RangedWeaponItem
             itemStack = projectile.copy();
         }
 
-        putProjectile(crossbow, itemStack);
+        putProjectile(item, itemStack);
         return true;
     }
 
@@ -163,9 +165,9 @@ public class HeavyCrossBowItem extends RangedWeaponItem
         NbtCompound nbtCompound = stack.getOrCreateNbt();
         nbtCompound.putBoolean("Charged", charged);
     }
-    private static void putProjectile(ItemStack crossbow, ItemStack projectile) {
+    private static void putProjectile(ItemStack itemStack, ItemStack projectile) {
         NbtList nbtList;
-        NbtCompound nbtCompound = crossbow.getOrCreateNbt();
+        NbtCompound nbtCompound = itemStack.getOrCreateNbt();
 
         if (nbtCompound.contains("ChargedProjectiles", 9)) {
             nbtList = nbtCompound.getList("ChargedProjectiles", 10);
@@ -178,9 +180,9 @@ public class HeavyCrossBowItem extends RangedWeaponItem
         nbtCompound.put("ChargedProjectiles", nbtList);
     }
 
-    private static List<ItemStack> getProjectiles(ItemStack crossbow) {
+    private static List<ItemStack> getProjectiles(ItemStack itemStack) {
         List<ItemStack> list = Lists.newArrayList();
-        NbtCompound nbtCompound = crossbow.getNbt();
+        NbtCompound nbtCompound = itemStack.getNbt();
         if (nbtCompound != null &&
                 nbtCompound.contains("ChargedProjectiles", 9)) {
             NbtList nbtList = nbtCompound.getList("ChargedProjectiles", 10);
@@ -195,8 +197,8 @@ public class HeavyCrossBowItem extends RangedWeaponItem
         return list;
     }
 
-    private static void clearProjectiles(ItemStack crossbow) {
-        NbtCompound nbtCompound = crossbow.getNbt();
+    private static void clearProjectiles(ItemStack itemStack) {
+        NbtCompound nbtCompound = itemStack.getNbt();
         if (nbtCompound != null) {
             NbtList nbtList = nbtCompound.getList("ChargedProjectiles", 9);
             nbtList.clear();
@@ -204,10 +206,10 @@ public class HeavyCrossBowItem extends RangedWeaponItem
         }
     }
 
-    public static boolean hasProjectile(ItemStack crossbow, Item item) {
-        return getProjectiles(crossbow).stream().anyMatch(s -> s.isOf(item));
+    public static boolean hasProjectile(ItemStack itemStack, Item item) {
+        return getProjectiles(itemStack).stream().anyMatch(s -> s.isOf(item));
     }
-    private static void shoot(World world, LivingEntity shooter, Hand hand, ItemStack crossbow, ItemStack projectile, float soundPitch, boolean creative, float speed, float divergence, float simulated) {
+    private static void shoot(World world, LivingEntity shooter, Hand hand, ItemStack itemStack, ItemStack projectile, float soundPitch, boolean creative, float speed, float divergence, float simulated) {
         ProjectileEntity projectileEntity;
         if (world.isClient) {
             return;
@@ -219,15 +221,15 @@ public class HeavyCrossBowItem extends RangedWeaponItem
         if (bl) {
             projectileEntity = new FireworkRocketEntity(world, projectile, shooter, shooter.getX(), shooter.getEyeY() - 0.15000000596046448D, shooter.getZ(), true);
         } else {
-            projectileEntity = createArrow(world, shooter, crossbow, projectile);
+            projectileEntity = createIronBolt(world, shooter, itemStack, projectile);
             if (creative || simulated != 0.0F) {
                 ((PersistentProjectileEntity)projectileEntity).pickupType = PersistentProjectileEntity.PickupPermission.CREATIVE_ONLY;
             }
         }
 
-        if (shooter instanceof CrossbowUser) {
-            CrossbowUser crossbowUser = (CrossbowUser)shooter;
-            crossbowUser.shoot(crossbowUser.getTarget(), crossbow, projectileEntity, simulated);
+        if (shooter instanceof HeavyCrossbowUser) {
+            HeavyCrossbowUser heavyCrossbowUser = (HeavyCrossbowUser)shooter;
+            heavyCrossbowUser.shoot(heavyCrossbowUser.getTarget(), itemStack, projectileEntity, simulated);
         } else {
             Vec3d crossbowUser = shooter.getOppositeRotationVector(1.0F);
             Quaternion quaternion = new Quaternion(new Vec3f(crossbowUser), simulated, true);
@@ -237,21 +239,21 @@ public class HeavyCrossBowItem extends RangedWeaponItem
             projectileEntity.setVelocity(vec3f.getX(), vec3f.getY(), vec3f.getZ(), speed, divergence);
         }
 
-        crossbow.damage(bl ? 3 : 1, shooter, e -> e.sendToolBreakStatus(hand));
+        itemStack.damage(bl ? 3 : 1, shooter, e -> e.sendToolBreakStatus(hand));
         world.spawnEntity(projectileEntity);
         world.playSound((PlayerEntity)null, shooter.getX(), shooter.getY(), shooter.getZ(), SoundEvents.ITEM_CROSSBOW_SHOOT, SoundCategory.PLAYERS, 1.0F, soundPitch);
     }
 
-    private static PersistentProjectileEntity createArrow(World world, LivingEntity entity, ItemStack crossbow, ItemStack arrow) {
-        ArrowItem arrowItem = (arrow.getItem() instanceof ArrowItem) ? (ArrowItem)arrow.getItem() : (ArrowItem)Items.ARROW;
-        PersistentProjectileEntity persistentProjectileEntity = arrowItem.createArrow(world, arrow, entity);
+    private static PersistentProjectileEntity createIronBolt(World world, LivingEntity entity, ItemStack itemStack, ItemStack ironBolt) {
+        IronBoltItem ironBoltItem = (ironBolt.getItem() instanceof IronBoltItem) ? (IronBoltItem)ironBolt.getItem() : (IronBoltItem)MoreWeaponryItems.IRON_BOLT;
+        PersistentProjectileEntity persistentProjectileEntity = ironBoltItem.createIronBolt(world, ironBolt, entity);
         if (entity instanceof PlayerEntity) {
             persistentProjectileEntity.setCritical(true);
         }
         persistentProjectileEntity.setSound(SoundEvents.ITEM_CROSSBOW_HIT);
         persistentProjectileEntity.setShotFromCrossbow(true);
 
-        int i = EnchantmentHelper.getLevel(Enchantments.PIERCING, crossbow);
+        int i = EnchantmentHelper.getLevel(Enchantments.PIERCING, itemStack);
         if (i > 0) {
             persistentProjectileEntity.setPierceLevel((byte)i);
         }
@@ -387,6 +389,7 @@ public class HeavyCrossBowItem extends RangedWeaponItem
                 tooltip.addAll(list2);
             }
         }
+        tooltip.add( new TranslatableText("item.moreweaponry.description.double_handed").formatted(Formatting.DARK_RED));
     }
 
 

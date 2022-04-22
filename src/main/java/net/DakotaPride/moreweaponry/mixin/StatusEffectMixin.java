@@ -1,6 +1,7 @@
 package net.DakotaPride.moreweaponry.mixin;
 
 import net.DakotaPride.moreweaponry.effect.MoreWeaponryEffects;
+import net.DakotaPride.moreweaponry.entity.damage.MoreWeaponryDamageSource;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffects;
@@ -25,6 +26,10 @@ public class StatusEffectMixin {
             entity.removeStatusEffect(StatusEffects.REGENERATION);
         } else if (entity.hasStatusEffect(MoreWeaponryEffects.WEBBED)) {
             entity.removeStatusEffect(StatusEffects.REGENERATION);
+        }
+
+        if (entity.hasStatusEffect(MoreWeaponryEffects.BLEEDING)) {
+            entity.damage(MoreWeaponryDamageSource.BLEEDING, 2.0F);
         }
 
         if (entity.hasStatusEffect(MoreWeaponryEffects.WATCHER)) {

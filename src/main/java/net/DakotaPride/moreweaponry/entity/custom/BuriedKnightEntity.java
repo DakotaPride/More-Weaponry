@@ -1,8 +1,10 @@
 package net.DakotaPride.moreweaponry.entity.custom;
 
+import net.DakotaPride.moreweaponry.effect.MoreWeaponryEffects;
 import net.DakotaPride.moreweaponry.sound.MoreWeaponrySoundEvents;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
@@ -79,6 +81,15 @@ public class BuriedKnightEntity extends HostileEntity implements IAnimatable {
                 != StatusEffects.WITHER;
     }
 
+    public boolean damage(DamageSource source, float amount) {
+        if (source.getAttacker() instanceof BuriedKnightEntity) {
+            LivingEntity attacker = (LivingEntity) source.getAttacker();
+            attacker.addStatusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, 60), this);
+        }
+
+        return super.damage(source, amount);
+    }
+
     @Override
     public void registerControllers(AnimationData animationData) {
         animationData.addAnimationController(new AnimationController(this, "controller",
@@ -87,7 +98,7 @@ public class BuriedKnightEntity extends HostileEntity implements IAnimatable {
 
     @Override
     protected SoundEvent getAmbientSound() {
-        return MoreWeaponrySoundEvents.ENTITY_BURIED_KNIGHT_AMBIENT;
+        return null;
     }
 
     @Override

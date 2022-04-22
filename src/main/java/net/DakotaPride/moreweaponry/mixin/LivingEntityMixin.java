@@ -1,12 +1,19 @@
 package net.DakotaPride.moreweaponry.mixin;
 
 import net.DakotaPride.moreweaponry.effect.MoreWeaponryEffects;
+import net.DakotaPride.moreweaponry.entity.custom.BuriedKnightEntity;
+import net.DakotaPride.moreweaponry.entity.custom.CrawlerEntity;
+import net.DakotaPride.moreweaponry.entity.custom.SickenedEntity;
+import net.DakotaPride.moreweaponry.entity.damage.MoreWeaponryDamageSource;
+import net.DakotaPride.moreweaponry.item.HeavyCrossBowItem;
 import net.DakotaPride.moreweaponry.item.custom.HeavySwordItem;
 import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.ItemStack;
 import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
@@ -56,6 +63,27 @@ public abstract class LivingEntityMixin {
         } if (livingEntity.getOffHandStack().isOf(MoreWeaponryItems.POWERED_SICKENED_HUSK_MOB_CORE)) {
             removeStatusEffect(MoreWeaponryEffects.PLAGUED);
         }
+
+
+        if (itemStack.getItem() instanceof HeavyCrossBowItem) {
+            if (!livingEntity.getOffHandStack().isEmpty()) {
+                addStatusEffect(new StatusEffectInstance(MoreWeaponryEffects.OVER_PACKAGED, 100));
+            }
+
+        } if (!livingEntity.getMainHandStack().isEmpty()) {
+            if (livingEntity.getOffHandStack().isOf(MoreWeaponryItems.HEAVY_CROSSBOW)) {
+                addStatusEffect(new StatusEffectInstance(MoreWeaponryEffects.OVER_PACKAGED, 100));
+            }
+        }
+
+        if (livingEntity.hasStatusEffect(StatusEffects.BLINDNESS)) {
+            if (livingEntity.getAttacker() instanceof BuriedKnightEntity) {
+                livingEntity.damage(MoreWeaponryDamageSource.ANCIENT_DARKNESS, 1.0F);
+            } if (livingEntity.getAttacker() instanceof CrawlerEntity) {
+                livingEntity.damage(MoreWeaponryDamageSource.ANCIENT_DARKNESS, 1.0F);
+            }
+        }
+
     }
 
 }

@@ -2,6 +2,7 @@ package net.DakotaPride.moreweaponry.entity.custom;
 
 import net.DakotaPride.moreweaponry.block.MoreWeaponryBlocks;
 import net.DakotaPride.moreweaponry.effect.MoreWeaponryEffects;
+import net.DakotaPride.moreweaponry.entity.damage.MoreWeaponryDamageSource;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.*;
@@ -56,6 +57,7 @@ public class SickenedEntity extends HostileEntity implements IAnimatable {
     public boolean damage(DamageSource source, float amount) {
         if (source.getAttacker() != null && !source.isProjectile() && source.getAttacker() instanceof LivingEntity) {
             LivingEntity attacker = (LivingEntity) source.getAttacker();
+            attacker.damage(MoreWeaponryDamageSource.CELESTIALITE, 0.0F);
             attacker.addStatusEffect(new StatusEffectInstance(MoreWeaponryEffects.PLAGUED, 100), this);
         }
 

@@ -12,6 +12,7 @@ public class MoreWeaponrySoundEvents {
     public static SoundEvent ENTITY_BURIED_KNIGHT_AMBIENT = registerSoundEvent("entity_buried_knight_ambient");
     public static SoundEvent ENTITY_BURIED_KNIGHT_DEATH = registerSoundEvent("entity_buried_knight_death");
     public static SoundEvent ENTITY_BURIED_KNIGHT_HURT = registerSoundEvent("entity_buried_knight_hurt");
+    public static SoundEvent ENTITY_CRAWLER_AMBIENT = registerSoundEvent("entity_crawler_ambient");
     public static SoundEvent WARDENS_STEP = registerSoundEvent("wardens_step");
 
 

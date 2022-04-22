@@ -2,13 +2,15 @@ package net.DakotaPride.moreweaponry.item.custom.celestial_madalian;
 
 import net.DakotaPride.moreweaponry.effect.MoreWeaponryEffects;
 import net.minecraft.client.item.TooltipContext;
+import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.ItemCooldownManager;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
-import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
@@ -19,25 +21,20 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class CelestialMadalianItem extends Item {
-
     public CelestialMadalianItem(Settings settings) {
         super(settings);
     }
 
+
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity playerEntity, Hand hand) {
+        ItemStack itemStack = playerEntity.getStackInHand(hand);
         playerEntity.playSound(SoundEvents.PARTICLE_SOUL_ESCAPE, 2.0F, 1.0F);
         playerEntity.addStatusEffect(new StatusEffectInstance(MoreWeaponryEffects.CELESTIAL, 200, 0), playerEntity);
         playerEntity.getItemCooldownManager().set(this, 1200);
-        ServerPlayerEntity entity = null;
-        assert false;
-        entity.sendSystemMessage(new TranslatableText("message.moreweaponry.celestial_medallion.activated"), Util.NIL_UUID);
-        return TypedActionResult.success(playerEntity.getStackInHand(hand));
-    }
-
-    @Override
-    public ActionResult useOnBlock(ItemUsageContext context) {
-        return super.useOnBlock(context);
+        itemStack.damage(1, playerEntity, (player) -> player.sendToolBreakStatus(player.getActiveHand()));
+        playerEntity.sendMessage(new TranslatableText("message.moreweaponry.celestial_medallion.activated", playerEntity.getEntityName()).formatted(Formatting.YELLOW), true);
+        return TypedActionResult.success(itemStack);
     }
 
     public ItemCooldownManager getItemCooldownManager() {

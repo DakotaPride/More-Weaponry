@@ -83,7 +83,7 @@ public class MoreWeaponryEffects {
 
     public static final StatusEffect CELESTIAL = new CelestialEffect(StatusEffectCategory.BENEFICIAL, 0xFFEBB2)
             .addAttributeModifier(EntityAttributes.GENERIC_MAX_HEALTH, "5D6F0BA2-1186-46AC-B896-C61C5CEE99CC",
-                    5.0D, EntityAttributeModifier.Operation.MULTIPLY_TOTAL);
+                    10.0D, EntityAttributeModifier.Operation.ADDITION);
 
     public static final StatusEffect OVER_PACKAGED = new UnfortunedEffect(StatusEffectCategory.HARMFUL, 0x9B6260)
             .addAttributeModifier(EntityAttributes.GENERIC_MOVEMENT_SPEED, "AF8B6E3F-3328-4C0A-AA36-5BA2BB9DBEF3",

@@ -1,5 +1,7 @@
 package net.DakotaPride.moreweaponry.entity.custom;
 
+import net.DakotaPride.moreweaponry.entity.damage.MoreWeaponryDamageSource;
+import net.DakotaPride.moreweaponry.sound.MoreWeaponrySoundEvents;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.*;
@@ -67,7 +69,7 @@ public class CrawlerEntity extends HostileEntity implements IAnimatable {
 
     @Override
     protected SoundEvent getAmbientSound() {
-        return SoundEvents.AMBIENT_CAVE;
+        return MoreWeaponrySoundEvents.ENTITY_CRAWLER_AMBIENT;
     }
 
     @Override

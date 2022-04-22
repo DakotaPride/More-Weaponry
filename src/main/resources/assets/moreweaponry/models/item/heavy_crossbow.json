@@ -231,14 +231,14 @@
 			"predicate": {
 				"pulling": 1
 			},
-			"model": "moreweaponry:item/heavy_crossbow_pulling_0"
+			"model": "moreweaponry:item/heavy_crossbow_pulling_1"
 		},
 		{
 			"predicate": {
 				"pulling": 1,
 				"pull": 0.58
 			},
-			"model": "moreweaponry:item/heavy_crossbow_pulling_1"
+			"model": "moreweaponry:item/heavy_crossbow_pulling_2"
 		},
 		{
 			"predicate": {

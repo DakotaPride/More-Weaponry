@@ -404,5 +404,14 @@
   "entity.subtitle.buried_knight_ambient": "Unknown Sounds",
   "entity.subtitle.buried_knight_death": "Buried Knight Dies",
   "entity.subtitle.buried_knight_hurt": "Buried Knight Hurts",
-  "message.moreweaponry.celestial_medallion.activated": "Celestial Medallion Activated!"
+  "entity.subtitle.crawler_ambient": "Unknown Sounds",
+  "message.moreweaponry.celestial_medallion.activated": "%1$s Has Activated Celestial Medallion",
+  "item.moreweaponry.heavy_crossbow": "Heavy Crossbow",
+  "death.attack.ancient_darkness.player": "%1$s succumbed to an unknown darkness...",
+  "death.attack.ancient_darkness": "%1$s succumbed to an unknown darkness...",
+  "death.attack.bleeding.player": "%1$s bled to death",
+  "death.attack.bleeding": "%1$s bled to death",
+  "death.attack.celestialite.player": "%1$s was overcome by a greater power",
+  "death.attack.celestialite": "%1$s was overcome by a greater power",
+  "item.moreweaponry.iron_bolt": "Iron Bolt"
 }
