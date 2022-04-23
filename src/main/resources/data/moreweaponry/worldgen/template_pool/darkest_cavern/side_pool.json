@@ -1,0 +1,42 @@
+{
+  "name": "moreweaponry:darkest_cavern/side_pool",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 100,
+      "element": {
+        "location": "moreweaponry:darkest_cavern_fortress_bridge_one",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 100,
+      "element": {
+        "location": "moreweaponry:darkest_cavern_fortress_bridge_two",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 100,
+      "element": {
+        "location": "moreweaponry:darkest_cavern_fortress_bridge_three",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 100,
+      "element": {
+        "location": "moreweaponry:darkest_cavern_fortress_bridge_four",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

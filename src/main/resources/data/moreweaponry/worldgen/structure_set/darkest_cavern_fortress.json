@@ -1,12 +1,12 @@
 {
   "structures": [
     {
-      "structure": "moreweaponry:wanderer_library_main",
+      "structure": "moreweaponry:darkest_cavern_fortress",
       "weight": 1
     }
   ],
   "placement": {
-    "salt": 11,
+    "salt": 12,
 
     "spacing": 16,
 

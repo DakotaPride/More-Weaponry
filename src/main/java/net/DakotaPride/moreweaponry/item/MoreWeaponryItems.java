@@ -879,6 +879,8 @@ public class MoreWeaponryItems {
     public static final Item BOTHERING_MIGHT = registerItem("bothering_might",
             new BotheringMightSwordItem((ToolMaterial) ToolMaterials.DIAMOND, 12, -2.5f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+    public static final Item CRAWLER_TOOTH = registerItem("crawler_tooth",
+            new Item(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item CELESTIAL_MEDALLION = registerItem("celestial_medallion",
             new CelestialMadalianItem(new FabricItemSettings().maxDamage(107).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));

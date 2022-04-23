@@ -1,16 +1,11 @@
 {
-  "name": "moreweaponry:wanderer_library_main/start_pool",
-
+  "name": "moreweaponry:darkest_cavern/start_pool",
   "fallback": "minecraft:empty",
-
   "elements": [
     {
-
       "weight": 1,
       "element": {
-
-        "location": "moreweaponry:wanderer_library_main",
-
+        "location": "moreweaponry:darkest_cavern_fortress_intersection",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
