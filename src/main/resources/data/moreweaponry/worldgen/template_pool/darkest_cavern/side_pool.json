@@ -5,6 +5,15 @@
     {
       "weight": 100,
       "element": {
+        "location": "moreweaponry:darkest_cavern_fortress_armory_room",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 100,
+      "element": {
         "location": "moreweaponry:darkest_cavern_fortress_bridge_one",
         "processors": "minecraft:empty",
         "projection": "rigid",
@@ -23,7 +32,7 @@
     {
       "weight": 100,
       "element": {
-        "location": "moreweaponry:darkest_cavern_fortress_bridge_three",
+        "location": "moreweaponry:darkest_cavern_fortress_statue_intersection",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -32,7 +41,25 @@
     {
       "weight": 100,
       "element": {
-        "location": "moreweaponry:darkest_cavern_fortress_bridge_four",
+        "location": "moreweaponry:darkest_cavern_fortress_library_room",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 100,
+      "element": {
+        "location": "moreweaponry:darkest_cavern_fortress_statue_bridge_one",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 100,
+      "element": {
+        "location": "moreweaponry:darkest_cavern_fortress_statue_bridge_two",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
