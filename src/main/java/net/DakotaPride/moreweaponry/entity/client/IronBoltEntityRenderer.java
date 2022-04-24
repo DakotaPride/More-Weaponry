@@ -1,6 +1,7 @@
-package net.DakotaPride.moreweaponry.entity;
+package net.DakotaPride.moreweaponry.entity.client;
 
 import net.DakotaPride.moreweaponry.MoreWeaponry;
+import net.DakotaPride.moreweaponry.entity.custom.IronBoltEntity;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.render.entity.EntityRendererFactory;

@@ -43,6 +43,7 @@ public class MoreWeaponryRegistries {
 
         FabricDefaultAttributeRegistry.register(MoreWeaponryEntities.BURIED_KNIGHT, BuriedKnightEntity.setAttributes());
         FabricDefaultAttributeRegistry.register(MoreWeaponryEntities.CRAWLER, CrawlerEntity.setAttributes());
+        FabricDefaultAttributeRegistry.register(MoreWeaponryEntities.NECROMANCER, NecromancerEntity.setAttributes());
 
     }
 

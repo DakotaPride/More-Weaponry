@@ -16,6 +16,7 @@ public class MoreWeaponryEntityRegistry {
 
         EntityRendererRegistry.register(MoreWeaponryEntities.BURIED_KNIGHT, BuriedKnightRenderer::new);
         EntityRendererRegistry.register(MoreWeaponryEntities.CRAWLER, CrawlerRenderer::new);
+        EntityRendererRegistry.register(MoreWeaponryEntities.NECROMANCER, NecromancerRenderer::new);
 
     }
 }

@@ -1,4 +1,4 @@
-package net.DakotaPride.moreweaponry.entity;
+package net.DakotaPride.moreweaponry.entity.custom;
 
 import com.google.common.collect.Sets;
 import net.DakotaPride.moreweaponry.MoreWeaponry;

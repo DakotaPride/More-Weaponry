@@ -52,5 +52,9 @@ public class MoreWeaponryEntities {
             Registry.ENTITY_TYPE, new Identifier(MoreWeaponry.MOD_ID, "crawler"),
             FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, CrawlerEntity::new)
                     .dimensions(EntityDimensions.fixed(1.0f, 0.7f)).build());
+    public static final EntityType<NecromancerEntity> NECROMANCER = Registry.register(
+            Registry.ENTITY_TYPE, new Identifier(MoreWeaponry.MOD_ID, "necromancer"),
+            FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, NecromancerEntity::new)
+                    .dimensions(EntityDimensions.fixed(0.9f, 2.3f)).build());
 
 }

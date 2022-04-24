@@ -1,6 +1,6 @@
 package net.DakotaPride.moreweaponry.item.custom;
 
-import net.DakotaPride.moreweaponry.entity.IronBoltEntity;
+import net.DakotaPride.moreweaponry.entity.custom.IronBoltEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.projectile.PersistentProjectileEntity;
 import net.minecraft.item.Item;

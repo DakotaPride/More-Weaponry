@@ -1,7 +1,7 @@
 package net.DakotaPride.moreweaponry;
 
 import net.DakotaPride.moreweaponry.block.entity.MoreWeaponryBlockEntities;
-import net.DakotaPride.moreweaponry.entity.IronBoltEntityRenderer;
+import net.DakotaPride.moreweaponry.entity.client.IronBoltEntityRenderer;
 import net.DakotaPride.moreweaponry.entity.MoreWeaponryEntityRegistry;
 import net.DakotaPride.moreweaponry.entity.client.armor.*;
 import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
