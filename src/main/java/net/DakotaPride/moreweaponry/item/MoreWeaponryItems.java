@@ -815,7 +815,9 @@ public class MoreWeaponryItems {
     public static final Item BURIED_KNIGHT_SPAWN_EGG = registerItem("buried_knight_spawn_egg",
             new SpawnEggItem(MoreWeaponryEntities.BURIED_KNIGHT,0x1C1D1E, 0x393A3A,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
-
+    public static final Item NECROMANCER_SPAWN_EGG = registerItem("necromancer_spawn_egg",
+            new SpawnEggItem(MoreWeaponryEntities.NECROMANCER,0x435B5B, 0x7EADAD,
+                    new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
 
     public static final Item WATCHER_SPAWN_EGG = registerItem("watcher_spawn_egg",

@@ -50,23 +50,6 @@ public class NecromancerEntity extends EvokerEntity implements IAnimatable {
 
     }
 
-    boolean isPlayerStaring(PlayerEntity player) {
-        ItemStack itemStack = (player.getInventory()).armor.get(3);
-        if (itemStack.isOf(MoreWeaponryItems.RUSTED_MARE_DIAMOND_HELMET)) {
-            return false;
-        }
-
-        Vec3d vec3d = player.getRotationVec(1.0F).normalize();
-        Vec3d vec3d2 = new Vec3d(getX() - player.getX(), getEyeY() - player.getEyeY(), getZ() - player.getZ());
-        double d = vec3d2.length();
-        vec3d2 = vec3d2.normalize();
-        double e = vec3d.dotProduct(vec3d2);
-        if (e > 1.0D - 0.025D / d) {
-            return player.canSee(this);
-        }
-        return false;
-    }
-
     @Override
     protected void initGoals() {
         this.goalSelector.add(2, new MeleeAttackGoal(this, 1.0D, false));
@@ -123,7 +106,7 @@ public class NecromancerEntity extends EvokerEntity implements IAnimatable {
     }
 
     protected float getActiveEyeHeight(EntityPose pose, EntityDimensions dimensions) {
-        return 1.81F;
+        return 1.76F;
     }
 
     @Override
