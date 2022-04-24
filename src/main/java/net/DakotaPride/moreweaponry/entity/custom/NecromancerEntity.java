@@ -1,25 +1,22 @@
 package net.DakotaPride.moreweaponry.entity.custom;
 
-import net.minecraft.entity.*;
-import net.minecraft.entity.ai.TargetPredicate;
-import net.minecraft.entity.ai.goal.*;
+import net.minecraft.entity.EntityDimensions;
+import net.minecraft.entity.EntityPose;
+import net.minecraft.entity.EntityType;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.boss.BossBar;
 import net.minecraft.entity.boss.ServerBossBar;
 import net.minecraft.entity.damage.DamageSource;
-import net.minecraft.entity.mob.*;
-import net.minecraft.entity.passive.IronGolemEntity;
-import net.minecraft.entity.passive.MerchantEntity;
+import net.minecraft.entity.mob.EvokerEntity;
+import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.raid.RaiderEntity;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.TranslatableText;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib3.core.IAnimatable;
@@ -30,12 +27,10 @@ import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
-import java.rmi.server.Skeleton;
-
-public class NecromancerEntity extends AbstractNecromancerEntity implements IAnimatable {
+public class NecromancerEntity extends EvokerEntity implements IAnimatable {
     private AnimationFactory factory = new AnimationFactory(this);
     private final ServerBossBar bossBar;
-    public NecromancerEntity(EntityType<? extends SpellcastingIllagerEntity> entityType, World world) {
+    public NecromancerEntity(EntityType<? extends EvokerEntity> entityType, World world) {
         super(entityType, world);
 
         this.bossBar = (ServerBossBar)(new ServerBossBar(new TranslatableText("entity.moreweaponry.necromancer"),
@@ -46,18 +41,9 @@ public class NecromancerEntity extends AbstractNecromancerEntity implements IAni
 
     @Override
     protected void initGoals() {
-        this.goalSelector.add(0, new SwimGoal(this));
-        this.goalSelector.add(2, new FleeEntityGoal<>(this, PlayerEntity.class, 8.0F, 0.6D, 1.0D));
       //  this.goalSelector.add(4, new SummonSkeletonGoal(this));
      //   this.goalSelector.add(5, new SummonArmoredSkeletonGoal(this));
-        this.goalSelector.add(8, new WanderAroundGoal(this, 0.6D));
-        this.goalSelector.add(9, new LookAtEntityGoal(this, (Class)PlayerEntity.class, 3.0F, 1.0F));
-        this.goalSelector.add(10, new LookAtEntityGoal(this, (Class)MobEntity.class, 8.0F));
-
-        this.targetSelector.add(1, (new RevengeGoal(this, new Class[] { RaiderEntity.class })).setGroupRevenge(new Class[0]));
-        this.targetSelector.add(2, (new ActiveTargetGoal<>(this, (Class)PlayerEntity.class, true)).setMaxTimeWithoutVisibility(300));
-        this.targetSelector.add(3, (new ActiveTargetGoal<>(this, (Class)MerchantEntity.class, false)).setMaxTimeWithoutVisibility(300));
-        this.targetSelector.add(3, new ActiveTargetGoal<>(this, IronGolemEntity.class, false));
+        super.initGoals();
     }
 
     public static DefaultAttributeContainer.Builder setAttributes() {
@@ -208,17 +194,17 @@ public class NecromancerEntity extends AbstractNecromancerEntity implements IAni
         return 1.76F;
     }
 
-    @Override
+ //   @Override
     protected SoundEvent getCastSpellSound() {
         return SoundEvents.ENTITY_ILLUSIONER_CAST_SPELL;
     }
 
-    @Override
+//    @Override
     public void addBonusForWave(int wave, boolean unused) {
 
     }
 
-    @Override
+ //   @Override
     public SoundEvent getCelebratingSound() {
         return SoundEvents.ENTITY_FIREWORK_ROCKET_BLAST;
     }
@@ -261,7 +247,8 @@ public class NecromancerEntity extends AbstractNecromancerEntity implements IAni
         } if (this.isSpellcasting()) {
             event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.necromancer.spellcasting", false));
             return PlayState.CONTINUE;
-        } else {
+        }
+        else {
             event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.necromancer.idle", true));
             return PlayState.CONTINUE;
         }

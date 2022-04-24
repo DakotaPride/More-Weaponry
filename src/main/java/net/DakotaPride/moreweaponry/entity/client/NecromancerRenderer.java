@@ -14,6 +14,10 @@ public class NecromancerRenderer extends GeoEntityRenderer<NecromancerEntity> {
 
     @Override
     public Identifier getTextureLocation(NecromancerEntity entity) {
-        return new Identifier(MoreWeaponry.MOD_ID, "textures/entity/darkest_cavern/necromancer.png");
+        if (entity.isSpellcasting()) {
+            return new Identifier(MoreWeaponry.MOD_ID, "textures/entity/darkest_cavern/necromancer_spellcasting.png");
+        } else {
+            return new Identifier(MoreWeaponry.MOD_ID, "textures/entity/darkest_cavern/necromancer.png");
+        }
     }
 }
