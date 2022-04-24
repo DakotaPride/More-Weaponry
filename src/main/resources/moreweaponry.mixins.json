@@ -4,6 +4,7 @@
   "package": "net.DakotaPride.moreweaponry.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
+    "SpellCastingIllagerEntityMixin",
     "BlockEntityTypeMixin",
     "BrewingRecipeRegistryMixin",
     "DeadBushBlockMixin",

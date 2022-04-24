@@ -1,26 +1,18 @@
 package net.DakotaPride.moreweaponry.entity.custom;
 
-import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.entity.EntityDimensions;
-import net.minecraft.entity.EntityPose;
-import net.minecraft.entity.EntityType;
+import net.minecraft.entity.*;
+import net.minecraft.entity.ai.TargetPredicate;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.boss.BossBar;
 import net.minecraft.entity.boss.ServerBossBar;
 import net.minecraft.entity.damage.DamageSource;
-import net.minecraft.entity.mob.EvokerEntity;
-import net.minecraft.entity.mob.HostileEntity;
-import net.minecraft.entity.mob.MobEntity;
-import net.minecraft.entity.mob.SpellcastingIllagerEntity;
+import net.minecraft.entity.mob.*;
 import net.minecraft.entity.passive.IronGolemEntity;
 import net.minecraft.entity.passive.MerchantEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.raid.RaiderEntity;
-import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
@@ -28,7 +20,6 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib3.core.IAnimatable;
@@ -39,10 +30,12 @@ import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
-public class NecromancerEntity extends EvokerEntity implements IAnimatable {
+import java.rmi.server.Skeleton;
+
+public class NecromancerEntity extends AbstractNecromancerEntity implements IAnimatable {
     private AnimationFactory factory = new AnimationFactory(this);
     private final ServerBossBar bossBar;
-    public NecromancerEntity(EntityType<? extends EvokerEntity> entityType, World world) {
+    public NecromancerEntity(EntityType<? extends SpellcastingIllagerEntity> entityType, World world) {
         super(entityType, world);
 
         this.bossBar = (ServerBossBar)(new ServerBossBar(new TranslatableText("entity.moreweaponry.necromancer"),
@@ -50,10 +43,21 @@ public class NecromancerEntity extends EvokerEntity implements IAnimatable {
 
     }
 
+
     @Override
     protected void initGoals() {
-        this.goalSelector.add(2, new MeleeAttackGoal(this, 1.0D, false));
-        super.initGoals();
+        this.goalSelector.add(0, new SwimGoal(this));
+        this.goalSelector.add(2, new FleeEntityGoal<>(this, PlayerEntity.class, 8.0F, 0.6D, 1.0D));
+      //  this.goalSelector.add(4, new SummonSkeletonGoal(this));
+     //   this.goalSelector.add(5, new SummonArmoredSkeletonGoal(this));
+        this.goalSelector.add(8, new WanderAroundGoal(this, 0.6D));
+        this.goalSelector.add(9, new LookAtEntityGoal(this, (Class)PlayerEntity.class, 3.0F, 1.0F));
+        this.goalSelector.add(10, new LookAtEntityGoal(this, (Class)MobEntity.class, 8.0F));
+
+        this.targetSelector.add(1, (new RevengeGoal(this, new Class[] { RaiderEntity.class })).setGroupRevenge(new Class[0]));
+        this.targetSelector.add(2, (new ActiveTargetGoal<>(this, (Class)PlayerEntity.class, true)).setMaxTimeWithoutVisibility(300));
+        this.targetSelector.add(3, (new ActiveTargetGoal<>(this, (Class)MerchantEntity.class, false)).setMaxTimeWithoutVisibility(300));
+        this.targetSelector.add(3, new ActiveTargetGoal<>(this, IronGolemEntity.class, false));
     }
 
     public static DefaultAttributeContainer.Builder setAttributes() {
@@ -64,6 +68,101 @@ public class NecromancerEntity extends EvokerEntity implements IAnimatable {
                 .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 87.0D)
                 .add(EntityAttributes.GENERIC_ATTACK_SPEED, 0.97f);
     }
+
+
+ //   private class SummonSkeletonGoal extends AbstractNecromancerEntity.CastSpellGoal { SummonSkeletonGoal(NecromancerEntity necromancerEntity) {
+ //       super(necromancerEntity);
+  //      this.closeVexPredicate = TargetPredicate.createNonAttackable().setBaseMaxDistance(16.0D).ignoreVisibility().ignoreDistanceScalingFactor();
+ //   }
+  //      private final TargetPredicate closeVexPredicate;
+   //     public boolean canStart() {
+     //       if (!super.canStart()) {
+     //           return false;
+      //      }
+
+
+       //     int i = this.field_7267.world.<VexEntity>getTargets(SkeletonEntity.class, this.closeVexPredicate, this.field_7267, this.field_7267.getBoundingBox().expand(16.0D)).size();
+       //     return (EvokerEntity.method_7038(this.field_7267).nextInt(8) + 1 > i);
+      //  }
+
+
+        protected int getSpellTicks() {
+            return 100;
+        }
+
+
+        protected int startTimeDelay() {
+            return 340;
+        }
+
+
+        protected void castSpell() {
+       //     ServerWorld serverWorld = (ServerWorld)this.field_7267.world;
+       //     for (int i = 0; i < 3; i++) {
+       //         BlockPos blockPos = this.field_7267.getBlockPos().add(-2 + NecromancerEntity.method_7037(this.field_7267).nextInt(5), 1, -2 + NecromancerEntity.method_7043(this.field_7267).nextInt(5));
+       //         SkeletonEntity skeletonEntity = EntityType.SKELETON.create(this.field_7267.world);
+       //         skeletonEntity.refreshPositionAndAngles(blockPos, 0.0F, 0.0F);
+       //         skeletonEntity.initialize(serverWorld, this.field_7267.world.getLocalDifficulty(blockPos), SpawnReason.MOB_SUMMONED, (EntityData)null, (NbtCompound)null);
+       //         serverWorld.spawnEntityAndPassengers(skeletonEntity);
+       //     }
+       }
+
+
+  //      protected SoundEvent getSoundPrepare() {
+   //         return SoundEvents.ENTITY_EVOKER_PREPARE_SUMMON;
+   //     }
+
+
+  //      protected AbstractNecromancerEntity.NecromancerSpell getSpell() {
+   //         return NecromancerSpell.SUMMON_SKELETON;
+    //    } }
+
+ //   private class SummonArmoredSkeletonGoal extends AbstractNecromancerEntity.CastSpellGoal { SummonArmoredSkeletonGoal(NecromancerEntity necromancerEntity) {
+  //      super(necromancerEntity);
+  //      this.closeVexPredicate = TargetPredicate.createNonAttackable().setBaseMaxDistance(16.0D).ignoreVisibility().ignoreDistanceScalingFactor();
+ //   }
+   //     private final TargetPredicate closeVexPredicate;
+   //     public boolean canStart() {
+    //        if (!super.canStart()) {
+    //            return false;
+    //        }
+
+
+    //        int i = this.field_7267.world.<VexEntity>getTargets(SkeletonEntity.class, this.closeVexPredicate, this.field_7267, this.field_7267.getBoundingBox().expand(16.0D)).size();
+    //        return (EvokerEntity.method_7038(this.field_7267).nextInt(8) + 1 > i);
+     //   }
+
+
+    //    protected int getSpellTicks() {
+    //        return 100;
+    //    }
+
+
+    //    protected int startTimeDelay() {
+     //       return 340;
+     //   }
+
+
+    //    protected void castSpell() {
+     //       ServerWorld serverWorld = (ServerWorld)this.field_7267.world;
+     //       for (int i = 0; i < 3; i++) {
+      //          BlockPos blockPos = this.field_7267.getBlockPos().add(-2 + NecromancerEntity.method_7037(this.field_7267).nextInt(5), 1, -2 + NecromancerEntity.method_7043(this.field_7267).nextInt(5));
+     //           SkeletonEntity skeletonEntity = EntityType.SKELETON.create(this.field_7267.world);
+     //           skeletonEntity.refreshPositionAndAngles(blockPos, 0.0F, 0.0F);
+       //         skeletonEntity.initialize(serverWorld, this.field_7267.world.getLocalDifficulty(blockPos), SpawnReason.MOB_SUMMONED, (EntityData)null, (NbtCompound)null);
+       //         serverWorld.spawnEntityAndPassengers(skeletonEntity);
+        //    }
+     //   }
+
+
+     //   protected SoundEvent getSoundPrepare() {
+    //        return SoundEvents.ENTITY_EVOKER_PREPARE_SUMMON;
+     //   }
+
+
+     //   protected AbstractNecromancerEntity.NecromancerSpell getSpell() {
+     //       return NecromancerSpell.SUMMON_SKELETON;
+     //   } }
 
 
     @Override
