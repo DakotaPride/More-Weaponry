@@ -12,14 +12,20 @@
   "adapt_noise": true,
 
   "spawn_overrides": {
-    "creature": {
+    "monster": {
       "bounding_box": "piece",
       "spawns": [
         {
-          "type": "",
-          "weight": 0,
+          "type": "moreweaponry:buried_knight",
+          "weight": 60,
           "minCount": 0,
-          "maxCount": 0
+          "maxCount": 8
+        },
+        {
+          "type": "moreweaponry:crawler",
+          "weight": 40,
+          "minCount": 0,
+          "maxCount": 5
         }
       ]
     }

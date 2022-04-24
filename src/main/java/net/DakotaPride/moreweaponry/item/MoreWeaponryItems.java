@@ -809,6 +809,15 @@ public class MoreWeaponryItems {
             new SickenedBattleaxe((ToolMaterial) MoreWeaponryToolMaterials.ESSENCE_CIRTICT, 7, -3.3f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
+    public static final Item CRAWLER_SPAWN_EGG = registerItem("crawler_spawn_egg",
+            new SpawnEggItem(MoreWeaponryEntities.CRAWLER,0x2F2F37, 0x18F7F7,
+                    new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+    public static final Item BURIED_KNIGHT_SPAWN_EGG = registerItem("buried_knight_spawn_egg",
+            new SpawnEggItem(MoreWeaponryEntities.BURIED_KNIGHT,0x1C1D1E, 0x393A3A,
+                    new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+
+
+
     public static final Item WATCHER_SPAWN_EGG = registerItem("watcher_spawn_egg",
             new SpawnEggItem(MoreWeaponryEntities.WATCHER,0xC938FF, 0x420059,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
