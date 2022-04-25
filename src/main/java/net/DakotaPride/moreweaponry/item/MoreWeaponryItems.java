@@ -892,6 +892,12 @@ public class MoreWeaponryItems {
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
     public static final Item CRAWLER_TOOTH = registerItem("crawler_tooth",
             new Item(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+    public static final Item TITANIUM = registerItem("titanium",
+            new Item(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+    public static final Item BLESSED_TITANIUM = registerItem("blessed_titanium",
+            new Item(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+    public static final Item SPECTRAL_ESSENCE = registerItem("spectral_essence",
+            new Item(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item CELESTIAL_MEDALLION = registerItem("celestial_medallion",
             new CelestialMadalianItem(new FabricItemSettings().maxDamage(107).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
