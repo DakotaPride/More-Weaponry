@@ -6,6 +6,37 @@
       "entries": [
         {
           "type": "minecraft:item",
+          "weight": 35,
+          "name": "moreweaponry:watcher_cloth",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 0,
+                "max": 1
+              },
+              "add": false,
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance_with_looting",
+                  "chance": 0.000073,
+                  "looting_multiplier": 0.015
+                },
+                {
+                  "condition": "minecraft:killed_by_player",
+                  "inverse": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
           "weight": 100,
           "name": "moreweaponry:watcher_core",
           "functions": [
@@ -29,7 +60,12 @@
               ]
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
         {
           "type": "minecraft:item",
           "weight": 20,
@@ -55,7 +91,12 @@
               ]
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
         {
           "type": "minecraft:item",
           "weight": 25,
@@ -73,32 +114,6 @@
                   "condition": "minecraft:random_chance_with_looting",
                   "chance": 0.0063,
                   "looting_multiplier": 0.01
-                },
-                {
-                  "condition": "minecraft:killed_by_player",
-                  "inverse": false
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 35,
-          "name": "moreweaponry:watcher_cloth",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 0,
-                "max": 1
-              },
-              "add": false,
-              "conditions": [
-                {
-                  "condition": "minecraft:random_chance_with_looting",
-                  "chance": 0.000073,
-                  "looting_multiplier": 0.015
                 },
                 {
                   "condition": "minecraft:killed_by_player",

@@ -1,6 +1,6 @@
 package net.DakotaPride.moreweaponry.entity.custom;
 
-import net.DakotaPride.moreweaponry.entity.damage.MoreWeaponryDamageSource;
+import net.DakotaPride.moreweaponry.entity.custom.abstract_cases.AbstractHostileEntity;
 import net.DakotaPride.moreweaponry.sound.MoreWeaponrySoundEvents;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.EntityType;
@@ -23,9 +23,9 @@ import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
-public class CrawlerEntity extends HostileEntity implements IAnimatable {
+public class CrawlerEntity extends AbstractHostileEntity implements IAnimatable {
     private AnimationFactory factory = new AnimationFactory(this);
-    public CrawlerEntity(EntityType<? extends HostileEntity> entityType, World world) {
+    public CrawlerEntity(EntityType<? extends AbstractHostileEntity> entityType, World world) {
         super(entityType, world);
     }
 

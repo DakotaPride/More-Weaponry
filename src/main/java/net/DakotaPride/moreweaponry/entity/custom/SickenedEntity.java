@@ -2,6 +2,7 @@ package net.DakotaPride.moreweaponry.entity.custom;
 
 import net.DakotaPride.moreweaponry.block.MoreWeaponryBlocks;
 import net.DakotaPride.moreweaponry.effect.MoreWeaponryEffects;
+import net.DakotaPride.moreweaponry.entity.custom.abstract_cases.AbstractHostileEntity;
 import net.DakotaPride.moreweaponry.entity.damage.MoreWeaponryDamageSource;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -17,23 +18,17 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.mob.SkeletonEntity;
-import net.minecraft.entity.mob.ZombieEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.text.LiteralText;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.GameRules;
-import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.World;
-import net.minecraft.world.biome.Biome;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.PlayState;
@@ -43,10 +38,10 @@ import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
-public class SickenedEntity extends HostileEntity implements IAnimatable {
+public class SickenedEntity extends AbstractHostileEntity implements IAnimatable {
     private AnimationFactory factory = new AnimationFactory(this);
     private final ServerBossBar bossBar;
-    public SickenedEntity(EntityType<? extends HostileEntity> entityType, World world) {
+    public SickenedEntity(EntityType<? extends AbstractHostileEntity> entityType, World world) {
         super(entityType, world);
 
         this.bossBar = (ServerBossBar)(new ServerBossBar(new TranslatableText("entity.moreweaponry.sickened"),

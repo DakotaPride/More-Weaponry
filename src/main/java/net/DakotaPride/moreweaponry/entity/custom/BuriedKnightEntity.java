@@ -1,6 +1,6 @@
 package net.DakotaPride.moreweaponry.entity.custom;
 
-import net.DakotaPride.moreweaponry.effect.MoreWeaponryEffects;
+import net.DakotaPride.moreweaponry.entity.custom.abstract_cases.AbstractHostileEntity;
 import net.DakotaPride.moreweaponry.sound.MoreWeaponrySoundEvents;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.EntityType;
@@ -28,9 +28,9 @@ import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
-public class BuriedKnightEntity extends HostileEntity implements IAnimatable {
+public class BuriedKnightEntity extends AbstractHostileEntity implements IAnimatable {
     private AnimationFactory factory = new AnimationFactory(this);
-    public BuriedKnightEntity(EntityType<? extends HostileEntity> entityType, World world) {
+    public BuriedKnightEntity(EntityType<? extends AbstractHostileEntity> entityType, World world) {
         super(entityType, world);
     }
 

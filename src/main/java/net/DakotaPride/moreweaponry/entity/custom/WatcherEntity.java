@@ -2,6 +2,7 @@ package net.DakotaPride.moreweaponry.entity.custom;
 
 import net.DakotaPride.moreweaponry.block.MoreWeaponryBlocks;
 import net.DakotaPride.moreweaponry.effect.MoreWeaponryEffects;
+import net.DakotaPride.moreweaponry.entity.custom.abstract_cases.AbstractHostileEntity;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.*;
@@ -23,7 +24,6 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.text.LiteralText;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -36,10 +36,10 @@ import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
-public class WatcherEntity extends HostileEntity implements IAnimatable {
+public class WatcherEntity extends AbstractHostileEntity implements IAnimatable {
     private AnimationFactory factory = new AnimationFactory(this);
     private final ServerBossBar bossBar;
-    public WatcherEntity(EntityType<? extends HostileEntity> entityType, World world) {
+    public WatcherEntity(EntityType<? extends AbstractHostileEntity> entityType, World world) {
         super(entityType, world);
         this.ignoreCameraFrustum = true;
         this.bossBar = (ServerBossBar)(new ServerBossBar(new TranslatableText("entity.moreweaponry.watcher"),

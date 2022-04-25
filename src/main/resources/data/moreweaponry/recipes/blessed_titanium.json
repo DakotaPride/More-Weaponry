@@ -1,0 +1,14 @@
+{
+  "type": "moreweaponry:essence_translator",
+  "ingredients": [
+    {
+      "item": "moreweaponry:titanium"
+    },
+    {
+      "item": "moreweaponry:spectral_essence"
+    }
+  ],
+  "output": {
+    "item": "moreweaponry:blessed_titanium"
+  }
+}

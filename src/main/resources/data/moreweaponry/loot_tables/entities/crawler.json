@@ -6,28 +6,6 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "weight": 40,
-          "name": "moreweaponry:crawler_tooth",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 0,
-                "max": 3
-              },
-              "add": false,
-              "conditions": [
-                {
-                  "condition": "minecraft:random_chance_with_looting",
-                  "chance": 10.5,
-                  "looting_multiplier": 0.15
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
           "weight": 60,
           "name": "minecraft:deepslate",
           "functions": [
@@ -43,6 +21,33 @@
                   "condition": "minecraft:random_chance_with_looting",
                   "chance": 17.0,
                   "looting_multiplier": 0.10
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 40,
+          "name": "moreweaponry:crawler_tooth",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 0,
+                "max": 3
+              },
+              "add": false,
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance_with_looting",
+                  "chance": 10.5,
+                  "looting_multiplier": 0.15
                 }
               ]
             }

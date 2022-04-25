@@ -1,5 +1,6 @@
 package net.DakotaPride.moreweaponry.entity.custom;
 
+import net.DakotaPride.moreweaponry.entity.custom.abstract_cases.AbstractNecromancerEntity;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityPose;
 import net.minecraft.entity.EntityType;
@@ -8,7 +9,6 @@ import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.boss.BossBar;
 import net.minecraft.entity.boss.ServerBossBar;
 import net.minecraft.entity.damage.DamageSource;
-import net.minecraft.entity.mob.EvokerEntity;
 import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.nbt.NbtCompound;
@@ -27,10 +27,10 @@ import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
-public class NecromancerEntity extends EvokerEntity implements IAnimatable {
+public class NecromancerEntity extends AbstractNecromancerEntity implements IAnimatable {
     private AnimationFactory factory = new AnimationFactory(this);
     private final ServerBossBar bossBar;
-    public NecromancerEntity(EntityType<? extends EvokerEntity> entityType, World world) {
+    public NecromancerEntity(EntityType<? extends AbstractNecromancerEntity> entityType, World world) {
         super(entityType, world);
 
         this.bossBar = (ServerBossBar)(new ServerBossBar(new TranslatableText("entity.moreweaponry.necromancer"),
