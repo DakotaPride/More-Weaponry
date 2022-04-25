@@ -420,5 +420,8 @@
   "item.moreweaponry.iron_bolt": "Boulon de fer",
   "item.moreweaponry.bothering_might": "Ennuyeux pourrait",
   "item.moreweaponry.crawler_tooth": "Dent de chenille",
-  "effect.moreweaponry.confusion": "Confusion"
+  "effect.moreweaponry.confusion": "Confusion",
+  "item.moreweaponry.blessed_titanium": "Lingot de titane béni",
+  "item.moreweaponry.titanium": "Lingot de titane",
+  "item.moreweaponry.spectral_essence": "Essence spectrale"
 }

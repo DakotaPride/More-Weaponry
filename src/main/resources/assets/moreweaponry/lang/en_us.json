@@ -384,7 +384,7 @@
   "item.moreweaponry.description.crackler_weapon": "Explosion",
   "item.moreweaponry.description.watcher_staff": "The Watcher",
   "armor.moreweaponry.shift_down.description.elder_scale.one": "Grants Water Breathing Upon Full Set After Defeating",
-  "armor.moreweaponry.shift_down.description.elder_scale.two": "the Elder Guardian From The Depths Of The Ocean Monument,",
+  "armor.moreweaponry.shift_down.description.elder_scale.two": "The Elder Guardian From The Depths Of The Ocean Monument,",
   "armor.moreweaponry.shift_down.description.elder_scale.three": "This Gear Is Well Respected Among Warriors And Armorers Alike",
   "misc.moreweaponry.shift_up": "Press Shift For More Information",
   "armor.moreweaponry.shift_down.description.shulker_boots.bottom.one": "Crafted from Shulker Shells, taken from deep within",
@@ -420,5 +420,8 @@
   "item.moreweaponry.iron_bolt": "Iron Bolt",
   "item.moreweaponry.bothering_might": "Bothering Might",
   "item.moreweaponry.crawler_tooth": "Crawler Tooth",
-  "effect.moreweaponry.confusion": "Confusion"
+  "effect.moreweaponry.confusion": "Confusion",
+  "item.moreweaponry.blessed_titanium": "Blessed Titanium Ingot",
+  "item.moreweaponry.titanium": "Titanium Ingot",
+  "item.moreweaponry.spectral_essence": "Spectral Essence"
 }
