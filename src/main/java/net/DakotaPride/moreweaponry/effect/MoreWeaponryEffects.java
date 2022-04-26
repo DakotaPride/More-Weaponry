@@ -19,11 +19,21 @@ public class MoreWeaponryEffects {
 
     // Celestial Effects
 
-    public static final StatusEffect BARD = new BardStatusEffect(StatusEffectCategory.BENEFICIAL, 0xF4F4F4);
-    public static final StatusEffect SICKENED = new SickenedStatusEffect(StatusEffectCategory.BENEFICIAL, 0x42773B);
-    public static final StatusEffect CRACKLER = new CracklerStatusEffect(StatusEffectCategory.BENEFICIAL, 0xBDEAB2);
-    public static final StatusEffect WANDERER = new WandererStatusEffect(StatusEffectCategory.BENEFICIAL, 0x4C4138);
-    public static final StatusEffect WATCHER = new WatcherStatusEffect(StatusEffectCategory.BENEFICIAL, 0x3D0051);
+    public static final StatusEffect BARD = new BardStatusEffect(StatusEffectCategory.BENEFICIAL, 0xF4F4F4)
+            .addAttributeModifier(EntityAttributes.GENERIC_MAX_HEALTH, "5D6F0BA2-1186-46AC-B896-C61C5CEE99CC",
+                    16.0D, EntityAttributeModifier.Operation.ADDITION);
+    public static final StatusEffect SICKENED = new SickenedStatusEffect(StatusEffectCategory.BENEFICIAL, 0x42773B)
+            .addAttributeModifier(EntityAttributes.GENERIC_MAX_HEALTH, "5D6F0BA2-1186-46AC-B896-C61C5CEE99CC",
+                    12.0D, EntityAttributeModifier.Operation.ADDITION);
+    public static final StatusEffect CRACKLER = new CracklerStatusEffect(StatusEffectCategory.BENEFICIAL, 0xBDEAB2)
+            .addAttributeModifier(EntityAttributes.GENERIC_MAX_HEALTH, "5D6F0BA2-1186-46AC-B896-C61C5CEE99CC",
+                    14.0D, EntityAttributeModifier.Operation.ADDITION);
+    public static final StatusEffect WANDERER = new WandererStatusEffect(StatusEffectCategory.BENEFICIAL, 0x4C4138)
+            .addAttributeModifier(EntityAttributes.GENERIC_MAX_HEALTH, "5D6F0BA2-1186-46AC-B896-C61C5CEE99CC",
+                    18.0D, EntityAttributeModifier.Operation.ADDITION);
+    public static final StatusEffect WATCHER = new WatcherStatusEffect(StatusEffectCategory.BENEFICIAL, 0x3D0051)
+            .addAttributeModifier(EntityAttributes.GENERIC_MAX_HEALTH, "5D6F0BA2-1186-46AC-B896-C61C5CEE99CC",
+                    20.0D, EntityAttributeModifier.Operation.ADDITION);
 
 
     // Unfortuned Effects

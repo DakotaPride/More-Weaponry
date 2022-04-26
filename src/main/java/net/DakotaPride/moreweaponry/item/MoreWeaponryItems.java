@@ -5,6 +5,7 @@ import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.DakotaPride.moreweaponry.block.MoreWeaponryBlocks;
 import net.DakotaPride.moreweaponry.entity.MoreWeaponryEntities;
 import net.DakotaPride.moreweaponry.item.custom.*;
+import net.DakotaPride.moreweaponry.item.custom.blessed_tools.BlessedArmorItem;
 import net.DakotaPride.moreweaponry.item.custom.celestial_madalian.*;
 import net.DakotaPride.moreweaponry.item.custom.cirtict.CooledCirtictClusterItem;
 import net.DakotaPride.moreweaponry.item.custom.cirtict.HeatedCirtictClusterItem;
@@ -898,6 +899,12 @@ public class MoreWeaponryItems {
             new Item(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
     public static final Item SPECTRAL_ESSENCE = registerItem("spectral_essence",
             new Item(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+    public static final Item BLESSED_HELMET = registerItem("blessed_helmet",
+            new BlessedArmorItem(MoreWeaponryArmorMaterials.BLESSED, EquipmentSlot.HEAD,
+                    new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+    public static final Item BLESSED_CHESTPLATE = registerItem("blessed_chestplate",
+            new BlessedArmorItem(MoreWeaponryArmorMaterials.BLESSED, EquipmentSlot.CHEST,
+                    new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item CELESTIAL_MEDALLION = registerItem("celestial_medallion",
             new CelestialMadalianItem(new FabricItemSettings().maxDamage(107).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));

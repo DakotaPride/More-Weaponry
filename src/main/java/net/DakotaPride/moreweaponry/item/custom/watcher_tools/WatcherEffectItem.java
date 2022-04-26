@@ -2,15 +2,9 @@ package net.DakotaPride.moreweaponry.item.custom.watcher_tools;
 
 import com.google.common.collect.ImmutableMap;
 import net.DakotaPride.moreweaponry.effect.MoreWeaponryEffects;
-import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
 import net.DakotaPride.moreweaponry.item.extra.MoreWeaponryArmorMaterials;
-import net.DakotaPride.moreweaponry.mixin.ILivingEntityMixin;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.attribute.EntityAttributeInstance;
-import net.minecraft.entity.attribute.EntityAttributeModifier;
-import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ArmorItem;
@@ -33,9 +27,6 @@ public class WatcherEffectItem extends WatcherArmorItem {
 
     @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
-        EntityAttributeInstance health = ((LivingEntity)((ILivingEntityMixin)this)).getAttributeInstance(EntityAttributes.GENERIC_MAX_HEALTH);
-        EntityAttributeModifier modifier = new EntityAttributeModifier("generic.max_health", 30.0F,
-                EntityAttributeModifier.Operation.ADDITION);
         if(!world.isClient()) {
             if(entity instanceof PlayerEntity) {
                 PlayerEntity player = (PlayerEntity)entity;
@@ -44,20 +35,7 @@ public class WatcherEffectItem extends WatcherArmorItem {
                     evaluateArmorEffects(player);
                 }
             }
-        } if (stack.getItem() == MoreWeaponryItems.WATCHER_HELMET
-                    || stack.getItem() == MoreWeaponryItems.WATCHER_CHESTPLATE) {
-            assert health != null;
-            if(!health.hasModifier(modifier)) {
-                    health.addTemporaryModifier(modifier);
-                }
-            }
-            else {
-            assert health != null;
-            if(health.hasModifier(modifier)) {
-                    health.removeModifier(modifier);
-                }
-            }
-
+        }
 
         super.inventoryTick(stack, world, entity, slot, selected);
     }

@@ -60,7 +60,10 @@ public enum MoreWeaponryArmorMaterials implements ArmorMaterial
             7.5f, 0.9f, () -> Ingredient.ofItems(MoreWeaponryItems.HEATED_CIRTICT_INGOT)),
     COOLED_CIRTICT("cooled_cirtict", 57,
             new int[]{7, 10, 11, 8}, 17, SoundEvents.ITEM_BUCKET_EMPTY_POWDER_SNOW,
-            7.5f, 0.9f, () -> Ingredient.ofItems(MoreWeaponryItems.COOLED_CIRTICT_INGOT));
+            7.5f, 0.9f, () -> Ingredient.ofItems(MoreWeaponryItems.COOLED_CIRTICT_INGOT)),
+    BLESSED("blessed", 59,
+            new int[]{8, 11, 12, 9}, 21, SoundEvents.PARTICLE_SOUL_ESCAPE,
+            7.8f, 1.0f, () -> Ingredient.ofItems(MoreWeaponryItems.SPECTRAL_ESSENCE));
 
     private static final int[] BASE_DURABILITY;
     private final String name;

@@ -108,24 +108,4 @@ public abstract class LivingEntityMixin implements ILivingEntityMixin {
 
     }
 
-    @Inject(method = "tick", at = @At("HEAD"))
-    public void tick(CallbackInfo info) {
-        EntityAttributeInstance health = ((LivingEntity)((ILivingEntityMixin)this)).getAttributeInstance(EntityAttributes.GENERIC_MAX_HEALTH);
-        EntityAttributeModifier modifier = new EntityAttributeModifier("generic.max_health", 30.0F,
-                EntityAttributeModifier.Operation.ADDITION);
-        for (ItemStack stack : ((LivingEntity)((ILivingEntityMixin)this)).getArmorItems()) {
-            if (stack.getItem() == MoreWeaponryItems.WATCHER_HELMET
-                    || stack.getItem() == MoreWeaponryItems.WATCHER_CHESTPLATE) {
-                if(!health.hasModifier(modifier)) {
-                    health.addTemporaryModifier(modifier);
-                }
-            }
-            else {
-                if(health.hasModifier(modifier)) {
-                    health.removeModifier(modifier);
-                }
-            }
-        }
-    }
-
 }

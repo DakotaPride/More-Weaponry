@@ -48,6 +48,8 @@ public class MoreClientWeaponry implements ClientModInitializer {
                 MoreWeaponryItems.BARD_CHESTPLATE);
         GeoArmorRenderer.registerArmorRenderer(new SickenedArmorRenderer(), MoreWeaponryItems.SICKENED_HELMET,
                 MoreWeaponryItems.SICKENED_CHESTPLATE);
+        GeoArmorRenderer.registerArmorRenderer(new BlessedArmorRenderer(), MoreWeaponryItems.BLESSED_HELMET,
+                MoreWeaponryItems.BLESSED_CHESTPLATE);
 
 
     }
