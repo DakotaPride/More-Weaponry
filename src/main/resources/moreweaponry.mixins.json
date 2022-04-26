@@ -11,7 +11,8 @@
     "MixinStructurePiece",
     "SignTypeAccessor",
     "StatusEffectMixin",
-    "StructureFeatureAccessor"
+    "StructureFeatureAccessor",
+    "ILivingEntityMixin"
   ],
   "client": [
     "BlockEntityTypeMixin",

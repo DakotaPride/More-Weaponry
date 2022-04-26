@@ -4,11 +4,14 @@ import net.DakotaPride.moreweaponry.effect.MoreWeaponryEffects;
 import net.DakotaPride.moreweaponry.entity.custom.BuriedKnightEntity;
 import net.DakotaPride.moreweaponry.entity.custom.CrawlerEntity;
 import net.DakotaPride.moreweaponry.entity.damage.MoreWeaponryDamageSource;
+import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
 import net.DakotaPride.moreweaponry.item.custom.HeavyCrossBowItem;
 import net.DakotaPride.moreweaponry.item.custom.HeavySwordItem;
-import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.attribute.EntityAttributeInstance;
+import net.minecraft.entity.attribute.EntityAttributeModifier;
+import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
@@ -19,10 +22,12 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+
 @Mixin(LivingEntity.class)
-public abstract class LivingEntityMixin {
+public abstract class LivingEntityMixin implements ILivingEntityMixin {
 
     @Shadow public abstract boolean addStatusEffect(StatusEffectInstance effect);
 
@@ -30,7 +35,7 @@ public abstract class LivingEntityMixin {
 
     @Shadow public abstract boolean addStatusEffect(StatusEffectInstance effect, @Nullable Entity source);
 
-    @Inject(method = "Lnet/minecraft/entity/LivingEntity;getHandSwingDuration()I", at = @At("HEAD"), cancellable = true)
+    @Inject(method = "getHandSwingDuration()I", at = @At("HEAD"), cancellable = true)
     private void getHandSwingDuration(CallbackInfoReturnable<Integer> info) {
         LivingEntity livingEntity = (LivingEntity) (Object) this;
         ItemStack itemStack = livingEntity.getMainHandStack();
@@ -101,6 +106,26 @@ public abstract class LivingEntityMixin {
             livingEntity.damage(MoreWeaponryDamageSource.CELESTIALITE, 0.3F);
         }
 
+    }
+
+    @Inject(method = "tick", at = @At("HEAD"))
+    public void tick(CallbackInfo info) {
+        EntityAttributeInstance health = ((LivingEntity)((ILivingEntityMixin)this)).getAttributeInstance(EntityAttributes.GENERIC_MAX_HEALTH);
+        EntityAttributeModifier modifier = new EntityAttributeModifier("generic.max_health", 30.0F,
+                EntityAttributeModifier.Operation.ADDITION);
+        for (ItemStack stack : ((LivingEntity)((ILivingEntityMixin)this)).getArmorItems()) {
+            if (stack.getItem() == MoreWeaponryItems.WATCHER_HELMET
+                    || stack.getItem() == MoreWeaponryItems.WATCHER_CHESTPLATE) {
+                if(!health.hasModifier(modifier)) {
+                    health.addTemporaryModifier(modifier);
+                }
+            }
+            else {
+                if(health.hasModifier(modifier)) {
+                    health.removeModifier(modifier);
+                }
+            }
+        }
     }
 
 }
