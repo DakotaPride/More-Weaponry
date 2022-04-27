@@ -1,13 +1,21 @@
 package net.DakotaPride.moreweaponry.item.custom.blessed_tools;
 
 import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
+import net.fabricmc.fabric.api.entity.event.v1.FabricElytraItem;
+import net.minecraft.block.DispenserBlock;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.decoration.ArmorStandEntity;
+import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.ArmorMaterial;
-import net.minecraft.item.Item;
+import net.minecraft.item.*;
+import net.minecraft.sound.SoundEvent;
+import net.minecraft.sound.SoundEvents;
+import net.minecraft.stat.Stats;
+import net.minecraft.util.Hand;
+import net.minecraft.util.TypedActionResult;
+import net.minecraft.world.World;
+import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.PlayState;
 import software.bernie.geckolib3.core.builder.AnimationBuilder;
@@ -20,12 +28,24 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class BlessedArmorItem extends ArmorItem implements IAnimatable {
+public class BlessedArmorItem extends ArmorItem implements IAnimatable, FabricElytraItem {
     private final AnimationFactory factory = new AnimationFactory(this);
 
     public BlessedArmorItem(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
         super(material, slot, settings);
     }
+
+    // Elytra Implementation
+
+
+
+    // Animation/Geckolib
+
+    @Nullable
+    public SoundEvent getEquipSound() {
+        return SoundEvents.ITEM_ARMOR_EQUIP_ELYTRA;
+    }
+
 
     // Predicate runs every frame
     private <P extends IAnimatable> PlayState predicate(AnimationEvent<P> event) {
