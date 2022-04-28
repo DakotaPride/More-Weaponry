@@ -426,5 +426,8 @@
   "item.moreweaponry.spectral_essence": "Spectral Essence",
   "item.moreweaponry.necromancer_spawn_egg": "Necromancer Spawn Egg",
   "item.moreweaponry.blessed_helmet": "Blessed Mask",
-  "item.moreweaponry.blessed_chestplate": "Blessed Wings"
+  "item.moreweaponry.blessed_chestplate": "Blessed Wings",
+  "gui.moreweaponry.core_forge.label": "Core Forge",
+  "gui.moreweaponry.essence_translator.label": "Essence Translator",
+  "gui.moreweaponry.cirtict_forge.label": "Cirtict Forge"
 }
