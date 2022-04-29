@@ -3,8 +3,8 @@
     "icon": {
       "item": "moreweaponry:wretched_core"
     },
-    "title": "That's A Lot Of Books",
-    "description": "Discover The Wanderer's Library",
+    "title": "advancement.moreweaponry.discover_wanderer_library.title",
+    "description": "advancement.moreweaponry.discover_wanderer_library.description",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,

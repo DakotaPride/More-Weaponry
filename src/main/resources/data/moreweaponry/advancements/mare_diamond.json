@@ -3,8 +3,8 @@
     "icon": {
       "item": "moreweaponry:mare_diamond"
     },
-    "title": "Diamonds! Wait...",
-    "description": "Collect Mare Diamonds",
+    "title": "advancement.moreweaponry.mare_diamond.title",
+    "description": "advancement.moreweaponry.mare_diamond.description",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,

@@ -3,8 +3,8 @@
     "icon": {
       "item": "moreweaponry:watcher_helmet"
     },
-    "title": "Cut Throat",
-    "description": "Defeat The Watcher",
+    "title": "advancement.moreweaponry.defeat_watcher.title",
+    "description": "advancement.moreweaponry.defeat_watcher.description",
     "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,

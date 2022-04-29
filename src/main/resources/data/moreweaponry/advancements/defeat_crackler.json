@@ -3,8 +3,8 @@
     "icon": {
       "item": "moreweaponry:crackler_helmet"
     },
-    "title": "Boom!",
-    "description": "Defeat The Crackler",
+    "title": "advancement.moreweaponry.defeat_crackler.title",
+    "description": "advancement.moreweaponry.defeat_crackler.title",
     "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,

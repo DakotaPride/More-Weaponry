@@ -3,8 +3,8 @@
     "icon": {
       "item": "moreweaponry:elder_guardians_eye"
     },
-    "title": "Won't Be Needing This Anymore",
-    "description": "Obtain The Elder Guardian's Eye",
+    "title": "advancement.moreweaponry.elder_guardians_eye.title",
+    "description": "advancement.moreweaponry.elder_guardians_eye.description",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,

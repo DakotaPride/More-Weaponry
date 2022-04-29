@@ -3,8 +3,8 @@
     "icon": {
       "item": "moreweaponry:maiden_core"
     },
-    "title": "Don't Fall For It",
-    "description": "Discover The Bard's Rock",
+    "title": "advancement.moreweaponry.discover_bard_rock.title",
+    "description": "advancement.moreweaponry.discover_bard_rock.description",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
@@ -16,7 +16,6 @@
       "trigger": "minecraft:location",
       "conditions": {
         "location": {
-          "biome": "minecraft:warm_ocean",
           "feature": "moreweaponry:bard_rock"
         }
       }

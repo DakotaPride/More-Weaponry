@@ -3,7 +3,7 @@
     "icon": {
       "item": "moreweaponry:cirtict_axe"
     },
-    "title": "What Comes After This?",
+    "title": "advancement.moreweaponry.the_beginning_of_the_end.title",
     "description": "The Beginning Of The End",
     "frame": "task",
     "show_toast": true,

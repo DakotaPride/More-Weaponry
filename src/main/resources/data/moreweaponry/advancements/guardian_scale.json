@@ -3,8 +3,8 @@
     "icon": {
       "item": "moreweaponry:guardian_scale"
     },
-    "title": "What Are They Guarding?",
-    "description": "Obtain Guardian Scales",
+    "title": "advancement.moreweaponry.guardian_scale.title",
+    "description": "advancement.moreweaponry.guardian_scale.description",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,

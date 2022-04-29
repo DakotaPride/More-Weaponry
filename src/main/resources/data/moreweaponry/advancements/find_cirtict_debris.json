@@ -3,8 +3,8 @@
     "icon": {
       "item": "moreweaponry:cirtict_debris"
     },
-    "title": "Hidden In The Void",
-    "description": "Obtain Cirtict Debris",
+    "title": "advancement.moreweaponry.find_cirtict_debris.title",
+    "description": "advancement.moreweaponry.find_cirtict_debris.description",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,

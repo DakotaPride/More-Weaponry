@@ -3,8 +3,8 @@
     "icon": {
       "item": "moreweaponry:blackstone_metal_chestplate"
     },
-    "title": "Cover Me In... Blackstone?",
-    "description": "Obtain A Full Set of Blackstone Metal Armor",
+    "title": "advancement.moreweaponry.set_of_blackstone_metal_armor.title",
+    "description": "advancement.moreweaponry.set_of_blackstone_metal_armor.description",
     "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true

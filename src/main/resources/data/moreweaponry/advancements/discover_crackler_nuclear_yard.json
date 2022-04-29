@@ -3,8 +3,8 @@
     "icon": {
       "item": "moreweaponry:suppressed_core"
     },
-    "title": "Careful, It's Explosive!",
-    "description": "Discover The Crackler Nuclear Yard",
+    "title": "advancement.moreweaponry.discover_crackler_nuclear_yard.title",
+    "description": "advancement.moreweaponry.discover_crackler_nuclear_yard.description",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
@@ -16,7 +16,6 @@
       "trigger": "minecraft:location",
       "conditions": {
         "location": {
-          "biome": "minecraft:desert",
           "feature": "moreweaponry:crackler_nuclear_yard"
         }
       }

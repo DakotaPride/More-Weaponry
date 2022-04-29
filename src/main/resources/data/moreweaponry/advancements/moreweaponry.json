@@ -3,12 +3,12 @@
     "icon": {
       "item": "moreweaponry:cirtict_battleaxe"
     },
-    "title": "More Weaponry",
-    "description": "And So It Begins...",
+    "title": "advancement.moreweaponry.moreweaponry.title",
+    "description": "advancement.moreweaponry.moreweaponry.description",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": false,
-    "background": "moreweaponry:textures/block/kuro_wheat_block_top.png"
+    "background": "moreweaponry:textures/block/glimmering_amethyst_block.png"
   },
   "criteria": {
     "requirement": {

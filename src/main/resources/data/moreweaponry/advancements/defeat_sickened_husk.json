@@ -3,8 +3,8 @@
     "icon": {
       "item": "moreweaponry:sandstone_dust_block"
     },
-    "title": "Welcome To The Wild West!",
-    "description": "Defeat The Sickened Husk (WIP)",
+    "title": "advancement.moreweaponry.defeat_sickened_husk.title",
+    "description": "advancement.moreweaponry.defeat_sickened_husk.description",
     "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,

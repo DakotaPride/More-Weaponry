@@ -16,7 +16,7 @@ import net.minecraft.structure.StructurePiece;
 @Mixin(StructurePiece.class)
 public abstract class MixinStructurePiece {
 
-    @ModifyVariable(method = "addBlock", at = @At("HEAD"))
+    @ModifyVariable(method = "addBlock", at = @At("HEAD"), argsOnly = true)
     private BlockState onaddBlock(BlockState blockState_1) {
 
         if (blockState_1.equals(MoreWeaponryBlocks.CRACKED_DRIPSTONE_BLOCK.getDefaultState())) {

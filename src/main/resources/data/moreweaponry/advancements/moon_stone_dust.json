@@ -3,8 +3,8 @@
     "icon": {
       "item": "moreweaponry:moon_stone_dust"
     },
-    "title": "Isn't This Snow?",
-    "description": "Obtain Moon Stone Dust",
+    "title": "advancement.moreweaponry.moon_stone_dust.title",
+    "description": "advancement.moreweaponry.moon_stone_dust.description",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true

@@ -3,8 +3,8 @@
     "icon": {
       "item": "moreweaponry:bluestone_ignitor"
     },
-    "title": "It's Freezing In Here!",
-    "description": "Travel To The Ever Frost Dimension",
+    "title": "advancement.moreweaponry.travel_to_the_ever_frost_dimension.title",
+    "description": "advancement.moreweaponry.travel_to_the_ever_frost_dimension.description",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,

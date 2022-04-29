@@ -3,8 +3,8 @@
     "icon": {
       "item": "moreweaponry:elder_scale_artifact"
     },
-    "title": "Poseidon's Power!",
-    "description": "Obtain The Elder Scale Artifact",
+    "title": "advancement.moreweaponry.elder_scale_artifact.title",
+    "description": "advancement.moreweaponry.elder_scale_artifact.description",
     "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,

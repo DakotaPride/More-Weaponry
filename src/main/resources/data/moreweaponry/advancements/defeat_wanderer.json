@@ -3,8 +3,8 @@
     "icon": {
       "item": "moreweaponry:wanderer_helmet"
     },
-    "title": "Arachnophobia",
-    "description": "Defeat The Wanderer",
+    "title": "advancement.moreweaponry.defeat_wanderer.title",
+    "description": "advancement.moreweaponry.defeat_wanderer.description",
     "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,

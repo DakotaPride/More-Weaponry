@@ -3,8 +3,8 @@
     "icon": {
       "item": "moreweaponry:curon_brew"
     },
-    "title": "Why Would You Do That?",
-    "description": "Consume Night Curon Brew",
+    "title": "advancement.moreweaponry.consume_curon_brew.title",
+    "description": "advancement.moreweaponry.consume_curon_brew.description",
     "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,

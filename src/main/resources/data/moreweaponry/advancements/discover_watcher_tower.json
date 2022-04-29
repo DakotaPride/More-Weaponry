@@ -3,8 +3,8 @@
     "icon": {
       "item": "moreweaponry:watcher_core"
     },
-    "title": "Feeling Nauseous",
-    "description": "Discover The Watcher's Tower",
+    "title": "advancement.moreweaponry.discover_watcher_tower.title",
+    "description": "advancement.moreweaponry.discover_watcher_tower.description",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,

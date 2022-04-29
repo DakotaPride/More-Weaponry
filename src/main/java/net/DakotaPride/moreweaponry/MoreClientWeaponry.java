@@ -5,6 +5,8 @@ import net.DakotaPride.moreweaponry.entity.client.IronBoltEntityRenderer;
 import net.DakotaPride.moreweaponry.entity.MoreWeaponryEntityRegistry;
 import net.DakotaPride.moreweaponry.entity.client.armor.*;
 import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
+import net.DakotaPride.moreweaponry.particle.CelestialMedallionParticle;
+import net.DakotaPride.moreweaponry.particle.MoreWeaponryParticles;
 import net.DakotaPride.moreweaponry.screen.CirtictForgeScreen;
 import net.DakotaPride.moreweaponry.screen.CoreForgeScreen;
 import net.DakotaPride.moreweaponry.screen.EssenceTranslatorScreen;
@@ -12,6 +14,7 @@ import net.DakotaPride.moreweaponry.screen.MoreWeaponryScreenHandlers;
 import net.DakotaPride.moreweaponry.util.MoreWeaponryModelPredicateProvider;
 import net.DakotaPride.moreweaponry.util.MoreWeaponryRendererHelper;
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.rendereregistry.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.client.screenhandler.v1.ScreenRegistry;
 import software.bernie.geckolib3.renderers.geo.GeoArmorRenderer;
@@ -25,6 +28,9 @@ public class MoreClientWeaponry implements ClientModInitializer {
 
         // ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex)
            //     -> 0x818269, MoreWeaponryBlocks.INTOXICATED_GRASS_BLOCK);
+
+        ParticleFactoryRegistry.getInstance().register(MoreWeaponryParticles.CELESTIAL_MEDALLION_PARTICLE,
+                CelestialMedallionParticle.Factory::new);
 
         ScreenRegistry.register(MoreWeaponryScreenHandlers.CORE_FORGE_SCREEN_HANDLER, CoreForgeScreen::new);
         ScreenRegistry.register(MoreWeaponryScreenHandlers.ESSENCE_TRANSLATOR_SCREEN_HANDLER, EssenceTranslatorScreen::new);

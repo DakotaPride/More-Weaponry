@@ -1,6 +1,7 @@
 package net.DakotaPride.moreweaponry.item.custom.celestial_madalian;
 
 import net.DakotaPride.moreweaponry.effect.MoreWeaponryEffects;
+import net.DakotaPride.moreweaponry.particle.MoreWeaponryParticles;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
@@ -15,6 +16,7 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.*;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
@@ -29,12 +31,25 @@ public class CelestialMadalianItem extends Item {
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity playerEntity, Hand hand) {
         ItemStack itemStack = playerEntity.getStackInHand(hand);
+    //    ItemUsageContext context;
+     //   BlockPos positionClicked = context.getBlockPos();
         playerEntity.playSound(SoundEvents.PARTICLE_SOUL_ESCAPE, 2.0F, 1.0F);
         playerEntity.addStatusEffect(new StatusEffectInstance(MoreWeaponryEffects.CELESTIAL, 3600, 0), playerEntity);
         playerEntity.getItemCooldownManager().set(this, 1200);
         itemStack.damage(1, playerEntity, (player) -> player.sendToolBreakStatus(player.getActiveHand()));
         playerEntity.sendMessage(new TranslatableText("message.moreweaponry.celestial_medallion.activated", playerEntity.getEntityName()).formatted(Formatting.YELLOW), true);
+     //   spawnFoundParticles(context, positionClicked);
         return TypedActionResult.success(itemStack);
+    }
+
+    private void spawnFoundParticles(ItemUsageContext pContext, BlockPos positionClicked) {
+        for(int i = 0; i < 360; i++) {
+            if(i % 20 == 0) {
+                pContext.getWorld().addParticle(MoreWeaponryParticles.CELESTIAL_MEDALLION_PARTICLE,
+                        positionClicked.getX() + 0.5d, positionClicked.getY() + 1, positionClicked.getZ() + 0.5d,
+                        Math.cos(i) * 0.25d, 0.15d, Math.sin(i) * 0.25d);
+            }
+        }
     }
 
     public ItemCooldownManager getItemCooldownManager() {

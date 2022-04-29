@@ -3,8 +3,8 @@
     "icon": {
       "item": "moreweaponry:kuro"
     },
-    "title": "I wonder...",
-    "description": "Harvest Kuro",
+    "title": "advancement.moreweaponry.kuro_plant.title",
+    "description": "advancement.moreweaponry.kuro_plant.description",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true

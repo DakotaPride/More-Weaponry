@@ -7,6 +7,7 @@ import net.DakotaPride.moreweaponry.enchantments.MoreWeaponryEnchantments;
 import net.DakotaPride.moreweaponry.entity.custom.IronBoltEntity;
 import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
 import net.DakotaPride.moreweaponry.painting.MoreWeaponryPaintings;
+import net.DakotaPride.moreweaponry.particle.MoreWeaponryParticles;
 import net.DakotaPride.moreweaponry.recipe.MoreWeaponryRecipes;
 import net.DakotaPride.moreweaponry.structure.MoreWeaponryStructureTypes;
 import net.DakotaPride.moreweaponry.util.MoreWeaponryHeadLootTables;
@@ -50,6 +51,8 @@ public class MoreWeaponry implements ModInitializer {
 				.dimensions(EntityDimensions.changing(0.5f, 0.5f)).trackRangeBlocks(4).trackedUpdateRate(20).build());
 
 		MoreWeaponryStructureTypes.registerStructureFeatures();
+
+		MoreWeaponryParticles.registerParticles();
 
 		MoreWeaponryConfiguredFeatures.registerConfiguredFeatures();
 

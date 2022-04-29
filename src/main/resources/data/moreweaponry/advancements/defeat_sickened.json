@@ -3,8 +3,8 @@
     "icon": {
       "item": "moreweaponry:sickened_helmet"
     },
-    "title": "Get Away You Leech!",
-    "description": "Defeat The Sickened",
+    "title": "advancement.moreweapnry.defeat_sickened.title",
+    "description": "advancement.moreweapnry.defeat_sickened.description",
     "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,

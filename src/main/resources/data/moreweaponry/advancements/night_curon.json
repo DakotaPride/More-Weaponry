@@ -3,8 +3,8 @@
     "icon": {
       "item": "moreweaponry:night_curon"
     },
-    "title": "That Be Some Dark Magic!",
-    "description": "Collect A Night Curon Flower",
+    "title": "advancement.moreweaponry.night_curon.title",
+    "description": "advancement.moreweaponry.night_curon.description",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,

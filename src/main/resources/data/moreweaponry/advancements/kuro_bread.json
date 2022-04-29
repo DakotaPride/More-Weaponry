@@ -3,8 +3,8 @@
     "icon": {
       "item": "moreweaponry:kuro_bread"
     },
-    "title": "Is This Safe To Eat? Sure.",
-    "description": "Obtain Kuro Bread",
+    "title": "advancement.moreweaponry.kuro_bread.title",
+    "description": "advancement.moreweaponry.kuro_bread.description",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true
