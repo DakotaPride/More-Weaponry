@@ -9,6 +9,7 @@ import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
 import net.DakotaPride.moreweaponry.painting.MoreWeaponryPaintings;
 import net.DakotaPride.moreweaponry.particle.MoreWeaponryParticles;
 import net.DakotaPride.moreweaponry.recipe.MoreWeaponryRecipes;
+import net.DakotaPride.moreweaponry.screen.MoreWeaponryScreenHandlers;
 import net.DakotaPride.moreweaponry.structure.MoreWeaponryStructureTypes;
 import net.DakotaPride.moreweaponry.util.MoreWeaponryHeadLootTables;
 import net.DakotaPride.moreweaponry.util.MoreWeaponryLootTableModifiers;
@@ -51,6 +52,8 @@ public class MoreWeaponry implements ModInitializer {
 				.dimensions(EntityDimensions.changing(0.5f, 0.5f)).trackRangeBlocks(4).trackedUpdateRate(20).build());
 
 		MoreWeaponryStructureTypes.registerStructureFeatures();
+
+		MoreWeaponryScreenHandlers.registerScreenHandlers();
 
 		MoreWeaponryParticles.registerParticles();
 

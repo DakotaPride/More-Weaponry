@@ -907,20 +907,20 @@ public class MoreWeaponryItems {
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item CELESTIAL_MEDALLION = registerItem("celestial_medallion",
-            new CelestialMadalianItem(new FabricItemSettings().maxDamage(107).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+            new CelestialMadalianItem(new FabricItemSettings().maxCount(1).maxDamage(107).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item CELESTIAL_MEDALLION_SICKENED = registerItem("celestial_medallion_sickened",
-            new SickenedCelestialMedallionItem(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+            new SickenedCelestialMedallionItem(new FabricItemSettings().maxCount(1).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
     public static final Item CELESTIAL_MEDALLION_SICKENED_HUSK = registerItem("celestial_medallion_sickened_husk",
-            new SickenedHuskCelestialMadalianItem(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+            new SickenedHuskCelestialMadalianItem(new FabricItemSettings().maxCount(1).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
     public static final Item CELESTIAL_MEDALLION_CRACKLER = registerItem("celestial_medallion_crackler",
-            new CracklerCelestialMedallionItem(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+            new CracklerCelestialMedallionItem(new FabricItemSettings().maxCount(1).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
     public static final Item CELESTIAL_MEDALLION_BARD = registerItem("celestial_medallion_bard",
-            new BardCelestialMedallionItem(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+            new BardCelestialMedallionItem(new FabricItemSettings().maxCount(1).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
     public static final Item CELESTIAL_MEDALLION_WANDERER = registerItem("celestial_medallion_wanderer",
-            new WandererCelestialMedallionItem(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+            new WandererCelestialMedallionItem(new FabricItemSettings().maxCount(1).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
     public static final Item CELESTIAL_MEDALLION_WATCHER = registerItem("celestial_medallion_watcher",
-            new WatcherCelestialMedallionItem(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+            new WatcherCelestialMedallionItem(new FabricItemSettings().maxCount(1).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
 
     public static Item registerItem (String name, Item item) {
