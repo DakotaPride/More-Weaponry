@@ -37,7 +37,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.function.Predicate;
 
-public class HeavyCrossBowItem extends RangedWeaponItem
+public class HeavyCrossBowItem extends CrossbowItem
         implements Vanishable
 {
     private static final String CHARGED_KEY = "Charged";
@@ -58,16 +58,17 @@ public class HeavyCrossBowItem extends RangedWeaponItem
     }
 
 
+    @Override
     public Predicate<ItemStack> getHeldProjectiles() {
         return itemStack -> itemStack.isOf(MoreWeaponryItems.IRON_BOLT) || itemStack.isOf(Items.FIREWORK_ROCKET);
     }
 
-
+    @Override
     public Predicate<ItemStack> getProjectiles() {
         return itemStack -> itemStack.isOf(MoreWeaponryItems.IRON_BOLT);
     }
 
-
+    @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
 
@@ -95,7 +96,7 @@ public class HeavyCrossBowItem extends RangedWeaponItem
         return 3.15F;
     }
 
-
+    @Override
     public void onStoppedUsing(ItemStack stack, World world, LivingEntity user, int remainingUseTicks) {
         int i = getMaxUseTime(stack) - remainingUseTicks;
         float f = getPullProgress(i, stack);
@@ -133,6 +134,7 @@ public class HeavyCrossBowItem extends RangedWeaponItem
 
         return true;
     }
+
     private static boolean loadProjectile(LivingEntity shooter, ItemStack item, ItemStack projectile, boolean simulated, boolean creative) {
         ItemStack itemStack;
         if (projectile.isEmpty()) {
@@ -164,6 +166,7 @@ public class HeavyCrossBowItem extends RangedWeaponItem
         NbtCompound nbtCompound = stack.getOrCreateNbt();
         nbtCompound.putBoolean("Charged", charged);
     }
+
     private static void putProjectile(ItemStack itemStack, ItemStack projectile) {
         NbtList nbtList;
         NbtCompound nbtCompound = itemStack.getOrCreateNbt();
@@ -208,6 +211,7 @@ public class HeavyCrossBowItem extends RangedWeaponItem
     public static boolean hasProjectile(ItemStack itemStack, Item item) {
         return getProjectiles(itemStack).stream().anyMatch(s -> s.isOf(item));
     }
+
     private static void shoot(World world, LivingEntity shooter, Hand hand, ItemStack itemStack, ItemStack projectile, float soundPitch, boolean creative, float speed, float divergence, float simulated) {
         ProjectileEntity projectileEntity;
         if (world.isClient) {
@@ -307,7 +311,7 @@ public class HeavyCrossBowItem extends RangedWeaponItem
         clearProjectiles(stack);
     }
 
-
+    @Override
     public void usageTick(World world, LivingEntity user, ItemStack stack, int remainingUseTicks) {
         if (!world.isClient) {
             int i = EnchantmentHelper.getLevel(Enchantments.QUICK_CHARGE, stack);
@@ -332,7 +336,7 @@ public class HeavyCrossBowItem extends RangedWeaponItem
         }
     }
 
-
+    @Override
     public int getMaxUseTime(ItemStack stack) {
         return getPullTime(stack) + 3;
     }
@@ -342,7 +346,7 @@ public class HeavyCrossBowItem extends RangedWeaponItem
         return (i == 0) ? 25 : (25 - 5 * i);
     }
 
-
+    @Override
     public UseAction getUseAction(ItemStack stack) {
         return UseAction.CROSSBOW;
     }
@@ -368,7 +372,7 @@ public class HeavyCrossBowItem extends RangedWeaponItem
         return f;
     }
 
-
+    @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         tooltip.add( new TranslatableText("item.moreweaponry.description.double_handed").formatted(Formatting.DARK_RED));
         List<ItemStack> list = getProjectiles(stack);
@@ -391,12 +395,12 @@ public class HeavyCrossBowItem extends RangedWeaponItem
         }
     }
 
-
+    @Override
     public boolean isUsedOnRelease(ItemStack stack) {
         return stack.isOf(this);
     }
 
-
+    @Override
     public int getRange() {
         return 8;
     }
