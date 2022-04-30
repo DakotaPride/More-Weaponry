@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#M#",
+        "V V"
+    ],
+    "key": {
+        "#": {
+            "item": "moreweaponry:blessed_titanium"
+        },
+        "M": {
+            "item": "minecraft:elytra"
+        },
+        "V": {
+            "item": "moreweaponry:heavenly_leather"
+        }
+    },
+    "result": {
+        "item": "moreweaponry:blessed_chestplate",
+        "count": 1
+    }
+}

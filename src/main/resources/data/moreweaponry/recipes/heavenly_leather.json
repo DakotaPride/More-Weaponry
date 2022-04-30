@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#V#",
+        "#M#",
+        "#V#"
+    ],
+    "key": {
+        "#": {
+            "item": "moreweaponry:spectral_essence"
+        },
+        "M": {
+            "item": "minecraft:leather"
+        },
+        "V": {
+            "item": "minecraft:feather"
+        }
+    },
+    "result": {
+        "item": "moreweaponry:heavenly_leather",
+        "count": 1
+    }
+}

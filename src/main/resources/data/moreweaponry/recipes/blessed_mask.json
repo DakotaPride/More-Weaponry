@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "VMV"
+    ],
+    "key": {
+        "M": {
+            "item": "moreweaponry:blessed_titanium"
+        },
+        "V": {
+            "item": "moreweaponry:heavenly_leather"
+        }
+    },
+    "result": {
+        "item": "moreweaponry:blessed_helmet",
+        "count": 1
+    }
+}
