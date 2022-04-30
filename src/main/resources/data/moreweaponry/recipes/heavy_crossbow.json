@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " XZ",
+    " #X",
+    "#  "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "minecraft:string"
+    },
+    "Z": {
+      "item": "moreweaponry:iron_bolt"
+    }
+  },
+  "result": {
+    "item": "moreweaponry:heavy_crossbow"
+  }
+}

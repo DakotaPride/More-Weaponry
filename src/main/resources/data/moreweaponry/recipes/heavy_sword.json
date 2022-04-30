@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " Z ",
+    "XAX",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "moreweaponry:netherite_handle"
+    },
+    "X": {
+      "item": "minecraft:iron_ingot"
+    },
+    "Z": {
+      "item": "minecraft:iron_block"
+    },
+    "A": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "result": {
+    "item": "moreweaponry:heavy_sword"
+  }
+}

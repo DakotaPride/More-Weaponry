@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X",
+    "Z",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "moreweaponry:netherite_handle"
+    },
+    "X": {
+      "item": "moreweaponry:crawler_tooth"
+    },
+    "Z": {
+      "item": "minecraft:deepslate_tiles"
+    }
+  },
+  "result": {
+    "item": "moreweaponry:bothering_might"
+  }
+}
