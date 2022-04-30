@@ -10,18 +10,8 @@ public class AbstractHostileEntity extends HostileEntity {
     }
 
     @Override
-    public void tickMovement() {
-        this.tickHandSwing();
-        this.updateDespawnCounter();
-        super.tickMovement();
-    }
-
-    @Override
-    protected void updateDespawnCounter() {
-        float f = this.getBrightnessAtEyes();
-        if (f > 0.5f) {
-            this.despawnCounter += 10000;
-        }
+    public boolean cannotDespawn() {
+        return true;
     }
 
     @Override

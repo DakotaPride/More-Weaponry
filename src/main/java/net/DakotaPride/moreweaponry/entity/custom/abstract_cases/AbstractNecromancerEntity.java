@@ -10,6 +10,11 @@ public class AbstractNecromancerEntity extends EvokerEntity {
     }
 
     @Override
+    public boolean cannotDespawn() {
+        return true;
+    }
+
+    @Override
     protected boolean isDisallowedInPeaceful() {
         return false;
     }
