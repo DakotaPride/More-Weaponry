@@ -29,13 +29,13 @@ import software.bernie.geckolib3.core.manager.AnimationFactory;
 
 import java.util.UUID;
 
-public class LurkerEntity extends AbstractHostileEntity implements IAnimatable {
+public class LurkerEntity extends HostileEntity implements IAnimatable {
     private AnimationFactory factory = new AnimationFactory(this);
     private UUID targetUuid;
     private int lastAngrySoundAge;
     private int ageWhenTargetSet;
 
-    public LurkerEntity(EntityType<? extends AbstractHostileEntity> entityType, World world) {
+    public LurkerEntity(EntityType<? extends HostileEntity> entityType, World world) {
         super(entityType, world);
         this.stepHeight = 1.0F;
 
