@@ -80,8 +80,7 @@ public class BlessedArmorItem extends ArmorItem implements IAnimatable, FabricEl
 
             // Make sure the player is wearing all the armor. If they are, continue playing
             // the animation, otherwise stop
-            boolean isWearingAll = armorList.containsAll(Arrays.asList(MoreWeaponryItems.BLESSED_HELMET,
-                    MoreWeaponryItems.BLESSED_CHESTPLATE));
+            boolean isWearingAll = armorList.contains(MoreWeaponryItems.BLESSED_CHESTPLATE);
             event.getController().setAnimation(new AnimationBuilder()
                     .addAnimation("animation.blessed_wings.equipped", true));
             return isWearingAll ? PlayState.CONTINUE : PlayState.STOP;
