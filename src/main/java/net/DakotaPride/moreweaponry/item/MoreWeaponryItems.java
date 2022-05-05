@@ -904,7 +904,7 @@ public class MoreWeaponryItems {
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
     public static final Item BLESSED_CHESTPLATE = registerItem("blessed_chestplate",
             new BlessedArmorItem(MoreWeaponryArmorMaterials.BLESSED, EquipmentSlot.CHEST,
-                    new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+                    new FabricItemSettings().maxDamage(1296).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
     public static final Item HEAVENLY_LEATHER = registerItem("heavenly_leather",
             new Item(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
