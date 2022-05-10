@@ -3,8 +3,12 @@
     "icon": {
       "item": "moreweaponry:blackstone_metal_chestplate"
     },
-    "title": "advancement.moreweaponry.set_of_blackstone_metal_armor.title",
-    "description": "advancement.moreweaponry.set_of_blackstone_metal_armor.description",
+    "title": {
+      "translate": "advancement.moreweaponry.set_of_blackstone_metal_armor.title"
+    },
+    "description": {
+      "translate": "advancement.moreweaponry.set_of_blackstone_metal_armor.description"
+    },
     "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true

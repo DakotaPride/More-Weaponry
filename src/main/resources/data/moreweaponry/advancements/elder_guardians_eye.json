@@ -3,8 +3,12 @@
     "icon": {
       "item": "moreweaponry:elder_guardians_eye"
     },
-    "title": "advancement.moreweaponry.elder_guardians_eye.title",
-    "description": "advancement.moreweaponry.elder_guardians_eye.description",
+    "title": {
+      "translate": "advancement.moreweaponry.elder_guardians_eye.title"
+    },
+    "description": {
+      "translate": "advancement.moreweaponry.elder_guardians_eye.description"
+    },
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,

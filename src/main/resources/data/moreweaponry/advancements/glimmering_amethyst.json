@@ -3,8 +3,12 @@
     "icon": {
       "item": "moreweaponry:glimmering_amethyst"
     },
-    "title": "advancement.moreweaponry.glimmering_amethyst.title",
-    "description": "advancement.moreweaponry.glimmering_amethyst.description",
+    "title": {
+      "translate": "advancement.moreweaponry.glimmering_amethyst.title"
+    },
+    "description": {
+      "translate": "advancement.moreweaponry.glimmering_amethyst.description"
+    },
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true

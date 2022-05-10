@@ -3,8 +3,12 @@
     "icon": {
       "item": "moreweaponry:wanderer_helmet"
     },
-    "title": "advancement.moreweaponry.defeat_wanderer.title",
-    "description": "advancement.moreweaponry.defeat_wanderer.description",
+    "title": {
+      "translate": "advancement.moreweaponry.defeat_wanderer.title"
+    },
+    "description": {
+      "translate": "advancement.moreweaponry.defeat_wanderer.description"
+    },
     "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,

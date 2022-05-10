@@ -3,8 +3,12 @@
     "icon": {
       "item": "moreweaponry:bluestone_rock"
     },
-    "title": "advancement.moreweaponry.bluestone.title",
-    "description": "advancement.moreweaponry.bluestone.description",
+    "title": {
+      "translate": "advancement.moreweaponry.bluestone.title"
+    },
+    "description": {
+      "translate": "advancement.moreweaponry.bluestone.description"
+    },
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,

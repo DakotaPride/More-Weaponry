@@ -3,8 +3,12 @@
     "icon": {
       "item": "moreweaponry:sickened_helmet"
     },
-    "title": "advancement.moreweapnry.defeat_sickened.title",
-    "description": "advancement.moreweapnry.defeat_sickened.description",
+    "title": {
+      "translate": "advancement.moreweapnry.defeat_sickened.title"
+    },
+    "description": {
+      "translate": "advancement.moreweapnry.defeat_sickened.description"
+    },
     "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,

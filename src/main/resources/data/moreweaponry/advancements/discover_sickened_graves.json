@@ -3,8 +3,12 @@
     "icon": {
       "item": "moreweaponry:plagued_core"
     },
-    "title": "advancement.moreweaponry.discover_sickened_graves.title",
-    "description": "advancement.moreweaponry.discover_sickened_graves.description",
+    "title": {
+      "translate": "advancement.moreweaponry.discover_sickened_graves.title"
+    },
+    "description": {
+      "translate": "advancement.moreweaponry.discover_sickened_graves.description"
+    },
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,

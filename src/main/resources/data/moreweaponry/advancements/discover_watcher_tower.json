@@ -3,8 +3,12 @@
     "icon": {
       "item": "moreweaponry:watcher_core"
     },
-    "title": "advancement.moreweaponry.discover_watcher_tower.title",
-    "description": "advancement.moreweaponry.discover_watcher_tower.description",
+    "title": {
+      "translate": "advancement.moreweaponry.discover_watcher_tower.title"
+    },
+    "description": {
+      "translate": "advancement.moreweaponry.discover_watcher_tower.description"
+    },
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,

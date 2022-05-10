@@ -3,8 +3,12 @@
     "icon": {
       "item": "moreweaponry:mare_diamond"
     },
-    "title": "advancement.moreweaponry.mare_diamond.title",
-    "description": "advancement.moreweaponry.mare_diamond.description",
+    "title": {
+      "translate": "advancement.moreweaponry.mare_diamond.title"
+    },
+    "description": {
+      "translate": "advancement.moreweaponry.mare_diamond.description"
+    },
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,

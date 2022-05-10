@@ -3,8 +3,12 @@
     "icon": {
       "item": "moreweaponry:elder_guardian_scale"
     },
-    "title": "advancement.moreweaponry.elder_guardian_scale.title",
-    "description": "advancement.moreweaponry.elder_guardian_scale.description",
+    "title": {
+      "translate": "advancement.moreweaponry.elder_guardian_scale.title"
+    },
+    "description": {
+      "translate": "advancement.moreweaponry.elder_guardian_scale.description"
+    },
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,

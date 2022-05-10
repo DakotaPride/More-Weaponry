@@ -3,8 +3,12 @@
     "icon": {
       "item": "moreweaponry:wretched_core"
     },
-    "title": "advancement.moreweaponry.discover_wanderer_library.title",
-    "description": "advancement.moreweaponry.discover_wanderer_library.description",
+    "title": {
+      "translate": "advancement.moreweaponry.discover_wanderer_library.title"
+    },
+    "description": {
+      "translate": "advancement.moreweaponry.discover_wanderer_library.description"
+    },
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,

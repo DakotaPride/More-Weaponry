@@ -3,12 +3,16 @@
     "icon": {
       "item": "moreweaponry:cirtict_battleaxe"
     },
-    "title": "advancement.moreweaponry.moreweaponry.title",
-    "description": "advancement.moreweaponry.moreweaponry.description",
+    "title": {
+      "translate": "advancement.moreweaponry.moreweaponry.title"
+    },
+    "description": {
+      "translate": "advancement.moreweaponry.moreweaponry.description"
+    },
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": false,
-    "background": "moreweaponry:textures/block/glimmering_amethyst_block.png"
+    "background": "moreweaponry:textures/gui/advancement/background_base.png"
   },
   "criteria": {
     "requirement": {

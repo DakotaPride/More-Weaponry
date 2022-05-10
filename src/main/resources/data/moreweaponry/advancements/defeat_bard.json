@@ -3,8 +3,12 @@
     "icon": {
       "item": "moreweaponry:bard_helmet"
     },
-    "title": "advancement.moreweaponry.defeat_bard.title",
-    "description": "advancement.moreweaponry.defeat_bard.description",
+    "title": {
+      "translate": "advancement.moreweaponry.defeat_bard.title"
+    },
+    "description": {
+      "translate": "advancement.moreweaponry.defeat_bard.description"
+    },
     "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,

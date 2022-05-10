@@ -3,8 +3,12 @@
     "icon": {
       "item": "moreweaponry:guardian_scale_chestplate"
     },
-    "title": "advancement.moreweaponry.set_of_guardian_scale_armor.title",
-    "description": "advancement.moreweaponry.set_of_guardian_scale_armor.description",
+    "title": {
+      "translate": "advancement.moreweaponry.set_of_guardian_scale_armor.title"
+    },
+    "description": {
+      "translate": "advancement.moreweaponry.set_of_guardian_scale_armor.description"
+    },
     "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true

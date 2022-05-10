@@ -3,8 +3,12 @@
     "icon": {
       "item": "moreweaponry:kuro"
     },
-    "title": "advancement.moreweaponry.kuro_plant.title",
-    "description": "advancement.moreweaponry.kuro_plant.description",
+    "title": {
+      "translate": "advancement.moreweaponry.kuro_plant.title"
+    },
+    "description": {
+      "translate": "advancement.moreweaponry.kuro_plant.description"
+    },
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true

@@ -3,8 +3,12 @@
     "icon": {
       "item": "moreweaponry:watcher_helmet"
     },
-    "title": "advancement.moreweaponry.defeat_watcher.title",
-    "description": "advancement.moreweaponry.defeat_watcher.description",
+    "title": {
+      "translate": "advancement.moreweaponry.defeat_watcher.title"
+    },
+    "description": {
+      "translate": "advancement.moreweaponry.defeat_watcher.description"
+    },
     "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,

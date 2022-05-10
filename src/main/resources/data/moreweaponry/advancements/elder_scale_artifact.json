@@ -3,8 +3,12 @@
     "icon": {
       "item": "moreweaponry:elder_scale_artifact"
     },
-    "title": "advancement.moreweaponry.elder_scale_artifact.title",
-    "description": "advancement.moreweaponry.elder_scale_artifact.description",
+    "title": {
+      "translate": "advancement.moreweaponry.elder_scale_artifact.title"
+    },
+    "description": {
+      "translate": "advancement.moreweaponry.elder_scale_artifact.description"
+    },
     "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,

@@ -3,8 +3,12 @@
     "icon": {
       "item": "moreweaponry:kuro_bread"
     },
-    "title": "advancement.moreweaponry.kuro_bread.title",
-    "description": "advancement.moreweaponry.kuro_bread.description",
+    "title": {
+      "translate": "advancement.moreweaponry.kuro_bread.title"
+    },
+    "description": {
+      "translate": "advancement.moreweaponry.kuro_bread.description"
+    },
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true
