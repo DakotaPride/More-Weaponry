@@ -1,6 +1,6 @@
 package net.DakotaPride.moreweaponry.block.custom;
 
-import net.DakotaPride.moreweaponry.block.MoreWeaponryBlocks;
+import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.DakotaPride.moreweaponry.world.features.MoreWeaponryPlacedFeatures;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Fertilizable;
@@ -32,9 +32,9 @@ public class IntoxicatedGrassBlock extends GrassBlock {
 
     public void grow(ServerWorld world, Random random, BlockPos pos, BlockState state) {
         BlockPos blockPos = pos.up();
-        BlockState blockState = MoreWeaponryBlocks.INTOXICATED_GRASS.getDefaultState();
-        BlockState blockState1 = MoreWeaponryBlocks.INTOXICATED_DANDELION.getDefaultState();
-        BlockState blockState2 = MoreWeaponryBlocks.INTOXICATED_DANDELION.getDefaultState();
+        BlockState blockState = MoreWeaponry.INTOXICATED_GRASS.getDefaultState();
+        BlockState blockState1 = MoreWeaponry.INTOXICATED_DANDELION.getDefaultState();
+        BlockState blockState2 = MoreWeaponry.INTOXICATED_DANDELION.getDefaultState();
 
         label46:
         for(int i = 0; i < 128; ++i) {

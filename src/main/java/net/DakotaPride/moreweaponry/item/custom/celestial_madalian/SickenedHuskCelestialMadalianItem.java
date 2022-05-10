@@ -1,8 +1,7 @@
 package net.DakotaPride.moreweaponry.item.custom.celestial_madalian;
 
-import net.DakotaPride.moreweaponry.block.MoreWeaponryBlocks;
+import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.DakotaPride.moreweaponry.entity.MoreWeaponryEntities;
-import net.DakotaPride.moreweaponry.entity.custom.BardEntity;
 import net.DakotaPride.moreweaponry.entity.custom.SickenedHuskEntity;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.LivingEntity;
@@ -30,7 +29,7 @@ public class SickenedHuskCelestialMadalianItem extends CelestialMadalianItem{
         BlockPos blockPos = context.getBlockPos();
         World world = context.getWorld();
         LivingEntity livingEntity = context.getPlayer();
-        if (world.getBlockState(blockPos).isOf(MoreWeaponryBlocks.SICKENED_HUSK_SUMMONER)) {
+        if (world.getBlockState(blockPos).isOf(MoreWeaponry.SICKENED_HUSK_SUMMONER)) {
             world.playSound(null, blockPos, SoundEvents.PARTICLE_SOUL_ESCAPE, SoundCategory.PLAYERS, 1.0F, 1.0F);
 
             SickenedHuskEntity sickenedHuskEntity = MoreWeaponryEntities.SICKENED_HUSK.create(world);

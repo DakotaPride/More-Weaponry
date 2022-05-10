@@ -1,6 +1,6 @@
 package net.DakotaPride.moreweaponry.entity.custom;
 
-import net.DakotaPride.moreweaponry.block.MoreWeaponryBlocks;
+import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.DakotaPride.moreweaponry.effect.MoreWeaponryEffects;
 import net.DakotaPride.moreweaponry.entity.custom.abstract_cases.AbstractHostileEntity;
 import net.DakotaPride.moreweaponry.entity.damage.MoreWeaponryDamageSource;
@@ -155,8 +155,8 @@ public class SickenedEntity extends AbstractHostileEntity implements IAnimatable
                 return;
             }
 
-            BlockState blockState = MoreWeaponryBlocks.INTOXICATED_GRASS_BLOCK.getDefaultState();
-            BlockState blockState1 = MoreWeaponryBlocks.INTOXICATED_STONE.getDefaultState();
+            BlockState blockState = MoreWeaponry.INTOXICATED_GRASS_BLOCK.getDefaultState();
+            BlockState blockState1 = MoreWeaponry.INTOXICATED_STONE.getDefaultState();
 
             for(int l = 0; l < 4; ++l) {
                 i = MathHelper.floor(this.getX() + (double)((float)(l % 2 * 2 - 1) * 0.25F));

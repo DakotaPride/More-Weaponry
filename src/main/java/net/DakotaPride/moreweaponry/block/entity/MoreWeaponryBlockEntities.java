@@ -1,7 +1,6 @@
 package net.DakotaPride.moreweaponry.block.entity;
 
 import net.DakotaPride.moreweaponry.MoreWeaponry;
-import net.DakotaPride.moreweaponry.block.MoreWeaponryBlocks;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.util.Identifier;
@@ -16,15 +15,15 @@ public class MoreWeaponryBlockEntities {
         CORE_FORGE = Registry.register(Registry.BLOCK_ENTITY_TYPE,
                 new Identifier(MoreWeaponry.MOD_ID, "core_forge"),
                 FabricBlockEntityTypeBuilder.create(CoreForgeEntity::new,
-                        MoreWeaponryBlocks.CORE_FORGE).build(null));
+                        MoreWeaponry.CORE_FORGE).build(null));
         ESSENCE_TRANSLATOR = Registry.register(Registry.BLOCK_ENTITY_TYPE,
                 new Identifier(MoreWeaponry.MOD_ID, "essence_translator"),
                 FabricBlockEntityTypeBuilder.create(EssenceTranslatorEntity::new,
-                        MoreWeaponryBlocks.ESSENCE_TRANSLATOR).build(null));
+                        MoreWeaponry.ESSENCE_TRANSLATOR).build(null));
         CIRTICT_FORGE = Registry.register(Registry.BLOCK_ENTITY_TYPE,
                 new Identifier(MoreWeaponry.MOD_ID, "cirtict_forge"),
                 FabricBlockEntityTypeBuilder.create(CirtictForgeEntity::new,
-                        MoreWeaponryBlocks.CIRTICT_FORGE).build(null));
+                        MoreWeaponry.CIRTICT_FORGE).build(null));
     }
 
 }

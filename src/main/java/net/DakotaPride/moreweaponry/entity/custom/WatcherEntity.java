@@ -1,6 +1,6 @@
 package net.DakotaPride.moreweaponry.entity.custom;
 
-import net.DakotaPride.moreweaponry.block.MoreWeaponryBlocks;
+import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.DakotaPride.moreweaponry.effect.MoreWeaponryEffects;
 import net.DakotaPride.moreweaponry.entity.custom.abstract_cases.AbstractHostileEntity;
 import net.minecraft.block.BlockState;
@@ -118,7 +118,7 @@ public class WatcherEntity extends AbstractHostileEntity implements IAnimatable 
             CreeperEntity creeperEntity = (CreeperEntity)entity;
             if (creeperEntity.shouldDropHead()) {
                 creeperEntity.onHeadDropped();
-                dropItem(MoreWeaponryBlocks.WATCHER_SKULL.asItem());
+                dropItem(MoreWeaponry.WATCHER_SKULL.asItem());
             }
         }
     }

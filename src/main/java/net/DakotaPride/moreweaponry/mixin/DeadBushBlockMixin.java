@@ -1,6 +1,6 @@
 package net.DakotaPride.moreweaponry.mixin;
 
-import net.DakotaPride.moreweaponry.block.MoreWeaponryBlocks;
+import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.DeadBushBlock;
@@ -17,7 +17,7 @@ public class DeadBushBlockMixin {
 
     @Inject(method = "canPlantOnTop", at = @At("RETURN"), cancellable = true)
     protected void canPlantOnTop(BlockState floor, BlockView world, BlockPos pos, CallbackInfoReturnable<Boolean> cir) {
-        cir.setReturnValue(floor.isOf(MoreWeaponryBlocks.SANDSTONE_DUST_BLOCK) ||
+        cir.setReturnValue(floor.isOf(MoreWeaponry.SANDSTONE_DUST_BLOCK) ||
                 floor.isOf(Blocks.SAND) || floor
                         .isOf(Blocks.RED_SAND) || floor
                         .isOf(Blocks.TERRACOTTA) || floor

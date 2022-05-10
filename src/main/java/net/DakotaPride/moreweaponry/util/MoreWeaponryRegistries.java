@@ -1,6 +1,6 @@
 package net.DakotaPride.moreweaponry.util;
 
-import net.DakotaPride.moreweaponry.block.MoreWeaponryBlocks;
+import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.DakotaPride.moreweaponry.entity.MoreWeaponryEntities;
 import net.DakotaPride.moreweaponry.entity.custom.*;
 import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
@@ -19,16 +19,16 @@ public class MoreWeaponryRegistries {
     public static void registerMoreWeaponryComposterChances() {
         ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(MoreWeaponryItems.KURO_SEEDS, 0.3f);
         ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(MoreWeaponryItems.KURO, 0.3f);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(MoreWeaponryBlocks.KURO_WHEAT_BLOCK.asItem(), 0.85f);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(MoreWeaponryBlocks.FRODON_LEAVES.asItem(), 0.5f);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(MoreWeaponryBlocks.FRODON_SAPLING.asItem(), 0.3f);
-        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(MoreWeaponryBlocks.NIGHT_CURON.asItem(), 0.65f);
+        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(MoreWeaponry.KURO_WHEAT_BLOCK.asItem(), 0.85f);
+        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(MoreWeaponry.FRODON_LEAVES.asItem(), 0.5f);
+        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(MoreWeaponry.FRODON_SAPLING.asItem(), 0.3f);
+        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(MoreWeaponry.NIGHT_CURON.asItem(), 0.65f);
         ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(MoreWeaponryItems.CURON_FLOWER_PETALS, 0.45f);
     }
 
     public static void registerMoreWeaponryStrippables() {
-        StrippableBlockRegistry.register(MoreWeaponryBlocks.FRODON_LOG, MoreWeaponryBlocks.STRIPPED_FRODON_LOG);
-        StrippableBlockRegistry.register(MoreWeaponryBlocks.FRODON_WOOD, MoreWeaponryBlocks.STRIPPED_FRODON_WOOD);
+        StrippableBlockRegistry.register(MoreWeaponry.FRODON_LOG, MoreWeaponry.STRIPPED_FRODON_LOG);
+        StrippableBlockRegistry.register(MoreWeaponry.FRODON_WOOD, MoreWeaponry.STRIPPED_FRODON_WOOD);
     }
 
     private static void registerAttributes() {

@@ -1,6 +1,6 @@
 package net.DakotaPride.moreweaponry.block.custom;
 
-import net.DakotaPride.moreweaponry.block.MoreWeaponryBlocks;
+import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.minecraft.block.*;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.util.math.BlockPos;
@@ -28,7 +28,7 @@ public class IntoxicatedFlowerBlock extends PlantBlock {
 
     @Override
     public boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
-        return floor.isOf(MoreWeaponryBlocks.INTOXICATED_GRASS_BLOCK) || floor.isOf(MoreWeaponryBlocks.SANDSTONE_DUST_BLOCK)
+        return floor.isOf(MoreWeaponry.INTOXICATED_GRASS_BLOCK) || floor.isOf(MoreWeaponry.SANDSTONE_DUST_BLOCK)
                 || floor.isOf(Blocks.DIRT);
     }
 

@@ -2,9 +2,9 @@ package net.DakotaPride.moreweaponry.item;
 
 import com.github.crimsondawn45.fabricshieldlib.lib.object.FabricShieldItem;
 import net.DakotaPride.moreweaponry.MoreWeaponry;
-import net.DakotaPride.moreweaponry.block.MoreWeaponryBlocks;
 import net.DakotaPride.moreweaponry.entity.MoreWeaponryEntities;
 import net.DakotaPride.moreweaponry.item.custom.*;
+import net.DakotaPride.moreweaponry.item.custom.bard_tools.*;
 import net.DakotaPride.moreweaponry.item.custom.blessed_tools.BlessedArmorItem;
 import net.DakotaPride.moreweaponry.item.custom.celestial_madalian.*;
 import net.DakotaPride.moreweaponry.item.custom.cirtict.CooledCirtictClusterItem;
@@ -13,15 +13,15 @@ import net.DakotaPride.moreweaponry.item.custom.cirtict.cooled.*;
 import net.DakotaPride.moreweaponry.item.custom.cirtict.essence.*;
 import net.DakotaPride.moreweaponry.item.custom.cirtict.heated.*;
 import net.DakotaPride.moreweaponry.item.custom.cores.*;
+import net.DakotaPride.moreweaponry.item.custom.crackler_tools.*;
 import net.DakotaPride.moreweaponry.item.custom.elder_scale_items.*;
-import net.DakotaPride.moreweaponry.item.custom.bard_tools.*;
 import net.DakotaPride.moreweaponry.item.custom.mod_tools.BluestoneIgnitor;
 import net.DakotaPride.moreweaponry.item.custom.mod_tools.ModBattleaxeItem;
 import net.DakotaPride.moreweaponry.item.custom.mod_tools.ModKnifeItem;
 import net.DakotaPride.moreweaponry.item.custom.phantom_helm.PhantomScaleHelm;
-import net.DakotaPride.moreweaponry.item.custom.sickened_tools.*;
 import net.DakotaPride.moreweaponry.item.custom.powered_cores.*;
-import net.DakotaPride.moreweaponry.item.custom.crackler_tools.*;
+import net.DakotaPride.moreweaponry.item.custom.sickened_tools.*;
+import net.DakotaPride.moreweaponry.item.custom.vanilla_tools.ModAxeItem;
 import net.DakotaPride.moreweaponry.item.custom.vanilla_tools.ModHoeItem;
 import net.DakotaPride.moreweaponry.item.custom.vanilla_tools.ModPickaxeItem;
 import net.DakotaPride.moreweaponry.item.custom.wanderer_tools.*;
@@ -37,7 +37,6 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
-import net.DakotaPride.moreweaponry.item.custom.vanilla_tools.ModAxeItem;
 
 public class MoreWeaponryItems {
 
@@ -57,7 +56,7 @@ public class MoreWeaponryItems {
             new ModHandleItem(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item KURO_SEEDS = registerItem("kuro_seeds",
-            new BlockItem(MoreWeaponryBlocks.KURO_PLANT, new FabricItemSettings().fireproof().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+            new BlockItem(MoreWeaponry.KURO_PLANT, new FabricItemSettings().fireproof().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item KURO = registerItem("kuro",
             new Item(new FabricItemSettings().fireproof().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
@@ -430,7 +429,7 @@ public class MoreWeaponryItems {
 
     public static final Item FRODON_SIGN = registerItem("frodon_sign",
             new SignItem(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY).maxCount(16),
-                    MoreWeaponryBlocks.FRODON_SIGN, MoreWeaponryBlocks.FRODON_WALL_SIGN));
+                    MoreWeaponry.FRODON_SIGN_BLOCK, MoreWeaponry.FRODON_WALL_SIGN));
 
     public static final Item DRAGON_SCALE = registerItem("dragon_scale",
             new Item(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));

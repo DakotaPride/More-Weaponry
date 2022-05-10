@@ -1,8 +1,6 @@
 package net.DakotaPride.moreweaponry.util;
 
 import net.DakotaPride.moreweaponry.MoreWeaponry;
-import net.DakotaPride.moreweaponry.block.MoreWeaponryBlocks;
-import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
 import net.fabricmc.fabric.api.loot.v1.FabricLootPoolBuilder;
 import net.fabricmc.fabric.api.loot.v1.event.LootTableLoadingCallback;
 import net.minecraft.loot.condition.RandomChanceLootCondition;
@@ -30,35 +28,35 @@ public class MoreWeaponryHeadLootTables {
                 FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(100.0f))
-                        .with(ItemEntry.builder(MoreWeaponryBlocks.WATCHER_SKULL.asItem()))
+                        .with(ItemEntry.builder(MoreWeaponry.WATCHER_SKULL.asItem()))
                         .withFunction(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
                 supplier.withPool(poolBuilder.build());
             } if (WANDERER_ID.equals(id)) {
                 FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(100.0f))
-                        .with(ItemEntry.builder(MoreWeaponryBlocks.WANDERER_SKULL.asItem()))
+                        .with(ItemEntry.builder(MoreWeaponry.WANDERER_SKULL.asItem()))
                         .withFunction(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
                 supplier.withPool(poolBuilder.build());
             } if (BARD_ID.equals(id)) {
                 FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(100.0f))
-                        .with(ItemEntry.builder(MoreWeaponryBlocks.BARD_SKULL.asItem()))
+                        .with(ItemEntry.builder(MoreWeaponry.BARD_SKULL.asItem()))
                         .withFunction(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
                 supplier.withPool(poolBuilder.build());
             } if (CRACKLER_ID.equals(id)) {
                 FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(100.0f))
-                        .with(ItemEntry.builder(MoreWeaponryBlocks.CRACKLER_SKULL.asItem()))
+                        .with(ItemEntry.builder(MoreWeaponry.CRACKLER_SKULL.asItem()))
                         .withFunction(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
                 supplier.withPool(poolBuilder.build());
             } if (SICKENED_ID.equals(id)) {
                 FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(100.0f))
-                        .with(ItemEntry.builder(MoreWeaponryBlocks.SICKENED_SKULL.asItem()))
+                        .with(ItemEntry.builder(MoreWeaponry.SICKENED_SKULL.asItem()))
                         .withFunction(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
                 supplier.withPool(poolBuilder.build());
             }
