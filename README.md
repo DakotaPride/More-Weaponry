@@ -1,11 +1,13 @@
-<div allign="center">
+<p align="center">
 <img alt="Icon" src="src/main/resources/assets/moreweaponry/icon.png" width="128">
 
-
-# More Weaponry
-  [CurseForge](https://curseforge.com/minecraft/mc-mods/more-weaponry) | [Modrinth](https://modrinth.com/mod/more-weaponry)
-
-  </div>
+  </p>
+  
+<h1 align="center"> More Weaponry </h1>
+<p align="center">
+  <a href="https://curseforge.com/minecraft/mc-mods/more-weaponry">CurseForge</a> 
+  | <a href="https://modrinth.com/mod/more-weaponry">Modrinth</a>
+  </p>
 
 ## About
 More Weaponry implements new tools and bosses for your journey! Explore the vast plains and uncover the secrets that were left locked in stone, or travel to the baren landscape of the End dimension and unleash a forgotten evil that lies in an ancient tower! Many other secrets lie across the world.
