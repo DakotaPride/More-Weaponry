@@ -2,9 +2,8 @@ package net.DakotaPride.moreweaponry.mixin;
 
 import net.DakotaPride.moreweaponry.effect.MoreWeaponryEffects;
 import net.DakotaPride.moreweaponry.entity.damage.MoreWeaponryDamageSource;
-import net.DakotaPride.moreweaponry.item.custom.BotheringMightSwordItem;
+import net.DakotaPride.moreweaponry.item.items.BotheringMightSwordItem;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;

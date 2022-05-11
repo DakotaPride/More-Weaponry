@@ -5,13 +5,10 @@ import net.DakotaPride.moreweaponry.entity.custom.BuriedKnightEntity;
 import net.DakotaPride.moreweaponry.entity.custom.CrawlerEntity;
 import net.DakotaPride.moreweaponry.entity.damage.MoreWeaponryDamageSource;
 import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
-import net.DakotaPride.moreweaponry.item.custom.HeavyCrossBowItem;
-import net.DakotaPride.moreweaponry.item.custom.HeavySwordItem;
+import net.DakotaPride.moreweaponry.item.items.HeavyCrossBowItem;
+import net.DakotaPride.moreweaponry.item.items.HeavySwordItem;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.attribute.EntityAttributeInstance;
-import net.minecraft.entity.attribute.EntityAttributeModifier;
-import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
@@ -22,7 +19,6 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 

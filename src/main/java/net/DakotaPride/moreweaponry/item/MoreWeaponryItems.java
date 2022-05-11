@@ -3,31 +3,30 @@ package net.DakotaPride.moreweaponry.item;
 import com.github.crimsondawn45.fabricshieldlib.lib.object.FabricShieldItem;
 import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.DakotaPride.moreweaponry.entity.MoreWeaponryEntities;
-import net.DakotaPride.moreweaponry.item.custom.*;
-import net.DakotaPride.moreweaponry.item.custom.bard_tools.*;
-import net.DakotaPride.moreweaponry.item.custom.blessed_tools.BlessedArmorItem;
-import net.DakotaPride.moreweaponry.item.custom.celestial_madalian.*;
-import net.DakotaPride.moreweaponry.item.custom.cirtict.CooledCirtictClusterItem;
-import net.DakotaPride.moreweaponry.item.custom.cirtict.HeatedCirtictClusterItem;
-import net.DakotaPride.moreweaponry.item.custom.cirtict.cooled.*;
-import net.DakotaPride.moreweaponry.item.custom.cirtict.essence.*;
-import net.DakotaPride.moreweaponry.item.custom.cirtict.heated.*;
-import net.DakotaPride.moreweaponry.item.custom.cores.*;
-import net.DakotaPride.moreweaponry.item.custom.crackler_tools.*;
-import net.DakotaPride.moreweaponry.item.custom.elder_scale_items.*;
-import net.DakotaPride.moreweaponry.item.custom.mod_tools.BluestoneIgnitor;
-import net.DakotaPride.moreweaponry.item.custom.mod_tools.ModBattleaxeItem;
-import net.DakotaPride.moreweaponry.item.custom.mod_tools.ModKnifeItem;
-import net.DakotaPride.moreweaponry.item.custom.phantom_helm.PhantomScaleHelm;
-import net.DakotaPride.moreweaponry.item.custom.powered_cores.*;
-import net.DakotaPride.moreweaponry.item.custom.sickened_tools.*;
-import net.DakotaPride.moreweaponry.item.custom.vanilla_tools.ModAxeItem;
-import net.DakotaPride.moreweaponry.item.custom.vanilla_tools.ModHoeItem;
-import net.DakotaPride.moreweaponry.item.custom.vanilla_tools.ModPickaxeItem;
-import net.DakotaPride.moreweaponry.item.custom.wanderer_tools.*;
-import net.DakotaPride.moreweaponry.item.custom.watcher_tools.*;
+import net.DakotaPride.moreweaponry.item.items.*;
+import net.DakotaPride.moreweaponry.item.items.bard_tools.*;
+import net.DakotaPride.moreweaponry.item.items.blessed_tools.BlessedArmorItem;
+import net.DakotaPride.moreweaponry.item.items.celestial_madalian.*;
+import net.DakotaPride.moreweaponry.item.items.cirtict.CooledCirtictClusterItem;
+import net.DakotaPride.moreweaponry.item.items.cirtict.HeatedCirtictClusterItem;
+import net.DakotaPride.moreweaponry.item.items.cirtict.cooled.*;
+import net.DakotaPride.moreweaponry.item.items.cirtict.essence.*;
+import net.DakotaPride.moreweaponry.item.items.cirtict.heated.*;
+import net.DakotaPride.moreweaponry.item.items.cores.*;
+import net.DakotaPride.moreweaponry.item.items.crackler_tools.*;
+import net.DakotaPride.moreweaponry.item.items.elder_scale_items.*;
+import net.DakotaPride.moreweaponry.item.items.mod_tools.BluestoneIgnitor;
+import net.DakotaPride.moreweaponry.item.items.mod_tools.BattleaxeItem;
+import net.DakotaPride.moreweaponry.item.items.mod_tools.KnifeItem;
+import net.DakotaPride.moreweaponry.item.items.phantom_helm.PhantomScaleHelm;
+import net.DakotaPride.moreweaponry.item.items.powered_cores.*;
+import net.DakotaPride.moreweaponry.item.items.sickened_tools.*;
+import net.DakotaPride.moreweaponry.item.items.vanilla_tools.ModAxeItem;
+import net.DakotaPride.moreweaponry.item.items.vanilla_tools.ModHoeItem;
+import net.DakotaPride.moreweaponry.item.items.vanilla_tools.ModPickaxeItem;
+import net.DakotaPride.moreweaponry.item.items.wanderer_tools.*;
+import net.DakotaPride.moreweaponry.item.items.watcher_tools.*;
 import net.DakotaPride.moreweaponry.item.extra.MoreWeaponryArmorMaterials;
-import net.DakotaPride.moreweaponry.item.extra.MoreWeaponryItemGroup;
 import net.DakotaPride.moreweaponry.item.extra.MoreWeaponryToolMaterials;
 import net.DakotaPride.moreweaponry.sound.MoreWeaponrySoundEvents;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -53,7 +52,7 @@ public class MoreWeaponryItems {
             new Item(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item HANDLE = registerItem("handle",
-            new ModHandleItem(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+            new HandleItem(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item KURO_SEEDS = registerItem("kuro_seeds",
             new BlockItem(MoreWeaponry.KURO_PLANT, new FabricItemSettings().fireproof().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
@@ -98,7 +97,7 @@ public class MoreWeaponryItems {
             new Item(new FabricItemSettings().fireproof().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item NETHERITE_HANDLE = registerItem("netherite_handle",
-            new ModHandleItem(new FabricItemSettings().fireproof().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+            new HandleItem(new FabricItemSettings().fireproof().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item MARE_DIAMOND = registerItem("mare_diamond",
             new Item(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
@@ -107,7 +106,7 @@ public class MoreWeaponryItems {
             new Item(new FabricItemSettings().fireproof().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item AMETHYST_HANDLE = registerItem("amethyst_handle",
-            new ModHandleItem(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+            new HandleItem(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item GUARDIAN_SCALE = registerItem("guardian_scale",
             new Item(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
@@ -119,7 +118,7 @@ public class MoreWeaponryItems {
             new Item(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item PRISMARINE_HANDLE = registerItem("prismarine_handle",
-            new ModHandleItem(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+            new HandleItem(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item WITHER_ESSENCE = registerItem("wither_essence",
             new Item(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
@@ -159,7 +158,7 @@ public class MoreWeaponryItems {
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item GLIMMERING_BATTLEAXE = registerItem("glimmering_battleaxe",
-            new ModBattleaxeItem((ToolMaterial) MoreWeaponryToolMaterials.GLIMMERING_AMETHYST, 6, -3.3f,
+            new BattleaxeItem((ToolMaterial) MoreWeaponryToolMaterials.GLIMMERING_AMETHYST, 6, -3.3f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item MOON_STONE_SWORD = registerItem("moon_stone_sword",
@@ -180,7 +179,7 @@ public class MoreWeaponryItems {
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item MOON_STONE_BATTLEAXE = registerItem("moon_stone_battleaxe",
-            new ModBattleaxeItem((ToolMaterial) MoreWeaponryToolMaterials.REFINED_MOON_STONE, 8, -3.3f,
+            new BattleaxeItem((ToolMaterial) MoreWeaponryToolMaterials.REFINED_MOON_STONE, 8, -3.3f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item BLACKSTONE_METAL_SWORD = registerItem("blackstone_metal_sword",
@@ -201,16 +200,16 @@ public class MoreWeaponryItems {
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item BLACKSTONE_METAL_BATTLEAXE = registerItem("blackstone_metal_battleaxe",
-            new ModBattleaxeItem((ToolMaterial) MoreWeaponryToolMaterials.BLACKSTONE_METAL, 9, -3.3f,
+            new BattleaxeItem((ToolMaterial) MoreWeaponryToolMaterials.BLACKSTONE_METAL, 9, -3.3f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
 
     public static final Item NETHERITE_BATTLEAXE = registerItem("netherite_battleaxe",
-            new ModBattleaxeItem((ToolMaterial) MoreWeaponryToolMaterials.OG_NETHERITE, 8, -3.3f,
+            new BattleaxeItem((ToolMaterial) MoreWeaponryToolMaterials.OG_NETHERITE, 8, -3.3f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item DIAMOND_BATTLEAXE = registerItem("diamond_battleaxe",
-            new ModBattleaxeItem((ToolMaterial) MoreWeaponryToolMaterials.OG_DIAMOND, 7, -3.3f,
+            new BattleaxeItem((ToolMaterial) MoreWeaponryToolMaterials.OG_DIAMOND, 7, -3.3f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item GLIMMERING_HELMET = registerItem("glimmering_helmet",
@@ -317,7 +316,7 @@ public class MoreWeaponryItems {
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item GUARDIAN_SCALE_BATTLEAXE = registerItem("guardian_scale_battleaxe",
-            new ModBattleaxeItem((ToolMaterial) MoreWeaponryToolMaterials.GUARDIAN_SCALE, 10, -3.3f,
+            new BattleaxeItem((ToolMaterial) MoreWeaponryToolMaterials.GUARDIAN_SCALE, 10, -3.3f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item GLIMMERING_SHIELD = registerItem("glimmering_shield",
@@ -340,67 +339,67 @@ public class MoreWeaponryItems {
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item GOLDEN_KNIFE = registerItem("golden_knife",
-            new ModKnifeItem((ToolMaterial) MoreWeaponryToolMaterials.OG_GOLD, 2, -1f,
+            new KnifeItem((ToolMaterial) MoreWeaponryToolMaterials.OG_GOLD, 2, -1f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item STONE_KNIFE = registerItem("stone_knife",
-            new ModKnifeItem((ToolMaterial) MoreWeaponryToolMaterials.OG_STONE, 2, -1f,
+            new KnifeItem((ToolMaterial) MoreWeaponryToolMaterials.OG_STONE, 2, -1f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item IRON_KNIFE = registerItem("iron_knife",
-            new ModKnifeItem((ToolMaterial) MoreWeaponryToolMaterials.OG_IRON, 3, -1f,
+            new KnifeItem((ToolMaterial) MoreWeaponryToolMaterials.OG_IRON, 3, -1f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item DIAMOND_KNIFE = registerItem("diamond_knife",
-            new ModKnifeItem((ToolMaterial) MoreWeaponryToolMaterials.OG_DIAMOND, 4, -1f,
+            new KnifeItem((ToolMaterial) MoreWeaponryToolMaterials.OG_DIAMOND, 4, -1f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item WOODEN_KNIFE = registerItem("wooden_knife",
-            new ModKnifeItem((ToolMaterial) MoreWeaponryToolMaterials.OG_WOOD, 1, -1f,
+            new KnifeItem((ToolMaterial) MoreWeaponryToolMaterials.OG_WOOD, 1, -1f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item NETHERITE_KNIFE = registerItem("netherite_knife",
-            new ModKnifeItem((ToolMaterial) MoreWeaponryToolMaterials.OG_NETHERITE, 2, -1f,
+            new KnifeItem((ToolMaterial) MoreWeaponryToolMaterials.OG_NETHERITE, 2, -1f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item REFINED_MOON_KNIFE = registerItem("refined_moon_knife",
-            new ModKnifeItem((ToolMaterial) MoreWeaponryToolMaterials.REFINED_MOON_STONE, 3, -1f,
+            new KnifeItem((ToolMaterial) MoreWeaponryToolMaterials.REFINED_MOON_STONE, 3, -1f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item GLIMMERED_AMETHYST_KNIFE = registerItem("glimmered_amethyst_knife",
-            new ModKnifeItem((ToolMaterial) MoreWeaponryToolMaterials.GLIMMERING_AMETHYST, 2, -1f,
+            new KnifeItem((ToolMaterial) MoreWeaponryToolMaterials.GLIMMERING_AMETHYST, 2, -1f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item BLACKSTONE_METAL_KNIFE = registerItem("blackstone_metal_knife",
-            new ModKnifeItem((ToolMaterial) MoreWeaponryToolMaterials.BLACKSTONE_METAL, (int) 2.5, -1f,
+            new KnifeItem((ToolMaterial) MoreWeaponryToolMaterials.BLACKSTONE_METAL, (int) 2.5, -1f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item GUARDIAN_SCALE_KNIFE = registerItem("guardian_scale_knife",
-            new ModKnifeItem((ToolMaterial) MoreWeaponryToolMaterials.GUARDIAN_SCALE, 3, -1f,
+            new KnifeItem((ToolMaterial) MoreWeaponryToolMaterials.GUARDIAN_SCALE, 3, -1f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item ELDER_GUARDIAN_SCALE_KNIFE = registerItem("elder_guardian_scale_knife",
-            new ModKnifeItem((ToolMaterial) MoreWeaponryToolMaterials.ELDER_GUARDIAN_SCALE, 3, -1f,
+            new KnifeItem((ToolMaterial) MoreWeaponryToolMaterials.ELDER_GUARDIAN_SCALE, 3, -1f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item GOLDEN_BATTLEAXE = registerItem("golden_battleaxe",
-            new ModBattleaxeItem((ToolMaterial) MoreWeaponryToolMaterials.OG_GOLD, 2, -3.3f,
+            new BattleaxeItem((ToolMaterial) MoreWeaponryToolMaterials.OG_GOLD, 2, -3.3f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item WOODEN_BATTLEAXE = registerItem("wooden_battleaxe",
-            new ModBattleaxeItem((ToolMaterial) MoreWeaponryToolMaterials.OG_WOOD, 1, -3.3f,
+            new BattleaxeItem((ToolMaterial) MoreWeaponryToolMaterials.OG_WOOD, 1, -3.3f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item STONE_BATTLEAXE = registerItem("stone_battleaxe",
-            new ModBattleaxeItem((ToolMaterial) MoreWeaponryToolMaterials.OG_STONE, 2, -3.3f,
+            new BattleaxeItem((ToolMaterial) MoreWeaponryToolMaterials.OG_STONE, 2, -3.3f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item IRON_BATTLEAXE = registerItem("iron_battleaxe",
-            new ModBattleaxeItem((ToolMaterial) MoreWeaponryToolMaterials.OG_IRON, 3, -3.3f,
+            new BattleaxeItem((ToolMaterial) MoreWeaponryToolMaterials.OG_IRON, 3, -3.3f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item CIRTICT_BATTLEAXE = registerItem("cirtict_battleaxe",
-            new ModBattleaxeItem((ToolMaterial) MoreWeaponryToolMaterials.CIRTICT, 4, -3.3f,
+            new BattleaxeItem((ToolMaterial) MoreWeaponryToolMaterials.CIRTICT, 4, -3.3f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item HEATED_CIRTICT_BATTLEAXE = registerItem("heated_cirtict_battleaxe",
@@ -443,7 +442,7 @@ public class MoreWeaponryItems {
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item WITHERING_HANDLE = registerItem("withering_handle",
-            new ModHandleItem(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+            new HandleItem(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item WITHER_BROAD_HAMMER_HEAD = registerItem("wither_broad_hammer_head",
             new Item(new FabricItemSettings().maxCount(1).group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
@@ -520,7 +519,7 @@ public class MoreWeaponryItems {
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item CIRTICT_KNIFE = registerItem("cirtict_knife",
-            new ModKnifeItem((ToolMaterial) MoreWeaponryToolMaterials.CIRTICT, -4, -1f,
+            new KnifeItem((ToolMaterial) MoreWeaponryToolMaterials.CIRTICT, -4, -1f,
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item COOLED_CIRTICT_SHIELD  = registerItem("cooled_cirtict_shield",
@@ -550,7 +549,7 @@ public class MoreWeaponryItems {
                     new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item ENDICATE_HANDLE = registerItem("endicate_handle",
-            new ModHandleItem(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
+            new HandleItem(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));
 
     public static final Item SANDSTONE_DUST = registerItem("sandstone_dust",
             new Item(new FabricItemSettings().group(MoreWeaponryItemGroup.MORE_WEAPONRY)));

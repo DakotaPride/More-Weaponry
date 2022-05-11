@@ -1,7 +1,6 @@
 package net.DakotaPride.moreweaponry.entity.client.armor;
 
-import net.DakotaPride.moreweaponry.item.custom.bard_tools.BardArmorItem;
-import net.DakotaPride.moreweaponry.item.custom.crackler_tools.CracklerArmorItem;
+import net.DakotaPride.moreweaponry.item.items.bard_tools.BardArmorItem;
 import software.bernie.geckolib3.renderers.geo.GeoArmorRenderer;
 
 public class BardArmorRenderer extends GeoArmorRenderer<BardArmorItem> {

@@ -1,6 +1,6 @@
 package net.DakotaPride.moreweaponry.item.inventory;
 
-import net.DakotaPride.moreweaponry.item.custom.HeavyCrossBowItem;
+import net.DakotaPride.moreweaponry.item.items.HeavyCrossBowItem;
 import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;

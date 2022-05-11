@@ -1,6 +1,6 @@
 package net.DakotaPride.moreweaponry.entity.client.armor;
 
-import net.DakotaPride.moreweaponry.item.custom.crackler_tools.CracklerArmorItem;
+import net.DakotaPride.moreweaponry.item.items.crackler_tools.CracklerArmorItem;
 import software.bernie.geckolib3.renderers.geo.GeoArmorRenderer;
 
 public class CracklerArmorRenderer extends GeoArmorRenderer<CracklerArmorItem> {

@@ -1,7 +1,6 @@
 package net.DakotaPride.moreweaponry.entity.client.armor;
 
-import net.DakotaPride.moreweaponry.item.custom.wanderer_tools.WandererArmorItem;
-import net.DakotaPride.moreweaponry.item.custom.watcher_tools.WatcherArmorItem;
+import net.DakotaPride.moreweaponry.item.items.wanderer_tools.WandererArmorItem;
 import software.bernie.geckolib3.renderers.geo.GeoArmorRenderer;
 
 public class WandererArmorRenderer extends GeoArmorRenderer<WandererArmorItem> {

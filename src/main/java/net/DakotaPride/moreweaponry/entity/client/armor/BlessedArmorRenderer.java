@@ -1,7 +1,6 @@
 package net.DakotaPride.moreweaponry.entity.client.armor;
 
-import net.DakotaPride.moreweaponry.item.custom.bard_tools.BardArmorItem;
-import net.DakotaPride.moreweaponry.item.custom.blessed_tools.BlessedArmorItem;
+import net.DakotaPride.moreweaponry.item.items.blessed_tools.BlessedArmorItem;
 import software.bernie.geckolib3.renderers.geo.GeoArmorRenderer;
 
 public class BlessedArmorRenderer extends GeoArmorRenderer<BlessedArmorItem> {
