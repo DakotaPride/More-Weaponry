@@ -1,11 +1,11 @@
 package net.DakotaPride.moreweaponry.mixin;
 
-import net.DakotaPride.moreweaponry.MoreWeaponry;
-import net.DakotaPride.moreweaponry.entity.custom.BuriedKnightEntity;
-import net.DakotaPride.moreweaponry.entity.custom.CrawlerEntity;
-import net.DakotaPride.moreweaponry.entity.damage.MoreWeaponryDamageSource;
-import net.DakotaPride.moreweaponry.item.items.HeavyCrossBowItem;
-import net.DakotaPride.moreweaponry.item.items.HeavySwordItem;
+import net.DakotaPride.moreweaponry.common.MoreWeaponry;
+import net.DakotaPride.moreweaponry.common.entity.custom.BuriedKnightEntity;
+import net.DakotaPride.moreweaponry.common.entity.custom.CrawlerEntity;
+import net.DakotaPride.moreweaponry.common.entity.damage.MoreWeaponryDamageSource;
+import net.DakotaPride.moreweaponry.common.item.items.HeavyCrossBowItem;
+import net.DakotaPride.moreweaponry.common.item.items.HeavySwordItem;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;

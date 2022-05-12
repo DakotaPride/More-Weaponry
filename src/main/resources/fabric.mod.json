@@ -18,10 +18,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.DakotaPride.moreweaponry.MoreWeaponry"
+      "net.DakotaPride.moreweaponry.common.MoreWeaponry"
     ],
     "client": [
-      "net.DakotaPride.moreweaponry.MoreClientWeaponry"
+      "net.DakotaPride.moreweaponry.client.MoreClientWeaponry"
     ]
   },
   "mixins": [

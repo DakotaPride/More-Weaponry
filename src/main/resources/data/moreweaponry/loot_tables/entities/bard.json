@@ -37,6 +37,25 @@
       "entries": [
         {
           "type": "minecraft:item",
+          "weight": 60,
+          "name": "moreweaponry:maiden_stem",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 0,
+                "max": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
           "weight": 100,
           "name": "moreweaponry:maiden_core",
           "functions": [

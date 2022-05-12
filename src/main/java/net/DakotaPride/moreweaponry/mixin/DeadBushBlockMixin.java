@@ -1,6 +1,6 @@
 package net.DakotaPride.moreweaponry.mixin;
 
-import net.DakotaPride.moreweaponry.MoreWeaponry;
+import net.DakotaPride.moreweaponry.common.MoreWeaponry;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.DeadBushBlock;
