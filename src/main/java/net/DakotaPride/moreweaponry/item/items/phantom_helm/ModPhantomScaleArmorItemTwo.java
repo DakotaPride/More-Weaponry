@@ -1,7 +1,7 @@
 package net.DakotaPride.moreweaponry.item.items.phantom_helm;
 
 import com.google.common.collect.ImmutableMap;
-import net.DakotaPride.moreweaponry.item.extra.MoreWeaponryArmorMaterials;
+import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.effect.StatusEffect;
@@ -19,7 +19,7 @@ public class ModPhantomScaleArmorItemTwo extends ArmorItem {
 
     private static final Map<ArmorMaterial, StatusEffect> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, StatusEffect>())
-                    .put(MoreWeaponryArmorMaterials.PHANTOM_SCALE, StatusEffects.NIGHT_VISION).build();
+                    .put(MoreWeaponry.MoreWeaponryArmorMaterials.PHANTOM_SCALE_ARMOR, StatusEffects.NIGHT_VISION).build();
 
 
     public ModPhantomScaleArmorItemTwo(ArmorMaterial material, EquipmentSlot slot, Settings settings) {

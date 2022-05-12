@@ -1,6 +1,6 @@
 package net.DakotaPride.moreweaponry.item.items.watcher_tools;
 
-import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
+import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.decoration.ArmorStandEntity;
@@ -58,8 +58,8 @@ public class WatcherArmorItem extends ArmorItem implements IAnimatable {
 
             // Make sure the player is wearing all the armor. If they are, continue playing
             // the animation, otherwise stop
-            boolean isWearingAll = armorList.containsAll(Arrays.asList(MoreWeaponryItems.WATCHER_HELMET,
-                    MoreWeaponryItems.WATCHER_CHESTPLATE));
+            boolean isWearingAll = armorList.containsAll(Arrays.asList(MoreWeaponry.WATCHER_HELMET,
+                    MoreWeaponry.WATCHER_BREASTPLATE));
             return isWearingAll ? PlayState.CONTINUE : PlayState.STOP;
         }
         return PlayState.STOP;

@@ -1,6 +1,6 @@
 package net.DakotaPride.moreweaponry.item.items.bard_tools;
 
-import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
+import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.decoration.ArmorStandEntity;
@@ -58,8 +58,8 @@ public class BardArmorItem extends ArmorItem implements IAnimatable {
 
             // Make sure the player is wearing all the armor. If they are, continue playing
             // the animation, otherwise stop
-            boolean isWearingAll = armorList.containsAll(Arrays.asList(MoreWeaponryItems.BARD_HELMET,
-                    MoreWeaponryItems.BARD_CHESTPLATE));
+            boolean isWearingAll = armorList.containsAll(Arrays.asList(MoreWeaponry.BARD_HELMET,
+                    MoreWeaponry.BARD_BREASTPLATE));
             return isWearingAll ? PlayState.CONTINUE : PlayState.STOP;
         }
         return PlayState.STOP;

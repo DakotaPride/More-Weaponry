@@ -1,16 +1,13 @@
 package net.DakotaPride.moreweaponry;
 
 import net.DakotaPride.moreweaponry.block.entity.MoreWeaponryBlockEntities;
-import net.DakotaPride.moreweaponry.entity.client.IronBoltEntityRenderer;
 import net.DakotaPride.moreweaponry.entity.MoreWeaponryEntityRegistry;
+import net.DakotaPride.moreweaponry.entity.client.IronBoltEntityRenderer;
 import net.DakotaPride.moreweaponry.entity.client.armor.*;
-import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
 import net.DakotaPride.moreweaponry.particle.CelestialMedallionParticle;
-import net.DakotaPride.moreweaponry.particle.MoreWeaponryParticles;
 import net.DakotaPride.moreweaponry.screen.CirtictForgeScreen;
 import net.DakotaPride.moreweaponry.screen.CoreForgeScreen;
 import net.DakotaPride.moreweaponry.screen.EssenceTranslatorScreen;
-import net.DakotaPride.moreweaponry.screen.MoreWeaponryScreenHandlers;
 import net.DakotaPride.moreweaponry.util.MoreWeaponryModelPredicateProvider;
 import net.DakotaPride.moreweaponry.util.MoreWeaponryRendererHelper;
 import net.fabricmc.api.ClientModInitializer;
@@ -29,12 +26,12 @@ public class MoreClientWeaponry implements ClientModInitializer {
         // ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex)
            //     -> 0x818269, MoreWeaponryBlocks.INTOXICATED_GRASS_BLOCK);
 
-        ParticleFactoryRegistry.getInstance().register(MoreWeaponryParticles.CELESTIAL_MEDALLION_PARTICLE,
+        ParticleFactoryRegistry.getInstance().register(MoreWeaponry.CELESTIAL_MEDALLION_PARTICLE,
                 CelestialMedallionParticle.Factory::new);
 
-        ScreenRegistry.register(MoreWeaponryScreenHandlers.CORE_FORGE_SCREEN_HANDLER, CoreForgeScreen::new);
-        ScreenRegistry.register(MoreWeaponryScreenHandlers.ESSENCE_TRANSLATOR_SCREEN_HANDLER, EssenceTranslatorScreen::new);
-        ScreenRegistry.register(MoreWeaponryScreenHandlers.CIRTICT_FORGE_SCREEN_HANDLER, CirtictForgeScreen::new);
+        ScreenRegistry.register(MoreWeaponry.CORE_FORGE_SCREEN_HANDLER, CoreForgeScreen::new);
+        ScreenRegistry.register(MoreWeaponry.ESSENCE_TRANSLATOR_SCREEN_HANDLER, EssenceTranslatorScreen::new);
+        ScreenRegistry.register(MoreWeaponry.CIRTICT_FORGE_SCREEN_HANDLER, CirtictForgeScreen::new);
 
         MoreWeaponryRendererHelper.setRenderLayers();
         MoreWeaponryRendererHelper.setTransparentBlocks();
@@ -44,18 +41,18 @@ public class MoreClientWeaponry implements ClientModInitializer {
         MoreWeaponryEntityRegistry.registerMoreWeaponryEntities();
         MoreWeaponryBlockEntities.registerMoreWeaponryBlockEntities();
 
-        GeoArmorRenderer.registerArmorRenderer(new WatcherArmorRenderer(), MoreWeaponryItems.WATCHER_HELMET,
-                MoreWeaponryItems.WATCHER_CHESTPLATE);
-        GeoArmorRenderer.registerArmorRenderer(new WandererArmorRenderer(), MoreWeaponryItems.WANDERER_HELMET,
-                MoreWeaponryItems.WANDERER_CHESTPLATE);
-        GeoArmorRenderer.registerArmorRenderer(new CracklerArmorRenderer(), MoreWeaponryItems.CRACKLER_HELMET,
-                MoreWeaponryItems.CRACKLER_CHESTPLATE);
-        GeoArmorRenderer.registerArmorRenderer(new BardArmorRenderer(), MoreWeaponryItems.BARD_HELMET,
-                MoreWeaponryItems.BARD_CHESTPLATE);
-        GeoArmorRenderer.registerArmorRenderer(new SickenedArmorRenderer(), MoreWeaponryItems.SICKENED_HELMET,
-                MoreWeaponryItems.SICKENED_CHESTPLATE);
-        GeoArmorRenderer.registerArmorRenderer(new BlessedArmorRenderer(), MoreWeaponryItems.BLESSED_HELMET,
-                MoreWeaponryItems.BLESSED_CHESTPLATE);
+        GeoArmorRenderer.registerArmorRenderer(new WatcherArmorRenderer(), MoreWeaponry.WATCHER_HELMET,
+                MoreWeaponry.WATCHER_BREASTPLATE);
+        GeoArmorRenderer.registerArmorRenderer(new WandererArmorRenderer(), MoreWeaponry.WANDERER_HELMET,
+                MoreWeaponry.WANDERER_BREASTPLATE);
+        GeoArmorRenderer.registerArmorRenderer(new CracklerArmorRenderer(), MoreWeaponry.CRACKLER_HELMET,
+                MoreWeaponry.CRACKLER_BREASTPLATE);
+        GeoArmorRenderer.registerArmorRenderer(new BardArmorRenderer(), MoreWeaponry.BARD_HELMET,
+                MoreWeaponry.BARD_BREASTPLATE);
+        GeoArmorRenderer.registerArmorRenderer(new SickenedArmorRenderer(), MoreWeaponry.SICKENED_HELMET,
+                MoreWeaponry.SICKENED_BREASTPLATE);
+        GeoArmorRenderer.registerArmorRenderer(new BlessedArmorRenderer(), MoreWeaponry.BLESSED_HELMET,
+                MoreWeaponry.BLESSED_BREASTPLATE);
 
 
     }

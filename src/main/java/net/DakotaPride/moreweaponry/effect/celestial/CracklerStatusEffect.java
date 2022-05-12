@@ -1,6 +1,6 @@
-package net.DakotaPride.moreweaponry.effect.status_effects.celestial;
+package net.DakotaPride.moreweaponry.effect.celestial;
 
-import net.DakotaPride.moreweaponry.effect.status_effects.base.CelestialEffect;
+import net.DakotaPride.moreweaponry.effect.base.CelestialEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
 
 public class CracklerStatusEffect extends CelestialEffect {

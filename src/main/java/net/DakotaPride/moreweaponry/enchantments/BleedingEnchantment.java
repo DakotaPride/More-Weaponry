@@ -1,6 +1,6 @@
 package net.DakotaPride.moreweaponry.enchantments;
 
-import net.DakotaPride.moreweaponry.effect.MoreWeaponryEffects;
+import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.Entity;
@@ -16,7 +16,7 @@ public class BleedingEnchantment extends Enchantment {
     @Override
     public void onTargetDamaged(LivingEntity user, Entity target, int level) {
         if (target instanceof LivingEntity) {
-            ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(MoreWeaponryEffects.BLEEDING, 20 * 4 * level, level - 1));
+            ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(MoreWeaponry.BLEEDING, 20 * 4 * level, level - 1));
         }
         super.onTargetDamaged(user, target, level);
     }

@@ -1,7 +1,6 @@
 package net.DakotaPride.moreweaponry.item.items.celestial_madalian;
 
 import net.DakotaPride.moreweaponry.MoreWeaponry;
-import net.DakotaPride.moreweaponry.entity.MoreWeaponryEntities;
 import net.DakotaPride.moreweaponry.entity.custom.SickenedEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ItemUsageContext;
@@ -24,7 +23,7 @@ public class SickenedCelestialMedallionItem extends CelestialMadalianItem {
         if (world.getBlockState(blockPos).isOf(MoreWeaponry.SICKENED_SUMMONER)) {
             world.playSound(null, blockPos, SoundEvents.PARTICLE_SOUL_ESCAPE, SoundCategory.PLAYERS, 1.0F, 1.0F);
 
-            SickenedEntity sickenedEntity = MoreWeaponryEntities.SICKENED.create(world);
+            SickenedEntity sickenedEntity = MoreWeaponry.SICKENED_ENTITY.create(world);
             assert sickenedEntity != null;
             sickenedEntity.refreshPositionAndAngles((double)blockPos.getX() + 0.5, blockPos.getY() + 1.5, (double)blockPos.getZ() + 0.5, 0.0f, 0.0f);
             world.spawnEntity(sickenedEntity);

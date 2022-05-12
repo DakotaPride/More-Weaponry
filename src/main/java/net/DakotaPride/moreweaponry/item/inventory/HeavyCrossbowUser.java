@@ -1,7 +1,7 @@
 package net.DakotaPride.moreweaponry.item.inventory;
 
+import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.DakotaPride.moreweaponry.item.items.HeavyCrossBowItem;
-import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.RangedAttackMob;
@@ -27,9 +27,9 @@ public interface HeavyCrossbowUser extends RangedAttackMob
     void postShoot();
 
     default void shoot(LivingEntity entity, float speed) {
-        Hand hand = ProjectileUtil.getHandPossiblyHolding(entity, MoreWeaponryItems.HEAVY_CROSSBOW);
+        Hand hand = ProjectileUtil.getHandPossiblyHolding(entity, MoreWeaponry.HEAVY_CROSSBOW);
         ItemStack itemStack = entity.getStackInHand(hand);
-        if (entity.isHolding(MoreWeaponryItems.HEAVY_CROSSBOW)) {
+        if (entity.isHolding(MoreWeaponry.HEAVY_CROSSBOW)) {
             HeavyCrossBowItem.shootAll(entity.world, entity, hand, itemStack, speed, (14 - entity.world.getDifficulty().getId() * 4));
         }
         postShoot();

@@ -1,8 +1,7 @@
 package net.DakotaPride.moreweaponry.item.items.bard_tools;
 
 import com.google.common.collect.ImmutableMap;
-import net.DakotaPride.moreweaponry.effect.MoreWeaponryEffects;
-import net.DakotaPride.moreweaponry.item.extra.MoreWeaponryArmorMaterials;
+import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -18,8 +17,8 @@ import java.util.Map;
 public class BardEffectItem extends BardArmorItem {
     private static final Map<ArmorMaterial, StatusEffectInstance> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, StatusEffectInstance>())
-                    .put(MoreWeaponryArmorMaterials.BARD,
-                            new StatusEffectInstance(MoreWeaponryEffects.BARD, 12000, 0)).build();
+                    .put(MoreWeaponry.MoreWeaponryArmorMaterials.BARD_ARMOR,
+                            new StatusEffectInstance(MoreWeaponry.BARD, 12000, 0)).build();
 
     public BardEffectItem(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
         super(material, slot, settings);

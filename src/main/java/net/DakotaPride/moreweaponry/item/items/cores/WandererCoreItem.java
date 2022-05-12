@@ -1,6 +1,6 @@
 package net.DakotaPride.moreweaponry.item.items.cores;
 
-import net.DakotaPride.moreweaponry.effect.MoreWeaponryEffects;
+import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
@@ -26,7 +26,7 @@ public class WandererCoreItem extends Item {
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity playerEntity, Hand hand) {
         playerEntity.playSound(SoundEvents.PARTICLE_SOUL_ESCAPE, 2.0F, 1.0F);
-        playerEntity.addStatusEffect(new StatusEffectInstance(MoreWeaponryEffects.WANDERER, 200, 0), playerEntity);
+        playerEntity.addStatusEffect(new StatusEffectInstance(MoreWeaponry.WANDERER, 200, 0), playerEntity);
         playerEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 200, 0), playerEntity);
         playerEntity.getItemCooldownManager().set(this, 200);
         return TypedActionResult.success(playerEntity.getStackInHand(hand));

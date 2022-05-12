@@ -1,6 +1,6 @@
 package net.DakotaPride.moreweaponry.item.items;
 
-import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
+import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -19,7 +19,7 @@ public class NightCuronBrewItem
         if (user instanceof PlayerEntity && ((PlayerEntity)user).getAbilities().creativeMode) {
             return itemStack;
         }
-        return new ItemStack(MoreWeaponryItems.FRODON_BOWL);
+        return new ItemStack(MoreWeaponry.FRODON_BOWL);
     }
 }
 

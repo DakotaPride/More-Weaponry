@@ -1,13 +1,11 @@
 package net.DakotaPride.moreweaponry.item.items;
 
-import net.DakotaPride.moreweaponry.effect.MoreWeaponryEffects;
+import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
-import net.minecraft.world.World;
 
 public class BotheringMightSwordItem extends SwordItem {
     public BotheringMightSwordItem(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
@@ -16,7 +14,7 @@ public class BotheringMightSwordItem extends SwordItem {
 
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-        target.addStatusEffect(new StatusEffectInstance(MoreWeaponryEffects.CONFUSION, 200, 2), attacker);
+        target.addStatusEffect(new StatusEffectInstance(MoreWeaponry.CONFUSION, 200, 2), attacker);
         return super.postHit(stack, target, attacker);
     }
 }

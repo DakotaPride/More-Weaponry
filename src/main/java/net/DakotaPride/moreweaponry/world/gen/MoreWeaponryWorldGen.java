@@ -21,8 +21,6 @@ public class MoreWeaponryWorldGen {
         MoreWeaponryTreeGeneration.generateTrees();
         MoreWeaponryFlowerGeneration.generateFlowers();
 
-        MoreWeaponryEntitySpawn.addEntitySpawn();
-
         MoreWeaponryTopLayerModification.generateTopLayerModifications();
     }
 

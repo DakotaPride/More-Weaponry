@@ -2,7 +2,6 @@ package net.DakotaPride.moreweaponry.entity.custom;
 
 import com.google.common.collect.Sets;
 import net.DakotaPride.moreweaponry.MoreWeaponry;
-import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
@@ -52,7 +51,7 @@ public class IronBoltEntity extends PersistentProjectileEntity {
     }
 
     public void initFromStack(ItemStack stack) {
-        if (stack.isOf(MoreWeaponryItems.IRON_BOLT)) {
+        if (stack.isOf(MoreWeaponry.IRON_BOLT_ITEM)) {
             this.potion = Potions.EMPTY;
             this.effects.clear();
             this.dataTracker.set(COLOR, -1);
@@ -196,9 +195,9 @@ public class IronBoltEntity extends PersistentProjectileEntity {
 
     protected ItemStack asItemStack() {
         if (this.effects.isEmpty() && this.potion == Potions.EMPTY) {
-            return new ItemStack(MoreWeaponryItems.IRON_BOLT);
+            return new ItemStack(MoreWeaponry.IRON_BOLT_ITEM);
         } else {
-            ItemStack itemStack = new ItemStack(MoreWeaponryItems.IRON_BOLT);
+            ItemStack itemStack = new ItemStack(MoreWeaponry.IRON_BOLT_ITEM);
 
             return itemStack;
         }

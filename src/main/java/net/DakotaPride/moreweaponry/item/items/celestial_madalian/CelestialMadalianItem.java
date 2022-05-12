@@ -1,7 +1,6 @@
 package net.DakotaPride.moreweaponry.item.items.celestial_madalian;
 
-import net.DakotaPride.moreweaponry.effect.MoreWeaponryEffects;
-import net.DakotaPride.moreweaponry.particle.MoreWeaponryParticles;
+import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.ItemCooldownManager;
@@ -31,7 +30,7 @@ public class CelestialMadalianItem extends Item {
       //  ItemUsageContext context = ;
      //   BlockPos positionClicked = context.getBlockPos();
         playerEntity.playSound(SoundEvents.PARTICLE_SOUL_ESCAPE, 2.0F, 1.0F);
-        playerEntity.addStatusEffect(new StatusEffectInstance(MoreWeaponryEffects.CELESTIAL, 3600, 0), playerEntity);
+        playerEntity.addStatusEffect(new StatusEffectInstance(MoreWeaponry.CELESTIAL, 3600, 0), playerEntity);
         playerEntity.getItemCooldownManager().set(this, 1200);
         itemStack.damage(1, playerEntity, (player) -> player.sendToolBreakStatus(player.getActiveHand()));
         playerEntity.sendMessage(new TranslatableText("message.moreweaponry.celestial_medallion.activated", playerEntity.getEntityName()).formatted(Formatting.YELLOW), true);
@@ -48,7 +47,7 @@ public class CelestialMadalianItem extends Item {
     private void spawnFoundParticles(ItemUsageContext pContext, BlockPos positionClicked) {
         for(int i = 0; i < 360; i++) {
             if(i % 20 == 0) {
-                pContext.getWorld().addParticle(MoreWeaponryParticles.CELESTIAL_MEDALLION_PARTICLE,
+                pContext.getWorld().addParticle(MoreWeaponry.CELESTIAL_MEDALLION_PARTICLE,
                         positionClicked.getX() + 0.5d, positionClicked.getY() + 1, positionClicked.getZ() + 0.5d,
                         Math.cos(i) * 2.0d, 2.0d, Math.sin(i) * 2.0d);
             }

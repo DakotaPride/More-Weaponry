@@ -1,6 +1,6 @@
 package net.DakotaPride.moreweaponry.util;
 
-import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
+import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.fabricmc.fabric.api.loot.v1.FabricLootPoolBuilder;
 import net.fabricmc.fabric.api.loot.v1.event.LootTableLoadingCallback;
 import net.minecraft.loot.condition.RandomChanceLootCondition;
@@ -30,7 +30,7 @@ public class MoreWeaponryLootTableModifiers {
                 FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.30f))
-                        .with(ItemEntry.builder(MoreWeaponryItems.MOON_STONE_DUST))
+                        .with(ItemEntry.builder(MoreWeaponry.MOON_STONE_DUST))
                         .withFunction(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 2.0f)).build());
                 supplier.withPool(poolBuilder.build());
             }
@@ -39,7 +39,7 @@ public class MoreWeaponryLootTableModifiers {
                 FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.71f))
-                        .with(ItemEntry.builder(MoreWeaponryItems.GUARDIAN_SCALE))
+                        .with(ItemEntry.builder(MoreWeaponry.GUARDIAN_SCALE))
                         .withFunction(SetCountLootFunction.builder(UniformLootNumberProvider.create(0.0f, 2.0f)).build());
                 supplier.withPool(poolBuilder.build());
             }
@@ -47,11 +47,11 @@ public class MoreWeaponryLootTableModifiers {
                 FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.65f))
-                        .with(ItemEntry.builder(MoreWeaponryItems.ELDER_GUARDIAN_SCALE))
+                        .with(ItemEntry.builder(MoreWeaponry.ELDER_GUARDIAN_SCALE))
                         .withFunction(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 2.0f)).build())
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.99f))
-                        .with(ItemEntry.builder(MoreWeaponryItems.ELDER_GUARDIANS_EYE))
+                        .with(ItemEntry.builder(MoreWeaponry.ELDER_GUARDIANS_EYE))
                         .withFunction(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
                 supplier.withPool(poolBuilder.build());
             }
@@ -60,11 +60,11 @@ public class MoreWeaponryLootTableModifiers {
                 FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.5f))
-                        .with(ItemEntry.builder(MoreWeaponryItems.WITHER_BONE))
+                        .with(ItemEntry.builder(MoreWeaponry.WITHER_BONE))
                         .withFunction(SetCountLootFunction.builder(UniformLootNumberProvider.create(0.0f, 2.0f)).build())
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.42f))
-                        .with(ItemEntry.builder(MoreWeaponryItems.WITHER_ESSENCE))
+                        .with(ItemEntry.builder(MoreWeaponry.WITHER_ESSENCE))
                         .withFunction(SetCountLootFunction.builder(UniformLootNumberProvider.create(0.0f, 3.0f)).build());
                 supplier.withPool(poolBuilder.build());
             }
@@ -73,14 +73,15 @@ public class MoreWeaponryLootTableModifiers {
                 FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.75f))
-                        .with(ItemEntry.builder(MoreWeaponryItems.PHANTOM_ESSENCE))
+                        .with(ItemEntry.builder(MoreWeaponry.PHANTOM_ESSENCE))
                         .withFunction(SetCountLootFunction.builder(UniformLootNumberProvider.create(0.0f, 2.0f)).build())
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.65f))
-                        .with(ItemEntry.builder(MoreWeaponryItems.PHANTOM_SCALE))
+                        .with(ItemEntry.builder(MoreWeaponry.PHANTOM_SCALE))
                         .withFunction(SetCountLootFunction.builder(UniformLootNumberProvider.create(0.0f, 2.0f)).build());
                 supplier.withPool(poolBuilder.build());
             }
         }));
+        MoreWeaponryHeadLootTables.registerMoreWeaponryHeadLootTables();
     }
 }

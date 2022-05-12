@@ -1,5 +1,6 @@
 package net.DakotaPride.moreweaponry.screen;
 
+import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.DakotaPride.moreweaponry.screen.slot.MoreWeaponryResultSlot;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
@@ -22,7 +23,7 @@ public class EssenceTranslatorScreenHandler extends ScreenHandler {
     }
 
     public EssenceTranslatorScreenHandler(int syncId, PlayerInventory playerInventory, Inventory inventory, PropertyDelegate delegate) {
-        super(MoreWeaponryScreenHandlers.ESSENCE_TRANSLATOR_SCREEN_HANDLER, syncId);
+        super(MoreWeaponry.ESSENCE_TRANSLATOR_SCREEN_HANDLER, syncId);
         checkSize(inventory, 4);
         this.inventory = inventory;
         this.world = playerInventory.player.world;

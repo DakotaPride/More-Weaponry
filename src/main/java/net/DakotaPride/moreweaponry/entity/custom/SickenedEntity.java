@@ -1,7 +1,6 @@
 package net.DakotaPride.moreweaponry.entity.custom;
 
 import net.DakotaPride.moreweaponry.MoreWeaponry;
-import net.DakotaPride.moreweaponry.effect.MoreWeaponryEffects;
 import net.DakotaPride.moreweaponry.entity.custom.abstract_cases.AbstractHostileEntity;
 import net.DakotaPride.moreweaponry.entity.damage.MoreWeaponryDamageSource;
 import net.minecraft.block.BlockState;
@@ -53,7 +52,7 @@ public class SickenedEntity extends AbstractHostileEntity implements IAnimatable
         if (source.getAttacker() != null && !source.isProjectile() && source.getAttacker() instanceof LivingEntity) {
             LivingEntity attacker = (LivingEntity) source.getAttacker();
             attacker.damage(MoreWeaponryDamageSource.CELESTIALITE, 0.0F);
-            attacker.addStatusEffect(new StatusEffectInstance(MoreWeaponryEffects.PLAGUED, 100), this);
+            attacker.addStatusEffect(new StatusEffectInstance(MoreWeaponry.PLAGUED, 100), this);
         }
 
         return super.damage(source, amount);
@@ -64,8 +63,8 @@ public class SickenedEntity extends AbstractHostileEntity implements IAnimatable
         StatusEffect statusEffect = effect.getEffectType();
         return statusEffect
                 != StatusEffects.POISON && statusEffect
-                != MoreWeaponryEffects.SICKENED && statusEffect
-                != MoreWeaponryEffects.PLAGUED && statusEffect
+                != MoreWeaponry.SICKENED && statusEffect
+                != MoreWeaponry.PLAGUED && statusEffect
                 != StatusEffects.HUNGER;
     }
 
@@ -75,7 +74,7 @@ public class SickenedEntity extends AbstractHostileEntity implements IAnimatable
         } else {
             if (target instanceof LivingEntity) {
                 ((LivingEntity)target).addStatusEffect
-                        (new StatusEffectInstance(MoreWeaponryEffects.PLAGUED, 140), this);
+                        (new StatusEffectInstance(MoreWeaponry.PLAGUED, 140), this);
             }
 
             return true;

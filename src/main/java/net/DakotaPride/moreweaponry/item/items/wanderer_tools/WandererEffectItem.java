@@ -1,8 +1,7 @@
 package net.DakotaPride.moreweaponry.item.items.wanderer_tools;
 
 import com.google.common.collect.ImmutableMap;
-import net.DakotaPride.moreweaponry.effect.MoreWeaponryEffects;
-import net.DakotaPride.moreweaponry.item.extra.MoreWeaponryArmorMaterials;
+import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -18,8 +17,8 @@ import java.util.Map;
 public class WandererEffectItem extends WandererArmorItem {
     private static final Map<ArmorMaterial, StatusEffectInstance> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, StatusEffectInstance>())
-                    .put(MoreWeaponryArmorMaterials.WANDERER,
-                            new StatusEffectInstance(MoreWeaponryEffects.WANDERER, 12000, 0)).build();
+                    .put(MoreWeaponry.MoreWeaponryArmorMaterials.WANDERER_ARMOR,
+                            new StatusEffectInstance(MoreWeaponry.WANDERER, 12000, 0)).build();
 
     public WandererEffectItem(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
         super(material, slot, settings);

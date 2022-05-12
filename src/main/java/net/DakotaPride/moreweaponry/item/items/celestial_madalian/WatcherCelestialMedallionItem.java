@@ -1,7 +1,6 @@
 package net.DakotaPride.moreweaponry.item.items.celestial_madalian;
 
 import net.DakotaPride.moreweaponry.MoreWeaponry;
-import net.DakotaPride.moreweaponry.entity.MoreWeaponryEntities;
 import net.DakotaPride.moreweaponry.entity.custom.WatcherEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ItemUsageContext;
@@ -24,7 +23,7 @@ public class WatcherCelestialMedallionItem extends CelestialMadalianItem{
         if (world.getBlockState(blockPos).isOf(MoreWeaponry.WATCHER_SUMMONER)) {
             world.playSound(null, blockPos, SoundEvents.PARTICLE_SOUL_ESCAPE, SoundCategory.PLAYERS, 1.0F, 1.0F);
 
-            WatcherEntity watcherEntity = MoreWeaponryEntities.WATCHER.create(world);
+            WatcherEntity watcherEntity = MoreWeaponry.WATCHER_ENTITY.create(world);
             assert watcherEntity != null;
             watcherEntity.refreshPositionAndAngles((double)blockPos.getX() + 0.5, blockPos.getY() + 1.5, (double)blockPos.getZ() + 0.5, 0.0f, 0.0f);
             world.spawnEntity(watcherEntity);

@@ -1,6 +1,6 @@
 package net.DakotaPride.moreweaponry.item.items.powered_cores;
 
-import net.DakotaPride.moreweaponry.effect.MoreWeaponryEffects;
+import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -22,7 +22,7 @@ public class PoweredCracklerItem extends Item {
 
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-        target.addStatusEffect(new StatusEffectInstance(MoreWeaponryEffects.EXPLOSIVE, 200, 2), attacker);
+        target.addStatusEffect(new StatusEffectInstance(MoreWeaponry.EXPLOSIVE, 200, 2), attacker);
         target.addStatusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 200, 2), attacker);
         return super.postHit(stack, target, attacker);
     }

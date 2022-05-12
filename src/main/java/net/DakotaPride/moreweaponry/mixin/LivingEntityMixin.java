@@ -1,10 +1,9 @@
 package net.DakotaPride.moreweaponry.mixin;
 
-import net.DakotaPride.moreweaponry.effect.MoreWeaponryEffects;
+import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.DakotaPride.moreweaponry.entity.custom.BuriedKnightEntity;
 import net.DakotaPride.moreweaponry.entity.custom.CrawlerEntity;
 import net.DakotaPride.moreweaponry.entity.damage.MoreWeaponryDamageSource;
-import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
 import net.DakotaPride.moreweaponry.item.items.HeavyCrossBowItem;
 import net.DakotaPride.moreweaponry.item.items.HeavySwordItem;
 import net.minecraft.entity.Entity;
@@ -37,57 +36,57 @@ public abstract class LivingEntityMixin implements ILivingEntityMixin {
         ItemStack itemStack = livingEntity.getMainHandStack();
         if (itemStack.getItem() instanceof HeavySwordItem) {
             if (!livingEntity.getOffHandStack().isEmpty()) {
-                addStatusEffect(new StatusEffectInstance(MoreWeaponryEffects.OVER_PACKAGED, 100));
+                addStatusEffect(new StatusEffectInstance(MoreWeaponry.OVER_PACKAGED, 100));
             }
 
-            addStatusEffect(new StatusEffectInstance(MoreWeaponryEffects.BLEEDING, 100));
+            addStatusEffect(new StatusEffectInstance(MoreWeaponry.BLEEDING, 100));
 
         } if (!livingEntity.getMainHandStack().isEmpty()) {
-            if (livingEntity.getOffHandStack().isOf(MoreWeaponryItems.HEAVY_SWORD)) {
-                    addStatusEffect(new StatusEffectInstance(MoreWeaponryEffects.OVER_PACKAGED, 100));
-                    addStatusEffect(new StatusEffectInstance(MoreWeaponryEffects.BLEEDING, 100));
+            if (livingEntity.getOffHandStack().isOf(MoreWeaponry.HEAVY_SWORD)) {
+                    addStatusEffect(new StatusEffectInstance(MoreWeaponry.OVER_PACKAGED, 100));
+                    addStatusEffect(new StatusEffectInstance(MoreWeaponry.BLEEDING, 100));
             }
         }
-        if (livingEntity.getOffHandStack().isOf(MoreWeaponryItems.HEAVY_SWORD)) {
-            addStatusEffect(new StatusEffectInstance(MoreWeaponryEffects.BLEEDING, 100));
-        } if (livingEntity.getOffHandStack().isOf(MoreWeaponryItems.POWERED_PLAGUED_MOB_CORE)) {
-            removeStatusEffect(MoreWeaponryEffects.PLAGUED);
-        } if (livingEntity.getOffHandStack().isOf(MoreWeaponryItems.POWERED_SUPPRESSED_MOB_CORE)) {
-            removeStatusEffect(MoreWeaponryEffects.EXPLOSIVE);
-        } if (livingEntity.getOffHandStack().isOf(MoreWeaponryItems.POWERED_WATCHER_MOB_CORE)) {
-            removeStatusEffect(MoreWeaponryEffects.TICKED);
-        } if (livingEntity.getOffHandStack().isOf(MoreWeaponryItems.POWERED_MAIDEN_MOB_CORE)) {
-            removeStatusEffect(MoreWeaponryEffects.SIREN);
-        } if (livingEntity.getOffHandStack().isOf(MoreWeaponryItems.POWERED_WRETCHED_MOB_CORE)) {
-            removeStatusEffect(MoreWeaponryEffects.WEBBED);
-        } if (livingEntity.getOffHandStack().isOf(MoreWeaponryItems.POWERED_SICKENED_HUSK_MOB_CORE)) {
-            removeStatusEffect(MoreWeaponryEffects.PLAGUED);
+        if (livingEntity.getOffHandStack().isOf(MoreWeaponry.HEAVY_SWORD)) {
+            addStatusEffect(new StatusEffectInstance(MoreWeaponry.BLEEDING, 100));
+        } if (livingEntity.getOffHandStack().isOf(MoreWeaponry.POWERED_PLAGUED_MOB_CORE)) {
+            removeStatusEffect(MoreWeaponry.PLAGUED);
+        } if (livingEntity.getOffHandStack().isOf(MoreWeaponry.POWERED_SUPPRESSED_MOB_CORE)) {
+            removeStatusEffect(MoreWeaponry.EXPLOSIVE);
+        } if (livingEntity.getOffHandStack().isOf(MoreWeaponry.POWERED_WATCHER_MOB_CORE)) {
+            removeStatusEffect(MoreWeaponry.TICKED);
+        } if (livingEntity.getOffHandStack().isOf(MoreWeaponry.POWERED_MAIDEN_MOB_CORE)) {
+            removeStatusEffect(MoreWeaponry.SIREN);
+        } if (livingEntity.getOffHandStack().isOf(MoreWeaponry.POWERED_WRETCHED_MOB_CORE)) {
+            removeStatusEffect(MoreWeaponry.WEBBED);
+        } if (livingEntity.getOffHandStack().isOf(MoreWeaponry.POWERED_SICKENED_HUSK_MOB_CORE)) {
+            removeStatusEffect(MoreWeaponry.PLAGUED);
         }
 
 
         if (itemStack.getItem() instanceof HeavyCrossBowItem) {
             if (!livingEntity.getOffHandStack().isEmpty()) {
-                addStatusEffect(new StatusEffectInstance(MoreWeaponryEffects.OVER_PACKAGED, 100));
+                addStatusEffect(new StatusEffectInstance(MoreWeaponry.OVER_PACKAGED, 100));
             }
 
         } if (!livingEntity.getMainHandStack().isEmpty()) {
-            if (livingEntity.getOffHandStack().isOf(MoreWeaponryItems.HEAVY_CROSSBOW)) {
-                addStatusEffect(new StatusEffectInstance(MoreWeaponryEffects.OVER_PACKAGED, 100));
+            if (livingEntity.getOffHandStack().isOf(MoreWeaponry.HEAVY_CROSSBOW)) {
+                addStatusEffect(new StatusEffectInstance(MoreWeaponry.OVER_PACKAGED, 100));
             }
-        } if (livingEntity.getMainHandStack().isOf(MoreWeaponryItems.IRON_BOLT)) {
-            removeStatusEffect(MoreWeaponryEffects.OVER_PACKAGED);
+        } if (livingEntity.getMainHandStack().isOf(MoreWeaponry.IRON_BOLT_ITEM)) {
+            removeStatusEffect(MoreWeaponry.OVER_PACKAGED);
         } if (livingEntity.getMainHandStack().isOf(Items.FIREWORK_ROCKET)) {
-            removeStatusEffect(MoreWeaponryEffects.OVER_PACKAGED);
+            removeStatusEffect(MoreWeaponry.OVER_PACKAGED);
         } if (livingEntity.getMainHandStack().isOf(Items.ARROW)) {
-            removeStatusEffect(MoreWeaponryEffects.OVER_PACKAGED);
+            removeStatusEffect(MoreWeaponry.OVER_PACKAGED);
         }
 
-        if (livingEntity.getOffHandStack().isOf(MoreWeaponryItems.IRON_BOLT)) {
-            removeStatusEffect(MoreWeaponryEffects.OVER_PACKAGED);
+        if (livingEntity.getOffHandStack().isOf(MoreWeaponry.IRON_BOLT_ITEM)) {
+            removeStatusEffect(MoreWeaponry.OVER_PACKAGED);
         } if (livingEntity.getOffHandStack().isOf(Items.FIREWORK_ROCKET)) {
-            removeStatusEffect(MoreWeaponryEffects.OVER_PACKAGED);
+            removeStatusEffect(MoreWeaponry.OVER_PACKAGED);
         } if (livingEntity.getOffHandStack().isOf(Items.ARROW)) {
-            removeStatusEffect(MoreWeaponryEffects.OVER_PACKAGED);
+            removeStatusEffect(MoreWeaponry.OVER_PACKAGED);
         }
 
         if (livingEntity.hasStatusEffect(StatusEffects.BLINDNESS)) {
@@ -98,7 +97,7 @@ public abstract class LivingEntityMixin implements ILivingEntityMixin {
             }
         }
 
-        if (livingEntity.hasStatusEffect(MoreWeaponryEffects.CELESTIAL)) {
+        if (livingEntity.hasStatusEffect(MoreWeaponry.CELESTIAL)) {
             livingEntity.damage(MoreWeaponryDamageSource.CELESTIALITE, 0.3F);
         }
 

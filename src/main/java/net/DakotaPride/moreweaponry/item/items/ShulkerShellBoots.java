@@ -1,7 +1,7 @@
 package net.DakotaPride.moreweaponry.item.items;
 
 import com.google.common.collect.ImmutableMap;
-import net.DakotaPride.moreweaponry.item.extra.MoreWeaponryArmorMaterials;
+import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.Entity;
@@ -26,7 +26,7 @@ public class ShulkerShellBoots extends ArmorItem {
 
     private static final Map<ArmorMaterial, StatusEffect> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, StatusEffect>())
-                    .put(MoreWeaponryArmorMaterials.SHULKER_SHELL, StatusEffects.LEVITATION).build();
+                    .put(MoreWeaponry.MoreWeaponryArmorMaterials.SHULKER_SHELL_ARMOR, StatusEffects.LEVITATION).build();
 
     public ShulkerShellBoots(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
         super(material, slot, settings);

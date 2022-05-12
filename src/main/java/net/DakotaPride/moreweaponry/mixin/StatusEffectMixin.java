@@ -1,6 +1,6 @@
 package net.DakotaPride.moreweaponry.mixin;
 
-import net.DakotaPride.moreweaponry.effect.MoreWeaponryEffects;
+import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.DakotaPride.moreweaponry.entity.damage.MoreWeaponryDamageSource;
 import net.DakotaPride.moreweaponry.item.items.BotheringMightSwordItem;
 import net.minecraft.entity.LivingEntity;
@@ -19,74 +19,74 @@ public class StatusEffectMixin {
     public void applyUpdateEffect(LivingEntity entity, int amplifier, CallbackInfo callbackInfo) {
         ItemStack itemStack = entity.getMainHandStack();
         LivingEntity target = entity.getAttacking();
-        if (entity.hasStatusEffect(MoreWeaponryEffects.CELESTIAL)) {
+        if (entity.hasStatusEffect(MoreWeaponry.CELESTIAL)) {
             entity.removeStatusEffect(StatusEffects.REGENERATION);
             if (itemStack.getItem() instanceof BotheringMightSwordItem) {
                 if (target != null) {
-                    target.addStatusEffect(new StatusEffectInstance(MoreWeaponryEffects.CONFUSION));
+                    target.addStatusEffect(new StatusEffectInstance(MoreWeaponry.CONFUSION));
                 }
             }
-        } else if (entity.hasStatusEffect(MoreWeaponryEffects.PLAGUED)) {
+        } else if (entity.hasStatusEffect(MoreWeaponry.PLAGUED)) {
             entity.removeStatusEffect(StatusEffects.REGENERATION);
             if (itemStack.getItem() instanceof BotheringMightSwordItem) {
                 if (target != null) {
-                    target.addStatusEffect(new StatusEffectInstance(MoreWeaponryEffects.CONFUSION));
+                    target.addStatusEffect(new StatusEffectInstance(MoreWeaponry.CONFUSION));
                 }
             }
-        } else if (entity.hasStatusEffect(MoreWeaponryEffects.EXPLOSIVE)) {
+        } else if (entity.hasStatusEffect(MoreWeaponry.EXPLOSIVE)) {
             entity.removeStatusEffect(StatusEffects.REGENERATION);
             if (itemStack.getItem() instanceof BotheringMightSwordItem) {
                 if (target != null) {
-                    target.addStatusEffect(new StatusEffectInstance(MoreWeaponryEffects.CONFUSION));
+                    target.addStatusEffect(new StatusEffectInstance(MoreWeaponry.CONFUSION));
                 }
             }
-        } else if (entity.hasStatusEffect(MoreWeaponryEffects.SIREN)) {
+        } else if (entity.hasStatusEffect(MoreWeaponry.SIREN)) {
             entity.removeStatusEffect(StatusEffects.REGENERATION);
             if (itemStack.getItem() instanceof BotheringMightSwordItem) {
                 if (target != null) {
-                    target.addStatusEffect(new StatusEffectInstance(MoreWeaponryEffects.CONFUSION));
+                    target.addStatusEffect(new StatusEffectInstance(MoreWeaponry.CONFUSION));
                 }
             }
-        } else if (entity.hasStatusEffect(MoreWeaponryEffects.TICKED)) {
+        } else if (entity.hasStatusEffect(MoreWeaponry.TICKED)) {
             entity.removeStatusEffect(StatusEffects.REGENERATION);
             if (itemStack.getItem() instanceof BotheringMightSwordItem) {
                 if (target != null) {
-                    target.addStatusEffect(new StatusEffectInstance(MoreWeaponryEffects.CONFUSION));
+                    target.addStatusEffect(new StatusEffectInstance(MoreWeaponry.CONFUSION));
                 }
             }
-        } else if (entity.hasStatusEffect(MoreWeaponryEffects.WEBBED)) {
+        } else if (entity.hasStatusEffect(MoreWeaponry.WEBBED)) {
             entity.removeStatusEffect(StatusEffects.REGENERATION);
             if (itemStack.getItem() instanceof BotheringMightSwordItem) {
                 if (target != null) {
-                    target.addStatusEffect(new StatusEffectInstance(MoreWeaponryEffects.CONFUSION));
+                    target.addStatusEffect(new StatusEffectInstance(MoreWeaponry.CONFUSION));
                 }
             }
         }
 
-        if (entity.hasStatusEffect(MoreWeaponryEffects.BLEEDING)) {
+        if (entity.hasStatusEffect(MoreWeaponry.BLEEDING)) {
             entity.damage(MoreWeaponryDamageSource.BLEEDING, 0.4F);
         }
 
-        if (entity.hasStatusEffect(MoreWeaponryEffects.WATCHER)) {
+        if (entity.hasStatusEffect(MoreWeaponry.WATCHER)) {
             entity.removeStatusEffect(StatusEffects.POISON);
             entity.removeStatusEffect(StatusEffects.BLINDNESS);
             entity.removeStatusEffect(StatusEffects.SLOWNESS);
             entity.removeStatusEffect(StatusEffects.WEAKNESS);
             entity.removeStatusEffect(StatusEffects.WITHER);
             entity.removeStatusEffect(StatusEffects.UNLUCK);
-        } else if (entity.hasStatusEffect(MoreWeaponryEffects.SICKENED)) {
+        } else if (entity.hasStatusEffect(MoreWeaponry.SICKENED)) {
             entity.removeStatusEffect(StatusEffects.SLOWNESS);
             entity.removeStatusEffect(StatusEffects.UNLUCK);
-        } else if (entity.hasStatusEffect(MoreWeaponryEffects.CRACKLER)) {
+        } else if (entity.hasStatusEffect(MoreWeaponry.CRACKLER)) {
             entity.removeStatusEffect(StatusEffects.SLOWNESS);
             entity.removeStatusEffect(StatusEffects.WEAKNESS);
             entity.removeStatusEffect(StatusEffects.UNLUCK);
-        } else if (entity.hasStatusEffect(MoreWeaponryEffects.BARD)) {
+        } else if (entity.hasStatusEffect(MoreWeaponry.BARD)) {
             entity.removeStatusEffect(StatusEffects.BLINDNESS);
             entity.removeStatusEffect(StatusEffects.SLOWNESS);
             entity.removeStatusEffect(StatusEffects.WEAKNESS);
             entity.removeStatusEffect(StatusEffects.UNLUCK);
-        } else if (entity.hasStatusEffect(MoreWeaponryEffects.WANDERER)) {
+        } else if (entity.hasStatusEffect(MoreWeaponry.WANDERER)) {
             entity.removeStatusEffect(StatusEffects.POISON);
             entity.removeStatusEffect(StatusEffects.BLINDNESS);
             entity.removeStatusEffect(StatusEffects.SLOWNESS);

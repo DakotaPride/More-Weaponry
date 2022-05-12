@@ -1,6 +1,6 @@
 package net.DakotaPride.moreweaponry.item.items.blessed_tools;
 
-import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
+import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.fabricmc.fabric.api.entity.event.v1.FabricElytraItem;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
@@ -73,7 +73,7 @@ public class BlessedArmorItem extends ArmorItem implements IAnimatable, FabricEl
 
             // Make sure the player is wearing all the armor. If they are, continue playing
             // the animation, otherwise stop
-            boolean isWearingAll = armorList.contains(MoreWeaponryItems.BLESSED_CHESTPLATE);
+            boolean isWearingAll = armorList.contains(MoreWeaponry.BLESSED_BREASTPLATE);
             event.getController().setAnimation(new AnimationBuilder()
                     .addAnimation("animation.blessed_wings.equipped", true));
             return isWearingAll ? PlayState.CONTINUE : PlayState.STOP;

@@ -1,11 +1,6 @@
-package net.DakotaPride.moreweaponry.effect.status_effects;
+package net.DakotaPride.moreweaponry.effect;
 
-import net.DakotaPride.moreweaponry.effect.MoreWeaponryEffects;
-import net.DakotaPride.moreweaponry.entity.damage.MoreWeaponryDamageSource;
-import net.minecraft.entity.attribute.AttributeContainer;
-import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.damage.DamageSource;
+import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
 
@@ -16,7 +11,7 @@ public class BleedingStatusEffect extends StatusEffect {
 
     public boolean canApplyUpdateEffect(int duration, int amplifier) {
         int i;
-        if (this == MoreWeaponryEffects.BLEEDING) {
+        if (this == MoreWeaponry.BLEEDING) {
             i = 25 >> amplifier;
             if (i > 0) {
                 return duration % i == 0;

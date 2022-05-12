@@ -1,6 +1,6 @@
 package net.DakotaPride.moreweaponry.item.items;
 
-import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
+import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.minecraft.block.CropBlock;
 import net.minecraft.item.ItemConvertible;
 
@@ -11,6 +11,6 @@ public class KuroPlantBlock extends CropBlock {
 
     @Override
     protected ItemConvertible getSeedsItem() {
-        return MoreWeaponryItems.KURO_SEEDS;
+        return MoreWeaponry.KURO_SEEDS;
     }
 }

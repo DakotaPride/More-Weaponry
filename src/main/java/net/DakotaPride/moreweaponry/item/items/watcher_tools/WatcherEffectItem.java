@@ -1,8 +1,7 @@
 package net.DakotaPride.moreweaponry.item.items.watcher_tools;
 
 import com.google.common.collect.ImmutableMap;
-import net.DakotaPride.moreweaponry.effect.MoreWeaponryEffects;
-import net.DakotaPride.moreweaponry.item.extra.MoreWeaponryArmorMaterials;
+import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -18,8 +17,8 @@ import java.util.Map;
 public class WatcherEffectItem extends WatcherArmorItem {
     private static final Map<ArmorMaterial, StatusEffectInstance> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, StatusEffectInstance>())
-                    .put(MoreWeaponryArmorMaterials.ENDER,
-                            new StatusEffectInstance(MoreWeaponryEffects.WATCHER, 12000, 0)).build();
+                    .put(MoreWeaponry.MoreWeaponryArmorMaterials.ENDER_ARMOR,
+                            new StatusEffectInstance(MoreWeaponry.WATCHER, 12000, 0)).build();
 
     public WatcherEffectItem(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
         super(material, slot, settings);

@@ -1,6 +1,6 @@
 package net.DakotaPride.moreweaponry.entity.custom;
 
-import net.DakotaPride.moreweaponry.effect.MoreWeaponryEffects;
+import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.DakotaPride.moreweaponry.entity.custom.abstract_cases.AbstractHostileEntity;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.*;
@@ -38,7 +38,7 @@ public class LeechEntity extends AbstractHostileEntity implements IAnimatable {
         } else {
             if (target instanceof LivingEntity) {
                 ((LivingEntity)target).addStatusEffect
-                        (new StatusEffectInstance(MoreWeaponryEffects.PLAGUED, 140), this);
+                        (new StatusEffectInstance(MoreWeaponry.PLAGUED, 140), this);
             }
                 return true;
         }

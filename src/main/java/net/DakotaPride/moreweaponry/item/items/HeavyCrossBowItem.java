@@ -1,7 +1,7 @@
 package net.DakotaPride.moreweaponry.item.items;
 
 import com.google.common.collect.Lists;
-import net.DakotaPride.moreweaponry.item.MoreWeaponryItems;
+import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.DakotaPride.moreweaponry.item.inventory.HeavyCrossbowUser;
 import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.client.item.TooltipContext;
@@ -60,12 +60,12 @@ public class HeavyCrossBowItem extends CrossbowItem
 
     @Override
     public Predicate<ItemStack> getHeldProjectiles() {
-        return itemStack -> itemStack.isOf(MoreWeaponryItems.IRON_BOLT) || itemStack.isOf(Items.FIREWORK_ROCKET);
+        return itemStack -> itemStack.isOf(MoreWeaponry.IRON_BOLT_ITEM) || itemStack.isOf(Items.FIREWORK_ROCKET);
     }
 
     @Override
     public Predicate<ItemStack> getProjectiles() {
-        return itemStack -> itemStack.isOf(MoreWeaponryItems.IRON_BOLT);
+        return itemStack -> itemStack.isOf(MoreWeaponry.IRON_BOLT_ITEM);
     }
 
     @Override
@@ -123,7 +123,7 @@ public class HeavyCrossBowItem extends CrossbowItem
             }
 
             if (itemStack.isEmpty() && bl) {
-                itemStack = new ItemStack(MoreWeaponryItems.IRON_BOLT);
+                itemStack = new ItemStack(MoreWeaponry.IRON_BOLT_ITEM);
                 itemStack2 = itemStack.copy();
             }
 
@@ -248,7 +248,7 @@ public class HeavyCrossBowItem extends CrossbowItem
     }
 
     private static PersistentProjectileEntity createIronBolt(World world, LivingEntity entity, ItemStack itemStack, ItemStack ironBolt) {
-        IronBoltItem ironBoltItem = (ironBolt.getItem() instanceof IronBoltItem) ? (IronBoltItem)ironBolt.getItem() : (IronBoltItem)MoreWeaponryItems.IRON_BOLT;
+        IronBoltItem ironBoltItem = (ironBolt.getItem() instanceof IronBoltItem) ? (IronBoltItem)ironBolt.getItem() : (IronBoltItem)MoreWeaponry.IRON_BOLT_ITEM;
         PersistentProjectileEntity persistentProjectileEntity = ironBoltItem.createIronBolt(world, ironBolt, entity);
         if (entity instanceof PlayerEntity) {
             persistentProjectileEntity.setCritical(true);

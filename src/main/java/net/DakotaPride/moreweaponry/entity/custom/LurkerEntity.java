@@ -1,7 +1,6 @@
 package net.DakotaPride.moreweaponry.entity.custom;
 
-import net.DakotaPride.moreweaponry.effect.MoreWeaponryEffects;
-import net.DakotaPride.moreweaponry.entity.custom.abstract_cases.AbstractHostileEntity;
+import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.*;
@@ -49,7 +48,7 @@ public class LurkerEntity extends HostileEntity implements IAnimatable {
         } else {
             if (target instanceof LivingEntity) {
                 ((LivingEntity)target).addStatusEffect
-                        (new StatusEffectInstance(MoreWeaponryEffects.NUMBED, 100), this);
+                        (new StatusEffectInstance(MoreWeaponry.NUMBED, 100), this);
             }
 
             return true;

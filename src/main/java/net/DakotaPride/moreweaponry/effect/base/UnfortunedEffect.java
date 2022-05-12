@@ -1,4 +1,4 @@
-package net.DakotaPride.moreweaponry.effect.status_effects.base;
+package net.DakotaPride.moreweaponry.effect.base;
 
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;

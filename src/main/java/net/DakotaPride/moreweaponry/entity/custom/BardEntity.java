@@ -1,6 +1,6 @@
 package net.DakotaPride.moreweaponry.entity.custom;
 
-import net.DakotaPride.moreweaponry.effect.MoreWeaponryEffects;
+import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.DakotaPride.moreweaponry.entity.custom.abstract_cases.AbstractHostileEntity;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.*;
@@ -48,7 +48,7 @@ public class BardEntity extends AbstractHostileEntity implements IAnimatable {
     public boolean damage(DamageSource source, float amount) {
         if (source.getAttacker() != null && !source.isProjectile() && source.getAttacker() instanceof LivingEntity) {
             LivingEntity attacker = (LivingEntity) source.getAttacker();
-            attacker.addStatusEffect(new StatusEffectInstance(MoreWeaponryEffects.SIREN, 100), this);
+            attacker.addStatusEffect(new StatusEffectInstance(MoreWeaponry.SIREN, 100), this);
         }
 
         return super.damage(source, amount);
@@ -59,12 +59,12 @@ public class BardEntity extends AbstractHostileEntity implements IAnimatable {
         StatusEffect statusEffect = effect.getEffectType();
         return statusEffect
                 != StatusEffects.POISON && statusEffect
-                != MoreWeaponryEffects.SICKENED && statusEffect
-                != MoreWeaponryEffects.PLAGUED && statusEffect
-                != MoreWeaponryEffects.CRACKLER && statusEffect
-                != MoreWeaponryEffects.EXPLOSIVE && statusEffect
-                != MoreWeaponryEffects.BARD && statusEffect
-                != MoreWeaponryEffects.SIREN && statusEffect
+                != MoreWeaponry.SICKENED && statusEffect
+                != MoreWeaponry.PLAGUED && statusEffect
+                != MoreWeaponry.CRACKLER && statusEffect
+                != MoreWeaponry.EXPLOSIVE && statusEffect
+                != MoreWeaponry.BARD && statusEffect
+                != MoreWeaponry.SIREN && statusEffect
                 != StatusEffects.WITHER && statusEffect
                 != StatusEffects.LEVITATION && statusEffect
                 != StatusEffects.GLOWING && statusEffect
@@ -78,7 +78,7 @@ public class BardEntity extends AbstractHostileEntity implements IAnimatable {
         } else {
             if (target instanceof LivingEntity) {
                 ((LivingEntity)target).addStatusEffect
-                        (new StatusEffectInstance(MoreWeaponryEffects.SIREN, 140), this);
+                        (new StatusEffectInstance(MoreWeaponry.SIREN, 140), this);
             }
 
             return true;

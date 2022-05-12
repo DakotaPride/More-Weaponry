@@ -1,7 +1,7 @@
 package net.DakotaPride.moreweaponry.entity.custom;
 
+import net.DakotaPride.moreweaponry.MoreWeaponry;
 import net.DakotaPride.moreweaponry.entity.custom.abstract_cases.AbstractHostileEntity;
-import net.DakotaPride.moreweaponry.sound.MoreWeaponrySoundEvents;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
@@ -103,12 +103,12 @@ public class BuriedKnightEntity extends AbstractHostileEntity implements IAnimat
 
     @Override
     protected SoundEvent getHurtSound(DamageSource source) {
-        return MoreWeaponrySoundEvents.ENTITY_BURIED_KNIGHT_HURT;
+        return MoreWeaponry.ENTITY_BURIED_KNIGHT_HURT;
     }
 
     @Override
     protected SoundEvent getDeathSound() {
-        return MoreWeaponrySoundEvents.ENTITY_BURIED_KNIGHT_DEATH;
+        return MoreWeaponry.ENTITY_BURIED_KNIGHT_DEATH;
     }
 
     @Override

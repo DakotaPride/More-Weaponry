@@ -1,6 +1,6 @@
-package net.DakotaPride.moreweaponry.effect.status_effects.unfortuned;
+package net.DakotaPride.moreweaponry.effect.unfortuned;
 
-import net.DakotaPride.moreweaponry.effect.status_effects.base.UnfortunedEffect;
+import net.DakotaPride.moreweaponry.effect.base.UnfortunedEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
 
 public class ExplosiveStatusEffect extends UnfortunedEffect {

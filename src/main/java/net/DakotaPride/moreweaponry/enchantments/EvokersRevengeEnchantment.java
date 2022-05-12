@@ -42,6 +42,37 @@ public class EvokersRevengeEnchantment extends Enchantment {
                         SpawnReason.TRIGGERED, true, true);
             }
 
+            if(level == 4) {
+                EntityType.EVOKER_FANGS.spawn(world, null, null, null, position,
+                        SpawnReason.TRIGGERED, true, true);
+
+                EntityType.EVOKER_FANGS.spawn(world, null, null, null, position,
+                        SpawnReason.TRIGGERED, true, true);
+
+                EntityType.EVOKER_FANGS.spawn(world, null, null, null, position,
+                        SpawnReason.TRIGGERED, true, true);
+
+                EntityType.EVOKER_FANGS.spawn(world, null, null, null, position,
+                        SpawnReason.TRIGGERED, true, true);
+            }
+
+            if(level == 5) {
+                EntityType.EVOKER_FANGS.spawn(world, null, null, null, position,
+                        SpawnReason.TRIGGERED, true, true);
+
+                EntityType.EVOKER_FANGS.spawn(world, null, null, null, position,
+                        SpawnReason.TRIGGERED, true, true);
+
+                EntityType.EVOKER_FANGS.spawn(world, null, null, null, position,
+                        SpawnReason.TRIGGERED, true, true);
+
+                EntityType.EVOKER_FANGS.spawn(world, null, null, null, position,
+                        SpawnReason.TRIGGERED, true, true);
+
+                EntityType.EVOKER_FANGS.spawn(world, null, null, null, position,
+                        SpawnReason.TRIGGERED, true, true);
+            }
+
         }
 
         super.onTargetDamaged(user, target, level);
