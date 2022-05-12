@@ -1,21 +1,16 @@
-# More-Weaponry-1.18
-More Weaponry Mod For 1.18 Github
+<p align="center">
+<img alt="Icon" src="src/main/resources/assets/moreweaponry/icon.png" width="128">
 
+  </p>
+  
+<h1 align="center"> More Weaponry </h1>
+<p align="center">
+  <a href="https://curseforge.com/minecraft/mc-mods/more-weaponry">CurseForge</a> 
+  | <a href="https://modrinth.com/mod/more-weaponry">Modrinth</a>
+  </p>
 
-# The Watcher (Implemented)
-The Watcher is a boss that you can find inside of the Watcher Tower, which can be found deep in the End dimension. You can summon the creature by right-clicking on the summoning table with a matching madalian.
+## About
+More Weaponry implements new tools and bosses for your journey! Explore the vast plains and uncover the secrets that were left locked in stone, or travel to the baren landscape of the End dimension and unleash a forgotten evil that lies in an ancient tower! Many other secrets lie across the world.
 
-# The Wanderer (Implemented)
-The Wanderer is a boss that you can find inside of the Wanderer's Library, which can be found below the surface in Dripstone Caves. You can summon the creature by right-clicking on the summoning table with a matching madalian.
-
-# The Crackler (Implemented)
-The Crackler is a boss that you can find at the Crackler Nuclear Yard, which can be found in the Sparse Jungle Biome. You can summon the creature by right-clicking on the summoning table with a matching madalian.
-
-# The Bard (Implemented)
-The Bard is a boss that you can find at the Bard's Rocks, which can be found in the Warm Oceans. You can summon the creature by right-clicking on the summoning table with a matching madalian.
-
-# The Sickened (Implemented)
-The Sickened is a boss that you can find at the Sickened Graves, which can be found in the Plains biome. You can summon the creature by right-clicking on the summoning table with a matching madalian.
-
-# The Sickened Husk (Implemented)
-The Sickened Husk is a boss that you can find at the Dusted Graves, which can be found in the Desert Biome. You can summon the creature by right-clicking on the summoning table with a matching madalian.
+## Contributing
+If you would like to contribute to the mod, whether that be by suggesting a feature or simply suggesting quality of life changes (bugfix, crashfix, etc.), then please, feel free to go to our [Issues Page](https://github.com/DakotaPride/More-Weaponry/issues) and create a new issue! Or, if you think you have a suggestion worthy of being in the mod, feel free to suggest it in our [thread](https://github.com/DakotaPride/More-Weaponry/issues/5) on the same page!
