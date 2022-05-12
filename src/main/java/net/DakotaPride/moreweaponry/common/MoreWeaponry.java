@@ -17,6 +17,7 @@ import net.DakotaPride.moreweaponry.common.effect.celestial.*;
 import net.DakotaPride.moreweaponry.common.effect.unfortuned.*;
 import net.DakotaPride.moreweaponry.common.enchantments.*;
 import net.DakotaPride.moreweaponry.common.entity.custom.*;
+import net.DakotaPride.moreweaponry.common.fluid.CelestialiteFluid;
 import net.DakotaPride.moreweaponry.common.item.items.*;
 import net.DakotaPride.moreweaponry.common.item.items.bard_tools.*;
 import net.DakotaPride.moreweaponry.common.item.items.blessed_tools.BlessedArmorItem;
@@ -73,6 +74,8 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.fluid.FlowableFluid;
+import net.minecraft.fluid.LavaFluid;
 import net.minecraft.item.*;
 import net.minecraft.particle.DefaultParticleType;
 import net.minecraft.potion.Potion;
@@ -86,6 +89,8 @@ import net.minecraft.util.Lazy;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.Heightmap;
 import net.minecraft.world.gen.GenerationStep;
+import net.minecraft.world.gen.feature.LakeFeature;
+import net.minecraft.world.gen.feature.SingleStateFeatureConfig;
 import net.minecraft.world.gen.feature.StructureFeature;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -473,7 +478,14 @@ public class MoreWeaponry implements ModInitializer {
 	public static Item LIQUEFIED_BARD_INFUSED_CELESTIALITE;
 	public static Item CELESTIALITE;
 	public static Item BARD_INFUSED_CELESTIALITE;
+	public static BucketItem CONTAINED_CELESTIALITE;
 
+	// Fluids
+	public static FlowableFluid CELESTIALITE_STILL;
+	public static FlowableFluid CELESTIALITE_FLOWING;
+
+	// Fluid Generation
+	public static LakeFeature CELESTIALITE_GROUNDS;
 
 	// Blocks
 	public static Block MOON_STONE_DUST_BLOCK;
@@ -573,6 +585,7 @@ public class MoreWeaponry implements ModInitializer {
 	public static FlowerPotBlock POTTED_NIGHT_CURON;
 	public static WallSignBlock FRODON_WALL_SIGN;
 	public static SignBlock FRODON_SIGN_BLOCK;
+	public static FluidBlock CELESTIALITE_FLUID_BLOCK;
 
 	// Armor Materials
 	public enum MoreWeaponryArmorMaterials implements ArmorMaterial
@@ -880,6 +893,10 @@ public class MoreWeaponry implements ModInitializer {
 		return Registry.register(Registry.ENTITY_TYPE, new Identifier(MOD_ID, name), entityType);
 	}
 
+	private static FlowableFluid registerFluid(String name, FlowableFluid flowableFluid) {
+		return Registry.register(Registry.FLUID, new Identifier(MOD_ID, name), flowableFluid);
+	}
+
 
 	
 	// Group
@@ -890,6 +907,15 @@ public class MoreWeaponry implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+
+		// Fluids
+		CELESTIALITE_STILL = registerFluid("celestialite_still",
+				new CelestialiteFluid.Still());
+		CELESTIALITE_FLOWING = registerFluid("celestialite_flowing",
+				new CelestialiteFluid.Flowing());
+
+		CONTAINED_CELESTIALITE = registerItem("contained_celestialite",
+				new BucketItem(CELESTIALITE_STILL, new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 
 		// Paintings
 		WATCHER_PAINTING = registerPainting("watcher",
@@ -1270,6 +1296,9 @@ public class MoreWeaponry implements ModInitializer {
 				new SignBlock(FabricBlockSettings.copy(Blocks.OAK_SIGN), MoreWeaponrySignTypes.FRODON));
 		INTOXICATED_GRASS = registerBlock("intoxicated_grass",
 				new IntoxicatedFernBlock(FabricBlockSettings.copy(Blocks.GRASS)));
+		CELESTIALITE_FLUID_BLOCK = registerBlockWithoutBlockItem("celestialite_fluid_block",
+				new FluidBlock(CELESTIALITE_STILL, FabricBlockSettings.copy(Blocks.WATER)
+						.nonOpaque().noCollision().dropsNothing()));
 		
 		// Items
 		BLASTED_AMETHYST = registerItem("blasted_amethyst",

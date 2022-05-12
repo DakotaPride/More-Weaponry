@@ -13,6 +13,8 @@ import net.DakotaPride.moreweaponry.common.util.MoreWeaponryModelPredicateProvid
 import net.DakotaPride.moreweaponry.common.util.MoreWeaponryRendererHelper;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
+import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
+import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
 import net.fabricmc.fabric.api.client.rendereregistry.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.client.screenhandler.v1.ScreenRegistry;
 import software.bernie.geckolib3.renderers.geo.GeoArmorRenderer;
@@ -21,6 +23,16 @@ public class MoreClientWeaponry implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
+
+        FluidRenderHandlerRegistry.INSTANCE.register(MoreWeaponry.CELESTIALITE_STILL,
+                new SimpleFluidRenderHandler(SimpleFluidRenderHandler.WATER_STILL,
+                        SimpleFluidRenderHandler.WATER_FLOWING,
+                        SimpleFluidRenderHandler.WATER_OVERLAY, 0xFFF6A5));
+
+        FluidRenderHandlerRegistry.INSTANCE.register(MoreWeaponry.CELESTIALITE_FLOWING,
+                new SimpleFluidRenderHandler(SimpleFluidRenderHandler.WATER_STILL,
+                        SimpleFluidRenderHandler.WATER_FLOWING,
+                        SimpleFluidRenderHandler.WATER_OVERLAY, 0xFFF6A5));
 
         EntityRendererRegistry.INSTANCE.register(MoreWeaponry.IRON_BOLT, IronBoltEntityRenderer::new);
 
