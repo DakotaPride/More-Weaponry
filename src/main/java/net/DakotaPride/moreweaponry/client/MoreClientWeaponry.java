@@ -27,12 +27,12 @@ public class MoreClientWeaponry implements ClientModInitializer {
         FluidRenderHandlerRegistry.INSTANCE.register(MoreWeaponry.CELESTIALITE_STILL,
                 new SimpleFluidRenderHandler(SimpleFluidRenderHandler.WATER_STILL,
                         SimpleFluidRenderHandler.WATER_FLOWING,
-                        SimpleFluidRenderHandler.WATER_OVERLAY, 0xFFF6A5));
+                        SimpleFluidRenderHandler.WATER_OVERLAY, 0xFFF499));
 
         FluidRenderHandlerRegistry.INSTANCE.register(MoreWeaponry.CELESTIALITE_FLOWING,
                 new SimpleFluidRenderHandler(SimpleFluidRenderHandler.WATER_STILL,
                         SimpleFluidRenderHandler.WATER_FLOWING,
-                        SimpleFluidRenderHandler.WATER_OVERLAY, 0xFFF6A5));
+                        SimpleFluidRenderHandler.WATER_OVERLAY, 0xFFF499));
 
         EntityRendererRegistry.INSTANCE.register(MoreWeaponry.IRON_BOLT, IronBoltEntityRenderer::new);
 

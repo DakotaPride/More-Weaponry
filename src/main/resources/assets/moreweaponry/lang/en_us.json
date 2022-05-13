@@ -431,6 +431,9 @@
   "gui.moreweaponry.essence_translator.label": "Essence Translator",
   "gui.moreweaponry.cirtict_forge.label": "Cirtict Forge",
   "item.moreweaponry.heavenly_leather": "Heavenly Leather",
+  "item.moreweaponry.reinforced_bucket": "Reinforced Bucket",
+  "item.moreweaponry.reinforced_celestialite_bucket": "Reinforced Celestialite Bucket",
+  "block.moreweaponry.celestialite_fluid_block": "Liquefied Celestialite",
 
   "advancement.moreweaponry.bluestone.title": "The First Piece Of The Puzzle",
   "advancement.moreweaponry.bluestone.description": "Obtain A Bluestone Rock",

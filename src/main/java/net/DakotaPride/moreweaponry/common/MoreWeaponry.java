@@ -18,6 +18,7 @@ import net.DakotaPride.moreweaponry.common.effect.unfortuned.*;
 import net.DakotaPride.moreweaponry.common.enchantments.*;
 import net.DakotaPride.moreweaponry.common.entity.custom.*;
 import net.DakotaPride.moreweaponry.common.fluid.CelestialiteFluid;
+import net.DakotaPride.moreweaponry.common.item.ReinforcedBucketItem;
 import net.DakotaPride.moreweaponry.common.item.items.*;
 import net.DakotaPride.moreweaponry.common.item.items.bard_tools.*;
 import net.DakotaPride.moreweaponry.common.item.items.blessed_tools.BlessedArmorItem;
@@ -75,7 +76,7 @@ import net.minecraft.entity.effect.StatusEffectCategory;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.fluid.FlowableFluid;
-import net.minecraft.fluid.LavaFluid;
+import net.minecraft.fluid.Fluids;
 import net.minecraft.item.*;
 import net.minecraft.particle.DefaultParticleType;
 import net.minecraft.potion.Potion;
@@ -90,7 +91,6 @@ import net.minecraft.util.registry.Registry;
 import net.minecraft.world.Heightmap;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.LakeFeature;
-import net.minecraft.world.gen.feature.SingleStateFeatureConfig;
 import net.minecraft.world.gen.feature.StructureFeature;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -474,11 +474,14 @@ public class MoreWeaponry implements ModInitializer {
 	public static WatcherCelestialMedallionItem CELESTIAL_MEDALLION_WATCHER;
 
 	public static Item MAIDEN_STEM;
+	public static Item C;
+
 	public static Item LIQUEFIED_CELESTIALITE;
 	public static Item LIQUEFIED_BARD_INFUSED_CELESTIALITE;
 	public static Item CELESTIALITE;
 	public static Item BARD_INFUSED_CELESTIALITE;
-	public static BucketItem CONTAINED_CELESTIALITE;
+	public static ReinforcedBucketItem CONTAINED_CELESTIALITE;
+	public static ReinforcedBucketItem REINFORCED_BUCKET;
 
 	// Fluids
 	public static FlowableFluid CELESTIALITE_STILL;
@@ -914,8 +917,11 @@ public class MoreWeaponry implements ModInitializer {
 		CELESTIALITE_FLOWING = registerFluid("celestialite_flowing",
 				new CelestialiteFluid.Flowing());
 
-		CONTAINED_CELESTIALITE = registerItem("contained_celestialite",
-				new BucketItem(CELESTIALITE_STILL, new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+		CONTAINED_CELESTIALITE = registerItem("reinforced_celestialite_bucket",
+				new ReinforcedBucketItem(CELESTIALITE_STILL, new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+
+		REINFORCED_BUCKET = registerItem("reinforced_bucket",
+				new ReinforcedBucketItem(Fluids.EMPTY, new FabricItemSettings().fireproof().maxCount(16).group(MORE_WEAPONRY_GROUP)));
 
 		// Paintings
 		WATCHER_PAINTING = registerPainting("watcher",

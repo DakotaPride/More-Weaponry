@@ -8,6 +8,7 @@ import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.fluid.FlowableFluid;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;
+import net.minecraft.fluid.WaterFluid;
 import net.minecraft.item.Item;
 import net.minecraft.particle.ParticleEffect;
 import net.minecraft.particle.ParticleTypes;
@@ -29,18 +30,22 @@ import java.util.Random;
 
 public abstract class CelestialiteFluid extends FlowableFluid {
 
+    @Override
     public Fluid getFlowing() {
         return MoreWeaponry.CELESTIALITE_FLOWING;
     }
 
+    @Override
     public Fluid getStill() {
         return MoreWeaponry.CELESTIALITE_STILL;
     }
 
+    @Override
     public Item getBucketItem() {
         return MoreWeaponry.CONTAINED_CELESTIALITE;
     }
 
+    @Override
     public void randomDisplayTick(World world, BlockPos pos, FluidState state, Random random) {
         if (!state.isStill() && !(Boolean)state.get(FALLING)) {
             if (random.nextInt(64) == 0) {
@@ -59,48 +64,59 @@ public abstract class CelestialiteFluid extends FlowableFluid {
 
     }
 
+    @Override
     @Nullable
     public ParticleEffect getParticle() {
         return MoreWeaponry.CELESTIAL_MEDALLION_PARTICLE;
     }
 
+    @Override
     protected boolean isInfinite() {
         return false;
     }
 
+    @Override
     protected void beforeBreakingBlock(WorldAccess world, BlockPos pos, BlockState state) {
         BlockEntity blockEntity = state.hasBlockEntity() ? world.getBlockEntity(pos) : null;
         Block.dropStacks(state, world, pos, blockEntity);
     }
 
+    @Override
     public int getFlowSpeed(WorldView world) {
         return 4;
     }
 
+    @Override
     public BlockState toBlockState(FluidState state) {
         return MoreWeaponry.CELESTIALITE_FLUID_BLOCK.getDefaultState().with(FluidBlock.LEVEL, getBlockStateLevel(state));
     }
 
+    @Override
     public boolean matchesType(Fluid fluid) {
         return fluid == MoreWeaponry.CELESTIALITE_STILL || fluid == MoreWeaponry.CELESTIALITE_FLOWING;
     }
 
+    @Override
     public int getLevelDecreasePerBlock(WorldView world) {
         return 1;
     }
 
+    @Override
     public int getTickRate(WorldView world) {
         return 5;
     }
 
+    @Override
     public boolean canBeReplacedWith(FluidState state, BlockView world, BlockPos pos, Fluid fluid, Direction direction) {
         return direction == Direction.DOWN && !fluid.isIn(FluidTags.WATER);
     }
 
+    @Override
     protected float getBlastResistance() {
         return 100.0F;
     }
 
+    @Override
     public Optional<SoundEvent> getBucketFillSound() {
         return Optional.of(SoundEvents.ITEM_BUCKET_FILL);
     }
