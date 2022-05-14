@@ -21,6 +21,8 @@ public class MoreWeaponryHeadLootTables {
             = new Identifier(MoreWeaponry.MOD_ID, "entities/crackler");
     private static final Identifier SICKENED_ID
             = new Identifier(MoreWeaponry.MOD_ID, "entities/sickened");
+    private static final Identifier SICKENED_HUSK_ID
+            = new Identifier(MoreWeaponry.MOD_ID, "entities/sickened_husk");
 
     public static void registerMoreWeaponryHeadLootTables() {
         LootTableLoadingCallback.EVENT.register(((resourceManager, manager, id, supplier, setter) -> {
@@ -57,6 +59,13 @@ public class MoreWeaponryHeadLootTables {
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(100.0f))
                         .with(ItemEntry.builder(MoreWeaponry.SICKENED_SKULL.asItem()))
+                        .withFunction(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+                supplier.withPool(poolBuilder.build());
+            } if (SICKENED_HUSK_ID.equals(id)) {
+                FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(100.0f))
+                        .with(ItemEntry.builder(MoreWeaponry.SICKENED_HUSK_SKULL.asItem()))
                         .withFunction(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
                 supplier.withPool(poolBuilder.build());
             }
