@@ -430,6 +430,11 @@
   "gui.moreweaponry.core_forge.label": "Forge du noyau",
   "gui.moreweaponry.essence_translator.label": "Traducteur d'essence",
   "gui.moreweaponry.cirtict_forge.label": "Forge circulaire",
+  "item.moreweaponry.heavenly_leather": "Cuir céleste",
+  "item.moreweaponry.reinforced_bucket": "Seau renforcé",
+  "item.moreweaponry.reinforced_celestialite_bucket": "Seau de Celestialite renforcé",
+  "block.moreweaponry.celestialite_fluid_block": "Célestialite liquéfiée",
+  "item.moreweaponry.celestialite_remnant": "Vestige de Célestialite",
 
   "advancement.moreweaponry.bluestone.title": "La première pièce du puzzle",
   "advancement.moreweaponry.bluestone.description": "Obtenez une pierre bleue",

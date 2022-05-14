@@ -430,6 +430,11 @@
   "gui.moreweaponry.core_forge.label": "Forja del núcleo",
   "gui.moreweaponry.essence_translator.label": "Traductor de esencia",
   "gui.moreweaponry.cirtict_forge.label": "Fragua de ciudad",
+  "item.moreweaponry.heavenly_leather": "Cuero celestial",
+  "item.moreweaponry.reinforced_bucket": "Cubo Reforzado",
+  "item.moreweaponry.reinforced_celestialite_bucket": "Cubo de Celestialite Reforzado",
+  "block.moreweaponry.celestialite_fluid_block": "Celestialite licuado",
+  "item.moreweaponry.celestialite_remnant": "Remanente de Celestialite",
 
   "advancement.moreweaponry.bluestone.title": "La primera pieza del rompecabezas",
   "advancement.moreweaponry.bluestone.description": "Obtén una roca de piedra azul",

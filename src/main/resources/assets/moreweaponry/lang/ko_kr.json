@@ -430,6 +430,11 @@
   "gui.moreweaponry.core_forge.label": "코어 포지",
   "gui.moreweaponry.essence_translator.label": "에센스 번역기",
   "gui.moreweaponry.cirtict_forge.label": "서킷 포지",
+  "item.moreweaponry.heavenly_leather": "천상의 가죽",
+  "item.moreweaponry.reinforced_bucket": "강화 버킷",
+  "item.moreweaponry.reinforced_celestialite_bucket": "보강된 천문석 양동이",
+  "block.moreweaponry.celestialite_fluid_block": "액화된 천문석",
+  "item.moreweaponry.celestialite_remnant": "천문석 남은",
 
   "advancement.moreweaponry.bluestone.title": "퍼즐의 첫 번째 조각",
   "advancement.moreweaponry.bluestone.description": "블루스톤 바위 획득",

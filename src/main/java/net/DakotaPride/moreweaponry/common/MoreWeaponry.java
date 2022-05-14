@@ -473,11 +473,9 @@ public class MoreWeaponry implements ModInitializer {
 
 	public static Item MAIDEN_STEM;
 	public static Item C;
-
-	public static Item LIQUEFIED_CELESTIALITE;
-	public static Item LIQUEFIED_BARD_INFUSED_CELESTIALITE;
-	public static Item CELESTIALITE;
 	public static Item BARD_INFUSED_CELESTIALITE;
+
+	public static Item CELESTIALITE_REMNANT;
 	public static ReinforcedBucketItem CONTAINED_CELESTIALITE;
 	public static ReinforcedBucketItem REINFORCED_BUCKET;
 
@@ -928,7 +926,7 @@ public class MoreWeaponry implements ModInitializer {
 				new PaintingMotive(32, 32));
 
 		// Enchantments
-		BLEEDING_ENCHANT = registerBleedingEnchantment("bleeding",
+	/*	BLEEDING_ENCHANT = registerBleedingEnchantment("bleeding",
 				new BleedingEnchantment(Enchantment.Rarity.UNCOMMON,
 						EnchantmentTarget.WEAPON));
 		STRAY_BONAGE_ENCHANT = registerStrayBonageEnchantment("stray_bonage",
@@ -946,7 +944,7 @@ public class MoreWeaponry implements ModInitializer {
 		POWER_OF_WITHER_ENCHANT = registerPowerOfTheWitherEnchantment("power_of_the_wither",
 				new PowerOfTheWitherEnchantment(Enchantment.Rarity.UNCOMMON,
 						EnchantmentTarget.BOW));
-
+	*/
 		// Potions
 		NUMBING_POTION = registerNumbedPotion("numbness_potion");
 
@@ -2196,7 +2194,6 @@ public class MoreWeaponry implements ModInitializer {
 		MoreWeaponryRegistries.registerMoreWeaponryComposterChances();
 		MoreWeaponryRegistries.registerMoreWeaponryStrippables();
 		MoreWeaponryWorldGen.generateMoreWeaponryWorldGen();
-		MoreWeaponryLootTableModifiers.modifyLootTables();
 		MoreWeaponryTags.MoreWeaponryBlockTags();
 		MoreWeaponryTags.MoreWeaponryItemTags();
 		GeckoLib.initialize();
