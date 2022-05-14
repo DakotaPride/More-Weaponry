@@ -2173,6 +2173,7 @@ public class MoreWeaponry implements ModInitializer {
 		MoreWeaponryRegistries.registerMoreWeaponryComposterChances();
 		MoreWeaponryRegistries.registerMoreWeaponryStrippables();
 		MoreWeaponryWorldGen.generateMoreWeaponryWorldGen();
+		MoreWeaponryLootTableModifiers.modifyLootTables();
 		MoreWeaponryTags.MoreWeaponryBlockTags();
 		MoreWeaponryTags.MoreWeaponryItemTags();
 		GeckoLib.initialize();
