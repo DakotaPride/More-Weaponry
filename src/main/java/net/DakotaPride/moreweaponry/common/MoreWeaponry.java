@@ -858,29 +858,8 @@ public class MoreWeaponry implements ModInitializer {
 		return Registry.register(Registry.PAINTING_MOTIVE, new Identifier(MoreWeaponry.MOD_ID, name), paintingMotive);
 	}
 
-	private static BleedingEnchantment registerBleedingEnchantment(String name, Enchantment enchantment) {
-		return (BleedingEnchantment)
-				Registry.register(Registry.ENCHANTMENT, new Identifier(MoreWeaponry.MOD_ID, name), enchantment);
-	}
-	private static AutoMendingEnchantment registerAutoMendingEnchantment(String name, Enchantment enchantment) {
-		return (AutoMendingEnchantment)
-				Registry.register(Registry.ENCHANTMENT, new Identifier(MoreWeaponry.MOD_ID, name), enchantment);
-	}
-	private static EvokersRevengeEnchantment registerEvokersRevengeEnchantment(String name, Enchantment enchantment) {
-		return (EvokersRevengeEnchantment)
-				Registry.register(Registry.ENCHANTMENT, new Identifier(MoreWeaponry.MOD_ID, name), enchantment);
-	}
-	private static GuardiansSmiteEnchantment registerGuardiansSmiteEnchantment(String name, Enchantment enchantment) {
-		return (GuardiansSmiteEnchantment)
-				Registry.register(Registry.ENCHANTMENT, new Identifier(MoreWeaponry.MOD_ID, name), enchantment);
-	}
-	private static PowerOfTheWitherEnchantment registerPowerOfTheWitherEnchantment(String name, Enchantment enchantment) {
-		return (PowerOfTheWitherEnchantment)
-				Registry.register(Registry.ENCHANTMENT, new Identifier(MoreWeaponry.MOD_ID, name), enchantment);
-	}
-	private static StrayBonageEnchantment registerStrayBonageEnchantment(String name, Enchantment enchantment) {
-		return (StrayBonageEnchantment)
-				Registry.register(Registry.ENCHANTMENT, new Identifier(MoreWeaponry.MOD_ID, name), enchantment);
+	private static Enchantment registerEnchantment(String name, Enchantment enchantment) {
+		return Registry.register(Registry.ENCHANTMENT, new Identifier(MOD_ID, name), enchantment);
 	}
 
 	public static Potion registerNumbedPotion(String name) {
@@ -926,25 +905,25 @@ public class MoreWeaponry implements ModInitializer {
 				new PaintingMotive(32, 32));
 
 		// Enchantments
-	/*	BLEEDING_ENCHANT = registerBleedingEnchantment("bleeding",
+		BLEEDING_ENCHANT = (BleedingEnchantment) registerEnchantment("bleeding",
 				new BleedingEnchantment(Enchantment.Rarity.UNCOMMON,
 						EnchantmentTarget.WEAPON));
-		STRAY_BONAGE_ENCHANT = registerStrayBonageEnchantment("stray_bonage",
+		STRAY_BONAGE_ENCHANT = (StrayBonageEnchantment) registerEnchantment("stray_bonage",
 				new StrayBonageEnchantment(Enchantment.Rarity.UNCOMMON,
 						EnchantmentTarget.BOW));
-		GUARDIANS_SMITE_ENCHANT = registerGuardiansSmiteEnchantment("guardians_smite",
+		GUARDIANS_SMITE_ENCHANT = (GuardiansSmiteEnchantment) registerEnchantment("guardians_smite",
 				new GuardiansSmiteEnchantment(Enchantment.Rarity.UNCOMMON,
 						EnchantmentTarget.WEAPON));
-		AUTO_MENDING_ENCHANT = registerAutoMendingEnchantment("auto_mending",
+		AUTO_MENDING_ENCHANT = (AutoMendingEnchantment) registerEnchantment("auto_mending",
 				new AutoMendingEnchantment(Enchantment.Rarity.UNCOMMON,
 						EnchantmentTarget.ARMOR_CHEST));
-		EVOKERS_REVENGE_ENCHANT = registerEvokersRevengeEnchantment("evokers_revenge",
+		EVOKERS_REVENGE_ENCHANT = (EvokersRevengeEnchantment) registerEnchantment("evokers_revenge",
 				new EvokersRevengeEnchantment(Enchantment.Rarity.UNCOMMON,
 						EnchantmentTarget.WEAPON));
-		POWER_OF_WITHER_ENCHANT = registerPowerOfTheWitherEnchantment("power_of_the_wither",
+		POWER_OF_WITHER_ENCHANT = (PowerOfTheWitherEnchantment) registerEnchantment("power_of_the_wither",
 				new PowerOfTheWitherEnchantment(Enchantment.Rarity.UNCOMMON,
 						EnchantmentTarget.BOW));
-	*/
+
 		// Potions
 		NUMBING_POTION = registerNumbedPotion("numbness_potion");
 
