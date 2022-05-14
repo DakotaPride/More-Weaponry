@@ -927,7 +927,7 @@ public class MoreWeaponry implements ModInitializer {
 		MASTERS_PAINTING = registerPainting("masters",
 				new PaintingMotive(32, 32));
 
-		// Enchtantments
+		// Enchantments
 		BLEEDING_ENCHANT = registerBleedingEnchantment("bleeding",
 				new BleedingEnchantment(Enchantment.Rarity.UNCOMMON,
 						EnchantmentTarget.WEAPON));
