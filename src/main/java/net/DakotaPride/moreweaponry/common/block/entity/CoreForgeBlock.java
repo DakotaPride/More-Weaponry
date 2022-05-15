@@ -1,5 +1,6 @@
 package net.DakotaPride.moreweaponry.common.block.entity;
 
+import net.DakotaPride.moreweaponry.client.MoreClientWeaponry;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
@@ -60,6 +61,6 @@ public class CoreForgeBlock extends BlockWithEntity implements BlockEntityProvid
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        return checkType(type, MoreWeaponryBlockEntities.CORE_FORGE, CoreForgeEntity::tick);
+        return checkType(type, MoreClientWeaponry.CORE_FORGE_BLOCK_ENTITY, CoreForgeEntity::tick);
     }
 }

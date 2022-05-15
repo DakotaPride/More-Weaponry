@@ -472,7 +472,7 @@ public class MoreWeaponry implements ModInitializer {
 	public static WatcherCelestialMedallionItem CELESTIAL_MEDALLION_WATCHER;
 
 	public static Item MAIDEN_STEM;
-	public static Item C;
+	public static Item FORGOTTEN_MUSIC_SHEET;
 	public static Item BARD_INFUSED_CELESTIALITE;
 
 	public static Item CELESTIALITE_REMNANT;
@@ -1968,6 +1968,10 @@ public class MoreWeaponry implements ModInitializer {
 				new WandererCelestialMedallionItem(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 		CELESTIAL_MEDALLION_CRACKLER = registerItem("celestial_medallion_crackler",
 				new CracklerCelestialMedallionItem(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+		BARD_INFUSED_CELESTIALITE = registerItem("bard_infused_celestialite",
+				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+		CELESTIALITE_REMNANT = registerItem("celestialite_remnant",
+				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 
 
 		// Sound Events

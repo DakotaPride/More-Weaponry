@@ -1,5 +1,6 @@
 package net.DakotaPride.moreweaponry.common.block.entity;
 
+import net.DakotaPride.moreweaponry.client.MoreClientWeaponry;
 import net.DakotaPride.moreweaponry.common.item.inventory.ImplementedInventory;
 import net.DakotaPride.moreweaponry.common.recipe.CirtictForgeRecipe;
 import net.DakotaPride.moreweaponry.common.screen.CirtictForgeScreenHandler;
@@ -35,7 +36,7 @@ public class CirtictForgeEntity extends BlockEntity implements NamedScreenHandle
     private int maxFuelTime = 0;
 
     public CirtictForgeEntity(BlockPos pos, BlockState state) {
-        super(MoreWeaponryBlockEntities.CIRTICT_FORGE, pos, state);
+        super(MoreClientWeaponry.CIRTICT_FORGE_BLOCK_ENTITY, pos, state);
         this.propertyDelegate = new PropertyDelegate() {
             public int get(int index) {
                 switch (index) {

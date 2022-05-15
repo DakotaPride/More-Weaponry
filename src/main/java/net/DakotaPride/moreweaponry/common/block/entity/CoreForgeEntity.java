@@ -1,5 +1,6 @@
 package net.DakotaPride.moreweaponry.common.block.entity;
 
+import net.DakotaPride.moreweaponry.client.MoreClientWeaponry;
 import net.DakotaPride.moreweaponry.common.item.inventory.ImplementedInventory;
 import net.DakotaPride.moreweaponry.common.recipe.CoreForgeRecipe;
 import net.DakotaPride.moreweaponry.common.screen.CoreForgeScreenHandler;
@@ -35,7 +36,7 @@ public class CoreForgeEntity extends BlockEntity implements NamedScreenHandlerFa
     private int maxFuelTime = 0;
 
     public CoreForgeEntity(BlockPos pos, BlockState state) {
-        super(MoreWeaponryBlockEntities.CORE_FORGE, pos, state);
+        super(MoreClientWeaponry.CORE_FORGE_BLOCK_ENTITY, pos, state);
         this.propertyDelegate = new PropertyDelegate() {
             public int get(int index) {
                 switch (index) {
