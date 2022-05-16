@@ -894,6 +894,8 @@ public class MoreWeaponry implements ModInitializer {
 
 		CONTAINED_CELESTIALITE = registerItem("reinforced_celestialite_bucket",
 				new ReinforcedBucketItem(CELESTIALITE_STILL, new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+		BARD_INFUSED_CELESTIALITE = registerItem("bard_infused_celestialite",
+				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 
 		REINFORCED_BUCKET = registerItem("reinforced_bucket",
 				new ReinforcedBucketItem(Fluids.EMPTY, new FabricItemSettings().fireproof().maxCount(16).group(MORE_WEAPONRY_GROUP)));
