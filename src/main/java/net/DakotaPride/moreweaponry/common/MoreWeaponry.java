@@ -6,6 +6,7 @@ import net.DakotaPride.moreweaponry.common.block.custom.*;
 import net.DakotaPride.moreweaponry.common.block.entity.CirtictForgeBlock;
 import net.DakotaPride.moreweaponry.common.block.entity.CoreForgeBlock;
 import net.DakotaPride.moreweaponry.common.block.entity.EssenceTranslatorBlock;
+import net.DakotaPride.moreweaponry.common.block.entity.FabricatorBlock;
 import net.DakotaPride.moreweaponry.common.block.skulls.*;
 import net.DakotaPride.moreweaponry.common.effect.BleedingStatusEffect;
 import net.DakotaPride.moreweaponry.common.effect.NumbedStatusEffect;
@@ -16,7 +17,7 @@ import net.DakotaPride.moreweaponry.common.effect.unfortuned.*;
 import net.DakotaPride.moreweaponry.common.enchantments.*;
 import net.DakotaPride.moreweaponry.common.entity.custom.*;
 import net.DakotaPride.moreweaponry.common.fluid.CelestialiteFluid;
-import net.DakotaPride.moreweaponry.common.item.ReinforcedBucketItem;
+import net.DakotaPride.moreweaponry.common.item.items.ReinforcedBucketItem;
 import net.DakotaPride.moreweaponry.common.item.items.*;
 import net.DakotaPride.moreweaponry.common.item.items.bard_tools.*;
 import net.DakotaPride.moreweaponry.common.item.items.blessed_tools.BlessedArmorItem;
@@ -37,6 +38,7 @@ import net.DakotaPride.moreweaponry.common.item.items.powered_cores.*;
 import net.DakotaPride.moreweaponry.common.item.items.sickened_tools.*;
 import net.DakotaPride.moreweaponry.common.item.items.wanderer_tools.*;
 import net.DakotaPride.moreweaponry.common.item.items.watcher_tools.*;
+import net.DakotaPride.moreweaponry.common.screen.FabricatorScreenHandler;
 import net.DakotaPride.moreweaponry.mixin.BrewingRecipeRegistryMixin;
 import net.DakotaPride.moreweaponry.mixin.StructureFeatureAccessor;
 import net.DakotaPride.moreweaponry.common.recipe.CirtictForgeRecipe;
@@ -202,6 +204,7 @@ public class MoreWeaponry implements ModInitializer {
 	public static ScreenHandlerType<CoreForgeScreenHandler> CORE_FORGE_SCREEN_HANDLER;
 	public static ScreenHandlerType<EssenceTranslatorScreenHandler> ESSENCE_TRANSLATOR_SCREEN_HANDLER;
 	public static ScreenHandlerType<CirtictForgeScreenHandler> CIRTICT_FORGE_SCREEN_HANDLER;
+	public static ScreenHandlerType<FabricatorScreenHandler> FABRICATOR_SCREEN_HANDLER;
 
 	// Sounds
 	public static SoundEvent ENTITY_BURIED_KNIGHT_AMBIENT;
@@ -882,9 +885,37 @@ public class MoreWeaponry implements ModInitializer {
 					new Identifier(MOD_ID, "more_weaponry"))
 			.icon(() -> new ItemStack(HEATED_CIRTICT_BATTLEAXE)).build();
 
+	// Pride Month Celebration
+	public static FabricatorBlock FABRICATOR_BLOCK;
+	public static ArmorItem RAINBOW_HORNS;
+
+	// v1.19 Pride Month (unrelated) Additions
+	public static BaseHornsItem COSMETIC_HORNS;
+	public static ArmorItem RED_HORNS;
+	public static ArmorItem YELLOW_HORNS;
+
 
 	@Override
 	public void onInitialize() {
+	/*	LocalDate moreWeaponryData;
+
+		moreWeaponryData = LocalDate.now();
+		int localMonth = moreWeaponryData.get(ChronoField.MONTH_OF_YEAR);
+		if (localMonth == 6) {
+
+		}
+	*/
+
+		// Pride Month Celebration
+		FABRICATOR_BLOCK = registerBlock("fabricator",
+				new FabricatorBlock(FabricBlockSettings.copy(Blocks.LOOM)));
+		RAINBOW_HORNS = registerItem("rainbow_horns",
+				new ArmorItem(ArmorMaterials.LEATHER, EquipmentSlot.HEAD,
+						new FabricItemSettings()));
+		// Pride Month (unrelated) Additions
+		COSMETIC_HORNS = registerItem("base_horns",
+				new BaseHornsItem(ArmorMaterials.LEATHER, EquipmentSlot.HEAD,
+						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 
 		// Fluids
 		CELESTIALITE_STILL = registerFluid("celestialite_still",
@@ -1060,14 +1091,17 @@ public class MoreWeaponry implements ModInitializer {
 
 		// Screen Handlers
 		CORE_FORGE_SCREEN_HANDLER =
-				ScreenHandlerRegistry.registerSimple(new Identifier(MoreWeaponry.MOD_ID, "core_forge"),
+				ScreenHandlerRegistry.registerSimple(new Identifier(MOD_ID, "core_forge"),
 						CoreForgeScreenHandler::new);
 		ESSENCE_TRANSLATOR_SCREEN_HANDLER =
-				ScreenHandlerRegistry.registerSimple(new Identifier(MoreWeaponry.MOD_ID, "essence_translator"),
+				ScreenHandlerRegistry.registerSimple(new Identifier(MOD_ID, "essence_translator"),
 						EssenceTranslatorScreenHandler::new);
 		CIRTICT_FORGE_SCREEN_HANDLER =
-				ScreenHandlerRegistry.registerSimple(new Identifier(MoreWeaponry.MOD_ID, "cirtict_forge"),
+				ScreenHandlerRegistry.registerSimple(new Identifier(MOD_ID, "cirtict_forge"),
 						CirtictForgeScreenHandler::new);
+		FABRICATOR_SCREEN_HANDLER =
+				ScreenHandlerRegistry.registerSimple(new Identifier(MOD_ID, "fabricator"),
+						FabricatorScreenHandler::new);
 
 		// Structures
 		StructureFeatureAccessor.callRegister(MoreWeaponry.MOD_ID + ":bard_rock",
@@ -1970,8 +2004,6 @@ public class MoreWeaponry implements ModInitializer {
 				new WandererCelestialMedallionItem(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 		CELESTIAL_MEDALLION_CRACKLER = registerItem("celestial_medallion_crackler",
 				new CracklerCelestialMedallionItem(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
-		BARD_INFUSED_CELESTIALITE = registerItem("bard_infused_celestialite",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 		CELESTIALITE_REMNANT = registerItem("celestialite_remnant",
 				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 

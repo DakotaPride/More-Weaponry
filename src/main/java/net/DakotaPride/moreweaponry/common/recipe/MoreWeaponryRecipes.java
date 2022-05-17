@@ -21,5 +21,10 @@ public class MoreWeaponryRecipes {
                 CirtictForgeRecipe.Serializer.INSTANCE);
         Registry.register(Registry.RECIPE_TYPE, new Identifier(MoreWeaponry.MOD_ID, CirtictForgeRecipe.Type.ID),
                 CirtictForgeRecipe.Type.INSTANCE);
+        // Fabricator
+        Registry.register(Registry.RECIPE_SERIALIZER, new Identifier(MoreWeaponry.MOD_ID, FabricatorRecipe.Serializer.ID),
+                FabricatorRecipe.Serializer.INSTANCE);
+        Registry.register(Registry.RECIPE_TYPE, new Identifier(MoreWeaponry.MOD_ID, FabricatorRecipe.Type.ID),
+                FabricatorRecipe.Type.INSTANCE);
     }
 }

@@ -7,10 +7,12 @@ import net.DakotaPride.moreweaponry.common.MoreWeaponry;
 import net.DakotaPride.moreweaponry.common.block.entity.CirtictForgeEntity;
 import net.DakotaPride.moreweaponry.common.block.entity.CoreForgeEntity;
 import net.DakotaPride.moreweaponry.common.block.entity.EssenceTranslatorEntity;
+import net.DakotaPride.moreweaponry.common.block.entity.FabricatorEntity;
 import net.DakotaPride.moreweaponry.common.particle.CelestialMedallionParticle;
 import net.DakotaPride.moreweaponry.common.screen.CirtictForgeScreen;
 import net.DakotaPride.moreweaponry.common.screen.CoreForgeScreen;
 import net.DakotaPride.moreweaponry.common.screen.EssenceTranslatorScreen;
+import net.DakotaPride.moreweaponry.common.screen.FabricatorScreen;
 import net.DakotaPride.moreweaponry.common.util.MoreWeaponryModelPredicateProvider;
 import net.DakotaPride.moreweaponry.common.util.MoreWeaponryRendererHelper;
 import net.fabricmc.api.ClientModInitializer;
@@ -31,6 +33,7 @@ public class MoreClientWeaponry implements ClientModInitializer {
     public static BlockEntityType<CoreForgeEntity> CORE_FORGE_BLOCK_ENTITY;
     public static BlockEntityType<EssenceTranslatorEntity> ESSENCE_TRANSLATOR_BLOCK_ENTITY;
     public static BlockEntityType<CirtictForgeEntity> CIRTICT_FORGE_BLOCK_ENTITY;
+    public static BlockEntityType<FabricatorEntity> FABRICATOR_BLOCK_ENTITY;
 
     @Override
     public void onInitializeClient() {
@@ -47,6 +50,10 @@ public class MoreClientWeaponry implements ClientModInitializer {
                 new Identifier(MoreWeaponry.MOD_ID, "cirtict_forge"),
                 FabricBlockEntityTypeBuilder.create(CirtictForgeEntity::new,
                         MoreWeaponry.CIRTICT_FORGE).build(null));
+        FABRICATOR_BLOCK_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE,
+                new Identifier(MoreWeaponry.MOD_ID, "fabricator"),
+                FabricBlockEntityTypeBuilder.create(FabricatorEntity::new,
+                                MoreWeaponry.FABRICATOR_BLOCK).build(null));
 
         FluidRenderHandlerRegistry.INSTANCE.register(MoreWeaponry.CELESTIALITE_STILL,
                 new SimpleFluidRenderHandler(SimpleFluidRenderHandler.WATER_STILL,
@@ -69,6 +76,7 @@ public class MoreClientWeaponry implements ClientModInitializer {
         ScreenRegistry.register(MoreWeaponry.CORE_FORGE_SCREEN_HANDLER, CoreForgeScreen::new);
         ScreenRegistry.register(MoreWeaponry.ESSENCE_TRANSLATOR_SCREEN_HANDLER, EssenceTranslatorScreen::new);
         ScreenRegistry.register(MoreWeaponry.CIRTICT_FORGE_SCREEN_HANDLER, CirtictForgeScreen::new);
+        ScreenRegistry.register(MoreWeaponry.FABRICATOR_SCREEN_HANDLER, FabricatorScreen::new);
 
         MoreWeaponryRendererHelper.setRenderLayers();
         MoreWeaponryRendererHelper.setTransparentBlocks();
@@ -89,6 +97,7 @@ public class MoreClientWeaponry implements ClientModInitializer {
                 MoreWeaponry.SICKENED_BREASTPLATE);
         GeoArmorRenderer.registerArmorRenderer(new BlessedArmorRenderer(), MoreWeaponry.BLESSED_HELMET,
                 MoreWeaponry.BLESSED_BREASTPLATE);
+        GeoArmorRenderer.registerArmorRenderer(new BaseHornsRenderer(), MoreWeaponry.COSMETIC_HORNS);
 
 
     }
