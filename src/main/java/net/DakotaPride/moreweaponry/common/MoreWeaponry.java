@@ -888,7 +888,8 @@ public class MoreWeaponry implements ModInitializer {
 			.icon(() -> new ItemStack(HEATED_CIRTICT_BATTLEAXE)).build();
 
 	// Pride Month Celebration
-	public static ArmorItem RAINBOW_HORNS;
+	public static RainbowHornsItem RAINBOW_HORNS;
+	public static NonBinaryHornsItem NONBINARY_HORNS;
 
 	// v1.19 Pride Month (unrelated) Additions
 	public static BaseHornsItem COSMETIC_HORNS;
@@ -899,7 +900,6 @@ public class MoreWeaponry implements ModInitializer {
 	public static GreenHornsItem GREEN_HORNS;
 	public static PurpleHornsItem PURPLE_HORNS;
 	public static PinkHornsItem PINK_HORNS;
-	public static NonBinaryHornsItem NONBINARY_HORNS;
 
 
 	@Override
@@ -941,6 +941,9 @@ public class MoreWeaponry implements ModInitializer {
 						new FabricItemSettings()));
 		PURPLE_HORNS = registerItem("purple_horns",
 				new PurpleHornsItem(ArmorMaterials.LEATHER, EquipmentSlot.HEAD,
+						new FabricItemSettings()));
+		PINK_HORNS = registerItem("pink_horns",
+				new PinkHornsItem(ArmorMaterials.LEATHER, EquipmentSlot.HEAD,
 						new FabricItemSettings()));
 
 
