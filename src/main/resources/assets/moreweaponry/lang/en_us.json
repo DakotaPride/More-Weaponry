@@ -445,6 +445,7 @@
   "item.moreweaponry.purple_horns": "Horns",
   "item.moreweaponry.pink_horns": "Horns",
   "item.moreweaponry.nonbinary_horns": "Horns",
+  "item.moreweaponry.transgender_horns": "Horns",
   "item.moreweaponry.horns.type.rainbow": "§7Color: [§4R§6a§ei§2n§2b§9o§5w§7]",
   "item.moreweaponry.horns.type.uncoloured": "§7Color: [Uncoloured]",
   "item.moreweaponry.horns.type.red": "§7Color: [§4Red§7]",
@@ -455,6 +456,7 @@
   "item.moreweaponry.horns.type.purple": "§7Color: [§5Purple§7]",
   "item.moreweaponry.horns.type.pink": "§7Color: [§dPink§7]",
   "item.moreweaponry.horns.type.nonbinary": "§7Color: [§eNon§f-B§5in§8ary§7]",
+  "item.moreweaponry.horns.type.transgender": "§7Color: [§bTra§dns§fg§den§bder§7]",
 
   "advancement.moreweaponry.bluestone.title": "The First Piece Of The Puzzle",
   "advancement.moreweaponry.bluestone.description": "Obtain A Bluestone Rock",

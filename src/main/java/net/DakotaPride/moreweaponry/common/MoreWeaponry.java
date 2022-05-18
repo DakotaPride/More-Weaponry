@@ -890,6 +890,7 @@ public class MoreWeaponry implements ModInitializer {
 	// Pride Month Celebration
 	public static RainbowHornsItem RAINBOW_HORNS;
 	public static NonBinaryHornsItem NONBINARY_HORNS;
+	public static TransgenderHornsItem TRANS_HORNS;
 
 	// v1.19 Pride Month (unrelated) Additions
 	public static BaseHornsItem COSMETIC_HORNS;
@@ -919,6 +920,9 @@ public class MoreWeaponry implements ModInitializer {
 							new FabricItemSettings()));
 			NONBINARY_HORNS = registerItem("nonbinary_horns",
 					new NonBinaryHornsItem(ArmorMaterials.LEATHER, EquipmentSlot.HEAD,
+							new FabricItemSettings()));
+			TRANS_HORNS = registerItem("transgender_horns",
+					new TransgenderHornsItem(ArmorMaterials.LEATHER, EquipmentSlot.HEAD,
 							new FabricItemSettings()));
 			// Pride Month (unrelated) Additions
 		COSMETIC_HORNS = registerItem("base_horns",
