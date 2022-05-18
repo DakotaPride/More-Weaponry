@@ -1,8 +1,7 @@
-package net.DakotaPride.moreweaponry.client.render.armor;
+package net.DakotaPride.moreweaponry.client.render.armor.horns;
 
 import net.DakotaPride.moreweaponry.common.MoreWeaponry;
-import net.DakotaPride.moreweaponry.common.item.items.BaseHornsItem;
-import net.DakotaPride.moreweaponry.common.item.items.bard_tools.BardArmorItem;
+import net.DakotaPride.moreweaponry.common.item.items.horns_items.BaseHornsItem;
 import net.minecraft.util.Identifier;
 import software.bernie.geckolib3.model.AnimatedGeoModel;
 

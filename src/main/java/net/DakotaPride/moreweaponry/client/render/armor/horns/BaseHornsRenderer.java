@@ -1,7 +1,6 @@
-package net.DakotaPride.moreweaponry.client.render.armor;
+package net.DakotaPride.moreweaponry.client.render.armor.horns;
 
-import net.DakotaPride.moreweaponry.common.item.items.BaseHornsItem;
-import net.DakotaPride.moreweaponry.common.item.items.bard_tools.BardArmorItem;
+import net.DakotaPride.moreweaponry.common.item.items.horns_items.BaseHornsItem;
 import software.bernie.geckolib3.renderers.geo.GeoArmorRenderer;
 
 public class BaseHornsRenderer extends GeoArmorRenderer<BaseHornsItem> {

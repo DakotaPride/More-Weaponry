@@ -30,6 +30,7 @@ import net.DakotaPride.moreweaponry.common.item.items.cirtict.heated.*;
 import net.DakotaPride.moreweaponry.common.item.items.cores.*;
 import net.DakotaPride.moreweaponry.common.item.items.crackler_tools.*;
 import net.DakotaPride.moreweaponry.common.item.items.elder_scale_items.ElderScaleArtifactItem;
+import net.DakotaPride.moreweaponry.common.item.items.horns_items.*;
 import net.DakotaPride.moreweaponry.common.item.items.mod_tools.BattleaxeItem;
 import net.DakotaPride.moreweaponry.common.item.items.mod_tools.BluestoneIgnitor;
 import net.DakotaPride.moreweaponry.common.item.items.mod_tools.KnifeItem;
@@ -63,6 +64,7 @@ import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRe
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
 import net.fabricmc.fabric.api.screenhandler.v1.ScreenHandlerRegistry;
+import net.fabricmc.loader.api.FabricLoader;
 import net.fabricmc.yarn.constants.MiningLevels;
 import net.minecraft.block.*;
 import net.minecraft.enchantment.Enchantment;
@@ -886,13 +888,18 @@ public class MoreWeaponry implements ModInitializer {
 			.icon(() -> new ItemStack(HEATED_CIRTICT_BATTLEAXE)).build();
 
 	// Pride Month Celebration
-	public static FabricatorBlock FABRICATOR_BLOCK;
 	public static ArmorItem RAINBOW_HORNS;
 
 	// v1.19 Pride Month (unrelated) Additions
 	public static BaseHornsItem COSMETIC_HORNS;
-	public static ArmorItem RED_HORNS;
-	public static ArmorItem YELLOW_HORNS;
+	public static RedHornsItem RED_HORNS;
+	public static YellowHornsItem YELLOW_HORNS;
+	public static OrangeHornsItem ORANGE_HORNS;
+	public static BlueHornsItem BLUE_HORNS;
+	public static GreenHornsItem GREEN_HORNS;
+	public static PurpleHornsItem PURPLE_HORNS;
+	public static PinkHornsItem PINK_HORNS;
+	public static NonBinaryHornsItem NONBINARY_HORNS;
 
 
 	@Override
@@ -906,16 +913,37 @@ public class MoreWeaponry implements ModInitializer {
 		}
 	*/
 
-		// Pride Month Celebration
-		FABRICATOR_BLOCK = registerBlock("fabricator",
-				new FabricatorBlock(FabricBlockSettings.copy(Blocks.LOOM)));
-		RAINBOW_HORNS = registerItem("rainbow_horns",
-				new ArmorItem(ArmorMaterials.LEATHER, EquipmentSlot.HEAD,
-						new FabricItemSettings()));
-		// Pride Month (unrelated) Additions
+			// Pride Month Celebration
+			RAINBOW_HORNS = registerItem("rainbow_horns",
+					new RainbowHornsItem(ArmorMaterials.LEATHER, EquipmentSlot.HEAD,
+							new FabricItemSettings()));
+			NONBINARY_HORNS = registerItem("nonbinary_horns",
+					new NonBinaryHornsItem(ArmorMaterials.LEATHER, EquipmentSlot.HEAD,
+							new FabricItemSettings()));
+			// Pride Month (unrelated) Additions
 		COSMETIC_HORNS = registerItem("base_horns",
-				new BaseHornsItem(ArmorMaterials.LEATHER, EquipmentSlot.HEAD,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+					new BaseHornsItem(ArmorMaterials.LEATHER, EquipmentSlot.HEAD,
+							new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+		RED_HORNS = registerItem("red_horns",
+					new RedHornsItem(ArmorMaterials.LEATHER, EquipmentSlot.HEAD,
+							new FabricItemSettings()));
+		ORANGE_HORNS = registerItem("orange_horns",
+					new OrangeHornsItem(ArmorMaterials.LEATHER, EquipmentSlot.HEAD,
+							new FabricItemSettings()));
+		YELLOW_HORNS = registerItem("yellow_horns",
+				new YellowHornsItem(ArmorMaterials.LEATHER, EquipmentSlot.HEAD,
+						new FabricItemSettings()));
+		GREEN_HORNS = registerItem("green_horns",
+				new GreenHornsItem(ArmorMaterials.LEATHER, EquipmentSlot.HEAD,
+						new FabricItemSettings()));
+		BLUE_HORNS = registerItem("blue_horns",
+				new BlueHornsItem(ArmorMaterials.LEATHER, EquipmentSlot.HEAD,
+						new FabricItemSettings()));
+		PURPLE_HORNS = registerItem("purple_horns",
+				new PurpleHornsItem(ArmorMaterials.LEATHER, EquipmentSlot.HEAD,
+						new FabricItemSettings()));
+
+
 
 		// Fluids
 		CELESTIALITE_STILL = registerFluid("celestialite_still",

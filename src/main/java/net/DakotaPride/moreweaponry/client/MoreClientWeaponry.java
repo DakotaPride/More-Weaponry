@@ -2,6 +2,10 @@ package net.DakotaPride.moreweaponry.client;
 
 import net.DakotaPride.moreweaponry.client.render.MoreWeaponryEntityRegistry;
 import net.DakotaPride.moreweaponry.client.render.armor.*;
+import net.DakotaPride.moreweaponry.client.render.armor.horns.*;
+import net.DakotaPride.moreweaponry.client.render.armor.horns.colours.*;
+import net.DakotaPride.moreweaponry.client.render.armor.horns.pride.NonBinaryHornsRenderer;
+import net.DakotaPride.moreweaponry.client.render.armor.horns.pride.RainbowHornsRenderer;
 import net.DakotaPride.moreweaponry.client.render.renderer.IronBoltEntityRenderer;
 import net.DakotaPride.moreweaponry.common.MoreWeaponry;
 import net.DakotaPride.moreweaponry.common.block.entity.CirtictForgeEntity;
@@ -50,10 +54,6 @@ public class MoreClientWeaponry implements ClientModInitializer {
                 new Identifier(MoreWeaponry.MOD_ID, "cirtict_forge"),
                 FabricBlockEntityTypeBuilder.create(CirtictForgeEntity::new,
                         MoreWeaponry.CIRTICT_FORGE).build(null));
-        FABRICATOR_BLOCK_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE,
-                new Identifier(MoreWeaponry.MOD_ID, "fabricator"),
-                FabricBlockEntityTypeBuilder.create(FabricatorEntity::new,
-                                MoreWeaponry.FABRICATOR_BLOCK).build(null));
 
         FluidRenderHandlerRegistry.INSTANCE.register(MoreWeaponry.CELESTIALITE_STILL,
                 new SimpleFluidRenderHandler(SimpleFluidRenderHandler.WATER_STILL,
@@ -98,6 +98,15 @@ public class MoreClientWeaponry implements ClientModInitializer {
         GeoArmorRenderer.registerArmorRenderer(new BlessedArmorRenderer(), MoreWeaponry.BLESSED_HELMET,
                 MoreWeaponry.BLESSED_BREASTPLATE);
         GeoArmorRenderer.registerArmorRenderer(new BaseHornsRenderer(), MoreWeaponry.COSMETIC_HORNS);
+        GeoArmorRenderer.registerArmorRenderer(new RainbowHornsRenderer(), MoreWeaponry.RAINBOW_HORNS);
+        GeoArmorRenderer.registerArmorRenderer(new RedHornsRenderer(), MoreWeaponry.RED_HORNS);
+        GeoArmorRenderer.registerArmorRenderer(new OrangeHornsRenderer(), MoreWeaponry.ORANGE_HORNS);
+        GeoArmorRenderer.registerArmorRenderer(new YellowHornsRenderer(), MoreWeaponry.YELLOW_HORNS);
+        GeoArmorRenderer.registerArmorRenderer(new GreenHornsRenderer(), MoreWeaponry.GREEN_HORNS);
+        GeoArmorRenderer.registerArmorRenderer(new BlueHornsRenderer(), MoreWeaponry.BLUE_HORNS);
+        GeoArmorRenderer.registerArmorRenderer(new PurpleHornsRenderer(), MoreWeaponry.PURPLE_HORNS);
+        GeoArmorRenderer.registerArmorRenderer(new PinkHornsRenderer(), MoreWeaponry.PINK_HORNS);
+        GeoArmorRenderer.registerArmorRenderer(new NonBinaryHornsRenderer(), MoreWeaponry.NONBINARY_HORNS);
 
 
     }
