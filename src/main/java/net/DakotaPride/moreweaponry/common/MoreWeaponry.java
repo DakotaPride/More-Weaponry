@@ -930,7 +930,7 @@ public class MoreWeaponry implements ModInitializer {
 					if (DESERT_PYRAMID_CHEST_ID.equals(id)) {
 						FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
 								.rolls(ConstantLootNumberProvider.create(1))
-								.conditionally(RandomChanceLootCondition.builder(1f))
+								.conditionally(RandomChanceLootCondition.builder(0.34f))
 								.with(ItemEntry.builder(COSMETIC_HORNS))
 								.withFunction(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
 						supplier.withPool(poolBuilder.build());
