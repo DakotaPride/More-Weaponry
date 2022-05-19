@@ -105,6 +105,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import software.bernie.geckolib3.GeckoLib;
 
+import java.time.LocalDate;
+import java.time.temporal.ChronoField;
 import java.util.function.Supplier;
 
 import static net.DakotaPride.moreweaponry.common.MoreWeaponry.MoreWeaponryArmorMaterials.*;
@@ -918,14 +920,11 @@ public class MoreWeaponry implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-	/*	LocalDate moreWeaponryData;
+		LocalDate moreWeaponryData;
 
 		moreWeaponryData = LocalDate.now();
 		int localMonth = moreWeaponryData.get(ChronoField.MONTH_OF_YEAR);
 		if (localMonth == 6) {
-
-		}
-	*/
 		LootTableLoadingCallback.EVENT.register(((resourceManager, manager, id, supplier, setter) -> {
 					if (DESERT_PYRAMID_CHEST_ID.equals(id)) {
 						FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
@@ -936,6 +935,8 @@ public class MoreWeaponry implements ModInitializer {
 						supplier.withPool(poolBuilder.build());
 					}
 				}));
+		}
+
 
 			// Pride Month Celebration
 			RAINBOW_HORNS = registerItem("rainbow_horns",
