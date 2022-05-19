@@ -7,12 +7,12 @@
     "BlockEntityTypeMixin",
     "BrewingRecipeRegistryMixin",
     "DeadBushBlockMixin",
+    "ILivingEntityMixin",
     "LivingEntityMixin",
     "MixinStructurePiece",
     "SignTypeAccessor",
     "StatusEffectMixin",
-    "StructureFeatureAccessor",
-    "ILivingEntityMixin"
+    "StructureFeatureAccessor"
   ],
   "client": [
     "BlockEntityTypeMixin",

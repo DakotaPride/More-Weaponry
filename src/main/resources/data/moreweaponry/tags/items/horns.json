@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "moreweaponry:red_horns",
+    "moreweaponry:orange_horns",
+    "moreweaponry:yellow_horns",
+    "moreweaponry:green_horns",
+    "moreweaponry:blue_horns",
+    "moreweaponry:purple_horns",
+    "moreweaponry:black_horns",
+    "moreweaponry:white_horns",
+
+    "moreweaponry:rainbow_horns",
+    "moreweaponry:transgender_horns",
+    "moreweaponry:nonbinary_horns"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+      "potion": "minecraft:water",
+      "remainder": { "item": "minecraft:glass_bottle" }
+    },
+    {
+      "tag": "moreweaponry:horns"
+    }
+  ],
+  "result": {
+    "item": "moreweaponry:base_horns"
+  }
+}

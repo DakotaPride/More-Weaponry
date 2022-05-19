@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "horns",
+  "pattern": [
+    "#W#",
+    "PBP"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:light_blue_dye"
+    },
+    "W": {
+      "item": "minecraft:white_dye"
+    },
+    "P": {
+      "item": "minecraft:pink_dye"
+    },
+    "B": {
+      "item": "moreweaponry:base_horns"
+    }
+  },
+  "result": {
+    "item": "moreweaponry:transgender_horns"
+  }
+}

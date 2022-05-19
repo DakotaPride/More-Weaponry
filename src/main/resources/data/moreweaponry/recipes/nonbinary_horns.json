@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "horns",
+  "pattern": [
+    "# W",
+    " B ",
+    "P K"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:yellow_dye"
+    },
+    "W": {
+      "item": "minecraft:white_dye"
+    },
+    "P": {
+      "item": "minecraft:purple_dye"
+    },
+    "K": {
+      "item": "minecraft:black_dye"
+    },
+    "B": {
+      "item": "moreweaponry:base_horns"
+    }
+  },
+  "result": {
+    "item": "moreweaponry:nonbinary_horns"
+  }
+}

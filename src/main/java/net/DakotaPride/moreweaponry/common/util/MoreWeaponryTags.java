@@ -26,6 +26,7 @@ public class MoreWeaponryTags {
         TagKey<Item> handles = HANDLES;
         TagKey<Item> rapiers = RAPIERS;
         TagKey<Item> shields = SHIELDS;
+        TagKey<Item> horns = HORNS;
     }
 
     public static class Blocks {
@@ -51,9 +52,14 @@ public class MoreWeaponryTags {
         public static final TagKey<Item> HANDLES = createCommonTag("handles");
         public static final TagKey<Item> RAPIERS = createCommonTag("rapiers");
         public static final TagKey<Item> SHIELDS = createCommonTag("shields");
+        public static final TagKey<Item> HORNS = createTag("horns");
 
         private static TagKey<Item> createCommonTag(String name) {
             return TagKey.of(Registry.ITEM_KEY, new Identifier("c", name));
+        }
+
+        private static TagKey<Item> createTag(String name) {
+            return TagKey.of(Registry.ITEM_KEY, new Identifier(MoreWeaponry.MOD_ID, name));
         }
     }
 
