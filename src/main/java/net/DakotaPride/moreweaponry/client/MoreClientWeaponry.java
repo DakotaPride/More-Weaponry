@@ -107,6 +107,8 @@ public class MoreClientWeaponry implements ClientModInitializer {
         GeoArmorRenderer.registerArmorRenderer(new BlueHornsRenderer(), MoreWeaponry.BLUE_HORNS);
         GeoArmorRenderer.registerArmorRenderer(new PurpleHornsRenderer(), MoreWeaponry.PURPLE_HORNS);
         GeoArmorRenderer.registerArmorRenderer(new PinkHornsRenderer(), MoreWeaponry.PINK_HORNS);
+        GeoArmorRenderer.registerArmorRenderer(new BlackHornsRenderer(), MoreWeaponry.BLACK_HORNS);
+        GeoArmorRenderer.registerArmorRenderer(new WhiteHornsRenderer(), MoreWeaponry.WHITE_HORNS);
         GeoArmorRenderer.registerArmorRenderer(new NonBinaryHornsRenderer(), MoreWeaponry.NONBINARY_HORNS);
         GeoArmorRenderer.registerArmorRenderer(new TransgenderHornsRenderer(), MoreWeaponry.TRANS_HORNS);
 

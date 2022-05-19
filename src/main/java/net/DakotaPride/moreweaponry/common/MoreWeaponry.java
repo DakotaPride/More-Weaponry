@@ -59,6 +59,8 @@ import net.DakotaPride.moreweaponry.common.world.gen.MoreWeaponryWorldGen;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.loot.v1.FabricLootPoolBuilder;
+import net.fabricmc.fabric.api.loot.v1.event.LootTableLoadingCallback;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
@@ -80,6 +82,11 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.fluid.FlowableFluid;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.*;
+import net.minecraft.loot.condition.RandomChanceLootCondition;
+import net.minecraft.loot.entry.ItemEntry;
+import net.minecraft.loot.function.SetCountLootFunction;
+import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
+import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.particle.DefaultParticleType;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.Potions;
@@ -901,6 +908,12 @@ public class MoreWeaponry implements ModInitializer {
 	public static GreenHornsItem GREEN_HORNS;
 	public static PurpleHornsItem PURPLE_HORNS;
 	public static PinkHornsItem PINK_HORNS;
+	public static BlackHornsItem BLACK_HORNS;
+	public static WhiteHornsItem WHITE_HORNS;
+
+	// Horns Loot Table(s)
+	private static final Identifier DESERT_PYRAMID_CHEST_ID
+			= new Identifier("minecraft", "chests/desert_pyramid");
 
 
 	@Override
@@ -913,6 +926,16 @@ public class MoreWeaponry implements ModInitializer {
 
 		}
 	*/
+		LootTableLoadingCallback.EVENT.register(((resourceManager, manager, id, supplier, setter) -> {
+					if (DESERT_PYRAMID_CHEST_ID.equals(id)) {
+						FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
+								.rolls(ConstantLootNumberProvider.create(1))
+								.conditionally(RandomChanceLootCondition.builder(1f))
+								.with(ItemEntry.builder(COSMETIC_HORNS))
+								.withFunction(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+						supplier.withPool(poolBuilder.build());
+					}
+				}));
 
 			// Pride Month Celebration
 			RAINBOW_HORNS = registerItem("rainbow_horns",
@@ -948,6 +971,12 @@ public class MoreWeaponry implements ModInitializer {
 						new FabricItemSettings()));
 		PINK_HORNS = registerItem("pink_horns",
 				new PinkHornsItem(ArmorMaterials.LEATHER, EquipmentSlot.HEAD,
+						new FabricItemSettings()));
+		BLACK_HORNS = registerItem("black_horns",
+				new BlackHornsItem(ArmorMaterials.LEATHER, EquipmentSlot.HEAD,
+						new FabricItemSettings()));
+		WHITE_HORNS = registerItem("white_horns",
+				new WhiteHornsItem(ArmorMaterials.LEATHER, EquipmentSlot.HEAD,
 						new FabricItemSettings()));
 
 
