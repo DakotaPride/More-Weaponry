@@ -4,9 +4,7 @@ import net.DakotaPride.moreweaponry.client.render.MoreWeaponryEntityRegistry;
 import net.DakotaPride.moreweaponry.client.render.armor.*;
 import net.DakotaPride.moreweaponry.client.render.armor.horns.*;
 import net.DakotaPride.moreweaponry.client.render.armor.horns.colours.*;
-import net.DakotaPride.moreweaponry.client.render.armor.horns.pride.NonBinaryHornsRenderer;
-import net.DakotaPride.moreweaponry.client.render.armor.horns.pride.RainbowHornsRenderer;
-import net.DakotaPride.moreweaponry.client.render.armor.horns.pride.TransgenderHornsRenderer;
+import net.DakotaPride.moreweaponry.client.render.armor.horns.pride.*;
 import net.DakotaPride.moreweaponry.client.render.renderer.IronBoltEntityRenderer;
 import net.DakotaPride.moreweaponry.common.MoreWeaponry;
 import net.DakotaPride.moreweaponry.common.block.entity.CirtictForgeEntity;
@@ -111,6 +109,8 @@ public class MoreClientWeaponry implements ClientModInitializer {
         GeoArmorRenderer.registerArmorRenderer(new WhiteHornsRenderer(), MoreWeaponry.WHITE_HORNS);
         GeoArmorRenderer.registerArmorRenderer(new NonBinaryHornsRenderer(), MoreWeaponry.NONBINARY_HORNS);
         GeoArmorRenderer.registerArmorRenderer(new TransgenderHornsRenderer(), MoreWeaponry.TRANS_HORNS);
+        GeoArmorRenderer.registerArmorRenderer(new BisexualHornsRenderer(), MoreWeaponry.BI_HORNS);
+        GeoArmorRenderer.registerArmorRenderer(new PansexualHornsRenderer(), MoreWeaponry.PAN_HORNS);
 
     }
 }
