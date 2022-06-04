@@ -451,6 +451,7 @@ public class MoreWeaponry implements ModInitializer {
 	public static SpawnEggItem WATCHER_SPAWN_EGG;
 	public static SpawnEggItem BARD_SPAWN_EGG;
 	public static SpawnEggItem SICKENED_SPAWN_EGG;
+	public static SpawnEggItem SICKENED_HUSK_SPAWN_EGG;
 	public static SpawnEggItem LURKER_SPAWN_EGG;
 	public static SpawnEggItem WANDERER_SPAWN_EGG;
 	public static SpawnEggItem CRACKLER_SPAWN_EGG;
@@ -1993,7 +1994,7 @@ public class MoreWeaponry implements ModInitializer {
 		NECROMANCER_SPAWN_EGG = registerItem("necromancer_spawn_egg",
 				new SpawnEggItem(NECROMANCER_ENTITY, 0x435B5B, 0x7EADAD,
 						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
-		CRAWLER_SPAWN_EGG = registerItem("watcher_spawn_egg",
+		WATCHER_SPAWN_EGG = registerItem("watcher_spawn_egg",
 				new SpawnEggItem(WATCHER_ENTITY, 0xC938FF, 0x420059,
 						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 		CRACKLER_SPAWN_EGG = registerItem("crackler_spawn_egg",
@@ -2002,10 +2003,19 @@ public class MoreWeaponry implements ModInitializer {
 		BARD_SPAWN_EGG = registerItem("bard_spawn_egg",
 				new SpawnEggItem(BARD_ENTITY, 0xF2F2F2, 0x7A7EDB,
 						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+		LEECH_SPAWN_EGG = registerItem("leech_spawn_egg",
+				new SpawnEggItem(LEECH_ENTITY, 0xEAFFCC, 0xD4F2A7,
+						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+		LURKER_SPAWN_EGG = registerItem("lurker_spawn_egg",
+				new SpawnEggItem(LURKER_ENTITY, 0xD4F2A7, 0x32223A,
+						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+		SICKENED_HUSK_SPAWN_EGG = registerItem("sickened_husk_spawn_egg",
+				new SpawnEggItem(SICKENED_HUSK_ENTITY, 0xCEB686, 0x8C7A62,
+						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 		WANDERER_SPAWN_EGG = registerItem("wanderer_spawn_egg",
 				new SpawnEggItem(WANDERER_ENTITY, 0x4C4138, 0x302924,
 						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
-		CRAWLER_SPAWN_EGG = registerItem("sickened_spawn_egg",
+		SICKENED_SPAWN_EGG = registerItem("sickened_spawn_egg",
 				new SpawnEggItem(SICKENED_ENTITY, 0x447C3D, 0x335B2C,
 						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 		WANDERER_HELMET = registerItem("wanderer_helmet",

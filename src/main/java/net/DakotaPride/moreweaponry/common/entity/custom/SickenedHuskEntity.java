@@ -45,7 +45,7 @@ public class SickenedHuskEntity extends AbstractHostileEntity implements IAnimat
     }
 
     public boolean damage(DamageSource source, float amount) {
-        if (source.getAttacker() != null && !source.isProjectile() && source.getAttacker() instanceof LivingEntity) {
+        if (source.getAttacker() != null && source.isProjectile() && source.getAttacker() instanceof LivingEntity) {
             LivingEntity attacker = (LivingEntity) source.getAttacker();
             attacker.addStatusEffect(new StatusEffectInstance(MoreWeaponry.PLAGUED, 100), this);
         }

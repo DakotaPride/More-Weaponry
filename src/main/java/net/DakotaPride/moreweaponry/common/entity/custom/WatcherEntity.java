@@ -163,7 +163,7 @@ public class WatcherEntity extends AbstractHostileEntity implements IAnimatable 
     }
 
     public boolean damage(DamageSource source, float amount) {
-        if (source.getAttacker() != null && !source.isProjectile() && source.getAttacker() instanceof LivingEntity) {
+        if (source.getAttacker() != null && source.isProjectile() && source.getAttacker() instanceof LivingEntity) {
             LivingEntity attacker = (LivingEntity) source.getAttacker();
             attacker.addStatusEffect(new StatusEffectInstance(MoreWeaponry.TICKED, 100), this);
         }

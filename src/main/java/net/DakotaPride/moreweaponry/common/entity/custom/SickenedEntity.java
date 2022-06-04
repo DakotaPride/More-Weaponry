@@ -49,7 +49,7 @@ public class SickenedEntity extends AbstractHostileEntity implements IAnimatable
     }
 
     public boolean damage(DamageSource source, float amount) {
-        if (source.getAttacker() != null && !source.isProjectile() && source.getAttacker() instanceof LivingEntity) {
+        if (source.getAttacker() != null && source.isProjectile() && source.getAttacker() instanceof LivingEntity) {
             LivingEntity attacker = (LivingEntity) source.getAttacker();
             attacker.damage(MoreWeaponryDamageSource.CELESTIALITE, 0.0F);
             attacker.addStatusEffect(new StatusEffectInstance(MoreWeaponry.PLAGUED, 100), this);
