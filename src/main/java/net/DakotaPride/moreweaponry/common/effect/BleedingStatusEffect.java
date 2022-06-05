@@ -9,19 +9,8 @@ public class BleedingStatusEffect extends StatusEffect {
         super(category, color);
     }
 
+    @Override
     public boolean canApplyUpdateEffect(int duration, int amplifier) {
-        int i;
-        if (this == MoreWeaponry.BLEEDING) {
-            i = 25 >> amplifier;
-            if (i > 0) {
-                return duration % i == 0;
-            } else {
-                return true;
-            }
-        } else {
-            return false;
-        }
+        return super.canApplyUpdateEffect(duration, amplifier);
     }
-
-
 }

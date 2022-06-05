@@ -63,10 +63,6 @@ public class StatusEffectMixin {
             }
         }
 
-        if (entity.hasStatusEffect(MoreWeaponry.BLEEDING)) {
-            entity.damage(MoreWeaponryDamageSource.BLEEDING, 0.4F);
-        }
-
         if (entity.hasStatusEffect(MoreWeaponry.WATCHER)) {
             entity.removeStatusEffect(StatusEffects.POISON);
             entity.removeStatusEffect(StatusEffects.BLINDNESS);

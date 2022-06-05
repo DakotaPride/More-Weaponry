@@ -7,12 +7,16 @@ import net.DakotaPride.moreweaponry.common.entity.damage.MoreWeaponryDamageSourc
 import net.DakotaPride.moreweaponry.common.item.items.HeavyCrossBowItem;
 import net.DakotaPride.moreweaponry.common.item.items.HeavySwordItem;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.util.math.MathHelper;
+import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -20,17 +24,27 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+import java.util.Objects;
+
 
 @Mixin(LivingEntity.class)
-public abstract class LivingEntityMixin implements ILivingEntityMixin {
+public abstract class LivingEntityMixin extends Entity implements ILivingEntityMixin {
+    public LivingEntityMixin(EntityType<?> type, World world) {
+        super(type, world);
+    }
 
     @Shadow public abstract boolean addStatusEffect(StatusEffectInstance effect);
 
+    @Shadow
+    @Nullable public abstract StatusEffectInstance getStatusEffect(StatusEffect effect);
+
     @Shadow public abstract boolean removeStatusEffect(StatusEffect type);
+
+    @Shadow public abstract boolean hasStatusEffect(StatusEffect effect);
 
     @Shadow public abstract boolean addStatusEffect(StatusEffectInstance effect, @Nullable Entity source);
 
-    @Inject(method = "getHandSwingDuration()I", at = @At("HEAD"), cancellable = true)
+    @Inject(method = "getHandSwingDuration()I", at = @At("HEAD"))
     private void getHandSwingDuration(CallbackInfoReturnable<Integer> info) {
         LivingEntity livingEntity = (LivingEntity) (Object) this;
         ItemStack itemStack = livingEntity.getMainHandStack();
@@ -61,6 +75,13 @@ public abstract class LivingEntityMixin implements ILivingEntityMixin {
             removeStatusEffect(MoreWeaponry.WEBBED);
         } if (livingEntity.getOffHandStack().isOf(MoreWeaponry.POWERED_SICKENED_HUSK_MOB_CORE)) {
             removeStatusEffect(MoreWeaponry.PLAGUED);
+        }
+
+        if (this.hasStatusEffect(MoreWeaponry.BLEEDING) && (this.age % (20 /
+                (MathHelper.clamp(Objects.requireNonNull(this.getStatusEffect
+                        (MoreWeaponry.BLEEDING)).getAmplifier() + 1, 1, 20))) == 0)) {
+            this.damage(MoreWeaponryDamageSource.BLEEDING, 1);
+            this.timeUntilRegen = 0;
         }
 
 

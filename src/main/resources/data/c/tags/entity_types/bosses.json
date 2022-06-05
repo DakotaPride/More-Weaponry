@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "moreweaponry:watcher",
+    "moreweaponry:wanderer",
+    "moreweaponry:crackler",
+    "moreweaponry:bard",
+    "moreweaponry:sickened",
+    "moreweaponry:sickened_husk",
+    "moreweaponry:necromancer"
+  ]
+}
