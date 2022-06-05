@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench",
 	"textures": {
 		"0": "moreweaponry:entity/crackler/crackler",
-		"particle": "moreweaponry:block/crackler"
+		"particle": "moreweaponry:entity/crackler/crackler"
 	},
 	"elements": [
 		{

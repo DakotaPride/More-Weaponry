@@ -1,0 +1,5 @@
+# MW-#28
+# Sickened Husk Skull Doesn't Drop Itself
+
+# Loot Table File Missing
+- Will Be Fixed In Version v1.19.3
