@@ -1,0 +1,5 @@
+# MW-#27
+# Numbing Effect Causes LivingEntity To Not Deal Damage
+
+# Similar Cause/Case Of MW-#26
+- Will Be Fixed In Version v1.19.3
