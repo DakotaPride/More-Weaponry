@@ -4,7 +4,8 @@
 - Black Horns (Tooltip) Lang Error // (MW-#06)
     Details: "Colour: [Black]", mistakenly, shows as the colour cyan
 - Bleeding Effect Causes Target To Instantly Kill The Attacker // (MW-#07-A)
-    Details: Replicated (originally) by attacking a slime (of any size that can deal damage) with any weapon/tool that can have the bleeding enchantment applied, which then applies the Bleeding effect to the opponent.
+    Details: Replicated (originally) by attacking a slime (of any size that can deal damage) with any weapon/tool that can have the bleeding enchantment applied,
+             which then applies the Bleeding effect to the opponent.
     More Details: After fixing this issue, I came across a side effect of it.
         - Bleeding Effect Causes Target To Not Be Able To Deal Damage (was not the intention) // (MW-#07-B)
 - Numbing Effect Had Similar Issue To (MW-#07-B) // (MW-#08)
