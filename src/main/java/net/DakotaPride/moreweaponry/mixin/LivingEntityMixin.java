@@ -72,7 +72,7 @@ public abstract class LivingEntityMixin extends Entity implements ILivingEntityM
         }
 
         if (this.hasStatusEffect(MoreWeaponry.BLEEDING)) {
-            this.damage(MoreWeaponryDamageSource.BLEEDING, 0.4F);
+            this.damage(MoreWeaponryDamageSource.BLEEDING, 0.6F);
         }
 
         if (itemStack.getItem() instanceof HeavyCrossBowItem) {
