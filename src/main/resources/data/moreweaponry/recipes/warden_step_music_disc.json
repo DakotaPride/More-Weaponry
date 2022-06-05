@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "A#A",
+    "#X#",
+    "A#A"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:echo_shard"
+    },
+    "X": {
+      "tag": "minecraft:music_discs"
+    },
+    "A": {
+      "item": "moreweaponry:forgotten_music_sheet"
+    }
+  },
+  "result": {
+    "item": "moreweaponry:wardens_step_music_disc"
+  }
+}

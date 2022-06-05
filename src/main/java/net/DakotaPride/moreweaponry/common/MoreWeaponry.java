@@ -2087,6 +2087,8 @@ public class MoreWeaponry implements ModInitializer {
 				new CracklerCelestialMedallionItem(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 		CELESTIALITE_REMNANT = registerItem("celestialite_remnant",
 				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+		FORGOTTEN_MUSIC_SHEET = registerItem("forgotten_music_sheet",
+				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 
 
 		// Sound Events
