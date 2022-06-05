@@ -15,7 +15,6 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
-import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
@@ -23,8 +22,6 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-
-import java.util.Objects;
 
 
 @Mixin(LivingEntity.class)
@@ -34,9 +31,6 @@ public abstract class LivingEntityMixin extends Entity implements ILivingEntityM
     }
 
     @Shadow public abstract boolean addStatusEffect(StatusEffectInstance effect);
-
-    @Shadow
-    @Nullable public abstract StatusEffectInstance getStatusEffect(StatusEffect effect);
 
     @Shadow public abstract boolean removeStatusEffect(StatusEffect type);
 
@@ -77,13 +71,9 @@ public abstract class LivingEntityMixin extends Entity implements ILivingEntityM
             removeStatusEffect(MoreWeaponry.PLAGUED);
         }
 
-        if (this.hasStatusEffect(MoreWeaponry.BLEEDING) && (this.age % (20 /
-                (MathHelper.clamp(Objects.requireNonNull(this.getStatusEffect
-                        (MoreWeaponry.BLEEDING)).getAmplifier() + 1, 1, 20))) == 0)) {
-            this.damage(MoreWeaponryDamageSource.BLEEDING, 1);
-            this.timeUntilRegen = 0;
+        if (this.hasStatusEffect(MoreWeaponry.BLEEDING)) {
+            this.damage(MoreWeaponryDamageSource.BLEEDING, 0.4F);
         }
-
 
         if (itemStack.getItem() instanceof HeavyCrossBowItem) {
             if (!livingEntity.getOffHandStack().isEmpty()) {
