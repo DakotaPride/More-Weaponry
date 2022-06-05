@@ -1,0 +1,6 @@
+# MW-#08
+# More Weaponry Enchants Caused Crash Suddenly
+
+# Whenever A Non-Player Entity Would Spawn With A More Weaponry Enchantment, The Game Would Crash
+
+- Fixed In Version v1.13.0 (release)

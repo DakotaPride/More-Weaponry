@@ -1,0 +1,5 @@
+# MW-#24
+# Powered Wanderer Core Recipe Not Wokring
+
+# Recipe Required Invalid Item
+- Fixed In Version v1.19

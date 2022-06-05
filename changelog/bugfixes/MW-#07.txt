@@ -1,0 +1,6 @@
+# MW-#07
+# Phantom Doesn't Drop Modded Loot Tables
+
+# Phantom Didn't Drop Phantom Scales or Phantom Essence
+
+- Fixed In v1.12.67

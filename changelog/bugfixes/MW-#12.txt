@@ -1,0 +1,498 @@
+# MW-#01
+# Nitris Tree Spawning Everywhere
+
+# Nitris Tree Generation (No Longer Supported)
+
+- This was the originally intended feature, though was planned to generate in cold biomes in a future release. // v1.15.0
+- Nitris Wood then was entirely removed/replaced by Frodon Wood in a later release. // v1.15.0
+
+# Github Issue Report:
+
+I'm playing on minecraft 1.18 fabric, and nitris tress are spawning far too frequently.
+Any biome that allows trees is coated in them. I am playing with "Terralith" and "Biome Makeover",
+they may be contributing to this. My modlist is attached below.
+
+// Mods List
+
+actuallyusefulsmithingtable: Actually Useful Smithing Table [Fabric] 0.0.1-1.18.x
+additionaladditions: Additional Additions 3.0.1
+additionalbars: Additional Bars 2.2.1
+advancedgolems: Advanced Golems 1.18.1-1.0.0
+advancednetherite: Advanced Netherite 1.4.0-1.18.1
+advancementplaques: Advancement Plaques 1.4.4
+adventurez: AdventureZ 1.4.7
+ambientenvironment: Ambient Environment 7.0+17
+amecsapi: Amecs API 1.3.3+mc1.18-pre1
+amethystequipment: Amethyst Equipment 1.18.1
+amphitritecoffer: Amphitrite Coffer 1.1.1
+animal_feeding_trough: Animal Feeding Trough 1.0.3+1.18.1
+animatica: Animatica 0.3+1.18
+appleskin: AppleSkin 2.3.0+mc1.18.1
+arcanus: Arcanus 1.27
+architectury: Architectury 3.6.17
+armorsoundtweak: Armor Sound Tweak 5.0.0
+attributefix: AttributeFix 13.0.5
+awesome_plates: Awesome Plates 1.0.2+1.18.1
+awesomedungeon: Awesome Dungeon 2.0.4
+awesomedungeonnether: Awesome Dungeon Edition Nether 1.0.0
+awesomedungeonocean: Awesome Dungeon Edition Ocean 2.0.5
+awesomeflooring: Awesome Flooring 1.0.10
+axesareweapons: Axes Are Weapons 1.5.1
+axolotlitemfix: Axolotl Item Fix 1.1.3
+backslot: BackSlot 1.2.5
+backslotaddon: BackSlot Addon 1.0.8
+balm-fabric: Balm 2.4.1+0
+basicshields: Basic Shields [Fabric] 1.2.1-1.18.1
+bclib: BCLib 1.2.5
+beaconoverhaul: Beacon Overhaul 1.5.0+1.18
+bedbenefitsfabric: Bed Benefits 1.18-0.1.0
+better_withered_mobs: Better Withered Mobs 1.7.0
+betteranimalsplus: Better Animals Plus 1.18.1-11.0.4
+betterazalea: Better Azalea 1.0.1-SNAPSHOT
+betterend: Better End 1.0.1
+betternether: Better Nether 6.0.9
+betterthanmending: BetterThanMending 1.3.0
+betterthirdperson: Better Third Person 1.6.0
+biomemakeover: Biome Makeover 1.18.1-1.4.6
+blastingsand: BlastingSand 1.18.1
+blossom: Blossom 1.18.1-1.0.2
+blue_endless_jankson: jankson 1.2.1
+blur: Blur (Fabric) 2.4.1
+bno: Basic Nether Ores 1.18.1-7.1.2-Fabric
+boneequipment: Bone Equipment 1.18.1
+bosses_of_mass_destruction: Bosses of Mass Destruction (Beta) 1.3.4-1.18
+bottledair-fabric: Bottled Air (Fabric) 1.0
+brb: Better Recipe Book 1.5.6
+buriedbarrels: Buried Barrels 1.0.3.1
+caffeineconfig: CaffeineConfig 1.0.0
+cakechomps: Cake Chomps 1.4.0-1.18
+candlestick: Candlestick 1.1.2
+cardinal-components: Cardinal Components API 4.1.2
+cardinal-components-base: Cardinal Components API (base) 4.1.2
+cardinal-components-block: Cardinal Components API (blocks) 4.1.2
+cardinal-components-chunk: Cardinal Components API (chunks) 4.1.2
+cardinal-components-entity: Cardinal Components API (entities) 4.1.2
+cardinal-components-item: Cardinal Components API (items) 4.1.2
+cardinal-components-level: Cardinal Components API (world saves) 4.1.2
+cardinal-components-scoreboard: Cardinal Components API (scoreboard) 4.1.2
+cardinal-components-world: Cardinal Components API (worlds) 4.1.2
+cartoonishhorde: Cartoonish Horde Library 0.2.1-1.18
+castle_dungeons: Castle Dungeons 3.2-1.18-fabric
+cauldron_dyeing: Cauldron Dyeing 1.0.0+1.18.1
+cauldronlib: Cauldronlib 1.2.2
+cauldrons: Cauldrons 1.2.0
+cavetweaks: Cave Tweaks 1.0
+chalk: Chalk 1.2.1
+chat_heads: Chat Heads 0.6.0
+cleancut: CleanCut 1.18-4.0-fabric
+cleardespawn: Clear Despawn 1.1.6
+clickadv: Clickable Advancements Mod 2.3
+cloth-api: Cloth API 3.1.61
+cloth-basic-math: cloth-basic-math 0.6.0
+cloth-client-events-v0: Cloth Client Events v0 3.1.61
+cloth-common-events-v1: Cloth Common Events v1 3.1.61
+cloth-config: Cloth Config v6 6.2.57
+cloth-datagen-api-v1: Cloth Datagen v1 3.1.61
+cloth-scissors-api-v1: Cloth Scissors API v1 3.1.61
+cloth-utils-v1: Cloth Utils v1 3.1.61
+clumps: Clumps 8.0.0+5
+coat: Coat 1.0.0-beta.15
+cobbled_paths: Cobbled Paths 0.1.4
+collective-fabric: Collective (Fabric) 4.4
+com_electronwill_night-config_core: core 3.6.5
+com_electronwill_night-config_toml: toml 3.6.5
+com_eliotlash_mclib_mclib: mclib 18
+com_eliotlash_molang_molang: molang 18
+com_moandjiezana_toml_toml4j: toml4j 0.7.2
+com_velocitypowered_velocity-native: velocity-native 1.1.0-SNAPSHOT
+comforts: Comforts 1.0.2-1.18.1
+companion_bats: Companion Bats 1.18.7
+completeconfig: CompleteConfig 1.3.0
+compostable-rottenflesh: Compostable Rotten Flesh 1.0.0
+conjuring: Conjuring 1.0.20+1.18
+connectiblechains: Connectible Chains 2.0.1+1.18.1
+cool_elytra: Cool Elytra 1.3.1
+coolershields: Cooler Shields 2.4.0
+copper_pipe: Simple Copper Pipes r1.7
+copperarmorandtools: Copper Armor & Tools 1.9.2
+copperhopper: Copper Hopper 0.0.5+1.18.1
+corners: The Corners 1.1.5
+craftabletotemofundying: Craftable Totem Of Undying 1.18.1-1.5.0-[FABRIC]
+crawl: Crawl 0.10.2
+creeperaiupdated: Creeper AI Updated 1.5.1
+creeperoverhaul: Creeper Overhaul 0.3.0
+crimsonmoon: Crimson Moon 2.1.1-1.18.1
+crookedcrooks: Crooked Crooks 2.0.1+1.18.1
+crops_love_rain: Crops Love Rain 1.1.0
+crosshairmod: Crosshair Mod 0.4.3
+cryingghasts-fabric: Crying Ghasts (Fabric) 1.4
+customfence_fabric: Customfence 1-18-1
+customportalapi: Custom Portal Api 0.0.1-beta49-1.18
+customportals: Custom Portals 3.0.0
+customspawns: Custom Spawns 0.6+1.18
+damagetilt: Damage Tilt 1.18-fabric-0.1.2
+dark-enchanting: Dark Enchanting 0.6.3+1.18
+dawn: Dawn API 3.2.0
+decapitation: Decapitation 2.0.0
+detailab: Detail Armor Bar 2.6.1+1.18-fabric
+diamond_nuggets: Diamond Nuggets 1.3
+dont-run-with-scissors: Don't Run With Scissors 1.1-1.18
+dontburnmystuff: Don't Burn My Stuff 1.3.0-1.18.1
+doubledoors-fabric: Double Doors (Fabric) 3.1
+dracomelette: Dracomelette 1.18-1
+dragonloot: DragonLoot 1.0.10
+drinkbeer: Drink Beer 3.0.2
+dual_riders: DualRiders 1.0.5
+dualwielding: Dual Wielding 1.0.7
+dummmmmmy: MmmMmmMmmMmm 1.18-1.5.0
+dungeons_arise: When Dungeons Arise 2.1.49d-fabric
+dusk: Dusk Mod 1.18-1.7
+dynamicfps: Dynamic FPS 2.1.0
+dynamicsoundfilters: Dynamic Sound Filters 1.3.0+1.18
+dynmus: Dynamic Music 1.4.1
+dynview: Dynamic View Mod 1.18-1.5
+early_buckets: Early-Game Buckets 2.0.0+1.18
+earthbounds: Earthbounds 1.0.4a
+easymagic: Easy Magic 3.2.1
+eatinganimationid: Eating Animation 1.2
+effective: Effective 1.1
+elementalcreepers: Elemental Creepers: Refabricated 1.4.1+1.18.1
+elementalswords: Elemental Swords 1.18.1-1.5.0-[FABRIC]
+emojitype: Emoji Type 1.0.3
+enchant_the_rainbow: Enchant the Rainbow 1.0.0
+enchantinginfuser: Enchanting Infuser 3.1.1
+enchdesc: EnchantmentDescriptions 9.0.13
+endgoblintraders: End Goblin Traders 1.4.2
+extendedbonemeal-fabric: Extended Bone Meal (Fabric) 1.4
+extraalchemy: Extra Alchemy 1.7.0
+extractpoison-fabric: Extract Poison (Fabric) 1.6
+fabric: Fabric API 0.46.4+1.18
+fabric-api-base: Fabric API Base 0.4.2+d7c144a865
+fabric-api-lookup-api-v1: Fabric API Lookup API (v1) 1.5.3+d7c144a865
+fabric-biome-api-v1: Fabric Biome API (v1) 6.0.2+d7c144a865
+fabric-blockrenderlayer-v1: Fabric BlockRenderLayer Registration (v1) 1.1.10+3ac43d9565
+fabric-command-api-v1: Fabric Command API (v1) 1.1.7+d7c144a865
+fabric-commands-v0: Fabric Commands (v0) 0.2.6+b4f4f6cd65
+fabric-containers-v0: Fabric Containers (v0) 0.1.19+d7c144a865
+fabric-content-registries-v0: Fabric Content Registries (v0) 0.4.8+d7c144a865
+fabric-copper-golem: Copper Golem 1.0.3+1.18
+fabric-crash-report-info-v1: Fabric Crash Report Info (v1) 0.1.9+3ac43d9565
+fabric-dimensions-v1: Fabric Dimensions API (v1) 2.1.10+a1d9bbf565
+fabric-entity-events-v1: Fabric Entity Events (v1) 1.4.6+d7c144a865
+fabric-events-interaction-v0: Fabric Events Interaction (v0) 0.4.17+d7c144a865
+fabric-events-lifecycle-v0: Fabric Events Lifecycle (v0) 0.2.9+d7c144a865
+fabric-furnaces: Fabric Furnaces 2.1.0-1.18.1
+fabric-game-rule-api-v1: Fabric Game Rule API (v1) 1.0.11+d7c144a865
+fabric-item-api-v1: Fabric Item API (v1) 1.3.1+691a79b565
+fabric-item-groups-v0: Fabric Item Groups (v0) 0.3.6+3ac43d9565
+fabric-key-binding-api-v1: Fabric Key Binding API (v1) 1.0.9+d7c144a865
+fabric-keybindings-v0: Fabric Key Bindings (v0) 0.2.7+b4f4f6cd65
+fabric-language-kotlin: Fabric Language Kotlin 1.7.1+kotlin.1.6.10
+fabric-lifecycle-events-v1: Fabric Lifecycle Events (v1) 1.4.13+713c266865
+fabric-loot-tables-v1: Fabric Loot Tables (v1) 1.0.9+d7c144a865
+fabric-mining-level-api-v1: Fabric Mining Level API (v1) 1.0.6+d7c144a865
+fabric-mining-levels-v0: Fabric Mining Levels (v0) 0.1.11+b4f4f6cd65
+fabric-models-v0: Fabric Models (v0) 0.3.4+d7c144a865
+fabric-networking-api-v1: Fabric Networking API (v1) 1.0.19+d7c144a865
+fabric-networking-v0: Fabric Networking (v0) 0.3.6+b4f4f6cd65
+fabric-object-builder-api-v1: Fabric Object Builder API (v1) 1.11.4+d7c144a865
+fabric-object-builders-v0: Fabric Object Builders (v0) 0.7.12+d7c144a865
+fabric-particles-v1: Fabric Particles (v1) 0.2.10+526dc1ac65
+fabric-permissions-api-v0: fabric-permissions-api 0.1-SNAPSHOT
+fabric-registry-sync-v0: Fabric Registry Sync (v0) 0.9.2+ad01bfbd65
+fabric-renderer-api-v1: Fabric Renderer API (v1) 0.4.11+b0b66fc365
+fabric-renderer-indigo: Fabric Renderer - Indigo 0.4.15+6825030165
+fabric-renderer-registries-v1: Fabric Renderer Registries (v1) 3.2.10+b4f4f6cd65
+fabric-rendering-data-attachment-v1: Fabric Rendering Data Attachment (v1) 0.3.5+d7c144a865
+fabric-rendering-fluids-v1: Fabric Rendering Fluids (v1) 0.1.19+3ac43d9565
+fabric-rendering-v0: Fabric Rendering (v0) 1.1.12+b4f4f6cd65
+fabric-rendering-v1: Fabric Rendering (v1) 1.10.6+713c266865
+fabric-resource-conditions-api-v1: Fabric Resource Conditions API (v1) 1.0.2+d7c144a865
+fabric-resource-loader-v0: Fabric Resource Loader (v0) 0.4.14+713c266865
+fabric-screen-api-v1: Fabric Screen API (v1) 1.0.8+d7c144a865
+fabric-screen-handler-api-v1: Fabric Screen Handler API (v1) 1.1.12+d7c144a865
+fabric-structure-api-v1: Fabric Structure API (v1) 2.1.3+d7c144a865
+fabric-tag-extensions-v0: Fabric Tag Extensions (v0) 1.2.8+d7c144a865
+fabric-textures-v0: Fabric Textures (v0) 1.0.10+3ac43d9565
+fabric-tool-attribute-api-v1: Fabric Tool Attribute API (v1) 1.3.8+fb3b57b465
+fabric-transfer-api-v1: Fabric Transfer API (v1) 1.5.9+d7c144a865
+fabric-tree-chopper: Fabric Tree Chopper 0.8.4
+fabricenchantments: Fabric Enchantments 0.7.0
+fabricloader: Fabric Loader 0.13.2
+fabricshieldlib: Fabric Shield Lib 1.4.5-1.18
+fake-player-api: Fake Player API 0.3.0
+fallingleaves: Falling Leaves 1.9.0+1.18.1
+fancymenu: FancyMenu 2.6.2
+farsight: Farsight Mod 1.18-1.7
+farsighted-mobs: Farsighted Mobs 1.1-1.18
+fastbench: FastBench 1.18.1-3
+feature_nbt_deadlock_be_gone: Feature NBT Deadlock Be Gone - Fabric 1.0.1+1.18.1
+feyrune: Feyrune 0.3.12-1.18.1
+fiber: fiber 0.23.0-2
+fiber2cloth: Fiber To Cloth 3.2.0
+flamearrows: FlameArrows 1.18.1
+flesh2leather: Flesh2Leather 1.0.2
+floristmod: Florist's Mod fabric-1.18.1-v-2.0.0
+flytre_lib: FlytreLib 1.7.1
+forgeconfigapiport: Forge Config API Port 3.1.1
+forgivingvoid: Forgiving Void 6.0.1
+fortune-gives-experience: Fortune Gives Experience 1.1.0
+friendsandfoes: Friends&Foes 1.2.3
+fromtheshadows: From the shadows 1.5
+furnacerecycle-fabric: Furnace Recycle (Fabric) 1.0
+gameblocks: Gameblocks 0.1.0-beta+1.18.1
+geckolib3: Geckolib 3.0.32
+geodes: More Geodes 1.2.0
+gimme_bundles: Gimme bundles! 1.0.4
+glassdoor: Glass Doors 2.0.0-1.18
+go-fish: Go Fish 1.4.1-1.18.1
+goblintraders: Goblin Traders 1.5
+goldensteak: Goldensteak 1.0.5-1.18
+golemsgalore: Golems Galore 1.1.1-1.18
+goosik-config: goosik-config 0.2.0
+graveyard: The Graveyard 1.5
+guardvillagers: Guard Villagers Fabric 1.0.6
+guild: Guild 0.3.8
+haema: Haema 1.8.2+1.18.1
+heartytrinkets: Hearty Trinkets 1.18.1-1.0.0
+helpwanted: Help Wanted 1.1.4
+herdspanic: Herds Panic 1.0.4
+herobrickspoops: Herobrick's Poops! 1.2.5
+hologram-api: Hologram API 0.2.1+1.18-pre5
+hookshot: Hookshot 24.0
+hudtweaks: HUDTweaks 1.2.1-beta
+hudtweaks-apihelper: HUDTweaks API Helper 1.0-beta
+hungrypigs: HungryPigs 1.0.0
+huskdropsand: HuskDropSand 1.18.1
+iceberg: Iceberg 1.0.38
+illuminations: Illuminations 1.10.2
+impaled: Impaled 1.0.2
+improvedmobs: Improved Mobs 1.18.1-1.8.1
+incantationem: Incantationem 1.1.3+1.18.1
+inmis: Inmis 2.5.1-1.18.1
+interference: Interference API 1.3.0
+iris: Iris 1.2.0-pre
+itemborders: Item Borders 1.1.5
+jankson: Jankson 4.0.0+j1.2.0
+java: OpenJDK 64-Bit Server VM 17
+kirin: Kirin UI 1.10.0-beta.2
+konkrete: Konkrete 1.3.3
+krypton: Krypton 0.1.6
+lambdynlights: LambDynamicLights 2.1.0+1.17
+lazydfu: LazyDFU 0.1.2
+libcd: LibCapableData 3.0.3+1.16.3
+libgui: LibGui 5.2.0+1.18
+libninepatch: LibNinePatch 1.1.0
+libraryferret: Library Ferret 1.0.3
+limlib: Liminal Library 4.0.3
+lithium: Lithium 0.7.7
+llamarama: Llamarama 1.5.3
+lovely_snails: Lovely Snails 1.0.3+1.18
+maelstrom_library: Maelstrom Library 1.2.3-1.18-rc3
+magehand: Magehand 1.0.1
+mambience: MAmbience 4.0.3+1.18.1
+map_atlases: Map Atlases 1.3.2
+mcda: MC Dungeons Armors 2.0.1
+mcdar: MC Dungeons Artifacts 1.4.3-1.18
+mcdict: MCDict 2.1.0+1.17.1
+mcf-reap: MaxVar reap for fabric 1.7.1
+medievalmusic: Medieval Music Mod 1.18-1.3
+medievalweapons: Medieval Weapons 1.1.8
+megaparrot: Megaparrot 1.0.3
+midashunger: Midas Hunger 2.0.0+1.18.1
+midnightlib: MidnightLib 0.3.1
+mighty_mangoes: Mighty Mangoes 1.0.6
+minecarttweaks: Cammie's Minecart Tweaks 1.0
+minecraft: Minecraft 1.18.1
+mineralchance-fabric: Mineral Chance (Fabric) 1.6
+mm: Manningham Mills 2.3
+moblocks: Mo' Blocks 1.0.0-fabric
+mobs_attempt_parkour: Mobs Attempt Parkour 0.2.4-1.18
+mobz: MobZ 3.3.1
+modmenu: Mod Menu 3.0.1
+moremessages: MoreMessages 1.3.0
+moretags: More Tags 2.0.3
+moreweaponry: More Weaponry 1.14.0+1.18
+mostructures: Mo' Structures 1.3.0-pre1+1.18
+mousewheelie: Mouse Wheelie 1.8.0+mc1.18-pre5
+multipart_entities: MultipartEntities 1.1.4-1.18-rc3
+myron: Myron 1.6.2+1.18.1
+mythic-mounts: Mythic Mounts 1.18-4.0
+naturallychargedcreepers-fabric: Naturally Charged Creepers (Fabric) 1.7
+nbtcrafting: NBT Crafting 2.1.0+mc1.18-pre1
+nears: Nears 1.1.2
+netherite_nugget: Netherite Nuggets 1.4.0
+netherited: Netherited 1.2.0
+netherportalspread-fabric: Nether Portal Spread (Fabric) 5.6
+netherwardblock: Netherwardblock 1.18.1
+neutral_animals: Neutral Animals 1.2.0
+neutrino: Neutrino 0.6.7-PATCH
+no_null_processors: No Null Processors - Fabric 2.0.1+1.18.1
+noanglebrackets: NoAngleBrackets 1.1.0
+nohostilesaroundcampfire-fabric: No Hostiles Around Campfire (Fabric) 3.8
+notenoughanimations: NotEnoughAnimations 1.4.0
+numismatic-overhaul: Numismatic Overhaul 0.1.8+1.18
+observed: Observed 1.2.3-1.18
+obsidianequipment: Obsidian Equipment 1.18.1
+odysseyhud: OdysseyHUD fabric-1.18.1-2.0
+omega-config: OmegaConfig 1.2.3-1.18.1
+onsoulfire: On Soul Fire 1.18-1
+openloader: OpenLoader 11.0.4
+org_anarres_jcpp: jcpp 1.4.14
+org_aperlambda_lambdajcommon: lambdajcommon 1.8.1
+org_jetbrains_kotlin_kotlin-reflect: kotlin-reflect 1.6.10
+org_jetbrains_kotlin_kotlin-stdlib: kotlin-stdlib 1.6.10
+org_jetbrains_kotlin_kotlin-stdlib-jdk7: kotlin-stdlib-jdk7 1.6.10
+org_jetbrains_kotlin_kotlin-stdlib-jdk8: kotlin-stdlib-jdk8 1.6.10
+org_jetbrains_kotlinx_kotlinx-coroutines-core-jvm: kotlinx-coroutines-core-jvm 1.5.2
+org_jetbrains_kotlinx_kotlinx-coroutines-jdk8: kotlinx-coroutines-jdk8 1.5.2
+org_jetbrains_kotlinx_kotlinx-serialization-cbor-jvm: kotlinx-serialization-cbor-jvm 1.3.1
+org_jetbrains_kotlinx_kotlinx-serialization-core-jvm: kotlinx-serialization-core-jvm 1.3.1
+org_jetbrains_kotlinx_kotlinx-serialization-json-jvm: kotlinx-serialization-json-jvm 1.3.1
+org_joml_joml: joml 1.10.2
+org_slf4j_slf4j-api: slf4j-api 1.7.12
+oro_config: OroArmor Config 2.1.0
+ottercraft: Ottercraft 1.1.10
+owo: oωo 0.5.1+1.18
+oxidized: Oxidized 1.6.1
+oystersreborn: Oysters Reborn 1.1.0
+packet_tweaker: Packet Tweaker 0.2.0+1.18-pre1
+paperbooks-fabric: Paper Books (Fabric) 1.4
+patchouli: Patchouli 1.18.1-65-FABRIC
+patternedglass: Patterned Glass 2.0.1+1.18
+peepingcreepers: Peeping Creepers 1.2-1.18
+phosphor: Phosphor 0.8.1
+physicsmod: Physics Mod 2.6.7
+pickupnotifier: Pick Up Notifier 3.1.0
+pigsteel: Pigsteel Mod 1.7.1
+pirate: Pirates Life 1.0.2
+placeholder-api: Placeholder API 1.1.3+1.17.1
+pling: Pling 1.5.0
+polymer: Polymer (Core) 0.2.0-beta.24+1.18.1
+polymer-legacy: Polymer (Compatibility) 0.1.9+0.2.0-beta.24+1.18.1
+polymorph: Polymorph 0.0.19-1.18.1
+powershot: Powershot 1.4.0-1.18-fabric
+presencefootsteps: Presence Footsteps 1.4.0
+pride: Pride Lib 1.1.0+1.17
+pugh_lib: Pugh Lib 1.2.15
+puzzleslib: Puzzles Lib 3.1.3
+quicksand: Quicksand 1.0.3
+rainbegoneritual-fabric: Rain Be Gone Ritual (Fabric) 1.7
+rangers_haven: Ranger's Haven 2.3.1
+ratlab: RatLab 1.1
+ratsmischief: Rat's Mischief 1.3.4
+reach-entity-attributes: Reach Entity Attributes 2.1.1
+realisticfirespread: Realistic Fire Spread 1.18-1
+redbits: Red Bits 1.12.0
+reinfbarrel: Reinforced Barrels 2.0.0-beta.1+1.18
+reinfchest: Reinforced Chests 2.0.0-beta.1+1.18
+reinfcore: Reinforced Core 2.0.0-beta.1+1.18
+repurposed_structures: Repurposed Structures 3.3.11+1.18.1
+respawnablepets: Respawnable Pets 1.18-2
+revamped_phantoms: Revamped Phantoms 0.2.1
+rocks: This Rocks! 1.5.2
+roughlyenoughitems: Roughly Enough Items 7.2.425
+roughlyenoughresources: Roughly Enough Resources 2.4.1
+roughlysearchable: Roughly Searchable 2.3.0+1.18.1
+rust: Rust 1.0.1
+salem: Salem 1.1.3
+satin: Satin 1.7.2
+scaffoldingdropsnearby-fabric: Scaffolding Drops Nearby (Fabric) 1.5
+scf: Super Cobblestone Funnels 2.5
+schonkysheep: Chonky Sheep 3.0.0
+scoria: Scoria 1.0.0-1.18.1
+sculk_worm: Sculk Worm 0.1.5
+seasons: Fabric Seasons 1.18.1
+seedfix: Seed Fix 1.0.0
+server_translations_api: Server Translations API 1.4.8+1.18-pre1
+servercore: ServerCore 1.2.7-1.18.1
+sextant: Immersive Travel Overhaul 1.2
+sgui: sgui 1.0.0-rc6+1.18-pre5
+sihywtcamd: sihywtcamd 1.6+1.18
+skeletonhorsespawn-fabric: Skeleton Horse Spawn (Fabric) 1.9
+skinlayers: 3d Skin Layers 1.4.0
+skylorlib: SkyLib 1.1.1
+skyvillages: Sky Villages 1.0.1-1.18.1-fabric
+slime_mimic: Slime Mimic 0.0.2
+slimechunkf3: SlimeChunkF3 1.3
+smoothswapping: Smooth Swapping 0.4.4
+snowballsfreezemobs-fabric: Snowballs Freeze Mobs (Fabric) 1.5
+snowmercy: Snow Mercy 2.0.1
+sodium: Sodium 0.4.0-alpha6+build.14
+sodium-extra: Sodium Extra 0.3.9
+spectrum: Spectrum 1.2.8-1.18.1-midgame9
+spellbound: Spellbound 1.7.2
+spidersproducewebs-fabric: Spiders Produce Webs (Fabric) 1.5
+spruceui: SpruceUI 3.3.0+1.17
+stacc: Stacc 1.3.0
+staffofbuilding: Staff of Building 1.4.1-1.18.1
+starore: Star Ore 1.0.0
+static-content: Static Content 1.0.1-1.16.2
+staticdata: Static Data 1.1.2
+statues: Statues 1.1
+stoneholm: Stoneholm 1.4.2
+stormfest: Stormfest - Charged Music Disc 1.0.3
+structurized: Structurized 1.4.0+1.18
+subterrestrial: Subterrestrial 1.0.0
+taxfreelevels: Tax Free Levels 1.3
+tenshilib: TenshiLib 1.18.1-1.4.0b
+terraform-shapes-api-v1: Terraform Shapes API (v1) 2.1.0
+terralith: Terralith for Fabric 2.0.12
+the_bumblezone: The Bumblezone - Fabric 4.3.4+1.18.1
+the_extractinator: The Extractinator 1.0.3
+thonkutil: ThonkUtil 2.7.1+1.18
+thonkutil-base: ThonkUtil Base 1.5.1+31ad4eb1c8
+thonkutil-capes-v1: ThonkUtil Capes (v1) 1.2.2+befce073c8
+thonkutil-customization-v1: ThonkUtil Customization (v1) 1.0.3+526fd6e5c8
+thonkutil-legacy: ThonkUtil Legacy 1.0.9+6fa117f8c8
+thonkutil-modchecker-v1: ThonkUtil ModChecker (v1) 1.0.0+aebf7ba0c8
+thonkutil-potions-v0: ThonkUtil Potions (v0) 1.3.1+befce073c8
+thonkutil-trades-v1: ThonkUtil Trades (v1) 1.1.8+d77526a2c8
+tinyskeletons: Tiny Skeletons 3.1.0
+toolleveling: ToolLeveling+ 1.18.1 - 1.3.0
+toolstats: ToolStats 8.0.3
+totemmod: Wither Totems Mod 0.3.4-1.18-rc2
+totw_additions: Towers of the Wild: Additions 1.1.0
+towers_of_the_wild_reworked: Towers of the Wild: Reworked 2.1.1
+transportables: Transportables 1.1
+trinketofundying: Trinket of Undying 2.0.1-1.18
+trinkets: Trinkets 3.1.0
+trinketshulkerboxes: Trinket Shulker Boxes 2.0.1-1.18.1
+tuffdepth: Tuff Depth 1.18.1-1.0.0
+tweed4_annotated: tweed4_annotated 1.2.0
+tweed4_base: tweed4_base 1.3.1
+tweed4_data: tweed4_data 1.2.0
+tweed4_data_hjson: tweed4_data_hjson 1.1.0
+tweed4_tailor_coat: tweed4_tailor_coat 1.0.2
+tweed4_tailor_screen: tweed4_tailor_screen 1.0.2
+twigs: Twigs 1.1.2
+twm: The Wild Mod 0.5
+universal-graves: Universal Graves 2.0.0-rc.4+1.18.1
+universal_ores: Universal Ores 1.2.1
+vanityslots: Vanity Slots 1.1.1
+vdm: Villainous Difficulty Multipliers 1.1.1-1.18
+veinmining: Vein Mining 0.0.11-1.18
+victus: Victus 0.1.7+1.18
+villager-hats: Villager Hats Mod 1.3.1
+villagerdeathmessages-fabric: Villager Death Messages (Fabric) 2.2
+villagernames-fabric: Villager Names (Fabric) 3.5
+visuality: Visuality 0.4.1
+visualoverhaul: VisualOverhaul 4.0.0
+visualworkbench: Visual Workbench 3.1.0
+voidtotem: VoidTotem (Fabric) 1.18.1-1.1.2
+voidz: VoidZ 1.0.5
+wandering_collector: Wandering Collector 1.1.1+mc1.18.1
+wandering_trapper: Wandering Trapper 1.1.0
+waterdripsound: Drip Sounds 1.18-0.3.0
+weakerspiderwebs-fabric: Weaker Spiderwebs (Fabric) 2.0
+wfw: Warhammer Fantasy Weapons 0.1.4-1.18
+whats_that_slot: What's That Slot? 1.2.3+1.18.1
+whm: Wither Hoe Mod 1.3.4
+windchimes: Windchimes 1.2.0
+winterly: Winterly 0.5.0
+witherturnsskeletons: Wither turns Skeletons 1.1.0-1.18.0
+woodarmor: Wooden Armors (+ Stone Armor) 1.18.1
+world-data: World Data 1.0.1-1.18.1
+wthit: wthit 4.5.1
+xp_storage: XP Storage 1.4.3+1.18
+xtraarrows: Xtra Arrows 1.7.4

@@ -1,0 +1,568 @@
+# MW-#13
+# Crash Error Resulted From Custom Feature Renderer (Mixin)
+
+# HeadFeatureRendererMixin Causing Crash Upon Opening Game
+
+- Originally Intended Feature Was To Introduce A Custom Mob Head, Though It Did Not Go According To Plan. // v1.15.07
+- First Time Releasing The Bugfix, it was not fixed. The second time, it was fixed however. // v1.15.43
+
+# Github Issue Report (1)
+
+[13:42:16] [main/FATAL]: Failed to start the minecraft server
+java.lang.RuntimeException: Could not execute entrypoint stage 'main' due to errors, provided by 'moreweaponry'!
+        at net.fabricmc.loader.impl.entrypoint.EntrypointUtils.lambda$invoke0$0(EntrypointUtils.java:51) ~[fabric-loader-0.13.2.jar:?]
+        at net.fabricmc.loader.impl.util.ExceptionUtil.gatherExceptions(ExceptionUtil.java:33) ~[fabric-loader-0.13.2.jar:?]
+        at net.fabricmc.loader.impl.entrypoint.EntrypointUtils.invoke0(EntrypointUtils.java:49) ~[fabric-loader-0.13.2.jar:?]
+        at net.fabricmc.loader.impl.entrypoint.EntrypointUtils.invoke(EntrypointUtils.java:35) ~[fabric-loader-0.13.2.jar:?]
+        at net.fabricmc.loader.impl.game.minecraft.Hooks.startServer(Hooks.java:62) ~[fabric-loader-0.13.2.jar:?]
+        at net.minecraft.server.Main.main(Main.java:106) [server-intermediary.jar:?]
+        at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+        at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+        at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+        at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+        at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:416) [fabric-loader-0.13.2.jar:?]
+        at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:77) [fabric-loader-0.13.2.jar:?]
+        at net.fabricmc.loader.impl.launch.knot.KnotServer.main(KnotServer.java:23) [fabric-loader-0.13.2.jar:?]
+        at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+        at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+        at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+        at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+        at net.fabricmc.loader.impl.launch.server.FabricServerLauncher.main(FabricServerLauncher.java:66) [fabric-loader-0.13.2.jar:?]
+Caused by: java.lang.NoClassDefFoundError: net/fabricmc/fabric/api/blockrenderlayer/v1/BlockRenderLayerMap
+        at net.DakotaPride.moreweaponry.MoreWeaponry.onInitialize(MoreWeaponry.java:41) ~[moreweaponry-1.15.00+1.18.jar:?]
+        at net.fabricmc.loader.impl.entrypoint.EntrypointUtils.invoke0(EntrypointUtils.java:47) ~[fabric-loader-0.13.2.jar:?]
+        ... 15 more
+Caused by: java.lang.ClassNotFoundException: net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap
+        at jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[?:?]
+        at jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[?:?]
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[?:?]
+        at net.fabricmc.loader.impl.launch.knot.KnotClassLoader.loadClass(KnotClassLoader.java:158) ~[fabric-loader-0.13.2.jar:?]
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[?:?]
+        at net.DakotaPride.moreweaponry.MoreWeaponry.onInitialize(MoreWeaponry.java:41) ~[moreweaponry-1.15.00+1.18.jar:?]
+        at net.fabricmc.loader.impl.entrypoint.EntrypointUtils.invoke0(EntrypointUtils.java:47) ~[fabric-loader-0.13.2.jar:?]
+        ... 15 more
+
+# GitHub Issue Report (2)
+
+crash log doesnt generate, after updating i get the same error
+
+// Mods List
+
+Fabric Mods:
+		advanced_runtime_resource_pack: Runtime Resource Pack 0.3.10
+		advancednetherite: Advanced Netherite 1.4.0-1.18.1
+		apoli: Apoli 2.2.2
+		appleskin: AppleSkin 2.3.0+mc1.18.1
+		architectury: Architectury 3.7.20
+		artifacts: Artifacts 5.0.2+fabric
+		artifality: Artifality 0.5.5
+		attributefix: AttributeFix 13.0.5
+		backslot: BackSlot 1.2.5
+		blue_endless_jankson: jankson 1.2.1
+		bno: Basic Nether Ores 1.18.1-7.1.2-Fabric
+		byg: BYG 1.3.5.10
+		caffeineconfig: CaffeineConfig 1.0.0
+		calio: Calio 1.4.2
+		cardinal-components-base: Cardinal Components API (base) 4.0.0
+		cardinal-components-entity: Cardinal Components API (entities) 4.0.0
+		cloth-armor-api-v1: Cloth Armor API v1 1.5.47
+		cloth-basic-math: cloth-basic-math 0.6.0
+		cloth-common-events-v1: Cloth Common Events v1 1.5.47
+		cloth-config: Cloth Config v6 6.2.57
+		com_electronwill_night-config_core: core 3.6.4
+		com_electronwill_night-config_toml: toml 3.6.4
+		com_velocitypowered_velocity-native: velocity-native 1.1.0-SNAPSHOT
+		crowdin-translate: CrowdinTranslate 1.3+1.17
+		decorative_blocks: Decorative Blocks 2.0.4
+		drinkbeer: Drink Beer 3.0.2
+		expandability: ExpandAbility 5.0.0
+		extraorigins: Extra Origins 1.18-9
+		fabric: Fabric API 0.46.4+1.18
+		fabric-api-base: Fabric API Base 0.4.2+d7c144a865
+		fabric-api-lookup-api-v1: Fabric API Lookup API (v1) 1.5.3+d7c144a865
+		fabric-biome-api-v1: Fabric Biome API (v1) 6.0.2+d7c144a865
+		fabric-command-api-v1: Fabric Command API (v1) 1.1.7+d7c144a865
+		fabric-commands-v0: Fabric Commands (v0) 0.2.6+b4f4f6cd65
+		fabric-containers-v0: Fabric Containers (v0) 0.1.19+d7c144a865
+		fabric-content-registries-v0: Fabric Content Registries (v0) 0.4.8+d7c144a865
+		fabric-crash-report-info-v1: Fabric Crash Report Info (v1) 0.1.9+3ac43d9565
+		fabric-dimensions-v1: Fabric Dimensions API (v1) 2.1.10+a1d9bbf565
+		fabric-entity-events-v1: Fabric Entity Events (v1) 1.4.6+d7c144a865
+		fabric-events-interaction-v0: Fabric Events Interaction (v0) 0.4.17+d7c144a865
+		fabric-events-lifecycle-v0: Fabric Events Lifecycle (v0) 0.2.9+d7c144a865
+		fabric-game-rule-api-v1: Fabric Game Rule API (v1) 1.0.11+d7c144a865
+		fabric-item-api-v1: Fabric Item API (v1) 1.3.1+691a79b565
+		fabric-item-groups-v0: Fabric Item Groups (v0) 0.3.6+3ac43d9565
+		fabric-language-scala: Fabric Language Scala 1.1.0+scala.2.13.6
+		fabric-lifecycle-events-v1: Fabric Lifecycle Events (v1) 1.4.13+713c266865
+		fabric-loot-tables-v1: Fabric Loot Tables (v1) 1.0.9+d7c144a865
+		fabric-mining-level-api-v1: Fabric Mining Level API (v1) 1.0.6+d7c144a865
+		fabric-mining-levels-v0: Fabric Mining Levels (v0) 0.1.11+b4f4f6cd65
+		fabric-networking-api-v1: Fabric Networking API (v1) 1.0.19+d7c144a865
+		fabric-networking-v0: Fabric Networking (v0) 0.3.6+b4f4f6cd65
+		fabric-object-builder-api-v1: Fabric Object Builder API (v1) 1.11.4+d7c144a865
+		fabric-object-builders-v0: Fabric Object Builders (v0) 0.7.12+d7c144a865
+		fabric-particles-v1: Fabric Particles (v1) 0.2.10+526dc1ac65
+		fabric-permissions-api-v0: fabric-permissions-api 0.1-SNAPSHOT
+		fabric-registry-sync-v0: Fabric Registry Sync (v0) 0.9.2+ad01bfbd65
+		fabric-rendering-data-attachment-v1: Fabric Rendering Data Attachment (v1) 0.3.5+d7c144a865
+		fabric-rendering-fluids-v1: Fabric Rendering Fluids (v1) 0.1.19+3ac43d9565
+		fabric-resource-conditions-api-v1: Fabric Resource Conditions API (v1) 1.0.2+d7c144a865
+		fabric-resource-loader-v0: Fabric Resource Loader (v0) 0.4.14+713c266865
+		fabric-screen-handler-api-v1: Fabric Screen Handler API (v1) 1.1.12+d7c144a865
+		fabric-structure-api-v1: Fabric Structure API (v1) 2.1.3+d7c144a865
+		fabric-tag-extensions-v0: Fabric Tag Extensions (v0) 1.2.8+d7c144a865
+		fabric-tool-attribute-api-v1: Fabric Tool Attribute API (v1) 1.4.0-modified-technici4n+ea42e1b365
+		fabric-transfer-api-v1: Fabric Transfer API (v1) 1.5.9+d7c144a865
+		fabricloader: Fabric Loader 0.13.2
+		feature_nbt_deadlock_be_gone: Feature NBT Deadlock Be Gone - Fabric 1.0.1+1.18.1
+		ferritecore: FerriteCore 4.1.2
+		fiber: fiber 0.23.0-2
+		friendsandfoes: Friends&Foes 1.2.4
+		genesis: Genesis 1.18.1-1.0.0
+		goblintraders: Goblin Traders 1.5
+		guardvillagers: Guard Villagers Fabric 1.0.7
+		hologram-api: Hologram API 0.2.1+1.18-pre5
+		imm_ptl_core: Immersive Portals Core 1.2.5
+		immersive_portals: Immersive Portals 1.2.5
+		inventory_backpack: Inventory Backpack 0.2.4
+		jankson: Jankson 4.0.0+j1.2.0
+		java: OpenJDK 64-Bit Server VM 17
+		javax_servlet_javax_servlet-api: javax.servlet-api 3.1.0
+		kanos_config: Kanos Config 0.1.4+1.14.4-1.17.1
+		krypton: Krypton 0.1.6
+		levelz: LevelZ 1.1.6
+		libgui: LibGui 5.3.0+1.18
+		libninepatch: LibNinePatch 1.1.0
+		lithium: Lithium 0.7.7
+		magna: Magna 1.7.0-1.18-pre1
+		medievalweapons: Medieval Weapons 1.1.8
+		minecraft: Minecraft 1.18.1
+		minecraftmappings: Minecraft Mappings 1.18-1.0.0
+		modern_industrialization: Modern Industrialization 1.0.5
+		morevillagers-fabric: MoreVillagersFabric 3.1.1-SNAPSHOT
+		mostructures: Mo' Structures 1.3.0-pre1+1.18
+		mtr: Minecraft Transit Railway 1.18.1-3.0.0-beta-8
+		no_null_processors: No Null Processors - Fabric 2.0.1+1.18.1
+		omega-config: OmegaConfig 1.2.2-1.18.1
+		org_eclipse_jetty_jetty-http: jetty-http 9.4.44.v20210927
+		org_eclipse_jetty_jetty-io: jetty-io 9.4.44.v20210927
+		org_eclipse_jetty_jetty-security: jetty-security 9.4.44.v20210927
+		org_eclipse_jetty_jetty-server: jetty-server 9.4.44.v20210927
+		org_eclipse_jetty_jetty-servlet: jetty-servlet 9.4.44.v20210927
+		org_eclipse_jetty_jetty-util: jetty-util 9.4.44.v20210927
+		org_eclipse_jetty_jetty-util-ajax: jetty-util-ajax 9.4.44.v20210927
+		origins: Origins 1.3.1
+		origins-classes: Origins: Classes 1.2.4
+		packet_tweaker: Packet Tweaker 0.2.0+1.18-pre1
+		patchouli: Patchouli 1.18-60-FABRIC-SNAPSHOT
+		pehkui: Pehkui 3.1.0+1.14.4-1.18.1
+		placeholder-api: Placeholder API 1.1.3+1.17.1
+		playerabilitylib: Pal 1.4.0
+		polymer: Polymer (Core) 0.2.0-beta.24+1.18.1
+		polymer-legacy: Polymer (Compatibility) 0.1.9+0.2.0-beta.24+1.18.1
+		q_misc_util: QMiscUtil 1.2.5
+		quarryplus: QuarryPlus 18.2.493
+		reach-entity-attributes: Reach Entity Attributes 2.1.1
+		roughlyenoughitems: Roughly Enough Items 7.3.432
+		server_translations_api: Server Translations API 1.4.8+1.18-pre1
+		sgui: sgui 1.0.0-rc6+1.18-pre5
+		spark: spark 1.8.8
+		starlight: Starlight 1.0.0+fabric.d0a3220
+		step-height-entity-attribute: Step Height Entity Attribute 1.0.0
+		team_reborn_energy: Energy 2.2.0
+		terrablender: TerraBlender 1.1.0.77
+		thonkutil-base: ThonkUtil Base 1.5.1+31ad4eb1c8
+		thonkutil-capes-v1: ThonkUtil Capes (v1) 1.2.2+befce073c8
+		thonkutil-potions-v0: ThonkUtil Potions (v0) 1.3.1+befce073c8
+		thonkutil-trades-v1: ThonkUtil Trades (v1) 1.1.8+d77526a2c8
+		trinkets: Trinkets 3.2.0
+		universal-graves: Universal Graves 2.0.0-rc.4+1.18.1
+		vanilla_disable: Vanilla Disable 1.3.1
+		villager-hats: Villager Hats Mod 1.3.0
+		waystones: Waystones 2.4.1
+		wthit: wthit 4.5.1
+		xaerominimap: Xaero's Minimap 22.2.0.1
+		xaeroworldmap: Xaero's World Map 1.20.3.1
+
+// Error Itself
+
+[19:08:07] [main/FATAL]: Failed to start the minecraft server
+java.lang.RuntimeException: Could not execute entrypoint stage 'main' due to errors, provided by 'moreweaponry'!
+	at net.fabricmc.loader.impl.entrypoint.EntrypointUtils.lambda$invoke0$0(EntrypointUtils.java:51) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.util.ExceptionUtil.gatherExceptions(ExceptionUtil.java:33) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.entrypoint.EntrypointUtils.invoke0(EntrypointUtils.java:49) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.entrypoint.EntrypointUtils.invoke(EntrypointUtils.java:35) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.game.minecraft.Hooks.startServer(Hooks.java:62) ~[fabric-loader-0.13.2.jar:?]
+	at net.minecraft.server.Main.main(Main.java:106) [server-intermediary.jar:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:416) [fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:77) [fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.KnotServer.main(KnotServer.java:23) [fabric-loader-0.13.2.jar:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at net.fabricmc.loader.impl.launch.server.FabricServerLauncher.main(FabricServerLauncher.java:66) [fabric-loader-0.13.2.jar:?]
+Caused by: java.lang.NoClassDefFoundError: net/fabricmc/fabric/api/blockrenderlayer/v1/BlockRenderLayerMap
+	at net.DakotaPride.moreweaponry.util.ModRendererHelper.setRenderLayers(ModRendererHelper.java:10) ~[moreweaponry-1.15.07+1.18.jar:?]
+	at net.DakotaPride.moreweaponry.MoreWeaponry.onInitialize(MoreWeaponry.java:42) ~[moreweaponry-1.15.07+1.18.jar:?]
+	at net.fabricmc.loader.impl.entrypoint.EntrypointUtils.invoke0(EntrypointUtils.java:47) ~[fabric-loader-0.13.2.jar:?]
+	... 15 more
+Caused by: java.lang.ClassNotFoundException: net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap
+	at jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[?:?]
+	at jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[?:?]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[?:?]
+	at net.fabricmc.loader.impl.launch.knot.KnotClassLoader.loadClass(KnotClassLoader.java:158) ~[fabric-loader-0.13.2.jar:?]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[?:?]
+	at net.DakotaPride.moreweaponry.util.ModRendererHelper.setRenderLayers(ModRendererHelper.java:10) ~[moreweaponry-1.15.07+1.18.jar:?]
+	at net.DakotaPride.moreweaponry.MoreWeaponry.onInitialize(MoreWeaponry.java:42) ~[moreweaponry-1.15.07+1.18.jar:?]
+	at net.fabricmc.loader.impl.entrypoint.EntrypointUtils.invoke0(EntrypointUtils.java:47) ~[fabric-loader-0.13.2.jar:?]
+	... 15 more[19:08:07] [main/FATAL]: Failed to start the minecraft server
+java.lang.RuntimeException: Could not execute entrypoint stage 'main' due to errors, provided by 'moreweaponry'!
+	at net.fabricmc.loader.impl.entrypoint.EntrypointUtils.lambda$invoke0$0(EntrypointUtils.java:51) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.util.ExceptionUtil.gatherExceptions(ExceptionUtil.java:33) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.entrypoint.EntrypointUtils.invoke0(EntrypointUtils.java:49) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.entrypoint.EntrypointUtils.invoke(EntrypointUtils.java:35) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.game.minecraft.Hooks.startServer(Hooks.java:62) ~[fabric-loader-0.13.2.jar:?]
+	at net.minecraft.server.Main.main(Main.java:106) [server-intermediary.jar:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:416) [fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:77) [fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.KnotServer.main(KnotServer.java:23) [fabric-loader-0.13.2.jar:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at net.fabricmc.loader.impl.launch.server.FabricServerLauncher.main(FabricServerLauncher.java:66) [fabric-loader-0.13.2.jar:?]
+Caused by: java.lang.NoClassDefFoundError: net/fabricmc/fabric/api/blockrenderlayer/v1/BlockRenderLayerMap
+	at net.DakotaPride.moreweaponry.util.ModRendererHelper.setRenderLayers(ModRendererHelper.java:10) ~[moreweaponry-1.15.07+1.18.jar:?]
+	at net.DakotaPride.moreweaponry.MoreWeaponry.onInitialize(MoreWeaponry.java:42) ~[moreweaponry-1.15.07+1.18.jar:?]
+	at net.fabricmc.loader.impl.entrypoint.EntrypointUtils.invoke0(EntrypointUtils.java:47) ~[fabric-loader-0.13.2.jar:?]
+	... 15 more
+Caused by: java.lang.ClassNotFoundException: net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap
+	at jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[?:?]
+	at jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[?:?]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[?:?]
+	at net.fabricmc.loader.impl.launch.knot.KnotClassLoader.loadClass(KnotClassLoader.java:158) ~[fabric-loader-0.13.2.jar:?]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[?:?]
+	at net.DakotaPride.moreweaponry.util.ModRendererHelper.setRenderLayers(ModRendererHelper.java:10) ~[moreweaponry-1.15.07+1.18.jar:?]
+	at net.DakotaPride.moreweaponry.MoreWeaponry.onInitialize(MoreWeaponry.java:42) ~[moreweaponry-1.15.07+1.18.jar:?]
+	at net.fabricmc.loader.impl.entrypoint.EntrypointUtils.invoke0(EntrypointUtils.java:47) ~[fabric-loader-0.13.2.jar:?]
+	... 15 more
+
+# GitHub Issue Report (3)
+
+// Hello, this modpack is custom made by me, here are the mods
+
+// Mods List
+
+[15:05:50] [main/INFO]: Loading 147 mods:
+	- advanced_runtime_resource_pack 0.3.10 via modern_industrialization
+	- advancednetherite 1.4.0-1.18.1
+	- alternatecurrent 1.1.0
+	- apoli 2.2.2 via origins
+	- appleskin 2.3.0+mc1.18.1
+	- architectury 3.7.20
+	- artifacts 5.0.2+fabric
+	- artifality 0.5.5
+	- attributefix 13.0.5
+	- backslot 1.2.5
+	- blue_endless_jankson 1.2.1 via jankson
+	- bno 1.18.1-7.1.2-Fabric
+	- byg 1.3.5.10
+	- caffeineconfig 1.0.0 via vanilla_disable
+	- calio 1.4.2 via apoli
+	- cardinal-components-base 4.0.0 via trinkets
+	- cardinal-components-entity 4.0.0 via trinkets
+	- cloth-armor-api-v1 1.5.47 via modern_industrialization
+	- cloth-basic-math 0.6.0 via cloth-config
+	- cloth-common-events-v1 1.5.47 via modern_industrialization
+	- cloth-config 6.2.57
+	- clumps 8.0.0+5
+	- com_electronwill_night-config_core 3.6.4 via terrablender
+	- com_electronwill_night-config_toml 3.6.4 via terrablender
+	- com_github_wearblackallday_javautils bd58640372 via dimthread
+	- com_velocitypowered_velocity-native 1.1.0-SNAPSHOT via krypton
+	- crowdin-translate 1.4+1.18 via fabricshieldlib
+	- customportalapi 0.0.1-beta49-1.18 via moreweaponry
+	- damagetilt 1.18-fabric-0.1.2
+	- decorative_blocks 2.0.4
+	- dimthread 1.2.6
+	- drinkbeer 3.0.2
+	- expandability 5.0.0 via artifacts
+	- extraorigins 1.18-9
+	- fabric 0.46.4+1.18
+	- fabric-api-base 0.4.2+d7c144a865 via fabric
+	- fabric-api-lookup-api-v1 1.5.3+d7c144a865 via fabric
+	- fabric-biome-api-v1 6.0.2+d7c144a865 via fabric
+	- fabric-command-api-v1 1.1.7+d7c144a865 via fabric
+	- fabric-commands-v0 0.2.6+b4f4f6cd65 via fabric
+	- fabric-containers-v0 0.1.19+d7c144a865 via fabric
+	- fabric-content-registries-v0 0.4.8+d7c144a865 via fabric
+	- fabric-crash-report-info-v1 0.1.9+3ac43d9565 via fabric
+	- fabric-dimensions-v1 2.1.10+a1d9bbf565 via fabric
+	- fabric-entity-events-v1 1.4.6+d7c144a865 via fabric
+	- fabric-events-interaction-v0 0.4.17+d7c144a865 via fabric
+	- fabric-events-lifecycle-v0 0.2.9+d7c144a865 via fabric
+	- fabric-game-rule-api-v1 1.0.11+d7c144a865 via fabric
+	- fabric-item-api-v1 1.3.1+691a79b565 via fabric
+	- fabric-item-groups-v0 0.3.6+3ac43d9565 via fabric
+	- fabric-language-scala 1.1.0+scala.2.13.6
+	- fabric-lifecycle-events-v1 1.4.13+713c266865 via fabric
+	- fabric-loot-tables-v1 1.0.9+d7c144a865 via fabric
+	- fabric-mining-level-api-v1 1.0.6+d7c144a865 via fabric
+	- fabric-mining-levels-v0 0.1.11+b4f4f6cd65 via fabric
+	- fabric-networking-api-v1 1.0.19+d7c144a865 via fabric
+	- fabric-networking-v0 0.3.6+b4f4f6cd65 via fabric
+	- fabric-object-builder-api-v1 1.11.4+d7c144a865 via fabric
+	- fabric-object-builders-v0 0.7.12+d7c144a865 via fabric
+	- fabric-particles-v1 0.2.10+526dc1ac65 via fabric
+	- fabric-permissions-api-v0 0.1-SNAPSHOT via spark
+	- fabric-registry-sync-v0 0.9.2+ad01bfbd65 via fabric
+	- fabric-rendering-data-attachment-v1 0.3.5+d7c144a865 via fabric
+	- fabric-rendering-fluids-v1 0.1.19+3ac43d9565 via fabric
+	- fabric-resource-conditions-api-v1 1.0.2+d7c144a865 via fabric
+	- fabric-resource-loader-v0 0.4.14+713c266865 via fabric
+	- fabric-screen-handler-api-v1 1.1.12+d7c144a865 via fabric
+	- fabric-structure-api-v1 2.1.3+d7c144a865 via fabric
+	- fabric-tag-extensions-v0 1.2.8+d7c144a865 via fabric
+	- fabric-tool-attribute-api-v1 1.4.0-modified-technici4n+ea42e1b365 via modern_industrialization
+	- fabric-transfer-api-v1 1.5.9+d7c144a865 via fabric
+	- fabricloader 0.13.2
+	- fabricshieldlib 1.5.1-pre1-1.18
+	- feature_nbt_deadlock_be_gone 1.0.1+1.18.1
+	- ferritecore 4.1.2
+	- fiber 0.23.0-2 via patchouli
+	- friendsandfoes 1.2.4
+	- genesis 1.18.1-1.0.0
+	- goblintraders 1.5
+	- guardvillagers 1.0.7
+	- hologram-api 0.2.1+1.18-pre5 via universal-graves
+	- inventory_backpack 0.2.4
+	- jankson 4.0.0+j1.2.0 via libgui
+	- java 17
+	- javax_servlet_javax_servlet-api 3.1.0 via mtr
+	- kanos_config 0.1.4+1.14.4-1.17.1 via pehkui
+	- krypton 0.1.6
+	- ksyxis 1.1
+	- levelz 1.1.6
+	- libgui 5.3.0+1.18 via levelz
+	- libninepatch 1.1.0 via libgui
+	- lithium 0.7.7
+	- magna 1.7.0-1.18-pre1 via modern_industrialization
+	- medievalweapons 1.1.8
+	- minecraft 1.18.1
+	- minecraftmappings 1.18-1.0.0 via mtr
+	- mm 2.3 via fabricshieldlib
+	- modern_industrialization 1.0.5
+	- morevillagers-fabric 3.1.1-SNAPSHOT
+	- moreweaponry 1.15.21+1.18
+	- mostructures 1.3.0-pre1+1.18
+	- mtr 1.18.1-3.0.0-beta-8
+	- nbtcrafting 2.1.2+mc1.18.1
+	- no_null_processors 2.0.1+1.18.1
+	- omega-config 1.2.2-1.18.1 via friendsandfoes
+	- org_eclipse_jetty_jetty-http 9.4.44.v20210927 via mtr
+	- org_eclipse_jetty_jetty-io 9.4.44.v20210927 via mtr
+	- org_eclipse_jetty_jetty-security 9.4.44.v20210927 via mtr
+	- org_eclipse_jetty_jetty-server 9.4.44.v20210927 via mtr
+	- org_eclipse_jetty_jetty-servlet 9.4.44.v20210927 via mtr
+	- org_eclipse_jetty_jetty-util 9.4.44.v20210927 via mtr
+	- org_eclipse_jetty_jetty-util-ajax 9.4.44.v20210927 via mtr
+	- origins 1.3.1
+	- origins-classes 1.2.4
+	- packet_tweaker 0.2.0+1.18-pre1 via server_translations_api
+	- patchouli 1.18-60-FABRIC-SNAPSHOT via modern_industrialization
+	- pehkui 3.1.0+1.14.4-1.18.1
+	- placeholder-api 1.1.3+1.17.1 via universal-graves
+	- playerabilitylib 1.4.0 via modern_industrialization
+	- polymer 0.2.0-beta.24+1.18.1 via universal-graves
+	- polymer-legacy 0.1.9+0.2.0-beta.24+1.18.1 via polymer
+	- quarryplus 18.2.493
+	- reach-entity-attributes 2.1.1 via medievalweapons
+	- recipecache 0.2.1-1.17.1
+	- roughlyenoughitems 7.3.432
+	- roughlyenoughresources 2.4.1
+	- server_translations_api 1.4.8+1.18-pre1 via universal-graves
+	- sgui 1.0.0-rc6+1.18-pre5 via universal-graves
+	- spark 1.8.8
+	- starlight 1.0.0+fabric.d0a3220
+	- step-height-entity-attribute 1.0.0 via artifacts
+	- team_reborn_energy 2.2.0 via modern_industrialization
+	- terrablender 1.1.0.77
+	- thonkutil-base 1.5.1+31ad4eb1c8 via goblintraders
+	- thonkutil-capes-v1 1.2.2+befce073c8 via goblintraders
+	- thonkutil-potions-v0 1.3.1+befce073c8 via goblintraders
+	- thonkutil-trades-v1 1.1.8+d77526a2c8 via goblintraders
+	- trinkets 3.2.0
+	- universal-graves 2.0.0-rc.4+1.18.1
+	- vanilla_disable 1.3.1
+	- villager-hats 1.3.0
+	- vmp 0.2.0+beta.3.8
+	- waystones 2.4.1
+	- wthit 4.5.2
+	- x-hp 1.18-5.4
+	- xaerominimap 22.2.0.1
+	- xaeroworldmap 1.20.3.1
+
+// and here's a crash with newest version you sent (crash logs dont generate!)
+
+[15:05:51] [main/ERROR]: Mixin prepare for mod moreweaponry failed preparing HeadFeatureRendererMixin in moreweaponry.mixins.json: org.spongepowered.asm.mixin.transformer.throwables.InvalidMixinException Cannot load class net.DakotaPride.moreweaponry.mixin.HeadFeatureRendererMixin in environment type SERVER
+org.spongepowered.asm.mixin.transformer.throwables.InvalidMixinException: Cannot load class net.DakotaPride.moreweaponry.mixin.HeadFeatureRendererMixin in environment type SERVER
+	at org.spongepowered.asm.mixin.transformer.MixinInfo.<init>(MixinInfo.java:865) ~[sponge-mixin-0.11.2+mixin.0.8.5.jar:0.11.2+mixin.0.8.5]
+	at org.spongepowered.asm.mixin.transformer.MixinConfig.prepareMixins(MixinConfig.java:852) ~[sponge-mixin-0.11.2+mixin.0.8.5.jar:0.11.2+mixin.0.8.5]
+	at org.spongepowered.asm.mixin.transformer.MixinConfig.prepare(MixinConfig.java:777) ~[sponge-mixin-0.11.2+mixin.0.8.5.jar:0.11.2+mixin.0.8.5]
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.prepareConfigs(MixinProcessor.java:540) [sponge-mixin-0.11.2+mixin.0.8.5.jar:0.11.2+mixin.0.8.5]
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.select(MixinProcessor.java:462) [sponge-mixin-0.11.2+mixin.0.8.5.jar:0.11.2+mixin.0.8.5]
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.checkSelect(MixinProcessor.java:438) [sponge-mixin-0.11.2+mixin.0.8.5.jar:0.11.2+mixin.0.8.5]
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:290) [sponge-mixin-0.11.2+mixin.0.8.5.jar:0.11.2+mixin.0.8.5]
+	at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClass(MixinTransformer.java:234) [sponge-mixin-0.11.2+mixin.0.8.5.jar:0.11.2+mixin.0.8.5]
+	at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClassBytes(MixinTransformer.java:202) [sponge-mixin-0.11.2+mixin.0.8.5.jar:0.11.2+mixin.0.8.5]
+	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.getPostMixinClassByteArray(KnotClassDelegate.java:247) [fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.tryLoadClass(KnotClassDelegate.java:150) [fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.KnotClassLoader.loadClass(KnotClassLoader.java:155) [fabric-loader-0.13.2.jar:?]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:520) [?:?]
+	at java.lang.Class.forName0(Native Method) ~[?:?]
+	at java.lang.Class.forName(Class.java:467) [?:?]
+	at net.fabricmc.loader.impl.util.DefaultLanguageAdapter.create(DefaultLanguageAdapter.java:50) [fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.entrypoint.EntrypointStorage$NewEntry.getOrCreate(EntrypointStorage.java:117) [fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.entrypoint.EntrypointContainerImpl.getEntrypoint(EntrypointContainerImpl.java:53) [fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.entrypoint.EntrypointUtils.invoke0(EntrypointUtils.java:47) [fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.entrypoint.EntrypointUtils.invoke(EntrypointUtils.java:35) [fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.init(Knot.java:157) [fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:71) [fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.KnotServer.main(KnotServer.java:23) [fabric-loader-0.13.2.jar:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at net.fabricmc.loader.impl.launch.server.FabricServerLauncher.main(FabricServerLauncher.java:66) [fabric-loader-0.13.2.jar:?]
+Caused by: java.lang.RuntimeException: Cannot load class net.DakotaPride.moreweaponry.mixin.HeadFeatureRendererMixin in environment type SERVER
+	at net.fabricmc.loader.impl.transformer.FabricTransformer.transform(FabricTransformer.java:59) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.getPreMixinClassByteArray(KnotClassDelegate.java:282) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.getClassByteArray(Knot.java:321) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.MixinServiceKnot.getClassBytes(MixinServiceKnot.java:60) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.MixinServiceKnot.getClassNode(MixinServiceKnot.java:76) ~[fabric-loader-0.13.2.jar:?]
+	at org.spongepowered.asm.mixin.transformer.MixinInfo.loadMixinClass(MixinInfo.java:1312) ~[sponge-mixin-0.11.2+mixin.0.8.5.jar:0.11.2+mixin.0.8.5]
+	at org.spongepowered.asm.mixin.transformer.MixinInfo.<init>(MixinInfo.java:858) ~[sponge-mixin-0.11.2+mixin.0.8.5.jar:0.11.2+mixin.0.8.5]
+	... 27 more
+[15:05:51] [main/ERROR]: A mod crashed on startup!
+net.fabricmc.loader.impl.FormattedException: java.lang.RuntimeException: Could not execute entrypoint stage 'preLaunch' due to errors, provided by 'advanced_runtime_resource_pack'!
+	at net.fabricmc.loader.impl.launch.knot.Knot.init(Knot.java:159) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:71) [fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.KnotServer.main(KnotServer.java:23) [fabric-loader-0.13.2.jar:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at net.fabricmc.loader.impl.launch.server.FabricServerLauncher.main(FabricServerLauncher.java:66) [fabric-loader-0.13.2.jar:?]
+Caused by: java.lang.RuntimeException: Could not execute entrypoint stage 'preLaunch' due to errors, provided by 'advanced_runtime_resource_pack'!
+	at net.fabricmc.loader.impl.entrypoint.EntrypointUtils.lambda$invoke0$0(EntrypointUtils.java:51) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.util.ExceptionUtil.gatherExceptions(ExceptionUtil.java:33) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.entrypoint.EntrypointUtils.invoke0(EntrypointUtils.java:49) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.entrypoint.EntrypointUtils.invoke(EntrypointUtils.java:35) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.init(Knot.java:157) ~[fabric-loader-0.13.2.jar:?]
+	... 7 more
+Caused by: net.fabricmc.loader.api.EntrypointException: Exception while loading entries for entrypoint 'preLaunch' provided by 'advanced_runtime_resource_pack'
+	at net.fabricmc.loader.impl.entrypoint.EntrypointContainerImpl.getEntrypoint(EntrypointContainerImpl.java:56) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.entrypoint.EntrypointUtils.invoke0(EntrypointUtils.java:47) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.entrypoint.EntrypointUtils.invoke(EntrypointUtils.java:35) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.init(Knot.java:157) ~[fabric-loader-0.13.2.jar:?]
+	... 7 more
+Caused by: java.lang.RuntimeException: Mixin transformation of net.devtech.arrp.ARRP failed
+	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.getPostMixinClassByteArray(KnotClassDelegate.java:252) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.tryLoadClass(KnotClassDelegate.java:150) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.KnotClassLoader.loadClass(KnotClassLoader.java:155) ~[fabric-loader-0.13.2.jar:?]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[?:?]
+	at java.lang.Class.forName0(Native Method) ~[?:?]
+	at java.lang.Class.forName(Class.java:467) ~[?:?]
+	at net.fabricmc.loader.impl.util.DefaultLanguageAdapter.create(DefaultLanguageAdapter.java:50) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.entrypoint.EntrypointStorage$NewEntry.getOrCreate(EntrypointStorage.java:117) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.entrypoint.EntrypointContainerImpl.getEntrypoint(EntrypointContainerImpl.java:53) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.entrypoint.EntrypointUtils.invoke0(EntrypointUtils.java:47) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.entrypoint.EntrypointUtils.invoke(EntrypointUtils.java:35) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.init(Knot.java:157) ~[fabric-loader-0.13.2.jar:?]
+	... 7 more
+Caused by: org.spongepowered.asm.mixin.throwables.MixinApplyError: Mixin [moreweaponry.mixins.json:HeadFeatureRendererMixin] from phase [DEFAULT] in config [moreweaponry.mixins.json] from mod [moreweaponry] FAILED during PREPARE
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.handleMixinError(MixinProcessor.java:638) ~[sponge-mixin-0.11.2+mixin.0.8.5.jar:0.11.2+mixin.0.8.5]
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.handleMixinPrepareError(MixinProcessor.java:585) ~[sponge-mixin-0.11.2+mixin.0.8.5.jar:0.11.2+mixin.0.8.5]
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.prepareConfigs(MixinProcessor.java:543) ~[sponge-mixin-0.11.2+mixin.0.8.5.jar:0.11.2+mixin.0.8.5]
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.select(MixinProcessor.java:462) ~[sponge-mixin-0.11.2+mixin.0.8.5.jar:0.11.2+mixin.0.8.5]
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.checkSelect(MixinProcessor.java:438) ~[sponge-mixin-0.11.2+mixin.0.8.5.jar:0.11.2+mixin.0.8.5]
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:290) ~[sponge-mixin-0.11.2+mixin.0.8.5.jar:0.11.2+mixin.0.8.5]
+	at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClass(MixinTransformer.java:234) ~[sponge-mixin-0.11.2+mixin.0.8.5.jar:0.11.2+mixin.0.8.5]
+	at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClassBytes(MixinTransformer.java:202) ~[sponge-mixin-0.11.2+mixin.0.8.5.jar:0.11.2+mixin.0.8.5]
+	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.getPostMixinClassByteArray(KnotClassDelegate.java:247) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.tryLoadClass(KnotClassDelegate.java:150) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.KnotClassLoader.loadClass(KnotClassLoader.java:155) ~[fabric-loader-0.13.2.jar:?]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[?:?]
+	at java.lang.Class.forName0(Native Method) ~[?:?]
+	at java.lang.Class.forName(Class.java:467) ~[?:?]
+	at net.fabricmc.loader.impl.util.DefaultLanguageAdapter.create(DefaultLanguageAdapter.java:50) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.entrypoint.EntrypointStorage$NewEntry.getOrCreate(EntrypointStorage.java:117) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.entrypoint.EntrypointContainerImpl.getEntrypoint(EntrypointContainerImpl.java:53) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.entrypoint.EntrypointUtils.invoke0(EntrypointUtils.java:47) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.entrypoint.EntrypointUtils.invoke(EntrypointUtils.java:35) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.init(Knot.java:157) ~[fabric-loader-0.13.2.jar:?]
+	... 7 more
+Caused by: org.spongepowered.asm.mixin.transformer.throwables.InvalidMixinException: Cannot load class net.DakotaPride.moreweaponry.mixin.HeadFeatureRendererMixin in environment type SERVER
+	at org.spongepowered.asm.mixin.transformer.MixinInfo.<init>(MixinInfo.java:865) ~[sponge-mixin-0.11.2+mixin.0.8.5.jar:0.11.2+mixin.0.8.5]
+	at org.spongepowered.asm.mixin.transformer.MixinConfig.prepareMixins(MixinConfig.java:852) ~[sponge-mixin-0.11.2+mixin.0.8.5.jar:0.11.2+mixin.0.8.5]
+	at org.spongepowered.asm.mixin.transformer.MixinConfig.prepare(MixinConfig.java:777) ~[sponge-mixin-0.11.2+mixin.0.8.5.jar:0.11.2+mixin.0.8.5]
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.prepareConfigs(MixinProcessor.java:540) ~[sponge-mixin-0.11.2+mixin.0.8.5.jar:0.11.2+mixin.0.8.5]
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.select(MixinProcessor.java:462) ~[sponge-mixin-0.11.2+mixin.0.8.5.jar:0.11.2+mixin.0.8.5]
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.checkSelect(MixinProcessor.java:438) ~[sponge-mixin-0.11.2+mixin.0.8.5.jar:0.11.2+mixin.0.8.5]
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:290) ~[sponge-mixin-0.11.2+mixin.0.8.5.jar:0.11.2+mixin.0.8.5]
+	at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClass(MixinTransformer.java:234) ~[sponge-mixin-0.11.2+mixin.0.8.5.jar:0.11.2+mixin.0.8.5]
+	at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClassBytes(MixinTransformer.java:202) ~[sponge-mixin-0.11.2+mixin.0.8.5.jar:0.11.2+mixin.0.8.5]
+	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.getPostMixinClassByteArray(KnotClassDelegate.java:247) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.tryLoadClass(KnotClassDelegate.java:150) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.KnotClassLoader.loadClass(KnotClassLoader.java:155) ~[fabric-loader-0.13.2.jar:?]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[?:?]
+	at java.lang.Class.forName0(Native Method) ~[?:?]
+	at java.lang.Class.forName(Class.java:467) ~[?:?]
+	at net.fabricmc.loader.impl.util.DefaultLanguageAdapter.create(DefaultLanguageAdapter.java:50) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.entrypoint.EntrypointStorage$NewEntry.getOrCreate(EntrypointStorage.java:117) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.entrypoint.EntrypointContainerImpl.getEntrypoint(EntrypointContainerImpl.java:53) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.entrypoint.EntrypointUtils.invoke0(EntrypointUtils.java:47) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.entrypoint.EntrypointUtils.invoke(EntrypointUtils.java:35) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.init(Knot.java:157) ~[fabric-loader-0.13.2.jar:?]
+	... 7 more
+Caused by: java.lang.RuntimeException: Cannot load class net.DakotaPride.moreweaponry.mixin.HeadFeatureRendererMixin in environment type SERVER
+	at net.fabricmc.loader.impl.transformer.FabricTransformer.transform(FabricTransformer.java:59) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.getPreMixinClassByteArray(KnotClassDelegate.java:282) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.getClassByteArray(Knot.java:321) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.MixinServiceKnot.getClassBytes(MixinServiceKnot.java:60) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.MixinServiceKnot.getClassNode(MixinServiceKnot.java:76) ~[fabric-loader-0.13.2.jar:?]
+	at org.spongepowered.asm.mixin.transformer.MixinInfo.loadMixinClass(MixinInfo.java:1312) ~[sponge-mixin-0.11.2+mixin.0.8.5.jar:0.11.2+mixin.0.8.5]
+	at org.spongepowered.asm.mixin.transformer.MixinInfo.<init>(MixinInfo.java:858) ~[sponge-mixin-0.11.2+mixin.0.8.5.jar:0.11.2+mixin.0.8.5]
+	at org.spongepowered.asm.mixin.transformer.MixinConfig.prepareMixins(MixinConfig.java:852) ~[sponge-mixin-0.11.2+mixin.0.8.5.jar:0.11.2+mixin.0.8.5]
+	at org.spongepowered.asm.mixin.transformer.MixinConfig.prepare(MixinConfig.java:777) ~[sponge-mixin-0.11.2+mixin.0.8.5.jar:0.11.2+mixin.0.8.5]
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.prepareConfigs(MixinProcessor.java:540) ~[sponge-mixin-0.11.2+mixin.0.8.5.jar:0.11.2+mixin.0.8.5]
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.select(MixinProcessor.java:462) ~[sponge-mixin-0.11.2+mixin.0.8.5.jar:0.11.2+mixin.0.8.5]
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.checkSelect(MixinProcessor.java:438) ~[sponge-mixin-0.11.2+mixin.0.8.5.jar:0.11.2+mixin.0.8.5]
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:290) ~[sponge-mixin-0.11.2+mixin.0.8.5.jar:0.11.2+mixin.0.8.5]
+	at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClass(MixinTransformer.java:234) ~[sponge-mixin-0.11.2+mixin.0.8.5.jar:0.11.2+mixin.0.8.5]
+	at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClassBytes(MixinTransformer.java:202) ~[sponge-mixin-0.11.2+mixin.0.8.5.jar:0.11.2+mixin.0.8.5]
+	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.getPostMixinClassByteArray(KnotClassDelegate.java:247) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.tryLoadClass(KnotClassDelegate.java:150) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.KnotClassLoader.loadClass(KnotClassLoader.java:155) ~[fabric-loader-0.13.2.jar:?]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[?:?]
+	at java.lang.Class.forName0(Native Method) ~[?:?]
+	at java.lang.Class.forName(Class.java:467) ~[?:?]
+	at net.fabricmc.loader.impl.util.DefaultLanguageAdapter.create(DefaultLanguageAdapter.java:50) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.entrypoint.EntrypointStorage$NewEntry.getOrCreate(EntrypointStorage.java:117) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.entrypoint.EntrypointContainerImpl.getEntrypoint(EntrypointContainerImpl.java:53) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.entrypoint.EntrypointUtils.invoke0(EntrypointUtils.java:47) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.entrypoint.EntrypointUtils.invoke(EntrypointUtils.java:35) ~[fabric-loader-0.13.2.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.init(Knot.java:157) ~[fabric-loader-0.13.2.jar:?]
+	... 7 more
+
+// if you need further information from me lmk

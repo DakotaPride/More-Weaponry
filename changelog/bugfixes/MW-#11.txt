@@ -1,0 +1,5 @@
+# MW-#11
+# Frodon Doors (Formerly 'Nitris') Drops Itself Twice
+
+# Frodon Doors Would Drop 2 Doors, resulting in a door duplication bug.
+- Fixed In Version v1.15.0

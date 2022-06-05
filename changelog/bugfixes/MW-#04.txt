@@ -1,0 +1,8 @@
+# MW-#04
+# Crushed Kuro Could Not Be Crafted Properly
+
+# Crushed Kuro Should Be Crafted Using Any Knife (data/moreweaponry:tags/items/knives.json) // MW-#04-A
+- Fixed In Version v1.10.74
+
+# All Knives can now be used (updated knives.json file) // MW-#04-B
+- Fixed In Version v1.12.0

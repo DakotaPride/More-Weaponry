@@ -1,0 +1,6 @@
+# MW-#02
+# Button/Pressure Plate Related Recipes Not Working Correctly
+
+# Preventing Players From Crafting These Items/Blocks (Nitris, Cobblestone, Limestone, and Cobbled Limestone)
+
+- Fixed In Version v1.10.52

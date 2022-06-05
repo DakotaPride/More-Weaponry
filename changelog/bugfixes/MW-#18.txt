@@ -1,0 +1,5 @@
+# MW-#18
+# Incorrect Repair Items For 3 Sets Of Celestial Cirtict Armor
+
+# Crackler, Bard, And Sickened Armor Repair Items Were Switched Around
+- Fixed In Version v1.18.9

@@ -1,0 +1,6 @@
+# MW-#05
+# Diamond/Iron Knives Switched Repair Materials
+
+# Diamond Mistakenly Required Iron Ingots and vise versa
+
+- Fixed In Version v1.10.74

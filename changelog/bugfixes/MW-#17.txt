@@ -1,0 +1,5 @@
+# MW-#17
+# Crash On The Client While Exploring The End
+
+# Unable To Replicate, Making It Difficult To Fix. However, Was Fixed By Adjusting The Renderer Block Entity Classes/Registration
+- Fixed In Version v1.18.8 (alpha)

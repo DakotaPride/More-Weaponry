@@ -1,0 +1,6 @@
+# MW-#03
+# Kuro Related Items Could Not Be Used To Compost Into Bonemeal
+
+# Kuro Items Could Not Composted
+
+- Fixed In Version v1.10.74

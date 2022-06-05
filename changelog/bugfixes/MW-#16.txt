@@ -1,0 +1,5 @@
+# MW-#15
+# Glimmering Amethyst Hoe Recipe Not Properly Working
+
+# Glimmering Amethyst Hoe Could Not Be Crafted
+- Fixed In Version v1.18 (alpha)

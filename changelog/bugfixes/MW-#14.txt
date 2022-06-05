@@ -1,0 +1,5 @@
+# MW-#14
+# Item Tags Not Under Proper Namespace
+
+# Several Item Tags Were Meant To Be Under The Namespace Of 'c', but weren't
+- Fixed In Version v1.15.43
