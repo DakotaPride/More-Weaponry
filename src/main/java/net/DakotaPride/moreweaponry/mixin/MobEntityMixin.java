@@ -20,7 +20,7 @@ public abstract class MobEntityMixin extends LivingEntity {
     }
 
     @Inject(method = "tick", at = @At("HEAD"))
-    private void getHandSwingDuration(CallbackInfo ci) {
+    private void tick(CallbackInfo ci) {
         if (this.hasStatusEffect(MoreWeaponry.BLEEDING)) {
             this.damage(MoreWeaponryDamageSource.BLEEDING, 0.6F);
         }
