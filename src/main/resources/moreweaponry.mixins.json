@@ -11,7 +11,7 @@
     "LivingEntityMixin",
     "MixinStructurePiece",
     "SignTypeAccessor",
-    "SlimeEntityMixin",
+    "MobEntityMixin",
     "StatusEffectMixin",
     "StructureFeatureAccessor"
   ],
