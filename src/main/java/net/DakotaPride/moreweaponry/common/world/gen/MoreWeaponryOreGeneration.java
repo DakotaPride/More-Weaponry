@@ -9,5 +9,9 @@ public class MoreWeaponryOreGeneration {
     public static void generateOres() {
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
                 GenerationStep.Feature.UNDERGROUND_ORES, MoreWeaponryPlacedFeatures.MARE_DIAMOND_ORE_PLACED.getKey().get());
+
+        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
+                GenerationStep.Feature.UNDERGROUND_ORES, MoreWeaponryPlacedFeatures.CELESTIALITE_ROCK_ORE_PLACED.getKey().get());
+
     }
 }

@@ -6,7 +6,6 @@ import net.DakotaPride.moreweaponry.common.block.custom.*;
 import net.DakotaPride.moreweaponry.common.block.entity.CirtictForgeBlock;
 import net.DakotaPride.moreweaponry.common.block.entity.CoreForgeBlock;
 import net.DakotaPride.moreweaponry.common.block.entity.EssenceTranslatorBlock;
-import net.DakotaPride.moreweaponry.common.block.entity.FabricatorBlock;
 import net.DakotaPride.moreweaponry.common.block.skulls.*;
 import net.DakotaPride.moreweaponry.common.effect.BleedingStatusEffect;
 import net.DakotaPride.moreweaponry.common.effect.NumbedStatusEffect;
@@ -66,7 +65,6 @@ import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRe
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
 import net.fabricmc.fabric.api.screenhandler.v1.ScreenHandlerRegistry;
-import net.fabricmc.loader.api.FabricLoader;
 import net.fabricmc.yarn.constants.MiningLevels;
 import net.minecraft.block.*;
 import net.minecraft.enchantment.Enchantment;
@@ -484,11 +482,28 @@ public class MoreWeaponry implements ModInitializer {
 	public static WandererCelestialMedallionItem CELESTIAL_MEDALLION_WANDERER;
 	public static WatcherCelestialMedallionItem CELESTIAL_MEDALLION_WATCHER;
 
-	public static Item MAIDEN_STEM;
+	public static Item BARD_STEM;
 	public static Item FORGOTTEN_MUSIC_SHEET;
 	public static Item BARD_INFUSED_CELESTIALITE;
 
+	public static Item CORRUPTED_EYE_OF_ENDER;
+	public static Item WATCHER_INFUSED_CELESTIALITE;
+
+	public static Item POISONOUS_FANG;
+	public static Item WANDERER_INFUSED_CELESTIALITE;
+
+	public static Item LIFE_CORE;
+	public static Item SICKENED_INFUSED_CELESTIALITE;
+	public static Item DUSTED_LIFE_CORE;
+	public static Item SICKENED_HUSK_INFUSED_CELESTIALITE;
+
+	public static Item TICKING_HEART;
+	public static Item CRACKLER_INFUSED_CELESTIALITE;
+
 	public static Item CELESTIALITE_REMNANT;
+	public static Item CELESTIALITE_ROCK;
+	public static Item CELESTIALITE_INGOT;
+	public static Item CELESTIALITE_PLATE;
 	public static ReinforcedBucketItem CONTAINED_CELESTIALITE;
 	public static ReinforcedBucketItem REINFORCED_BUCKET;
 
@@ -500,6 +515,8 @@ public class MoreWeaponry implements ModInitializer {
 	public static LakeFeature CELESTIALITE_GROUNDS;
 
 	// Blocks
+	public static OreBlock CELESTIALITE_ROCK_ORE;
+
 	public static Block MOON_STONE_DUST_BLOCK;
 	public static PillarBlock KURO_WHEAT_BLOCK;
 	public static Block BLACKSTONE_METAL_BLOCK;
@@ -999,6 +1016,16 @@ public class MoreWeaponry implements ModInitializer {
 				new ReinforcedBucketItem(CELESTIALITE_STILL, new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 		BARD_INFUSED_CELESTIALITE = registerItem("bard_infused_celestialite",
 				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+		CRACKLER_INFUSED_CELESTIALITE = registerItem("crackler_infused_celestialite",
+				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+		WANDERER_INFUSED_CELESTIALITE = registerItem("wanderer_infused_celestialite",
+				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+		SICKENED_INFUSED_CELESTIALITE = registerItem("sickened_infused_celestialite",
+				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+		SICKENED_HUSK_INFUSED_CELESTIALITE = registerItem("sickened_husk_infused_celestialite",
+				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+		WATCHER_INFUSED_CELESTIALITE = registerItem("watcher_infused_celestialite",
+				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 
 		REINFORCED_BUCKET = registerItem("reinforced_bucket",
 				new ReinforcedBucketItem(Fluids.EMPTY, new FabricItemSettings().fireproof().maxCount(16).group(MORE_WEAPONRY_GROUP)));
@@ -1388,6 +1415,8 @@ public class MoreWeaponry implements ModInitializer {
 		CELESTIALITE_FLUID_BLOCK = registerBlockWithoutBlockItem("celestialite_fluid_block",
 				new FluidBlock(CELESTIALITE_STILL, FabricBlockSettings.copy(Blocks.WATER)
 						.nonOpaque().noCollision().dropsNothing()));
+		CELESTIALITE_ROCK_ORE = registerBlock("celestialite_rock_ore",
+				new OreBlock(FabricBlockSettings.copy(Blocks.DEEPSLATE_DIAMOND_ORE)));
 		
 		// Items
 		BLASTED_AMETHYST = registerItem("blasted_amethyst",
@@ -1931,7 +1960,7 @@ public class MoreWeaponry implements ModInitializer {
 				new BoneMealItem(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 		WATCHER_CLOTH = registerItem("watcher_cloth",
 				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
-		MAIDEN_STEM = registerItem("maiden_stem",
+		BARD_STEM = registerItem("bard_stem",
 				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 		BARD_CLOTH = registerItem("bard_cloth",
 				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
@@ -2088,6 +2117,22 @@ public class MoreWeaponry implements ModInitializer {
 		CELESTIALITE_REMNANT = registerItem("celestialite_remnant",
 				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 		FORGOTTEN_MUSIC_SHEET = registerItem("forgotten_music_sheet",
+				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+		CELESTIALITE_ROCK = registerItem("celestialite_rock",
+				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+		CELESTIALITE_INGOT = registerItem("celestialite_ingot",
+				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+		CELESTIALITE_PLATE = registerItem("celestialite_plate",
+				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+		CORRUPTED_EYE_OF_ENDER = registerItem("corrupted_ender_eye",
+				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+		POISONOUS_FANG = registerItem("poisonous_fang",
+				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+		LIFE_CORE = registerItem("life_core",
+				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+		DUSTED_LIFE_CORE = registerItem("dusted_life_core",
+				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+		TICKING_HEART = registerItem("ticking_heart",
 				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 
 
@@ -2283,6 +2328,8 @@ public class MoreWeaponry implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "corrupted_end_stone_bricks"), new BlockItem(CORRUPTED_END_STONE_BRICKS,
 				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "corrupted_end_stone"), new BlockItem(CORRUPTED_END_STONE,
+				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "celestialite_rock_ore"), new BlockItem(CELESTIALITE_ROCK_ORE,
 				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 
 

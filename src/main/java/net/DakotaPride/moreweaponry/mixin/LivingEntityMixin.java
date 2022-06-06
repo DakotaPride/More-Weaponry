@@ -21,6 +21,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 
@@ -38,11 +39,11 @@ public abstract class LivingEntityMixin extends Entity implements ILivingEntityM
 
     @Shadow public abstract boolean addStatusEffect(StatusEffectInstance effect, @Nullable Entity source);
 
-    @Inject(method = "getHandSwingDuration()I", at = @At("HEAD"))
-    private void getHandSwingDuration(CallbackInfoReturnable<Integer> info) {
+    @Inject(method = "tick", at = @At("HEAD"))
+    private void tick(CallbackInfo ci) {
         LivingEntity livingEntity = (LivingEntity) (Object) this;
         ItemStack itemStack = livingEntity.getMainHandStack();
-        if (itemStack.getItem() instanceof HeavySwordItem) {
+        if (livingEntity.getMainHandStack().isOf(MoreWeaponry.HEAVY_SWORD)) {
             if (!livingEntity.getOffHandStack().isEmpty()) {
                 addStatusEffect(new StatusEffectInstance(MoreWeaponry.OVER_PACKAGED, 100));
             }

@@ -48,6 +48,12 @@ public class MoreWeaponryConfiguredFeatures {
     public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> MARE_DIAMOND_ORE = ConfiguredFeatures.register("mare_diamond_ore",
             Feature.ORE, new OreFeatureConfig(OVERWORLD_MARE_DIAMOND_ORES, 10));
 
+    public static final List<OreFeatureConfig.Target> OVERWORLD_CELESTIALITE_ROCK_ORE = List.of(
+            OreFeatureConfig.createTarget(OreConfiguredFeatures.DEEPSLATE_ORE_REPLACEABLES, MoreWeaponry.CELESTIALITE_ROCK_ORE.getDefaultState()));
+
+    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> CELESTIALITE_ROCK_ORE = ConfiguredFeatures.register("celestialite_rock",
+            Feature.ORE, new OreFeatureConfig(OVERWORLD_CELESTIALITE_ROCK_ORE, 3));
+
     public static final List<OreFeatureConfig.Target> END_CIRTICT_DEBRIS = List.of(
             OreFeatureConfig.createTarget(OreConfiguredFeatures.STONE_ORE_REPLACEABLES, MoreWeaponry.CIRTICT_DEBRIS.getDefaultState()));
 

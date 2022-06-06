@@ -22,6 +22,7 @@ public class MoreWeaponryPlacedFeatures {
     public static final RegistryKey<PlacedFeature> NIGHT_CURON_KEY = registerKey("night_curon");
     public static final RegistryKey<PlacedFeature> LIMESTONE_KEY = registerKey("limestone");
     public static final RegistryKey<PlacedFeature> MARE_DIAMOND_ORE_KEY = registerKey("mare_diamond_ore");
+    public static final RegistryKey<PlacedFeature> CELESTIALITE_ROCK_ORE_KEY = registerKey("celestialite_rock");
     public static final RegistryKey<PlacedFeature> BLUESTONE_KEY = registerKey("bluestone");
     public static final RegistryKey<PlacedFeature> CIRTICT_DEBRIS_KEY = registerKey("cirtict_debris");
     public static final RegistryKey<PlacedFeature> CRACKED_DRIPSTONE_KEY = registerKey("cracked_dripstone");
@@ -43,6 +44,10 @@ public class MoreWeaponryPlacedFeatures {
 
     public static final RegistryEntry<PlacedFeature> MARE_DIAMOND_ORE_PLACED = PlacedFeatures.register("mare_diamond_ore",
             MoreWeaponryConfiguredFeatures.MARE_DIAMOND_ORE, MoreWeaponryOreFeatures.modifiersWithCount(8,
+                    HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(-80), YOffset.aboveBottom(100))));
+
+    public static final RegistryEntry<PlacedFeature> CELESTIALITE_ROCK_ORE_PLACED = PlacedFeatures.register("celestialite_rock",
+            MoreWeaponryConfiguredFeatures.CELESTIALITE_ROCK_ORE, MoreWeaponryOreFeatures.modifiersWithCount(4,
                     HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(-80), YOffset.aboveBottom(100))));
 
     public static final RegistryEntry<PlacedFeature> CIRTICT_DEBRIS_PLACED = PlacedFeatures.register("cirtict_debris",
