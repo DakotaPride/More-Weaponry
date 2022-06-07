@@ -1,6 +1,5 @@
 package net.DakotaPride.moreweaponry.mixin;
 
-import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import net.DakotaPride.moreweaponry.common.MoreWeaponry;
 import net.DakotaPride.moreweaponry.common.entity.custom.BuriedKnightEntity;
 import net.DakotaPride.moreweaponry.common.entity.custom.CrawlerEntity;
@@ -12,8 +11,6 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.entity.mob.MobEntity;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.world.World;
@@ -23,8 +20,6 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-
-import java.util.Objects;
 
 
 @Mixin(LivingEntity.class)
@@ -45,7 +40,7 @@ public abstract class LivingEntityMixin extends Entity implements ILivingEntityM
     @Shadow public @Nullable abstract LivingEntity getAttacker();
 
     @Inject(method = "tick", at = @At("HEAD"))
-    private void tick(CallbackInfo ci) throws CommandSyntaxException {
+    private void tick(CallbackInfo ci) {
         LivingEntity livingEntity = (LivingEntity) (Object) this;
         ItemStack itemStack = livingEntity.getMainHandStack();
         if (livingEntity.getMainHandStack().isOf(MoreWeaponry.HEAVY_SWORD)) {
@@ -129,13 +124,11 @@ public abstract class LivingEntityMixin extends Entity implements ILivingEntityM
 
     }
 
-    public boolean tryAttackHuskPlayer(Entity target) {
+    public void tryAttackHuskPlayer(Entity target) {
         boolean bl = livingEntity.tryAttack(target);
         if (bl && target instanceof LivingEntity) {
-            float f = this.world.getLocalDifficulty(this.getBlockPos()).getLocalDifficulty();
             ((LivingEntity)target).addStatusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 500, 2), this);
         }
-        return bl;
     }
 
 }
