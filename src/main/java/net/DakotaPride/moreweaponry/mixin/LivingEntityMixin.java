@@ -11,6 +11,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.world.World;
@@ -37,11 +38,10 @@ public abstract class LivingEntityMixin extends Entity implements ILivingEntityM
 
     @Shadow public abstract boolean addStatusEffect(StatusEffectInstance effect, @Nullable Entity source);
 
-    @Shadow public @Nullable abstract LivingEntity getAttacker();
-
     @Inject(method = "tick", at = @At("HEAD"))
     private void tick(CallbackInfo ci) {
         LivingEntity livingEntity = (LivingEntity) (Object) this;
+        LivingEntity attacker = livingEntity.getAttacker();
         ItemStack itemStack = livingEntity.getMainHandStack();
         if (livingEntity.getMainHandStack().isOf(MoreWeaponry.HEAVY_SWORD)) {
             if (!livingEntity.getOffHandStack().isEmpty()) {
@@ -81,8 +81,8 @@ public abstract class LivingEntityMixin extends Entity implements ILivingEntityM
             this.removeStatusEffect(StatusEffects.WITHER);
         }
 
-        if (this.hasStatusEffect(StatusEffects.FIRE_RESISTANCE)) {
-            tryAttackHuskPlayer(livingEntity);
+        if (livingEntity.hasStatusEffect(StatusEffects.FIRE_RESISTANCE)) {
+            tryAttackHuskPlayer(attacker);
         }
 
         if (itemStack.getItem() instanceof HeavyCrossBowItem) {
