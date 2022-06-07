@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "moreweaponry:celestialite_rock"
+  },
+  "result": "moreweaponry:celestialite_ingot",
+  "experience": 0.35,
+  "cookingtime": 50
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "tag": "moreweaponry:celestialite_ingot"
+    }
+  },
+  "result": {
+    "item": "moreweaponry:celestialite_plate",
+    "count": 2
+  }
+}
