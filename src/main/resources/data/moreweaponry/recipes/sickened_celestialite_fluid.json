@@ -1,0 +1,14 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "moreweaponry:life_core"
+    },
+    {
+      "item": "moreweaponry:reinforced_celestialite_bucket"
+    }
+  ],
+  "result": {
+    "item": "moreweaponry:sickened_infused_celestialite"
+  }
+}

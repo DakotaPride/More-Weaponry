@@ -1,0 +1,14 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "moreweaponry:forgotten_music_sheet"
+    },
+    {
+      "item": "moreweaponry:reinforced_celestialite_bucket"
+    }
+  ],
+  "result": {
+    "item": "moreweaponry:bard_infused_celestialite"
+  }
+}

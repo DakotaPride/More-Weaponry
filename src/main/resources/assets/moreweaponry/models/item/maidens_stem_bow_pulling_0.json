@@ -1,6 +1,0 @@
-{
-  "parent": "moreweaponry:item/maidens_stem_bow",
-  "textures": {
-    "layer0": "moreweaponry:item/maidens_stem_bow_pulling_0"
-  }
-}

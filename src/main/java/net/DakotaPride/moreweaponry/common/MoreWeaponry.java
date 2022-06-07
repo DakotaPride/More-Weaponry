@@ -15,9 +15,10 @@ import net.DakotaPride.moreweaponry.common.effect.celestial.*;
 import net.DakotaPride.moreweaponry.common.effect.unfortuned.*;
 import net.DakotaPride.moreweaponry.common.enchantments.*;
 import net.DakotaPride.moreweaponry.common.entity.custom.*;
-import net.DakotaPride.moreweaponry.common.fluid.CelestialiteFluid;
+import net.DakotaPride.moreweaponry.common.fluid.*;
 import net.DakotaPride.moreweaponry.common.item.items.ReinforcedBucketItem;
 import net.DakotaPride.moreweaponry.common.item.items.*;
+import net.DakotaPride.moreweaponry.common.item.items.artifacts.RareArtifactItem;
 import net.DakotaPride.moreweaponry.common.item.items.bard_tools.*;
 import net.DakotaPride.moreweaponry.common.item.items.blessed_tools.BlessedArmorItem;
 import net.DakotaPride.moreweaponry.common.item.items.celestial_madalian.*;
@@ -483,22 +484,22 @@ public class MoreWeaponry implements ModInitializer {
 	public static WatcherCelestialMedallionItem CELESTIAL_MEDALLION_WATCHER;
 
 	public static Item BARD_STEM;
-	public static Item FORGOTTEN_MUSIC_SHEET;
-	public static Item BARD_INFUSED_CELESTIALITE;
+	public static RareArtifactItem FORGOTTEN_MUSIC_SHEET;
+	public static ReinforcedBucketItem BARD_INFUSED_CELESTIALITE;
 
-	public static Item CORRUPTED_EYE_OF_ENDER;
-	public static Item WATCHER_INFUSED_CELESTIALITE;
+	public static RareArtifactItem CORRUPTED_EYE_OF_ENDER;
+	public static ReinforcedBucketItem WATCHER_INFUSED_CELESTIALITE;
 
-	public static Item POISONOUS_FANG;
-	public static Item WANDERER_INFUSED_CELESTIALITE;
+	public static RareArtifactItem POISONOUS_FANG;
+	public static ReinforcedBucketItem WANDERER_INFUSED_CELESTIALITE;
 
-	public static Item LIFE_CORE;
-	public static Item SICKENED_INFUSED_CELESTIALITE;
-	public static Item DUSTED_LIFE_CORE;
-	public static Item SICKENED_HUSK_INFUSED_CELESTIALITE;
+	public static RareArtifactItem LIFE_CORE;
+	public static ReinforcedBucketItem SICKENED_INFUSED_CELESTIALITE;
+	public static RareArtifactItem DUSTED_LIFE_CORE;
+	public static ReinforcedBucketItem SICKENED_HUSK_INFUSED_CELESTIALITE;
 
-	public static Item TICKING_HEART;
-	public static Item CRACKLER_INFUSED_CELESTIALITE;
+	public static RareArtifactItem TICKING_HEART;
+	public static ReinforcedBucketItem CRACKLER_INFUSED_CELESTIALITE;
 
 	public static Item CELESTIALITE_REMNANT;
 	public static Item CELESTIALITE_ROCK;
@@ -510,6 +511,23 @@ public class MoreWeaponry implements ModInitializer {
 	// Fluids
 	public static FlowableFluid CELESTIALITE_STILL;
 	public static FlowableFluid CELESTIALITE_FLOWING;
+
+	public static FlowableFluid BARD_CELESTIALITE_STILL;
+	public static FlowableFluid BARD_CELESTIALITE_FLOWING;
+
+	public static FlowableFluid CRACKLER_CELESTIALITE_STILL;
+	public static FlowableFluid CRACKLER_CELESTIALITE_FLOWING;
+
+	public static FlowableFluid WATCHER_CELESTIALITE_STILL;
+	public static FlowableFluid WATCHER_CELESTIALITE_FLOWING;
+
+	public static FlowableFluid SICKENED_CELESTIALITE_STILL;
+	public static FlowableFluid SICKENED_CELESTIALITE_FLOWING;
+	public static FlowableFluid SICKENED_HUSK_CELESTIALITE_STILL;
+	public static FlowableFluid SICKENED_HUSK_CELESTIALITE_FLOWING;
+
+	public static FlowableFluid WANDERER_CELESTIALITE_STILL;
+	public static FlowableFluid WANDERER_CELESTIALITE_FLOWING;
 
 	// Fluid Generation
 	public static LakeFeature CELESTIALITE_GROUNDS;
@@ -615,6 +633,12 @@ public class MoreWeaponry implements ModInitializer {
 	public static WallSignBlock FRODON_WALL_SIGN;
 	public static SignBlock FRODON_SIGN_BLOCK;
 	public static FluidBlock CELESTIALITE_FLUID_BLOCK;
+	public static FluidBlock WATCHER_CELESTIALITE_FLUID_BLOCK;
+	public static FluidBlock WANDERER_CELESTIALITE_FLUID_BLOCK;
+	public static FluidBlock SICKENED_CELESTIALITE_FLUID_BLOCK;
+	public static FluidBlock SICKENED_HUSK_CELESTIALITE_FLUID_BLOCK;
+	public static FluidBlock CRACKLER_CELESTIALITE_FLUID_BLOCK;
+	public static FluidBlock BARD_CELESTIALITE_FLUID_BLOCK;
 
 	// Armor Materials
 	public enum MoreWeaponryArmorMaterials implements ArmorMaterial
@@ -1012,20 +1036,50 @@ public class MoreWeaponry implements ModInitializer {
 		CELESTIALITE_FLOWING = registerFluid("celestialite_flowing",
 				new CelestialiteFluid.Flowing());
 
+		BARD_CELESTIALITE_STILL = registerFluid("bard_celestialite_still",
+				new BardCelestialiteFluid.Still());
+		BARD_CELESTIALITE_FLOWING = registerFluid("bard_celestialite_flowing",
+				new BardCelestialiteFluid.Flowing());
+
+		WATCHER_CELESTIALITE_STILL = registerFluid("watcher_celestialite_still",
+				new WatcherCelestialiteFluid.Still());
+		WATCHER_CELESTIALITE_FLOWING = registerFluid("watcher_celestialite_flowing",
+				new WatcherCelestialiteFluid.Flowing());
+
+		WANDERER_CELESTIALITE_STILL = registerFluid("wanderer_celestialite_still",
+				new WandererCelestialiteFluid.Still());
+		WANDERER_CELESTIALITE_FLOWING = registerFluid("wanderer_celestialite_flowing",
+				new WandererCelestialiteFluid.Flowing());
+
+		SICKENED_CELESTIALITE_STILL = registerFluid("sickened_celestialite_still",
+				new SickenedCelestialiteFluid.Still());
+		SICKENED_CELESTIALITE_FLOWING = registerFluid("sickened_celestialite_flowing",
+				new SickenedCelestialiteFluid.Flowing());
+		SICKENED_HUSK_CELESTIALITE_STILL = registerFluid("sickened_husk_celestialite_still",
+				new SickenedHuskCelestialiteFluid.Still());
+		SICKENED_HUSK_CELESTIALITE_FLOWING = registerFluid("sickened_husk_celestialite_flowing",
+				new SickenedHuskCelestialiteFluid.Flowing());
+
+		CRACKLER_CELESTIALITE_STILL = registerFluid("crackler_celestialite_still",
+				new CracklerCelestialiteFluid.Still());
+		CRACKLER_CELESTIALITE_FLOWING = registerFluid("crackler_celestialite_flowing",
+				new CracklerCelestialiteFluid.Flowing());
+
+
 		CONTAINED_CELESTIALITE = registerItem("reinforced_celestialite_bucket",
 				new ReinforcedBucketItem(CELESTIALITE_STILL, new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 		BARD_INFUSED_CELESTIALITE = registerItem("bard_infused_celestialite",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new ReinforcedBucketItem(BARD_CELESTIALITE_STILL, new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 		CRACKLER_INFUSED_CELESTIALITE = registerItem("crackler_infused_celestialite",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new ReinforcedBucketItem(CRACKLER_CELESTIALITE_STILL, new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 		WANDERER_INFUSED_CELESTIALITE = registerItem("wanderer_infused_celestialite",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new ReinforcedBucketItem(WANDERER_CELESTIALITE_STILL, new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 		SICKENED_INFUSED_CELESTIALITE = registerItem("sickened_infused_celestialite",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new ReinforcedBucketItem(SICKENED_CELESTIALITE_STILL, new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 		SICKENED_HUSK_INFUSED_CELESTIALITE = registerItem("sickened_husk_infused_celestialite",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new ReinforcedBucketItem(SICKENED_HUSK_CELESTIALITE_STILL, new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 		WATCHER_INFUSED_CELESTIALITE = registerItem("watcher_infused_celestialite",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new ReinforcedBucketItem(WATCHER_CELESTIALITE_STILL, new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 
 		REINFORCED_BUCKET = registerItem("reinforced_bucket",
 				new ReinforcedBucketItem(Fluids.EMPTY, new FabricItemSettings().fireproof().maxCount(16).group(MORE_WEAPONRY_GROUP)));
@@ -1415,6 +1469,26 @@ public class MoreWeaponry implements ModInitializer {
 		CELESTIALITE_FLUID_BLOCK = registerBlockWithoutBlockItem("celestialite_fluid_block",
 				new FluidBlock(CELESTIALITE_STILL, FabricBlockSettings.copy(Blocks.WATER)
 						.nonOpaque().noCollision().dropsNothing()));
+
+		WATCHER_CELESTIALITE_FLUID_BLOCK = registerBlockWithoutBlockItem("watcher_celestialite_fluid_block",
+				new FluidBlock(WATCHER_CELESTIALITE_STILL, FabricBlockSettings.copy(Blocks.WATER)
+						.nonOpaque().noCollision().dropsNothing()));
+		WANDERER_CELESTIALITE_FLUID_BLOCK = registerBlockWithoutBlockItem("wanderer_celestialite_fluid_block",
+				new FluidBlock(WANDERER_CELESTIALITE_STILL, FabricBlockSettings.copy(Blocks.WATER)
+						.nonOpaque().noCollision().dropsNothing()));
+		BARD_CELESTIALITE_FLUID_BLOCK = registerBlockWithoutBlockItem("bard_celestialite_fluid_block",
+				new FluidBlock(BARD_CELESTIALITE_STILL, FabricBlockSettings.copy(Blocks.WATER)
+						.nonOpaque().noCollision().dropsNothing()));
+		SICKENED_CELESTIALITE_FLUID_BLOCK = registerBlockWithoutBlockItem("sickened_celestialite_fluid_block",
+				new FluidBlock(SICKENED_CELESTIALITE_STILL, FabricBlockSettings.copy(Blocks.WATER)
+						.nonOpaque().noCollision().dropsNothing()));
+		SICKENED_HUSK_CELESTIALITE_FLUID_BLOCK = registerBlockWithoutBlockItem("sickened_husk_celestialite_fluid_block",
+				new FluidBlock(SICKENED_HUSK_CELESTIALITE_STILL, FabricBlockSettings.copy(Blocks.WATER)
+						.nonOpaque().noCollision().dropsNothing()));
+		CRACKLER_CELESTIALITE_FLUID_BLOCK = registerBlockWithoutBlockItem("crackler_celestialite_fluid_block",
+				new FluidBlock(CRACKLER_CELESTIALITE_STILL, FabricBlockSettings.copy(Blocks.WATER)
+						.nonOpaque().noCollision().dropsNothing()));
+
 		CELESTIALITE_ROCK_ORE = registerBlock("celestialite_rock_ore",
 				new OreBlock(FabricBlockSettings.copy(Blocks.DEEPSLATE_DIAMOND_ORE)));
 		
@@ -2036,7 +2110,7 @@ public class MoreWeaponry implements ModInitializer {
 				new SpawnEggItem(LEECH_ENTITY, 0xEAFFCC, 0xD4F2A7,
 						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 		LURKER_SPAWN_EGG = registerItem("lurker_spawn_egg",
-				new SpawnEggItem(LURKER_ENTITY, 0xD4F2A7, 0x32223A,
+				new SpawnEggItem(LURKER_ENTITY, 0x473951, 0x32223A,
 						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 		SICKENED_HUSK_SPAWN_EGG = registerItem("sickened_husk_spawn_egg",
 				new SpawnEggItem(SICKENED_HUSK_ENTITY, 0xCEB686, 0x8C7A62,
@@ -2117,7 +2191,7 @@ public class MoreWeaponry implements ModInitializer {
 		CELESTIALITE_REMNANT = registerItem("celestialite_remnant",
 				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 		FORGOTTEN_MUSIC_SHEET = registerItem("forgotten_music_sheet",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new RareArtifactItem(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 		CELESTIALITE_ROCK = registerItem("celestialite_rock",
 				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 		CELESTIALITE_INGOT = registerItem("celestialite_ingot",
@@ -2125,15 +2199,15 @@ public class MoreWeaponry implements ModInitializer {
 		CELESTIALITE_PLATE = registerItem("celestialite_plate",
 				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 		CORRUPTED_EYE_OF_ENDER = registerItem("corrupted_ender_eye",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new RareArtifactItem(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 		POISONOUS_FANG = registerItem("poisonous_fang",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new RareArtifactItem(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 		LIFE_CORE = registerItem("life_core",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new RareArtifactItem(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 		DUSTED_LIFE_CORE = registerItem("dusted_life_core",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new RareArtifactItem(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 		TICKING_HEART = registerItem("ticking_heart",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new RareArtifactItem(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 
 
 		// Sound Events

@@ -1,0 +1,14 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "moreweaponry:corrupted_ender_eye"
+    },
+    {
+      "item": "moreweaponry:reinforced_celestialite_bucket"
+    }
+  ],
+  "result": {
+    "item": "moreweaponry:watcher_infused_celestialite"
+  }
+}

@@ -38,7 +38,7 @@
         {
           "type": "minecraft:item",
           "weight": 60,
-          "name": "moreweaponry:maiden_stem",
+          "name": "moreweaponry:bard_stem",
           "functions": [
             {
               "function": "minecraft:set_count",

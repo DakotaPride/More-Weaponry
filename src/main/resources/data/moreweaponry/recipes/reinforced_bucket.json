@@ -1,0 +1,14 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:bucket"
+    },
+    {
+      "item": "moreweaponry:reinforced_bone"
+    }
+  ],
+  "result": {
+    "item": "moreweaponry:reinforced_bucket"
+  }
+}

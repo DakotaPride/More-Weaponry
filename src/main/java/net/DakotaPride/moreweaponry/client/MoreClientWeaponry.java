@@ -64,6 +64,67 @@ public class MoreClientWeaponry implements ClientModInitializer {
                         SimpleFluidRenderHandler.WATER_FLOWING,
                         SimpleFluidRenderHandler.WATER_OVERLAY, 0xFFF499));
 
+
+        FluidRenderHandlerRegistry.INSTANCE.register(MoreWeaponry.BARD_CELESTIALITE_STILL,
+                new SimpleFluidRenderHandler(SimpleFluidRenderHandler.WATER_STILL,
+                        SimpleFluidRenderHandler.WATER_FLOWING,
+                        SimpleFluidRenderHandler.WATER_OVERLAY, 0x8185E8));
+
+        FluidRenderHandlerRegistry.INSTANCE.register(MoreWeaponry.BARD_CELESTIALITE_FLOWING,
+                new SimpleFluidRenderHandler(SimpleFluidRenderHandler.WATER_STILL,
+                        SimpleFluidRenderHandler.WATER_FLOWING,
+                        SimpleFluidRenderHandler.WATER_OVERLAY, 0x8185E8));
+
+        FluidRenderHandlerRegistry.INSTANCE.register(MoreWeaponry.CRACKLER_CELESTIALITE_STILL,
+                new SimpleFluidRenderHandler(SimpleFluidRenderHandler.WATER_STILL,
+                        SimpleFluidRenderHandler.WATER_FLOWING,
+                        SimpleFluidRenderHandler.WATER_OVERLAY, 0xAAE59C));
+
+        FluidRenderHandlerRegistry.INSTANCE.register(MoreWeaponry.CRACKLER_CELESTIALITE_FLOWING,
+                new SimpleFluidRenderHandler(SimpleFluidRenderHandler.WATER_STILL,
+                        SimpleFluidRenderHandler.WATER_FLOWING,
+                        SimpleFluidRenderHandler.WATER_OVERLAY, 0xAAE59C));
+
+        FluidRenderHandlerRegistry.INSTANCE.register(MoreWeaponry.WANDERER_CELESTIALITE_STILL,
+                new SimpleFluidRenderHandler(SimpleFluidRenderHandler.WATER_STILL,
+                        SimpleFluidRenderHandler.WATER_FLOWING,
+                        SimpleFluidRenderHandler.WATER_OVERLAY, 0xAF6960));
+
+        FluidRenderHandlerRegistry.INSTANCE.register(MoreWeaponry.WANDERER_CELESTIALITE_FLOWING,
+                new SimpleFluidRenderHandler(SimpleFluidRenderHandler.WATER_STILL,
+                        SimpleFluidRenderHandler.WATER_FLOWING,
+                        SimpleFluidRenderHandler.WATER_OVERLAY, 0xAF6960));
+
+        FluidRenderHandlerRegistry.INSTANCE.register(MoreWeaponry.WATCHER_CELESTIALITE_STILL,
+                new SimpleFluidRenderHandler(SimpleFluidRenderHandler.WATER_STILL,
+                        SimpleFluidRenderHandler.WATER_FLOWING,
+                        SimpleFluidRenderHandler.WATER_OVERLAY, 0x420059));
+
+        FluidRenderHandlerRegistry.INSTANCE.register(MoreWeaponry.WATCHER_CELESTIALITE_FLOWING,
+                new SimpleFluidRenderHandler(SimpleFluidRenderHandler.WATER_STILL,
+                        SimpleFluidRenderHandler.WATER_FLOWING,
+                        SimpleFluidRenderHandler.WATER_OVERLAY, 0x420059));
+
+        FluidRenderHandlerRegistry.INSTANCE.register(MoreWeaponry.SICKENED_CELESTIALITE_STILL,
+                new SimpleFluidRenderHandler(SimpleFluidRenderHandler.WATER_STILL,
+                        SimpleFluidRenderHandler.WATER_FLOWING,
+                        SimpleFluidRenderHandler.WATER_OVERLAY, 0x4A8442));
+
+        FluidRenderHandlerRegistry.INSTANCE.register(MoreWeaponry.SICKENED_CELESTIALITE_FLOWING,
+                new SimpleFluidRenderHandler(SimpleFluidRenderHandler.WATER_STILL,
+                        SimpleFluidRenderHandler.WATER_FLOWING,
+                        SimpleFluidRenderHandler.WATER_OVERLAY, 0x4A8442));
+
+        FluidRenderHandlerRegistry.INSTANCE.register(MoreWeaponry.SICKENED_HUSK_CELESTIALITE_STILL,
+                new SimpleFluidRenderHandler(SimpleFluidRenderHandler.WATER_STILL,
+                        SimpleFluidRenderHandler.WATER_FLOWING,
+                        SimpleFluidRenderHandler.WATER_OVERLAY, 0xD3BA89));
+
+        FluidRenderHandlerRegistry.INSTANCE.register(MoreWeaponry.SICKENED_HUSK_CELESTIALITE_FLOWING,
+                new SimpleFluidRenderHandler(SimpleFluidRenderHandler.WATER_STILL,
+                        SimpleFluidRenderHandler.WATER_FLOWING,
+                        SimpleFluidRenderHandler.WATER_OVERLAY, 0xD3BA89));
+
         EntityRendererRegistry.INSTANCE.register(MoreWeaponry.IRON_BOLT, IronBoltEntityRenderer::new);
 
         // ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex)

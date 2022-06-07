@@ -8,10 +8,8 @@ import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.fluid.FlowableFluid;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;
-import net.minecraft.fluid.WaterFluid;
 import net.minecraft.item.Item;
 import net.minecraft.particle.ParticleEffect;
-import net.minecraft.particle.ParticleTypes;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
@@ -28,21 +26,21 @@ import org.jetbrains.annotations.Nullable;
 import java.util.Optional;
 import java.util.Random;
 
-public abstract class CelestialiteFluid extends FlowableFluid {
+public abstract class SickenedCelestialiteFluid extends FlowableFluid {
 
     @Override
     public Fluid getFlowing() {
-        return MoreWeaponry.CELESTIALITE_FLOWING;
+        return MoreWeaponry.SICKENED_CELESTIALITE_FLOWING;
     }
 
     @Override
     public Fluid getStill() {
-        return MoreWeaponry.CELESTIALITE_STILL;
+        return MoreWeaponry.SICKENED_CELESTIALITE_STILL;
     }
 
     @Override
     public Item getBucketItem() {
-        return MoreWeaponry.CONTAINED_CELESTIALITE;
+        return MoreWeaponry.SICKENED_INFUSED_CELESTIALITE;
     }
 
     @Override
@@ -88,12 +86,12 @@ public abstract class CelestialiteFluid extends FlowableFluid {
 
     @Override
     public BlockState toBlockState(FluidState state) {
-        return MoreWeaponry.CELESTIALITE_FLUID_BLOCK.getDefaultState().with(FluidBlock.LEVEL, getBlockStateLevel(state));
+        return MoreWeaponry.SICKENED_CELESTIALITE_FLUID_BLOCK.getDefaultState().with(FluidBlock.LEVEL, getBlockStateLevel(state));
     }
 
     @Override
     public boolean matchesType(Fluid fluid) {
-        return fluid == MoreWeaponry.CELESTIALITE_STILL || fluid == MoreWeaponry.CELESTIALITE_FLOWING;
+        return fluid == MoreWeaponry.SICKENED_CELESTIALITE_STILL || fluid == MoreWeaponry.SICKENED_CELESTIALITE_FLOWING;
     }
 
     @Override
@@ -121,7 +119,7 @@ public abstract class CelestialiteFluid extends FlowableFluid {
         return Optional.of(SoundEvents.BLOCK_ENCHANTMENT_TABLE_USE);
     }
 
-    public static class Flowing extends CelestialiteFluid {
+    public static class Flowing extends SickenedCelestialiteFluid {
 
         protected void appendProperties(StateManager.Builder<Fluid, FluidState> builder) {
             super.appendProperties(builder);
@@ -137,7 +135,7 @@ public abstract class CelestialiteFluid extends FlowableFluid {
         }
     }
 
-    public static class Still extends CelestialiteFluid {
+    public static class Still extends SickenedCelestialiteFluid {
 
         public int getLevel(FluidState state) {
             return 8;

@@ -1,0 +1,14 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "moreweaponry:ticking_heart"
+    },
+    {
+      "item": "moreweaponry:reinforced_celestialite_bucket"
+    }
+  ],
+  "result": {
+    "item": "moreweaponry:crackler_infused_celestialite"
+  }
+}

@@ -1,7 +1,7 @@
 package net.DakotaPride.moreweaponry.common.item.items;
 
 import net.DakotaPride.moreweaponry.common.MoreWeaponry;
-import net.DakotaPride.moreweaponry.common.fluid.CelestialiteFluid;
+import net.DakotaPride.moreweaponry.common.fluid.*;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.block.*;
@@ -32,6 +32,12 @@ public class ReinforcedBucketItem extends Item
         implements FluidModificationItem {
     private final Fluid fluid;
     private CelestialiteFluid celestialiteFluid;
+    private BardCelestialiteFluid bardCelestialiteFluid;
+    private WatcherCelestialiteFluid watcherCelestialiteFluid;
+    private WandererCelestialiteFluid wandererCelestialiteFluid;
+    private SickenedCelestialiteFluid sickenedCelestialiteFluid;
+    private SickenedHuskCelestialiteFluid sickenedHuskCelestialiteFluid;
+    private CracklerCelestialiteFluid cracklerCelestialiteFluid;
 
     public ReinforcedBucketItem(Fluid fluid, FabricItemSettings settings) {
         super(settings);
@@ -70,7 +76,24 @@ public class ReinforcedBucketItem extends Item
                 return TypedActionResult.fail(itemStack);
             }
             BlockState blockState = world.getBlockState(blockPos);
-            BlockPos blockPos3 = fluidDrainable = blockState.getBlock() instanceof FluidFillable && this.fluid == MoreWeaponry.CELESTIALITE_STILL ? blockPos : blockPos2;
+            BlockPos celestialiteBlockPos = fluidDrainable = blockState.getBlock() instanceof FluidFillable && this.fluid == MoreWeaponry.CELESTIALITE_STILL ? blockPos : blockPos2;
+
+            BlockPos CelestialiteBlockPos = fluidDrainable = blockState.getBlock() instanceof FluidFillable && this.fluid == MoreWeaponry.CELESTIALITE_STILL ? blockPos : blockPos2;
+            BlockPos BardCelestialiteBlockPos = fluidDrainable = blockState.getBlock() instanceof FluidFillable && this.fluid == MoreWeaponry.BARD_CELESTIALITE_STILL ? blockPos : blockPos2;
+            BlockPos CracklerCelestialiteBlockPos = fluidDrainable = blockState.getBlock() instanceof FluidFillable && this.fluid == MoreWeaponry.CRACKLER_CELESTIALITE_STILL ? blockPos : blockPos2;
+            BlockPos WandererCelestialiteBlockPos = fluidDrainable = blockState.getBlock() instanceof FluidFillable && this.fluid == MoreWeaponry.WANDERER_CELESTIALITE_STILL ? blockPos : blockPos2;
+            BlockPos WatcherCelestialiteBlockPos = fluidDrainable = blockState.getBlock() instanceof FluidFillable && this.fluid == MoreWeaponry.WATCHER_CELESTIALITE_STILL ? blockPos : blockPos2;
+            BlockPos SickenedCelestialiteBlockPos = fluidDrainable = blockState.getBlock() instanceof FluidFillable && this.fluid == MoreWeaponry.SICKENED_CELESTIALITE_STILL ? blockPos : blockPos2;
+            BlockPos SickenedHuskCelestialiteBlockPos = fluidDrainable = blockState.getBlock() instanceof FluidFillable && this.fluid == MoreWeaponry.SICKENED_HUSK_CELESTIALITE_STILL ? blockPos : blockPos2;
+            if (this.placeFluid(user, world, fluidDrainable, blockHitResult)) {
+                this.onEmptied(user, world, itemStack, fluidDrainable);
+                if (user instanceof ServerPlayerEntity) {
+                    Criteria.PLACED_BLOCK.trigger((ServerPlayerEntity) user, fluidDrainable, itemStack);
+                }
+                user.incrementStat(Stats.USED.getOrCreateStat(this));
+                return TypedActionResult.success(ReinforcedBucketItem.getEmptiedStack(itemStack, user), world.isClient());
+            }
+
             if (this.placeFluid(user, world, fluidDrainable, blockHitResult)) {
                 this.onEmptied(user, world, itemStack, fluidDrainable);
                 if (user instanceof ServerPlayerEntity) {
@@ -110,6 +133,37 @@ public class ReinforcedBucketItem extends Item
             return hitResult != null && this.placeFluid(player, world, hitResult.getBlockPos().offset(hitResult.getSide()), null);
         }
         if (block instanceof FluidFillable && this.fluid == MoreWeaponry.CELESTIALITE_STILL) {
+            ((FluidFillable) ((Object) block)).tryFillWithFluid(world, pos, blockState, ((FlowableFluid) this.fluid).getStill(false));
+            this.playEmptyingSound(player, world, pos);
+            return true;
+        }
+
+        if (block instanceof FluidFillable && this.fluid == MoreWeaponry.BARD_CELESTIALITE_STILL) {
+            ((FluidFillable) ((Object) block)).tryFillWithFluid(world, pos, blockState, ((FlowableFluid) this.fluid).getStill(false));
+            this.playEmptyingSound(player, world, pos);
+            return true;
+        }
+        if (block instanceof FluidFillable && this.fluid == MoreWeaponry.CRACKLER_CELESTIALITE_STILL) {
+            ((FluidFillable) ((Object) block)).tryFillWithFluid(world, pos, blockState, ((FlowableFluid) this.fluid).getStill(false));
+            this.playEmptyingSound(player, world, pos);
+            return true;
+        }
+        if (block instanceof FluidFillable && this.fluid == MoreWeaponry.WANDERER_CELESTIALITE_STILL) {
+            ((FluidFillable) ((Object) block)).tryFillWithFluid(world, pos, blockState, ((FlowableFluid) this.fluid).getStill(false));
+            this.playEmptyingSound(player, world, pos);
+            return true;
+        }
+        if (block instanceof FluidFillable && this.fluid == MoreWeaponry.WATCHER_CELESTIALITE_STILL) {
+            ((FluidFillable) ((Object) block)).tryFillWithFluid(world, pos, blockState, ((FlowableFluid) this.fluid).getStill(false));
+            this.playEmptyingSound(player, world, pos);
+            return true;
+        }
+        if (block instanceof FluidFillable && this.fluid == MoreWeaponry.SICKENED_CELESTIALITE_STILL) {
+            ((FluidFillable) ((Object) block)).tryFillWithFluid(world, pos, blockState, ((FlowableFluid) this.fluid).getStill(false));
+            this.playEmptyingSound(player, world, pos);
+            return true;
+        }
+        if (block instanceof FluidFillable && this.fluid == MoreWeaponry.SICKENED_HUSK_CELESTIALITE_STILL) {
             ((FluidFillable) ((Object) block)).tryFillWithFluid(world, pos, blockState, ((FlowableFluid) this.fluid).getStill(false));
             this.playEmptyingSound(player, world, pos);
             return true;
