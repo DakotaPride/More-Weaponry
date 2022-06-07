@@ -87,54 +87,42 @@ public abstract class LivingEntityMixin extends Entity implements ILivingEntityM
 
         if (this.getOffHandStack().isOf(MoreWeaponry.POISONOUS_FANG)) {
             if (!this.hasStatusEffect(MoreWeaponry.COLD_BLOODED)) {
-                this.addStatusEffect(new StatusEffectInstance(MoreWeaponry.COLD_BLOODED));
+                this.addStatusEffect(new StatusEffectInstance(MoreWeaponry.COLD_BLOODED, 100, 1));
             }
             if (this.hasStatusEffect(MoreWeaponry.COLD_BLOODED)) {
                 this.removeStatusEffect(StatusEffects.POISON);
                 this.removeStatusEffect(StatusEffects.WITHER);
             }
-        } else if (!this.getOffHandStack().isOf(MoreWeaponry.POISONOUS_FANG)) {
-            this.removeStatusEffect(MoreWeaponry.COLD_BLOODED);
         }
 
         if (this.getOffHandStack().isOf(MoreWeaponry.FORGOTTEN_MUSIC_SHEET)) {
             if (!this.hasStatusEffect(StatusEffects.REGENERATION)) {
-                this.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION));
+                this.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 100, 1));
             }
-        } else if (!this.getOffHandStack().isOf(MoreWeaponry.FORGOTTEN_MUSIC_SHEET)) {
-            this.removeStatusEffect(StatusEffects.REGENERATION);
         }
 
         if (this.getOffHandStack().isOf(MoreWeaponry.TICKING_HEART)) {
             if (!this.hasStatusEffect(StatusEffects.RESISTANCE)) {
-                this.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE));
+                this.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 100, 1));
             }
-        } else if (!this.getOffHandStack().isOf(MoreWeaponry.TICKING_HEART)) {
-            this.removeStatusEffect(StatusEffects.RESISTANCE);
         }
 
         if (this.getOffHandStack().isOf(MoreWeaponry.CORRUPTED_EYE_OF_ENDER)) {
             if (!this.hasStatusEffect(StatusEffects.STRENGTH)) {
-                this.addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH));
+                this.addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 100, 1));
             }
-        } else if (!this.getOffHandStack().isOf(MoreWeaponry.CORRUPTED_EYE_OF_ENDER)) {
-            this.removeStatusEffect(StatusEffects.STRENGTH);
         }
 
         if (this.getOffHandStack().isOf(MoreWeaponry.LIFE_CORE)) {
             if (!this.hasStatusEffect(StatusEffects.SPEED)) {
-                this.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED));
+                this.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 100, 1));
             }
-        } else if (!this.getOffHandStack().isOf(MoreWeaponry.LIFE_CORE)) {
-            this.removeStatusEffect(StatusEffects.SPEED);
         }
 
         if (this.getOffHandStack().isOf(MoreWeaponry.DUSTED_LIFE_CORE)) {
             if (!this.hasStatusEffect(StatusEffects.FIRE_RESISTANCE)) {
-                this.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE));
+                this.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 100, 1));
             }
-        } else if (!this.getOffHandStack().isOf(MoreWeaponry.DUSTED_LIFE_CORE)) {
-            this.removeStatusEffect(StatusEffects.FIRE_RESISTANCE);
         }
 
 

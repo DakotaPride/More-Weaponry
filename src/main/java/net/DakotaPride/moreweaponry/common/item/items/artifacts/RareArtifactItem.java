@@ -40,22 +40,22 @@ public class RareArtifactItem extends Item {
     public static StatusEffectInstance getArtifactEffect(ArtifactItemList type) {
         switch (type) {
             case WATCHER -> {
-                return new StatusEffectInstance(StatusEffects.STRENGTH, 10000, 0);
+                return new StatusEffectInstance(StatusEffects.STRENGTH, 600, 0);
             }
             case BARD -> {
-                return new StatusEffectInstance(StatusEffects.REGENERATION, 8000, 0);
+                return new StatusEffectInstance(StatusEffects.REGENERATION, 400, 0);
             }
             case CRACKLER -> {
-                return new StatusEffectInstance(StatusEffects.RESISTANCE, 7000, 0);
+                return new StatusEffectInstance(StatusEffects.RESISTANCE, 500, 0);
             }
             case WANDERER -> {
-                return new StatusEffectInstance(MoreWeaponry.COLD_BLOODED, 9000, 0);
+                return new StatusEffectInstance(MoreWeaponry.COLD_BLOODED, 800, 0);
             }
             case SICKENED -> {
-                return new StatusEffectInstance(StatusEffects.SPEED, 5000, 0);
+                return new StatusEffectInstance(StatusEffects.SPEED, 500, 0);
             }
             case SICKENED_HUSK -> {
-                return new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 6000, 0);
+                return new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 400, 0);
             }
         }
 
