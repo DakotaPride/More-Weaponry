@@ -2,7 +2,6 @@ package net.DakotaPride.moreweaponry.common.item.items.artifacts;
 
 import net.DakotaPride.moreweaponry.common.MoreWeaponry;
 import net.minecraft.client.item.TooltipContext;
-import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
@@ -17,8 +16,6 @@ import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
-
-import static java.lang.Boolean.TYPE;
 
 public class RareArtifactItem extends Item {
     public RareArtifactItem(Settings settings) {
@@ -43,22 +40,22 @@ public class RareArtifactItem extends Item {
     public static StatusEffectInstance getArtifactEffect(ArtifactItemList type) {
         switch (type) {
             case WATCHER -> {
-                return new StatusEffectInstance(StatusEffects.STRENGTH, 10000, 2);
+                return new StatusEffectInstance(StatusEffects.STRENGTH, 10000, 0);
             }
             case BARD -> {
-                return new StatusEffectInstance(StatusEffects.REGENERATION, 8000, 2);
+                return new StatusEffectInstance(StatusEffects.REGENERATION, 8000, 0);
             }
             case CRACKLER -> {
-                return new StatusEffectInstance(StatusEffects.RESISTANCE, 7000, 2);
+                return new StatusEffectInstance(StatusEffects.RESISTANCE, 7000, 0);
             }
             case WANDERER -> {
-                return new StatusEffectInstance(MoreWeaponry.COLD_BLOODED, 9000, 2);
+                return new StatusEffectInstance(MoreWeaponry.COLD_BLOODED, 9000, 0);
             }
             case SICKENED -> {
-                return new StatusEffectInstance(StatusEffects.SPEED, 5000, 2);
+                return new StatusEffectInstance(StatusEffects.SPEED, 5000, 0);
             }
             case SICKENED_HUSK -> {
-                return new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 6000, 2);
+                return new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 6000, 0);
             }
         }
 

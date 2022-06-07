@@ -12,6 +12,7 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.world.World;
@@ -37,6 +38,12 @@ public abstract class LivingEntityMixin extends Entity implements ILivingEntityM
     @Shadow public abstract boolean hasStatusEffect(StatusEffect effect);
 
     @Shadow public abstract boolean addStatusEffect(StatusEffectInstance effect, @Nullable Entity source);
+
+    @Shadow public abstract boolean isHolding(Item item);
+
+    @Shadow public abstract ItemStack getOffHandStack();
+
+    @Shadow protected abstract void removeSoulSpeedBoost();
 
     @Inject(method = "tick", at = @At("HEAD"))
     private void tick(CallbackInfo ci) {
@@ -76,10 +83,61 @@ public abstract class LivingEntityMixin extends Entity implements ILivingEntityM
             this.damage(MoreWeaponryDamageSource.BLEEDING, 0.6F);
         }
 
-        if (this.hasStatusEffect(MoreWeaponry.COLD_BLOODED)) {
-            this.removeStatusEffect(StatusEffects.POISON);
-            this.removeStatusEffect(StatusEffects.WITHER);
+
+
+        if (this.getOffHandStack().isOf(MoreWeaponry.POISONOUS_FANG)) {
+            if (!this.hasStatusEffect(MoreWeaponry.COLD_BLOODED)) {
+                this.addStatusEffect(new StatusEffectInstance(MoreWeaponry.COLD_BLOODED));
+            }
+            if (this.hasStatusEffect(MoreWeaponry.COLD_BLOODED)) {
+                this.removeStatusEffect(StatusEffects.POISON);
+                this.removeStatusEffect(StatusEffects.WITHER);
+            }
+        } else if (!this.getOffHandStack().isOf(MoreWeaponry.POISONOUS_FANG)) {
+            this.removeStatusEffect(MoreWeaponry.COLD_BLOODED);
         }
+
+        if (this.getOffHandStack().isOf(MoreWeaponry.FORGOTTEN_MUSIC_SHEET)) {
+            if (!this.hasStatusEffect(StatusEffects.REGENERATION)) {
+                this.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION));
+            }
+        } else if (!this.getOffHandStack().isOf(MoreWeaponry.FORGOTTEN_MUSIC_SHEET)) {
+            this.removeStatusEffect(StatusEffects.REGENERATION);
+        }
+
+        if (this.getOffHandStack().isOf(MoreWeaponry.TICKING_HEART)) {
+            if (!this.hasStatusEffect(StatusEffects.RESISTANCE)) {
+                this.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE));
+            }
+        } else if (!this.getOffHandStack().isOf(MoreWeaponry.TICKING_HEART)) {
+            this.removeStatusEffect(StatusEffects.RESISTANCE);
+        }
+
+        if (this.getOffHandStack().isOf(MoreWeaponry.CORRUPTED_EYE_OF_ENDER)) {
+            if (!this.hasStatusEffect(StatusEffects.STRENGTH)) {
+                this.addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH));
+            }
+        } else if (!this.getOffHandStack().isOf(MoreWeaponry.CORRUPTED_EYE_OF_ENDER)) {
+            this.removeStatusEffect(StatusEffects.STRENGTH);
+        }
+
+        if (this.getOffHandStack().isOf(MoreWeaponry.LIFE_CORE)) {
+            if (!this.hasStatusEffect(StatusEffects.SPEED)) {
+                this.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED));
+            }
+        } else if (!this.getOffHandStack().isOf(MoreWeaponry.LIFE_CORE)) {
+            this.removeStatusEffect(StatusEffects.SPEED);
+        }
+
+        if (this.getOffHandStack().isOf(MoreWeaponry.DUSTED_LIFE_CORE)) {
+            if (!this.hasStatusEffect(StatusEffects.FIRE_RESISTANCE)) {
+                this.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE));
+            }
+        } else if (!this.getOffHandStack().isOf(MoreWeaponry.DUSTED_LIFE_CORE)) {
+            this.removeStatusEffect(StatusEffects.FIRE_RESISTANCE);
+        }
+
+
 
         if (itemStack.getItem() instanceof HeavyCrossBowItem) {
             if (!livingEntity.getOffHandStack().isEmpty()) {
