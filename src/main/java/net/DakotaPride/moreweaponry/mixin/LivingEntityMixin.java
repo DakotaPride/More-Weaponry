@@ -81,10 +81,6 @@ public abstract class LivingEntityMixin extends Entity implements ILivingEntityM
             this.removeStatusEffect(StatusEffects.WITHER);
         }
 
-        if (livingEntity.hasStatusEffect(StatusEffects.FIRE_RESISTANCE)) {
-            tryAttackHuskPlayer(attacker);
-        }
-
         if (itemStack.getItem() instanceof HeavyCrossBowItem) {
             if (!livingEntity.getOffHandStack().isEmpty()) {
                 addStatusEffect(new StatusEffectInstance(MoreWeaponry.OVER_PACKAGED, 100));
@@ -122,13 +118,6 @@ public abstract class LivingEntityMixin extends Entity implements ILivingEntityM
             livingEntity.damage(MoreWeaponryDamageSource.CELESTIALITE, 0.3F);
         }
 
-    }
-
-    public void tryAttackHuskPlayer(Entity target) {
-        boolean bl = livingEntity.tryAttack(target);
-        if (bl && target instanceof LivingEntity) {
-            ((LivingEntity)target).addStatusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 500, 2), this);
-        }
     }
 
 }
