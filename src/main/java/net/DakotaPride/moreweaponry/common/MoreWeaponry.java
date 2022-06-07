@@ -10,6 +10,7 @@ import net.DakotaPride.moreweaponry.common.block.skulls.*;
 import net.DakotaPride.moreweaponry.common.effect.BleedingStatusEffect;
 import net.DakotaPride.moreweaponry.common.effect.NumbedStatusEffect;
 import net.DakotaPride.moreweaponry.common.effect.base.CelestialEffect;
+import net.DakotaPride.moreweaponry.common.effect.base.EmptyStatusEffect;
 import net.DakotaPride.moreweaponry.common.effect.base.UnfortunedEffect;
 import net.DakotaPride.moreweaponry.common.effect.celestial.*;
 import net.DakotaPride.moreweaponry.common.effect.unfortuned.*;
@@ -192,6 +193,7 @@ public class MoreWeaponry implements ModInitializer {
 					-0.1D, EntityAttributeModifier.Operation.MULTIPLY_TOTAL)
 			.addAttributeModifier(EntityAttributes.GENERIC_ATTACK_DAMAGE, "22653B89-116E-49DC-9B6B-9971489B5BE5",
 					-1000.0D, EntityAttributeModifier.Operation.MULTIPLY_TOTAL);
+	public static final StatusEffect COLD_BLOODED = new EmptyStatusEffect(StatusEffectCategory.BENEFICIAL, 0xB5FFD7);
 
 	// Enchantments
 	public static EvokersRevengeEnchantment EVOKERS_REVENGE_ENCHANT;
@@ -1118,21 +1120,22 @@ public class MoreWeaponry implements ModInitializer {
 				NUMBING_POTION);
 
 		// Effects
-		Registry.register(Registry.STATUS_EFFECT, new Identifier(MoreWeaponry.MOD_ID, "bard"), BARD);
-		Registry.register(Registry.STATUS_EFFECT, new Identifier(MoreWeaponry.MOD_ID, "sickened"), SICKENED);
-		Registry.register(Registry.STATUS_EFFECT, new Identifier(MoreWeaponry.MOD_ID, "crackler"), CRACKLER);
-		Registry.register(Registry.STATUS_EFFECT, new Identifier(MoreWeaponry.MOD_ID, "wanderer"), WANDERER);
-		Registry.register(Registry.STATUS_EFFECT, new Identifier(MoreWeaponry.MOD_ID, "watcher"), WATCHER);
-		Registry.register(Registry.STATUS_EFFECT, new Identifier(MoreWeaponry.MOD_ID, "ticked"), TICKED);
-		Registry.register(Registry.STATUS_EFFECT, new Identifier(MoreWeaponry.MOD_ID, "webbed"), WEBBED);
-		Registry.register(Registry.STATUS_EFFECT, new Identifier(MoreWeaponry.MOD_ID, "siren"), SIREN);
-		Registry.register(Registry.STATUS_EFFECT, new Identifier(MoreWeaponry.MOD_ID, "explosive"), EXPLOSIVE);
-		Registry.register(Registry.STATUS_EFFECT, new Identifier(MoreWeaponry.MOD_ID, "plagued"), PLAGUED);
-		Registry.register(Registry.STATUS_EFFECT, new Identifier(MoreWeaponry.MOD_ID, "numbed"), NUMBED);
-		Registry.register(Registry.STATUS_EFFECT, new Identifier(MoreWeaponry.MOD_ID, "confusion"), CONFUSION);
-		Registry.register(Registry.STATUS_EFFECT, new Identifier(MoreWeaponry.MOD_ID, "bleeding"), BLEEDING);
-		Registry.register(Registry.STATUS_EFFECT, new Identifier(MoreWeaponry.MOD_ID, "celestial"), CELESTIAL);
-		Registry.register(Registry.STATUS_EFFECT, new Identifier(MoreWeaponry.MOD_ID, "over_packaged"), OVER_PACKAGED);
+		Registry.register(Registry.STATUS_EFFECT, new Identifier(MOD_ID, "bard"), BARD);
+		Registry.register(Registry.STATUS_EFFECT, new Identifier(MOD_ID, "sickened"), SICKENED);
+		Registry.register(Registry.STATUS_EFFECT, new Identifier(MOD_ID, "crackler"), CRACKLER);
+		Registry.register(Registry.STATUS_EFFECT, new Identifier(MOD_ID, "wanderer"), WANDERER);
+		Registry.register(Registry.STATUS_EFFECT, new Identifier(MOD_ID, "watcher"), WATCHER);
+		Registry.register(Registry.STATUS_EFFECT, new Identifier(MOD_ID, "ticked"), TICKED);
+		Registry.register(Registry.STATUS_EFFECT, new Identifier(MOD_ID, "webbed"), WEBBED);
+		Registry.register(Registry.STATUS_EFFECT, new Identifier(MOD_ID, "siren"), SIREN);
+		Registry.register(Registry.STATUS_EFFECT, new Identifier(MOD_ID, "explosive"), EXPLOSIVE);
+		Registry.register(Registry.STATUS_EFFECT, new Identifier(MOD_ID, "plagued"), PLAGUED);
+		Registry.register(Registry.STATUS_EFFECT, new Identifier(MOD_ID, "numbed"), NUMBED);
+		Registry.register(Registry.STATUS_EFFECT, new Identifier(MOD_ID, "confusion"), CONFUSION);
+		Registry.register(Registry.STATUS_EFFECT, new Identifier(MOD_ID, "bleeding"), BLEEDING);
+		Registry.register(Registry.STATUS_EFFECT, new Identifier(MOD_ID, "celestial"), CELESTIAL);
+		Registry.register(Registry.STATUS_EFFECT, new Identifier(MOD_ID, "over_packaged"), OVER_PACKAGED);
+		Registry.register(Registry.STATUS_EFFECT, new Identifier(MOD_ID, "cold_blooded"), COLD_BLOODED);
 
 		// Entities
 		IRON_BOLT = registerEntity("iron_bolt", FabricEntityTypeBuilder.<IronBoltEntity>create

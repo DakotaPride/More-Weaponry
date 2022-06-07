@@ -37,6 +37,25 @@
       "entries": [
         {
           "type": "minecraft:item",
+          "weight": 10,
+          "name": "moreweaponry:ticking_heart",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 0,
+                "max": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
           "weight": 100,
           "name": "moreweaponry:suppressed_core",
           "functions": [

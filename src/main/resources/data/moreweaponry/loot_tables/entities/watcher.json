@@ -37,6 +37,25 @@
       "entries": [
         {
           "type": "minecraft:item",
+          "weight": 10,
+          "name": "moreweaponry:corrupted_ender_eye",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 0,
+                "max": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
           "weight": 100,
           "name": "moreweaponry:watcher_core",
           "functions": [

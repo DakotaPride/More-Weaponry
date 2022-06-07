@@ -2,6 +2,24 @@
   "replace": false,
   "values": [
     "moreweaponry:celestialite_still",
-    "moreweaponry:celestialite_flowing"
+    "moreweaponry:celestialite_flowing",
+
+    "moreweaponry:bard_celestialite_still",
+    "moreweaponry:bard_celestialite_flowing",
+
+    "moreweaponry:crackler_celestialite_still",
+    "moreweaponry:crackler_celestialite_flowing",
+
+    "moreweaponry:watcher_celestialite_still",
+    "moreweaponry:watcher_celestialite_flowing",
+
+    "moreweaponry:wanderer_celestialite_still",
+    "moreweaponry:wanderer_celestialite_flowing",
+
+    "moreweaponry:sickened_celestialite_still",
+    "moreweaponry:sickened_celestialite_flowing",
+
+    "moreweaponry:sickened_husk_celestialite_still",
+    "moreweaponry:sickened_husk_celestialite_flowing"
   ]
 }

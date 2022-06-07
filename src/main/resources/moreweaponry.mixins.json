@@ -10,8 +10,8 @@
     "ILivingEntityMixin",
     "LivingEntityMixin",
     "MixinStructurePiece",
-    "SignTypeAccessor",
     "MobEntityMixin",
+    "SignTypeAccessor",
     "StatusEffectMixin",
     "StructureFeatureAccessor"
   ],
