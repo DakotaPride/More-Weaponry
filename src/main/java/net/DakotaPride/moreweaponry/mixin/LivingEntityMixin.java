@@ -8,11 +8,10 @@ import net.DakotaPride.moreweaponry.common.item.items.HeavyCrossBowItem;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.world.World;
@@ -22,6 +21,7 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 
 @Mixin(LivingEntity.class)
@@ -39,16 +39,29 @@ public abstract class LivingEntityMixin extends Entity implements ILivingEntityM
 
     @Shadow public abstract boolean addStatusEffect(StatusEffectInstance effect, @Nullable Entity source);
 
-    @Shadow public abstract boolean isHolding(Item item);
-
     @Shadow public abstract ItemStack getOffHandStack();
 
-    @Shadow protected abstract void removeSoulSpeedBoost();
+    @Shadow public @Nullable abstract LivingEntity getAttacker();
+
+    @Inject(method = "damage", at = @At("HEAD"))
+    private void damage(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
+        LivingEntity attacker = livingEntity.getAttacker();
+        if (this.getOffHandStack().isOf(MoreWeaponry.DUSTED_LIFE_CORE)) {
+            if (livingEntity.getAttacker() != null) {
+                tryAttackHuskPlayer(attacker);
+            }
+        }
+
+    }
+
+    public void tryAttackHuskPlayer(Entity target) {
+            ((LivingEntity)target).addStatusEffect(new StatusEffectInstance
+                    (StatusEffects.HUNGER, 500, 2), livingEntity);
+    }
 
     @Inject(method = "tick", at = @At("HEAD"))
     private void tick(CallbackInfo ci) {
         LivingEntity livingEntity = (LivingEntity) (Object) this;
-        LivingEntity attacker = livingEntity.getAttacker();
         ItemStack itemStack = livingEntity.getMainHandStack();
         if (livingEntity.getMainHandStack().isOf(MoreWeaponry.HEAVY_SWORD)) {
             if (!livingEntity.getOffHandStack().isEmpty()) {
@@ -123,6 +136,7 @@ public abstract class LivingEntityMixin extends Entity implements ILivingEntityM
             if (!this.hasStatusEffect(StatusEffects.FIRE_RESISTANCE)) {
                 this.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 100, 1));
             }
+
         }
 
 
