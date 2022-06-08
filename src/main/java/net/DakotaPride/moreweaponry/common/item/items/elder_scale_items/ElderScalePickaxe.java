@@ -1,13 +1,13 @@
 package net.DakotaPride.moreweaponry.common.item.items.elder_scale_items;
 
-import net.DakotaPride.moreweaponry.common.item.items.vanilla_tools.ModPickaxeItem;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.PickaxeItem;
 import net.minecraft.item.ToolMaterial;
 
-public class ElderScalePickaxe extends ModPickaxeItem {
+public class ElderScalePickaxe extends PickaxeItem {
     public ElderScalePickaxe(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
         super(toolMaterial, attackDamage, attackSpeed, settings);
     }

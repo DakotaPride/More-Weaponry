@@ -13,7 +13,7 @@ public class WatcherRenderer extends GeoEntityRenderer<WatcherEntity> {
     }
 
     @Override
-    public Identifier getTextureLocation(WatcherEntity entity) {
+    public Identifier getTextureResource(WatcherEntity entity) {
         return new Identifier(MoreWeaponry.MOD_ID, "textures/entity/watcher/watcher.png");
     }
 }

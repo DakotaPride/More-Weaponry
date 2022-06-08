@@ -13,7 +13,7 @@ public class BuriedKnightRenderer extends GeoEntityRenderer<BuriedKnightEntity> 
     }
 
     @Override
-    public Identifier getTextureLocation(BuriedKnightEntity entity) {
+    public Identifier getTextureResource(BuriedKnightEntity entity) {
         return new Identifier(MoreWeaponry.MOD_ID, "textures/entity/darkest_cavern/buried_knight.png");
     }
 }

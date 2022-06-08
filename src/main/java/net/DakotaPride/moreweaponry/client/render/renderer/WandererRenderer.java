@@ -13,7 +13,7 @@ public class WandererRenderer extends GeoEntityRenderer<WandererEntity> {
     }
 
     @Override
-    public Identifier getTextureLocation(WandererEntity entity) {
+    public Identifier getTextureResource(WandererEntity entity) {
         return new Identifier(MoreWeaponry.MOD_ID, "textures/entity/wanderer/wanderer.png");
     }
 }

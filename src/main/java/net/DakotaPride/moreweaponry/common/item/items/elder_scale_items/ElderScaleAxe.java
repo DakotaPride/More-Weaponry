@@ -1,13 +1,13 @@
 package net.DakotaPride.moreweaponry.common.item.items.elder_scale_items;
 
-import net.DakotaPride.moreweaponry.common.item.items.vanilla_tools.ModAxeItem;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.item.AxeItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolMaterial;
 
-public class ElderScaleAxe extends ModAxeItem {
+public class ElderScaleAxe extends AxeItem {
     public ElderScaleAxe(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
         super(toolMaterial, attackDamage, attackSpeed, settings);
     }

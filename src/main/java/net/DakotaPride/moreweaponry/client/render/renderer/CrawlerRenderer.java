@@ -13,7 +13,7 @@ public class CrawlerRenderer extends GeoEntityRenderer<CrawlerEntity> {
     }
 
     @Override
-    public Identifier getTextureLocation(CrawlerEntity entity) {
+    public Identifier getTextureResource(CrawlerEntity entity) {
         return new Identifier(MoreWeaponry.MOD_ID, "textures/entity/darkest_cavern/crawler.png");
     }
 }

@@ -13,7 +13,7 @@ public class SickenedRenderer extends GeoEntityRenderer<SickenedEntity> {
     }
 
     @Override
-    public Identifier getTextureLocation(SickenedEntity entity) {
+    public Identifier getTextureResource(SickenedEntity entity) {
         return new Identifier(MoreWeaponry.MOD_ID, "textures/entity/sickened/sickened.png");
     }
 }

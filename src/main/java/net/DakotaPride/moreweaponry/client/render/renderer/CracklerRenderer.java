@@ -13,7 +13,7 @@ public class CracklerRenderer extends GeoEntityRenderer<CracklerEntity> {
     }
 
     @Override
-    public Identifier getTextureLocation(CracklerEntity entity) {
+    public Identifier getTextureResource(CracklerEntity entity) {
         return new Identifier(MoreWeaponry.MOD_ID, "textures/entity/crackler/crackler.png");
     }
 }

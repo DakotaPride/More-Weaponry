@@ -1,5 +1,6 @@
 package net.DakotaPride.moreweaponry.common;
 
+import com.mojang.serialization.Codec;
 import net.DakotaPride.moreweaponry.common.block.MoreWeaponrySignTypes;
 import net.DakotaPride.moreweaponry.common.block.custom.*;
 import net.DakotaPride.moreweaponry.common.block.entity.CirtictForgeBlock;
@@ -43,10 +44,7 @@ import net.DakotaPride.moreweaponry.common.recipe.CirtictForgeRecipe;
 import net.DakotaPride.moreweaponry.common.recipe.CoreForgeRecipe;
 import net.DakotaPride.moreweaponry.common.recipe.EssenceTranslatorRecipe;
 import net.DakotaPride.moreweaponry.common.screen.*;
-import net.DakotaPride.moreweaponry.common.structure.BardRockStructure;
-import net.DakotaPride.moreweaponry.common.structure.DarkestCavernFortressStructure;
-import net.DakotaPride.moreweaponry.common.structure.SickenedGravesStructure;
-import net.DakotaPride.moreweaponry.common.structure.WandererLibraryStructure;
+import net.DakotaPride.moreweaponry.common.structure.*;
 import net.DakotaPride.moreweaponry.common.util.MoreWeaponryLootTableModifiers;
 import net.DakotaPride.moreweaponry.common.util.MoreWeaponryRegistries;
 import net.DakotaPride.moreweaponry.common.util.MoreWeaponryTags;
@@ -55,11 +53,9 @@ import net.DakotaPride.moreweaponry.common.world.features.MoreWeaponryConfigured
 import net.DakotaPride.moreweaponry.common.world.features.tree.FrodonSaplingGenerator;
 import net.DakotaPride.moreweaponry.common.world.gen.MoreWeaponryWorldGen;
 import net.DakotaPride.moreweaponry.mixin.BrewingRecipeRegistryMixin;
-import net.DakotaPride.moreweaponry.mixin.StructureFeatureAccessor;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.fabricmc.fabric.api.loot.v2.FabricLootPoolBuilder;
 import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
@@ -100,6 +96,8 @@ import net.minecraft.util.registry.Registry;
 import net.minecraft.world.Heightmap;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.LakeFeature;
+import net.minecraft.world.gen.structure.Structure;
+import net.minecraft.world.gen.structure.StructureType;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import software.bernie.geckolib3.GeckoLib;
@@ -223,10 +221,10 @@ public class MoreWeaponry implements ModInitializer {
 	public static SoundEvent WARDENS_STEP;
 
 	// Structures
-	public static StructureFeature<?> BARD_ROCK = new BardRockStructure();
-	public static StructureFeature<?> WANDERER_LIBRARY = new WandererLibraryStructure();
-	public static StructureFeature<?> SICKENED_GRAVES = new SickenedGravesStructure();
-	public static StructureFeature<?> DARKEST_CAVERN_FORTRESS = new DarkestCavernFortressStructure();
+	public static StructureType<?> BARD_ROCK;
+	public static StructureType<?> WANDERER_LIBRARY;
+	public static StructureType<?> SICKENED_GRAVES;
+	public static StructureType<?> DARKEST_CAVERN_FORTRESS;
 
 	// Potions
 	public static Potion NUMBING_POTION;
@@ -934,6 +932,11 @@ public class MoreWeaponry implements ModInitializer {
 	}
 
 
+	// Structures
+	private static <S extends Structure> StructureType<S> registerStructure(Identifier id, Codec<S> codec) {
+		return Registry.register(Registry.STRUCTURE_TYPE, id, () -> codec);
+	}
+
 	
 	// Group
 	public static final ItemGroup MORE_WEAPONRY_GROUP = FabricItemGroupBuilder.create(
@@ -1262,17 +1265,10 @@ public class MoreWeaponry implements ModInitializer {
 						EchoInfuserScreenHandler::new);
 
 		// Structures
-		StructureFeatureAccessor.callRegister(MoreWeaponry.MOD_ID + ":bard_rock",
-				BARD_ROCK, GenerationStep.Feature.SURFACE_STRUCTURES);
-
-		StructureFeatureAccessor.callRegister(MoreWeaponry.MOD_ID + ":wanderer_library",
-				WANDERER_LIBRARY, GenerationStep.Feature.UNDERGROUND_STRUCTURES);
-
-		StructureFeatureAccessor.callRegister(MoreWeaponry.MOD_ID + ":sickened_graves",
-				SICKENED_GRAVES, GenerationStep.Feature.SURFACE_STRUCTURES);
-
-		StructureFeatureAccessor.callRegister(MoreWeaponry.MOD_ID + ":darkest_cavern_fortress",
-				DARKEST_CAVERN_FORTRESS, GenerationStep.Feature.UNDERGROUND_STRUCTURES);
+		BARD_ROCK = registerStructure(new Identifier(MOD_ID, "bard_rock"), NewBardRockStructure.CODEC);
+		WANDERER_LIBRARY = registerStructure(new Identifier(MOD_ID, "wanderer_library"), NewWandererLibraryStructure.CODEC);
+		DARKEST_CAVERN_FORTRESS = registerStructure(new Identifier(MOD_ID, "darkest_cavern_fortress"), NewDarkestCavernFortressStructure.CODEC);
+		SICKENED_GRAVES = registerStructure(new Identifier(MOD_ID, "sickened_graves"), NewSickenedGravesStructure.CODEC);
 
 		// Blocks
 		MOON_STONE_DUST_BLOCK = registerBlock("moon_stone_dust_block",

@@ -13,7 +13,7 @@ public class BardRenderer extends GeoEntityRenderer<BardEntity> {
     }
 
     @Override
-    public Identifier getTextureLocation(BardEntity entity) {
+    public Identifier getTextureResource(BardEntity entity) {
         return new Identifier(MoreWeaponry.MOD_ID, "textures/entity/bard/bard.png");
     }
 }

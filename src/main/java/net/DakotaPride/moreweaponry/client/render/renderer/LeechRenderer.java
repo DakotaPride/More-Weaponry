@@ -13,7 +13,7 @@ public class LeechRenderer extends GeoEntityRenderer<LeechEntity> {
     }
 
     @Override
-    public Identifier getTextureLocation(LeechEntity entity) {
+    public Identifier getTextureResource(LeechEntity entity) {
         return new Identifier(MoreWeaponry.MOD_ID, "textures/entity/sickened/leech.png");
     }
 }

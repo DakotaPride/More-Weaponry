@@ -13,7 +13,7 @@ public class LurkerRenderer extends GeoEntityRenderer<LurkerEntity> {
     }
 
     @Override
-    public Identifier getTextureLocation(LurkerEntity entity) {
+    public Identifier getTextureResource(LurkerEntity entity) {
         return new Identifier(MoreWeaponry.MOD_ID, "textures/entity/lurker/lurker.png");
     }
 }

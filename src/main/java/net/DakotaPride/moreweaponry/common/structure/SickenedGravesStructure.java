@@ -1,16 +1,6 @@
 package net.DakotaPride.moreweaponry.common.structure;
 
-import net.DakotaPride.moreweaponry.common.MoreWeaponry;
-import net.minecraft.structure.*;
-import net.minecraft.structure.pool.StructurePoolBasedGenerator;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.ChunkPos;
-import net.minecraft.world.Heightmap;
-import net.minecraft.world.gen.feature.StructureFeature;
-import net.minecraft.world.gen.feature.StructurePoolFeatureConfig;
-import org.apache.logging.log4j.Level;
-
-import java.util.Optional;
+/*
 
 public class SickenedGravesStructure extends StructureFeature<StructurePoolFeatureConfig> {
 
@@ -51,3 +41,5 @@ public class SickenedGravesStructure extends StructureFeature<StructurePoolFeatu
         return structurePiecesGenerator;
     }
 }
+
+ */
