@@ -1,6 +1,5 @@
 package net.DakotaPride.moreweaponry.common;
 
-import com.github.crimsondawn45.fabricshieldlib.lib.object.FabricShieldItem;
 import net.DakotaPride.moreweaponry.common.block.MoreWeaponrySignTypes;
 import net.DakotaPride.moreweaponry.common.block.custom.*;
 import net.DakotaPride.moreweaponry.common.block.entity.CirtictForgeBlock;
@@ -17,7 +16,6 @@ import net.DakotaPride.moreweaponry.common.effect.unfortuned.*;
 import net.DakotaPride.moreweaponry.common.enchantments.*;
 import net.DakotaPride.moreweaponry.common.entity.custom.*;
 import net.DakotaPride.moreweaponry.common.fluid.*;
-import net.DakotaPride.moreweaponry.common.item.items.ReinforcedBucketItem;
 import net.DakotaPride.moreweaponry.common.item.items.*;
 import net.DakotaPride.moreweaponry.common.item.items.artifacts.RareArtifactItem;
 import net.DakotaPride.moreweaponry.common.item.items.bard_tools.*;
@@ -37,19 +35,21 @@ import net.DakotaPride.moreweaponry.common.item.items.mod_tools.BluestoneIgnitor
 import net.DakotaPride.moreweaponry.common.item.items.mod_tools.KnifeItem;
 import net.DakotaPride.moreweaponry.common.item.items.phantom_helm.PhantomScaleHelm;
 import net.DakotaPride.moreweaponry.common.item.items.powered_cores.*;
+import net.DakotaPride.moreweaponry.common.item.items.shields.MoreWeaponryShieldItem;
 import net.DakotaPride.moreweaponry.common.item.items.sickened_tools.*;
 import net.DakotaPride.moreweaponry.common.item.items.wanderer_tools.*;
 import net.DakotaPride.moreweaponry.common.item.items.watcher_tools.*;
-import net.DakotaPride.moreweaponry.common.screen.FabricatorScreenHandler;
-import net.DakotaPride.moreweaponry.mixin.BrewingRecipeRegistryMixin;
-import net.DakotaPride.moreweaponry.mixin.StructureFeatureAccessor;
 import net.DakotaPride.moreweaponry.common.recipe.CirtictForgeRecipe;
 import net.DakotaPride.moreweaponry.common.recipe.CoreForgeRecipe;
 import net.DakotaPride.moreweaponry.common.recipe.EssenceTranslatorRecipe;
 import net.DakotaPride.moreweaponry.common.screen.CirtictForgeScreenHandler;
 import net.DakotaPride.moreweaponry.common.screen.CoreForgeScreenHandler;
 import net.DakotaPride.moreweaponry.common.screen.EssenceTranslatorScreenHandler;
-import net.DakotaPride.moreweaponry.common.structure.*;
+import net.DakotaPride.moreweaponry.common.screen.FabricatorScreenHandler;
+import net.DakotaPride.moreweaponry.common.structure.BardRockStructure;
+import net.DakotaPride.moreweaponry.common.structure.DarkestCavernFortressStructure;
+import net.DakotaPride.moreweaponry.common.structure.SickenedGravesStructure;
+import net.DakotaPride.moreweaponry.common.structure.WandererLibraryStructure;
 import net.DakotaPride.moreweaponry.common.util.MoreWeaponryLootTableModifiers;
 import net.DakotaPride.moreweaponry.common.util.MoreWeaponryRegistries;
 import net.DakotaPride.moreweaponry.common.util.MoreWeaponryTags;
@@ -57,6 +57,8 @@ import net.DakotaPride.moreweaponry.common.world.dimension.MoreWeaponryPortals;
 import net.DakotaPride.moreweaponry.common.world.features.MoreWeaponryConfiguredFeatures;
 import net.DakotaPride.moreweaponry.common.world.features.tree.FrodonSaplingGenerator;
 import net.DakotaPride.moreweaponry.common.world.gen.MoreWeaponryWorldGen;
+import net.DakotaPride.moreweaponry.mixin.BrewingRecipeRegistryMixin;
+import net.DakotaPride.moreweaponry.mixin.StructureFeatureAccessor;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -312,11 +314,14 @@ public class MoreWeaponry implements ModInitializer {
 	public static BetterAxeItem GUARDIAN_SCALE_AXE;
 	public static BetterHoeItem GUARDIAN_SCALE_HOE;
 	public static BattleaxeItem GUARDIAN_SCALE_BATTLEAXE;
-	public static FabricShieldItem GLIMMERING_SHIELD;
-	public static FabricShieldItem MOON_STONE_SHIELD;
-	public static FabricShieldItem BLACKSTONE_METAL_SHIELD;
-	public static FabricShieldItem GUARDIAN_SCALE_SHIELD;
-	public static FabricShieldItem ELDER_SCALE_SHIELD;
+	public static MoreWeaponryShieldItem GLIMMERING_SHIELD;
+	public static MoreWeaponryShieldItem MOON_STONE_SHIELD;
+	public static MoreWeaponryShieldItem BLACKSTONE_METAL_SHIELD;
+	public static MoreWeaponryShieldItem GUARDIAN_SCALE_SHIELD;
+	public static MoreWeaponryShieldItem ELDER_SCALE_SHIELD;
+	public static CooledCirtictShield COOLED_CIRTICT_SHIELD;
+	public static HeatedCirtictShield HEATED_CIRTICT_SHIELD;
+	public static MoreWeaponryShieldItem CIRTICT_SHIELD;
 	public static ElderScaleArtifactItem ELDER_SCALE_ARTIFACT;
 	public static KnifeItem GOLDEN_KNIFE;
 	public static KnifeItem STONE_KNIFE;
@@ -366,9 +371,6 @@ public class MoreWeaponry implements ModInitializer {
 	public static BetterAxeItem CIRTICT_AXE;
 	public static BetterHoeItem CIRTICT_HOE;
 	public static KnifeItem CIRTICT_KNIFE;
-	public static CooledCirtictShield COOLED_CIRTICT_SHIELD;
-	public static HeatedCirtictShield HEATED_CIRTICT_SHIELD;
-	public static FabricShieldItem CIRTICT_SHIELD;
 	public static Item CIRTICT_NUGGET;
 	public static HeatedCirtictNugget HEATED_CIRTICT_NUGGET;
 	public static CooledCirtictNugget COOLED_CIRTICT_NUGGET;
@@ -1727,20 +1729,29 @@ public class MoreWeaponry implements ModInitializer {
 				new BattleaxeItem((ToolMaterial) GUARDIAN_SCALE_TOOLS, 10, -3.3f,
 						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 		GLIMMERING_SHIELD = registerItem("glimmering_shield",
-				new FabricShieldItem(new FabricItemSettings().maxDamage(1782).group(MORE_WEAPONRY_GROUP),
+				new MoreWeaponryShieldItem(new FabricItemSettings().maxDamage(1782).group(MORE_WEAPONRY_GROUP),
 						20, 23, GLIMMERING_AMETHYST));
 		BLACKSTONE_METAL_SHIELD = registerItem("blackstone_metal_shield",
-				new FabricShieldItem(new FabricItemSettings().maxDamage(2476).group(MORE_WEAPONRY_GROUP),
+				new MoreWeaponryShieldItem(new FabricItemSettings().maxDamage(2476).group(MORE_WEAPONRY_GROUP),
 						10, 17, BLACKSTONE_INGOT));
 		MOON_STONE_SHIELD = registerItem("moon_stone_shield",
-				new FabricShieldItem(new FabricItemSettings().maxDamage(2006).group(MORE_WEAPONRY_GROUP),
+				new MoreWeaponryShieldItem(new FabricItemSettings().maxDamage(2006).group(MORE_WEAPONRY_GROUP),
 						15, 19, REFINED_MOON_STONE));
 		GUARDIAN_SCALE_SHIELD = registerItem("guardian_scale_shield",
-				new FabricShieldItem(new FabricItemSettings().maxDamage(2938).group(MORE_WEAPONRY_GROUP),
+				new MoreWeaponryShieldItem(new FabricItemSettings().maxDamage(2938).group(MORE_WEAPONRY_GROUP),
 						8, 17, GUARDIAN_SCALE));
 		ELDER_SCALE_SHIELD = registerItem("elder_scale_shield",
-				new FabricShieldItem(new FabricItemSettings().maxDamage(3276).group(MORE_WEAPONRY_GROUP),
+				new MoreWeaponryShieldItem(new FabricItemSettings().maxDamage(3276).group(MORE_WEAPONRY_GROUP),
 						7, 18, ELDER_GUARDIAN_SCALE));
+		COOLED_CIRTICT_SHIELD = registerItem("cooled_cirtict_shield",
+				new CooledCirtictShield(new FabricItemSettings().maxDamage(3583).group(MORE_WEAPONRY_GROUP),
+						5, 16, COOLED_CIRTICT_INGOT));
+		HEATED_CIRTICT_SHIELD = registerItem("heated_cirtict_shield",
+				new HeatedCirtictShield(new FabricItemSettings().maxDamage(3583).group(MORE_WEAPONRY_GROUP),
+						5, 16, HEATED_CIRTICT_INGOT));
+		CIRTICT_SHIELD = registerItem("cirtict_shield",
+				new MoreWeaponryShieldItem(new FabricItemSettings().maxDamage(3456).group(MORE_WEAPONRY_GROUP),
+						6, 17, CIRTICT_INGOT));
 		ELDER_SCALE_ARTIFACT = registerItem("elder_scale_artifact",
 				new ElderScaleArtifactItem((ToolMaterial) ELDER_GUARDIAN_SCALE_TOOLS, 9, -2.9f,
 						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
@@ -1880,15 +1891,6 @@ public class MoreWeaponry implements ModInitializer {
 		CIRTICT_KNIFE = registerItem("cirtict_knife",
 				new KnifeItem((ToolMaterial) CIRTICT_TOOLS, -4, -1f,
 						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
-		COOLED_CIRTICT_SHIELD = registerItem("cooled_cirtict_shield",
-				new CooledCirtictShield(new FabricItemSettings().maxDamage(3583).group(MORE_WEAPONRY_GROUP),
-						5, 16, COOLED_CIRTICT_INGOT));
-		HEATED_CIRTICT_SHIELD = registerItem("heated_cirtict_shield",
-				new HeatedCirtictShield(new FabricItemSettings().maxDamage(3583).group(MORE_WEAPONRY_GROUP),
-						5, 16, HEATED_CIRTICT_INGOT));
-		CIRTICT_SHIELD = registerItem("cirtict_shield",
-				new FabricShieldItem(new FabricItemSettings().maxDamage(3456).group(MORE_WEAPONRY_GROUP),
-						6, 17, CIRTICT_INGOT));
 		CIRTICT_NUGGET = registerItem("cirtict_nugget",
 				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 		HEATED_CIRTICT_NUGGET = registerItem("heated_cirtict_nugget",

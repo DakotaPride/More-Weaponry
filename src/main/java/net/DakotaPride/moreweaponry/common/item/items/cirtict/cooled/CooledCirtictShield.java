@@ -1,6 +1,6 @@
 package net.DakotaPride.moreweaponry.common.item.items.cirtict.cooled;
 
-import com.github.crimsondawn45.fabricshieldlib.lib.object.FabricShieldItem;
+import net.DakotaPride.moreweaponry.common.item.items.shields.MoreWeaponryShieldItem;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -12,7 +12,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class CooledCirtictShield extends FabricShieldItem {
+public class CooledCirtictShield extends MoreWeaponryShieldItem {
     public CooledCirtictShield(Settings settings, int cooldownTicks, int enchantability, Item... repairItems) {
         super(settings, cooldownTicks, enchantability, repairItems);
     }

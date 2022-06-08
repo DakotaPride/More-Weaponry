@@ -1,5 +1,5 @@
 {
-  "parent":"fabricshieldlib:item/fabric_shield",
+  "parent":"moreweaponry:item/baseline_shield",
   "textures":{
     "shield":"moreweaponry:item/cirtict_shield"
   },
