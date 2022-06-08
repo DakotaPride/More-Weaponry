@@ -7,17 +7,17 @@ import software.bernie.geckolib3.model.AnimatedGeoModel;
 
 public class WatcherArmorModel extends AnimatedGeoModel<WatcherArmorItem> {
     @Override
-    public Identifier getModelLocation(WatcherArmorItem object) {
+    public Identifier getModelResource(WatcherArmorItem object) {
         return new Identifier(MoreWeaponry.MOD_ID, "geo/watcher_armor.geo.json");
     }
 
     @Override
-    public Identifier getTextureLocation(WatcherArmorItem object) {
+    public Identifier getTextureResource(WatcherArmorItem object) {
         return new Identifier(MoreWeaponry.MOD_ID, "textures/models/armor/watcher_armor.png");
     }
 
     @Override
-    public Identifier getAnimationFileLocation(WatcherArmorItem animatable) {
+    public Identifier getAnimationResource(WatcherArmorItem animatable) {
         return new Identifier(MoreWeaponry.MOD_ID, "animations/watcher_armor_animation.json");
     }
 }

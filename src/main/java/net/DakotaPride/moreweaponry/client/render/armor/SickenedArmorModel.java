@@ -8,17 +8,17 @@ import software.bernie.geckolib3.model.AnimatedGeoModel;
 public class SickenedArmorModel extends AnimatedGeoModel<SickenedArmorItem> {
 
     @Override
-    public Identifier getModelLocation(SickenedArmorItem object) {
+    public Identifier getModelResource(SickenedArmorItem object) {
         return new Identifier(MoreWeaponry.MOD_ID, "geo/sickened_armor.geo.json");
     }
 
     @Override
-    public Identifier getTextureLocation(SickenedArmorItem object) {
+    public Identifier getTextureResource(SickenedArmorItem object) {
         return new Identifier(MoreWeaponry.MOD_ID, "textures/models/armor/sickened_armor.png");
     }
 
     @Override
-    public Identifier getAnimationFileLocation(SickenedArmorItem animatable) {
+    public Identifier getAnimationResource(SickenedArmorItem animatable) {
         return new Identifier(MoreWeaponry.MOD_ID, "animations/sickened_armor_animation.json");
     }
 }

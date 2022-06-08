@@ -9,17 +9,17 @@ import software.bernie.geckolib3.model.AnimatedGeoModel;
 public class PansexualHornsModel extends AnimatedGeoModel<PansexualHornsItem> {
 
     @Override
-    public Identifier getModelLocation(PansexualHornsItem object) {
+    public Identifier getModelResource(PansexualHornsItem object) {
         return new Identifier(MoreWeaponry.MOD_ID, "geo/base_horns.geo.json");
     }
 
     @Override
-    public Identifier getTextureLocation(PansexualHornsItem object) {
+    public Identifier getTextureResource(PansexualHornsItem object) {
         return new Identifier(MoreWeaponry.MOD_ID, "textures/models/armor/pansexual_horns.png");
     }
 
     @Override
-    public Identifier getAnimationFileLocation(PansexualHornsItem animatable) {
+    public Identifier getAnimationResource(PansexualHornsItem animatable) {
         return new Identifier(MoreWeaponry.MOD_ID, "animations/base_horns_animation.json");
     }
 }

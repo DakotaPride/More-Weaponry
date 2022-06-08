@@ -7,17 +7,17 @@ import software.bernie.geckolib3.model.AnimatedGeoModel;
 
 public class LeechModel extends AnimatedGeoModel<LeechEntity> {
     @Override
-    public Identifier getModelLocation(LeechEntity object) {
+    public Identifier getModelResource(LeechEntity object) {
         return new Identifier(MoreWeaponry.MOD_ID, "geo/leech.geo.json");
     }
 
     @Override
-    public Identifier getTextureLocation(LeechEntity object) {
+    public Identifier getTextureResource(LeechEntity object) {
         return new Identifier(MoreWeaponry.MOD_ID, "textures/entity/sickened/leech.png");
     }
 
     @Override
-    public Identifier getAnimationFileLocation(LeechEntity animatable) {
+    public Identifier getAnimationResource(LeechEntity animatable) {
         return new Identifier(MoreWeaponry.MOD_ID, "animations/leech.animation.json");
     }
 }

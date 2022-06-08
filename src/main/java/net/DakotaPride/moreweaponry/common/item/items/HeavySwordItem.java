@@ -5,7 +5,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
@@ -19,7 +18,7 @@ public class HeavySwordItem extends SwordItem {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add( new TranslatableText("item.moreweaponry.description.double_handed").formatted(Formatting.DARK_RED));
+        tooltip.add(Text.translatable("item.moreweaponry.description.double_handed").formatted(Formatting.DARK_RED));
         super.appendTooltip(stack, world, tooltip, context);
     }
 }

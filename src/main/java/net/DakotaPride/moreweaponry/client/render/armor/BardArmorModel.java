@@ -8,17 +8,17 @@ import software.bernie.geckolib3.model.AnimatedGeoModel;
 public class BardArmorModel extends AnimatedGeoModel<BardArmorItem> {
 
     @Override
-    public Identifier getModelLocation(BardArmorItem object) {
+    public Identifier getModelResource(BardArmorItem object) {
         return new Identifier(MoreWeaponry.MOD_ID, "geo/bard_armor.geo.json");
     }
 
     @Override
-    public Identifier getTextureLocation(BardArmorItem object) {
+    public Identifier getTextureResource(BardArmorItem object) {
         return new Identifier(MoreWeaponry.MOD_ID, "textures/models/armor/bard_armor.png");
     }
 
     @Override
-    public Identifier getAnimationFileLocation(BardArmorItem animatable) {
+    public Identifier getAnimationResource(BardArmorItem animatable) {
         return new Identifier(MoreWeaponry.MOD_ID, "animations/bard_armor_animation.json");
     }
 }

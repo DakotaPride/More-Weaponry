@@ -17,13 +17,13 @@ public class MoreWeaponryRawGeneration {
         BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(),
                 GenerationStep.Feature.RAW_GENERATION, MoreWeaponryPlacedFeatures.CIRTICT_DEBRIS_PLACED.getKey().get());
 
-        BiomeModifications.addFeature(BiomeSelectors.categories(Biome.Category.UNDERGROUND),
+        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
                 GenerationStep.Feature.RAW_GENERATION, MoreWeaponryPlacedFeatures.CRACKED_DRIPSTONE_PLACED.getKey().get());
 
-        BiomeModifications.addFeature(BiomeSelectors.categories(Biome.Category.UNDERGROUND),
+        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
                 GenerationStep.Feature.RAW_GENERATION, MoreWeaponryPlacedFeatures.INFESTED_CRACKED_DRIPSTONE_PLACED.getKey().get());
 
-        BiomeModifications.addFeature(BiomeSelectors.categories(Biome.Category.UNDERGROUND),
+        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
                 GenerationStep.Feature.RAW_GENERATION, MoreWeaponryPlacedFeatures.INFESTED_DRIPSTONE_PLACED.getKey().get());
     }
 }

@@ -16,7 +16,6 @@ import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -70,7 +69,7 @@ public class CoreForgeEntity extends BlockEntity implements NamedScreenHandlerFa
 
     @Override
     public Text getDisplayName() {
-        return new TranslatableText("gui.moreweaponry.core_forge.label");
+        return Text.translatable("gui.moreweaponry.core_forge.label");
     }
 
     @Nullable

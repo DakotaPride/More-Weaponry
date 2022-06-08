@@ -7,17 +7,17 @@ import software.bernie.geckolib3.model.AnimatedGeoModel;
 
 public class WandererArmorModel extends AnimatedGeoModel<WandererArmorItem> {
     @Override
-    public Identifier getModelLocation(WandererArmorItem object) {
+    public Identifier getModelResource(WandererArmorItem object) {
         return new Identifier(MoreWeaponry.MOD_ID, "geo/wanderer_armor.geo.json");
     }
 
     @Override
-    public Identifier getTextureLocation(WandererArmorItem object) {
+    public Identifier getTextureResource(WandererArmorItem object) {
         return new Identifier(MoreWeaponry.MOD_ID, "textures/models/armor/wanderer_armor.png");
     }
 
     @Override
-    public Identifier getAnimationFileLocation(WandererArmorItem animatable) {
+    public Identifier getAnimationResource(WandererArmorItem animatable) {
         return new Identifier(MoreWeaponry.MOD_ID, "animations/wanderer_armor_animation.json");
     }
 }

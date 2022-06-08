@@ -23,7 +23,7 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.text.TranslatableText;
+import net.minecraft.text.Text;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
@@ -41,7 +41,7 @@ public class WatcherEntity extends AbstractHostileEntity implements IAnimatable 
     public WatcherEntity(EntityType<? extends AbstractHostileEntity> entityType, World world) {
         super(entityType, world);
         this.ignoreCameraFrustum = true;
-        this.bossBar = (ServerBossBar)(new ServerBossBar(new TranslatableText("entity.moreweaponry.watcher"),
+        this.bossBar = (ServerBossBar)(new ServerBossBar(Text.translatable("entity.moreweaponry.watcher"),
                 BossBar.Color.PURPLE, BossBar.Style.PROGRESS)).setDragonMusic(false).setThickenFog(false);
         this.stepHeight = 1.0F;
 
@@ -172,11 +172,11 @@ public class WatcherEntity extends AbstractHostileEntity implements IAnimatable 
     }
 
     protected int getXpToDrop(PlayerEntity player) {
-        if (isBaby()) {
+        if (!isBaby()) {
             this.experiencePoints = (int)(this.experiencePoints * 43.5F);
         }
 
-        return super.getXpToDrop(player);
+        return super.getXpToDrop();
     }
 
     protected boolean shouldDropLoot() {

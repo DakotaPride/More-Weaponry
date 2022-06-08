@@ -10,8 +10,10 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
-import net.minecraft.util.*;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.Formatting;
+import net.minecraft.util.Hand;
+import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
@@ -33,7 +35,7 @@ public class CelestialMadalianItem extends Item {
         playerEntity.addStatusEffect(new StatusEffectInstance(MoreWeaponry.CELESTIAL, 3600, 0), playerEntity);
         playerEntity.getItemCooldownManager().set(this, 1200);
         itemStack.damage(1, playerEntity, (player) -> player.sendToolBreakStatus(player.getActiveHand()));
-        playerEntity.sendMessage(new TranslatableText("message.moreweaponry.celestial_medallion.activated", playerEntity.getEntityName()).formatted(Formatting.YELLOW), true);
+        playerEntity.sendMessage(Text.translatable("message.moreweaponry.celestial_medallion.activated", playerEntity.getEntityName()).formatted(Formatting.YELLOW), true);
         return TypedActionResult.success(itemStack);
     }
 
@@ -68,7 +70,7 @@ public class CelestialMadalianItem extends Item {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add( new TranslatableText("item.moreweaponry.description.celestial_medallion").formatted(Formatting.YELLOW));
+        tooltip.add(Text.translatable("item.moreweaponry.description.celestial_medallion").formatted(Formatting.YELLOW));
     }
 
     @Override

@@ -10,17 +10,17 @@ import software.bernie.geckolib3.model.provider.data.EntityModelData;
 
 public class CracklerModel extends AnimatedGeoModel<CracklerEntity> {
     @Override
-    public Identifier getModelLocation(CracklerEntity entity) {
+    public Identifier getModelResource(CracklerEntity entity) {
         return new Identifier(MoreWeaponry.MOD_ID, "geo/crackler.geo.json");
     }
 
     @Override
-    public Identifier getTextureLocation(CracklerEntity entity) {
+    public Identifier getTextureResource(CracklerEntity entity) {
         return new Identifier(MoreWeaponry.MOD_ID, "textures/entity/crackler/crackler.png");
     }
 
     @Override
-    public Identifier getAnimationFileLocation(CracklerEntity entity) {
+    public Identifier getAnimationResource(CracklerEntity entity) {
         return new Identifier(MoreWeaponry.MOD_ID, "animations/crackler.animation.json");
     }
 

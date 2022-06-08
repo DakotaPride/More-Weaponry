@@ -11,7 +11,6 @@ import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib3.core.IAnimatable;
@@ -34,7 +33,7 @@ public class GreenHornsItem extends ArmorItem implements IAnimatable {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add(new TranslatableText("item.moreweaponry.horns.type.green"));
+        tooltip.add(Text.translatable("item.moreweaponry.horns.type.green"));
     }
 
     private <P extends IAnimatable> PlayState predicate(AnimationEvent<P> event) {

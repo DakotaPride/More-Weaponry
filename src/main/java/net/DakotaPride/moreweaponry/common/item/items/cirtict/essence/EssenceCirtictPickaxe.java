@@ -1,13 +1,13 @@
 package net.DakotaPride.moreweaponry.common.item.items.cirtict.essence;
 
-import net.DakotaPride.moreweaponry.common.item.items.vanilla_tools.ModPickaxeItem;
+import net.DakotaPride.moreweaponry.common.MoreWeaponry;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolMaterial;
 
-public class EssenceCirtictPickaxe extends ModPickaxeItem {
+public class EssenceCirtictPickaxe extends MoreWeaponry.BetterPickaxeItem {
 
 
     public EssenceCirtictPickaxe(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {

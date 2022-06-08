@@ -14,7 +14,6 @@ import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
@@ -84,11 +83,11 @@ public class ShulkerShellBoots extends ArmorItem {
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         if(Screen.hasShiftDown()){
-        tooltip.add( new TranslatableText("armor.moreweaponry.shift_down_description.shulker_boots.top").formatted(Formatting.DARK_PURPLE));
-        tooltip.add( new TranslatableText("armor.moreweaponry.shift_down.description.shulker_boots.bottom.one").formatted(Formatting.DARK_PURPLE));
-        tooltip.add( new TranslatableText("armor.moreweaponry.shift_down.description.shulker_boots.bottom.two").formatted(Formatting.DARK_PURPLE));
+        tooltip.add(Text.translatable("armor.moreweaponry.shift_down_description.shulker_boots.top").formatted(Formatting.DARK_PURPLE));
+        tooltip.add(Text.translatable("armor.moreweaponry.shift_down.description.shulker_boots.bottom.one").formatted(Formatting.DARK_PURPLE));
+        tooltip.add(Text.translatable("armor.moreweaponry.shift_down.description.shulker_boots.bottom.two").formatted(Formatting.DARK_PURPLE));
         } else {
-            tooltip.add( new TranslatableText("misc.moreweaponry.shift_up").formatted(Formatting.DARK_GRAY));
+            tooltip.add(Text.translatable("misc.moreweaponry.shift_up").formatted(Formatting.DARK_GRAY));
         }
     }
 

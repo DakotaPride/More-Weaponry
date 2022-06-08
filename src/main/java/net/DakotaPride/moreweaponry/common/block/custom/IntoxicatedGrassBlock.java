@@ -13,6 +13,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.PlacedFeature;
 import net.minecraft.world.gen.feature.RandomPatchFeatureConfig;
+import org.apache.logging.log4j.core.jmx.Server;
 
 import java.util.List;
 import java.util.Random;
@@ -30,7 +31,7 @@ public class IntoxicatedGrassBlock extends GrassBlock {
         return true;
     }
 
-    public void grow(ServerWorld world, Random random, BlockPos pos, BlockState state) {
+    public void grow(ServerWorld world, net.minecraft.util.math.random.Random random, BlockPos pos, BlockState state) {
         BlockPos blockPos = pos.up();
         BlockState blockState = MoreWeaponry.INTOXICATED_GRASS.getDefaultState();
         BlockState blockState1 = MoreWeaponry.INTOXICATED_DANDELION.getDefaultState();

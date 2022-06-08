@@ -9,17 +9,17 @@ import software.bernie.geckolib3.model.AnimatedGeoModel;
 public class NonBinaryHornsModel extends AnimatedGeoModel<NonBinaryHornsItem> {
 
     @Override
-    public Identifier getModelLocation(NonBinaryHornsItem object) {
+    public Identifier getModelResource(NonBinaryHornsItem object) {
         return new Identifier(MoreWeaponry.MOD_ID, "geo/base_horns.geo.json");
     }
 
     @Override
-    public Identifier getTextureLocation(NonBinaryHornsItem object) {
+    public Identifier getTextureResource(NonBinaryHornsItem object) {
         return new Identifier(MoreWeaponry.MOD_ID, "textures/models/armor/nonbinary_horns.png");
     }
 
     @Override
-    public Identifier getAnimationFileLocation(NonBinaryHornsItem animatable) {
+    public Identifier getAnimationResource(NonBinaryHornsItem animatable) {
         return new Identifier(MoreWeaponry.MOD_ID, "animations/base_horns_animation.json");
     }
 }

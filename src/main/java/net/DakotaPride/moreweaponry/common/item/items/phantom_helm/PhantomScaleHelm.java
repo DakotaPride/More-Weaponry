@@ -6,7 +6,6 @@ import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
@@ -21,11 +20,11 @@ public class PhantomScaleHelm extends ModPhantomScaleArmorItem{
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         if (Screen.hasShiftDown()) {
-            tooltip.add( new TranslatableText("armor.moreweaponry.shift_down.description.phantom_helm.one").formatted(Formatting.BLUE));
-            tooltip.add( new TranslatableText("armor.moreweaponry.shift_down.description.phantom_helm.two").formatted(Formatting.BLUE));
-            tooltip.add( new TranslatableText("armor.moreweaponry.shift_down.description.phantom_helm.three").formatted(Formatting.BLUE));
+            tooltip.add(Text.translatable("armor.moreweaponry.shift_down.description.phantom_helm.one").formatted(Formatting.BLUE));
+            tooltip.add(Text.translatable("armor.moreweaponry.shift_down.description.phantom_helm.two").formatted(Formatting.BLUE));
+            tooltip.add(Text.translatable("armor.moreweaponry.shift_down.description.phantom_helm.three").formatted(Formatting.BLUE));
         } else {
-            tooltip.add( new TranslatableText("misc.moreweaponry.shift_up").formatted(Formatting.DARK_GRAY));
+            tooltip.add(Text.translatable("misc.moreweaponry.shift_up").formatted(Formatting.DARK_GRAY));
         }
     }
 

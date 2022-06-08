@@ -24,11 +24,6 @@ public class ElderScaleArtifactItem extends SwordItem {
 
     @Override
     public boolean hasGlint(ItemStack stack) {
-        hasGlint(ItemStack, stack);
-        return super.hasGlint(stack);
-    }
-
-    private void hasGlint(Object itemStack, ItemStack stack) {
-
+        return false;
     }
 }

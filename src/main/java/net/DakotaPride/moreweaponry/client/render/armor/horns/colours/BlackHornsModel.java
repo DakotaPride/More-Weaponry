@@ -9,17 +9,17 @@ import software.bernie.geckolib3.model.AnimatedGeoModel;
 public class BlackHornsModel extends AnimatedGeoModel<BlackHornsItem> {
 
     @Override
-    public Identifier getModelLocation(BlackHornsItem object) {
+    public Identifier getModelResource(BlackHornsItem object) {
         return new Identifier(MoreWeaponry.MOD_ID, "geo/base_horns.geo.json");
     }
 
     @Override
-    public Identifier getTextureLocation(BlackHornsItem object) {
+    public Identifier getTextureResource(BlackHornsItem object) {
         return new Identifier(MoreWeaponry.MOD_ID, "textures/models/armor/black_horns.png");
     }
 
     @Override
-    public Identifier getAnimationFileLocation(BlackHornsItem animatable) {
+    public Identifier getAnimationResource(BlackHornsItem animatable) {
         return new Identifier(MoreWeaponry.MOD_ID, "animations/base_horns_animation.json");
     }
 }

@@ -18,8 +18,8 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
-public class FabricatorBlock extends BlockWithEntity implements BlockEntityProvider {
-    public FabricatorBlock(Settings settings) {
+public class EchoInfuserBlock extends BlockWithEntity implements BlockEntityProvider {
+    public EchoInfuserBlock(Settings settings) {
         super(settings);
     }
 
@@ -33,8 +33,8 @@ public class FabricatorBlock extends BlockWithEntity implements BlockEntityProvi
     public void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
         if (state.getBlock() != newState.getBlock()) {
             BlockEntity blockEntity = world.getBlockEntity(pos);
-            if (blockEntity instanceof FabricatorEntity) {
-                ItemScatterer.spawn(world, pos, (FabricatorEntity)blockEntity);
+            if (blockEntity instanceof EchoInfuserEntity) {
+                ItemScatterer.spawn(world, pos, (EchoInfuserEntity)blockEntity);
                 world.updateComparators(pos,this);
             }
             super.onStateReplaced(state, world, pos, newState, moved);
@@ -58,12 +58,13 @@ public class FabricatorBlock extends BlockWithEntity implements BlockEntityProvi
     @Nullable
     @Override
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-        return new FabricatorEntity(pos, state);
+        return new EchoInfuserEntity(pos, state);
     }
 
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        return checkType(type, MoreClientWeaponry.FABRICATOR_BLOCK_ENTITY, FabricatorEntity::tick);
+        return checkType(type, MoreClientWeaponry.ECHO_INFUSER_BLOCK_ENTITY, EchoInfuserEntity::tick);
     }
 }
+

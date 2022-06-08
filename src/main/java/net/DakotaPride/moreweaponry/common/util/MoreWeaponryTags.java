@@ -6,9 +6,11 @@ import net.minecraft.item.Item;
 import net.minecraft.tag.TagKey;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
+import net.minecraft.world.biome.Biome;
 
 import static net.DakotaPride.moreweaponry.common.util.MoreWeaponryTags.Blocks.*;
 import static net.DakotaPride.moreweaponry.common.util.MoreWeaponryTags.Items.*;
+import static net.DakotaPride.moreweaponry.common.util.MoreWeaponryTags.Biomes.*;
 
 public class MoreWeaponryTags {
 
@@ -27,6 +29,12 @@ public class MoreWeaponryTags {
         TagKey<Item> rapiers = RAPIERS;
         TagKey<Item> shields = SHIELDS;
         TagKey<Item> horns = HORNS;
+    }
+
+    public static void MoreWeaponryBiomeTags() {
+        TagKey<Biome> night_curon_biomes = NIGHT_CURON;
+        TagKey<Biome> sandstone_dust_biomes = SANDSTONE_DUST;
+        TagKey<Biome> has_frodon_tress = FRODON_TREES;
     }
 
     public static class Blocks {
@@ -60,6 +68,16 @@ public class MoreWeaponryTags {
 
         private static TagKey<Item> createTag(String name) {
             return TagKey.of(Registry.ITEM_KEY, new Identifier(MoreWeaponry.MOD_ID, name));
+        }
+    }
+
+    public static class Biomes {
+        public static final TagKey<Biome> NIGHT_CURON = createTag("night_curon_biomes");
+        public static final TagKey<Biome> SANDSTONE_DUST = createTag("sandstone_dust_biomes");
+        public static final TagKey<Biome> FRODON_TREES = createTag("has_frodon_trees");
+
+        private static TagKey<Biome> createTag(String name) {
+            return TagKey.of(Registry.BIOME_KEY, new Identifier(MoreWeaponry.MOD_ID, name));
         }
     }
 

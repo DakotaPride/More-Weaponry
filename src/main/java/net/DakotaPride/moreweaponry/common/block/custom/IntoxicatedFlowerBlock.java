@@ -32,7 +32,6 @@ public class IntoxicatedFlowerBlock extends PlantBlock {
                 || floor.isOf(Blocks.DIRT);
     }
 
-    @Override
     public AbstractBlock.OffsetType getOffsetType() {
         return AbstractBlock.OffsetType.XZ;
     }

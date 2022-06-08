@@ -57,14 +57,6 @@ public class WandererInfestedBlock
     }
 
     @Override
-    public void onStacksDropped(BlockState state, ServerWorld world, BlockPos pos, ItemStack stack) {
-        super.onStacksDropped(state, world, pos, stack);
-        if (world.getGameRules().getBoolean(GameRules.DO_TILE_DROPS) && EnchantmentHelper.getLevel(Enchantments.SILK_TOUCH, stack) == 0) {
-            this.spawnSpider(world, pos);
-        }
-    }
-
-    @Override
     public void onDestroyedByExplosion(World world, BlockPos pos, Explosion explosion) {
         if (world instanceof ServerWorld) {
             this.spawnSpider((ServerWorld)world, pos);

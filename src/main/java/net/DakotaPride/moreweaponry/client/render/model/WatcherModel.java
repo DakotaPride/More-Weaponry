@@ -10,17 +10,17 @@ import software.bernie.geckolib3.model.provider.data.EntityModelData;
 
 public class WatcherModel extends AnimatedGeoModel<WatcherEntity> {
     @Override
-    public Identifier getModelLocation(WatcherEntity entity) {
+    public Identifier getModelResource(WatcherEntity entity) {
         return new Identifier(MoreWeaponry.MOD_ID, "geo/watcher.geo.json");
     }
 
     @Override
-    public Identifier getTextureLocation(WatcherEntity entity) {
+    public Identifier getTextureResource(WatcherEntity entity) {
         return new Identifier(MoreWeaponry.MOD_ID, "textures/entity/watcher/watcher.png");
     }
 
     @Override
-    public Identifier getAnimationFileLocation(WatcherEntity entity) {
+    public Identifier getAnimationResource(WatcherEntity entity) {
         return new Identifier(MoreWeaponry.MOD_ID, "animations/watcher.animation.json");
     }
 

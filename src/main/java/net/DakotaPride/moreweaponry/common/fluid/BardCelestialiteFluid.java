@@ -43,7 +43,6 @@ public abstract class BardCelestialiteFluid extends FlowableFluid {
         return MoreWeaponry.BARD_INFUSED_CELESTIALITE;
     }
 
-    @Override
     public void randomDisplayTick(World world, BlockPos pos, FluidState state, Random random) {
         if (!state.isStill() && !(Boolean)state.get(FALLING)) {
             if (random.nextInt(64) == 0) {

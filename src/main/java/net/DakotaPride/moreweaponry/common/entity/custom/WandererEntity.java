@@ -20,7 +20,7 @@ import net.minecraft.nbt.NbtCompound;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.text.TranslatableText;
+import net.minecraft.text.Text;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import software.bernie.geckolib3.core.IAnimatable;
@@ -37,7 +37,7 @@ public class WandererEntity extends AbstractHostileEntity implements IAnimatable
     public WandererEntity(EntityType<? extends AbstractHostileEntity> entityType, World world) {
         super(entityType, world);
 
-        this.bossBar = (ServerBossBar)(new ServerBossBar(new TranslatableText("entity.moreweaponry.wanderer"),
+        this.bossBar = (ServerBossBar)(new ServerBossBar(Text.translatable("entity.moreweaponry.wanderer"),
                 BossBar.Color.YELLOW, BossBar.Style.PROGRESS)).setDragonMusic(false).setThickenFog(false);
 
     }

@@ -16,7 +16,7 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.text.TranslatableText;
+import net.minecraft.text.Text;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib3.core.IAnimatable;
@@ -33,7 +33,7 @@ public class NecromancerEntity extends AbstractNecromancerEntity implements IAni
     public NecromancerEntity(EntityType<? extends AbstractNecromancerEntity> entityType, World world) {
         super(entityType, world);
 
-        this.bossBar = (ServerBossBar)(new ServerBossBar(new TranslatableText("entity.moreweaponry.necromancer"),
+        this.bossBar = (ServerBossBar)(new ServerBossBar(Text.translatable("entity.moreweaponry.necromancer"),
                 BossBar.Color.PURPLE, BossBar.Style.PROGRESS)).setDragonMusic(false).setThickenFog(false);
 
     }
@@ -175,11 +175,11 @@ public class NecromancerEntity extends AbstractNecromancerEntity implements IAni
     }
 
     protected int getXpToDrop(PlayerEntity player) {
-        if (isBaby()) {
+        if (!isBaby()) {
             this.experiencePoints = (int)(this.experiencePoints * 45.7F);
         }
 
-        return super.getXpToDrop(player);
+        return super.getXpToDrop();
     }
 
     protected void mobTick() {

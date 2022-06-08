@@ -11,17 +11,17 @@ import software.bernie.geckolib3.model.provider.data.EntityModelData;
 public class BuriedKnightModel extends AnimatedGeoModel<BuriedKnightEntity> {
 
     @Override
-    public Identifier getModelLocation(BuriedKnightEntity entity) {
+    public Identifier getModelResource(BuriedKnightEntity entity) {
         return new Identifier(MoreWeaponry.MOD_ID, "geo/buried_knight.geo.json");
     }
 
     @Override
-    public Identifier getTextureLocation(BuriedKnightEntity entity) {
+    public Identifier getTextureResource(BuriedKnightEntity entity) {
         return new Identifier(MoreWeaponry.MOD_ID, "textures/entity/darkest_cavern/buried_knight.png");
     }
 
     @Override
-    public Identifier getAnimationFileLocation(BuriedKnightEntity entity) {
+    public Identifier getAnimationResource(BuriedKnightEntity entity) {
         return new Identifier(MoreWeaponry.MOD_ID, "animations/buried_knight.animation.json");
     }
 

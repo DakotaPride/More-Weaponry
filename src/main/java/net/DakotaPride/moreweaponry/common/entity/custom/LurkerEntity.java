@@ -124,11 +124,11 @@ public class LurkerEntity extends HostileEntity implements IAnimatable {
     }
 
     protected int getXpToDrop(PlayerEntity player) {
-        if (isBaby()) {
+        if (!isBaby()) {
             this.experiencePoints = (int)(this.experiencePoints * 24.0F);
         }
 
-        return super.getXpToDrop(player);
+        return super.getXpToDrop();
     }
 
     protected boolean shouldDropLoot() {

@@ -7,17 +7,17 @@ import software.bernie.geckolib3.model.AnimatedGeoModel;
 
 public class LurkerModel extends AnimatedGeoModel<LurkerEntity> {
     @Override
-    public Identifier getModelLocation(LurkerEntity entity) {
+    public Identifier getModelResource(LurkerEntity entity) {
         return new Identifier(MoreWeaponry.MOD_ID, "geo/lurker.geo.json");
     }
 
     @Override
-    public Identifier getTextureLocation(LurkerEntity entity) {
+    public Identifier getTextureResource(LurkerEntity entity) {
         return new Identifier(MoreWeaponry.MOD_ID, "textures/entity/lurker/lurker.png");
     }
 
     @Override
-    public Identifier getAnimationFileLocation(LurkerEntity entity) {
+    public Identifier getAnimationResource(LurkerEntity entity) {
         return new Identifier(MoreWeaponry.MOD_ID, "animations/lurker.animation.json");
     }
 

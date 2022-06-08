@@ -10,17 +10,17 @@ import software.bernie.geckolib3.model.provider.data.EntityModelData;
 
 public class SickenedHuskModel extends AnimatedGeoModel<SickenedHuskEntity> {
     @Override
-    public Identifier getModelLocation(SickenedHuskEntity entity) {
+    public Identifier getModelResource(SickenedHuskEntity entity) {
         return new Identifier(MoreWeaponry.MOD_ID, "geo/sickened.geo.json");
     }
 
     @Override
-    public Identifier getTextureLocation(SickenedHuskEntity entity) {
+    public Identifier getTextureResource(SickenedHuskEntity entity) {
         return new Identifier(MoreWeaponry.MOD_ID, "textures/entity/sickened/sickened_husk.png");
     }
 
     @Override
-    public Identifier getAnimationFileLocation(SickenedHuskEntity entity) {
+    public Identifier getAnimationResource(SickenedHuskEntity entity) {
         return new Identifier(MoreWeaponry.MOD_ID, "animations/sickened.animation.json");
     }
 

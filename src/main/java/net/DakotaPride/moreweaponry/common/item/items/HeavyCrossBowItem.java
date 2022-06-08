@@ -20,9 +20,7 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.stat.Stats;
-import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
@@ -266,7 +264,7 @@ public class HeavyCrossBowItem extends CrossbowItem
 
     public static void shootAll(World world, LivingEntity entity, Hand hand, ItemStack stack, float speed, float divergence) {
         List<ItemStack> list = getProjectiles(stack);
-        float[] fs = getSoundPitches(entity.getRandom());
+        float[] fs = getSoundPitches((Random) entity.getRandom());
 
         for (int i = 0; i < list.size(); i++) {
             ItemStack itemStack = list.get(i);
@@ -374,20 +372,20 @@ public class HeavyCrossBowItem extends CrossbowItem
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add( new TranslatableText("item.moreweaponry.description.double_handed").formatted(Formatting.DARK_RED));
+        tooltip.add(Text.translatable("item.moreweaponry.description.double_handed").formatted(Formatting.DARK_RED));
         List<ItemStack> list = getProjectiles(stack);
         if (!isCharged(stack) || list.isEmpty()) {
             return;
         }
 
         ItemStack itemStack = list.get(0);
-        tooltip.add((new TranslatableText("item.minecraft.crossbow.projectile")).append(" ").append(itemStack.toHoverableText()));
+        tooltip.add((Text.translatable("item.minecraft.crossbow.projectile")).append(" ").append(itemStack.toHoverableText()));
         if (context.isAdvanced() && itemStack.isOf(Items.FIREWORK_ROCKET)) {
             List<Text> list2 = Lists.newArrayList();
             Items.FIREWORK_ROCKET.appendTooltip(itemStack, world, list2, context);
             if (!list2.isEmpty()) {
                 for (int i = 0; i < list2.size(); i++) {
-                    list2.set(i, (new LiteralText("  ")).append(list2.get(i)).formatted(Formatting.GRAY));
+                    list2.set(i, (Text.literal("  ")).append(list2.get(i)).formatted(Formatting.GRAY));
                 }
 
                 tooltip.addAll(list2);

@@ -2,21 +2,13 @@ package net.DakotaPride.moreweaponry.common.item.items.celestial_madalian;
 
 import net.DakotaPride.moreweaponry.common.MoreWeaponry;
 import net.DakotaPride.moreweaponry.common.entity.custom.SickenedHuskEntity;
-import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
 import net.minecraft.util.ActionResult;
-import net.minecraft.util.Formatting;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import org.jetbrains.annotations.Nullable;
-
-import java.util.List;
 
 public class SickenedHuskCelestialMadalianItem extends CelestialMadalianItem{
     public SickenedHuskCelestialMadalianItem(Settings settings) {
@@ -41,12 +33,6 @@ public class SickenedHuskCelestialMadalianItem extends CelestialMadalianItem{
 
         }
         return super.useOnBlock(context);
-    }
-
-    @Override
-    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add( new TranslatableText("item.moreweaponry.description.celestial_medallion").formatted(Formatting.YELLOW));
-
     }
 
 

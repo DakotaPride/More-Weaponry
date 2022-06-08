@@ -11,12 +11,12 @@ import net.minecraft.util.JsonHelper;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.world.World;
 
-public class FabricatorRecipe implements Recipe<SimpleInventory> {
+public class EchoInfuserRecipe implements Recipe<SimpleInventory> {
     private final Identifier id;
     private final ItemStack output;
     private final DefaultedList<Ingredient> recipeItems;
 
-    public FabricatorRecipe(Identifier id, ItemStack output, DefaultedList<Ingredient> recipeItems) {
+    public EchoInfuserRecipe(Identifier id, ItemStack output, DefaultedList<Ingredient> recipeItems) {
         this.id = id;
         this.output = output;
         this.recipeItems = recipeItems;
@@ -65,32 +65,32 @@ public class FabricatorRecipe implements Recipe<SimpleInventory> {
         return Type.INSTANCE;
     }
 
-    public static class Type implements RecipeType<FabricatorRecipe> {
+    public static class Type implements RecipeType<EchoInfuserRecipe> {
         private Type() { }
         public static final Type INSTANCE = new Type();
-        public static final String ID = "fabricator";
+        public static final String ID = "echo_infuser";
     }
 
-    public static class Serializer implements RecipeSerializer<FabricatorRecipe> {
+    public static class Serializer implements RecipeSerializer<EchoInfuserRecipe> {
         public static final Serializer INSTANCE = new Serializer();
-        public static final String ID = "fabricator";
+        public static final String ID = "echo_infuser";
 
         @Override
-        public FabricatorRecipe read(Identifier id, JsonObject json) {
+        public EchoInfuserRecipe read(Identifier id, JsonObject json) {
             ItemStack output = ShapedRecipe.outputFromJson(JsonHelper.getObject(json, "output"));
 
             JsonArray ingredients = JsonHelper.getArray(json, "ingredients");
-            DefaultedList<Ingredient> inputs = DefaultedList.ofSize(2, Ingredient.EMPTY);
+            DefaultedList<Ingredient> inputs = DefaultedList.ofSize(6, Ingredient.EMPTY);
 
             for (int i = 0; i < inputs.size(); i++) {
                 inputs.set(i, Ingredient.fromJson(ingredients.get(i)));
             }
 
-            return new FabricatorRecipe(id, output, inputs);
+            return new EchoInfuserRecipe(id, output, inputs);
         }
 
         @Override
-        public FabricatorRecipe read(Identifier id, PacketByteBuf buf) {
+        public EchoInfuserRecipe read(Identifier id, PacketByteBuf buf) {
             DefaultedList<Ingredient> inputs = DefaultedList.ofSize(buf.readInt(), Ingredient.EMPTY);
 
             for (int i = 0; i < inputs.size(); i++) {
@@ -98,11 +98,11 @@ public class FabricatorRecipe implements Recipe<SimpleInventory> {
             }
 
             ItemStack output = buf.readItemStack();
-            return new FabricatorRecipe(id, output, inputs);
+            return new EchoInfuserRecipe(id, output, inputs);
         }
 
         @Override
-        public void write(PacketByteBuf buf, FabricatorRecipe recipe) {
+        public void write(PacketByteBuf buf, EchoInfuserRecipe recipe) {
             buf.writeInt(recipe.getIngredients().size());
             for (Ingredient ing : recipe.getIngredients()) {
                 ing.write(buf);

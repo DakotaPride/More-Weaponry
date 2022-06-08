@@ -10,17 +10,17 @@ import software.bernie.geckolib3.model.provider.data.EntityModelData;
 
 public class BardModel extends AnimatedGeoModel<BardEntity> {
     @Override
-    public Identifier getModelLocation(BardEntity entity) {
+    public Identifier getModelResource(BardEntity entity) {
         return new Identifier(MoreWeaponry.MOD_ID, "geo/bard.geo.json");
     }
 
     @Override
-    public Identifier getTextureLocation(BardEntity entity) {
+    public Identifier getTextureResource(BardEntity entity) {
         return new Identifier(MoreWeaponry.MOD_ID, "textures/entity/bard/bard.png");
     }
 
     @Override
-    public Identifier getAnimationFileLocation(BardEntity entity) {
+    public Identifier getAnimationResource(BardEntity entity) {
         return new Identifier(MoreWeaponry.MOD_ID, "animations/bard.animation.json");
     }
 

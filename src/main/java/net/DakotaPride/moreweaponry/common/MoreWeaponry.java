@@ -42,10 +42,7 @@ import net.DakotaPride.moreweaponry.common.item.items.watcher_tools.*;
 import net.DakotaPride.moreweaponry.common.recipe.CirtictForgeRecipe;
 import net.DakotaPride.moreweaponry.common.recipe.CoreForgeRecipe;
 import net.DakotaPride.moreweaponry.common.recipe.EssenceTranslatorRecipe;
-import net.DakotaPride.moreweaponry.common.screen.CirtictForgeScreenHandler;
-import net.DakotaPride.moreweaponry.common.screen.CoreForgeScreenHandler;
-import net.DakotaPride.moreweaponry.common.screen.EssenceTranslatorScreenHandler;
-import net.DakotaPride.moreweaponry.common.screen.FabricatorScreenHandler;
+import net.DakotaPride.moreweaponry.common.screen.*;
 import net.DakotaPride.moreweaponry.common.structure.BardRockStructure;
 import net.DakotaPride.moreweaponry.common.structure.DarkestCavernFortressStructure;
 import net.DakotaPride.moreweaponry.common.structure.SickenedGravesStructure;
@@ -62,8 +59,8 @@ import net.DakotaPride.moreweaponry.mixin.StructureFeatureAccessor;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.fabricmc.fabric.api.loot.v1.FabricLootPoolBuilder;
-import net.fabricmc.fabric.api.loot.v1.event.LootTableLoadingCallback;
+import net.fabricmc.fabric.api.loot.v2.FabricLootPoolBuilder;
+import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
@@ -76,7 +73,7 @@ import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.*;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
-import net.minecraft.entity.decoration.painting.PaintingMotive;
+import net.minecraft.entity.decoration.painting.PaintingVariant;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -102,7 +99,6 @@ import net.minecraft.util.registry.Registry;
 import net.minecraft.world.Heightmap;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.LakeFeature;
-import net.minecraft.world.gen.feature.StructureFeature;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import software.bernie.geckolib3.GeckoLib;
@@ -206,8 +202,8 @@ public class MoreWeaponry implements ModInitializer {
 	public static BleedingEnchantment BLEEDING_ENCHANT;
 
 	// Paintings
-	public static PaintingMotive MASTERS_PAINTING;
-	public static PaintingMotive WATCHER_PAINTING;
+	public static PaintingVariant MASTERS_PAINTING;
+	public static PaintingVariant WATCHER_PAINTING;
 
 	// Particles
 	public static DefaultParticleType CELESTIAL_MEDALLION_PARTICLE = FabricParticleTypes.simple();
@@ -216,7 +212,7 @@ public class MoreWeaponry implements ModInitializer {
 	public static ScreenHandlerType<CoreForgeScreenHandler> CORE_FORGE_SCREEN_HANDLER;
 	public static ScreenHandlerType<EssenceTranslatorScreenHandler> ESSENCE_TRANSLATOR_SCREEN_HANDLER;
 	public static ScreenHandlerType<CirtictForgeScreenHandler> CIRTICT_FORGE_SCREEN_HANDLER;
-	public static ScreenHandlerType<FabricatorScreenHandler> FABRICATOR_SCREEN_HANDLER;
+	public static ScreenHandlerType<EchoInfuserScreenHandler> ECHO_INFUSER_SCREEN_HANDLER;
 
 	// Sounds
 	public static SoundEvent ENTITY_BURIED_KNIGHT_AMBIENT;
@@ -512,6 +508,7 @@ public class MoreWeaponry implements ModInitializer {
 	public static ReinforcedBucketItem CONTAINED_CELESTIALITE;
 	public static ReinforcedBucketItem REINFORCED_BUCKET;
 
+
 	// Fluids
 	public static FlowableFluid CELESTIALITE_STILL;
 	public static FlowableFluid CELESTIALITE_FLOWING;
@@ -538,6 +535,8 @@ public class MoreWeaponry implements ModInitializer {
 
 	// Blocks
 	public static OreBlock CELESTIALITE_ROCK_ORE;
+
+	public static Block ECHO_INFUSER;
 
 	public static Block MOON_STONE_DUST_BLOCK;
 	public static PillarBlock KURO_WHEAT_BLOCK;
@@ -873,19 +872,19 @@ public class MoreWeaponry implements ModInitializer {
 
 
 	// Tools
-	private static class BetterPickaxeItem extends PickaxeItem {
+	public static class BetterPickaxeItem extends PickaxeItem {
 		public BetterPickaxeItem(ToolMaterial material, int attackDamage, float attackSpeed, Settings settings) {
 			super(material, attackDamage, attackSpeed, settings);
 		}
 	}
 
-	private static class BetterAxeItem extends AxeItem {
+	public static class BetterAxeItem extends AxeItem {
 		public BetterAxeItem(ToolMaterial material, int attackDamage, float attackSpeed, Settings settings) {
 			super(material, attackDamage, attackSpeed, settings);
 		}
 	}
 
-	private static class BetterHoeItem extends HoeItem {
+	public static class BetterHoeItem extends HoeItem {
 		public BetterHoeItem(ToolMaterial material, int attackDamage, float attackSpeed, Settings settings) {
 			super(material, attackDamage, attackSpeed, settings);
 		}
@@ -912,8 +911,8 @@ public class MoreWeaponry implements ModInitializer {
 		return Registry.register(Registry.SOUND_EVENT, id, new SoundEvent(id));
 	}
 
-	private static PaintingMotive registerPainting(String name, PaintingMotive paintingMotive) {
-		return Registry.register(Registry.PAINTING_MOTIVE, new Identifier(MoreWeaponry.MOD_ID, name), paintingMotive);
+	private static PaintingVariant registerPainting(String name, PaintingVariant paintingMotive) {
+		return Registry.register(Registry.PAINTING_VARIANT, new Identifier(MoreWeaponry.MOD_ID, name), paintingMotive);
 	}
 
 	private static Enchantment registerEnchantment(String name, Enchantment enchantment) {
@@ -971,14 +970,14 @@ public class MoreWeaponry implements ModInitializer {
 		moreWeaponryData = LocalDate.now();
 		int localMonth = moreWeaponryData.get(ChronoField.MONTH_OF_YEAR);
 		if (localMonth == 6) {
-		LootTableLoadingCallback.EVENT.register(((resourceManager, manager, id, supplier, setter) -> {
+			LootTableEvents.MODIFY.register(((resourceManager, manager, id, supplier, setter) -> {
 					if (DESERT_PYRAMID_CHEST_ID.equals(id)) {
 						FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
 								.rolls(ConstantLootNumberProvider.create(1))
 								.conditionally(RandomChanceLootCondition.builder(0.34f))
 								.with(ItemEntry.builder(COSMETIC_HORNS))
 								.withFunction(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
-						supplier.withPool(poolBuilder.build());
+						supplier.pool(poolBuilder.build());
 					}
 				}));
 		}
@@ -1090,9 +1089,9 @@ public class MoreWeaponry implements ModInitializer {
 
 		// Paintings
 		WATCHER_PAINTING = registerPainting("watcher",
-				new PaintingMotive(64, 64));
+				new PaintingVariant(64, 64));
 		MASTERS_PAINTING = registerPainting("masters",
-				new PaintingMotive(32, 32));
+				new PaintingVariant(32, 32));
 
 		// Enchantments
 		BLEEDING_ENCHANT = (BleedingEnchantment) registerEnchantment("bleeding",
@@ -2423,6 +2422,7 @@ public class MoreWeaponry implements ModInitializer {
 		MoreWeaponryLootTableModifiers.modifyLootTables();
 		MoreWeaponryTags.MoreWeaponryBlockTags();
 		MoreWeaponryTags.MoreWeaponryItemTags();
+		MoreWeaponryTags.MoreWeaponryBiomeTags();
 		GeckoLib.initialize();
 
 

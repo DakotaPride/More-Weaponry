@@ -77,11 +77,11 @@ public class LeechEntity extends AbstractHostileEntity implements IAnimatable {
     }
 
     protected int getXpToDrop(PlayerEntity player) {
-        if (isBaby()) {
+        if (!isBaby()) {
             this.experiencePoints = (int)(this.experiencePoints * 21.7F);
         }
 
-        return super.getXpToDrop(player);
+        return super.getXpToDrop();
     }
 
     protected boolean shouldDropLoot() {

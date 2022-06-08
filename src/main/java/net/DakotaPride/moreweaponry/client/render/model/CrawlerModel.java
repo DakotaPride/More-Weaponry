@@ -7,17 +7,17 @@ import software.bernie.geckolib3.model.AnimatedGeoModel;
 
 public class CrawlerModel extends AnimatedGeoModel<CrawlerEntity> {
     @Override
-    public Identifier getModelLocation(CrawlerEntity entity) {
+    public Identifier getModelResource(CrawlerEntity entity) {
         return new Identifier(MoreWeaponry.MOD_ID, "geo/crawler.geo.json");
     }
 
     @Override
-    public Identifier getTextureLocation(CrawlerEntity entity) {
+    public Identifier getTextureResource(CrawlerEntity entity) {
         return new Identifier(MoreWeaponry.MOD_ID, "textures/entity/darkest_cavern/crawler.png");
     }
 
     @Override
-    public Identifier getAnimationFileLocation(CrawlerEntity entity) {
+    public Identifier getAnimationResource(CrawlerEntity entity) {
         return new Identifier(MoreWeaponry.MOD_ID, "animations/crawler.animation.json");
     }
 }

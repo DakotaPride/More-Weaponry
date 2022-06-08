@@ -4,11 +4,10 @@ import net.DakotaPride.moreweaponry.common.world.features.EndConfiguredFeatures;
 import net.minecraft.block.*;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
-
-import java.util.Random;
 
 public class EndNyliumBlock extends MossBlock {
     public EndNyliumBlock(Settings settings) {
@@ -21,7 +20,7 @@ public class EndNyliumBlock extends MossBlock {
     }
 
     @Override
-    public boolean canGrow(World world, Random random, BlockPos pos, BlockState state) {
+    public boolean canGrow(World world, net.minecraft.util.math.random.Random random, BlockPos pos, BlockState state) {
         return true;
     }
 

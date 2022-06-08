@@ -8,17 +8,17 @@ import software.bernie.geckolib3.model.AnimatedGeoModel;
 public class BlessedArmorModel extends AnimatedGeoModel<BlessedArmorItem> {
 
     @Override
-    public Identifier getModelLocation(BlessedArmorItem object) {
+    public Identifier getModelResource(BlessedArmorItem object) {
         return new Identifier(MoreWeaponry.MOD_ID, "geo/blessed_armor.geo.json");
     }
 
     @Override
-    public Identifier getTextureLocation(BlessedArmorItem object) {
+    public Identifier getTextureResource(BlessedArmorItem object) {
         return new Identifier(MoreWeaponry.MOD_ID, "textures/models/armor/blessed_armor_16x.png");
     }
 
     @Override
-    public Identifier getAnimationFileLocation(BlessedArmorItem animatable) {
+    public Identifier getAnimationResource(BlessedArmorItem animatable) {
         return new Identifier(MoreWeaponry.MOD_ID, "animations/blessed_armor.animation.json");
     }
 }

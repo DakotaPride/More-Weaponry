@@ -1,6 +1,6 @@
 package net.DakotaPride.moreweaponry.common.item.items.cirtict.cooled;
 
-import net.DakotaPride.moreweaponry.common.item.items.vanilla_tools.ModPickaxeItem;
+import net.DakotaPride.moreweaponry.common.MoreWeaponry;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -8,14 +8,13 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class CooledCirtictPickaxe extends ModPickaxeItem {
+public class CooledCirtictPickaxe extends MoreWeaponry.BetterPickaxeItem {
 
 
     public CooledCirtictPickaxe(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
@@ -25,7 +24,7 @@ public class CooledCirtictPickaxe extends ModPickaxeItem {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add( new TranslatableText("item.moreweaponry.cooled_cirtict_items.tooltip").formatted(Formatting.AQUA) );
+        tooltip.add(Text.translatable("item.moreweaponry.cooled_cirtict_items.tooltip").formatted(Formatting.AQUA) );
     }
 
     @Override

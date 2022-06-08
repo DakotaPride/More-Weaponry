@@ -45,7 +45,6 @@ public abstract class CelestialiteFluid extends FlowableFluid {
         return MoreWeaponry.CONTAINED_CELESTIALITE;
     }
 
-    @Override
     public void randomDisplayTick(World world, BlockPos pos, FluidState state, Random random) {
         if (!state.isStill() && !(Boolean)state.get(FALLING)) {
             if (random.nextInt(64) == 0) {

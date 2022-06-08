@@ -9,17 +9,17 @@ import software.bernie.geckolib3.model.AnimatedGeoModel;
 public class BisexualHornsModel extends AnimatedGeoModel<BisexualHornsItem> {
 
     @Override
-    public Identifier getModelLocation(BisexualHornsItem object) {
+    public Identifier getModelResource(BisexualHornsItem object) {
         return new Identifier(MoreWeaponry.MOD_ID, "geo/base_horns.geo.json");
     }
 
     @Override
-    public Identifier getTextureLocation(BisexualHornsItem object) {
+    public Identifier getTextureResource(BisexualHornsItem object) {
         return new Identifier(MoreWeaponry.MOD_ID, "textures/models/armor/bisexual_horns.png");
     }
 
     @Override
-    public Identifier getAnimationFileLocation(BisexualHornsItem animatable) {
+    public Identifier getAnimationResource(BisexualHornsItem animatable) {
         return new Identifier(MoreWeaponry.MOD_ID, "animations/base_horns_animation.json");
     }
 }

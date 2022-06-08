@@ -13,7 +13,6 @@ import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
@@ -98,11 +97,11 @@ public class ElderScaleArmorItem extends ArmorItem {
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
 
         if(Screen.hasShiftDown()){
-            tooltip.add( new TranslatableText("armor.moreweaponry.shift_down.description.elder_scale.one").formatted(Formatting.YELLOW));
-            tooltip.add( new TranslatableText("armor.moreweaponry.shift_down.description.elder_scale.two").formatted(Formatting.YELLOW));
-            tooltip.add( new TranslatableText("armor.moreweaponry.shift_down.description.elder_scale.three").formatted(Formatting.YELLOW));
+            tooltip.add(Text.translatable("armor.moreweaponry.shift_down.description.elder_scale.one").formatted(Formatting.YELLOW));
+            tooltip.add(Text.translatable("armor.moreweaponry.shift_down.description.elder_scale.two").formatted(Formatting.YELLOW));
+            tooltip.add(Text.translatable("armor.moreweaponry.shift_down.description.elder_scale.three").formatted(Formatting.YELLOW));
         } else {
-            tooltip.add( new TranslatableText("misc.moreweaponry.shift_up").formatted(Formatting.DARK_GRAY));
+            tooltip.add(Text.translatable("misc.moreweaponry.shift_up").formatted(Formatting.DARK_GRAY));
             }
     }
 

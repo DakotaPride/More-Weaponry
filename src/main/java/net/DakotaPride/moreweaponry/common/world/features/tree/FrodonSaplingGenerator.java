@@ -12,7 +12,7 @@ public class FrodonSaplingGenerator extends SaplingGenerator {
 
     @Nullable
     @Override
-    protected RegistryEntry<? extends ConfiguredFeature<?, ?>> getTreeFeature(Random random, boolean bees) {
+    protected RegistryEntry<? extends ConfiguredFeature<?, ?>> getTreeFeature(net.minecraft.util.math.random.Random random, boolean bees) {
         return MoreWeaponryConfiguredFeatures.FRODON_TREE;
     }
 }
