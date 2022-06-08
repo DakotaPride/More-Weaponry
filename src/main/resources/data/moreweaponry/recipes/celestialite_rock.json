@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "moreweaponry:celestialite_remnant"
+    },
+    {
+      "item": "moreweaponry:celestialite_remnant"
+    },
+    {
+      "item": "moreweaponry:celestialite_remnant"
+    }
+  ],
+  "result": {
+    "item": "morewepaonry:celestialite_rock"
+  }
+}
