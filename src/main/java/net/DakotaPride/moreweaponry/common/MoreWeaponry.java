@@ -81,6 +81,7 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.fluid.FlowableFluid;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.*;
+import net.minecraft.loot.LootPool;
 import net.minecraft.loot.condition.RandomChanceLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.function.SetCountLootFunction;
@@ -972,12 +973,12 @@ public class MoreWeaponry implements ModInitializer {
 		if (localMonth == 6) {
 			LootTableEvents.MODIFY.register(((resourceManager, manager, id, supplier, setter) -> {
 					if (DESERT_PYRAMID_CHEST_ID.equals(id)) {
-						FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
+						LootPool poolBuilder = LootPool.builder()
 								.rolls(ConstantLootNumberProvider.create(1))
-								.conditionally(RandomChanceLootCondition.builder(0.34f))
 								.with(ItemEntry.builder(COSMETIC_HORNS))
-								.withFunction(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
-						supplier.pool(poolBuilder.build());
+								.conditionally(RandomChanceLootCondition.builder(0.34f))
+								.build();
+						supplier.pool(poolBuilder);
 					}
 				}));
 		}
