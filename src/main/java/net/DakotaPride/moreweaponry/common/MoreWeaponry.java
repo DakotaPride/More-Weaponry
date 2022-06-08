@@ -1257,9 +1257,9 @@ public class MoreWeaponry implements ModInitializer {
 		CIRTICT_FORGE_SCREEN_HANDLER =
 				ScreenHandlerRegistry.registerSimple(new Identifier(MOD_ID, "cirtict_forge"),
 						CirtictForgeScreenHandler::new);
-		FABRICATOR_SCREEN_HANDLER =
-				ScreenHandlerRegistry.registerSimple(new Identifier(MOD_ID, "fabricator"),
-						FabricatorScreenHandler::new);
+		ECHO_INFUSER_SCREEN_HANDLER =
+				ScreenHandlerRegistry.registerSimple(new Identifier(MOD_ID, "echo_infuser"),
+						EchoInfuserScreenHandler::new);
 
 		// Structures
 		StructureFeatureAccessor.callRegister(MoreWeaponry.MOD_ID + ":bard_rock",
