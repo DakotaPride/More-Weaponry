@@ -12,7 +12,7 @@
     "MixinStructurePiece",
     "MobEntityMixin",
     "SignTypeAccessor",
-    "StatusEffectMixin",
+    "StatusEffectMixin"
   ],
   "client": [
     "BlockEntityTypeMixin",
@@ -21,7 +21,7 @@
     "LivingEntityMixin",
     "MixinStructurePiece",
     "SignTypeAccessor",
-    "StatusEffectMixin",
+    "StatusEffectMixin"
   ],
   "injectors": {
     "defaultRequire": 1
