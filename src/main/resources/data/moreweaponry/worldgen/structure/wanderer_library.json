@@ -1,15 +1,23 @@
 {
   "type": "moreweaponry:wanderer_library",
 
-  "config": {
     "start_pool": "moreweaponry:wanderer_library/start_pool",
 
-    "size": 2
-  },
+    "size": 2,
+
+  "max_distance_from_center": 80,
 
   "biomes": "#moreweaponry:has_structure/wanderer_library_biomes",
 
-  "adapt_noise": true,
+  "step": "raw_generation",
+
+  "terrain_adaptation": "beard_thin",
+
+  "start_height": {
+    "absolute": 0
+  },
+
+  "use_expansion_hack": false,
 
   "spawn_overrides": {
     "creature": {

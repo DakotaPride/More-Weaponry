@@ -44,7 +44,6 @@ import net.DakotaPride.moreweaponry.common.recipe.CirtictForgeRecipe;
 import net.DakotaPride.moreweaponry.common.recipe.CoreForgeRecipe;
 import net.DakotaPride.moreweaponry.common.recipe.EssenceTranslatorRecipe;
 import net.DakotaPride.moreweaponry.common.screen.*;
-import net.DakotaPride.moreweaponry.common.structure.*;
 import net.DakotaPride.moreweaponry.common.util.MoreWeaponryLootTableModifiers;
 import net.DakotaPride.moreweaponry.common.util.MoreWeaponryRegistries;
 import net.DakotaPride.moreweaponry.common.util.MoreWeaponryTags;
@@ -219,12 +218,6 @@ public class MoreWeaponry implements ModInitializer {
 	public static SoundEvent ENTITY_BURIED_KNIGHT_HURT;
 	public static SoundEvent ENTITY_CRAWLER_AMBIENT;
 	public static SoundEvent WARDENS_STEP;
-
-	// Structures
-	public static StructureType<?> BARD_ROCK;
-	public static StructureType<?> WANDERER_LIBRARY;
-	public static StructureType<?> SICKENED_GRAVES;
-	public static StructureType<?> DARKEST_CAVERN_FORTRESS;
 
 	// Potions
 	public static Potion NUMBING_POTION;
@@ -1263,12 +1256,6 @@ public class MoreWeaponry implements ModInitializer {
 		ECHO_INFUSER_SCREEN_HANDLER =
 				ScreenHandlerRegistry.registerSimple(new Identifier(MOD_ID, "echo_infuser"),
 						EchoInfuserScreenHandler::new);
-
-		// Structures
-		BARD_ROCK = registerStructure(new Identifier(MOD_ID, "bard_rock"), NewBardRockStructure.CODEC);
-		WANDERER_LIBRARY = registerStructure(new Identifier(MOD_ID, "wanderer_library"), NewWandererLibraryStructure.CODEC);
-		DARKEST_CAVERN_FORTRESS = registerStructure(new Identifier(MOD_ID, "darkest_cavern_fortress"), NewDarkestCavernFortressStructure.CODEC);
-		SICKENED_GRAVES = registerStructure(new Identifier(MOD_ID, "sickened_graves"), NewSickenedGravesStructure.CODEC);
 
 		// Blocks
 		MOON_STONE_DUST_BLOCK = registerBlock("moon_stone_dust_block",

@@ -11,7 +11,7 @@
 
   "step": "raw_generation",
 
-  "terrain_adaptation": "adapt_noise",
+  "terrain_adaptation": "beard_thin",
 
   "start_height": {
     "absolute": 0
