@@ -3,9 +3,7 @@ package net.DakotaPride.moreweaponry.common;
 import com.mojang.serialization.Codec;
 import net.DakotaPride.moreweaponry.common.block.MoreWeaponrySignTypes;
 import net.DakotaPride.moreweaponry.common.block.custom.*;
-import net.DakotaPride.moreweaponry.common.block.entity.CirtictForgeBlock;
-import net.DakotaPride.moreweaponry.common.block.entity.CoreForgeBlock;
-import net.DakotaPride.moreweaponry.common.block.entity.EssenceTranslatorBlock;
+import net.DakotaPride.moreweaponry.common.block.entity.*;
 import net.DakotaPride.moreweaponry.common.block.skulls.*;
 import net.DakotaPride.moreweaponry.common.effect.BleedingStatusEffect;
 import net.DakotaPride.moreweaponry.common.effect.NumbedStatusEffect;
@@ -57,12 +55,14 @@ import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
 import net.fabricmc.fabric.api.screenhandler.v1.ScreenHandlerRegistry;
 import net.fabricmc.yarn.constants.MiningLevels;
 import net.minecraft.block.*;
+import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.*;
@@ -634,6 +634,32 @@ public class MoreWeaponry implements ModInitializer {
 	public static FluidBlock SICKENED_HUSK_CELESTIALITE_FLUID_BLOCK;
 	public static FluidBlock CRACKLER_CELESTIALITE_FLUID_BLOCK;
 	public static FluidBlock BARD_CELESTIALITE_FLUID_BLOCK;
+
+	// Block Entities
+
+	public static void registerBlockEntities() {
+		CORE_FORGE_BLOCK_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE,
+				new Identifier(MOD_ID, "core_forge"),
+				FabricBlockEntityTypeBuilder.create(CoreForgeEntity::new,
+						CORE_FORGE).build(null));
+		ESSENCE_TRANSLATOR_BLOCK_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE,
+				new Identifier(MOD_ID, "essence_translator"),
+				FabricBlockEntityTypeBuilder.create(EssenceTranslatorEntity::new,
+						ESSENCE_TRANSLATOR).build(null));
+		CIRTICT_FORGE_BLOCK_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE,
+				new Identifier(MOD_ID, "cirtict_forge"),
+				FabricBlockEntityTypeBuilder.create(CirtictForgeEntity::new,
+						CIRTICT_FORGE).build(null));
+		ECHO_INFUSER_BLOCK_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE,
+				new Identifier(MOD_ID, "echo_infuser"),
+				FabricBlockEntityTypeBuilder.create(EchoInfuserEntity::new,
+						ECHO_INFUSER).build(null));
+	}
+
+	public static BlockEntityType<CoreForgeEntity> CORE_FORGE_BLOCK_ENTITY;
+	public static BlockEntityType<EssenceTranslatorEntity> ESSENCE_TRANSLATOR_BLOCK_ENTITY;
+	public static BlockEntityType<CirtictForgeEntity> CIRTICT_FORGE_BLOCK_ENTITY;
+	public static BlockEntityType<EchoInfuserEntity> ECHO_INFUSER_BLOCK_ENTITY;
 
 	// Armor Materials
 	public enum MoreWeaponryArmorMaterials implements ArmorMaterial
@@ -2408,6 +2434,9 @@ public class MoreWeaponry implements ModInitializer {
 		MoreWeaponryTags.MoreWeaponryItemTags();
 		MoreWeaponryTags.MoreWeaponryBiomeTags();
 		GeckoLib.initialize();
+
+		// Block Entities
+		registerBlockEntities();
 
 
 	}

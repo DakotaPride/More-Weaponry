@@ -32,31 +32,8 @@ import software.bernie.geckolib3.renderers.geo.GeoArmorRenderer;
 
 public class MoreClientWeaponry implements ClientModInitializer {
 
-
-    public static BlockEntityType<CoreForgeEntity> CORE_FORGE_BLOCK_ENTITY;
-    public static BlockEntityType<EssenceTranslatorEntity> ESSENCE_TRANSLATOR_BLOCK_ENTITY;
-    public static BlockEntityType<CirtictForgeEntity> CIRTICT_FORGE_BLOCK_ENTITY;
-    public static BlockEntityType<EchoInfuserEntity> ECHO_INFUSER_BLOCK_ENTITY;
-
     @Override
     public void onInitializeClient() {
-
-        CORE_FORGE_BLOCK_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE,
-                new Identifier(MoreWeaponry.MOD_ID, "core_forge"),
-                FabricBlockEntityTypeBuilder.create(CoreForgeEntity::new,
-                        MoreWeaponry.CORE_FORGE).build(null));
-        ESSENCE_TRANSLATOR_BLOCK_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE,
-                new Identifier(MoreWeaponry.MOD_ID, "essence_translator"),
-                FabricBlockEntityTypeBuilder.create(EssenceTranslatorEntity::new,
-                        MoreWeaponry.ESSENCE_TRANSLATOR).build(null));
-        CIRTICT_FORGE_BLOCK_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE,
-                new Identifier(MoreWeaponry.MOD_ID, "cirtict_forge"),
-                FabricBlockEntityTypeBuilder.create(CirtictForgeEntity::new,
-                        MoreWeaponry.CIRTICT_FORGE).build(null));
-        ECHO_INFUSER_BLOCK_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE,
-                new Identifier(MoreWeaponry.MOD_ID, "echo_infuser"),
-                FabricBlockEntityTypeBuilder.create(EchoInfuserEntity::new,
-                        MoreWeaponry.ECHO_INFUSER).build(null));
 
         FluidRenderHandlerRegistry.INSTANCE.register(MoreWeaponry.CELESTIALITE_STILL,
                 new SimpleFluidRenderHandler(SimpleFluidRenderHandler.WATER_STILL,

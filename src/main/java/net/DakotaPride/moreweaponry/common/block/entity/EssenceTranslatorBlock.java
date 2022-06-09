@@ -1,6 +1,7 @@
 package net.DakotaPride.moreweaponry.common.block.entity;
 
 import net.DakotaPride.moreweaponry.client.MoreClientWeaponry;
+import net.DakotaPride.moreweaponry.common.MoreWeaponry;
 import net.minecraft.block.BlockEntityProvider;
 import net.minecraft.block.BlockRenderType;
 import net.minecraft.block.BlockState;
@@ -64,6 +65,6 @@ public class EssenceTranslatorBlock extends BlockWithEntity implements BlockEnti
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        return checkType(type, MoreClientWeaponry.ESSENCE_TRANSLATOR_BLOCK_ENTITY, EssenceTranslatorEntity::tick);
+        return checkType(type, MoreWeaponry.ESSENCE_TRANSLATOR_BLOCK_ENTITY, EssenceTranslatorEntity::tick);
     }
 }

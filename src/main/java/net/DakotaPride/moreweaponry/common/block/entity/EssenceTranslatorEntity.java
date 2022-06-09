@@ -1,6 +1,7 @@
 package net.DakotaPride.moreweaponry.common.block.entity;
 
 import net.DakotaPride.moreweaponry.client.MoreClientWeaponry;
+import net.DakotaPride.moreweaponry.common.MoreWeaponry;
 import net.DakotaPride.moreweaponry.common.item.inventory.ImplementedInventory;
 import net.DakotaPride.moreweaponry.common.recipe.EssenceTranslatorRecipe;
 import net.DakotaPride.moreweaponry.common.screen.EssenceTranslatorScreenHandler;
@@ -35,7 +36,7 @@ public class EssenceTranslatorEntity extends BlockEntity implements NamedScreenH
     private int maxFuelTime = 0;
 
     public EssenceTranslatorEntity(BlockPos pos, BlockState state) {
-        super(MoreClientWeaponry.ESSENCE_TRANSLATOR_BLOCK_ENTITY, pos, state);
+        super(MoreWeaponry.ESSENCE_TRANSLATOR_BLOCK_ENTITY, pos, state);
         this.propertyDelegate = new PropertyDelegate() {
             public int get(int index) {
                 switch (index) {
