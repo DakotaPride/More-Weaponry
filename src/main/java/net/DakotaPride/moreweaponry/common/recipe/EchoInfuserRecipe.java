@@ -68,12 +68,12 @@ public class EchoInfuserRecipe implements Recipe<SimpleInventory> {
     public static class Type implements RecipeType<EchoInfuserRecipe> {
         private Type() { }
         public static final Type INSTANCE = new Type();
-        public static final String ID = "echo_infuser";
+        public static final String ID = "echo_infusion";
     }
 
     public static class Serializer implements RecipeSerializer<EchoInfuserRecipe> {
         public static final Serializer INSTANCE = new Serializer();
-        public static final String ID = "echo_infuser";
+        public static final String ID = "echo_infusion";
 
         @Override
         public EchoInfuserRecipe read(Identifier id, JsonObject json) {

@@ -40,6 +40,7 @@ import net.DakotaPride.moreweaponry.common.item.items.wanderer_tools.*;
 import net.DakotaPride.moreweaponry.common.item.items.watcher_tools.*;
 import net.DakotaPride.moreweaponry.common.recipe.CirtictForgeRecipe;
 import net.DakotaPride.moreweaponry.common.recipe.CoreForgeRecipe;
+import net.DakotaPride.moreweaponry.common.recipe.EchoInfuserRecipe;
 import net.DakotaPride.moreweaponry.common.recipe.EssenceTranslatorRecipe;
 import net.DakotaPride.moreweaponry.common.screen.*;
 import net.DakotaPride.moreweaponry.common.util.MoreWeaponryLootTableModifiers;
@@ -1297,6 +1298,11 @@ public class MoreWeaponry implements ModInitializer {
 				CirtictForgeRecipe.Serializer.INSTANCE);
 		Registry.register(Registry.RECIPE_TYPE, new Identifier(MoreWeaponry.MOD_ID, CirtictForgeRecipe.Type.ID),
 				CirtictForgeRecipe.Type.INSTANCE);
+		// Echo Infusion
+		Registry.register(Registry.RECIPE_SERIALIZER, new Identifier(MoreWeaponry.MOD_ID, EchoInfuserRecipe.Serializer.ID),
+				EchoInfuserRecipe.Serializer.INSTANCE);
+		Registry.register(Registry.RECIPE_TYPE, new Identifier(MoreWeaponry.MOD_ID, EchoInfuserRecipe.Type.ID),
+				EchoInfuserRecipe.Type.INSTANCE);
 
 		// Screen Handlers
 		CORE_FORGE_SCREEN_HANDLER =

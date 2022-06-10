@@ -1,0 +1,26 @@
+{
+  "type": "moreweaponry:echo_infusion",
+  "ingredients": [
+    {
+      "item": "minecraft:echo_shard"
+    },
+    {
+      "item": "minecraft:sculk"
+    },
+    {
+      "item": "minecraft:echo_shard"
+    },
+    {
+      "item": "minecraft:echo_shard"
+    },
+    {
+      "tag": "moreweaponry:cirtict_tools"
+    },
+    {
+      "item": "minecraft:echo_shard"
+    }
+  ],
+  "output": {
+    "item": "moreweaponry:echo_cirtict_sword"
+  }
+}
