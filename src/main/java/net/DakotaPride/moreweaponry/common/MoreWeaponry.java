@@ -837,7 +837,10 @@ public class MoreWeaponry implements ModInitializer {
 				() -> Ingredient.ofItems(Items.ENDER_EYE)),
 		ESSENCE_CIRTICT_TOOLS(ESSENCE_LEVEL, 3875, 12.5f,
 				21.0f, 24,
-				() -> Ingredient.ofItems(WITHER_ESSENCE));
+				() -> Ingredient.ofItems(WITHER_ESSENCE)),
+		ECHO_CIRTICT_TOOLS(ESSENCE_LEVEL, 4192, 13f,
+				22.0f, 25,
+				() -> Ingredient.ofItems(Items.ECHO_SHARD));
 
 
 		private final int miningLevel;
@@ -962,7 +965,7 @@ public class MoreWeaponry implements ModInitializer {
 	public static BisexualHornsItem BI_HORNS;
 	public static PansexualHornsItem PAN_HORNS;
 
-	// v1.19 Pride Month (unrelated) Additions
+	// v1.19 Pride Month Additions
 	public static BaseHornsItem COSMETIC_HORNS;
 	public static RedHornsItem RED_HORNS;
 	public static YellowHornsItem YELLOW_HORNS;
@@ -978,9 +981,42 @@ public class MoreWeaponry implements ModInitializer {
 	private static final Identifier DESERT_PYRAMID_CHEST_ID
 			= new Identifier("minecraft", "chests/desert_pyramid");
 
+	// Echo Infused Items
+	public static SwordItem ECHO_CIRTICT_SWORD;
+	public static BetterHoeItem ECHO_CIRTICT_HOE;
+	public static BetterAxeItem ECHO_CIRTICT_AXE;
+	public static BetterPickaxeItem ECHO_CIRTICT_PICKAXE;
+	public static ShovelItem ECHO_CIRTICT_SHOVEL;
+	public static BattleaxeItem ECHO_CIRTICT_BATTLEAXE;
+	public static KnifeItem ECHO_CIRTICT_KNIFE;
+
 
 	@Override
 	public void onInitialize() {
+
+		// Echo Infused Items
+		ECHO_CIRTICT_AXE = registerItem("echo_cirtict_axe",
+				new BetterAxeItem((ToolMaterial) ECHO_CIRTICT_TOOLS, 6, -2.7f,
+						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+		ECHO_CIRTICT_PICKAXE = registerItem("echo_cirtict_pickaxe",
+				new BetterPickaxeItem((ToolMaterial) ECHO_CIRTICT_TOOLS, -1, -2.1f,
+						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+		ECHO_CIRTICT_SWORD = registerItem("echo_cirtict_sword",
+				new SwordItem((ToolMaterial) ECHO_CIRTICT_TOOLS, 3, -1.9f,
+						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+		ECHO_CIRTICT_SHOVEL = registerItem("echo_cirtict_shovel",
+				new ShovelItem((ToolMaterial) ECHO_CIRTICT_TOOLS, -2, -2.5f,
+						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+		ECHO_CIRTICT_HOE = registerItem("echo_cirtict_hoe",
+				new BetterHoeItem((ToolMaterial) ECHO_CIRTICT_TOOLS, -11, 0.5f,
+						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+		ECHO_CIRTICT_BATTLEAXE = registerItem("echo_cirtict_battleaxe",
+				new BattleaxeItem((ToolMaterial) ECHO_CIRTICT_TOOLS, -4, -3.0f,
+						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+		ECHO_CIRTICT_KNIFE = registerItem("echo_cirtict_knife",
+				new KnifeItem((ToolMaterial) ECHO_CIRTICT_TOOLS, -5, -0.5f,
+						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+
 		LocalDate moreWeaponryData;
 
 		moreWeaponryData = LocalDate.now();
@@ -1279,7 +1315,7 @@ public class MoreWeaponry implements ModInitializer {
 		// Blocks
 
 		ECHO_INFUSER = registerBlock("echo_infuser",
-				new EchoInfuserBlock(FabricBlockSettings.copy(Blocks.CRYING_OBSIDIAN)));
+				new EchoInfuserBlock(FabricBlockSettings.copy(Blocks.SCULK)));
 
 		MOON_STONE_DUST_BLOCK = registerBlock("moon_stone_dust_block",
 				new Block(FabricBlockSettings.copy(Blocks.SNOW_BLOCK)));

@@ -19,10 +19,14 @@
     "requirement": {
       "trigger": "minecraft:location",
       "conditions": {
-        "location": {
-          "biome": "minecraft:dripstone_caves",
-          "feature": "moreweaponry:wanderer_library_main"
-        }
+        "player": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "structure": "moreweaponry:wanderer_library"
+            }
+          }
+        ]
       }
     }
   }

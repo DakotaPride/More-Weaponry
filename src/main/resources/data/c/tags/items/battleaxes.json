@@ -1,6 +1,12 @@
 {
   "replace": false,
   "values": [
+    "moreweaponry:wooden_battleaxe",
+    "moreweaponry:golden_battleaxe",
+    "moreweaponry:iron_battleaxe",
+    "moreweaponry:diamond_battleaxe",
+    "moreweaponry:stone_battleaxe",
+    "moreweaponry:netherite_battleaxe",
     "moreweaponry:moon_stone_battleaxe",
     "moreweaponry:glimmering_battleaxe",
     "moreweaponry:blackstone_metal_battleaxe",
@@ -11,6 +17,10 @@
     "moreweaponry:maiden_essence_cirtict_battleaxe",
     "moreweaponry:cirtict_battleaxe",
     "moreweaponry:heated_cirtict_battleaxe",
-    "moreweaponry:cooled_cirtict_battleaxe"
+    "moreweaponry:cooled_cirtict_battleaxe",
+    "moreweaponry:suppressed_essence_cirtict_battleaxe",
+    "moreweaponry:plagued_essence_cirtict_battleaxe",
+    "moreweaponry:wanderer_essence_cirtict_battleaxe",
+    "moreweaponry:echo_cirtict_battleaxe"
   ]
 }

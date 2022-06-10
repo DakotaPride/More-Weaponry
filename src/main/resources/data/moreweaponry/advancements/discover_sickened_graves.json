@@ -19,10 +19,14 @@
     "requirement": {
       "trigger": "minecraft:location",
       "conditions": {
-        "location": {
-          "biome": "minecraft:plains",
-          "feature": "moreweaponry:sickened_graves"
-        }
+        "player": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "structure": "moreweaponry:sickened_graves"
+            }
+          }
+        ]
       }
     }
   }

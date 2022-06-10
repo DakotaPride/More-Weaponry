@@ -1,9 +1,8 @@
 {
-  "type": "crafting_shapeless",
+  "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "potion": "minecraft:water",
-      "remainder": { "item": "minecraft:glass_bottle" }
+      "item": "moreweaponry:reinforced_celestialite_bucket"
     },
     {
       "item": "moreweaponry:mare_diamond"

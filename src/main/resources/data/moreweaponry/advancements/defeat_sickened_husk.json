@@ -14,7 +14,7 @@
     "announce_to_chat": true,
     "hidden": true
   },
-  "parent": "moreweaponry:discover_sickened_graves",
+  "parent": "moreweaponry:discover_dusted_graves",
   "criteria": {
     "moreweaponry:watcher": {
       "trigger": "minecraft:player_killed_entity",

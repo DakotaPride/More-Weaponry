@@ -19,10 +19,16 @@
     "requirement": {
       "trigger": "minecraft:location",
       "conditions": {
-        "location": {
-          "feature": "moreweaponry:bard_rock"
-        }
+        "player": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "structure": "moreweaponry:bard_rock"
+            }
+          }
+        ]
       }
     }
   }
 }
+

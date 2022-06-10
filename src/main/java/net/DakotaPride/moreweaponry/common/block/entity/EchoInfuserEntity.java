@@ -1,10 +1,9 @@
 package net.DakotaPride.moreweaponry.common.block.entity;
 
-import net.DakotaPride.moreweaponry.client.MoreClientWeaponry;
 import net.DakotaPride.moreweaponry.common.MoreWeaponry;
 import net.DakotaPride.moreweaponry.common.item.inventory.ImplementedInventory;
-import net.DakotaPride.moreweaponry.common.recipe.CoreForgeRecipe;
-import net.DakotaPride.moreweaponry.common.screen.CoreForgeScreenHandler;
+import net.DakotaPride.moreweaponry.common.recipe.EchoInfuserRecipe;
+import net.DakotaPride.moreweaponry.common.screen.EchoInfuserScreenHandler;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -26,7 +25,7 @@ import java.util.Optional;
 
 public class EchoInfuserEntity extends BlockEntity implements NamedScreenHandlerFactory, ImplementedInventory {
     private final DefaultedList<ItemStack> inventory =
-            DefaultedList.ofSize(4, ItemStack.EMPTY);
+            DefaultedList.ofSize(7, ItemStack.EMPTY);
 
 
     protected final PropertyDelegate propertyDelegate;
@@ -36,7 +35,7 @@ public class EchoInfuserEntity extends BlockEntity implements NamedScreenHandler
     private int maxFuelTime = 0;
 
     public EchoInfuserEntity(BlockPos pos, BlockState state) {
-        super(MoreWeaponry.CORE_FORGE_BLOCK_ENTITY, pos, state);
+        super(MoreWeaponry.ECHO_INFUSER_BLOCK_ENTITY, pos, state);
         this.propertyDelegate = new PropertyDelegate() {
             public int get(int index) {
                 switch (index) {
@@ -58,7 +57,7 @@ public class EchoInfuserEntity extends BlockEntity implements NamedScreenHandler
             }
 
             public int size() {
-                return 4;
+                return 7;
             }
         };
     }
@@ -76,7 +75,7 @@ public class EchoInfuserEntity extends BlockEntity implements NamedScreenHandler
     @Nullable
     @Override
     public ScreenHandler createMenu(int syncId, PlayerInventory inv, PlayerEntity player) {
-        return new CoreForgeScreenHandler(syncId, inv, this, this.propertyDelegate);
+        return new EchoInfuserScreenHandler(syncId, inv, this, this.propertyDelegate);
     }
 
     @Override
@@ -116,8 +115,8 @@ public class EchoInfuserEntity extends BlockEntity implements NamedScreenHandler
             inventory.setStack(i, entity.getStack(i));
         }
 
-        Optional<CoreForgeRecipe> match = world.getRecipeManager()
-                .getFirstMatch(CoreForgeRecipe.Type.INSTANCE, inventory, world);
+        Optional<EchoInfuserRecipe> match = world.getRecipeManager()
+                .getFirstMatch(EchoInfuserRecipe.Type.INSTANCE, inventory, world);
 
         return match.isPresent() && canInsertAmountIntoOutputSlot(inventory)
                 && canInsertItemIntoOutputSlot(inventory, match.get().getOutput());
@@ -130,8 +129,8 @@ public class EchoInfuserEntity extends BlockEntity implements NamedScreenHandler
             inventory.setStack(i, entity.getStack(i));
         }
 
-        Optional<CoreForgeRecipe> match = world.getRecipeManager()
-                .getFirstMatch(CoreForgeRecipe.Type.INSTANCE, inventory, world);
+        Optional<EchoInfuserRecipe> match = world.getRecipeManager()
+                .getFirstMatch(EchoInfuserRecipe.Type.INSTANCE, inventory, world);
 
         if(match.isPresent()) {
             entity.removeStack(1,1);

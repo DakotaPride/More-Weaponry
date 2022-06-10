@@ -1,13 +1,13 @@
 {
   "display": {
     "icon": {
-      "item": "moreweaponry:watcher_core"
+      "item": "moreweaponry:plagued_core"
     },
     "title": {
-      "translate": "advancement.moreweaponry.discover_watcher_tower.title"
+      "translate": "advancement.moreweaponry.discover_dusted_graves.title"
     },
     "description": {
-      "translate": "advancement.moreweaponry.discover_watcher_tower.description"
+      "translate": "advancement.moreweaponry.discover_dusted_graves.description"
     },
     "frame": "task",
     "show_toast": true,
@@ -23,7 +23,7 @@
           {
             "condition": "minecraft:location_check",
             "predicate": {
-              "structure": "moreweaponry:watcher_tower"
+              "structure": "moreweaponry:dusted_graves"
             }
           }
         ]

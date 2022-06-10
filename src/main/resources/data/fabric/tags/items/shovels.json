@@ -11,6 +11,10 @@
     "moreweaponry:watcher_essence_cirtict_shovel",
     "moreweaponry:cooled_cirtict_shovel",
     "moreweaponry:heated_cirtict_shovel",
-    "moreweaponry:maiden_essence_cirtict_shovel"
+    "moreweaponry:maiden_essence_cirtict_shovel",
+    "moreweaponry:suppressed_essence_cirtict_shovel",
+    "moreweaponry:plagued_essence_cirtict_shovel",
+    "moreweaponry:wanderer_essence_cirtict_shovel",
+    "moreweaponry:echo_cirtict_shovel"
   ]
 }

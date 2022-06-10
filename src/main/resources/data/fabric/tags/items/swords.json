@@ -12,6 +12,11 @@
     "moreweaponry:cooled_cirtict_sword",
     "moreweaponry:heated_cirtict_sword",
     "moreweaponry:maiden_essence_cirtict_sword",
-    "#c:rapiers"
+    "moreweaponry:suppressed_essence_cirtict_sword",
+    "moreweaponry:plagued_essence_cirtict_sword",
+    "moreweaponry:wanderer_essence_cirtict_sword",
+    "moreweaponry:echo_cirtict_sword",
+    "#c:rapiers",
+    "#c:knives"
   ]
 }

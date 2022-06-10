@@ -491,6 +491,16 @@
   "item.moreweaponry.horns.type.bisexual": "§7Colour: [§dBis§5ex§9ual§7]",
   "item.moreweaponry.horns.type.pansexual": "§7Colour: [§dPan§esex§bual§7]",
 
+  "item.moreweaponry.echo_cirtict_sword": "Echo Sword",
+  "item.moreweaponry.echo_cirtict_hoe": "Echo Hoe",
+  "item.moreweaponry.echo_cirtict_axe": "Echo Axe",
+  "item.moreweaponry.echo_cirtict_battleaxe": "Echo Battleaxe",
+  "item.moreweaponry.echo_cirtict_pickaxe": "Echo Pickaxe",
+  "item.moreweaponry.echo_cirtict_shovel": "Echo Shovel",
+  "item.moreweaponry.echo_cirtict_knife": "Echo Knife",
+  "block.moreweaponry.echo_infuser": "Echo Infusion Table",
+  "gui.moreweaponry.echo_infuser.label": "Echo Infusion Table",
+
   "advancement.moreweaponry.bluestone.title": "The First Piece Of The Puzzle",
   "advancement.moreweaponry.bluestone.description": "Obtain A Bluestone Rock",
   "advancement.moreweaponry.consume_curon_brew.title": "Why Would You Do That?",
@@ -550,6 +560,8 @@
   "advancement.moreweaponry.the_beginning_of_the_end.title": "What Comes After This?",
   "advancement.moreweaponry.the_beginning_of_the_end.description": "The Beginning Of The End",
   "advancement.moreweaponry.travel_to_the_ever_frost_dimension.title": "It's Freezing In Here!",
-  "advancement.moreweaponry.travel_to_the_ever_frost_dimension.description": "Travel To The Ever Frost Dimension"
+  "advancement.moreweaponry.travel_to_the_ever_frost_dimension.description": "Travel To The Ever Frost Dimension",
+  "advancement.moreweaponry.discover_dusted_graves.title": "There's Not Enough Room For The Both Of Us",
+  "advancement.moreweaponry.discover_dusted_graves.description": "Discover The Dusted Graves"
 
 }

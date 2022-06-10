@@ -19,9 +19,14 @@
     "requirement": {
       "trigger": "minecraft:location",
       "conditions": {
-        "location": {
-          "feature": "moreweaponry:crackler_nuclear_yard"
-        }
+        "player": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "structure": "moreweaponry:crackler_nuclear_yard"
+            }
+          }
+        ]
       }
     }
   }
