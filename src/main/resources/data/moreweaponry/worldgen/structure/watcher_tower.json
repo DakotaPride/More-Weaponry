@@ -12,7 +12,7 @@
   "step": "surface_structures",
 
   "start_height": {
-    "absolute": 50
+    "absolute": 65
   },
 
   "use_expansion_hack": false,
