@@ -114,7 +114,6 @@ public class MoreWeaponry implements ModInitializer {
 	public static final String MOD_ID = "moreweaponry";
 	public static final Logger LOGGER = LogManager.getLogger(MOD_ID);
 
-
 	// Entities
 	public static EntityType<IronBoltEntity> IRON_BOLT;
 	public static EntityType<CracklerEntity> CRACKLER_ENTITY;
@@ -528,7 +527,7 @@ public class MoreWeaponry implements ModInitializer {
 	// Blocks
 	public static OreBlock CELESTIALITE_ROCK_ORE;
 
-	public static Block ECHO_INFUSER;
+	public static EchoInfuserBlock ECHO_INFUSER;
 
 	public static Block MOON_STONE_DUST_BLOCK;
 	public static PillarBlock KURO_WHEAT_BLOCK;
@@ -950,12 +949,6 @@ public class MoreWeaponry implements ModInitializer {
 		return Registry.register(Registry.FLUID, new Identifier(MOD_ID, name), flowableFluid);
 	}
 
-
-	// Structures
-	private static <S extends Structure> StructureType<S> registerStructure(Identifier id, Codec<S> codec) {
-		return Registry.register(Registry.STRUCTURE_TYPE, id, () -> codec);
-	}
-
 	
 	// Group
 	public static final ItemGroup MORE_WEAPONRY_GROUP = FabricItemGroupBuilder.create(
@@ -1284,6 +1277,10 @@ public class MoreWeaponry implements ModInitializer {
 						EchoInfuserScreenHandler::new);
 
 		// Blocks
+
+		ECHO_INFUSER = registerBlock("echo_infuser",
+				new EchoInfuserBlock(FabricBlockSettings.copy(Blocks.CRYING_OBSIDIAN)));
+
 		MOON_STONE_DUST_BLOCK = registerBlock("moon_stone_dust_block",
 				new Block(FabricBlockSettings.copy(Blocks.SNOW_BLOCK)));
 		KURO_WHEAT_BLOCK = registerBlock("kuro_wheat_block",
@@ -2233,6 +2230,9 @@ public class MoreWeaponry implements ModInitializer {
 
 
 		// Block Items
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "echo_infuser"), new BlockItem(ECHO_INFUSER,
+				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "moon_stone_dust_block"), new BlockItem(MOON_STONE_DUST_BLOCK,
 				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "kuro_wheat_block"), new BlockItem(KURO_WHEAT_BLOCK,

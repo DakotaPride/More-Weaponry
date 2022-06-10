@@ -33,7 +33,6 @@
     "fabric": "0.55.2+1.19",
     "minecraft": "1.19",
     "java": ">=17",
-    "nbtcrafting": "*",
     "geckolib3": "*"
   },
   "suggests": {

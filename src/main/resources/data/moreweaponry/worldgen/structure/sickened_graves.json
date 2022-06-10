@@ -1,5 +1,5 @@
 {
-  "type": "moreweaponry:sickened_graves",
+  "type": "minecraft:jigsaw",
 
     "start_pool": "moreweaponry:sickened_graves/start_pool",
 
@@ -9,12 +9,16 @@
 
   "biomes": "#moreweaponry:has_structure/sickened_graves_biomes",
 
-  "step": "raw_generation",
+  "step": "surface_structures",
 
-  "terrain_adaptation": "beard_thin",
+  "project_start_to_heightmap": "WORLD_SURFACE_WG",
 
   "start_height": {
     "absolute": 0
+  },
+
+  "min_inclusive": {
+    "above_bottom": 32
   },
 
   "use_expansion_hack": false,
