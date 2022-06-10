@@ -136,11 +136,12 @@ public class EchoInfuserEntity extends BlockEntity implements NamedScreenHandler
             entity.removeStack(1,1);
             entity.removeStack(2,1);
             entity.removeStack(3,1);
-            entity.setStack(4, new ItemStack(match.get().getOutput().getItem(),
-                    entity.getStack(4).getCount() + 1));
+            entity.removeStack(4,1);
             entity.removeStack(5,1);
             entity.removeStack(6,1);
-            entity.removeStack(7,1);
+
+            entity.setStack(7, new ItemStack(match.get().getOutput().getItem(),
+                    entity.getStack(7).getCount() + 1));
 
 
             entity.resetProgress();

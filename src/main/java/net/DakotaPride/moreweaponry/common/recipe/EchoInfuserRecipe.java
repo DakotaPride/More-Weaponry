@@ -28,8 +28,10 @@ public class EchoInfuserRecipe implements Recipe<SimpleInventory> {
             return false;
         }
 
-        if(recipeItems.get(0).test(inventory.getStack(1))) {
-            return recipeItems.get(1).test(inventory.getStack(2));
+        if(recipeItems.get(0).test(inventory.getStack(1)) && recipeItems.get(1).test(inventory.getStack(2))
+                && recipeItems.get(2).test(inventory.getStack(3)) && recipeItems.get(3).test(inventory.getStack(4))
+                && recipeItems.get(4).test(inventory.getStack(5))) {
+            return recipeItems.get(5).test(inventory.getStack(6));
         }
 
         return false;

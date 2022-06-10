@@ -31,13 +31,13 @@ public class EchoInfuserScreenHandler extends ScreenHandler {
         propertyDelegate = delegate;
 
         // Our Slots
-        this.addSlot(new Slot(inventory, 1, 52, 22));
-        this.addSlot(new Slot(inventory, 2, 80, 14));
-        this.addSlot(new Slot(inventory, 3, 108, 22));
-        this.addSlot(new Slot(inventory, 5, 52, 54));
-        this.addSlot(new Slot(inventory, 6, 80, 62));
-        this.addSlot(new Slot(inventory, 7, 108, 54));
-        this.addSlot(new MoreWeaponryResultSlot(inventory, 4, 80, 38));
+        this.addSlot(new Slot(inventory, 1, 52, 24));
+        this.addSlot(new Slot(inventory, 2, 80, 16));
+        this.addSlot(new Slot(inventory, 3, 108, 24));
+        this.addSlot(new Slot(inventory, 4, 52, 56));
+        this.addSlot(new Slot(inventory, 5, 80, 64));
+        this.addSlot(new Slot(inventory, 6, 108, 56));
+        this.addSlot(new MoreWeaponryResultSlot(inventory, 7, 80, 40));
 
         addPlayerInventory(playerInventory);
         addPlayerHotbar(playerInventory);
@@ -52,7 +52,7 @@ public class EchoInfuserScreenHandler extends ScreenHandler {
     public int getScaledProgress() {
         int progress = this.propertyDelegate.get(0);
         int maxProgress = this.propertyDelegate.get(1);  // Max Progress
-        int progressArrowSize = 100; // This is the width in pixels of your arrow
+        int progressArrowSize = 103; // This is the width in pixels of your arrow
 
         return maxProgress != 0 && progress != 0 ? progress * progressArrowSize / maxProgress : 0;
     }
