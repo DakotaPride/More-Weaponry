@@ -11,30 +11,33 @@ import net.minecraft.screen.ArrayPropertyDelegate;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.slot.Slot;
+import net.minecraft.world.World;
 
 public class EchoInfuserScreenHandler extends ScreenHandler {
     private final Inventory inventory;
+    private final World world;
     private final PropertyDelegate propertyDelegate;
 
     public EchoInfuserScreenHandler(int syncId, PlayerInventory playerInventory) {
-        this(syncId, playerInventory, new SimpleInventory(7), new ArrayPropertyDelegate(7));
+        this(syncId, playerInventory, new SimpleInventory(8), new ArrayPropertyDelegate(8));
     }
 
     public EchoInfuserScreenHandler(int syncId, PlayerInventory playerInventory, Inventory inventory, PropertyDelegate delegate) {
         super(MoreWeaponry.ECHO_INFUSER_SCREEN_HANDLER, syncId);
-        checkSize(inventory, 7);
+        checkSize(inventory, 8);
         this.inventory = inventory;
+        this.world = playerInventory.player.world;
         inventory.onOpen(playerInventory.player);
         propertyDelegate = delegate;
 
         // Our Slots
-        this.addSlot(new Slot(inventory, 1, 52, 23));
-        this.addSlot(new Slot(inventory, 2, 80, 15));
-        this.addSlot(new Slot(inventory, 3, 108, 23));
-        this.addSlot(new Slot(inventory, 4, 52, 55));
-        this.addSlot(new Slot(inventory, 5, 80, 63));
-        this.addSlot(new Slot(inventory, 6, 108, 55));
-        this.addSlot(new MoreWeaponryResultSlot(inventory, 7, 80, 39));
+        this.addSlot(new Slot(inventory, 1, 52, 22));
+        this.addSlot(new Slot(inventory, 2, 80, 14));
+        this.addSlot(new Slot(inventory, 3, 108, 22));
+        this.addSlot(new Slot(inventory, 5, 52, 54));
+        this.addSlot(new Slot(inventory, 6, 80, 62));
+        this.addSlot(new Slot(inventory, 7, 108, 54));
+        this.addSlot(new MoreWeaponryResultSlot(inventory, 4, 80, 38));
 
         addPlayerInventory(playerInventory);
         addPlayerHotbar(playerInventory);
@@ -49,7 +52,7 @@ public class EchoInfuserScreenHandler extends ScreenHandler {
     public int getScaledProgress() {
         int progress = this.propertyDelegate.get(0);
         int maxProgress = this.propertyDelegate.get(1);  // Max Progress
-        int progressArrowSize = 20; // This is the width in pixels of your arrow
+        int progressArrowSize = 100; // This is the width in pixels of your arrow
 
         return maxProgress != 0 && progress != 0 ? progress * progressArrowSize / maxProgress : 0;
     }
@@ -63,7 +66,7 @@ public class EchoInfuserScreenHandler extends ScreenHandler {
     public ItemStack transferSlot(PlayerEntity player, int invSlot) {
         ItemStack newStack = ItemStack.EMPTY;
         Slot slot = this.slots.get(invSlot);
-        if (slot.hasStack()) {
+        if (slot != null && slot.hasStack()) {
             ItemStack originalStack = slot.getStack();
             newStack = originalStack.copy();
             if (invSlot < this.inventory.size()) {

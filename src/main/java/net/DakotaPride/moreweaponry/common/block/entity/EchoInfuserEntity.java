@@ -25,12 +25,12 @@ import java.util.Optional;
 
 public class EchoInfuserEntity extends BlockEntity implements NamedScreenHandlerFactory, ImplementedInventory {
     private final DefaultedList<ItemStack> inventory =
-            DefaultedList.ofSize(7, ItemStack.EMPTY);
+            DefaultedList.ofSize(8, ItemStack.EMPTY);
 
 
     protected final PropertyDelegate propertyDelegate;
     private int progress = 0;
-    private int maxProgress = 72;
+    private int maxProgress = 288;
     private int fuelTime = 0;
     private int maxFuelTime = 0;
 
@@ -57,7 +57,7 @@ public class EchoInfuserEntity extends BlockEntity implements NamedScreenHandler
             }
 
             public int size() {
-                return 7;
+                return 8;
             }
         };
     }
@@ -97,12 +97,12 @@ public class EchoInfuserEntity extends BlockEntity implements NamedScreenHandler
     }
 
     public static void tick(World world, BlockPos pos, BlockState state, EchoInfuserEntity entity) {
-        if(hasRecipe(entity)) {
-            entity.progress++;
-            if(entity.progress > entity.maxProgress) {
-                craftItem(entity);
+            if(hasRecipe(entity)) {
+                entity.progress++;
+                if(entity.progress > entity.maxProgress) {
+                    craftItem(entity);
+                }
             }
-        }
         else {
             entity.resetProgress();
         }
@@ -136,12 +136,12 @@ public class EchoInfuserEntity extends BlockEntity implements NamedScreenHandler
             entity.removeStack(1,1);
             entity.removeStack(2,1);
             entity.removeStack(3,1);
-            entity.removeStack(4,1);
+            entity.setStack(4, new ItemStack(match.get().getOutput().getItem(),
+                    entity.getStack(4).getCount() + 1));
             entity.removeStack(5,1);
             entity.removeStack(6,1);
+            entity.removeStack(7,1);
 
-            entity.setStack(7, new ItemStack(match.get().getOutput().getItem(),
-                    entity.getStack(7).getCount() + 1));
 
             entity.resetProgress();
         }
@@ -152,11 +152,11 @@ public class EchoInfuserEntity extends BlockEntity implements NamedScreenHandler
     }
 
     private static boolean canInsertItemIntoOutputSlot(SimpleInventory inventory, ItemStack output) {
-        return inventory.getStack(3).getItem() == output.getItem() || inventory.getStack(3).isEmpty();
+        return inventory.getStack(8).getItem() == output.getItem() || inventory.getStack(8).isEmpty();
     }
 
     private static boolean canInsertAmountIntoOutputSlot(SimpleInventory inventory) {
-        return inventory.getStack(3).getMaxCount() > inventory.getStack(3).getCount();
+        return inventory.getStack(8).getMaxCount() > inventory.getStack(8).getCount();
     }
 
 }

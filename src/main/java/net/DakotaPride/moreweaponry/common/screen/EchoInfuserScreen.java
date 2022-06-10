@@ -33,7 +33,7 @@ public class EchoInfuserScreen extends HandledScreen<EchoInfuserScreenHandler> {
         drawTexture(matrices, x, y, 0, 0, backgroundWidth, backgroundHeight);
 
         if(handler.isCrafting()) {
-            drawTexture(matrices, x + 82, y + 30, 176, 31, handler.getScaledProgress(), 36);
+            drawTexture(matrices, x + 37, y + 8, 0, 168, handler.getScaledProgress(), 76);
         }
     }
 
