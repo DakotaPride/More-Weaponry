@@ -13,6 +13,7 @@
     "sources": "https://github.com/DakotaPride/More-Weaponry-1.18"
   },
 
+  "license": "MIT",
   "icon": "assets/moreweaponry/icon.png",
 
   "environment": "*",
