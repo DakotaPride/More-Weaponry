@@ -13,7 +13,7 @@ import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.slot.Slot;
 import net.minecraft.world.World;
 
-public class CoreForgeScreenHandler  extends ScreenHandler {
+public class CoreForgeScreenHandler extends ScreenHandler {
     private final Inventory inventory;
     private final World world;
     private final PropertyDelegate propertyDelegate;

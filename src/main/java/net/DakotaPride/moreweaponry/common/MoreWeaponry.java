@@ -2275,7 +2275,7 @@ public class MoreWeaponry implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "echo_infuser"), new BlockItem(ECHO_INFUSER,
 				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "moon_stone_dust_block"), new BlockItem(MOON_STONE_DUST_BLOCK,
+        	Registry.register(Registry.ITEM, new Identifier(MOD_ID, "moon_stone_dust_block"), new BlockItem(MOON_STONE_DUST_BLOCK,
 				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "kuro_wheat_block"), new BlockItem(KURO_WHEAT_BLOCK,
 				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
