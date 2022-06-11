@@ -75,6 +75,12 @@ public class ShulkerShellBoots extends ArmorItem {
     }
 
     private boolean hasCorrectArmorOn(ArmorMaterial material, PlayerEntity player) {
+        for (ItemStack armorStack: player.getInventory().armor) {
+            if(!(armorStack.getItem() instanceof ArmorItem)) {
+                return false;
+            }
+        }
+
         ArmorItem boots = ((ArmorItem)player.getInventory().getArmorStack(0).getItem());
 
         return boots.getMaterial() == material;

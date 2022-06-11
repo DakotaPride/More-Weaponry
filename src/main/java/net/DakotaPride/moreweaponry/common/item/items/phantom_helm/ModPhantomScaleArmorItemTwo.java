@@ -70,6 +70,12 @@ public class ModPhantomScaleArmorItemTwo extends ArmorItem {
     }
 
     private boolean hasCorrectArmorOn(ArmorMaterial material, PlayerEntity player) {
+        for (ItemStack armorStack: player.getInventory().armor) {
+            if(!(armorStack.getItem() instanceof ArmorItem)) {
+                return false;
+            }
+        }
+
         ArmorItem helmet = ((ArmorItem)player.getInventory().getArmorStack(3).getItem());
 
         return helmet.getMaterial() == material;
