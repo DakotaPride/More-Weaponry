@@ -2,4 +2,4 @@
 # Black Horns Tooltip Translation Error
 
 # Incorrect Hue/Colour Code
-- Will Be Fixed In Version v1.19.3
+- Fixed In Version v1.19.3

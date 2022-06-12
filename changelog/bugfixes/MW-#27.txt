@@ -2,4 +2,4 @@
 # Numbing Effect Causes LivingEntity To Not Deal Damage
 
 # Similar Cause/Case Of MW-#26-B
-- Will Be Fixed In Version v1.19.3
+- Fixed In Version v1.19.3
