@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/door_top",
-  "textures": {
-    "top": "moreweaponry:block/frodon_door_top",
-    "bottom": "moreweaponry:block/frodon_door_bottom"
-  }
-}
