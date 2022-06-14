@@ -115,6 +115,8 @@ public class MoreWeaponry implements ModInitializer {
 	public static final String MOD_ID = "moreweaponry";
 	public static final Logger LOGGER = LogManager.getLogger(MOD_ID);
 
+	// Merge With 'master' for 'v1.19.4' patches
+
 	// Entities
 	public static EntityType<IronBoltEntity> IRON_BOLT;
 	public static EntityType<CracklerEntity> CRACKLER_ENTITY;
