@@ -1,0 +1,5 @@
+# MW-#30
+# Frodon Door Not Properly Rendering
+
+# Json Files Changed in 1.19
+- Will be fixed in v1.19.4 Patch #2
