@@ -23,6 +23,7 @@ repositories {
 		name "Siphalor's Maven"
 		url "https://maven.siphalor.de"
 	}
+	mavenCentral()
 	maven {
 		name "Jitpack"
 		url "https://jitpack.io"
