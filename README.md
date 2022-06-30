@@ -13,7 +13,7 @@
 More Weaponry implements new tools and bosses for your journey! Explore the vast plains and uncover the secrets that were left locked in stone, or travel to the baren landscape of the End dimension and unleash a forgotten evil that lies in an ancient tower! Many other secrets lie across the world.
 
 ## Contributing
-If you would like to contribute to the mod, whether that be by suggesting a feature or simply suggesting quality of life changes (bugfix, crash fix, etc.), then please, feel free to go to our [Issues Page](https://github.com/DakotaPride/More-Weaponry/issues) and create a new issue! Or, if you think you have a suggestion worthy of being in the mod, feel free to suggest it in our [thread](https://github.com/DakotaPride/More-Weaponry/issues/5) on the same page!
+If you would like to contribute to the mod, whether that be by suggesting a feature or simply suggesting quality of life changes (bugfix, crash fix, etc.), then please, feel free to create a bug report labelled as 'enhancement' on our issues page!
 
 ## Translating
 Hello! I am currently looking for translators! Specifically French (Canada), as while there are only minor differences, I want to make sure that this mod can be enjoyed without language barriers! If you would like to help translate this mod, feel free to create a bug report providing the language file (text form or file download) and I will make sure to get to it! (As mentioned on the Curseforge page, you will not be paid, but will be labelled as contributor on the mod)
