@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    " IO",
+    "D  "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:pink_dye"
+    },
+    "I": {
+      "item": "moreweaponry:base_horns"
+    },
+    "O": {
+      "item": "minecraft:yellow_dye"
+    },
+    "D": {
+      "item": "minecraft:blue_dye"
+    }
+  },
+  "result": {
+    "item": "moreweaponry:pansexual_horns",
+    "count": 1
+  }
+}
