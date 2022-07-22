@@ -562,5 +562,13 @@
   "advancement.moreweaponry.the_beginning_of_the_end.title": "Qu'est-ce qui vient après ?",
   "advancement.moreweaponry.the_beginning_of_the_end.description": "Le début de la fin",
   "advancement.moreweaponry.travel_to_the_ever_frost_dimension.title": "Il gèle ici !",
-  "advancement.moreweaponry.travel_to_the_ever_frost_dimension.description": "Voyage dans la dimension Ever Frost"
+  "advancement.moreweaponry.travel_to_the_ever_frost_dimension.description": "Voyage dans la dimension Ever Frost",
+
+  // Compatibilité des descriptions d'enchantement
+  "enchantment.moreweaponry.bleeding.desc": "La foule/le joueur attaqué reçoit l'effet de statut de saignement",
+  "enchantment.moreweaponry.auto_mending.desc": "Fournit des points d'expérience en attaquant un mob/joueur",
+  "enchantment.moreweaponry.evokers_revenge.desc": "Invoque des crocs d'évocateur pour vous aider au combat en attaquant votre adversaire",
+  "enchantment.moreweaponry.stray_bonage.desc": "La foule/le joueur attaqué reçoit de la lenteur, comme s'il était attaqué par un parasite",
+  "enchantment.moreweaponry.guardians_smite.desc": "La foule/le joueur attaqué subit la fatigue et la faiblesse du minage",
+  "enchantment.moreweaponry.power_of_the_wither.desc": "La foule/le joueur attaqué reçoit Withering"
 }

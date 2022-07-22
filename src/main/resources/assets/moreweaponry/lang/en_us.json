@@ -562,6 +562,14 @@
   "advancement.moreweaponry.travel_to_the_ever_frost_dimension.title": "It's Freezing In Here!",
   "advancement.moreweaponry.travel_to_the_ever_frost_dimension.description": "Travel To The Ever Frost Dimension",
   "advancement.moreweaponry.discover_dusted_graves.title": "There's Not Enough Room For The Both Of Us",
-  "advancement.moreweaponry.discover_dusted_graves.description": "Discover The Dusted Graves"
+  "advancement.moreweaponry.discover_dusted_graves.description": "Discover The Dusted Graves",
+
+  // Enchantment Descriptions Compat
+  "enchantment.moreweaponry.bleeding.desc": "The Attacked Mob/Player Receives The Bleeding Status Effect",
+  "enchantment.moreweaponry.auto_mending.desc": "Provides Some Experience Points Upon Attacking A Mob/Player",
+  "enchantment.moreweaponry.evokers_revenge.desc": "Summons Evoker Fangs To Assist You In Battle Upon Attacking Your Opponent",
+  "enchantment.moreweaponry.stray_bonage.desc": "The Attacked Mob/Player Receives Slowness, As If They Were Attacked By A Stray",
+  "enchantment.moreweaponry.guardians_smite.desc": "The Attacked Mob/Player Receives Mining Fatigue And Weakness",
+  "enchantment.moreweaponry.power_of_the_wither.desc": "The Attacked Mob/Player Receives Withering"
 
 }

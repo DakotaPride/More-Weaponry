@@ -562,5 +562,13 @@
   "advancement.moreweaponry.the_beginning_of_the_end.title": "이 뒤에 오는 것은 무엇입니까?",
   "advancement.moreweaponry.the_beginning_of_the_end.description": "끝의 시작",
   "advancement.moreweaponry.travel_to_the_ever_frost_dimension.title": "여기는 얼어붙고 있어요!",
-  "advancement.moreweaponry.travel_to_the_ever_frost_dimension.description": "에버 프로스트 차원으로의 여행"
+  "advancement.moreweaponry.travel_to_the_ever_frost_dimension.description": "에버 프로스트 차원으로의 여행",
+
+  // 마법 부여 설명 호환성
+  "enchantment.moreweaponry.bleeding.desc": "공격받은 몹/플레이어는 출혈 상태 효과를 받습니다",
+  "enchantment.moreweaponry.auto_mending.desc": "몹/플레이어 공격 시 경험치 제공",
+  "enchantment.moreweaponry.evokers_revenge.desc": "상대를 공격할 때 전투에서 당신을 돕기 위해 소환사 송곳니를 소환합니다.",
+  "enchantment.moreweaponry.stray_bonage.desc": "공격받은 몹/플레이어가 길 잃은 사람에게 공격을 받은 것처럼 느려짐",
+  "enchantment.moreweaponry.guardians_smite.desc": "공격받은 몹/플레이어는 광산 피로와 약점을 받음",
+  "enchantment.moreweaponry.power_of_the_wither.desc": "공격받은 몹/플레이어는 위더링을 받습니다"
 }

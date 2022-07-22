@@ -562,5 +562,13 @@
   "advancement.moreweaponry.the_beginning_of_the_end.title": "Was kommt danach?",
   "advancement.moreweaponry.the_beginning_of_the_end.description": "Der Anfang vom Ende",
   "advancement.moreweaponry.travel_to_the_ever_frost_dimension.title": "Hier friert es ein!",
-  "advancement.moreweaponry.travel_to_the_ever_frost_dimension.description": "Reise in die Immerfrost-Dimension"
+  "advancement.moreweaponry.travel_to_the_ever_frost_dimension.description": "Reise in die Immerfrost-Dimension",
+
+  // Betovering Beschrijvingen Compat
+  "enchantment.moreweaponry.bleeding.desc": "De aangevallen maffia/speler krijgt het statuseffect Bloeden",
+  "enchantment.moreweaponry.auto_mending.desc": "Biedt enkele ervaringspunten bij het aanvallen van een menigte/speler",
+  "enchantment.moreweaponry.evokers_revenge.desc": "Roept Evoker Fangs op om je te helpen in de strijd bij het aanvallen van je tegenstander",
+  "enchantment.moreweaponry.stray_bonage.desc": "De aangevallen maffia/speler wordt traag, alsof ze zijn aangevallen door een verdwaalde",
+  "enchantment.moreweaponry.guardians_smite.desc": "De aangevallen maffia/speler krijgt mijnbouwvermoeidheid en zwakte",
+  "enchantment.moreweaponry.power_of_the_wither.desc": "De aangevallen maffia/speler wordt vernietigd"
 }

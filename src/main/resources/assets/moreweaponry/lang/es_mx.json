@@ -562,5 +562,13 @@
   "advancement.moreweaponry.the_beginning_of_the_end.title": "¿Qué viene después de esto?",
   "advancement.moreweaponry.the_beginning_of_the_end.description": "El principio del fin",
   "advancement.moreweaponry.travel_to_the_ever_frost_dimension.title": "¡Se está congelando aquí!",
-  "advancement.moreweaponry.travel_to_the_ever_frost_dimension.description": "Viaje a la dimensión Ever Frost"
+  "advancement.moreweaponry.travel_to_the_ever_frost_dimension.description": "Viaje a la dimensión Ever Frost",
+
+  // Encantamiento Descripciones Compat
+  "enchantment.moreweaponry.bleeding.desc": "La mafia atacada/el jugador recibe el efecto de estado de sangrado",
+  "enchantment.moreweaponry.auto_mending.desc": "Proporciona algunos puntos de experiencia al atacar a un mob/jugador",
+  "enchantment.moreweaponry.evokers_revenge.desc": "Invoca colmillos evocadores para ayudarte en la batalla al atacar a tu oponente",
+  "enchantment.moreweaponry.stray_bonage.desc": "El Mob/Jugador atacado recibe lentitud, como si fuera atacado por un callejero",
+  "enchantment.moreweaponry.guardians_smite.desc": "El Mob/Jugador atacado recibe fatiga y debilidad minera",
+  "enchantment.moreweaponry.power_of_the_wither.desc": "La mafia atacada/el jugador recibe marchitamiento"
 }
