@@ -25,79 +25,81 @@ public class AutoMendingEnchantment extends Enchantment {
             ServerWorld world = ((ServerWorld) user.world);
             BlockPos position = target.getBlockPos();
 
-            if(level == 1) {
-                EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
-                        SpawnReason.TRIGGERED, true, true);
-            }
+            if (target instanceof LivingEntity) {
+                if(level == 1) {
+                    EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
+                            SpawnReason.TRIGGERED, true, true);
+                }
 
-            if(level == 2) {
-                EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
-                        SpawnReason.TRIGGERED, true, true);
+                if(level == 2) {
+                    EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
+                            SpawnReason.TRIGGERED, true, true);
 
-                EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
-                        SpawnReason.TRIGGERED, true, true);
-            }
+                    EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
+                            SpawnReason.TRIGGERED, true, true);
+                }
 
-            if(level == 3) {
-                EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
-                        SpawnReason.TRIGGERED, true, true);
+                if(level == 3) {
+                    EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
+                            SpawnReason.TRIGGERED, true, true);
 
-                EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
-                        SpawnReason.TRIGGERED, true, true);
+                    EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
+                            SpawnReason.TRIGGERED, true, true);
 
-                EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
-                        SpawnReason.TRIGGERED, true, true);
-            }
+                    EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
+                            SpawnReason.TRIGGERED, true, true);
+                }
 
-            if(level == 4) {
-                EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
-                        SpawnReason.TRIGGERED, true, true);
+                if(level == 4) {
+                    EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
+                            SpawnReason.TRIGGERED, true, true);
 
-                EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
-                        SpawnReason.TRIGGERED, true, true);
+                    EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
+                            SpawnReason.TRIGGERED, true, true);
 
-                EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
-                        SpawnReason.TRIGGERED, true, true);
+                    EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
+                            SpawnReason.TRIGGERED, true, true);
 
-                EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
-                        SpawnReason.TRIGGERED, true, true);
-            }
+                    EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
+                            SpawnReason.TRIGGERED, true, true);
+                }
 
-            if(level == 5) {
-                EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
-                        SpawnReason.TRIGGERED, true, true);
+                if(level == 5) {
+                    EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
+                            SpawnReason.TRIGGERED, true, true);
 
-                EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
-                        SpawnReason.TRIGGERED, true, true);
+                    EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
+                            SpawnReason.TRIGGERED, true, true);
 
-                EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
-                        SpawnReason.TRIGGERED, true, true);
+                    EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
+                            SpawnReason.TRIGGERED, true, true);
 
-                EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
-                        SpawnReason.TRIGGERED, true, true);
+                    EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
+                            SpawnReason.TRIGGERED, true, true);
 
-                EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
-                        SpawnReason.TRIGGERED, true, true);
-            }
+                    EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
+                            SpawnReason.TRIGGERED, true, true);
+                }
 
-            if(level == 6) {
-                EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
-                        SpawnReason.TRIGGERED, true, true);
+                if(level == 6) {
+                    EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
+                            SpawnReason.TRIGGERED, true, true);
 
-                EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
-                        SpawnReason.TRIGGERED, true, true);
+                    EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
+                            SpawnReason.TRIGGERED, true, true);
 
-                EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
-                        SpawnReason.TRIGGERED, true, true);
+                    EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
+                            SpawnReason.TRIGGERED, true, true);
 
-                EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
-                        SpawnReason.TRIGGERED, true, true);
+                    EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
+                            SpawnReason.TRIGGERED, true, true);
 
-                EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
-                        SpawnReason.TRIGGERED, true, true);
+                    EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
+                            SpawnReason.TRIGGERED, true, true);
 
-                EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
-                        SpawnReason.TRIGGERED, true, true);
+                    EntityType.EXPERIENCE_BOTTLE.spawn(world, null, null, null, position,
+                            SpawnReason.TRIGGERED, true, true);
+                }
             }
         }
 
