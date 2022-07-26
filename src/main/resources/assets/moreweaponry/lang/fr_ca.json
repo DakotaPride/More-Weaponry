@@ -570,5 +570,30 @@
   "enchantment.moreweaponry.evokers_revenge.desc": "Invoque des crocs d'évocateur pour vous aider au combat en attaquant votre adversaire",
   "enchantment.moreweaponry.stray_bonage.desc": "La foule/le joueur attaqué reçoit de la lenteur, comme s'il était attaqué par un parasite",
   "enchantment.moreweaponry.guardians_smite.desc": "La foule/le joueur attaqué subit la fatigue et la faiblesse du minage",
-  "enchantment.moreweaponry.power_of_the_wither.desc": "La foule/le joueur attaqué reçoit Withering"
+  "enchantment.moreweaponry.power_of_the_wither.desc": "La foule/le joueur attaqué reçoit Withering",
+
+  // Raccourcis clavier
+  "key.category.moreweaponry.abilities": "Plus d'armes",
+  "key.moreweaponry.ability_1": "Activer la capacité d'observateur",
+  "key.moreweaponry.ability_2": "Activer la capacité malade",
+  "key.moreweaponry.ability_3": "Activer la capacité de barde",
+  "key.moreweaponry.ability_4": "Activer la capacité Craqueleur",
+  "key.moreweaponry.ability_5": "Activer la capacité Wanderer",
+  "text.abilities.active_description.two": "Votre santé est augmentée et vous en infligez maintenant",
+  "text.abilities.active_description.three": "Plus de dégâts à vos adversaires",
+  "text.abilities.watcher.activated": "Capacité d'observateur activée!",
+  "text.abilities.watcher.activate_key": "Appuyez sur [Z] pour activer la capacité",
+  "text.abilities.watcher.active_description": "Vous avez maintenant obtenu la force de l'observateur",
+  "text.abilities.sickened.activated": "Capacité écoeurée activée!",
+  "text.abilities.sickened.activate_key": "Appuyez sur [X] pour activer la capacité",
+  "text.abilities.sickened.active_description": "Vous avez maintenant obtenu la force de l'écœuré, ",
+  "text.abilities.bard.activated": "Capacité de barde activée!",
+  "text.abilities.bard.activate_key": "Appuyez sur [C] pour activer la capacité",
+  "text.abilities.bard.active_description": "Vous avez maintenant obtenu la force du barde, ",
+  "text.abilities.crackler.activated": "Capacité Craqueleur activée!",
+  "text.abilities.crackler.activate_key": "Appuyez sur [V] pour activer la capacité",
+  "text.abilities.crackler.active_description": "Vous avez maintenant obtenu la force du Craqueleur, ",
+  "text.abilities.wanderer.activated": "Capacité Wanderer activée!",
+  "text.abilities.wanderer.activate_key": "Appuyez sur [B] pour activer la capacité",
+  "text.abilities.wanderer.active_description": "Vous avez maintenant obtenu la force du vagabond"
 }

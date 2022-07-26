@@ -570,5 +570,30 @@
   "enchantment.moreweaponry.evokers_revenge.desc": "Roept Evoker Fangs op om je te helpen in de strijd bij het aanvallen van je tegenstander",
   "enchantment.moreweaponry.stray_bonage.desc": "De aangevallen maffia/speler wordt traag, alsof ze zijn aangevallen door een verdwaalde",
   "enchantment.moreweaponry.guardians_smite.desc": "De aangevallen maffia/speler krijgt mijnbouwvermoeidheid en zwakte",
-  "enchantment.moreweaponry.power_of_the_wither.desc": "De aangevallen maffia/speler wordt vernietigd"
+  "enchantment.moreweaponry.power_of_the_wither.desc": "De aangevallen maffia/speler wordt vernietigd",
+
+  // Tastenbelegungen
+  "key.category.moreweaponry.abilities": "Mehr Waffen",
+  "key.moreweaponry.ability_1": "Beobachter-Fähigkeit aktivieren",
+  "key.moreweaponry.ability_2": "Erkrankte Fähigkeit aktivieren",
+  "key.moreweaponry.ability_3": "Bardenfähigkeit aktivieren",
+  "key.moreweaponry.ability_4": "Crackler-Fähigkeit aktivieren",
+  "key.moreweaponry.ability_5": "Wanderer-Fähigkeit aktivieren",
+  "text.abilities.active_description.two": "Ihre Gesundheit ist erhöht und Sie können jetzt austeilen",
+  "text.abilities.active_description.three": "Mehr Schaden für Ihre Gegner",
+  "text.abilities.watcher.activated": "Aktivierte Wächter-Fähigkeit!",
+  "text.abilities.watcher.activate_key": "Drücken Sie [Z], um die Fähigkeit zu aktivieren",
+  "text.abilities.watcher.active_description": "Du hast jetzt die Stärke des Wächters erhalten",
+  "text.abilities.sickened.activated": "Aktivierte kranke Fähigkeit!",
+  "text.abilities.sickened.activate_key": "Drücke [X], um Fähigkeit zu aktivieren",
+  "text.abilities.sickened.active_description": "Du hast jetzt die Stärke der Kranken erhalten, ",
+  "text.abilities.bard.activated": "Aktivierte Bardenfähigkeit!",
+  "text.abilities.bard.activate_key": "Drücken Sie [C], um die Fähigkeit zu aktivieren",
+  "text.abilities.bard.active_description": "Du hast jetzt die Stärke des Barden erhalten, ",
+  "text.abilities.crackler.activated": "Aktivierte Crackler-Fähigkeit!",
+  "text.abilities.crackler.activate_key": "Drücken Sie [V], um die Fähigkeit zu aktivieren",
+  "text.abilities.crackler.active_description": "Du hast jetzt die Stärke des Cracklers erhalten, ",
+  "text.abilities.wanderer.activated": "Aktivierte Wanderer-Fähigkeit!",
+  "text.abilities.wanderer.activate_key": "Drücken Sie [B], um die Fähigkeit zu aktivieren",
+  "text.abilities.wanderer.active_description": "Du hast jetzt die Stärke des Wanderers erhalten, "
 }

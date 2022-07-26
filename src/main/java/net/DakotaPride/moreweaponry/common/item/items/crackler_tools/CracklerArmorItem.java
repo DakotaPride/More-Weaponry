@@ -1,6 +1,8 @@
 package net.DakotaPride.moreweaponry.common.item.items.crackler_tools;
 
 import net.DakotaPride.moreweaponry.common.MoreWeaponry;
+import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.decoration.ArmorStandEntity;
@@ -8,6 +10,11 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
+import net.minecraft.world.World;
+import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.PlayState;
 import software.bernie.geckolib3.core.builder.AnimationBuilder;
@@ -22,6 +29,19 @@ import java.util.List;
 
 public class CracklerArmorItem extends ArmorItem implements IAnimatable {
     private final AnimationFactory factory = new AnimationFactory(this);
+
+    @Override
+    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+        if (Screen.hasShiftDown()) {
+            tooltip.add(Text.translatable("text.abilities.crackler.active_description").formatted(Formatting.GREEN));
+            tooltip.add(Text.translatable("text.abilities.active_description.two").formatted(Formatting.GREEN));
+            tooltip.add(Text.translatable("text.abilities.active_description.three").formatted(Formatting.GREEN));
+        } else if (!Screen.hasShiftDown()) {
+            tooltip.add(Text.translatable("text.abilities.crackler.activate_key").formatted(Formatting.GRAY));
+            tooltip.add(Text.literal(" "));
+            tooltip.add(Text.translatable("misc.moreweaponry.shift_up").formatted(Formatting.DARK_GRAY));
+        }
+    }
 
     public CracklerArmorItem(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
         super(material, slot, settings);

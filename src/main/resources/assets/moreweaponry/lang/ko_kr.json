@@ -570,5 +570,30 @@
   "enchantment.moreweaponry.evokers_revenge.desc": "상대를 공격할 때 전투에서 당신을 돕기 위해 소환사 송곳니를 소환합니다.",
   "enchantment.moreweaponry.stray_bonage.desc": "공격받은 몹/플레이어가 길 잃은 사람에게 공격을 받은 것처럼 느려짐",
   "enchantment.moreweaponry.guardians_smite.desc": "공격받은 몹/플레이어는 광산 피로와 약점을 받음",
-  "enchantment.moreweaponry.power_of_the_wither.desc": "공격받은 몹/플레이어는 위더링을 받습니다"
+  "enchantment.moreweaponry.power_of_the_wither.desc": "공격받은 몹/플레이어는 위더링을 받습니다",
+
+  // 키 바인딩
+  "key.category.moreweaponry.abilities": "더 많은 무기",
+  "key.moreweaponry.ability_1": "감시자 능력 활성화",
+  "key.moreweaponry.ability_2": "악화된 능력 활성화",
+  "key.moreweaponry.ability_3": "바드 능력 활성화",
+  "key.moreweaponry.ability_4": "크래클러 능력 활성화",
+  "key.moreweaponry.ability_5": "방랑자 능력 활성화",
+  "text.abilities.active_description.two": "당신의 건강이 증가했고 이제 거래가 가능합니다",
+  "text.abilities.active_description.three": "상대에게 더 많은 피해를 입힙니다.",
+  "text.abilities.watcher.activated": "활성화된 감시자 능력!",
+  "text.abilities.watcher.activate_key": "능력을 활성화하려면 [지] 키를 누르십시오.",
+  "text.abilities.watcher.active_description": "이제 감시자의 힘을 얻었습니다. ",
+  "text.abilities.sickened.activated": "악화된 능력을 활성화했습니다!",
+  "text.abilities.sickened.activate_key": "능력을 활성화하려면 [엑스] 키를 누르십시오.",
+  "text.abilities.sickened.active_description": "이제 병든 자의 힘을 얻었습니다. ",
+  "text.abilities.bard.activated": "바드 능력이 활성화되었습니다!",
+  "text.abilities.bard.activate_key": "능력을 활성화하려면 [씨] 키를 누르십시오.",
+  "text.abilities.bard.active_description": "이제 음유시인의 힘을 얻었습니다. ",
+  "text.abilities.crackler.activated": "크래클러 능력이 활성화되었습니다!",
+  "text.abilities.crackler.activate_key": "[V] 키를 눌러 능력을 활성화하세요.",
+  "text.abilities.crackler.active_description": "이제 크래커의 힘을 얻었습니다. ",
+  "text.abilities.wanderer.activated": "방랑자 능력 활성화!",
+  "text.abilities.wanderer.activate_key": "능력을 활성화하려면 [비] 키를 누르십시오.",
+  "text.abilities.wanderer.active_description": "이제 방랑자의 힘을 얻었습니다."
 }

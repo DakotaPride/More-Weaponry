@@ -570,6 +570,31 @@
   "enchantment.moreweaponry.evokers_revenge.desc": "Summons Evoker Fangs To Assist You In Battle Upon Attacking Your Opponent",
   "enchantment.moreweaponry.stray_bonage.desc": "The Attacked Mob/Player Receives Slowness, As If They Were Attacked By A Stray",
   "enchantment.moreweaponry.guardians_smite.desc": "The Attacked Mob/Player Receives Mining Fatigue And Weakness",
-  "enchantment.moreweaponry.power_of_the_wither.desc": "The Attacked Mob/Player Receives Withering"
+  "enchantment.moreweaponry.power_of_the_wither.desc": "The Attacked Mob/Player Receives Withering",
+
+  // Keybindings
+  "key.category.moreweaponry.abilities": "More Weaponry",
+  "key.moreweaponry.ability_1": "Activate Watcher Ability",
+  "key.moreweaponry.ability_2": "Activate Sickened Ability",
+  "key.moreweaponry.ability_3": "Activate Bard Ability",
+  "key.moreweaponry.ability_4": "Activate Crackler Ability",
+  "key.moreweaponry.ability_5": "Activate Wanderer Ability",
+  "text.abilities.active_description.two": "Your Health Is Increased And You Now Deal",
+  "text.abilities.active_description.three": "More Damage To Your Opponents",
+  "text.abilities.watcher.activated": "Activated Watcher Ability!",
+  "text.abilities.watcher.activate_key": "Press [Z] To Activate Ability",
+  "text.abilities.watcher.active_description": "You Now Obtained The Strength Of The Watcher,",
+  "text.abilities.sickened.activated": "Activated Sickened Ability!",
+  "text.abilities.sickened.activate_key": "Press [X] To Activate Ability",
+  "text.abilities.sickened.active_description": "You Now Obtained The Strength Of The Sickened,",
+  "text.abilities.bard.activated": "Activated Bard Ability!",
+  "text.abilities.bard.activate_key": "Press [C] To Activate Ability",
+  "text.abilities.bard.active_description": "You Now Obtained The Strength Of The Bard,",
+  "text.abilities.crackler.activated": "Activated Crackler Ability!",
+  "text.abilities.crackler.activate_key": "Press [V] To Activate Ability",
+  "text.abilities.crackler.active_description": "You Now Obtained The Strength Of The Crackler,",
+  "text.abilities.wanderer.activated": "Activated Wanderer Ability!",
+  "text.abilities.wanderer.activate_key": "Press [B] To Activate Ability",
+  "text.abilities.wanderer.active_description": "You Now Obtained The Strength Of The Wanderer,"
 
 }

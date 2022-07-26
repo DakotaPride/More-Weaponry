@@ -414,8 +414,8 @@ public class MoreWeaponry implements ModInitializer {
 	public static BardBattleaxe MAIDEN_ESSENCE_CIRTICT_BATTLEAXE;
 	public static BardKnife MAIDEN_ESSENCE_CIRTICT_KNIFE;
 	public static Item LEECHING_ESSENCE;
-	public static WatcherEffectItem WATCHER_HELMET;
-	public static WatcherEffectItem WATCHER_BREASTPLATE;
+	public static WatcherArmorItem WATCHER_HELMET;
+	public static WatcherArmorItem WATCHER_BREASTPLATE;
 	public static WatcherStaffItem WATCHER_STAFF;
 	public static BoneMealItem WITHER_BONE_MEAL;
 	public static Item WATCHER_CLOTH;
@@ -449,14 +449,14 @@ public class MoreWeaponry implements ModInitializer {
 	public static SpawnEggItem WANDERER_SPAWN_EGG;
 	public static SpawnEggItem CRACKLER_SPAWN_EGG;
 	public static SpawnEggItem LEECH_SPAWN_EGG;
-	public static WandererEffectItem WANDERER_HELMET;
-	public static WandererEffectItem WANDERER_BREASTPLATE;
-	public static CracklerEffectItem CRACKLER_HELMET;
-	public static CracklerEffectItem CRACKLER_BREASTPLATE;
-	public static BardEffectItem BARD_HELMET;
-	public static BardEffectItem BARD_BREASTPLATE;
-	public static SickenedEffectItem SICKENED_HELMET;
-	public static SickenedEffectItem SICKENED_BREASTPLATE;
+	public static WandererArmorItem WANDERER_HELMET;
+	public static WandererArmorItem WANDERER_BREASTPLATE;
+	public static CracklerArmorItem CRACKLER_HELMET;
+	public static CracklerArmorItem CRACKLER_BREASTPLATE;
+	public static BardArmorItem BARD_HELMET;
+	public static BardArmorItem BARD_BREASTPLATE;
+	public static SickenedArmorItem SICKENED_HELMET;
+	public static SickenedArmorItem SICKENED_BREASTPLATE;
 	public static ArmorItem RUSTED_MARE_DIAMOND_HELMET;
 	public static HeavySwordItem HEAVY_SWORD;
 	public static HeavyCrossBowItem HEAVY_CROSSBOW;
@@ -2077,10 +2077,10 @@ public class MoreWeaponry implements ModInitializer {
 		LEECHING_ESSENCE = registerItem("leeching_essence",
 				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 		WATCHER_HELMET = registerItem("watcher_helmet",
-				new WatcherEffectItem(ENDER_ARMOR, EquipmentSlot.HEAD,
+				new WatcherArmorItem(ENDER_ARMOR, EquipmentSlot.HEAD,
 						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 		WATCHER_BREASTPLATE = registerItem("watcher_chestplate",
-				new WatcherEffectItem(ENDER_ARMOR, EquipmentSlot.CHEST,
+				new WatcherArmorItem(ENDER_ARMOR, EquipmentSlot.CHEST,
 						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 		WATCHER_STAFF = registerItem("watcher_staff",
 				new WatcherStaffItem((ToolMaterial) WATCHER_STAFF_TOOLS, 26, -3.1f,
@@ -2177,28 +2177,28 @@ public class MoreWeaponry implements ModInitializer {
 				new SpawnEggItem(SICKENED_ENTITY, 0x447C3D, 0x335B2C,
 						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 		WANDERER_HELMET = registerItem("wanderer_helmet",
-				new WandererEffectItem(WANDERER_ARMOR, EquipmentSlot.HEAD,
+				new WandererArmorItem(WANDERER_ARMOR, EquipmentSlot.HEAD,
 						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 		WANDERER_BREASTPLATE = registerItem("wanderer_chestplate",
-				new WandererEffectItem(WANDERER_ARMOR, EquipmentSlot.CHEST,
+				new WandererArmorItem(WANDERER_ARMOR, EquipmentSlot.CHEST,
 						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 		CRACKLER_HELMET = registerItem("crackler_helmet",
-				new CracklerEffectItem(CRACKLER_ARMOR, EquipmentSlot.HEAD,
+				new CracklerArmorItem(CRACKLER_ARMOR, EquipmentSlot.HEAD,
 						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 		CRACKLER_BREASTPLATE = registerItem("crackler_chestplate",
-				new CracklerEffectItem(CRACKLER_ARMOR, EquipmentSlot.CHEST,
+				new CracklerArmorItem(CRACKLER_ARMOR, EquipmentSlot.CHEST,
 						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 		BARD_HELMET = registerItem("bard_helmet",
-				new BardEffectItem(BARD_ARMOR, EquipmentSlot.HEAD,
+				new BardArmorItem(BARD_ARMOR, EquipmentSlot.HEAD,
 						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 		BARD_BREASTPLATE = registerItem("bard_chestplate",
-				new BardEffectItem(BARD_ARMOR, EquipmentSlot.CHEST,
+				new BardArmorItem(BARD_ARMOR, EquipmentSlot.CHEST,
 						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 		SICKENED_HELMET = registerItem("sickened_helmet",
-				new SickenedEffectItem(SICKENED_ARMOR, EquipmentSlot.HEAD,
+				new SickenedArmorItem(SICKENED_ARMOR, EquipmentSlot.HEAD,
 						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 		SICKENED_BREASTPLATE = registerItem("sickened_chestplate",
-				new SickenedEffectItem(SICKENED_ARMOR, EquipmentSlot.CHEST,
+				new SickenedArmorItem(SICKENED_ARMOR, EquipmentSlot.CHEST,
 						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 		RUSTED_MARE_DIAMOND_HELMET = registerItem("rusted_mare_diamond_helmet",
 				new ArmorItem(RUSTED_ARMOR, EquipmentSlot.HEAD,

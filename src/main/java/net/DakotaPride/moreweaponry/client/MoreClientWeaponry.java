@@ -19,6 +19,8 @@ import net.DakotaPride.moreweaponry.common.screen.EssenceTranslatorScreen;
 import net.DakotaPride.moreweaponry.common.util.MoreWeaponryModelPredicateProvider;
 import net.DakotaPride.moreweaponry.common.util.MoreWeaponryRendererHelper;
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
+import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
 import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
@@ -26,14 +28,107 @@ import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.client.screenhandler.v1.ScreenRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.block.entity.BlockEntityType;
+import net.minecraft.client.option.KeyBinding;
+import net.minecraft.client.util.InputUtil;
+import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
+import org.lwjgl.glfw.GLFW;
 import software.bernie.geckolib3.renderers.geo.GeoArmorRenderer;
 
 public class MoreClientWeaponry implements ClientModInitializer {
+    public static final String KEY_CATEGORY_MORE_WEAPONRY = "key.category.moreweaponry.abilities";
+    public static final String KEY_ACTIVATE_ABILITY_1 = "key.moreweaponry.ability_1";
+    public static KeyBinding activateAbility1;
+    public static final String KEY_ACTIVATE_ABILITY_2 = "key.moreweaponry.ability_2";
+    public static KeyBinding activateAbility2;
+    public static final String KEY_ACTIVATE_ABILITY_3 = "key.moreweaponry.ability_3";
+    public static KeyBinding activateAbility3;
+    public static final String KEY_ACTIVATE_ABILITY_4 = "key.moreweaponry.ability_4";
+    public static KeyBinding activateAbility4;
+    public static final String KEY_ACTIVATE_ABILITY_5 = "key.moreweaponry.ability_5";
+    public static KeyBinding activateAbility5;
+
+    private void abilityKeybindings() {
+        ClientTickEvents.END_CLIENT_TICK.register(client -> {
+            if (activateAbility1.wasPressed()) {
+                if (client.player.getEquippedStack(EquipmentSlot.HEAD).isOf(MoreWeaponry.WATCHER_HELMET)
+                        && client.player.getEquippedStack(EquipmentSlot.CHEST).isOf(MoreWeaponry.WATCHER_BREASTPLATE)) {
+                    client.player.sendMessage(Text.translatable("text.abilities.watcher.activated"), false);
+
+                    client.player.addStatusEffect(new StatusEffectInstance(MoreWeaponry.WATCHER, 2000, 0));
+                }
+            } else if (activateAbility2.wasPressed()) {
+                if (client.player.getEquippedStack(EquipmentSlot.HEAD).isOf(MoreWeaponry.SICKENED_HELMET)
+                        && client.player.getEquippedStack(EquipmentSlot.CHEST).isOf(MoreWeaponry.SICKENED_BREASTPLATE)) {
+                    client.player.sendMessage(Text.translatable("text.abilities.sickened.activated"), false);
+
+                    client.player.addStatusEffect(new StatusEffectInstance(MoreWeaponry.SICKENED, 2000, 0));
+                }
+            } else if (activateAbility3.wasPressed()) {
+                if (client.player.getEquippedStack(EquipmentSlot.HEAD).isOf(MoreWeaponry.BARD_HELMET)
+                        && client.player.getEquippedStack(EquipmentSlot.CHEST).isOf(MoreWeaponry.BARD_BREASTPLATE)) {
+                    client.player.sendMessage(Text.translatable("text.abilities.bard.activated"), false);
+
+                    client.player.addStatusEffect(new StatusEffectInstance(MoreWeaponry.BARD, 2000, 0));
+                }
+            } else if (activateAbility4.wasPressed()) {
+                if (client.player.getEquippedStack(EquipmentSlot.HEAD).isOf(MoreWeaponry.CRACKLER_HELMET)
+                        && client.player.getEquippedStack(EquipmentSlot.CHEST).isOf(MoreWeaponry.CRACKLER_BREASTPLATE)) {
+                    client.player.sendMessage(Text.translatable("text.abilities.crackler.activated"), false);
+
+                    client.player.addStatusEffect(new StatusEffectInstance(MoreWeaponry.CRACKLER, 2000, 0));
+                }
+            } else if (activateAbility5.wasPressed()) {
+                if (client.player.getEquippedStack(EquipmentSlot.HEAD).isOf(MoreWeaponry.WANDERER_HELMET)
+                        && client.player.getEquippedStack(EquipmentSlot.CHEST).isOf(MoreWeaponry.WANDERER_BREASTPLATE)) {
+                    client.player.sendMessage(Text.translatable("text.abilities.wanderer.activated"), false);
+
+                    client.player.addStatusEffect(new StatusEffectInstance(MoreWeaponry.WANDERER, 2000, 0));
+                }
+            }
+        });
+
+        activateAbility1 = KeyBindingHelper.registerKeyBinding(new KeyBinding(
+                KEY_ACTIVATE_ABILITY_1,
+                InputUtil.Type.KEYSYM,
+                GLFW.GLFW_KEY_Z,
+                KEY_CATEGORY_MORE_WEAPONRY
+        ));
+        activateAbility2 = KeyBindingHelper.registerKeyBinding(new KeyBinding(
+                KEY_ACTIVATE_ABILITY_2,
+                InputUtil.Type.KEYSYM,
+                GLFW.GLFW_KEY_X,
+                KEY_CATEGORY_MORE_WEAPONRY
+        ));
+        activateAbility3 = KeyBindingHelper.registerKeyBinding(new KeyBinding(
+                KEY_ACTIVATE_ABILITY_3,
+                InputUtil.Type.KEYSYM,
+                GLFW.GLFW_KEY_C,
+                KEY_CATEGORY_MORE_WEAPONRY
+        ));
+        activateAbility4 = KeyBindingHelper.registerKeyBinding(new KeyBinding(
+                KEY_ACTIVATE_ABILITY_4,
+                InputUtil.Type.KEYSYM,
+                GLFW.GLFW_KEY_V,
+                KEY_CATEGORY_MORE_WEAPONRY
+        ));
+        activateAbility5 = KeyBindingHelper.registerKeyBinding(new KeyBinding(
+                KEY_ACTIVATE_ABILITY_5,
+                InputUtil.Type.KEYSYM,
+                GLFW.GLFW_KEY_B,
+                KEY_CATEGORY_MORE_WEAPONRY
+        ));
+
+    }
 
     @Override
     public void onInitializeClient() {
+
+        abilityKeybindings();
 
         FluidRenderHandlerRegistry.INSTANCE.register(MoreWeaponry.CELESTIALITE_STILL,
                 new SimpleFluidRenderHandler(SimpleFluidRenderHandler.WATER_STILL,

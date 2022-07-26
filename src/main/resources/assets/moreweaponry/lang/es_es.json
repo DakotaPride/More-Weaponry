@@ -570,5 +570,30 @@
   "enchantment.moreweaponry.evokers_revenge.desc": "Invoca colmillos evocadores para ayudarte en la batalla al atacar a tu oponente",
   "enchantment.moreweaponry.stray_bonage.desc": "El Mob/Jugador atacado recibe lentitud, como si fuera atacado por un callejero",
   "enchantment.moreweaponry.guardians_smite.desc": "El Mob/Jugador atacado recibe fatiga y debilidad minera",
-  "enchantment.moreweaponry.power_of_the_wither.desc": "La mafia atacada/el jugador recibe marchitamiento"
+  "enchantment.moreweaponry.power_of_the_wither.desc": "La mafia atacada/el jugador recibe marchitamiento",
+
+  // Atajos de teclado
+  "key.category.moreweaponry.abilities": "Más armamento",
+  "key.moreweaponry.ability_1": "Activar la habilidad de Vigilante",
+  "key.moreweaponry.ability_2": "Activar habilidad enfermiza",
+  "key.moreweaponry.ability_3": "Activar habilidad de bardo",
+  "key.moreweaponry.ability_4": "Activar habilidad Crujidor",
+  "key.moreweaponry.ability_5": "Activar habilidad de vagabundo",
+  "text.abilities.active_description.two": "Tu salud ha aumentado y ahora repartes",
+  "text.abilities.active_description.three": "Más daño a tus oponentes",
+  "text.abilities.watcher.activated": "¡Habilidad de Vigilante activada!",
+  "text.abilities.watcher.activate_key": "Presiona [Z] para activar la habilidad",
+  "text.abilities.watcher.active_description": "Ahora Obtuviste La Fuerza Del Vigilante,",
+  "text.abilities.sickened.activated": "¡Habilidad enferma activada!",
+  "text.abilities.sickened.activate_key": "Presiona [X] para activar la habilidad",
+  "text.abilities.sickened.active_description": "Ahora obtuviste la fuerza de los enfermos,",
+  "text.abilities.bard.activated": "¡Habilidad de bardo activada!",
+  "text.abilities.bard.activate_key": "Presiona [C] para activar la habilidad",
+  "text.abilities.bard.active_description": "Ahora obtuviste la fuerza del bardo,",
+  "text.abilities.crackler.activated": "¡Habilidad Crackler activada!",
+  "text.abilities.crackler.activate_key": "Presiona [V] para activar la habilidad",
+  "text.abilities.crackler.active_description": "Ahora Obtuviste La Fuerza Del Crujidor,",
+  "text.abilities.wanderer.activated": "¡Habilidad de vagabundo activada!",
+  "text.abilities.wanderer.activate_key": "Presiona [B] para activar la habilidad",
+  "text.abilities.wanderer.active_description": "Ahora Obtuviste La Fuerza Del Errante,"
 }
