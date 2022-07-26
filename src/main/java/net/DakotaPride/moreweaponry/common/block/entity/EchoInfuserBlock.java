@@ -33,8 +33,8 @@ public class EchoInfuserBlock extends BlockWithEntity implements BlockEntityProv
     public void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
         if (state.getBlock() != newState.getBlock()) {
             BlockEntity blockEntity = world.getBlockEntity(pos);
-            if (blockEntity instanceof CoreForgeEntity) {
-                ItemScatterer.spawn(world, pos, (CoreForgeEntity)blockEntity);
+            if (blockEntity instanceof EchoInfuserEntity) {
+                ItemScatterer.spawn(world, pos, (EchoInfuserEntity)blockEntity);
                 world.updateComparators(pos,this);
             }
             super.onStateReplaced(state, world, pos, newState, moved);
@@ -58,7 +58,7 @@ public class EchoInfuserBlock extends BlockWithEntity implements BlockEntityProv
     @Nullable
     @Override
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-        return new CoreForgeEntity(pos, state);
+        return new EchoInfuserEntity(pos, state);
     }
 
     @Nullable
