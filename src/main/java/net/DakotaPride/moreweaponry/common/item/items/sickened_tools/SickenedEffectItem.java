@@ -18,7 +18,7 @@ public class SickenedEffectItem extends SickenedArmorItem{
     private static final Map<ArmorMaterial, StatusEffectInstance> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, StatusEffectInstance>())
                     .put(MoreWeaponry.MoreWeaponryArmorMaterials.SICKENED_ARMOR,
-                            new StatusEffectInstance(MoreWeaponry.SICKENED, 12000, 0)).build();
+                            new StatusEffectInstance(MoreWeaponry.SICKENED, 1000000, 0)).build();
 
     public SickenedEffectItem(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
         super(material, slot, settings);

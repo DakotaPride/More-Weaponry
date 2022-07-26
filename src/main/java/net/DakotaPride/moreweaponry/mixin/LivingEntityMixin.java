@@ -7,6 +7,7 @@ import net.DakotaPride.moreweaponry.common.entity.damage.MoreWeaponryDamageSourc
 import net.DakotaPride.moreweaponry.common.item.items.HeavyCrossBowItem;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffect;
@@ -27,6 +28,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(LivingEntity.class)
 public abstract class LivingEntityMixin extends Entity implements ILivingEntityMixin {
     LivingEntity livingEntity = (LivingEntity) (Object) this;
+    private StatusEffect statusEffect;
+
     public LivingEntityMixin(EntityType<?> type, World world) {
         super(type, world);
     }
@@ -42,6 +45,46 @@ public abstract class LivingEntityMixin extends Entity implements ILivingEntityM
     @Shadow public abstract ItemStack getOffHandStack();
 
     @Shadow public @Nullable abstract LivingEntity getAttacker();
+
+    @Inject(method = "hasStatusEffect", at = @At("HEAD"))
+    private void hasStatusEffect(StatusEffect effect, CallbackInfoReturnable<Boolean> cir) {
+        if (effect == MoreWeaponry.WATCHER) {
+            if (!livingEntity.getEquippedStack(EquipmentSlot.HEAD).isOf(MoreWeaponry.WATCHER_HELMET)) {
+                livingEntity.removeStatusEffect(MoreWeaponry.WATCHER);
+            }
+            if (!livingEntity.getEquippedStack(EquipmentSlot.CHEST).isOf(MoreWeaponry.WATCHER_BREASTPLATE)) {
+                livingEntity.removeStatusEffect(MoreWeaponry.WATCHER);
+            }
+        } else if (effect == MoreWeaponry.SICKENED) {
+            if (!livingEntity.getEquippedStack(EquipmentSlot.HEAD).isOf(MoreWeaponry.SICKENED_HELMET)) {
+                livingEntity.removeStatusEffect(MoreWeaponry.SICKENED);
+            }
+            if (!livingEntity.getEquippedStack(EquipmentSlot.CHEST).isOf(MoreWeaponry.SICKENED_BREASTPLATE)) {
+                livingEntity.removeStatusEffect(MoreWeaponry.SICKENED);
+            }
+        } else if (effect == MoreWeaponry.BARD) {
+            if (!livingEntity.getEquippedStack(EquipmentSlot.HEAD).isOf(MoreWeaponry.BARD_HELMET)) {
+                livingEntity.removeStatusEffect(MoreWeaponry.BARD);
+            }
+            if (!livingEntity.getEquippedStack(EquipmentSlot.CHEST).isOf(MoreWeaponry.BARD_BREASTPLATE)) {
+                livingEntity.removeStatusEffect(MoreWeaponry.BARD);
+            }
+        } else if (effect == MoreWeaponry.CRACKLER) {
+            if (!livingEntity.getEquippedStack(EquipmentSlot.HEAD).isOf(MoreWeaponry.CRACKLER_HELMET)) {
+                livingEntity.removeStatusEffect(MoreWeaponry.CRACKLER);
+            }
+            if (!livingEntity.getEquippedStack(EquipmentSlot.CHEST).isOf(MoreWeaponry.CRACKLER_BREASTPLATE)) {
+                livingEntity.removeStatusEffect(MoreWeaponry.CRACKLER);
+            }
+        } else if (effect == MoreWeaponry.WANDERER) {
+            if (!livingEntity.getEquippedStack(EquipmentSlot.HEAD).isOf(MoreWeaponry.WANDERER_HELMET)) {
+                livingEntity.removeStatusEffect(MoreWeaponry.WANDERER);
+            }
+            if (!livingEntity.getEquippedStack(EquipmentSlot.CHEST).isOf(MoreWeaponry.WANDERER_BREASTPLATE)) {
+                livingEntity.removeStatusEffect(MoreWeaponry.WANDERER);
+            }
+        }
+    }
 
     @Inject(method = "damage", at = @At("HEAD"))
     private void damage(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
@@ -61,7 +104,6 @@ public abstract class LivingEntityMixin extends Entity implements ILivingEntityM
 
     @Inject(method = "tick", at = @At("HEAD"))
     private void tick(CallbackInfo ci) {
-        LivingEntity livingEntity = (LivingEntity) (Object) this;
         ItemStack itemStack = livingEntity.getMainHandStack();
         if (livingEntity.getMainHandStack().isOf(MoreWeaponry.HEAVY_SWORD)) {
             if (!livingEntity.getOffHandStack().isEmpty()) {
