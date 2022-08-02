@@ -1,13 +1,5 @@
 All Textures And Concepts Belong To DakotaPride
 
-Fabric Shield Library By CrimsonDawn45
-https://www.curseforge.com/minecraft/mc-mods/fabric-shield-lib
-https://github.com/CrimsonDawn45/Fabric-Shield-Lib
-
-NBT Crafting By Siphaler
-https://www.curseforge.com/minecraft/mc-mods/nbt-crafting
-https://github.com/Siphalor/nbt-crafting
-
 Gecko Lib By Bernie
 https://github.com/bernie-g/geckolib
 https://www.curseforge.com/minecraft/mc-mods/geckolib
