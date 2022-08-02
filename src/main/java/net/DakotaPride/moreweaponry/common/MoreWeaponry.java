@@ -1869,7 +1869,7 @@ public class MoreWeaponry implements ModInitializer {
 				new CooledCirtictIngot(new FabricItemSettings().fireproof().group(MORE_WEAPONRY_GROUP)));
 		WARDENS_STEP_MUSIC_DISC = registerItem("wardens_step_music_disc",
 				new MoreWeaponryMusicDiscItem(9, WARDENS_STEP,
-						new FabricItemSettings().maxCount(1).group(MORE_WEAPONRY_GROUP)));
+						new FabricItemSettings().maxCount(1).group(MORE_WEAPONRY_GROUP), 260));
 		FRODON_SIGN = registerItem("frodon_sign",
 				new SignItem(new FabricItemSettings().group(MORE_WEAPONRY_GROUP).maxCount(16),
 						FRODON_SIGN_BLOCK, FRODON_WALL_SIGN));
