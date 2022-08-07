@@ -107,19 +107,19 @@ public abstract class LivingEntityMixin extends Entity implements ILivingEntityM
         ItemStack itemStack = livingEntity.getMainHandStack();
         if (livingEntity.getMainHandStack().isOf(MoreWeaponry.HEAVY_SWORD)) {
             if (!livingEntity.getOffHandStack().isEmpty()) {
-                addStatusEffect(new StatusEffectInstance(MoreWeaponry.OVER_PACKAGED, 100));
+                addStatusEffect(new StatusEffectInstance(MoreWeaponry.BLEEDING, 100));
             }
 
-            addStatusEffect(new StatusEffectInstance(MoreWeaponry.BLEEDING, 100));
+            addStatusEffect(new StatusEffectInstance(MoreWeaponry.OVER_PACKAGED, 100));
 
         } if (!livingEntity.getMainHandStack().isEmpty()) {
             if (livingEntity.getOffHandStack().isOf(MoreWeaponry.HEAVY_SWORD)) {
-                    addStatusEffect(new StatusEffectInstance(MoreWeaponry.OVER_PACKAGED, 100));
                     addStatusEffect(new StatusEffectInstance(MoreWeaponry.BLEEDING, 100));
+                    addStatusEffect(new StatusEffectInstance(MoreWeaponry.OVER_PACKAGED, 100));
             }
         }
         if (livingEntity.getOffHandStack().isOf(MoreWeaponry.HEAVY_SWORD)) {
-            addStatusEffect(new StatusEffectInstance(MoreWeaponry.BLEEDING, 100));
+            addStatusEffect(new StatusEffectInstance(MoreWeaponry.OVER_PACKAGED, 100));
         } if (livingEntity.getOffHandStack().isOf(MoreWeaponry.POWERED_PLAGUED_MOB_CORE)) {
             removeStatusEffect(MoreWeaponry.PLAGUED);
         } if (livingEntity.getOffHandStack().isOf(MoreWeaponry.POWERED_SUPPRESSED_MOB_CORE)) {
