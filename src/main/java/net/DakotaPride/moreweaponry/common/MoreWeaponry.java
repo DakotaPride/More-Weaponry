@@ -40,7 +40,6 @@ import net.DakotaPride.moreweaponry.common.item.items.wanderer_tools.*;
 import net.DakotaPride.moreweaponry.common.item.items.watcher_tools.*;
 import net.DakotaPride.moreweaponry.common.recipe.CirtictForgeRecipe;
 import net.DakotaPride.moreweaponry.common.recipe.CoreForgeRecipe;
-import net.DakotaPride.moreweaponry.common.recipe.EchoInfuserRecipe;
 import net.DakotaPride.moreweaponry.common.recipe.EssenceTranslatorRecipe;
 import net.DakotaPride.moreweaponry.common.screen.*;
 import net.DakotaPride.moreweaponry.common.util.MoreWeaponryLootTableModifiers;
