@@ -13,9 +13,17 @@
     {
       "item": "minecraft:echo_shard"
     },
-    {
-      "item": "moreweaponry:cirtict_pickaxe"
-    },
+    [
+      {
+        "item": "moreweaponry:cirtict_pickaxe"
+      },
+      {
+        "item": "moreweaponry:heated_cirtict_pickaxe"
+      },
+      {
+        "item": "moreweaponry:cooled_cirtict_pickaxe"
+      }
+    ],
     {
       "item": "minecraft:echo_shard"
     }

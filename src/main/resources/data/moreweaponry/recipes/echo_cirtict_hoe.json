@@ -13,9 +13,17 @@
     {
       "item": "minecraft:echo_shard"
     },
-    {
-      "item": "moreweaponry:cirtict_hoe"
-    },
+    [
+      {
+        "item": "moreweaponry:cirtict_hoe"
+      },
+      {
+        "item": "moreweaponry:heated_cirtict_hoe"
+      },
+      {
+        "item": "moreweaponry:cooled_cirtict_hoe"
+      }
+    ],
     {
       "item": "minecraft:echo_shard"
     }

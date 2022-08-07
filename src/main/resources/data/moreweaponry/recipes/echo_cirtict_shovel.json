@@ -13,9 +13,17 @@
     {
       "item": "minecraft:echo_shard"
     },
-    {
-      "item": "moreweaponry:cirtict_shovel"
-    },
+    [
+      {
+        "item": "moreweaponry:cirtict_shovel"
+      },
+      {
+        "item": "moreweaponry:heated_cirtict_shovel"
+      },
+      {
+        "item": "moreweaponry:cooled_cirtict_shovel"
+      }
+    ],
     {
       "item": "minecraft:echo_shard"
     }

@@ -13,9 +13,17 @@
     {
       "item": "minecraft:echo_shard"
     },
-    {
-      "item": "moreweaponry:cirtict_axe"
-    },
+    [
+      {
+        "item": "moreweaponry:cirtict_axe"
+      },
+      {
+        "item": "moreweaponry:heated_cirtict_axe"
+      },
+      {
+        "item": "moreweaponry:cooled_cirtict_axe"
+      }
+    ],
     {
       "item": "minecraft:echo_shard"
     }
