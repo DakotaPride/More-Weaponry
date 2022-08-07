@@ -7,15 +7,8 @@ import net.DakotaPride.moreweaponry.client.render.armor.horns.colours.*;
 import net.DakotaPride.moreweaponry.client.render.armor.horns.pride.*;
 import net.DakotaPride.moreweaponry.client.render.renderer.IronBoltEntityRenderer;
 import net.DakotaPride.moreweaponry.common.MoreWeaponry;
-import net.DakotaPride.moreweaponry.common.block.entity.CirtictForgeEntity;
-import net.DakotaPride.moreweaponry.common.block.entity.CoreForgeEntity;
-import net.DakotaPride.moreweaponry.common.block.entity.EchoInfuserEntity;
-import net.DakotaPride.moreweaponry.common.block.entity.EssenceTranslatorEntity;
 import net.DakotaPride.moreweaponry.common.particle.CelestialMedallionParticle;
-import net.DakotaPride.moreweaponry.common.screen.CirtictForgeScreen;
-import net.DakotaPride.moreweaponry.common.screen.CoreForgeScreen;
-import net.DakotaPride.moreweaponry.common.screen.EchoInfuserScreen;
-import net.DakotaPride.moreweaponry.common.screen.EssenceTranslatorScreen;
+import net.DakotaPride.moreweaponry.common.screen.*;
 import net.DakotaPride.moreweaponry.common.util.MoreWeaponryModelPredicateProvider;
 import net.DakotaPride.moreweaponry.common.util.MoreWeaponryRendererHelper;
 import net.fabricmc.api.ClientModInitializer;
@@ -26,16 +19,11 @@ import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry
 import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.client.screenhandler.v1.ScreenRegistry;
-import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
-import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.text.Text;
-import net.minecraft.util.Formatting;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 import org.lwjgl.glfw.GLFW;
 import software.bernie.geckolib3.renderers.geo.GeoArmorRenderer;
 
@@ -209,7 +197,6 @@ public class MoreClientWeaponry implements ClientModInitializer {
         ScreenRegistry.register(MoreWeaponry.CORE_FORGE_SCREEN_HANDLER, CoreForgeScreen::new);
         ScreenRegistry.register(MoreWeaponry.ESSENCE_TRANSLATOR_SCREEN_HANDLER, EssenceTranslatorScreen::new);
         ScreenRegistry.register(MoreWeaponry.CIRTICT_FORGE_SCREEN_HANDLER, CirtictForgeScreen::new);
-        ScreenRegistry.register(MoreWeaponry.ECHO_INFUSER_SCREEN_HANDLER, EchoInfuserScreen::new);
 
         MoreWeaponryRendererHelper.setRenderLayers();
         MoreWeaponryRendererHelper.setTransparentBlocks();

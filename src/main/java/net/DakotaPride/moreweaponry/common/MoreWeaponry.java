@@ -212,7 +212,6 @@ public class MoreWeaponry implements ModInitializer {
 	public static ScreenHandlerType<CoreForgeScreenHandler> CORE_FORGE_SCREEN_HANDLER;
 	public static ScreenHandlerType<EssenceTranslatorScreenHandler> ESSENCE_TRANSLATOR_SCREEN_HANDLER;
 	public static ScreenHandlerType<CirtictForgeScreenHandler> CIRTICT_FORGE_SCREEN_HANDLER;
-	public static ScreenHandlerType<EchoInfuserScreenHandler> ECHO_INFUSER_SCREEN_HANDLER;
 
 	// Sounds
 	public static SoundEvent ENTITY_BURIED_KNIGHT_AMBIENT;
@@ -530,8 +529,6 @@ public class MoreWeaponry implements ModInitializer {
 	// Blocks
 	public static OreBlock CELESTIALITE_ROCK_ORE;
 
-	public static EchoInfuserBlock ECHO_INFUSER;
-
 	public static Block MOON_STONE_DUST_BLOCK;
 	public static PillarBlock KURO_WHEAT_BLOCK;
 	public static Block BLACKSTONE_METAL_BLOCK;
@@ -652,16 +649,11 @@ public class MoreWeaponry implements ModInitializer {
 				new Identifier(MOD_ID, "cirtict_forge"),
 				FabricBlockEntityTypeBuilder.create(CirtictForgeEntity::new,
 						CIRTICT_FORGE).build(null));
-		ECHO_INFUSER_BLOCK_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE,
-				new Identifier(MOD_ID, "echo_infuser"),
-				FabricBlockEntityTypeBuilder.create(EchoInfuserEntity::new,
-						ECHO_INFUSER).build(null));
 	}
 
 	public static BlockEntityType<CoreForgeEntity> CORE_FORGE_BLOCK_ENTITY;
 	public static BlockEntityType<EssenceTranslatorEntity> ESSENCE_TRANSLATOR_BLOCK_ENTITY;
 	public static BlockEntityType<CirtictForgeEntity> CIRTICT_FORGE_BLOCK_ENTITY;
-	public static BlockEntityType<EchoInfuserEntity> ECHO_INFUSER_BLOCK_ENTITY;
 
 	// Armor Materials
 	public enum MoreWeaponryArmorMaterials implements ArmorMaterial
@@ -1300,11 +1292,6 @@ public class MoreWeaponry implements ModInitializer {
 				CirtictForgeRecipe.Serializer.INSTANCE);
 		Registry.register(Registry.RECIPE_TYPE, new Identifier(MoreWeaponry.MOD_ID, CirtictForgeRecipe.Type.ID),
 				CirtictForgeRecipe.Type.INSTANCE);
-		// Echo Infusion
-		Registry.register(Registry.RECIPE_SERIALIZER, new Identifier(MoreWeaponry.MOD_ID, EchoInfuserRecipe.Serializer.ID),
-				EchoInfuserRecipe.Serializer.INSTANCE);
-		Registry.register(Registry.RECIPE_TYPE, new Identifier(MoreWeaponry.MOD_ID, EchoInfuserRecipe.Type.ID),
-				EchoInfuserRecipe.Type.INSTANCE);
 
 		// Screen Handlers
 		CORE_FORGE_SCREEN_HANDLER =
@@ -1316,14 +1303,8 @@ public class MoreWeaponry implements ModInitializer {
 		CIRTICT_FORGE_SCREEN_HANDLER =
 				ScreenHandlerRegistry.registerSimple(new Identifier(MOD_ID, "cirtict_forge"),
 						CirtictForgeScreenHandler::new);
-		ECHO_INFUSER_SCREEN_HANDLER =
-				ScreenHandlerRegistry.registerSimple(new Identifier(MOD_ID, "echo_infuser"),
-						EchoInfuserScreenHandler::new);
 
 		// Blocks
-
-		ECHO_INFUSER = registerBlock("echo_infuser",
-				new EchoInfuserBlock(FabricBlockSettings.copy(Blocks.SCULK)));
 
 		MOON_STONE_DUST_BLOCK = registerBlock("moon_stone_dust_block",
 				new Block(FabricBlockSettings.copy(Blocks.SNOW_BLOCK)));
@@ -2274,8 +2255,6 @@ public class MoreWeaponry implements ModInitializer {
 
 
 		// Block Items
-		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "echo_infuser"), new BlockItem(ECHO_INFUSER,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 
         	Registry.register(Registry.ITEM, new Identifier(MOD_ID, "moon_stone_dust_block"), new BlockItem(MOON_STONE_DUST_BLOCK,
 				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));

@@ -1,5 +1,5 @@
 {
-  "type": "moreweaponry:echo_infusion",
+  "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
       "item": "minecraft:echo_shard"
