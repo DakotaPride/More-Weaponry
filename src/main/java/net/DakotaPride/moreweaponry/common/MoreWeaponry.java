@@ -1,6 +1,5 @@
 package net.DakotaPride.moreweaponry.common;
 
-import com.mojang.serialization.Codec;
 import net.DakotaPride.moreweaponry.common.block.MoreWeaponrySignTypes;
 import net.DakotaPride.moreweaponry.common.block.custom.*;
 import net.DakotaPride.moreweaponry.common.block.entity.*;
@@ -41,7 +40,9 @@ import net.DakotaPride.moreweaponry.common.item.items.watcher_tools.*;
 import net.DakotaPride.moreweaponry.common.recipe.CirtictForgeRecipe;
 import net.DakotaPride.moreweaponry.common.recipe.CoreForgeRecipe;
 import net.DakotaPride.moreweaponry.common.recipe.EssenceTranslatorRecipe;
-import net.DakotaPride.moreweaponry.common.screen.*;
+import net.DakotaPride.moreweaponry.common.screen.CirtictForgeScreenHandler;
+import net.DakotaPride.moreweaponry.common.screen.CoreForgeScreenHandler;
+import net.DakotaPride.moreweaponry.common.screen.EssenceTranslatorScreenHandler;
 import net.DakotaPride.moreweaponry.common.util.MoreWeaponryLootTableModifiers;
 import net.DakotaPride.moreweaponry.common.util.MoreWeaponryRegistries;
 import net.DakotaPride.moreweaponry.common.util.MoreWeaponryTags;
@@ -52,7 +53,6 @@ import net.DakotaPride.moreweaponry.common.world.gen.MoreWeaponryWorldGen;
 import net.DakotaPride.moreweaponry.mixin.BrewingRecipeRegistryMixin;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
@@ -79,9 +79,7 @@ import net.minecraft.item.*;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.condition.RandomChanceLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
-import net.minecraft.loot.function.SetCountLootFunction;
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
-import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.particle.DefaultParticleType;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.Potions;
@@ -93,10 +91,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.Lazy;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.Heightmap;
-import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.LakeFeature;
-import net.minecraft.world.gen.structure.Structure;
-import net.minecraft.world.gen.structure.StructureType;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import software.bernie.geckolib3.GeckoLib;
@@ -991,25 +986,25 @@ public class MoreWeaponry implements ModInitializer {
 		// Echo Infused Items
 		ECHO_CIRTICT_AXE = registerItem("echo_cirtict_axe",
 				new BetterAxeItem((ToolMaterial) ECHO_CIRTICT_TOOLS, 6, -2.7f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		ECHO_CIRTICT_PICKAXE = registerItem("echo_cirtict_pickaxe",
-				new BetterPickaxeItem((ToolMaterial) ECHO_CIRTICT_TOOLS, -1, -2.1f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new BetterPickaxeItem(ECHO_CIRTICT_TOOLS, -1, -2.1f,
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		ECHO_CIRTICT_SWORD = registerItem("echo_cirtict_sword",
-				new SwordItem((ToolMaterial) ECHO_CIRTICT_TOOLS, 3, -1.9f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new SwordItem(ECHO_CIRTICT_TOOLS, 3, -1.9f,
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		ECHO_CIRTICT_SHOVEL = registerItem("echo_cirtict_shovel",
-				new ShovelItem((ToolMaterial) ECHO_CIRTICT_TOOLS, -2, -2.5f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new ShovelItem(ECHO_CIRTICT_TOOLS, -2, -2.5f,
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		ECHO_CIRTICT_HOE = registerItem("echo_cirtict_hoe",
 				new BetterHoeItem((ToolMaterial) ECHO_CIRTICT_TOOLS, -11, 0.5f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		ECHO_CIRTICT_BATTLEAXE = registerItem("echo_cirtict_battleaxe",
-				new BattleaxeItem((ToolMaterial) ECHO_CIRTICT_TOOLS, -4, -3.0f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new BattleaxeItem(ECHO_CIRTICT_TOOLS, -4, -3.0f,
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		ECHO_CIRTICT_KNIFE = registerItem("echo_cirtict_knife",
-				new KnifeItem((ToolMaterial) ECHO_CIRTICT_TOOLS, -5, -0.5f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new KnifeItem(ECHO_CIRTICT_TOOLS, -5, -0.5f,
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 
 		LocalDate moreWeaponryData;
 
@@ -1032,50 +1027,50 @@ public class MoreWeaponry implements ModInitializer {
 			// Pride Month Celebration
 			RAINBOW_HORNS = registerItem("rainbow_horns",
 					new RainbowHornsItem(ArmorMaterials.LEATHER, EquipmentSlot.HEAD,
-							new FabricItemSettings()));
+							new Item.Settings()));
 			NONBINARY_HORNS = registerItem("nonbinary_horns",
 					new NonBinaryHornsItem(ArmorMaterials.LEATHER, EquipmentSlot.HEAD,
-							new FabricItemSettings()));
+							new Item.Settings()));
 			TRANS_HORNS = registerItem("transgender_horns",
 					new TransgenderHornsItem(ArmorMaterials.LEATHER, EquipmentSlot.HEAD,
-							new FabricItemSettings()));
+							new Item.Settings()));
 			BI_HORNS = registerItem("bisexual_horns",
 					new BisexualHornsItem(ArmorMaterials.LEATHER, EquipmentSlot.HEAD,
-							new FabricItemSettings()));
+							new Item.Settings()));
 			PAN_HORNS = registerItem("pansexual_horns",
 					new PansexualHornsItem(ArmorMaterials.LEATHER, EquipmentSlot.HEAD,
-							new FabricItemSettings()));
+							new Item.Settings()));
 			// Pride Month (unrelated) Additions
 		COSMETIC_HORNS = registerItem("base_horns",
 					new BaseHornsItem(ArmorMaterials.LEATHER, EquipmentSlot.HEAD,
-							new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+							new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		RED_HORNS = registerItem("red_horns",
 					new RedHornsItem(ArmorMaterials.LEATHER, EquipmentSlot.HEAD,
-							new FabricItemSettings()));
+							new Item.Settings()));
 		ORANGE_HORNS = registerItem("orange_horns",
 					new OrangeHornsItem(ArmorMaterials.LEATHER, EquipmentSlot.HEAD,
-							new FabricItemSettings()));
+							new Item.Settings()));
 		YELLOW_HORNS = registerItem("yellow_horns",
 				new YellowHornsItem(ArmorMaterials.LEATHER, EquipmentSlot.HEAD,
-						new FabricItemSettings()));
+						new Item.Settings()));
 		GREEN_HORNS = registerItem("green_horns",
 				new GreenHornsItem(ArmorMaterials.LEATHER, EquipmentSlot.HEAD,
-						new FabricItemSettings()));
+						new Item.Settings()));
 		BLUE_HORNS = registerItem("blue_horns",
 				new BlueHornsItem(ArmorMaterials.LEATHER, EquipmentSlot.HEAD,
-						new FabricItemSettings()));
+						new Item.Settings()));
 		PURPLE_HORNS = registerItem("purple_horns",
 				new PurpleHornsItem(ArmorMaterials.LEATHER, EquipmentSlot.HEAD,
-						new FabricItemSettings()));
+						new Item.Settings()));
 		PINK_HORNS = registerItem("pink_horns",
 				new PinkHornsItem(ArmorMaterials.LEATHER, EquipmentSlot.HEAD,
-						new FabricItemSettings()));
+						new Item.Settings()));
 		BLACK_HORNS = registerItem("black_horns",
 				new BlackHornsItem(ArmorMaterials.LEATHER, EquipmentSlot.HEAD,
-						new FabricItemSettings()));
+						new Item.Settings()));
 		WHITE_HORNS = registerItem("white_horns",
 				new WhiteHornsItem(ArmorMaterials.LEATHER, EquipmentSlot.HEAD,
-						new FabricItemSettings()));
+						new Item.Settings()));
 
 
 
@@ -1116,22 +1111,22 @@ public class MoreWeaponry implements ModInitializer {
 
 
 		CONTAINED_CELESTIALITE = registerItem("reinforced_celestialite_bucket",
-				new ReinforcedBucketItem(CELESTIALITE_STILL, new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new ReinforcedBucketItem(CELESTIALITE_STILL, new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		BARD_INFUSED_CELESTIALITE = registerItem("bard_infused_celestialite",
-				new ReinforcedBucketItem(BARD_CELESTIALITE_STILL, new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new ReinforcedBucketItem(BARD_CELESTIALITE_STILL, new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		CRACKLER_INFUSED_CELESTIALITE = registerItem("crackler_infused_celestialite",
-				new ReinforcedBucketItem(CRACKLER_CELESTIALITE_STILL, new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new ReinforcedBucketItem(CRACKLER_CELESTIALITE_STILL, new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		WANDERER_INFUSED_CELESTIALITE = registerItem("wanderer_infused_celestialite",
-				new ReinforcedBucketItem(WANDERER_CELESTIALITE_STILL, new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new ReinforcedBucketItem(WANDERER_CELESTIALITE_STILL, new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		SICKENED_INFUSED_CELESTIALITE = registerItem("sickened_infused_celestialite",
-				new ReinforcedBucketItem(SICKENED_CELESTIALITE_STILL, new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new ReinforcedBucketItem(SICKENED_CELESTIALITE_STILL, new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		SICKENED_HUSK_INFUSED_CELESTIALITE = registerItem("sickened_husk_infused_celestialite",
-				new ReinforcedBucketItem(SICKENED_HUSK_CELESTIALITE_STILL, new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new ReinforcedBucketItem(SICKENED_HUSK_CELESTIALITE_STILL, new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		WATCHER_INFUSED_CELESTIALITE = registerItem("watcher_infused_celestialite",
-				new ReinforcedBucketItem(WATCHER_CELESTIALITE_STILL, new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new ReinforcedBucketItem(WATCHER_CELESTIALITE_STILL, new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 
 		REINFORCED_BUCKET = registerItem("reinforced_bucket",
-				new ReinforcedBucketItem(Fluids.EMPTY, new FabricItemSettings().fireproof().maxCount(16).group(MORE_WEAPONRY_GROUP)));
+				new ReinforcedBucketItem(Fluids.EMPTY, new Item.Settings().fireproof().maxCount(16).group(MORE_WEAPONRY_GROUP)));
 
 		// Paintings
 		WATCHER_PAINTING = registerPainting("watcher",
@@ -1529,28 +1524,28 @@ public class MoreWeaponry implements ModInitializer {
 		
 		// Items
 		BLASTED_AMETHYST = registerItem("blasted_amethyst",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		GLIMMERING_AMETHYST = registerItem("glimmering_amethyst",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		MOON_STONE_DUST = registerItem("moon_stone_dust",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		REFINED_MOON_STONE = registerItem("refined_moon_stone",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		HANDLE = registerItem("handle",
-				new HandleItem(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new HandleItem(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		KURO_SEEDS = registerItem("kuro_seeds",
-				new BlockItem(KURO_PLANT, new FabricItemSettings().fireproof().group(MORE_WEAPONRY_GROUP)));
+				new BlockItem(KURO_PLANT, new Item.Settings().fireproof().group(MORE_WEAPONRY_GROUP)));
 		KURO = registerItem("kuro",
-				new Item(new FabricItemSettings().fireproof().group(MORE_WEAPONRY_GROUP)));
+				new Item(new Item.Settings().fireproof().group(MORE_WEAPONRY_GROUP)));
 		KURO_BREAD = registerItem("kuro_bread",
-				new Item(new FabricItemSettings().fireproof().food
+				new Item(new Item.Settings().fireproof().food
 						(new FoodComponent.Builder().alwaysEdible().hunger(8).statusEffect
 								(new StatusEffectInstance(StatusEffects.ABSORPTION, 20*10), 1f)
 								.statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 20*5), 0.5f)
 								.statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 20*25), 1f)
 								.saturationModifier(0.7f).build()).group(MORE_WEAPONRY_GROUP)));
 		CURON_BREW = registerItem("curon_brew",
-				new NightCuronBrewItem(new FabricItemSettings().maxCount(1).food
+				new NightCuronBrewItem(new Item.Settings().maxCount(1).food
 						(new FoodComponent.Builder().alwaysEdible().hunger(7).statusEffect
 										(new StatusEffectInstance(StatusEffects.BLINDNESS, 20*10), 1f)
 								.statusEffect(new StatusEffectInstance(StatusEffects.WITHER, 20*5), 1f)
@@ -1563,686 +1558,686 @@ public class MoreWeaponry implements ModInitializer {
 								.statusEffect(new StatusEffectInstance(StatusEffects.UNLUCK, 20*5), 1f)
 								.saturationModifier(0.6f).build()).group(MORE_WEAPONRY_GROUP)));
 		FRODON_BOWL = registerItem("frodon_bowl",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		CURON_FLOWER_PETALS = registerItem("curon_flower_petals",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		CRUSHED_KURO = registerItem("crushed_kuro",
-				new Item(new FabricItemSettings().fireproof().group(MORE_WEAPONRY_GROUP)));
+				new Item(new Item.Settings().fireproof().group(MORE_WEAPONRY_GROUP)));
 		BLACKSTONE_INGOT = registerItem("blackstone_ingot",
-				new Item(new FabricItemSettings().fireproof().group(MORE_WEAPONRY_GROUP)));
+				new Item(new Item.Settings().fireproof().group(MORE_WEAPONRY_GROUP)));
 		NETHERITE_HANDLE = registerItem("netherite_handle",
-				new HandleItem(new FabricItemSettings().fireproof().group(MORE_WEAPONRY_GROUP)));
+				new HandleItem(new Item.Settings().fireproof().group(MORE_WEAPONRY_GROUP)));
 		MARE_DIAMOND = registerItem("mare_diamond",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		NETHERITE_NUGGET = registerItem("netherite_nugget",
-				new Item(new FabricItemSettings().fireproof().group(MORE_WEAPONRY_GROUP)));
+				new Item(new Item.Settings().fireproof().group(MORE_WEAPONRY_GROUP)));
 		AMETHYST_HANDLE = registerItem("amethyst_handle",
-				new HandleItem(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new HandleItem(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		GUARDIAN_SCALE = registerItem("guardian_scale",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		ELDER_GUARDIAN_SCALE = registerItem("elder_guardian_scale",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		ELDER_GUARDIANS_EYE = registerItem("elder_guardians_eye",
-				new Item(new FabricItemSettings().food
+				new Item(new Item.Settings().food
 						(new FoodComponent.Builder().hunger(8).statusEffect
 								(new StatusEffectInstance(StatusEffects.MINING_FATIGUE, 20*5), 1f)
 								.saturationModifier(1.0f).build()).group(MORE_WEAPONRY_GROUP)));
 		PRISMARINE_HANDLE = registerItem("prismarine_handle",
-				new HandleItem(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new HandleItem(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		WITHER_ESSENCE = registerItem("wither_essence",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		WITHER_BONE = registerItem("wither_bone",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		PHANTOM_ESSENCE = registerItem("phantom_essence",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		PHANTOM_SCALE = registerItem("phantom_scale",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		PHANTOM_HELMET = registerItem("phantom_helmet",
 				new PhantomScaleHelm(PHANTOM_SCALE_ARMOR, EquipmentSlot.HEAD,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		CIRTICT_INGOT = registerItem("cirtict_ingot",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		GLIMMERING_SWORD = registerItem("glimmering_sword",
 				new SwordItem((ToolMaterial) GLIMMERING_AMETHYST_TOOLS, 3, -2.4f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		GLIMMERING_SHOVEL = registerItem("glimmering_shovel",
 				new ShovelItem((ToolMaterial) GLIMMERING_AMETHYST_TOOLS, 1, -3f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		GLIMMERING_PICKAXE = registerItem("glimmering_pickaxe",
 				new BetterPickaxeItem((ToolMaterial) GLIMMERING_AMETHYST_TOOLS, 1, -2.8f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		GLIMMERING_AXE = registerItem("glimmering_axe",
 				new BetterAxeItem((ToolMaterial) GLIMMERING_AMETHYST_TOOLS, 5, -3f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		GLIMMERING_HOE = registerItem("glimmering_hoe",
 				new BetterHoeItem((ToolMaterial) GLIMMERING_AMETHYST_TOOLS, -1, 0f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		GLIMMERING_BATTLEAXE = registerItem("glimmering_battleaxe",
 				new BattleaxeItem((ToolMaterial) GLIMMERING_AMETHYST_TOOLS, 6, -3.3f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		MOON_STONE_SWORD = registerItem("moon_stone_sword",
 				new SwordItem((ToolMaterial) REFINED_MOON_STONE_TOOLS, 3, -2.4f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		MOON_STONE_SHOVEL = registerItem("moon_stone_shovel",
 				new ShovelItem((ToolMaterial) REFINED_MOON_STONE_TOOLS, 1, -3f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		MOON_STONE_PICKAXE = registerItem("moon_stone_pickaxe",
 				new BetterPickaxeItem((ToolMaterial) REFINED_MOON_STONE_TOOLS, 1, -2.8f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		MOON_STONE_AXE = registerItem("moon_stone_axe",
 				new BetterAxeItem((ToolMaterial) REFINED_MOON_STONE_TOOLS, 6, -3f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		MOON_STONE_HOE = registerItem("moon_stone_hoe",
 				new BetterHoeItem((ToolMaterial) REFINED_MOON_STONE_TOOLS, 0, 0f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		MOON_STONE_BATTLEAXE = registerItem("moon_stone_battleaxe",
 				new BattleaxeItem((ToolMaterial) REFINED_MOON_STONE_TOOLS, 8, -3.3f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		BLACKSTONE_METAL_SWORD = registerItem("blackstone_metal_sword",
 				new SwordItem((ToolMaterial) BLACKSTONE_METAL_TOOLS, 4, -2.4f,
-						new FabricItemSettings().fireproof().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().fireproof().group(MORE_WEAPONRY_GROUP)));
 		BLACKSTONE_METAL_SHOVEL = registerItem("blackstone_metal_shovel",
 				new ShovelItem((ToolMaterial) BLACKSTONE_METAL_TOOLS, 2, -3f,
-						new FabricItemSettings().fireproof().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().fireproof().group(MORE_WEAPONRY_GROUP)));
 		BLACKSTONE_METAL_PICKAXE = registerItem("blackstone_metal_pickaxe",
 				new BetterPickaxeItem((ToolMaterial) BLACKSTONE_METAL_TOOLS, 1, -2.8f,
-						new FabricItemSettings().fireproof().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().fireproof().group(MORE_WEAPONRY_GROUP)));
 		BLACKSTONE_METAL_AXE = registerItem("blackstone_metal_axe",
 				new BetterAxeItem((ToolMaterial) BLACKSTONE_METAL_TOOLS, 6, -3f,
-						new FabricItemSettings().fireproof().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().fireproof().group(MORE_WEAPONRY_GROUP)));
 		BLACKSTONE_METAL_HOE = registerItem("blackstone_metal_hoe",
 				new BetterHoeItem((ToolMaterial) BLACKSTONE_METAL_TOOLS, 8, -3.3f,
-						new FabricItemSettings().fireproof().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().fireproof().group(MORE_WEAPONRY_GROUP)));
 		BLACKSTONE_METAL_BATTLEAXE = registerItem("blackstone_metal_battleaxe",
 				new BattleaxeItem((ToolMaterial) BLACKSTONE_METAL_TOOLS, 9, -3.3f,
-						new FabricItemSettings().fireproof().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().fireproof().group(MORE_WEAPONRY_GROUP)));
 		NETHERITE_BATTLEAXE = registerItem("netherite_battleaxe",
 				new BattleaxeItem((ToolMaterial) ToolMaterials.NETHERITE, 8, -3.3f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		DIAMOND_BATTLEAXE = registerItem("diamond_battleaxe",
 				new BattleaxeItem((ToolMaterial) ToolMaterials.DIAMOND, 7, -3.3f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		GLIMMERING_HELMET = registerItem("glimmering_helmet",
 				new ArmorItem(GLIMMERING_AMETHYST_ARMOR, EquipmentSlot.HEAD,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		GLIMMERING_BREASTPLATE = registerItem("glimmering_chestplate",
 				new ArmorItem(GLIMMERING_AMETHYST_ARMOR, EquipmentSlot.CHEST,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		GLIMMERING_LEGGINGS = registerItem("glimmering_leggings",
 				new ArmorItem(GLIMMERING_AMETHYST_ARMOR, EquipmentSlot.LEGS,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		GLIMMERING_BOOTS = registerItem("glimmering_boots",
 				new ArmorItem(GLIMMERING_AMETHYST_ARMOR, EquipmentSlot.FEET,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		MOON_STONE_HELMET = registerItem("moon_stone_helmet",
 				new ArmorItem(REFINED_MOON_STONE_ARMOR, EquipmentSlot.HEAD,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		MOON_STONE_BREASTPLATE = registerItem("moon_stone_chestplate",
 				new ArmorItem(REFINED_MOON_STONE_ARMOR, EquipmentSlot.CHEST,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		MOON_STONE_LEGGINGS = registerItem("moon_stone_leggings",
 				new ArmorItem(REFINED_MOON_STONE_ARMOR, EquipmentSlot.LEGS,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		MOON_STONE_BOOTS = registerItem("moon_stone_boots",
 				new ArmorItem(REFINED_MOON_STONE_ARMOR, EquipmentSlot.FEET,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		BLACKSTONE_METAL_HELMET = registerItem("blackstone_metal_helmet",
 				new ArmorItem(BLACKSTONE_METAL_ARMOR, EquipmentSlot.HEAD,
-						new FabricItemSettings().fireproof().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().fireproof().group(MORE_WEAPONRY_GROUP)));
 		BLACKSTONE_METAL_BREASTPLATE = registerItem("blackstone_metal_chestplate",
 				new ArmorItem(BLACKSTONE_METAL_ARMOR, EquipmentSlot.CHEST,
-						new FabricItemSettings().fireproof().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().fireproof().group(MORE_WEAPONRY_GROUP)));
 		BLACKSTONE_METAL_LEGGINGS = registerItem("blackstone_metal_leggings",
 				new ArmorItem(BLACKSTONE_METAL_ARMOR, EquipmentSlot.LEGS,
-						new FabricItemSettings().fireproof().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().fireproof().group(MORE_WEAPONRY_GROUP)));
 		BLACKSTONE_METAL_BOOTS = registerItem("blackstone_metal_boots",
 				new ArmorItem(BLACKSTONE_METAL_ARMOR, EquipmentSlot.FEET,
-						new FabricItemSettings().fireproof().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().fireproof().group(MORE_WEAPONRY_GROUP)));
 		ELDER_GUARDIAN_SCALE_HELMET = registerItem("elder_guardian_scale_helmet",
 				new ElderScaleArmorItem(ELDER_GUARDIAN_SCALE_ARMOR, EquipmentSlot.HEAD,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		ELDER_GUARDIAN_SCALE_BREASTPLATE = registerItem("elder_guardian_scale_chestplate",
 				new ElderScaleArmorItem(ELDER_GUARDIAN_SCALE_ARMOR, EquipmentSlot.CHEST,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		ELDER_GUARDIAN_SCALE_LEGGINGS = registerItem("elder_guardian_scale_leggings",
 				new ElderScaleArmorItem(ELDER_GUARDIAN_SCALE_ARMOR, EquipmentSlot.LEGS,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		ELDER_GUARDIAN_SCALE_BOOTS = registerItem("elder_guardian_scale_boots",
 				new ElderScaleArmorItem(ELDER_GUARDIAN_SCALE_ARMOR, EquipmentSlot.FEET,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		GUARDIAN_SCALE_HELMET = registerItem("guardian_scale_helmet",
 				new ArmorItem(GUARDIAN_SCALE_ARMOR, EquipmentSlot.HEAD,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		GUARDIAN_SCALE_BREASTPLATE = registerItem("guardian_scale_chestplate",
 				new ArmorItem(GUARDIAN_SCALE_ARMOR, EquipmentSlot.CHEST,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		GUARDIAN_SCALE_LEGGINGS = registerItem("guardian_scale_leggings",
 				new ArmorItem(GUARDIAN_SCALE_ARMOR, EquipmentSlot.LEGS,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		GUARDIAN_SCALE_BOOTS = registerItem("guardian_scale_boots",
 				new ArmorItem(GUARDIAN_SCALE_ARMOR, EquipmentSlot.FEET,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		ELDER_GUARDIAN_SCALE_SWORD = registerItem("elder_guardian_scale_sword",
 				new SwordItem((ToolMaterial) ELDER_GUARDIAN_SCALE_TOOLS, 5, -2.4f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		ELDER_GUARDIAN_SCALE_SHOVEL = registerItem("elder_guardian_scale_shovel",
 				new ShovelItem((ToolMaterial) ELDER_GUARDIAN_SCALE_TOOLS, 2, -3f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		ELDER_GUARDIAN_SCALE_PICKAXE = registerItem("elder_guardian_scale_pickaxe",
-				new BetterPickaxeItem((ToolMaterial) ELDER_GUARDIAN_SCALE_TOOLS, 2, -2.8f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new BetterPickaxeItem(ELDER_GUARDIAN_SCALE_TOOLS, 2, -2.8f,
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		ELDER_GUARDIAN_SCALE_AXE = registerItem("elder_guardian_scale_axe",
 				new BetterAxeItem((ToolMaterial) ELDER_GUARDIAN_SCALE_TOOLS, 7, -3f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		ELDER_GUARDIAN_SCALE_HOE = registerItem("elder_guardian_scale_hoe",
 				new BetterHoeItem((ToolMaterial) ELDER_GUARDIAN_SCALE_TOOLS, -5, -0f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		ELDER_GUARDIAN_SCALE_BATTLEAXE = registerItem("elder_guardian_scale_battleaxe",
 				new BattleaxeItem((ToolMaterial) ELDER_GUARDIAN_SCALE_TOOLS, 11, -3.3f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		GUARDIAN_SCALE_SWORD = registerItem("guardian_scale_sword",
 				new SwordItem((ToolMaterial) GUARDIAN_SCALE_TOOLS, 4, -2.4f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		GUARDIAN_SCALE_SHOVEL = registerItem("guardian_scale_shovel",
 				new ShovelItem((ToolMaterial) GUARDIAN_SCALE_TOOLS, 1, -3f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		GUARDIAN_SCALE_PICKAXE = registerItem("guardian_scale_pickaxe",
 				new BetterPickaxeItem((ToolMaterial) GUARDIAN_SCALE_TOOLS, 2, -2.8f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		GUARDIAN_SCALE_AXE = registerItem("guardian_scale_axe",
 				new BetterAxeItem((ToolMaterial) GUARDIAN_SCALE_TOOLS, 7, -3f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		GUARDIAN_SCALE_HOE = registerItem("guardian_scale_hoe",
 				new BetterHoeItem((ToolMaterial) GUARDIAN_SCALE_TOOLS, -4, -0f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		GUARDIAN_SCALE_BATTLEAXE = registerItem("guardian_scale_battleaxe",
 				new BattleaxeItem((ToolMaterial) GUARDIAN_SCALE_TOOLS, 10, -3.3f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		GLIMMERING_SHIELD = registerItem("glimmering_shield",
-				new MoreWeaponryShieldItem(new FabricItemSettings().maxDamage(1782).group(MORE_WEAPONRY_GROUP),
+				new MoreWeaponryShieldItem(new Item.Settings().maxDamage(1782).group(MORE_WEAPONRY_GROUP),
 						20, 23, GLIMMERING_AMETHYST));
 		BLACKSTONE_METAL_SHIELD = registerItem("blackstone_metal_shield",
-				new MoreWeaponryShieldItem(new FabricItemSettings().maxDamage(2476).group(MORE_WEAPONRY_GROUP),
+				new MoreWeaponryShieldItem(new Item.Settings().maxDamage(2476).group(MORE_WEAPONRY_GROUP),
 						10, 17, BLACKSTONE_INGOT));
 		MOON_STONE_SHIELD = registerItem("moon_stone_shield",
-				new MoreWeaponryShieldItem(new FabricItemSettings().maxDamage(2006).group(MORE_WEAPONRY_GROUP),
+				new MoreWeaponryShieldItem(new Item.Settings().maxDamage(2006).group(MORE_WEAPONRY_GROUP),
 						15, 19, REFINED_MOON_STONE));
 		GUARDIAN_SCALE_SHIELD = registerItem("guardian_scale_shield",
-				new MoreWeaponryShieldItem(new FabricItemSettings().maxDamage(2938).group(MORE_WEAPONRY_GROUP),
+				new MoreWeaponryShieldItem(new Item.Settings().maxDamage(2938).group(MORE_WEAPONRY_GROUP),
 						8, 17, GUARDIAN_SCALE));
 		ELDER_SCALE_SHIELD = registerItem("elder_scale_shield",
-				new MoreWeaponryShieldItem(new FabricItemSettings().maxDamage(3276).group(MORE_WEAPONRY_GROUP),
+				new MoreWeaponryShieldItem(new Item.Settings().maxDamage(3276).group(MORE_WEAPONRY_GROUP),
 						7, 18, ELDER_GUARDIAN_SCALE));
 		COOLED_CIRTICT_SHIELD = registerItem("cooled_cirtict_shield",
-				new CooledCirtictShield(new FabricItemSettings().maxDamage(3583).group(MORE_WEAPONRY_GROUP),
+				new CooledCirtictShield(new Item.Settings().maxDamage(3583).group(MORE_WEAPONRY_GROUP),
 						5, 16, COOLED_CIRTICT_INGOT));
 		HEATED_CIRTICT_SHIELD = registerItem("heated_cirtict_shield",
-				new HeatedCirtictShield(new FabricItemSettings().maxDamage(3583).group(MORE_WEAPONRY_GROUP),
+				new HeatedCirtictShield(new Item.Settings().maxDamage(3583).group(MORE_WEAPONRY_GROUP),
 						5, 16, HEATED_CIRTICT_INGOT));
 		CIRTICT_SHIELD = registerItem("cirtict_shield",
-				new MoreWeaponryShieldItem(new FabricItemSettings().maxDamage(3456).group(MORE_WEAPONRY_GROUP),
+				new MoreWeaponryShieldItem(new Item.Settings().maxDamage(3456).group(MORE_WEAPONRY_GROUP),
 						6, 17, CIRTICT_INGOT));
 		ELDER_SCALE_ARTIFACT = registerItem("elder_scale_artifact",
 				new ElderScaleArtifactItem((ToolMaterial) ELDER_GUARDIAN_SCALE_TOOLS, 9, -2.9f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		GOLDEN_KNIFE = registerItem("golden_knife",
 				new KnifeItem((ToolMaterial) ToolMaterials.GOLD, 2, -1f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		STONE_KNIFE = registerItem("stone_knife",
 				new KnifeItem((ToolMaterial) ToolMaterials.STONE, 3, -1f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		IRON_KNIFE = registerItem("iron_knife",
 				new KnifeItem((ToolMaterial) ToolMaterials.IRON, 4, -1f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		DIAMOND_KNIFE = registerItem("diamond_knife",
 				new KnifeItem((ToolMaterial) ToolMaterials.DIAMOND, 5, -1f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		NETHERITE_KNIFE = registerItem("netherite_knife",
 				new KnifeItem((ToolMaterial) ToolMaterials.NETHERITE, 6, -1f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		WOODEN_KNIFE = registerItem("wooden_knife",
 				new KnifeItem((ToolMaterial) ToolMaterials.WOOD, 1, -1f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		REFINED_MOON_KNIFE = registerItem("refined_moon_knife",
 				new KnifeItem((ToolMaterial) REFINED_MOON_STONE_TOOLS, 3, -1f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		GLIMMERED_AMETHYST_KNIFE = registerItem("glimmered_amethyst_knife",
 				new KnifeItem((ToolMaterial) GLIMMERING_AMETHYST_TOOLS, 2, -1f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		BLACKSTONE_METAL_KNIFE = registerItem("blackstone_metal_knife",
 				new KnifeItem((ToolMaterial) BLACKSTONE_METAL_TOOLS, (int) 2.5, -1f,
-						new FabricItemSettings().fireproof().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().fireproof().group(MORE_WEAPONRY_GROUP)));
 		GUARDIAN_SCALE_KNIFE = registerItem("guardian_scale_knife",
 				new KnifeItem((ToolMaterial) GUARDIAN_SCALE_TOOLS, 3, -1f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		ELDER_GUARDIAN_SCALE_KNIFE = registerItem("elder_guardian_scale_knife",
 				new KnifeItem((ToolMaterial) ELDER_GUARDIAN_SCALE_TOOLS, 3, -1f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		GOLDEN_BATTLEAXE = registerItem("golden_battleaxe",
 				new BattleaxeItem((ToolMaterial) ToolMaterials.GOLD, 2, -3.3f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		WOODEN_BATTLEAXE = registerItem("wooden_battleaxe",
 				new BattleaxeItem((ToolMaterial) ToolMaterials.WOOD, 1, -3.3f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		STONE_BATTLEAXE = registerItem("stone_battleaxe",
 				new BattleaxeItem((ToolMaterial) ToolMaterials.STONE, 2, -3.3f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		IRON_BATTLEAXE = registerItem("iron_battleaxe",
 				new BattleaxeItem((ToolMaterial) ToolMaterials.IRON, 3, -3.3f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		CIRTICT_BATTLEAXE = registerItem("cirtict_battleaxe",
 				new BattleaxeItem((ToolMaterial) CIRTICT_TOOLS, 4, -3.3f,
-						new FabricItemSettings().fireproof().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().fireproof().group(MORE_WEAPONRY_GROUP)));
 		HEATED_CIRTICT_BATTLEAXE = registerItem("heated_cirtict_battleaxe",
 				new BattleaxeItem((ToolMaterial) HEATED_CIRTICT_TOOLS, 5, -3.3f,
-						new FabricItemSettings().fireproof().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().fireproof().group(MORE_WEAPONRY_GROUP)));
 		COOLED_CIRTICT_BATTLEAXE = registerItem("cooled_cirtict_battleaxe",
 				new BattleaxeItem((ToolMaterial) COOLED_CIRTICT_TOOLS, 5, -3.3f,
-						new FabricItemSettings().fireproof().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().fireproof().group(MORE_WEAPONRY_GROUP)));
 		BLUESTONE_IGNITOR = registerItem("bluestone_ignitor",
-				new BluestoneIgnitor(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new BluestoneIgnitor(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		BLUESTONE_ROCK = registerItem("bluestone_rock",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		CIRTICT_SCRAP = registerItem("cirtict_scrap",
-				new Item(new FabricItemSettings().fireproof().group(MORE_WEAPONRY_GROUP)));
+				new Item(new Item.Settings().fireproof().group(MORE_WEAPONRY_GROUP)));
 		COOLED_CIRTICT_INGOT = registerItem("cooled_cirtict_ingot",
-				new CooledCirtictIngot(new FabricItemSettings().fireproof().group(MORE_WEAPONRY_GROUP)));
+				new CooledCirtictIngot(new Item.Settings().fireproof().group(MORE_WEAPONRY_GROUP)));
 		WARDENS_STEP_MUSIC_DISC = registerItem("wardens_step_music_disc",
 				new MoreWeaponryMusicDiscItem(9, WARDENS_STEP,
-						new FabricItemSettings().maxCount(1).group(MORE_WEAPONRY_GROUP), 260));
+						new Item.Settings().maxCount(1).group(MORE_WEAPONRY_GROUP), 260));
 		FRODON_SIGN = registerItem("frodon_sign",
-				new SignItem(new FabricItemSettings().group(MORE_WEAPONRY_GROUP).maxCount(16),
+				new SignItem(new Item.Settings().group(MORE_WEAPONRY_GROUP).maxCount(16),
 						FRODON_SIGN_BLOCK, FRODON_WALL_SIGN));
 		DRAGON_SCALE = registerItem("dragon_scale",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		SHULKER_SHELL_BOOTS = registerItem("shulker_shell_boots",
 				new ShulkerShellBoots(SHULKER_SHELL_ARMOR, EquipmentSlot.FEET,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		WITHER_BROAD_HAMMER = registerItem("wither_broad_hammer",
 				new WitherBroadHammerItem((ToolMaterial) WITHERED_TOOLS, 11, -3.0f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		WITHERING_HANDLE = registerItem("withering_handle",
-				new HandleItem(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new HandleItem(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		WITHER_BROAD_HAMMER_HEAD = registerItem("wither_broad_hammer_head",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		HEATED_CIRTICT_INGOT = registerItem("heated_cirtict_ingot",
-				new HeatedCirtictIngot(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new HeatedCirtictIngot(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		COOLED_CIRTICT_SWORD = registerItem("cooled_cirtict_sword",
 				new CooledCirtictSword((ToolMaterial) COOLED_CIRTICT_TOOLS, -1, -2.4f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		COOLED_CIRTICT_AXE = registerItem("cooled_cirtict_axe",
 				new CooledCirtictAxe((ToolMaterial) COOLED_CIRTICT_TOOLS, 2, -3f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		COOLED_CIRTICT_HOE = registerItem("cooled_cirtict_hoe",
 				new CooledCirtictHoe((ToolMaterial) COOLED_CIRTICT_TOOLS, -13, 0f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		COOLED_CIRTICT_PICKAXE = registerItem("cooled_cirtict_pickaxe",
 				new CooledCirtictPickaxe((ToolMaterial) COOLED_CIRTICT_TOOLS, -4, -2.8f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		COOLED_CIRTICT_SHOVEL = registerItem("cooled_cirtict_shovel",
 				new CooledCirtictShovel((ToolMaterial) COOLED_CIRTICT_TOOLS, -5, -3f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		COOLED_CIRTICT_KNIFE = registerItem("cooled_cirtict_knife",
 				new CooledCirtictKnife((ToolMaterial) COOLED_CIRTICT_TOOLS, -2, -1f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		HEATED_CIRTICT_SWORD = registerItem("heated_cirtict_sword",
 				new HeatedCirtictSword((ToolMaterial) HEATED_CIRTICT_TOOLS, -1, -2.4f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		HEATED_CIRTICT_AXE = registerItem("heated_cirtict_axe",
 				new HeatedCirtictAxe((ToolMaterial) HEATED_CIRTICT_TOOLS, 2, -3f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		HEATED_CIRTICT_HOE = registerItem("heated_cirtict_hoe",
 				new HeatedCirtictHoe((ToolMaterial) HEATED_CIRTICT_TOOLS, -13, 0f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		HEATED_CIRTICT_PICKAXE = registerItem("heated_cirtict_pickaxe",
 				new HeatedCirtictPickaxe((ToolMaterial) HEATED_CIRTICT_TOOLS, -4, -2.8f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		HEATED_CIRTICT_SHOVEL = registerItem("heated_cirtict_shovel",
 				new HeatedCirtictShovel((ToolMaterial) HEATED_CIRTICT_TOOLS, -5, -3f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		HEATED_CIRTICT_KNIFE = registerItem("heated_cirtict_knife",
 				new HeatedCirtictKnife((ToolMaterial) HEATED_CIRTICT_TOOLS, -2, -1f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		CIRTICT_SWORD = registerItem("cirtict_sword",
 				new SwordItem((ToolMaterial) CIRTICT_TOOLS, -2, -2.4f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		CIRTICT_AXE = registerItem("cirtict_axe",
 				new BetterAxeItem((ToolMaterial) CIRTICT_TOOLS, 1, -3f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		CIRTICT_HOE = registerItem("cirtict_hoe",
 				new BetterHoeItem((ToolMaterial) CIRTICT_TOOLS, -13, 0f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		CIRTICT_PICKAXE = registerItem("cirtict_pickaxe",
 				new BetterPickaxeItem((ToolMaterial) CIRTICT_TOOLS, -5, -2.8f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		CIRTICT_SHOVEL = registerItem("cirtict_shovel",
 				new ShovelItem((ToolMaterial) CIRTICT_TOOLS, -4, -3f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		CIRTICT_KNIFE = registerItem("cirtict_knife",
 				new KnifeItem((ToolMaterial) CIRTICT_TOOLS, -4, -1f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		CIRTICT_NUGGET = registerItem("cirtict_nugget",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		HEATED_CIRTICT_NUGGET = registerItem("heated_cirtict_nugget",
-				new HeatedCirtictNugget(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new HeatedCirtictNugget(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		COOLED_CIRTICT_NUGGET = registerItem("cooled_cirtict_nugget",
-				new CooledCirtictNugget(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new CooledCirtictNugget(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		ENDICATE_STAFF = registerItem("endicate_staff",
 				new EndicateStaffItem((ToolMaterial) ENDICATE_STAFF_TOOLS, 24, -3.4f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		ENDICATE_HANDLE = registerItem("endicate_handle",
-				new HandleItem(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new HandleItem(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		SANDSTONE_DUST = registerItem("sandstone_dust",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		WRETCHED_ESSENCE = registerItem("wretched_essence",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		CIRTICT_CLUSTER = registerItem("cirtict_cluster",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		HEATED_CIRTICT_CLUSTER = registerItem("heated_cirtict_cluster",
-				new HeatedCirtictClusterItem(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new HeatedCirtictClusterItem(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		COOLED_CIRTICT_CLUSTER = registerItem("cooled_cirtict_cluster",
-				new CooledCirtictClusterItem(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new CooledCirtictClusterItem(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		WRETCHED_CORE = registerItem("wretched_core",
-				new WandererCoreItem(new FabricItemSettings().maxCount(1).group(MORE_WEAPONRY_GROUP)));
+				new WandererCoreItem(new Item.Settings().maxCount(1).group(MORE_WEAPONRY_GROUP)));
 		WATCHER_CORE = registerItem("watcher_core",
-				new WatcherCoreItem(new FabricItemSettings().maxCount(1).group(MORE_WEAPONRY_GROUP)));
+				new WatcherCoreItem(new Item.Settings().maxCount(1).group(MORE_WEAPONRY_GROUP)));
 		MAIDEN_CORE = registerItem("maiden_core",
-				new BardCoreItem(new FabricItemSettings().maxCount(1).group(MORE_WEAPONRY_GROUP)));
+				new BardCoreItem(new Item.Settings().maxCount(1).group(MORE_WEAPONRY_GROUP)));
 		PLAGUED_CORE = registerItem("plagued_core",
-				new SickenedCoreItem(new FabricItemSettings().maxCount(1).group(MORE_WEAPONRY_GROUP)));
+				new SickenedCoreItem(new Item.Settings().maxCount(1).group(MORE_WEAPONRY_GROUP)));
 		SICKENED_HUSK_CORE = registerItem("sickened_husk_core",
-				new SickenedHuskCoreItem(new FabricItemSettings().maxCount(1).group(MORE_WEAPONRY_GROUP)));
+				new SickenedHuskCoreItem(new Item.Settings().maxCount(1).group(MORE_WEAPONRY_GROUP)));
 		SUPPRESSED_CORE = registerItem("suppressed_core",
-				new CracklerCoreItem(new FabricItemSettings().maxCount(1).group(MORE_WEAPONRY_GROUP)));
+				new CracklerCoreItem(new Item.Settings().maxCount(1).group(MORE_WEAPONRY_GROUP)));
 		MOB_CORE = registerItem("mob_core",
-				new EmptyCoreItem(new FabricItemSettings().maxCount(1).group(MORE_WEAPONRY_GROUP)));
+				new EmptyCoreItem(new Item.Settings().maxCount(1).group(MORE_WEAPONRY_GROUP)));
 		CHARGED_MOB_CORE = registerItem("charged_mob_core",
-				new ChargedMobCoreItem(new FabricItemSettings().maxCount(1).group(MORE_WEAPONRY_GROUP)));
+				new ChargedMobCoreItem(new Item.Settings().maxCount(1).group(MORE_WEAPONRY_GROUP)));
 		ESSENCE_CIRTICT_SWORD = registerItem("essence_cirtict_sword",
 				new EssenceCirtictSword((ToolMaterial) ESSENCE_CIRTICT_TOOLS, -1, -2.4f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		ESSENCE_CIRTICT_AXE = registerItem("essence_cirtict_axe",
 				new EssenceCirtictAxe((ToolMaterial) ESSENCE_CIRTICT_TOOLS, 3, -3f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		ESSENCE_CIRTICT_HOE = registerItem("essence_cirtict_hoe",
 				new EssenceCirtictHoe((ToolMaterial) ESSENCE_CIRTICT_TOOLS, -15, 0f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		ESSENCE_CIRTICT_PICKAXE = registerItem("essence_cirtict_pickaxe",
 				new EssenceCirtictPickaxe((ToolMaterial) ESSENCE_CIRTICT_TOOLS, -5, -2.8f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		ESSENCE_CIRTICT_SHOVEL = registerItem("essence_cirtict_shovel",
 				new EssenceCirtictShovel((ToolMaterial) ESSENCE_CIRTICT_TOOLS, -6, -3f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		ESSENCE_CIRTICT_KNIFE = registerItem("essence_cirtict_knife",
 				new EssenceCirtictKnife((ToolMaterial) ESSENCE_CIRTICT_TOOLS, -3, -1f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		ESSENCE_CIRTICT_BATTLEAXE = registerItem("essence_cirtict_battleaxe",
 				new EssenceCirtictBattleaxe((ToolMaterial) ESSENCE_CIRTICT_TOOLS, -4, -3.3f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		POWERED_WRETCHED_MOB_CORE = registerItem("powered_wretched_mob_core",
-				new PoweredWandererItem(new FabricItemSettings().maxCount(1).group(MORE_WEAPONRY_GROUP)));
+				new PoweredWandererItem(new Item.Settings().maxCount(1).group(MORE_WEAPONRY_GROUP)));
 		POWERED_WATCHER_MOB_CORE = registerItem("powered_watcher_mob_core",
-				new PoweredWatcherItem(new FabricItemSettings().maxCount(1).group(MORE_WEAPONRY_GROUP)));
+				new PoweredWatcherItem(new Item.Settings().maxCount(1).group(MORE_WEAPONRY_GROUP)));
 		POWERED_MAIDEN_MOB_CORE = registerItem("powered_maiden_mob_core",
-				new PoweredBardItem(new FabricItemSettings().maxCount(1).group(MORE_WEAPONRY_GROUP)));
+				new PoweredBardItem(new Item.Settings().maxCount(1).group(MORE_WEAPONRY_GROUP)));
 		POWERED_PLAGUED_MOB_CORE = registerItem("powered_plagued_mob_core",
-				new PoweredSickenedItem(new FabricItemSettings().maxCount(1).group(MORE_WEAPONRY_GROUP)));
+				new PoweredSickenedItem(new Item.Settings().maxCount(1).group(MORE_WEAPONRY_GROUP)));
 		POWERED_SICKENED_HUSK_MOB_CORE = registerItem("powered_sickened_husk_mob_core",
-				new PoweredSickenedHuskItem(new FabricItemSettings().maxCount(1).group(MORE_WEAPONRY_GROUP)));
+				new PoweredSickenedHuskItem(new Item.Settings().maxCount(1).group(MORE_WEAPONRY_GROUP)));
 		POWERED_SUPPRESSED_MOB_CORE = registerItem("powered_suppressed_mob_core",
-				new PoweredCracklerItem(new FabricItemSettings().maxCount(1).group(MORE_WEAPONRY_GROUP)));
+				new PoweredCracklerItem(new Item.Settings().maxCount(1).group(MORE_WEAPONRY_GROUP)));
 		WATCHER_ESSENCE_CIRTICT_SWORD = registerItem("watcher_essence_cirtict_sword",
 				new WatcherSword((ToolMaterial) ESSENCE_CIRTICT_TOOLS, 1, -2.4f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		WATCHER_ESSENCE_CIRTICT_AXE = registerItem("watcher_essence_cirtict_axe",
 				new WatcherAxe((ToolMaterial) ESSENCE_CIRTICT_TOOLS, 5, -3f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		WATCHER_ESSENCE_CIRTICT_HOE = registerItem("watcher_essence_cirtict_hoe",
 				new WatcherHoe((ToolMaterial) ESSENCE_CIRTICT_TOOLS, -14, 0f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		WATCHER_ESSENCE_CIRTICT_PICKAXE = registerItem("watcher_essence_cirtict_pickaxe",
 				new WatcherPickaxe((ToolMaterial) ESSENCE_CIRTICT_TOOLS, -3, -2.8f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		WATCHER_ESSENCE_CIRTICT_SHOVEL = registerItem("watcher_essence_cirtict_shovel",
 				new WatcherShovel((ToolMaterial) ESSENCE_CIRTICT_TOOLS, -4, -3f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		WATCHER_ESSENCE_CIRTICT_KNIFE = registerItem("watcher_essence_cirtict_knife",
 				new WatcherKnife((ToolMaterial) ESSENCE_CIRTICT_TOOLS, -7, -1f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		WATCHER_ESSENCE_CIRTICT_BATTLEAXE = registerItem("watcher_essence_cirtict_battleaxe",
 				new WatcherBattleaxe((ToolMaterial) ESSENCE_CIRTICT_TOOLS, -7, -3.3f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		WANDERER_ESSENCE_CIRTICT_SWORD = registerItem("wanderer_essence_cirtict_sword",
 				new WandererSword((ToolMaterial) ESSENCE_CIRTICT_TOOLS, 1, -2.4f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		WANDERER_ESSENCE_CIRTICT_AXE = registerItem("wanderer_essence_cirtict_axe",
 				new WandererAxe((ToolMaterial) ESSENCE_CIRTICT_TOOLS, 5, -3f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		WANDERER_ESSENCE_CIRTICT_HOE = registerItem("wanderer_essence_cirtict_hoe",
 				new WandererHoe((ToolMaterial) ESSENCE_CIRTICT_TOOLS, -14, 0f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		WANDERER_ESSENCE_CIRTICT_PICKAXE = registerItem("wanderer_essence_cirtict_pickaxe",
 				new WandererPickaxe((ToolMaterial) ESSENCE_CIRTICT_TOOLS, -3, -2.8f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		WANDERER_ESSENCE_CIRTICT_SHOVEL = registerItem("wanderer_essence_cirtict_shovel",
 				new WandererShovel((ToolMaterial) ESSENCE_CIRTICT_TOOLS, -4, -3f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		WANDERER_ESSENCE_CIRTICT_KNIFE = registerItem("wanderer_essence_cirtict_knife",
 				new WandererKnife((ToolMaterial) ESSENCE_CIRTICT_TOOLS, -7, -1f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		WANDERER_ESSENCE_CIRTICT_BATTLEAXE = registerItem("wanderer_essence_cirtict_battleaxe",
 				new WandererBattleaxe((ToolMaterial) ESSENCE_CIRTICT_TOOLS, -7, -3.3f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		MAIDEN_ESSENCE_CIRTICT_SWORD = registerItem("maiden_essence_cirtict_sword",
 				new BardSword((ToolMaterial) ESSENCE_CIRTICT_TOOLS, 1, -2.4f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		MAIDEN_ESSENCE_CIRTICT_AXE = registerItem("maiden_essence_cirtict_axe",
 				new BardAxe((ToolMaterial) ESSENCE_CIRTICT_TOOLS, 5, -3f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		MAIDEN_ESSENCE_CIRTICT_HOE = registerItem("maiden_essence_cirtict_hoe",
 				new BardHoe((ToolMaterial) ESSENCE_CIRTICT_TOOLS, -14, 0f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		MAIDEN_ESSENCE_CIRTICT_PICKAXE = registerItem("maiden_essence_cirtict_pickaxe",
 				new BardPickaxe((ToolMaterial) ESSENCE_CIRTICT_TOOLS, -3, -2.8f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		MAIDEN_ESSENCE_CIRTICT_SHOVEL = registerItem("maiden_essence_cirtict_shovel",
 				new BardShovel((ToolMaterial) ESSENCE_CIRTICT_TOOLS, -4, -3f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		MAIDEN_ESSENCE_CIRTICT_KNIFE = registerItem("maiden_essence_cirtict_knife",
 				new BardKnife((ToolMaterial) ESSENCE_CIRTICT_TOOLS, -7, -1f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		MAIDEN_ESSENCE_CIRTICT_BATTLEAXE = registerItem("maiden_essence_cirtict_battleaxe",
 				new BardBattleaxe((ToolMaterial) ESSENCE_CIRTICT_TOOLS, -7, -3.3f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		LEECHING_ESSENCE = registerItem("leeching_essence",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		WATCHER_HELMET = registerItem("watcher_helmet",
 				new WatcherArmorItem(ENDER_ARMOR, EquipmentSlot.HEAD,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		WATCHER_BREASTPLATE = registerItem("watcher_chestplate",
 				new WatcherArmorItem(ENDER_ARMOR, EquipmentSlot.CHEST,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		WATCHER_STAFF = registerItem("watcher_staff",
 				new WatcherStaffItem((ToolMaterial) WATCHER_STAFF_TOOLS, 26, -3.1f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		WITHER_BONE_MEAL = registerItem("wither_bone_meal",
-				new BoneMealItem(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new BoneMealItem(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		WATCHER_CLOTH = registerItem("watcher_cloth",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		BARD_STEM = registerItem("bard_stem",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		BARD_CLOTH = registerItem("bard_cloth",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		REINFORCED_BONE = registerItem("reinforced_bone",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		MELODIC_ESSENCE = registerItem("melodic_essence",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		EXPLOSIVE_ESSENCE = registerItem("explosive_essence",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		RUSTED_MARE_DIAMOND = registerItem("rusted_mare_diamond",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		SUPPRESSED_ESSENCE_CIRTICT_SWORD = registerItem("suppressed_essence_cirtict_sword",
 				new CracklerSword((ToolMaterial) ESSENCE_CIRTICT_TOOLS, 1, -2.4f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		SUPPRESSED_ESSENCE_CIRTICT_AXE = registerItem("suppressed_essence_cirtict_axe",
 				new CracklerAxe((ToolMaterial) ESSENCE_CIRTICT_TOOLS, 5, -3f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		SUPPRESSED_ESSENCE_CIRTICT_HOE = registerItem("suppressed_essence_cirtict_hoe",
 				new CracklerHoe((ToolMaterial) ESSENCE_CIRTICT_TOOLS, -14, 0f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		SUPPRESSED_ESSENCE_CIRTICT_PICKAXE = registerItem("suppressed_essence_cirtict_pickaxe",
 				new CracklerPickaxe((ToolMaterial) ESSENCE_CIRTICT_TOOLS, -3, -2.8f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		SUPPRESSED_ESSENCE_CIRTICT_SHOVEL = registerItem("suppressed_essence_cirtict_shovel",
 				new CracklerShovel((ToolMaterial) ESSENCE_CIRTICT_TOOLS, -4, -3f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		SUPPRESSED_ESSENCE_CIRTICT_KNIFE = registerItem("suppressed_essence_cirtict_knife",
 				new CracklerKnife((ToolMaterial) ESSENCE_CIRTICT_TOOLS, -7, -1f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		SUPPRESSED_ESSENCE_CIRTICT_BATTLEAXE = registerItem("suppressed_essence_cirtict_battleaxe",
 				new CracklerBattleaxe((ToolMaterial) ESSENCE_CIRTICT_TOOLS, -7, -3.3f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		PLAGUED_ESSENCE_CIRTICT_SWORD = registerItem("plagued_essence_cirtict_sword",
 				new SickenedSword((ToolMaterial) ESSENCE_CIRTICT_TOOLS, 1, -2.4f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		PLAGUED_ESSENCE_CIRTICT_AXE = registerItem("plagued_essence_cirtict_axe",
 				new SickenedAxe((ToolMaterial) ESSENCE_CIRTICT_TOOLS, 5, -3f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		PLAGUED_ESSENCE_CIRTICT_HOE = registerItem("plagued_essence_cirtict_hoe",
 				new SickenedHoe((ToolMaterial) ESSENCE_CIRTICT_TOOLS, -14, 0f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		PLAGUED_ESSENCE_CIRTICT_PICKAXE = registerItem("plagued_essence_cirtict_pickaxe",
 				new SickenedPickaxe((ToolMaterial) ESSENCE_CIRTICT_TOOLS, -3, -2.8f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		PLAGUED_ESSENCE_CIRTICT_SHOVEL = registerItem("plagued_essence_cirtict_shovel",
 				new SickenedShovel((ToolMaterial) ESSENCE_CIRTICT_TOOLS, -4, -3f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		PLAGUED_ESSENCE_CIRTICT_KNIFE = registerItem("plagued_essence_cirtict_knife",
 				new SickenedKnife((ToolMaterial) ESSENCE_CIRTICT_TOOLS, -7, -1f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		PLAGUED_ESSENCE_CIRTICT_BATTLEAXE = registerItem("plagued_essence_cirtict_battleaxe",
 				new SickenedBattleaxe((ToolMaterial) ESSENCE_CIRTICT_TOOLS, -7, -3.3f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		CRAWLER_SPAWN_EGG = registerItem("crawler_spawn_egg",
 				new SpawnEggItem(CRAWLER_ENTITY, 0x2F2F37, 0x18F7F7,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		BURIED_KNIGHT_SPAWN_EGG = registerItem("buried_knight_spawn_egg",
 				new SpawnEggItem(BURIED_KNIGHT_ENTITY, 0x1C1D1E, 0x393A3A,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		NECROMANCER_SPAWN_EGG = registerItem("necromancer_spawn_egg",
 				new SpawnEggItem(NECROMANCER_ENTITY, 0x435B5B, 0x7EADAD,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		WATCHER_SPAWN_EGG = registerItem("watcher_spawn_egg",
 				new SpawnEggItem(WATCHER_ENTITY, 0xC938FF, 0x420059,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		CRACKLER_SPAWN_EGG = registerItem("crackler_spawn_egg",
 				new SpawnEggItem(CRACKLER_ENTITY, 0xBDEAB2, 0xAAE59C,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		BARD_SPAWN_EGG = registerItem("bard_spawn_egg",
 				new SpawnEggItem(BARD_ENTITY, 0xF2F2F2, 0x7A7EDB,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		LEECH_SPAWN_EGG = registerItem("leech_spawn_egg",
 				new SpawnEggItem(LEECH_ENTITY, 0xEAFFCC, 0xD4F2A7,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		LURKER_SPAWN_EGG = registerItem("lurker_spawn_egg",
 				new SpawnEggItem(LURKER_ENTITY, 0x473951, 0x32223A,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		SICKENED_HUSK_SPAWN_EGG = registerItem("sickened_husk_spawn_egg",
 				new SpawnEggItem(SICKENED_HUSK_ENTITY, 0xCEB686, 0x8C7A62,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		WANDERER_SPAWN_EGG = registerItem("wanderer_spawn_egg",
 				new SpawnEggItem(WANDERER_ENTITY, 0x4C4138, 0x302924,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		SICKENED_SPAWN_EGG = registerItem("sickened_spawn_egg",
 				new SpawnEggItem(SICKENED_ENTITY, 0x447C3D, 0x335B2C,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		WANDERER_HELMET = registerItem("wanderer_helmet",
 				new WandererArmorItem(WANDERER_ARMOR, EquipmentSlot.HEAD,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		WANDERER_BREASTPLATE = registerItem("wanderer_chestplate",
 				new WandererArmorItem(WANDERER_ARMOR, EquipmentSlot.CHEST,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		CRACKLER_HELMET = registerItem("crackler_helmet",
 				new CracklerArmorItem(CRACKLER_ARMOR, EquipmentSlot.HEAD,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		CRACKLER_BREASTPLATE = registerItem("crackler_chestplate",
 				new CracklerArmorItem(CRACKLER_ARMOR, EquipmentSlot.CHEST,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		BARD_HELMET = registerItem("bard_helmet",
 				new BardArmorItem(BARD_ARMOR, EquipmentSlot.HEAD,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		BARD_BREASTPLATE = registerItem("bard_chestplate",
 				new BardArmorItem(BARD_ARMOR, EquipmentSlot.CHEST,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		SICKENED_HELMET = registerItem("sickened_helmet",
 				new SickenedArmorItem(SICKENED_ARMOR, EquipmentSlot.HEAD,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		SICKENED_BREASTPLATE = registerItem("sickened_chestplate",
 				new SickenedArmorItem(SICKENED_ARMOR, EquipmentSlot.CHEST,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		RUSTED_MARE_DIAMOND_HELMET = registerItem("rusted_mare_diamond_helmet",
 				new ArmorItem(RUSTED_ARMOR, EquipmentSlot.HEAD,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		HEAVY_SWORD = registerItem("heavy_sword",
 				new HeavySwordItem(ToolMaterials.IRON, 11, -3.0f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		HEAVY_CROSSBOW = registerItem("heavy_crossbow",
-				new HeavyCrossBowItem(new FabricItemSettings().maxDamage(578).maxCount(1).group(MORE_WEAPONRY_GROUP)));
+				new HeavyCrossBowItem(new Item.Settings().maxCount(1).group(MORE_WEAPONRY_GROUP).maxDamage(578)));
 		IRON_BOLT_ITEM = registerItem("iron_bolt",
-				new IronBoltItem(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new IronBoltItem(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		BOTHERING_MIGHT = registerItem("bothering_might",
 				new BotheringMightSwordItem(ToolMaterials.DIAMOND, 12, -2.5f,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		CRAWLER_TOOTH = registerItem("crawler_tooth",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		TITANIUM = registerItem("titanium",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		BLESSED_TITANIUM = registerItem("blessed_titanium",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		SPECTRAL_ESSENCE = registerItem("spectral_essence",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		BLESSED_HELMET = registerItem("blessed_helmet",
 				new BlessedArmorItem(BLESSED_ARMOR, EquipmentSlot.HEAD,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		BLESSED_BREASTPLATE = registerItem("blessed_chestplate",
 				new BlessedArmorItem(BLESSED_ARMOR, EquipmentSlot.CHEST,
-						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+						new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		HEAVENLY_LEATHER = registerItem("heavenly_leather",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		CELESTIAL_MEDALLION = registerItem("celestial_medallion",
-				new CelestialMadalianItem(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new CelestialMadalianItem(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		CELESTIAL_MEDALLION_SICKENED = registerItem("celestial_medallion_sickened",
-				new SickenedCelestialMedallionItem(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new SickenedCelestialMedallionItem(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		CELESTIAL_MEDALLION_SICKENED_HUSK = registerItem("celestial_medallion_sickened_husk",
-				new SickenedHuskCelestialMadalianItem(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new SickenedHuskCelestialMadalianItem(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		CELESTIAL_MEDALLION_BARD = registerItem("celestial_medallion_bard",
-				new BardCelestialMedallionItem(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new BardCelestialMedallionItem(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		CELESTIAL_MEDALLION_WATCHER = registerItem("celestial_medallion_watcher",
-				new WatcherCelestialMedallionItem(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new WatcherCelestialMedallionItem(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		CELESTIAL_MEDALLION_WANDERER = registerItem("celestial_medallion_wanderer",
-				new WandererCelestialMedallionItem(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new WandererCelestialMedallionItem(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		CELESTIAL_MEDALLION_CRACKLER = registerItem("celestial_medallion_crackler",
-				new CracklerCelestialMedallionItem(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new CracklerCelestialMedallionItem(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		CELESTIALITE_REMNANT = registerItem("celestialite_remnant",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		FORGOTTEN_MUSIC_SHEET = registerItem("forgotten_music_sheet",
-				new RareArtifactItem(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new RareArtifactItem(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		CELESTIALITE_ROCK = registerItem("celestialite_rock",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		CELESTIALITE_INGOT = registerItem("celestialite_ingot",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		CELESTIALITE_PLATE = registerItem("celestialite_plate",
-				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		CORRUPTED_EYE_OF_ENDER = registerItem("corrupted_ender_eye",
-				new RareArtifactItem(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new RareArtifactItem(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		POISONOUS_FANG = registerItem("poisonous_fang",
-				new RareArtifactItem(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new RareArtifactItem(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		LIFE_CORE = registerItem("life_core",
-				new RareArtifactItem(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new RareArtifactItem(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		DUSTED_LIFE_CORE = registerItem("dusted_life_core",
-				new RareArtifactItem(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new RareArtifactItem(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		TICKING_HEART = registerItem("ticking_heart",
-				new RareArtifactItem(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new RareArtifactItem(new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 
 
 		// Sound Events
@@ -2256,191 +2251,191 @@ public class MoreWeaponry implements ModInitializer {
 		// Block Items
 
         	Registry.register(Registry.ITEM, new Identifier(MOD_ID, "moon_stone_dust_block"), new BlockItem(MOON_STONE_DUST_BLOCK,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "kuro_wheat_block"), new BlockItem(KURO_WHEAT_BLOCK,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "blackstone_metal_block"), new BlockItem(BLACKSTONE_METAL_BLOCK,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "glimmering_amethyst_block"), new BlockItem(GLIMMERING_AMETHYST_BLOCK,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "limestone"), new BlockItem(LIMESTONE,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cobbled_limestone"), new BlockItem(COBBLED_LIMESTONE,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "frodon_log"), new BlockItem(FRODON_LOG,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "frodon_wood"), new BlockItem(FRODON_WOOD,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "frodon_planks"), new BlockItem(FRODON_PLANKS,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stripped_frodon_log"), new BlockItem(STRIPPED_FRODON_LOG,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stripped_frodon_wood"), new BlockItem(STRIPPED_FRODON_WOOD,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "frodon_leaves"), new BlockItem(FRODON_LEAVES,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "frodon_sapling"), new BlockItem(FRODON_SAPLING,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "night_curon"), new BlockItem(NIGHT_CURON,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "frodon_slab"), new BlockItem(FRODON_SLAB,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "frodon_stairs"), new BlockItem(FRODON_STAIRS,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "limestone_slab"), new BlockItem(LIMESTONE_SLAB,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "limestone_stairs"), new BlockItem(LIMESTONE_STAIRS,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cobbled_limestone_slab"), new BlockItem(COBBLED_LIMESTONE_SLAB,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cobbled_limestone_stairs"), new BlockItem(COBBLED_LIMESTONE_STAIRS,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "frodon_fence"), new BlockItem(FRODON_FENCE,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "frodon_fence_gate"), new BlockItem(FRODON_FENCE_GATE,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "limestone_wall"), new BlockItem(LIMESTONE_WALL,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cobbled_limestone_wall"), new BlockItem(COBBLED_LIMESTONE_WALL,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "frodon_button"), new BlockItem(FRODON_BUTTON,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "limestone_button"), new BlockItem(LIMESTONE_BUTTON,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cobbled_limestone_button"), new BlockItem(COBBLED_LIMESTONE_BUTTON,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cobblestone_button"), new BlockItem(COBBLESTONE_BUTTON,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "frodon_pressure_plate"), new BlockItem(FRODON_PRESSURE_PLATE,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "limestone_pressure_plate"), new BlockItem(LIMESTONE_PRESSURE_PLATE,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cobbled_limestone_pressure_plate"), new BlockItem(COBBLED_LIMESTONE_PRESSURE_PLATE,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cobblestone_pressure_plate"), new BlockItem(COBBLESTONE_PRESSURE_PLATE,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "frodon_door"), new BlockItem(FRODON_DOOR,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "frodon_trapdoor"), new BlockItem(FRODON_TRAPDOOR,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "mare_diamond_ore"), new BlockItem(MARE_DIAMOND_ORE,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cirtict_block"), new BlockItem(CIRTICT_BLOCK,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "mare_diamond_block"), new BlockItem(MARE_DIAMOND_BLOCK,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "crop_cutter_block"), new BlockItem(CROP_CUTTER,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "deepslate_mare_diamond_ore"), new BlockItem(DEEPSLATE_MARE_DIAMOND_ORE,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bluestone"), new BlockItem(BLUESTONE,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cobbled_bluestone"), new BlockItem(COBBLED_BLUESTONE,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bluestone_stairs"), new BlockItem(BLUESTONE_STAIRS,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cobbled_bluestone_stairs"), new BlockItem(COBBLED_BLUESTONE_STAIRS,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bluestone_slab"), new BlockItem(BLUESTONE_SLAB,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cobbled_bluestone_slab"), new BlockItem(COBBLED_BLUESTONE_SLAB,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bluestone_wall"), new BlockItem(BLUESTONE_WALL,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cobbled_bluestone_wall"), new BlockItem(COBBLED_BLUESTONE_WALL,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cirtict_debris"), new BlockItem(CIRTICT_DEBRIS,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "sandstone_dust_block"), new BlockItem(SANDSTONE_DUST_BLOCK,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cracked_dripstone_block"), new BlockItem(CRACKED_DRIPSTONE,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "infested_dripstone_block"), new BlockItem(INFESTED_DRIPSTONE,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "infested_cracked_dripstone_block"), new BlockItem(INFESTED_CRACKED_DRIPSTONE,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "essence_translator"), new BlockItem(ESSENCE_TRANSLATOR,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "core_forge"), new BlockItem(CORE_FORGE,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "peplex_nylium"), new BlockItem(PEPLEX_NYLIUM,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "intoxicated_stone"), new BlockItem(INTOXICATED_STONE,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "sickened_stone_grave"), new BlockItem(SICKENED_STONE_GRAVE,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "intoxicated_grass_block"), new BlockItem(INTOXICATED_GRASS_BLOCK,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "intoxicated_fern"), new BlockItem(INTOXICATED_FERN,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "intoxicated_tall_grass"), new BlockItem(INTOXICATED_TALL_GRASS,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "intoxicated_large_fern"), new BlockItem(INTOXICATED_TALL_FERN,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "intoxicated_poppy"), new BlockItem(INTOXICATED_POPPY,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "intoxicated_dandelion"), new BlockItem(INTOXICATED_DANDELION,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "packed_watcher_cloth_block"), new BlockItem(PACKED_WATCHER_CLOTH_BLOCK,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "wanderer_skull"), new BlockItem(WANDERER_SKULL,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "watcher_skull"), new BlockItem(WATCHER_SKULL,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bard_skull"), new BlockItem(BARD_SKULL,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "sickened_skull"), new BlockItem(SICKENED_SKULL,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "sickened_husk_skull"), new BlockItem(SICKENED_HUSK_SKULL,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "crackler_skull"), new BlockItem(CRACKLER_SKULL,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "watcher_summoner"), new BlockItem(WATCHER_SUMMONER,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "crackler_summoner"), new BlockItem(CRACKLER_SUMMONER,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "wanderer_summoner"), new BlockItem(WANDERER_SUMMONER,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bard_summoner"), new BlockItem(BARD_SUMMONER,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "sickened_summoner"), new BlockItem(SICKENED_SUMMONER,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "sickened_husk_summoner"), new BlockItem(SICKENED_HUSK_SUMMONER,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cirtict_forge"), new BlockItem(CIRTICT_FORGE,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "watcher_celestial_block"), new BlockItem(WATCHER_CELESTIAL_BLOCK,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "crystaline_watcher_core"), new BlockItem(CRYSTALINE_WATCHER_CORE,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "crackler_celestial_block"), new BlockItem(CRACKLER_CELESTIAL_BLOCK,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "crystaline_crackler_core"), new BlockItem(CRYSTALINE_CRACKLER_CORE,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bard_celestial_block"), new BlockItem(BARD_CELESTIAL_BLOCK,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "crystaline_bard_core"), new BlockItem(CRYSTALINE_BARD_CORE,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "sickened_celestial_block"), new BlockItem(SICKENED_CELESTIAL_BLOCK,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "crystaline_sickened_core"), new BlockItem(CRYSTALINE_SICKENED_CORE,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "wanderer_celestial_block"), new BlockItem(WANDERER_CELESTIAL_BLOCK,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "crystaline_wanderer_core"), new BlockItem(CRYSTALINE_WANDERER_CORE,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "limestone_tiles"), new BlockItem(LIMESTONE_TILES,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bluestone_tiles"), new BlockItem(BLUESTONE_TILES,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "empty_bookshelf"), new BlockItem(EMPTY_BOOKSHELF,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "corrupted_end_stone_bricks"), new BlockItem(CORRUPTED_END_STONE_BRICKS,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "corrupted_end_stone"), new BlockItem(CORRUPTED_END_STONE,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "celestialite_rock_ore"), new BlockItem(CELESTIALITE_ROCK_ORE,
-				new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 
 
 

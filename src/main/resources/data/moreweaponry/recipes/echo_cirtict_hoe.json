@@ -5,13 +5,16 @@
       "item": "minecraft:echo_shard"
     },
     {
+      "item": "minecraft:echo_shard"
+    },
+    {
+      "item": "minecraft:echo_shard"
+    },
+    {
+      "item": "minecraft:echo_shard"
+    },
+    {
       "item": "minecraft:sculk"
-    },
-    {
-      "item": "minecraft:echo_shard"
-    },
-    {
-      "item": "minecraft:echo_shard"
     },
     [
       {
@@ -23,12 +26,10 @@
       {
         "item": "moreweaponry:cooled_cirtict_hoe"
       }
-    ],
-    {
-      "item": "minecraft:echo_shard"
-    }
+    ]
   ],
-  "output": {
-    "item": "moreweaponry:echo_cirtict_hoe"
+  "result": {
+    "item": "moreweaponry:echo_cirtict_hoe",
+    "count": 1
   }
 }

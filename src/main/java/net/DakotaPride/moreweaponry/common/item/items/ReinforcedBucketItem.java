@@ -39,7 +39,7 @@ public class ReinforcedBucketItem extends Item
     private SickenedHuskCelestialiteFluid sickenedHuskCelestialiteFluid;
     private CracklerCelestialiteFluid cracklerCelestialiteFluid;
 
-    public ReinforcedBucketItem(Fluid fluid, FabricItemSettings settings) {
+    public ReinforcedBucketItem(Fluid fluid, Settings settings) {
         super(settings);
         this.fluid = fluid;
     }
