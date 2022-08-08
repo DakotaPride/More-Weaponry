@@ -28,11 +28,11 @@ import net.minecraft.util.UseAction;
 import net.minecraft.util.math.Quaternion;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.Vec3f;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
-import java.util.Random;
 import java.util.function.Predicate;
 
 public class HeavyCrossBowItem extends CrossbowItem
@@ -264,7 +264,8 @@ public class HeavyCrossBowItem extends CrossbowItem
 
     public static void shootAll(World world, LivingEntity entity, Hand hand, ItemStack stack, float speed, float divergence) {
         List<ItemStack> list = getProjectiles(stack);
-        float[] fs = getSoundPitches((Random) entity.getRandom());
+        Random random = world.getRandom();
+        float[] fs = getSoundPitches(random);
 
         for (int i = 0; i < list.size(); i++) {
             ItemStack itemStack = list.get(i);

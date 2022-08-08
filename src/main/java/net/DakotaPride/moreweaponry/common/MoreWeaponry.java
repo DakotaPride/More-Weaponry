@@ -2184,14 +2184,14 @@ public class MoreWeaponry implements ModInitializer {
 				new ArmorItem(RUSTED_ARMOR, EquipmentSlot.HEAD,
 						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 		HEAVY_SWORD = registerItem("heavy_sword",
-				new HeavySwordItem((ToolMaterial) ToolMaterials.IRON, 11, -3.0f,
+				new HeavySwordItem(ToolMaterials.IRON, 11, -3.0f,
 						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 		HEAVY_CROSSBOW = registerItem("heavy_crossbow",
-				new HeavyCrossBowItem(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
+				new HeavyCrossBowItem(new FabricItemSettings().maxDamage(578).maxCount(1).group(MORE_WEAPONRY_GROUP)));
 		IRON_BOLT_ITEM = registerItem("iron_bolt",
 				new IronBoltItem(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 		BOTHERING_MIGHT = registerItem("bothering_might",
-				new BotheringMightSwordItem((ToolMaterial) ToolMaterials.DIAMOND, 12, -2.5f,
+				new BotheringMightSwordItem(ToolMaterials.DIAMOND, 12, -2.5f,
 						new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
 		CRAWLER_TOOTH = registerItem("crawler_tooth",
 				new Item(new FabricItemSettings().group(MORE_WEAPONRY_GROUP)));
