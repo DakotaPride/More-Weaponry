@@ -1,6 +1,0 @@
-# MW-#01
-# Nitris Sapling Could Not Be Bonemealed (No Longer Supported)
-
-# Nitris Tree Unobtainable (unless found naturally)
-
-- Fixed In Version v1.10.52

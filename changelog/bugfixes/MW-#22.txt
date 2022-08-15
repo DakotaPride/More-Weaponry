@@ -1,5 +1,0 @@
-# MW-#22
-# Necromancer Would Despawn Upon Extended Periods Of Time
-
-# Attempting To Find The Darkest Fortress To Fight The Necromancer, Would Lead To It Despawning Before You Could Find It
-- Fixed In Version v1.19

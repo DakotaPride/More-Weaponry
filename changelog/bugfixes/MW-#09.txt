@@ -1,8 +1,0 @@
-# MW-#09
-# Nitris Sign Implemented Incorrectly
-
-# Nitris Sign Didn't Drop Itself // MW-#09-A
-- Fixed In Version v1.14.0
-
-# Nitris Sign Was Assigned 'axe.json' In Order To Be Broken Quicker While Using An Axe
-- Fixed In Version v1.14.0

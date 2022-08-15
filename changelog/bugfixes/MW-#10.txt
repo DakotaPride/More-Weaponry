@@ -1,5 +1,0 @@
-# MW-#10
-# Auto Mending Enchantment Doesn't Apply Experience To The Player
-
-# Auto Mending Did Not Summon Experience Bottle Entity, Which Would Grant Experience Otherwise.
-- Fixed In Version v1.14.0

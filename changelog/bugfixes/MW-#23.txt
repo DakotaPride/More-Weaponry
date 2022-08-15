@@ -1,5 +1,0 @@
-# MW-#23
-# Cobbled Bluestone Slab Recipe Not Working In Stonecutter
-
-# Recipe Required Invalid Item
-- Fixed In Version v1.19

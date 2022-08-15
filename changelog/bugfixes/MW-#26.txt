@@ -1,8 +1,0 @@
-# MW-#26
-# Bleeding Effect Issues
-
-# Bleeding Effect Causes Target To Instantly Kill Attacker/Players // MW-#26-A
-- Fixed In Version v1.19.3
-
-# Bleeding Effect Causes Target To Not Deal Any Damage // MW-#26-B
-- Fixed In Version v1.19.3

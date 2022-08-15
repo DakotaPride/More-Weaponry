@@ -1,5 +1,0 @@
-# MW-#19
-# Iron Bolt Recipe 'Invalid Item'
-
-# The Recipe For Crafting Iron Bolts Included A Blank Crafting Grid
-- Fixed In Version v1.19

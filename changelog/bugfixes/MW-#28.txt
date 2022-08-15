@@ -1,5 +1,0 @@
-# MW-#28
-# Crackler Skull Breaking Particles
-
-# Used An Invalid Texture File
-- Fixed In Version v1.19.3

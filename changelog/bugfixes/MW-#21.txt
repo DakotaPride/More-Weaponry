@@ -1,5 +1,0 @@
-# MW-#21
-# Celestial Medallions Were Stackable
-
-# Celestial Medallions Were Meant To Be A Stack Of One, However This Was Overlooked Originally
-- Fixed In Version v1.19

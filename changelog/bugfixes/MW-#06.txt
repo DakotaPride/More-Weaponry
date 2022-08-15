@@ -1,6 +1,0 @@
-# MW-#06
-# Crop Cutter Block Crafting Recipe Unavailable
-
-# Crop Cutter Could Not Be Crafted
-
-- Fixed In Version v1.10.74

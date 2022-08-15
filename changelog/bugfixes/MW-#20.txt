@@ -1,5 +1,0 @@
-# MW-#20
-# Kuro Items Would Burn In Lava/Fire
-
-# Kuro Wheat, Kuro Seeds, Kuro Wheat Block, etc. Was Not Fireproof
-- Fixed In Version v1.19

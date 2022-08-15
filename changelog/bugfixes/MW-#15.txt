@@ -1,5 +1,0 @@
-# MW-#15
-# Crackler Advancements
-
-# Crackler Related Advancements Were Not Properly Managed
-- Fixed In Version v1.18 (alpha)

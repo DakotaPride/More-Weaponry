@@ -1,5 +1,0 @@
-# MW-#25
-# Black Horns Tooltip Translation Error
-
-# Incorrect Hue/Colour Code
-- Fixed In Version v1.19.3
