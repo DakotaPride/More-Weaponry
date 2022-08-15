@@ -28,7 +28,7 @@ public class SickenedBattleaxe extends BattleaxeItem {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add(Text.translatable("text.set.sickened__set").formatted(Formatting.DARK_GREEN));
+        tooltip.add(Text.translatable("text.set.sickened_set").formatted(Formatting.DARK_GREEN));
     }
 
 }
