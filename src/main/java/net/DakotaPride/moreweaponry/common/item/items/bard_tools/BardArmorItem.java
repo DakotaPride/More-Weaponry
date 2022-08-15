@@ -33,6 +33,7 @@ public class BardArmorItem extends ArmorItem implements IAnimatable {
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         if (Screen.hasShiftDown()) {
+            tooltip.add(Text.translatable("text.set.bard_set").formatted(Formatting.WHITE));
             tooltip.add(Text.translatable("text.abilities.bard.active_description").formatted(Formatting.AQUA));
             tooltip.add(Text.translatable("text.abilities.active_description.two").formatted(Formatting.AQUA));
             tooltip.add(Text.translatable("text.abilities.active_description.three").formatted(Formatting.AQUA));

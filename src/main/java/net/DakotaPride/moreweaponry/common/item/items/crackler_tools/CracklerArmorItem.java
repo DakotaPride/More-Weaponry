@@ -33,6 +33,7 @@ public class CracklerArmorItem extends ArmorItem implements IAnimatable {
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         if (Screen.hasShiftDown()) {
+            tooltip.add(Text.translatable("text.set.crackler_set").formatted(Formatting.GREEN));
             tooltip.add(Text.translatable("text.abilities.crackler.active_description").formatted(Formatting.GREEN));
             tooltip.add(Text.translatable("text.abilities.active_description.two").formatted(Formatting.GREEN));
             tooltip.add(Text.translatable("text.abilities.active_description.three").formatted(Formatting.GREEN));

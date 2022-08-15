@@ -28,7 +28,7 @@ public class BardBattleaxe extends BattleaxeItem {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add(Text.translatable("item.moreweaponry.description.bard_weapon").formatted(Formatting.WHITE));
+        tooltip.add(Text.translatable("text.set.bard_set").formatted(Formatting.WHITE));
     }
 
 }

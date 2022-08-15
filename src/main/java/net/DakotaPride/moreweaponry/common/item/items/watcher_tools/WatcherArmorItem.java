@@ -33,6 +33,7 @@ public class WatcherArmorItem extends ArmorItem implements IAnimatable {
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         if (Screen.hasShiftDown()) {
+            tooltip.add(Text.translatable("text.set.watcher_set").formatted(Formatting.LIGHT_PURPLE));
             tooltip.add(Text.translatable("text.abilities.watcher.active_description").formatted(Formatting.LIGHT_PURPLE));
             tooltip.add(Text.translatable("text.abilities.active_description.two").formatted(Formatting.LIGHT_PURPLE));
             tooltip.add(Text.translatable("text.abilities.active_description.three").formatted(Formatting.LIGHT_PURPLE));

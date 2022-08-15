@@ -33,6 +33,7 @@ public class SickenedArmorItem extends ArmorItem implements IAnimatable {
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         if (Screen.hasShiftDown()) {
+            tooltip.add(Text.translatable("text.set.sickened__set").formatted(Formatting.DARK_GREEN));
             tooltip.add(Text.translatable("text.abilities.sickened.active_description").formatted(Formatting.DARK_GREEN));
             tooltip.add(Text.translatable("text.abilities.active_description.two").formatted(Formatting.DARK_GREEN));
             tooltip.add(Text.translatable("text.abilities.active_description.three").formatted(Formatting.DARK_GREEN));

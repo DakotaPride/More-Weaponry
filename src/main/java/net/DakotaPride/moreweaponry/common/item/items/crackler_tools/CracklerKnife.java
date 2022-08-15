@@ -28,7 +28,7 @@ public class CracklerKnife extends KnifeItem {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add(Text.translatable("item.moreweaponry.description.crackler_weapon").formatted(Formatting.GREEN));
+        tooltip.add(Text.translatable("text.set.crackler_set").formatted(Formatting.GREEN));
     }
 
 }

@@ -28,7 +28,7 @@ public class WandererAxe extends AxeItem {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add(Text.translatable("item.moreweaponry.description.wanderer_weapon").formatted(Formatting.DARK_RED));
+        tooltip.add(Text.translatable("text.set.wanderer_set").formatted(Formatting.YELLOW));
     }
 
 }

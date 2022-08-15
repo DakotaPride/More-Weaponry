@@ -33,6 +33,7 @@ public class WandererArmorItem extends ArmorItem implements IAnimatable {
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         if (Screen.hasShiftDown()) {
+            tooltip.add(Text.translatable("text.set.wanderer_set").formatted(Formatting.YELLOW));
             tooltip.add(Text.translatable("text.abilities.wanderer.active_description").formatted(Formatting.YELLOW));
             tooltip.add(Text.translatable("text.abilities.active_description.two").formatted(Formatting.YELLOW));
             tooltip.add(Text.translatable("text.abilities.active_description.three").formatted(Formatting.YELLOW));

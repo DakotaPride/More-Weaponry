@@ -3,6 +3,7 @@ package net.DakotaPride.moreweaponry.common.item.items.watcher_tools;
 import net.DakotaPride.moreweaponry.common.item.items.mod_tools.KnifeItem;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.ItemStack;
@@ -21,15 +22,14 @@ public class WatcherKnife extends KnifeItem {
 
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-        target.addStatusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, 200, 2), attacker);
-        // target.addStatusEffect(new StatusEffectInstance(StatusEffect.DARKNESS, 200, 2, attacker));
+        target.addStatusEffect(new StatusEffectInstance(StatusEffects.DARKNESS, 200, 2), attacker);
         target.addStatusEffect(new StatusEffectInstance(StatusEffects.WITHER, 200, 2), attacker);
         return super.postHit(stack, target, attacker);
     }
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add(Text.translatable("item.moreweaponry.description.watcher_weapon").formatted(Formatting.LIGHT_PURPLE));
+        tooltip.add(Text.translatable("text.set.watcher_set").formatted(Formatting.LIGHT_PURPLE));
     }
 
 }
