@@ -970,6 +970,10 @@ public class MoreWeaponry implements ModInitializer {
 	private static final Identifier DESERT_PYRAMID_CHEST_ID
 			= new Identifier("minecraft", "chests/desert_pyramid");
 
+	// Calcite Loot Table
+	private static final Identifier CALCITE_BLOCK_ID
+			= new Identifier("minecraft", "blocks/calcite");
+
 	// Echo Infused Items
 	public static SwordItem ECHO_CIRTICT_SWORD;
 	public static BetterHoeItem ECHO_CIRTICT_HOE;
@@ -982,6 +986,17 @@ public class MoreWeaponry implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+
+		LootTableEvents.MODIFY.register(((resourceManager, manager, id, supplier, setter) -> {
+			if (CALCITE_BLOCK_ID.equals(id)) {
+				LootPool poolBuilder = LootPool.builder()
+						.rolls(ConstantLootNumberProvider.create(1))
+						.with(ItemEntry.builder(MOON_STONE_DUST))
+						.conditionally(RandomChanceLootCondition.builder(0.20f))
+						.build();
+				supplier.pool(poolBuilder);
+			}
+		}));
 
 		// Echo Infused Items
 		ECHO_CIRTICT_AXE = registerItem("echo_cirtict_axe",
