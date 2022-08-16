@@ -351,6 +351,7 @@
   "effect.moreweaponry.siren": "Sirène",
   "effect.moreweaponry.numbed": "Engourdissement",
   "effect.moreweaponry.bleeding": "Saignement",
+  "item.minecraft.tipped_arrow.effect.numbing": "Flèche d'engourdissement",
   "item.minecraft.potion.effect.numbness_potion": "Potion engourdissante",
   "item.minecraft.splash_potion.effect.numbness_potion": "Potion éclaboussante d'engourdissement",
   "item.minecraft.lingering_potion.effect.numbness_potion": "Potion persistante d'engourdissement",
