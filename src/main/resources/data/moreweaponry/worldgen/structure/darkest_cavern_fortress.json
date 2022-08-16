@@ -23,13 +23,13 @@
       "spawns": [
         {
           "type": "moreweaponry:buried_knight",
-          "weight": 20,
+          "weight": 4,
           "minCount": 0,
-          "maxCount": 3
+          "maxCount": 2
         },
         {
           "type": "moreweaponry:crawler",
-          "weight": 10,
+          "weight": 1,
           "minCount": 0,
           "maxCount": 1
         }
