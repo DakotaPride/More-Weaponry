@@ -20,14 +20,14 @@ public class MoreWeaponryDamageSource extends DamageSource {
         return this;
     }
 
-    protected MoreWeaponryDamageSource setUnblockable() {
+    public MoreWeaponryDamageSource setUnblockable() {
         this.unblockable = true;
 
         this.exhaustion = 0.0F;
         return this;
     }
 
-    protected MoreWeaponryDamageSource setBypassesArmor() {
+    public MoreWeaponryDamageSource setBypassesArmor() {
         this.bypassesArmor = true;
         float exhaustion = 0.0F;
         return this;
