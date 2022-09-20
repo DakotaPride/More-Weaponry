@@ -60,7 +60,6 @@ import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRe
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
 import net.fabricmc.fabric.api.screenhandler.v1.ScreenHandlerRegistry;
-import net.fabricmc.yarn.constants.MiningLevels;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.enchantment.Enchantment;
@@ -92,6 +91,7 @@ import net.minecraft.util.Lazy;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.Heightmap;
 import net.minecraft.world.gen.feature.LakeFeature;
+import net.minecraft.world.gen.feature.TreeConfiguredFeatures;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import software.bernie.geckolib3.GeckoLib;
@@ -628,6 +628,15 @@ public class MoreWeaponry implements ModInitializer {
 	public static FluidBlock CRACKLER_CELESTIALITE_FLUID_BLOCK;
 	public static FluidBlock BARD_CELESTIALITE_FLUID_BLOCK;
 
+	public static EverfrostMyceliumBlock GYOLOS_MYCELIUM;
+	public static MushroomBlock GYOLOS_MUSHROOM_BLOCK;
+	public static MushroomBlock GYOLOS_STEM_BLOCK;
+	public static MushroomPlantBlock GYOLOS_FUNGUS;
+	public static EverfrostMyceliumBlock SOUKIL_MYCELIUM;
+	public static MushroomBlock SOUKIL_MUSHROOM_BLOCK;
+	public static MushroomBlock SOUKIL_STEM_BLOCK;
+	public static MushroomPlantBlock SOUKIL_FUNGUS;
+
 	// Block Entities
 
 	public static void registerBlockEntities() {
@@ -788,13 +797,13 @@ public class MoreWeaponry implements ModInitializer {
 
 	// Tool Materials
 	public enum MoreWeaponryToolMaterials implements ToolMaterial {
-		GLIMMERING_AMETHYST_TOOLS(MiningLevels.IRON, 546, 6.5f,
+		GLIMMERING_AMETHYST_TOOLS(ToolMaterials.IRON.getMiningLevel(), 546, 6.5f,
 				1.5f, 23,
 				() -> Ingredient.ofItems(GLIMMERING_AMETHYST)),
-		REFINED_MOON_STONE_TOOLS(MiningLevels.DIAMOND, 1278,8.5f,
+		REFINED_MOON_STONE_TOOLS(ToolMaterials.DIAMOND.getMiningLevel(), 1278,8.5f,
 				2.5f, 17,
 				() -> Ingredient.ofItems(REFINED_MOON_STONE)),
-		BLACKSTONE_METAL_TOOLS(MiningLevels.NETHERITE, 2176, 9.5f,
+		BLACKSTONE_METAL_TOOLS(ToolMaterials.NETHERITE.getMiningLevel(), 2176, 9.5f,
 				4.5f, 16,
 				() -> Ingredient.ofItems(BLACKSTONE_INGOT)),
 		GUARDIAN_SCALE_TOOLS(GUARDIAN_SCALE_LEVEL, 2458, 10.0f,
@@ -803,7 +812,7 @@ public class MoreWeaponry implements ModInitializer {
 		ELDER_GUARDIAN_SCALE_TOOLS(ELDER_GUARDIAN_SCALE_LEVEL, 2986, 10.5f,
 				7.0f, 17,
 				() -> Ingredient.ofItems(ELDER_GUARDIAN_SCALE)),
-		WITHERED_TOOLS(MiningLevels.NETHERITE, 3182, 11.0f,
+		WITHERED_TOOLS(ToolMaterials.NETHERITE.getMiningLevel(), 3182, 11.0f,
 				8.5f, 14,
 				() -> Ingredient.ofItems(WITHER_ESSENCE)),
 		COOLED_CIRTICT_TOOLS(COOLED_CIRTICT_LEVEL, 3182, 12.0f,
@@ -815,13 +824,13 @@ public class MoreWeaponry implements ModInitializer {
 		HEATED_CIRTICT_TOOLS(HEATED_CIRTICT_LEVEL, 3182, 12.0f,
 				18.0f, 18,
 				() -> Ingredient.ofItems(HEATED_CIRTICT_INGOT)),
-		DRAGON_SCALE_TOOLS(MiningLevels.NETHERITE, 3486, 13.0f,
+		DRAGON_SCALE_TOOLS(ToolMaterials.NETHERITE.getMiningLevel(), 3486, 13.0f,
 				19.5f, 18,
 				() -> Ingredient.ofItems(DRAGON_SCALE)),
-		ENDICATE_STAFF_TOOLS(MiningLevels.NETHERITE, 388, 14.0f,
+		ENDICATE_STAFF_TOOLS(ToolMaterials.NETHERITE.getMiningLevel(), 388, 14.0f,
 				20.0f, 23,
 				() -> Ingredient.ofItems(Items.ENDER_EYE)),
-		WATCHER_STAFF_TOOLS(MiningLevels.NETHERITE, 593, 14.0f,
+		WATCHER_STAFF_TOOLS(ToolMaterials.NETHERITE.getMiningLevel(), 593, 14.0f,
 				21.0f, 25,
 				() -> Ingredient.ofItems(Items.ENDER_EYE)),
 		ESSENCE_CIRTICT_TOOLS(ESSENCE_LEVEL, 3875, 12.5f,
@@ -1536,7 +1545,26 @@ public class MoreWeaponry implements ModInitializer {
 
 		CELESTIALITE_ROCK_ORE = registerBlock("celestialite_rock_ore",
 				new OreBlock(FabricBlockSettings.copy(Blocks.DEEPSLATE_DIAMOND_ORE)));
-		
+
+		GYOLOS_MYCELIUM = registerBlock("gyolos_mycelium",
+				new EverfrostMyceliumBlock(FabricBlockSettings.copy(Blocks.MYCELIUM)));
+		SOUKIL_MYCELIUM = registerBlock("soukil_mycelium",
+				new EverfrostMyceliumBlock(FabricBlockSettings.copy(Blocks.MYCELIUM)));
+		GYOLOS_STEM_BLOCK = registerBlock("gyolos_stem",
+				new MushroomBlock(FabricBlockSettings.copy(Blocks.MUSHROOM_STEM)));
+		SOUKIL_STEM_BLOCK = registerBlock("soukil_stem",
+				new MushroomBlock(FabricBlockSettings.copy(Blocks.MUSHROOM_STEM)));
+		GYOLOS_MUSHROOM_BLOCK = registerBlock("gyolos_mushroom_block",
+				new MushroomBlock(FabricBlockSettings.copy(Blocks.RED_MUSHROOM_BLOCK)));
+		SOUKIL_MUSHROOM_BLOCK = registerBlock("soukil_mushroom_block",
+				new MushroomBlock(FabricBlockSettings.copy(Blocks.RED_MUSHROOM_BLOCK)));
+		GYOLOS_FUNGUS = registerBlock("gyolos_mushroom",
+				new MushroomPlantBlock(FabricBlockSettings.copy(Blocks.RED_MUSHROOM),
+						() -> MoreWeaponryConfiguredFeatures.HUGE_GYOLOS_MUSHROOM));
+		SOUKIL_FUNGUS = registerBlock("soukil_mushroom",
+				new MushroomPlantBlock(FabricBlockSettings.copy(Blocks.RED_MUSHROOM),
+						() -> MoreWeaponryConfiguredFeatures.HUGE_SOUKIL_MUSHROOM));
+
 		// Items
 		BLASTED_AMETHYST = registerItem("blasted_amethyst",
 				new Item(new Item.Settings().group(MORE_WEAPONRY_GROUP)));

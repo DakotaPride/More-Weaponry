@@ -2,6 +2,7 @@ package net.DakotaPride.moreweaponry.common.world.features;
 
 import net.DakotaPride.moreweaponry.common.MoreWeaponry;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.MushroomBlock;
 import net.minecraft.structure.rule.BlockMatchRuleTest;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
@@ -20,24 +21,40 @@ import java.util.List;
 
 public class MoreWeaponryConfiguredFeatures {
 
+    public static final RegistryEntry<ConfiguredFeature<HugeMushroomFeatureConfig, ?>> HUGE_GYOLOS_MUSHROOM =
+            ConfiguredFeatures.register(MoreWeaponry.MOD_ID + ":huge_gyolos_mushroom", MoreWeaponryFeatures.HUGE_GYOLOS_MUSHROOM,
+                    new HugeMushroomFeatureConfig(BlockStateProvider.of(
+                            MoreWeaponry.GYOLOS_MUSHROOM_BLOCK.getDefaultState().with(MushroomBlock.DOWN, false)),
+                            BlockStateProvider.of(MoreWeaponry.GYOLOS_STEM_BLOCK.getDefaultState()
+                                    .with(MushroomBlock.UP, false)
+                                    .with(MushroomBlock.DOWN, false)), 2));
+
+    public static final RegistryEntry<ConfiguredFeature<HugeMushroomFeatureConfig, ?>> HUGE_SOUKIL_MUSHROOM =
+            ConfiguredFeatures.register(MoreWeaponry.MOD_ID + ":huge_soukil_mushroom", MoreWeaponryFeatures.HUGE_SOUKIL_MUSHROOM,
+                    new HugeMushroomFeatureConfig(BlockStateProvider.of(
+                            MoreWeaponry.SOUKIL_MUSHROOM_BLOCK.getDefaultState().with(MushroomBlock.DOWN, false)),
+                            BlockStateProvider.of(MoreWeaponry.SOUKIL_STEM_BLOCK.getDefaultState()
+                                    .with(MushroomBlock.UP, false)
+                                    .with(MushroomBlock.DOWN, false)), 2));
+
     public static final RegistryEntry<ConfiguredFeature<TreeFeatureConfig, ?>> FRODON_TREE =
-            ConfiguredFeatures.register("frodon", Feature.TREE, new TreeFeatureConfig.Builder(
+            ConfiguredFeatures.register(MoreWeaponry.MOD_ID + ":frodon", Feature.TREE, new TreeFeatureConfig.Builder(
                     BlockStateProvider.of(MoreWeaponry.FRODON_LOG),
-                    new StraightTrunkPlacer(5, 2, 1),
+            new StraightTrunkPlacer(5, 2, 1),
                     BlockStateProvider.of(MoreWeaponry.FRODON_LEAVES),
                     new SpruceFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(3), ConstantIntProvider.create(1)),
                     new TwoLayersFeatureSize(2, 0, 2)).build());
 
-    public static final RegistryEntry<PlacedFeature> FRODON_TREE_CHECKED = PlacedFeatures.register("frodon_tree_checked",
+    public static final RegistryEntry<PlacedFeature> FRODON_TREE_CHECKED = PlacedFeatures.register(MoreWeaponry.MOD_ID + ":frodon_tree_checked",
             FRODON_TREE, PlacedFeatures.wouldSurvive(MoreWeaponry.FRODON_SAPLING));
 
     public static final RegistryEntry<ConfiguredFeature<RandomFeatureConfig, ?>> FRODON_TREE_SPAWN =
-            ConfiguredFeatures.register("frodon_tree_spawn", Feature.RANDOM_SELECTOR,
+            ConfiguredFeatures.register(MoreWeaponry.MOD_ID + ":frodon_tree_spawn", Feature.RANDOM_SELECTOR,
                     new RandomFeatureConfig(List.of(new RandomFeatureEntry(FRODON_TREE_CHECKED,
                             0.2F)), FRODON_TREE_CHECKED));
 
     public static final RegistryEntry<ConfiguredFeature<RandomPatchFeatureConfig, ?>> NIGHT_CURON =
-            ConfiguredFeatures.register("night_curon", Feature.FLOWER,
+            ConfiguredFeatures.register(MoreWeaponry.MOD_ID + ":night_curon", Feature.FLOWER,
                     new RandomPatchFeatureConfig(32, 6, 2, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
                             new SimpleBlockFeatureConfig(BlockStateProvider.of(MoreWeaponry.NIGHT_CURON)))));
 
@@ -101,19 +118,19 @@ public class MoreWeaponryConfiguredFeatures {
             Feature.ORE, new OreFeatureConfig(OVERWORLD_INFESTED_DRIPSTONE, 11));
 
     public static final RegistryEntry<ConfiguredFeature<SimpleBlockFeatureConfig, ?>>
-            SINGLE_PIECE_OF_INTOXICATED_GRASS = ConfiguredFeatures.register("single_piece_of_intoxicated_grass", Feature.SIMPLE_BLOCK, new
+            SINGLE_PIECE_OF_INTOXICATED_GRASS = ConfiguredFeatures.register(MoreWeaponry.MOD_ID + ":single_piece_of_intoxicated_grass", Feature.SIMPLE_BLOCK, new
     SimpleBlockFeatureConfig(BlockStateProvider.of(MoreWeaponry.INTOXICATED_GRASS.getDefaultState())));
 
     public static final RegistryEntry<ConfiguredFeature<SimpleBlockFeatureConfig, ?>>
-            SINGLE_PIECE_OF_INTOXICATED_POPPY = ConfiguredFeatures.register("single_piece_of_intoxicated_poppy", Feature.SIMPLE_BLOCK, new
+            SINGLE_PIECE_OF_INTOXICATED_POPPY = ConfiguredFeatures.register(MoreWeaponry.MOD_ID + ":single_piece_of_intoxicated_poppy", Feature.SIMPLE_BLOCK, new
             SimpleBlockFeatureConfig(BlockStateProvider.of(MoreWeaponry.INTOXICATED_POPPY.getDefaultState())));
 
     public static final RegistryEntry<ConfiguredFeature<SimpleBlockFeatureConfig, ?>>
-            SINGLE_PIECE_OF_INTOXICATED_DANDELION = ConfiguredFeatures.register("single_piece_of_intoxicated_dandelion", Feature.SIMPLE_BLOCK, new
+            SINGLE_PIECE_OF_INTOXICATED_DANDELION = ConfiguredFeatures.register(MoreWeaponry.MOD_ID + ":single_piece_of_intoxicated_dandelion", Feature.SIMPLE_BLOCK, new
             SimpleBlockFeatureConfig(BlockStateProvider.of(MoreWeaponry.INTOXICATED_DANDELION.getDefaultState())));
 
     public static final RegistryEntry<ConfiguredFeature<SimpleBlockFeatureConfig, ?>>
-            SINGLE_PIECE_OF_INTOXICATED_FERN = ConfiguredFeatures.register("single_piece_of_intoxicated_fern", Feature.SIMPLE_BLOCK, new
+            SINGLE_PIECE_OF_INTOXICATED_FERN = ConfiguredFeatures.register(MoreWeaponry.MOD_ID + ":single_piece_of_intoxicated_fern", Feature.SIMPLE_BLOCK, new
             SimpleBlockFeatureConfig(BlockStateProvider.of(MoreWeaponry.INTOXICATED_FERN.getDefaultState())));
 
 

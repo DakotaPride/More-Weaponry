@@ -28,6 +28,9 @@ public class MoreWeaponryRendererHelper {
 
         BlockRenderLayerMap.INSTANCE.putBlock(MoreWeaponry.SICKENED_STONE_GRAVE, RenderLayer.getCutout());
 
+        BlockRenderLayerMap.INSTANCE.putBlock(MoreWeaponry.GYOLOS_FUNGUS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(MoreWeaponry.GYOLOS_FUNGUS, RenderLayer.getCutout());
+
     }
 
     public static void setTransparentBlocks() {

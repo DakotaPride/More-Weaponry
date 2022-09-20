@@ -502,6 +502,15 @@
   "block.moreweaponry.echo_infuser": "Echo Infusion Table",
   "gui.moreweaponry.echo_infuser.label": "Echo Infusion Table",
 
+  "block.moreweaponry.gyolos_mushroom": "Gyolos Mushroom",
+  "block.moreweaponry.soukil_mushroom": "Soukil Mushroom",
+  "block.moreweaponry.gyolos_stem": "Gyolos Mushroom Stem",
+  "block.moreweaponry.soukil_stem": "Soukil Mushroom Stem",
+  "block.moreweaponry.gyolos_mushroom_block": "Gyolos Mushroom Block",
+  "block.moreweaponry.soukil_mushroom_block": "Soukil Mushroom Block",
+  "block.moreweaponry.gyolos_mycelium": "Gyolos Mycelium",
+  "block.moreweaponry.soukil_mycelium": "Soukil Mycelium",
+
   "advancement.moreweaponry.bluestone.title": "The First Piece Of The Puzzle",
   "advancement.moreweaponry.bluestone.description": "Obtain A Bluestone Rock",
   "advancement.moreweaponry.consume_curon_brew.title": "Why Would You Do That?",
