@@ -9,7 +9,7 @@ import net.minecraft.world.WorldAccess;
 import net.minecraft.world.gen.feature.HugeMushroomFeature;
 import net.minecraft.world.gen.feature.HugeMushroomFeatureConfig;
 
-public class HugeGyolosMushroomFeature  extends HugeMushroomFeature {
+public class HugeGyolosMushroomFeature extends HugeMushroomFeature {
     public HugeGyolosMushroomFeature(Codec<HugeMushroomFeatureConfig> codec) {
         super(codec);
     }
@@ -45,8 +45,8 @@ public class HugeGyolosMushroomFeature  extends HugeMushroomFeature {
     }
 
     protected int getCapSize(int i, int j, int capSize, int y) {
-        int k = 0;
-        if (y < j && y >= j - 3) {
+        int k = 3;
+        if (y < j && y >= j - 6) {
             k = capSize;
         } else if (y == j) {
             k = capSize;

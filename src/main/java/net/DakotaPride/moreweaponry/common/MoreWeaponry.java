@@ -629,12 +629,12 @@ public class MoreWeaponry implements ModInitializer {
 	public static FluidBlock BARD_CELESTIALITE_FLUID_BLOCK;
 
 	public static EverfrostMyceliumBlock GYOLOS_MYCELIUM;
-	public static MushroomBlock GYOLOS_MUSHROOM_BLOCK;
-	public static MushroomBlock GYOLOS_STEM_BLOCK;
+	public static Block GYOLOS_MUSHROOM_BLOCK;
+	public static Block GYOLOS_STEM_BLOCK;
 	public static MushroomPlantBlock GYOLOS_FUNGUS;
 	public static EverfrostMyceliumBlock SOUKIL_MYCELIUM;
-	public static MushroomBlock SOUKIL_MUSHROOM_BLOCK;
-	public static MushroomBlock SOUKIL_STEM_BLOCK;
+	public static Block SOUKIL_MUSHROOM_BLOCK;
+	public static Block SOUKIL_STEM_BLOCK;
 	public static MushroomPlantBlock SOUKIL_FUNGUS;
 
 	// Block Entities
@@ -1551,13 +1551,13 @@ public class MoreWeaponry implements ModInitializer {
 		SOUKIL_MYCELIUM = registerBlock("soukil_mycelium",
 				new EverfrostMyceliumBlock(FabricBlockSettings.copy(Blocks.MYCELIUM)));
 		GYOLOS_STEM_BLOCK = registerBlock("gyolos_stem",
-				new MushroomBlock(FabricBlockSettings.copy(Blocks.MUSHROOM_STEM)));
+				new Block(FabricBlockSettings.copy(Blocks.MUSHROOM_STEM)));
 		SOUKIL_STEM_BLOCK = registerBlock("soukil_stem",
-				new MushroomBlock(FabricBlockSettings.copy(Blocks.MUSHROOM_STEM)));
+				new Block(FabricBlockSettings.copy(Blocks.MUSHROOM_STEM)));
 		GYOLOS_MUSHROOM_BLOCK = registerBlock("gyolos_mushroom_block",
-				new MushroomBlock(FabricBlockSettings.copy(Blocks.RED_MUSHROOM_BLOCK)));
+				new Block(FabricBlockSettings.copy(Blocks.RED_MUSHROOM_BLOCK)));
 		SOUKIL_MUSHROOM_BLOCK = registerBlock("soukil_mushroom_block",
-				new MushroomBlock(FabricBlockSettings.copy(Blocks.RED_MUSHROOM_BLOCK)));
+				new Block(FabricBlockSettings.copy(Blocks.RED_MUSHROOM_BLOCK)));
 		GYOLOS_FUNGUS = registerBlock("gyolos_mushroom",
 				new MushroomPlantBlock(FabricBlockSettings.copy(Blocks.RED_MUSHROOM),
 						() -> MoreWeaponryConfiguredFeatures.HUGE_GYOLOS_MUSHROOM));
@@ -2293,7 +2293,7 @@ public class MoreWeaponry implements ModInitializer {
 
 		// Block Items
 
-        	Registry.register(Registry.ITEM, new Identifier(MOD_ID, "moon_stone_dust_block"), new BlockItem(MOON_STONE_DUST_BLOCK,
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "moon_stone_dust_block"), new BlockItem(MOON_STONE_DUST_BLOCK,
 				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "kuro_wheat_block"), new BlockItem(KURO_WHEAT_BLOCK,
 				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
@@ -2478,6 +2478,22 @@ public class MoreWeaponry implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "corrupted_end_stone"), new BlockItem(CORRUPTED_END_STONE,
 				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "celestialite_rock_ore"), new BlockItem(CELESTIALITE_ROCK_ORE,
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "gyolos_mushroom"), new BlockItem(GYOLOS_FUNGUS,
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "soukil_mushroom"), new BlockItem(SOUKIL_FUNGUS,
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "gyolos_mushroom_block"), new BlockItem(GYOLOS_MUSHROOM_BLOCK,
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "soukil_mushroom_block"), new BlockItem(SOUKIL_MUSHROOM_BLOCK,
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "gyolos_stem"), new BlockItem(GYOLOS_STEM_BLOCK,
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "soukil_stem"), new BlockItem(SOUKIL_STEM_BLOCK,
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "gyolos_mycelium"), new BlockItem(GYOLOS_MYCELIUM,
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "soukil_mycelium"), new BlockItem(SOUKIL_MYCELIUM,
 				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 
 

@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "moreweaponry:block/soukil_mushroom_block"
-  }
-}

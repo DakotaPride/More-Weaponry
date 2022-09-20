@@ -24,18 +24,14 @@ public class MoreWeaponryConfiguredFeatures {
     public static final RegistryEntry<ConfiguredFeature<HugeMushroomFeatureConfig, ?>> HUGE_GYOLOS_MUSHROOM =
             ConfiguredFeatures.register(MoreWeaponry.MOD_ID + ":huge_gyolos_mushroom", MoreWeaponryFeatures.HUGE_GYOLOS_MUSHROOM,
                     new HugeMushroomFeatureConfig(BlockStateProvider.of(
-                            MoreWeaponry.GYOLOS_MUSHROOM_BLOCK.getDefaultState().with(MushroomBlock.DOWN, false)),
-                            BlockStateProvider.of(MoreWeaponry.GYOLOS_STEM_BLOCK.getDefaultState()
-                                    .with(MushroomBlock.UP, false)
-                                    .with(MushroomBlock.DOWN, false)), 2));
+                            MoreWeaponry.GYOLOS_MUSHROOM_BLOCK.getDefaultState()),
+                            BlockStateProvider.of(MoreWeaponry.GYOLOS_STEM_BLOCK.getDefaultState()), 2));
 
     public static final RegistryEntry<ConfiguredFeature<HugeMushroomFeatureConfig, ?>> HUGE_SOUKIL_MUSHROOM =
             ConfiguredFeatures.register(MoreWeaponry.MOD_ID + ":huge_soukil_mushroom", MoreWeaponryFeatures.HUGE_SOUKIL_MUSHROOM,
                     new HugeMushroomFeatureConfig(BlockStateProvider.of(
-                            MoreWeaponry.SOUKIL_MUSHROOM_BLOCK.getDefaultState().with(MushroomBlock.DOWN, false)),
-                            BlockStateProvider.of(MoreWeaponry.SOUKIL_STEM_BLOCK.getDefaultState()
-                                    .with(MushroomBlock.UP, false)
-                                    .with(MushroomBlock.DOWN, false)), 2));
+                            MoreWeaponry.SOUKIL_MUSHROOM_BLOCK.getDefaultState()),
+                            BlockStateProvider.of(MoreWeaponry.SOUKIL_STEM_BLOCK.getDefaultState()), 2));
 
     public static final RegistryEntry<ConfiguredFeature<TreeFeatureConfig, ?>> FRODON_TREE =
             ConfiguredFeatures.register(MoreWeaponry.MOD_ID + ":frodon", Feature.TREE, new TreeFeatureConfig.Builder(

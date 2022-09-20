@@ -1,6 +1,6 @@
 {
-  "parent": "minecraft:block/template_single_face",
+  "parent": "block/cube_all",
   "textures": {
-    "texture": "moreweaponry:block/gyolos_mushroom_block"
+    "all": "moreweaponry:block/gyolos_mushroom_block"
   }
 }
