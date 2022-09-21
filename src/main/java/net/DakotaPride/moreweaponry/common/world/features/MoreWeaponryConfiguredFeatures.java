@@ -33,6 +33,12 @@ public class MoreWeaponryConfiguredFeatures {
                             MoreWeaponry.SOUKIL_MUSHROOM_BLOCK.getDefaultState()),
                             BlockStateProvider.of(MoreWeaponry.SOUKIL_STEM_BLOCK.getDefaultState()), 2));
 
+    public static final RegistryEntry<ConfiguredFeature<HugeMushroomFeatureConfig, ?>> HUGE_BENTIK_MUSHROOM =
+            ConfiguredFeatures.register(MoreWeaponry.MOD_ID + ":huge_bentik_mushroom", MoreWeaponryFeatures.HUGE_BENTIK_MUSHROOM,
+                    new HugeMushroomFeatureConfig(BlockStateProvider.of(
+                            MoreWeaponry.BENTIK_MUSHROOM_BLOCK.getDefaultState()),
+                            BlockStateProvider.of(MoreWeaponry.BENTIK_STEM_BLOCK.getDefaultState()), 3));
+
     public static final RegistryEntry<ConfiguredFeature<TreeFeatureConfig, ?>> FRODON_TREE =
             ConfiguredFeatures.register(MoreWeaponry.MOD_ID + ":frodon", Feature.TREE, new TreeFeatureConfig.Builder(
                     BlockStateProvider.of(MoreWeaponry.FRODON_LOG),

@@ -4,6 +4,7 @@ import com.mojang.serialization.Codec;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.MushroomBlock;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.gen.feature.HugeMushroomFeature;
@@ -14,6 +15,26 @@ public class HugeGyolosMushroomFeature extends HugeMushroomFeature {
         super(codec);
     }
 
+    @Override
+    protected void generateStem(WorldAccess world, Random random, BlockPos pos, HugeMushroomFeatureConfig config, int height, BlockPos.Mutable mutablePos) {
+        for (int i = 0; i < height; i++) {
+            mutablePos.set(pos).move(Direction.UP, i);
+            if (!world.getBlockState(mutablePos).isOpaqueFullCube(world, mutablePos)) {
+                setBlockState(world, mutablePos, config.stemProvider.getBlockState(random, pos));
+            }
+        }
+    }
+
+    @Override
+    protected int getHeight(Random random) {
+        int i = random.nextInt(12) + 6;
+        if (random.nextInt(16) == 0) {
+            i *= 8;
+        }
+        return i;
+    }
+
+    @Override
     protected void generateCap(WorldAccess world, Random random, BlockPos start, int y, BlockPos.Mutable mutable, HugeMushroomFeatureConfig config) {
         for(int i = y - 3; i <= y; ++i) {
             int j = i < y ? config.foliageRadius : config.foliageRadius - 1;
@@ -44,9 +65,10 @@ public class HugeGyolosMushroomFeature extends HugeMushroomFeature {
 
     }
 
+    @Override
     protected int getCapSize(int i, int j, int capSize, int y) {
-        int k = 3;
-        if (y < j && y >= j - 6) {
+        int k = 0;
+        if (y < j && y >= j - 3) {
             k = capSize;
         } else if (y == j) {
             k = capSize;

@@ -636,6 +636,10 @@ public class MoreWeaponry implements ModInitializer {
 	public static Block SOUKIL_MUSHROOM_BLOCK;
 	public static Block SOUKIL_STEM_BLOCK;
 	public static MushroomPlantBlock SOUKIL_FUNGUS;
+	public static EverfrostMyceliumBlock BENTIK_MYCELIUM;
+	public static Block BENTIK_MUSHROOM_BLOCK;
+	public static Block BENTIK_STEM_BLOCK;
+	public static MushroomPlantBlock BENTIK_FUNGUS;
 
 	// Block Entities
 
@@ -1550,13 +1554,19 @@ public class MoreWeaponry implements ModInitializer {
 				new EverfrostMyceliumBlock(FabricBlockSettings.copy(Blocks.MYCELIUM)));
 		SOUKIL_MYCELIUM = registerBlock("soukil_mycelium",
 				new EverfrostMyceliumBlock(FabricBlockSettings.copy(Blocks.MYCELIUM)));
+		BENTIK_MYCELIUM = registerBlock("bentik_mycelium",
+				new EverfrostMyceliumBlock(FabricBlockSettings.copy(Blocks.MYCELIUM)));
 		GYOLOS_STEM_BLOCK = registerBlock("gyolos_stem",
 				new Block(FabricBlockSettings.copy(Blocks.MUSHROOM_STEM)));
 		SOUKIL_STEM_BLOCK = registerBlock("soukil_stem",
 				new Block(FabricBlockSettings.copy(Blocks.MUSHROOM_STEM)));
+		BENTIK_STEM_BLOCK = registerBlock("bentik_stem",
+				new Block(FabricBlockSettings.copy(Blocks.MUSHROOM_STEM)));
 		GYOLOS_MUSHROOM_BLOCK = registerBlock("gyolos_mushroom_block",
 				new Block(FabricBlockSettings.copy(Blocks.RED_MUSHROOM_BLOCK)));
 		SOUKIL_MUSHROOM_BLOCK = registerBlock("soukil_mushroom_block",
+				new Block(FabricBlockSettings.copy(Blocks.RED_MUSHROOM_BLOCK)));
+		BENTIK_MUSHROOM_BLOCK = registerBlock("bentik_mushroom_block",
 				new Block(FabricBlockSettings.copy(Blocks.RED_MUSHROOM_BLOCK)));
 		GYOLOS_FUNGUS = registerBlock("gyolos_mushroom",
 				new MushroomPlantBlock(FabricBlockSettings.copy(Blocks.RED_MUSHROOM),
@@ -1564,6 +1574,9 @@ public class MoreWeaponry implements ModInitializer {
 		SOUKIL_FUNGUS = registerBlock("soukil_mushroom",
 				new MushroomPlantBlock(FabricBlockSettings.copy(Blocks.RED_MUSHROOM),
 						() -> MoreWeaponryConfiguredFeatures.HUGE_SOUKIL_MUSHROOM));
+		BENTIK_FUNGUS = registerBlock("bentik_mushroom",
+				new MushroomPlantBlock(FabricBlockSettings.copy(Blocks.RED_MUSHROOM),
+						() -> MoreWeaponryConfiguredFeatures.HUGE_BENTIK_MUSHROOM));
 
 		// Items
 		BLASTED_AMETHYST = registerItem("blasted_amethyst",
@@ -2483,17 +2496,25 @@ public class MoreWeaponry implements ModInitializer {
 				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "soukil_mushroom"), new BlockItem(SOUKIL_FUNGUS,
 				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bentik_mushroom"), new BlockItem(BENTIK_FUNGUS,
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "gyolos_mushroom_block"), new BlockItem(GYOLOS_MUSHROOM_BLOCK,
 				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "soukil_mushroom_block"), new BlockItem(SOUKIL_MUSHROOM_BLOCK,
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bentik_mushroom_block"), new BlockItem(BENTIK_MUSHROOM_BLOCK,
 				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "gyolos_stem"), new BlockItem(GYOLOS_STEM_BLOCK,
 				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "soukil_stem"), new BlockItem(SOUKIL_STEM_BLOCK,
 				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bentik_stem"), new BlockItem(BENTIK_STEM_BLOCK,
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "gyolos_mycelium"), new BlockItem(GYOLOS_MYCELIUM,
 				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "soukil_mycelium"), new BlockItem(SOUKIL_MYCELIUM,
+				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bentik_mycelium"), new BlockItem(BENTIK_MYCELIUM,
 				new Item.Settings().group(MORE_WEAPONRY_GROUP)));
 
 
