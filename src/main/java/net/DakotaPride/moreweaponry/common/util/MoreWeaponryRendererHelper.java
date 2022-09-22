@@ -31,6 +31,7 @@ public class MoreWeaponryRendererHelper {
         BlockRenderLayerMap.INSTANCE.putBlock(MoreWeaponry.GYOLOS_FUNGUS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(MoreWeaponry.SOUKIL_FUNGUS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(MoreWeaponry.BENTIK_FUNGUS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(MoreWeaponry.VAOLOS_FUNGUS, RenderLayer.getCutout());
 
     }
 

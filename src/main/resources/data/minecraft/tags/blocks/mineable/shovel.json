@@ -4,6 +4,8 @@
     "moreweaponry:moon_stone_dust_block",
 
     "moreweaponry:sandstone_dust_block",
-    "moreweaponry:intoxicated_grass_block"
+    "moreweaponry:intoxicated_grass_block",
+
+    "#minecraft:mushroom_grow_block"
   ]
 }

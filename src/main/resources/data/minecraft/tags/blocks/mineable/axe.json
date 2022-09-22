@@ -16,6 +16,8 @@
     "moreweaponry:frodon_trapdoor",
     "moreweaponry:crop_cutter_block",
     "moreweaponry:empty_bookshelf",
-    "moreweaponry:cirtict_forge"
+    "moreweaponry:cirtict_forge",
+    "#moreweaponry:everfrost_shroom_blocks",
+    "#moreweaponry:everfrost_stem_blocks"
   ]
 }
