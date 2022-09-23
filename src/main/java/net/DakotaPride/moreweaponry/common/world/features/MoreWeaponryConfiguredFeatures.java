@@ -27,6 +27,12 @@ public class MoreWeaponryConfiguredFeatures {
                             MoreWeaponry.GYOLOS_MUSHROOM_BLOCK.getDefaultState()),
                             BlockStateProvider.of(MoreWeaponry.GYOLOS_STEM_BLOCK.getDefaultState()), 2));
 
+    public static final RegistryEntry<ConfiguredFeature<HugeMushroomFeatureConfig, ?>> TALL_GYOLOS_MUSHROOM =
+            ConfiguredFeatures.register(MoreWeaponry.MOD_ID + ":tall_gyolos_mushroom", MoreWeaponryFeatures.TALL_GYOLOS_MUSHROOM,
+                    new HugeMushroomFeatureConfig(BlockStateProvider.of(
+                            MoreWeaponry.GYOLOS_MUSHROOM_BLOCK.getDefaultState()),
+                            BlockStateProvider.of(MoreWeaponry.GYOLOS_STEM_BLOCK.getDefaultState()), 2));
+
     public static final RegistryEntry<ConfiguredFeature<HugeMushroomFeatureConfig, ?>> HUGE_SOUKIL_MUSHROOM =
             ConfiguredFeatures.register(MoreWeaponry.MOD_ID + ":huge_soukil_mushroom", MoreWeaponryFeatures.HUGE_SOUKIL_MUSHROOM,
                     new HugeMushroomFeatureConfig(BlockStateProvider.of(

@@ -4,114 +4,30 @@
     "type": "minecraft:noise",
     "fixed_time": false,
     "seed": 1399245182,
-    "settings": "minecraft:overworld",
+    "settings": "moreweaponry:everfrost",
     "biome_source": {
       "type": "minecraft:multi_noise",
       "biomes": [
         {
-          "biome": "minecraft:snowy_taiga",
+          "biome": "moreweaponry:gyolos_forest",
           "parameters": {
-            "temperature": -1,
-            "humidity": 0,
-            "continentalness": -1,
-            "erosion": 0,
-            "weirdness": 0,
+            "temperature": [-1, -0.45],
+            "humidity": [-1, -0.35],
+            "continentalness": [-0.11, 0.03],
+            "erosion": [0.45, 0.55],
+            "weirdness": [-1, -0.9333],
             "depth": 0,
             "offset": 0
           }
         },
         {
-          "biome": "minecraft:snowy_slopes",
+          "biome": "moreweaponry:tall_gyolos_forest",
           "parameters": {
-            "temperature": -1,
-            "humidity": 0,
-            "continentalness": -1,
-            "erosion": 0,
-            "weirdness": 0,
-            "depth": 0,
-            "offset": 0
-          }
-        },
-        {
-          "biome": "minecraft:frozen_peaks",
-          "parameters": {
-            "temperature": -1,
-            "humidity": 0,
-            "continentalness": -1,
-            "erosion": 0,
-            "weirdness": 0,
-            "depth": 0,
-            "offset": 0
-          }
-        },
-        {
-          "biome": "minecraft:frozen_ocean",
-          "parameters": {
-            "temperature": -1,
-            "humidity": 0,
-            "continentalness": -1,
-            "erosion": 0,
-            "weirdness": 0,
-            "depth": 0,
-            "offset": 0
-          }
-        },
-        {
-          "biome": "minecraft:frozen_river",
-          "parameters": {
-            "temperature": -1,
-            "humidity": 0,
-            "continentalness": -1,
-            "erosion": 0,
-            "weirdness": 0,
-            "depth": 0,
-            "offset": 0
-          }
-        },
-        {
-          "biome": "minecraft:deep_frozen_ocean",
-          "parameters": {
-            "temperature": -1,
-            "humidity": 0,
-            "continentalness": -1,
-            "erosion": 0,
-            "weirdness": 0,
-            "depth": 0,
-            "offset": 0
-          }
-        },
-        {
-          "biome": "minecraft:jagged_peaks",
-          "parameters": {
-            "temperature": -1,
-            "humidity": 0,
-            "continentalness": -1,
-            "erosion": 0,
-            "weirdness": 0,
-            "depth": 0,
-            "offset": 0
-          }
-        },
-        {
-          "biome": "minecraft:grove",
-          "parameters": {
-            "temperature": -1,
-            "humidity": 0,
-            "continentalness": -1,
-            "erosion": 0,
-            "weirdness": 0,
-            "depth": 0,
-            "offset": 0
-          }
-        },
-        {
-          "biome": "minecraft:snowy_plains",
-          "parameters": {
-            "temperature": -1,
-            "humidity": 0,
-            "continentalness": 1,
-            "erosion": 0,
-            "weirdness": 0,
+            "temperature": [-1, -0.45],
+            "humidity": [-1, -0.35],
+            "continentalness": [-0.13, 0.08],
+            "erosion": [0.55, 0.65],
+            "weirdness": [-1.1113, -0.9777],
             "depth": 0,
             "offset": 0
           }

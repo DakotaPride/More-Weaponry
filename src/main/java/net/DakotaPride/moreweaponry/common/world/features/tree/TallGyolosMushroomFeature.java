@@ -10,8 +10,8 @@ import net.minecraft.world.WorldAccess;
 import net.minecraft.world.gen.feature.HugeMushroomFeature;
 import net.minecraft.world.gen.feature.HugeMushroomFeatureConfig;
 
-public class HugeGyolosMushroomFeature extends HugeMushroomFeature {
-    public HugeGyolosMushroomFeature(Codec<HugeMushroomFeatureConfig> codec) {
+public class TallGyolosMushroomFeature extends HugeMushroomFeature {
+    public TallGyolosMushroomFeature(Codec<HugeMushroomFeatureConfig> codec) {
         super(codec);
     }
 
@@ -27,9 +27,9 @@ public class HugeGyolosMushroomFeature extends HugeMushroomFeature {
 
     @Override
     protected int getHeight(Random random) {
-        int i = random.nextInt(3) + 4;
-        if (random.nextInt(12) == 0) {
-            i *= 2;
+        int i = random.nextInt(5) + 6;
+        if (random.nextInt(14) == 0) {
+            i *= 4;
         }
         return i;
     }
