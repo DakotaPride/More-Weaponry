@@ -27,54 +27,57 @@ public class TallVaolosMushroomFeature extends HugeMushroomFeature {
 
     @Override
     protected int getHeight(Random random) {
-        int i = random.nextInt(11) + 12;
-        if (random.nextInt(17) == 0) {
-            i *= 11;
+        int i = random.nextInt(5) + 6;
+        if (random.nextInt(9) == 0) {
+            i *= 8;
         }
         return i;
     }
 
     @Override
     protected void generateCap(WorldAccess world, Random random, BlockPos start, int y, BlockPos.Mutable mutable, HugeMushroomFeatureConfig config) {
-        for(int i = y - 3; i <= y; ++i) {
-            int j = i < y ? config.foliageRadius : config.foliageRadius - 1;
-            int k = config.foliageRadius - 2;
+        int i = config.foliageRadius;
+        for (int j = -i; j <= i; j++) {
+            for (int k = -i; k <= i; k++) {
+                boolean bl = (j == -i);
+                boolean bl2 = (j == i);
+                boolean bl3 = (k == -i);
+                boolean bl4 = (k == i);
 
-            for(int l = -j; l <= j; ++l) {
-                for(int m = -j; m <= j; ++m) {
-                    boolean bl = l == -j;
-                    boolean bl2 = l == j;
-                    boolean bl3 = m == -j;
-                    boolean bl4 = m == j;
-                    boolean bl5 = bl || bl2;
-                    boolean bl6 = bl3 || bl4;
-                    if (i >= y || bl5 != bl6) {
-                        mutable.set(start, l, i, m);
-                        if (!world.getBlockState(mutable).isOpaqueFullCube(world, mutable)) {
-                            BlockState blockState = config.capProvider.getBlockState(random, start);
-                            if (blockState.contains(MushroomBlock.WEST) && blockState.contains(MushroomBlock.EAST) && blockState.contains(MushroomBlock.NORTH) && blockState.contains(MushroomBlock.SOUTH) && blockState.contains(MushroomBlock.UP)) {
-                                blockState = (BlockState)((BlockState)((BlockState)((BlockState)((BlockState)blockState.with(MushroomBlock.UP, i >= y - 1)).with(MushroomBlock.WEST, l < -k)).with(MushroomBlock.EAST, l > k)).with(MushroomBlock.NORTH, m < -k)).with(MushroomBlock.SOUTH, m > k);
-                            }
+                boolean bl5 = (bl || bl2);
+                boolean bl6 = (bl3 || bl4);
+                if (!bl5 || !bl6) {
 
-                            this.setBlockState(world, mutable, blockState);
+
+
+                    mutable.set(start, j, y, k);
+                    if (!world.getBlockState(mutable).isOpaqueFullCube(world, mutable)) {
+                        boolean bl7 = (bl || (bl6 && j == 1 - i));
+                        boolean bl8 = (bl2 || (bl6 && j == i - 1));
+                        boolean bl9 = (bl3 || (bl5 && k == 1 - i));
+                        boolean bl10 = (bl4 || (bl5 && k == i - 1));
+                        BlockState blockState = config.capProvider.getBlockState(random, start);
+                        if (blockState.contains(MushroomBlock.WEST) && blockState
+                                .contains(MushroomBlock.EAST) && blockState
+                                .contains(MushroomBlock.NORTH) && blockState
+                                .contains(MushroomBlock.SOUTH))
+                        {
+
+
+
+
+                            blockState = blockState.with(MushroomBlock.WEST, Boolean.valueOf(bl7)).with(MushroomBlock.EAST, Boolean.valueOf(bl8)).with(MushroomBlock.NORTH, Boolean.valueOf(bl9)).with(MushroomBlock.SOUTH, Boolean.valueOf(bl10));
                         }
+                        setBlockState(world, mutable, blockState);
                     }
                 }
             }
         }
-
     }
 
     @Override
     protected int getCapSize(int i, int j, int capSize, int y) {
-        int k = 0;
-        if (y < j && y >= j - 3) {
-            k = capSize;
-        } else if (y == j) {
-            k = capSize;
-        }
-
-        return k;
+        return (y <= 3) ? 0 : capSize;
     }
 }
 

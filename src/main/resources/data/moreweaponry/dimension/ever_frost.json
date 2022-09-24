@@ -21,18 +21,6 @@
           }
         },
         {
-          "biome": "moreweaponry:tall_gyolos_forest",
-          "parameters": {
-            "temperature": [-1, -0.45],
-            "humidity": [-1, -0.35],
-            "continentalness": [-0.13, 0.08],
-            "erosion": [0.55, 0.65],
-            "weirdness": [-1.1113, -0.9777],
-            "depth": 0,
-            "offset": 0
-          }
-        },
-        {
           "biome": "moreweaponry:soukil_forest",
           "parameters": {
             "temperature": [-1, -0.55],
