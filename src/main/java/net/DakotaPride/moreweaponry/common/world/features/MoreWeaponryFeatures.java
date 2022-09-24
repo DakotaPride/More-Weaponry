@@ -19,6 +19,8 @@ public class MoreWeaponryFeatures {
             register(MoreWeaponry.MOD_ID + ":huge_bentik_mushroom", new HugeBentikMushroomFeature(HugeMushroomFeatureConfig.CODEC));
     public static final Feature<HugeMushroomFeatureConfig> HUGE_VAOLOS_MUSHROOM =
             register(MoreWeaponry.MOD_ID + ":huge_vaolos_mushroom", new HugeVaolosMushroomFeature(HugeMushroomFeatureConfig.CODEC));
+    public static final Feature<HugeMushroomFeatureConfig> TALL_VAOLOS_MUSHROOM =
+            register(MoreWeaponry.MOD_ID + ":tall_vaolos_mushroom", new TallVaolosMushroomFeature(HugeMushroomFeatureConfig.CODEC));
 
     private static <C extends FeatureConfig, F extends Feature<C>> F register(String name, F feature) {
         return (F) Registry.register(Registry.FEATURE, name, feature);

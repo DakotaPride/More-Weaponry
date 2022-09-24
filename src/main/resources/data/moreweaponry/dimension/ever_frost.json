@@ -31,6 +31,42 @@
             "depth": 0,
             "offset": 0
           }
+        },
+        {
+          "biome": "moreweaponry:soukil_forest",
+          "parameters": {
+            "temperature": [-1, -0.55],
+            "humidity": [-1, -0.45],
+            "continentalness": [-0.11, 0.5],
+            "erosion": [0.45, 0.57],
+            "weirdness": [-1, -0.8666],
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "moreweaponry:bentik_forest",
+          "parameters": {
+            "temperature": [-1, -0.5],
+            "humidity": [-1, -0.4],
+            "continentalness": [-0.11, 0.7],
+            "erosion": [0.45, 0.63],
+            "weirdness": [-1, -0.9],
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "moreweaponry:vaolos_forest",
+          "parameters": {
+            "temperature": [-1, -0.65],
+            "humidity": [-1, -0.35],
+            "continentalness": [-0.11, 0.85],
+            "erosion": [0.45, 0.82],
+            "weirdness": [-1, -0.65],
+            "depth": 0,
+            "offset": 0
+          }
         }
       ]
     }

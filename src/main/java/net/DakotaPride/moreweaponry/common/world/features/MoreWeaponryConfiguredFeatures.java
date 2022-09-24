@@ -51,6 +51,12 @@ public class MoreWeaponryConfiguredFeatures {
                             MoreWeaponry.VAOLOS_MUSHROOM_BLOCK.getDefaultState()),
                             BlockStateProvider.of(MoreWeaponry.VAOLOS_STEM_BLOCK.getDefaultState()), 3));
 
+    public static final RegistryEntry<ConfiguredFeature<HugeMushroomFeatureConfig, ?>> TALL_VAOLOS_MUSHROOM =
+            ConfiguredFeatures.register(MoreWeaponry.MOD_ID + ":tall_vaolos_mushroom", MoreWeaponryFeatures.TALL_VAOLOS_MUSHROOM,
+                    new HugeMushroomFeatureConfig(BlockStateProvider.of(
+                            MoreWeaponry.VAOLOS_MUSHROOM_BLOCK.getDefaultState()),
+                            BlockStateProvider.of(MoreWeaponry.VAOLOS_STEM_BLOCK.getDefaultState()), 3));
+
     public static final RegistryEntry<ConfiguredFeature<TreeFeatureConfig, ?>> FRODON_TREE =
             ConfiguredFeatures.register(MoreWeaponry.MOD_ID + ":frodon", Feature.TREE, new TreeFeatureConfig.Builder(
                     BlockStateProvider.of(MoreWeaponry.FRODON_LOG),
