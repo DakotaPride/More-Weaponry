@@ -2,11 +2,13 @@
   "temperature": 0.9,
   "downfall": 1,
   "precipitation": "snow",
+  "player_spawn_friendly": true,
   "effects": {
-    "sky_color": 7842047,
-    "fog_color": 12638463,
-    "water_color": 4159204,
-    "water_fog_color": 329011,
+    "sky_color": 12242397,
+    "fog_color": 14073566,
+    "water_color": 8030668,
+    "water_fog_color": 8030668,
+    "grass_color": 13227977,
     "mood_sound": {
       "sound": "minecraft:ambient.cave",
       "tick_delay": 6000,

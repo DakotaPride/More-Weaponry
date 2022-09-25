@@ -41,8 +41,6 @@ public class NecromancerEntity extends AbstractNecromancerEntity implements IAni
 
     @Override
     protected void initGoals() {
-      //  this.goalSelector.add(4, new SummonSkeletonGoal(this));
-     //   this.goalSelector.add(5, new SummonArmoredSkeletonGoal(this));
         super.initGoals();
     }
 
@@ -54,101 +52,6 @@ public class NecromancerEntity extends AbstractNecromancerEntity implements IAni
                 .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 87.0D)
                 .add(EntityAttributes.GENERIC_ATTACK_SPEED, 0.97f);
     }
-
-
- //   private class SummonSkeletonGoal extends AbstractNecromancerEntity.CastSpellGoal { SummonSkeletonGoal(NecromancerEntity necromancerEntity) {
- //       super(necromancerEntity);
-  //      this.closeVexPredicate = TargetPredicate.createNonAttackable().setBaseMaxDistance(16.0D).ignoreVisibility().ignoreDistanceScalingFactor();
- //   }
-  //      private final TargetPredicate closeVexPredicate;
-   //     public boolean canStart() {
-     //       if (!super.canStart()) {
-     //           return false;
-      //      }
-
-
-       //     int i = this.field_7267.world.<VexEntity>getTargets(SkeletonEntity.class, this.closeVexPredicate, this.field_7267, this.field_7267.getBoundingBox().expand(16.0D)).size();
-       //     return (EvokerEntity.method_7038(this.field_7267).nextInt(8) + 1 > i);
-      //  }
-
-
-        protected int getSpellTicks() {
-            return 100;
-        }
-
-
-        protected int startTimeDelay() {
-            return 340;
-        }
-
-
-        protected void castSpell() {
-       //     ServerWorld serverWorld = (ServerWorld)this.field_7267.world;
-       //     for (int i = 0; i < 3; i++) {
-       //         BlockPos blockPos = this.field_7267.getBlockPos().add(-2 + NecromancerEntity.method_7037(this.field_7267).nextInt(5), 1, -2 + NecromancerEntity.method_7043(this.field_7267).nextInt(5));
-       //         SkeletonEntity skeletonEntity = EntityType.SKELETON.create(this.field_7267.world);
-       //         skeletonEntity.refreshPositionAndAngles(blockPos, 0.0F, 0.0F);
-       //         skeletonEntity.initialize(serverWorld, this.field_7267.world.getLocalDifficulty(blockPos), SpawnReason.MOB_SUMMONED, (EntityData)null, (NbtCompound)null);
-       //         serverWorld.spawnEntityAndPassengers(skeletonEntity);
-       //     }
-       }
-
-
-  //      protected SoundEvent getSoundPrepare() {
-   //         return SoundEvents.ENTITY_EVOKER_PREPARE_SUMMON;
-   //     }
-
-
-  //      protected AbstractNecromancerEntity.NecromancerSpell getSpell() {
-   //         return NecromancerSpell.SUMMON_SKELETON;
-    //    } }
-
- //   private class SummonArmoredSkeletonGoal extends AbstractNecromancerEntity.CastSpellGoal { SummonArmoredSkeletonGoal(NecromancerEntity necromancerEntity) {
-  //      super(necromancerEntity);
-  //      this.closeVexPredicate = TargetPredicate.createNonAttackable().setBaseMaxDistance(16.0D).ignoreVisibility().ignoreDistanceScalingFactor();
- //   }
-   //     private final TargetPredicate closeVexPredicate;
-   //     public boolean canStart() {
-    //        if (!super.canStart()) {
-    //            return false;
-    //        }
-
-
-    //        int i = this.field_7267.world.<VexEntity>getTargets(SkeletonEntity.class, this.closeVexPredicate, this.field_7267, this.field_7267.getBoundingBox().expand(16.0D)).size();
-    //        return (EvokerEntity.method_7038(this.field_7267).nextInt(8) + 1 > i);
-     //   }
-
-
-    //    protected int getSpellTicks() {
-    //        return 100;
-    //    }
-
-
-    //    protected int startTimeDelay() {
-     //       return 340;
-     //   }
-
-
-    //    protected void castSpell() {
-     //       ServerWorld serverWorld = (ServerWorld)this.field_7267.world;
-     //       for (int i = 0; i < 3; i++) {
-      //          BlockPos blockPos = this.field_7267.getBlockPos().add(-2 + NecromancerEntity.method_7037(this.field_7267).nextInt(5), 1, -2 + NecromancerEntity.method_7043(this.field_7267).nextInt(5));
-     //           SkeletonEntity skeletonEntity = EntityType.SKELETON.create(this.field_7267.world);
-     //           skeletonEntity.refreshPositionAndAngles(blockPos, 0.0F, 0.0F);
-       //         skeletonEntity.initialize(serverWorld, this.field_7267.world.getLocalDifficulty(blockPos), SpawnReason.MOB_SUMMONED, (EntityData)null, (NbtCompound)null);
-       //         serverWorld.spawnEntityAndPassengers(skeletonEntity);
-        //    }
-     //   }
-
-
-     //   protected SoundEvent getSoundPrepare() {
-    //        return SoundEvents.ENTITY_EVOKER_PREPARE_SUMMON;
-     //   }
-
-
-     //   protected AbstractNecromancerEntity.NecromancerSpell getSpell() {
-     //       return NecromancerSpell.SUMMON_SKELETON;
-     //   } }
 
 
     @Override

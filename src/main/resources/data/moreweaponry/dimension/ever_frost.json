@@ -1,9 +1,8 @@
 {
-  "type": "minecraft:overworld",
+  "type": "moreweaponry:ever_frost_type",
   "generator": {
     "type": "minecraft:noise",
-    "fixed_time": false,
-    "seed": 1399245182,
+    "fixed_time": true,
     "settings": "moreweaponry:everfrost",
     "biome_source": {
       "type": "minecraft:multi_noise",
