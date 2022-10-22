@@ -38,6 +38,7 @@ import software.bernie.geckolib3.core.manager.AnimationFactory;
 public class WatcherEntity extends AbstractHostileEntity implements IAnimatable {
     private AnimationFactory factory = new AnimationFactory(this);
     private final ServerBossBar bossBar;
+    private int headsDropped;
     public WatcherEntity(EntityType<? extends AbstractHostileEntity> entityType, World world) {
         super(entityType, world);
         this.ignoreCameraFrustum = true;
@@ -114,12 +115,20 @@ public class WatcherEntity extends AbstractHostileEntity implements IAnimatable 
         super.dropEquipment(source, lootingMultiplier, allowDrops);
         Entity entity = source.getAttacker();
         if (entity instanceof CreeperEntity) {
-            CreeperEntity creeperEntity = (CreeperEntity)entity;
-            if (creeperEntity.shouldDropHead()) {
-                creeperEntity.onHeadDropped();
+            WatcherEntity watcherEntity = (WatcherEntity)entity;
+            if (watcherEntity.shouldDropHead()) {
+                watcherEntity.onHeadDropped();
                 dropItem(MoreWeaponry.WATCHER_SKULL.asItem());
             }
         }
+    }
+
+    public boolean shouldDropHead() {
+        return (this.headsDropped < 1);
+    }
+
+    public void onHeadDropped() {
+        this.headsDropped++;
     }
 
     protected void initGoals() {
@@ -171,14 +180,6 @@ public class WatcherEntity extends AbstractHostileEntity implements IAnimatable 
         return super.damage(source, amount);
     }
 
-    protected int getXpToDrop(PlayerEntity player) {
-        if (!isBaby()) {
-            this.experiencePoints = (int)(this.experiencePoints * 43.5F);
-        }
-
-        return super.getXpToDrop();
-    }
-
     protected boolean shouldDropLoot() {
         return true;
     }
@@ -205,11 +206,6 @@ public class WatcherEntity extends AbstractHostileEntity implements IAnimatable 
     @Override
     protected void playStepSound(BlockPos pos, BlockState state) {
         this.playSound(SoundEvents.BLOCK_STONE_STEP, 0.15f, 1.0f);
-    }
-
-    @Nullable
-    public HostileEntity createChild(ServerWorld world, HostileEntity entity) {
-        return null;
     }
 
     @Override

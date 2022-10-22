@@ -182,11 +182,6 @@ public class BardEntity extends AbstractHostileEntity implements IAnimatable {
         this.playSound(SoundEvents.BLOCK_STONE_STEP, 0.15f, 1.0f);
     }
 
-    @Nullable
-    public HostileEntity createChild(ServerWorld world, HostileEntity entity) {
-        return null;
-    }
-
     @Override
     public void registerControllers(AnimationData animationData) {
         animationData.addAnimationController(new AnimationController(this, "controller",
