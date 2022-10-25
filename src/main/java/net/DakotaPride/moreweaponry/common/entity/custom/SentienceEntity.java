@@ -76,17 +76,17 @@ public class SentienceEntity extends AbstractHostileEntity implements IAnimatabl
 
     @Override
     protected SoundEvent getHurtSound(DamageSource source) {
-        return SoundEvents.ENTITY_SKELETON_HURT;
+        return SoundEvents.ENTITY_COW_HURT;
     }
 
     @Override
     protected SoundEvent getDeathSound() {
-        return SoundEvents.ENTITY_SKELETON_DEATH;
+        return SoundEvents.ENTITY_COW_DEATH;
     }
 
     @Override
     protected void playStepSound(BlockPos pos, BlockState state) {
-        this.playSound(SoundEvents.BLOCK_STONE_STEP, 0.15f, 1.0f);
+        this.playSound(SoundEvents.ENTITY_COW_STEP, 0.15f, 1.0f);
     }
 
     @Override
